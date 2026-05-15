@@ -1267,7 +1267,6 @@ pub mod gap {
     }
 }
 
-#[cfg(feature = "gecko")]
 pub mod marker {
     pub use crate::properties::generated::shorthands::marker::*;
 
@@ -3565,7 +3564,6 @@ pub mod animation {
     }
 }
 
-#[cfg(feature = "gecko")]
 pub mod mask {
     pub use crate::properties::generated::shorthands::mask::*;
 
@@ -3578,6 +3576,7 @@ pub mod mask {
     use crate::properties::longhands::{mask_image, mask_size};
     use crate::values::specified::{Position, PositionComponent};
 
+    #[cfg(feature = "gecko")]
     impl From<mask_origin::single_value::SpecifiedValue> for mask_clip::single_value::SpecifiedValue {
         fn from(
             origin: mask_origin::single_value::SpecifiedValue,
@@ -3601,6 +3600,19 @@ pub mod mask {
                 mask_origin::single_value::SpecifiedValue::ViewBox => {
                     mask_clip::single_value::SpecifiedValue::ViewBox
                 },
+            }
+        }
+    }
+
+    #[cfg(not(feature = "gecko"))]
+    impl From<mask_origin::single_value::SpecifiedValue> for mask_clip::single_value::SpecifiedValue {
+        fn from(
+            origin: mask_origin::single_value::SpecifiedValue,
+        ) -> mask_clip::single_value::SpecifiedValue {
+            match origin {
+                mask_origin::single_value::SpecifiedValue::ContentBox => Self::ContentBox,
+                mask_origin::single_value::SpecifiedValue::PaddingBox => Self::PaddingBox,
+                mask_origin::single_value::SpecifiedValue::BorderBox => Self::BorderBox,
             }
         }
     }
@@ -3824,7 +3836,12 @@ pub mod mask {
                     writer.item(repeat)?;
                 }
 
+                #[cfg(feature = "gecko")]
                 if has_origin || (has_clip && *clip != Clip::NoClip) {
+                    writer.item(origin)?;
+                }
+                #[cfg(not(feature = "gecko"))]
+                if has_origin || has_clip {
                     writer.item(origin)?;
                 }
 
@@ -3846,7 +3863,6 @@ pub mod mask {
     }
 }
 
-#[cfg(feature = "gecko")]
 pub mod mask_position {
     pub use crate::properties::generated::shorthands::mask_position::*;
 
