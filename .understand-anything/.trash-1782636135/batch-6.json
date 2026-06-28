@@ -1,0 +1,1241 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/list.rs",
+      "type": "file",
+      "name": "list.rs",
+      "filePath": "style/values/specified/list.rs",
+      "summary": "Defines specified value types for CSS list-style-type and quotes properties, including ListStyleType and Quotes enum with parse implementations.",
+      "tags": ["specified-values", "css-property", "list-style"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/specified/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/specified/mod.rs",
+      "summary": "Barrel module for all CSS specified value types; re-exports submodules and defines shared types like AngleOrPercentage, NumberOrPercentage, Opacity, ClipRect, Attr, and AllowQuirks.",
+      "tags": ["barrel", "specified-values", "entry-point", "module"],
+      "complexity": "complex",
+      "languageNotes": "Rust module barrel file that re-exports all submodule types and defines shared generic types used across the CSS specified values module."
+    },
+    {
+      "id": "file:style/values/specified/motion.rs",
+      "type": "file",
+      "name": "motion.rs",
+      "filePath": "style/values/specified/motion.rs",
+      "summary": "Defines specified value types for CSS motion path properties including offset-path, offset-position, and offset-rotate with ray(), path() parsing.",
+      "tags": ["specified-values", "css-property", "motion-path", "animation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/position.rs",
+      "type": "file",
+      "name": "position.rs",
+      "filePath": "style/values/specified/position.rs",
+      "summary": "Defines specified value types for CSS position, anchor positioning, grid auto-flow, masonry, and position-area properties with extensive parsing logic.",
+      "tags": ["specified-values", "css-property", "position", "grid", "anchor-positioning"],
+      "complexity": "complex",
+      "languageNotes": "Large file (~2200 lines) containing many enum-based value types with derive macros for parsing, computed values, and CSS serialization."
+    },
+    {
+      "id": "file:style/values/specified/rect.rs",
+      "type": "file",
+      "name": "rect.rs",
+      "filePath": "style/values/specified/rect.rs",
+      "summary": "Defines a type alias for a rectangle of four NonNegativeLengthOrNumber values used in CSS border properties.",
+      "tags": ["specified-values", "type-alias", "css-property"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/svg.rs",
+      "type": "file",
+      "name": "svg.rs",
+      "filePath": "style/values/specified/svg.rs",
+      "summary": "Defines specified value types for SVG presentation attributes including paint, length, stroke-dasharray, paint-order, d-property, and vector-effect.",
+      "tags": ["specified-values", "svg", "css-property"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/text.rs",
+      "type": "file",
+      "name": "text.rs",
+      "filePath": "style/values/specified/text.rs",
+      "summary": "Defines specified value types for CSS text properties including spacing, emphasis, decoration, alignment, transform, hyphenation, and text-box-edge.",
+      "tags": ["specified-values", "css-property", "text", "typography"],
+      "complexity": "complex",
+      "languageNotes": "Large file (~1600 lines) with many bitflags types and enum-based CSS value representations with custom parse and serialization logic."
+    },
+    {
+      "id": "file:style/values/specified/time.rs",
+      "type": "file",
+      "name": "time.rs",
+      "filePath": "style/values/specified/time.rs",
+      "summary": "Defines specified CSS time values with support for seconds, milliseconds, calc expressions, and typed-OM serialization.",
+      "tags": ["specified-values", "css-property", "time", "calc"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/specified/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/specified/transform.rs",
+      "summary": "Defines specified value types for CSS transform properties including transform, transform-origin, transform-box, scale, rotate, and translate.",
+      "tags": ["specified-values", "css-property", "transform"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/ui.rs",
+      "type": "file",
+      "name": "ui.rs",
+      "filePath": "style/values/specified/ui.rs",
+      "summary": "Defines specified value types for CSS UI properties including cursor, user-select, pointer-events, inert, moz-theme, and scrollbar-color.",
+      "tags": ["specified-values", "css-property", "ui", "user-interface"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/specified/url.rs",
+      "type": "file",
+      "name": "url.rs",
+      "filePath": "style/values/specified/url.rs",
+      "summary": "Defines type alias for CSS url() or none values, re-exporting SpecifiedUrl from the crate's url module.",
+      "tags": ["specified-values", "type-alias", "url"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/corner_shape.rs",
+      "type": "file",
+      "name": "corner_shape.rs",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "summary": "Defines specified value types for CSS corner-shape properties including round, scoop, bevel, notch, square, squircle, and superellipse() shapes.",
+      "tags": ["specified-values", "css-property", "border", "corner-shape"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/specified/grid.rs",
+      "type": "file",
+      "name": "grid.rs",
+      "filePath": "style/values/specified/grid.rs",
+      "summary": "Defines parsing logic for CSS grid layout track sizes including flex, repeat, line names, and subgrid/masonry support.",
+      "tags": ["specified-values", "css-property", "grid", "layout"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/intersection_observer.rs",
+      "type": "file",
+      "name": "intersection_observer.rs",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "summary": "Defines specified value type for IntersectionObserver root margin, parsing pixel and percentage values for observation thresholds.",
+      "tags": ["specified-values", "intersection-observer", "api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/list.rs:ListStyleType",
+      "type": "class",
+      "name": "ListStyleType",
+      "filePath": "style/values/specified/list.rs",
+      "lineRange": [29, 85],
+      "summary": "Specified and computed value for the list-style-type CSS property, wrapping a CounterStyle with methods for bullet detection and Gecko keyword mapping.",
+      "tags": ["specified-value", "css-property", "list-style", "counter-style"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/list.rs:Quotes",
+      "type": "class",
+      "name": "Quotes",
+      "filePath": "style/values/specified/list.rs",
+      "lineRange": [144, 191],
+      "summary": "Specified and computed value for the CSS quotes property, supporting auto, none, and a list of quote pair strings.",
+      "tags": ["specified-value", "css-property", "quotes", "content"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:AngleOrPercentage",
+      "type": "class",
+      "name": "AngleOrPercentage",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [165, 200],
+      "summary": "Specified CSS <angle> | <percentage> type used in conic-gradient and other gradient functions, with optional unitless angle parsing.",
+      "tags": ["specified-value", "css-type", "angle", "gradient"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:NumberOrPercentage",
+      "type": "class",
+      "name": "NumberOrPercentage",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [210, 291],
+      "summary": "Specified CSS <number> | <percentage> type with clamping mode support, percentage-to-number conversion, and resolution to computed values.",
+      "tags": ["specified-value", "css-type", "number", "percentage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:Opacity",
+      "type": "class",
+      "name": "Opacity",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [323, 360],
+      "summary": "Specified CSS opacity value that accepts <number> or <percentage> and clamps the computed value to the 0-1 range.",
+      "tags": ["specified-value", "css-property", "opacity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:AllowQuirks",
+      "type": "class",
+      "name": "AllowQuirks",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [458, 476],
+      "summary": "Controls whether browser quirks-mode behavior is allowed during CSS value parsing, used by SVG and legacy length parsing.",
+      "tags": ["specified-value", "parsing", "quirks-mode"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:ParsedNamespace",
+      "type": "class",
+      "name": "ParsedNamespace",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [480, 507],
+      "summary": "Distinguishes between known (registered) and unknown namespaces during CSS attr() parsing.",
+      "tags": ["specified-value", "namespace", "css"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/mod.rs:Attr",
+      "type": "class",
+      "name": "Attr",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [525, 651],
+      "summary": "Specified value for CSS attr() function with optional namespace prefix, attribute name, and string fallback value.",
+      "tags": ["specified-value", "css-function", "attribute"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/motion.rs:OffsetRotate",
+      "type": "class",
+      "name": "OffsetRotate",
+      "filePath": "style/values/specified/motion.rs",
+      "lineRange": [244, 329],
+      "summary": "Specified value for the CSS offset-rotate property, combining auto/reverse direction with an angle offset.",
+      "tags": ["specified-value", "css-property", "motion-path", "offset"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:PositionComponent",
+      "type": "class",
+      "name": "PositionComponent",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [57, 321],
+      "summary": "Generic specified CSS position component representing center, length-percentage, or side with optional offset values.",
+      "tags": ["specified-value", "css-type", "position"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:GridAutoFlow",
+      "type": "class",
+      "name": "GridAutoFlow",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [1597, 1621],
+      "summary": "Specified value for CSS grid-auto-flow property controlling auto-placement algorithm direction and dense packing.",
+      "tags": ["specified-value", "css-property", "grid"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:GridTemplateAreas",
+      "type": "class",
+      "name": "GridTemplateAreas",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [2073, 2086],
+      "summary": "Specified value for CSS grid-template-areas property representing named grid areas as visual strings.",
+      "tags": ["specified-value", "css-property", "grid"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:MasonryAutoFlow",
+      "type": "class",
+      "name": "MasonryAutoFlow",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [1708, 1735],
+      "summary": "Specified value for CSS masonry-auto-flow property controlling masonry layout auto-placement algorithm and item ordering.",
+      "tags": ["specified-value", "css-property", "masonry", "grid"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:PositionArea",
+      "type": "class",
+      "name": "PositionArea",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [1321, 1531],
+      "summary": "Specified value for CSS position-area property enabling anchor-positioned element placement with physical, logical, and self-relative modes.",
+      "tags": ["specified-value", "css-property", "anchor-positioning"],
+      "complexity": "complex",
+      "languageNotes": "Large struct with ~200 lines of methods handling writing-mode-aware to_physical conversion, tactic application, and canonical ordering."
+    },
+    {
+      "id": "class:style/values/specified/position.rs:PositionAreaKeyword",
+      "type": "class",
+      "name": "PositionAreaKeyword",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [1050, 1303],
+      "summary": "Enum of all possible position-area keywords with packed bitfield representation for axis and track, supporting physical/logical/self-wm variants.",
+      "tags": ["specified-value", "css-property", "position-area"],
+      "complexity": "complex",
+      "languageNotes": "Large enum (~250 lines) with packed u8 bitfield encoding of axis type, track, and writing-mode flags."
+    },
+    {
+      "id": "class:style/values/specified/position.rs:PositionTryOrder",
+      "type": "class",
+      "name": "PositionTryOrder",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [818, 843],
+      "summary": "Specified CSS position-try-order property value controlling which position-try-fallbacks are tried first (normal, most-width, most-height, etc.).",
+      "tags": ["specified-value", "css-property", "anchor-positioning"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:PositionVisibility",
+      "type": "class",
+      "name": "PositionVisibility",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [864, 890],
+      "summary": "Specified CSS position-visibility property using bitflags for always, anchors-valid, anchors-visible, and no-overflow values.",
+      "tags": ["specified-value", "css-property", "anchor-positioning"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/position.rs:AnchorNameIdent",
+      "type": "class",
+      "name": "AnchorNameIdent",
+      "filePath": "style/values/specified/position.rs",
+      "lineRange": [372, 411],
+      "summary": "Specified CSS anchor-name property value as a list of dashed idents, tree-scoped for anchor positioning.",
+      "tags": ["specified-value", "css-property", "anchor-positioning"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/svg.rs:SVGPaintOrder",
+      "type": "class",
+      "name": "SVGPaintOrder",
+      "filePath": "style/values/specified/svg.rs",
+      "lineRange": [144, 251],
+      "summary": "Specified CSS paint-order property for SVG, packed as a bitfield of fill/stroke/markers values with deduplication and canonical ordering.",
+      "tags": ["specified-value", "svg", "css-property", "paint"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/svg.rs:MozContextProperties",
+      "type": "class",
+      "name": "MozContextProperties",
+      "filePath": "style/values/specified/svg.rs",
+      "lineRange": [298, 354],
+      "summary": "Nonstandard CSS -moz-context-properties value specifying which SVG context properties (fill, stroke, opacity) are inherited from parent elements.",
+      "tags": ["specified-value", "svg", "mozilla", "css-property"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/svg.rs:DProperty",
+      "type": "class",
+      "name": "DProperty",
+      "filePath": "style/values/specified/svg.rs",
+      "lineRange": [379, 411],
+      "summary": "Specified value for the SVG d property, representing path data as either a path() function or none.",
+      "tags": ["specified-value", "svg", "css-property", "path"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/svg.rs:VectorEffect",
+      "type": "class",
+      "name": "VectorEffect",
+      "filePath": "style/values/specified/svg.rs",
+      "lineRange": [432, 448],
+      "summary": "Specified SVG vector-effect property using bitflags for none and non-scaling-stroke values.",
+      "tags": ["specified-value", "svg", "css-property", "vector"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:LetterSpacing",
+      "type": "class",
+      "name": "LetterSpacing",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [59, 80],
+      "summary": "Specified CSS letter-spacing property value wrapping a Spacing enum with ToComputedValue handling that normalizes zero to normal.",
+      "tags": ["specified-value", "css-property", "text", "spacing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:WordSpacing",
+      "type": "class",
+      "name": "WordSpacing",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [86, 103],
+      "summary": "Specified CSS word-spacing property value wrapping a Spacing enum with ToComputedValue support.",
+      "tags": ["specified-value", "css-property", "text", "spacing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextOverflow",
+      "type": "class",
+      "name": "TextOverflow",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [218, 277],
+      "summary": "Specified CSS text-overflow property with clip, ellipsis, and string values for one or two sides with logical/physical mode tracking.",
+      "tags": ["specified-value", "css-property", "text", "overflow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextTransform",
+      "type": "class",
+      "name": "TextTransform",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [417, 477],
+      "summary": "Specified CSS text-transform property using bitflags for uppercase, lowercase, capitalize, full-width, full-size-kana, and math-auto with mutually-exclusive case transforms.",
+      "tags": ["specified-value", "css-property", "text", "transform"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextAlign",
+      "type": "class",
+      "name": "TextAlign",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [559, 629],
+      "summary": "Specified CSS text-align property with keyword values, match-parent, and MozCenterOrInherit with writing-mode-aware computed value resolution.",
+      "tags": ["specified-value", "css-property", "text", "alignment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextEmphasisStyle",
+      "type": "class",
+      "name": "TextEmphasisStyle",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [644, 806],
+      "summary": "Specified CSS text-emphasis-style property supporting [fill || shape] keyword pairs, none, and string values with writing-mode-dependent default shapes.",
+      "tags": ["specified-value", "css-property", "text", "emphasis"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextEdge",
+      "type": "class",
+      "name": "TextEdge",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1455, 1521],
+      "summary": "Specified CSS <text-edge> typedef for text-box-edge and line-fit-edge properties, pairing over/under font metric keywords.",
+      "tags": ["specified-value", "css-type", "text", "font-metrics"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:RubyPosition",
+      "type": "class",
+      "name": "RubyPosition",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1236, 1293],
+      "summary": "Specified CSS ruby-position property with alternate, over, under values and canonical serialization.",
+      "tags": ["specified-value", "css-property", "ruby", "text"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextUnderlinePosition",
+      "type": "class",
+      "name": "TextUnderlinePosition",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1159, 1219],
+      "summary": "Specified CSS text-underline-position property using bitflags for auto, from-font, under, left, and right with mutually-exclusive flag validation.",
+      "tags": ["specified-value", "css-property", "text", "decoration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextAutospace",
+      "type": "class",
+      "name": "TextAutospace",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1331, 1362],
+      "summary": "Specified CSS text-autospace property using bitflags for normal, auto, no-autospace, ideograph-alpha, ideograph-numeric, and insert modes.",
+      "tags": ["specified-value", "css-property", "text", "spacing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextBoxEdge",
+      "type": "class",
+      "name": "TextBoxEdge",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1543, 1548],
+      "summary": "Specified CSS text-box-edge property representing auto or a custom TextEdge with font-metric-based edge selection.",
+      "tags": ["specified-value", "css-property", "text", "box"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/text.rs:TextBoxTrim",
+      "type": "class",
+      "name": "TextBoxTrim",
+      "filePath": "style/values/specified/text.rs",
+      "lineRange": [1571, 1591],
+      "summary": "Specified CSS text-box-trim property using bitflags for none, trim-start, trim-end, and trim-both values.",
+      "tags": ["specified-value", "css-property", "text", "box"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/time.rs:NoCalcTime",
+      "type": "class",
+      "name": "NoCalcTime",
+      "filePath": "style/values/specified/time.rs",
+      "lineRange": [37, 155],
+      "summary": "Non-calc CSS time value with seconds and milliseconds unit support, parsing, serialization, typed-OM, and computed value conversion.",
+      "tags": ["specified-value", "css-type", "time"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/time.rs:Time",
+      "type": "class",
+      "name": "Time",
+      "filePath": "style/values/specified/time.rs",
+      "lineRange": [159, 300],
+      "summary": "Specified CSS time value supporting both plain values and calc() expressions via NumericUnion, with clamping and zero-value handling.",
+      "tags": ["specified-value", "css-type", "time", "calc"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/transform.rs:TransformBox",
+      "type": "class",
+      "name": "TransformBox",
+      "filePath": "style/values/specified/transform.rs",
+      "lineRange": [74, 82],
+      "summary": "Specified CSS transform-box property with content-box, border-box, fill-box, stroke-box, and view-box values, conditionally compiled for Servo/Gecko.",
+      "tags": ["specified-value", "css-property", "transform"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/transform.rs:ScaleFactor",
+      "type": "class",
+      "name": "ScaleFactor",
+      "filePath": "style/values/specified/transform.rs",
+      "lineRange": [549, 595],
+      "summary": "Generic scale factor type used in CSS scale/rotate/translate transforms with one, zero defaults and float conversion.",
+      "tags": ["specified-value", "css-type", "transform", "scale"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/ui.rs:BoolInteger",
+      "type": "class",
+      "name": "BoolInteger",
+      "filePath": "style/values/specified/ui.rs",
+      "lineRange": [95, 126],
+      "summary": "Specified CSS integer-as-boolean type parsing 0 or 1, used for internal property values requiring integer syntax.",
+      "tags": ["specified-value", "css-type", "boolean"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/ui.rs:PointerEvents",
+      "type": "class",
+      "name": "PointerEvents",
+      "filePath": "style/values/specified/ui.rs",
+      "lineRange": [284, 320],
+      "summary": "Specified CSS pointer-events property with auto, none, visiblePainted, visibleFill, visibleStroke, visible, painted, fill, stroke, and all values.",
+      "tags": ["specified-value", "css-property", "ui", "events"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/ui.rs:UserSelect",
+      "type": "class",
+      "name": "UserSelect",
+      "filePath": "style/values/specified/ui.rs",
+      "lineRange": [166, 173],
+      "summary": "Specified CSS user-select property with auto, text, none, and all values for controlling text selection behavior.",
+      "tags": ["specified-value", "css-property", "ui", "selection"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/ui.rs:MozTheme",
+      "type": "class",
+      "name": "MozTheme",
+      "filePath": "style/values/specified/ui.rs",
+      "lineRange": [257, 280],
+      "summary": "Specified CSS -moz-theme property for XUL-themed elements with values for default, lightweight, and non-native theme modes.",
+      "tags": ["specified-value", "css-property", "ui", "mozilla", "theme"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "class",
+      "name": "CornerShape",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [71, 149],
+      "summary": "Specified CSS corner-shape value with round, scoop, bevel, notch, square, squircle, and superellipse() variants, computing to an equivalent superellipse K parameter.",
+      "tags": ["specified-value", "css-property", "border", "corner"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "class",
+      "name": "SuperellipseArg",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [24, 63],
+      "summary": "Argument for the superellipse() CSS function supporting a number, infinity, or negative-infinity keyword that defines the corner curvature.",
+      "tags": ["specified-value", "css-type", "superellipse", "border"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/mod.rs:parse_namespace",
+      "type": "function",
+      "name": "parse_namespace",
+      "filePath": "style/values/specified/mod.rs",
+      "lineRange": [547, 578],
+      "summary": "Parses a CSS namespace prefix and resolves it to a ParsedNamespace, supporting registered and unregistered namespace modes for attr() contexts.",
+      "tags": ["parsing", "namespace", "css", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "function",
+      "name": "parse_line_names",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [33, 46],
+      "summary": "Parses CSS grid line names inside brackets, returning a vector of CustomIdents used in track list definitions.",
+      "tags": ["parsing", "grid", "css", "utility"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/list.rs",
+      "target": "class:style/values/specified/list.rs:ListStyleType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/list.rs",
+      "target": "class:style/values/specified/list.rs:ListStyleType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/list.rs",
+      "target": "class:style/values/specified/list.rs:Quotes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/list.rs",
+      "target": "class:style/values/specified/list.rs:Quotes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:AngleOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:AngleOrPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:NumberOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:NumberOrPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:Opacity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:Opacity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:AllowQuirks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:AllowQuirks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:ParsedNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:ParsedNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:Attr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "class:style/values/specified/mod.rs:Attr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "function:style/values/specified/mod.rs:parse_namespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/mod.rs",
+      "target": "function:style/values/specified/mod.rs:parse_namespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/motion.rs",
+      "target": "class:style/values/specified/motion.rs:OffsetRotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/motion.rs",
+      "target": "class:style/values/specified/motion.rs:OffsetRotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:GridAutoFlow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:GridAutoFlow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:GridTemplateAreas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:GridTemplateAreas",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:MasonryAutoFlow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:MasonryAutoFlow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionArea",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionArea",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionAreaKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionAreaKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionTryOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionTryOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionVisibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:PositionVisibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:AnchorNameIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/position.rs",
+      "target": "class:style/values/specified/position.rs:AnchorNameIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:SVGPaintOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:SVGPaintOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:MozContextProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:MozContextProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:DProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:DProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:VectorEffect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/svg.rs",
+      "target": "class:style/values/specified/svg.rs:VectorEffect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:LetterSpacing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:LetterSpacing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:WordSpacing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:WordSpacing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextOverflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextOverflow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextTransform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextTransform",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextAlign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextAlign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextEmphasisStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextEmphasisStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextEdge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextEdge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:RubyPosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:RubyPosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextUnderlinePosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextUnderlinePosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextAutospace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextAutospace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextBoxEdge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextBoxEdge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextBoxTrim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/text.rs",
+      "target": "class:style/values/specified/text.rs:TextBoxTrim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/time.rs",
+      "target": "class:style/values/specified/time.rs:NoCalcTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/time.rs",
+      "target": "class:style/values/specified/time.rs:NoCalcTime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/time.rs",
+      "target": "class:style/values/specified/time.rs:Time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/time.rs",
+      "target": "class:style/values/specified/time.rs:Time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/transform.rs",
+      "target": "class:style/values/specified/transform.rs:TransformBox",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/transform.rs",
+      "target": "class:style/values/specified/transform.rs:TransformBox",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/transform.rs",
+      "target": "class:style/values/specified/transform.rs:ScaleFactor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/transform.rs",
+      "target": "class:style/values/specified/transform.rs:ScaleFactor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:BoolInteger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:BoolInteger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:PointerEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:PointerEvents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:UserSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:UserSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:MozTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/ui.rs",
+      "target": "class:style/values/specified/ui.rs:MozTheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

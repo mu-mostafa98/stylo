@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "config:Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "Cargo.toml",
+      "summary": "Rust workspace manifest defining the Stylo project's 11 member crates, their versioning at 0.18.0, and in-repo dependency paths for building all components together.",
+      "tags": ["configuration", "rust", "workspace", "build-system"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project overview documenting Stylo as a high-performance CSS style engine for Servo and Firefox, with sections on branches, crate architecture, local build setup, and release process.",
+      "tags": ["documentation", "entry-point", "overview"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:SYNCING.md",
+      "type": "document",
+      "name": "SYNCING.md",
+      "filePath": "SYNCING.md",
+      "summary": "Step-by-step guide for syncing this repository with the upstream Stylo copy in mozilla-central, covering upstream filtering from mozilla-central and rebasing main onto the filtered upstream.",
+      "tags": ["documentation", "development", "workflow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:commit-from-merge.sh",
+      "type": "file",
+      "name": "commit-from-merge.sh",
+      "filePath": "commit-from-merge.sh",
+      "summary": "Shell utility that creates a git commit borrowing the author name, email, and date from a bors merge commit, used during the sync workflow to preserve attribution.",
+      "tags": ["utility", "script", "git", "workflow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:commit-from-squashed.sh",
+      "type": "file",
+      "name": "commit-from-squashed.sh",
+      "filePath": "commit-from-squashed.sh",
+      "summary": "Shell utility that creates a git commit reusing author, date, and message from a GitHub merge queue squashed commit, used during the sync workflow to preserve metadata.",
+      "tags": ["utility", "script", "git", "workflow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:start-rebase.sh",
+      "type": "file",
+      "name": "start-rebase.sh",
+      "filePath": "start-rebase.sh",
+      "summary": "Shell script that automates git rebase onto a new upstream base by finding the first downstream commit and using it as the old base for --onto rebasing.",
+      "tags": ["utility", "script", "git", "rebase"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style.paths",
+      "type": "file",
+      "name": "style.paths",
+      "filePath": "style.paths",
+      "summary": "git-filter-repo path filtering configuration that specifies which mozilla-central paths (servo/components/ and rustfmt.toml) to extract and how to rename them for this repository.",
+      "tags": ["configuration", "filtering", "sync", "workflow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:shell.nix",
+      "type": "file",
+      "name": "shell.nix",
+      "filePath": "shell.nix",
+      "summary": "Nix derivation providing a development shell environment named style-sync-shell, pinned to a specific nixpkgs revision for reproducible tooling during the sync process.",
+      "tags": ["nix", "development", "environment", "reproducible-build"],
+      "complexity": "simple",
+      "languageNotes": "Pins nixpkgs to a specific commit SHA for deterministic shell environments."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "document:SYNCING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:style.paths",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:SYNCING.md",
+      "target": "file:start-rebase.sh",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:Cargo.toml",
+      "target": "file:shell.nix",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

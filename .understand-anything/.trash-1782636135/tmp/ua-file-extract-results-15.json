@@ -1,0 +1,587 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [
+    "style/gecko_bindings/sugar/wrapper.rs",
+    "style/l10n/atoms.rs",
+    "style/l10n/longhands.rs"
+  ],
+  "results": [
+    {
+      "path": "style/gecko_bindings/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/gecko_bindings/sugar/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "raw",
+          "startLine": 12,
+          "endLine": 14,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "raw",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/gecko_bindings/sugar/origin_flags.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "assert_flags_match",
+          "startLine": 11,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "from",
+          "startLine": 22,
+          "endLine": 24,
+          "params": [
+            "flags"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "set"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "assert_flags_match",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "from",
+          "callee": "Self::from_bits_retain",
+          "lineNumber": 23
+        },
+        {
+          "caller": "from",
+          "callee": "OriginFlags",
+          "lineNumber": 29
+        },
+        {
+          "caller": "from",
+          "callee": "set.bits",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/gecko_bindings/sugar/refptr.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 289,
+      "nonEmptyLines": 257,
+      "functions": [
+        {
+          "name": "fmt",
+          "startLine": 35,
+          "endLine": 39,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "from_addrefed",
+          "startLine": 46,
+          "endLine": 52,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "is_null",
+          "startLine": 55,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "null",
+          "startLine": 60,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 70,
+          "endLine": 77,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "forget",
+          "startLine": 82,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "get",
+          "startLine": 92,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "addref",
+          "startLine": 97,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "release",
+          "startLine": 108,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "deref",
+          "startLine": 117,
+          "endLine": 120,
+          "params": []
+        },
+        {
+          "name": "to_safe",
+          "startLine": 127,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "into_safe",
+          "startLine": 137,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "set",
+          "startLine": 152,
+          "endLine": 157,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "clear",
+          "startLine": 163,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "set_move",
+          "startLine": 175,
+          "endLine": 182,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "null",
+          "startLine": 187,
+          "endLine": 192,
+          "params": []
+        },
+        {
+          "name": "from_arc",
+          "startLine": 195,
+          "endLine": 200,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "set_arc",
+          "startLine": 203,
+          "endLine": 210,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "drop",
+          "startLine": 214,
+          "endLine": 216,
+          "params": []
+        },
+        {
+          "name": "clone",
+          "startLine": 220,
+          "endLine": 226,
+          "params": []
+        },
+        {
+          "name": "eq",
+          "startLine": 230,
+          "endLine": 232,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "addref_atom",
+          "startLine": 281,
+          "endLine": 283,
+          "params": [
+            "atom"
+          ]
+        },
+        {
+          "name": "release_atom",
+          "startLine": 286,
+          "endLine": 288,
+          "params": [
+            "atom"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RefCounted",
+          "startLine": 17,
+          "endLine": 22,
+          "methods": [
+            "addref",
+            "release"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ThreadSafeRefCounted",
+          "startLine": 25,
+          "endLine": 25,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "RefPtr",
+          "startLine": 29,
+          "endLine": 32,
+          "methods": [],
+          "properties": [
+            "ptr",
+            "_marker"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RefCounted",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "ThreadSafeRefCounted",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "RefPtr",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "from_addrefed",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "is_null",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "null",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "forget",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "addref",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "release",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "to_safe",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "into_safe",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "set",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "set_move",
+          "line": 175,
+          "isDefault": false
+        },
+        {
+          "name": "null",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "from_arc",
+          "line": 195,
+          "isDefault": false
+        },
+        {
+          "name": "set_arc",
+          "line": 203,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fmt",
+          "callee": "f.write_str",
+          "lineNumber": 36
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.ptr.fmt",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.write_char",
+          "lineNumber": 38
+        },
+        {
+          "caller": "is_null",
+          "callee": "self.ptr.is_null",
+          "lineNumber": 56
+        },
+        {
+          "caller": "null",
+          "callee": "ptr::null_mut",
+          "lineNumber": 62
+        },
+        {
+          "caller": "new",
+          "callee": "ret.addref",
+          "lineNumber": 75
+        },
+        {
+          "caller": "forget",
+          "callee": "mem::forget",
+          "lineNumber": 87
+        },
+        {
+          "caller": "addref",
+          "callee": "self.ptr.is_null",
+          "lineNumber": 98
+        },
+        {
+          "caller": "addref",
+          "callee": "(*self.ptr).addref",
+          "lineNumber": 100
+        },
+        {
+          "caller": "release",
+          "callee": "self.ptr.is_null",
+          "lineNumber": 109
+        },
+        {
+          "caller": "release",
+          "callee": "(*self.ptr).release",
+          "lineNumber": 110
+        },
+        {
+          "caller": "to_safe",
+          "callee": "r.addref",
+          "lineNumber": 132
+        },
+        {
+          "caller": "set",
+          "callee": "self.clear",
+          "lineNumber": 153
+        },
+        {
+          "caller": "set",
+          "callee": "other.mRawPtr.is_null",
+          "lineNumber": 154
+        },
+        {
+          "caller": "set",
+          "callee": "other.to_safe().forget",
+          "lineNumber": 155
+        },
+        {
+          "caller": "set",
+          "callee": "other.to_safe",
+          "lineNumber": 155
+        },
+        {
+          "caller": "clear",
+          "callee": "self.mRawPtr.is_null",
+          "lineNumber": 164
+        },
+        {
+          "caller": "clear",
+          "callee": "(*self.mRawPtr).release",
+          "lineNumber": 165
+        },
+        {
+          "caller": "clear",
+          "callee": "ptr::null_mut",
+          "lineNumber": 166
+        },
+        {
+          "caller": "set_move",
+          "callee": "self.mRawPtr.is_null",
+          "lineNumber": 176
+        },
+        {
+          "caller": "set_move",
+          "callee": "(*self.mRawPtr).release",
+          "lineNumber": 178
+        },
+        {
+          "caller": "set_move",
+          "callee": "other.forget",
+          "lineNumber": 181
+        },
+        {
+          "caller": "null",
+          "callee": "ptr::null_mut",
+          "lineNumber": 189
+        },
+        {
+          "caller": "from_arc",
+          "callee": "Arc::into_raw",
+          "lineNumber": 197
+        },
+        {
+          "caller": "set_arc",
+          "callee": "self.mRawPtr.is_null",
+          "lineNumber": 205
+        },
+        {
+          "caller": "set_arc",
+          "callee": "Arc::from_raw",
+          "lineNumber": 206
+        },
+        {
+          "caller": "set_arc",
+          "callee": "Arc::into_raw",
+          "lineNumber": 208
+        },
+        {
+          "caller": "drop",
+          "callee": "self.release",
+          "lineNumber": 215
+        },
+        {
+          "caller": "clone",
+          "callee": "self.addref",
+          "lineNumber": 221
+        },
+        {
+          "caller": "addref_atom",
+          "callee": "mem::forget",
+          "lineNumber": 282
+        },
+        {
+          "caller": "addref_atom",
+          "callee": "Atom::from_raw",
+          "lineNumber": 282
+        },
+        {
+          "caller": "release_atom",
+          "callee": "Atom::from_addrefed",
+          "lineNumber": 287
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 19,
+        "functionCount": 23,
+        "classCount": 3
+      }
+    }
+  ]
+}

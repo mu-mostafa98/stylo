@@ -1,0 +1,14 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/gecko_bindings/mod.rs", "language": "rust", "sizeLines": 30, "fileCategory": "code"},
+    {"path": "style/gecko_bindings/sugar/mod.rs", "language": "rust", "sizeLines": 12, "fileCategory": "code"},
+    {"path": "style/gecko_bindings/sugar/ns_com_ptr.rs", "language": "rust", "sizeLines": 15, "fileCategory": "code"},
+    {"path": "style/gecko_bindings/sugar/origin_flags.rs", "language": "rust", "sizeLines": 31, "fileCategory": "code"},
+    {"path": "style/gecko_bindings/sugar/refptr.rs", "language": "rust", "sizeLines": 289, "fileCategory": "code"},
+    {"path": "style/gecko_bindings/sugar/wrapper.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/l10n/atoms.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/l10n/longhands.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

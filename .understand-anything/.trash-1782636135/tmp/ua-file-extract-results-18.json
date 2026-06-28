@@ -1,0 +1,3307 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/properties_and_values/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/properties_and_values/registry.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "get",
+          "startLine": 41,
+          "endLine": 43,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "properties",
+          "startLine": 47,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "register",
+          "startLine": 55,
+          "endLine": 59,
+          "params": [
+            "registration"
+          ]
+        },
+        {
+          "name": "get_all",
+          "startLine": 63,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PropertyRegistration",
+          "startLine": 17,
+          "endLine": 28,
+          "methods": [],
+          "properties": [
+            "name",
+            "descriptors",
+            "url_data",
+            "source_location"
+          ]
+        },
+        {
+          "name": "ScriptRegistry",
+          "startLine": 34,
+          "endLine": 36,
+          "methods": [
+            "get",
+            "properties",
+            "register",
+            "get_all"
+          ],
+          "properties": [
+            "properties"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PropertyRegistration",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "ScriptRegistry",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "properties",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "register",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "get_all",
+          "line": 63,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get",
+          "callee": "self.properties.get",
+          "lineNumber": 42
+        },
+        {
+          "caller": "register",
+          "callee": "registration.name.0.clone",
+          "lineNumber": 56
+        },
+        {
+          "caller": "register",
+          "callee": "self.properties.insert",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/properties_and_values/rule.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 341,
+      "nonEmptyLines": 306,
+      "functions": [
+        {
+          "name": "parse_property_block",
+          "startLine": 41,
+          "endLine": 135,
+          "params": [
+            "context",
+            "input",
+            "name",
+            "source_location"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 147,
+          "endLine": 149,
+          "params": [
+            "_",
+            "ops"
+          ]
+        },
+        {
+          "name": "compute_initial_value",
+          "startLine": 152,
+          "endLine": 180,
+          "params": [
+            "computed_context"
+          ]
+        },
+        {
+          "name": "validate_initial_value",
+          "startLine": 184,
+          "endLine": 232,
+          "params": [
+            "syntax",
+            "initial_value"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 237,
+          "endLine": 243,
+          "params": [
+            "_guard",
+            "dest"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 247,
+          "endLine": 251,
+          "params": [
+            "_builder"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 259,
+          "endLine": 262,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 275,
+          "endLine": 297,
+          "params": [
+            "_context",
+            "input"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 307,
+          "endLine": 317,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "unregistered",
+          "startLine": 323,
+          "endLine": 330,
+          "params": []
+        },
+        {
+          "name": "inherits",
+          "startLine": 333,
+          "endLine": 335,
+          "params": []
+        },
+        {
+          "name": "is_universal",
+          "startLine": 338,
+          "endLine": 340,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PropertyRegistrationError",
+          "startLine": 139,
+          "endLine": 143,
+          "methods": [],
+          "properties": [
+            "NoInitialValue",
+            "InvalidInitialValue",
+            "InitialValueNotComputationallyIndependent"
+          ]
+        },
+        {
+          "name": "PropertyRuleName",
+          "startLine": 256,
+          "endLine": 256,
+          "methods": [
+            "to_css"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Inherits",
+          "startLine": 267,
+          "endLine": 272,
+          "methods": [
+            "parse"
+          ],
+          "properties": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "parse_property_block",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyRegistrationError",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "size_of",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "compute_initial_value",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "validate_initial_value",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyRuleName",
+          "line": 256,
+          "isDefault": false
+        },
+        {
+          "name": "Inherits",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "unregistered",
+          "line": 323,
+          "isDefault": false
+        },
+        {
+          "name": "inherits",
+          "line": 333,
+          "isDefault": false
+        },
+        {
+          "name": "is_universal",
+          "line": 338,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_property_block",
+          "callee": "Descriptors::default",
+          "lineNumber": 47
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "RuleBodyParser::new",
+          "lineNumber": 52
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "iter.next",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "context.error_reporting_enabled",
+          "lineNumber": 56
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Some",
+          "lineNumber": 66
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "error.clone",
+          "lineNumber": 66
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "ContextualParseError::UnsupportedValue",
+          "lineNumber": 67
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Some",
+          "lineNumber": 73
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "error.clone",
+          "lineNumber": 73
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "ContextualParseError::UnsupportedValue",
+          "lineNumber": 74
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "ContextualParseError::UnsupportedPropertyDescriptor",
+          "lineNumber": 79
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "context.log_css_error",
+          "lineNumber": 81
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Err",
+          "lineNumber": 90
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "input.new_custom_error",
+          "lineNumber": 93
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 93
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "context.log_css_error",
+          "lineNumber": 96
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "ContextualParseError::UnsupportedValue",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "err.clone",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "descriptors.inherits.is_none",
+          "lineNumber": 108
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Err",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "input.new_custom_error",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "StyleParseErrorKind::PropertyInheritsField",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "context.log_css_error",
+          "lineNumber": 115
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "ContextualParseError::UnsupportedValue",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "err.clone",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "PropertyRegistration::validate_initial_value(syntax, descriptors.initial_value.as_deref()).is_err",
+          "lineNumber": 123
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "PropertyRegistration::validate_initial_value",
+          "lineNumber": 123
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "descriptors.initial_value.as_deref",
+          "lineNumber": 123
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Err",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "input.new_error",
+          "lineNumber": 126
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "Ok",
+          "lineNumber": 129
+        },
+        {
+          "caller": "parse_property_block",
+          "callee": "context.url_data.clone",
+          "lineNumber": 132
+        },
+        {
+          "caller": "size_of",
+          "callee": "MallocSizeOf::size_of",
+          "lineNumber": 148
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Err",
+          "lineNumber": 157
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "self.descriptors.is_universal",
+          "lineNumber": 160
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Ok",
+          "lineNumber": 161
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "ComputedRegisteredValue::universal",
+          "lineNumber": 161
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Arc::clone",
+          "lineNumber": 161
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "ParserInput::new",
+          "lineNumber": 164
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "initial.css_text",
+          "lineNumber": 164
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Parser::new",
+          "lineNumber": 165
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 166
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "SpecifiedRegisteredValue::compute",
+          "lineNumber": 168
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Default::default",
+          "lineNumber": 175
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Ok",
+          "lineNumber": 177
+        },
+        {
+          "caller": "compute_initial_value",
+          "callee": "Err",
+          "lineNumber": 178
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "syntax.is_universal",
+          "lineNumber": 192
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "initial_value.is_none",
+          "lineNumber": 192
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Ok",
+          "lineNumber": 193
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Err",
+          "lineNumber": 201
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "initial.has_references",
+          "lineNumber": 206
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Err",
+          "lineNumber": 207
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "ParserInput::new",
+          "lineNumber": 210
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "initial.css_text",
+          "lineNumber": 210
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Parser::new",
+          "lineNumber": 211
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 212
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "input.try_parse(CSSWideKeyword::parse).is_ok",
+          "lineNumber": 215
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "input.try_parse",
+          "lineNumber": 215
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Err",
+          "lineNumber": 216
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "SpecifiedRegisteredValue::parse",
+          "lineNumber": 219
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Default::default",
+          "lineNumber": 225
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Err",
+          "lineNumber": 228
+        },
+        {
+          "caller": "validate_initial_value",
+          "callee": "Ok",
+          "lineNumber": 231
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 238
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.name.to_css",
+          "lineNumber": 239
+        },
+        {
+          "caller": "to_css",
+          "callee": "CssWriter::new",
+          "lineNumber": 239
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 240
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.descriptors.to_css",
+          "lineNumber": 241
+        },
+        {
+          "caller": "to_css",
+          "callee": "CssWriter::new",
+          "lineNumber": 241
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 242
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Err",
+          "lineNumber": 248
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "String::from",
+          "lineNumber": 248
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 260
+        },
+        {
+          "caller": "to_css",
+          "callee": "serialize_atom_name",
+          "lineNumber": 261
+        },
+        {
+          "caller": "parse",
+          "callee": "(|| {\r\n            try_match_ident_ignore_ascii_case! { input,\r\n                \"true\" => Ok(Inherits::True),\r\n                \"false\" => Ok(Inherits::False),\r\n            }\r\n        })",
+          "lineNumber": 281
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 288
+        },
+        {
+          "caller": "parse",
+          "callee": "ParseErrorKind::Custom",
+          "lineNumber": 289
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleParseErrorKind::PropertyInheritsField",
+          "lineNumber": 289
+        },
+        {
+          "caller": "parse",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 311
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 312
+        },
+        {
+          "caller": "parse",
+          "callee": "Arc::new",
+          "lineNumber": 312
+        },
+        {
+          "caller": "parse",
+          "callee": "SpecifiedValue::parse",
+          "lineNumber": 312
+        },
+        {
+          "caller": "parse",
+          "callee": "Some",
+          "lineNumber": 314
+        },
+        {
+          "caller": "unregistered",
+          "callee": "Some",
+          "lineNumber": 325
+        },
+        {
+          "caller": "unregistered",
+          "callee": "Some",
+          "lineNumber": 326
+        },
+        {
+          "caller": "unregistered",
+          "callee": "SyntaxDescriptor::universal",
+          "lineNumber": 326
+        },
+        {
+          "caller": "inherits",
+          "callee": "Some",
+          "lineNumber": 334
+        },
+        {
+          "caller": "is_universal",
+          "callee": "self.syntax.as_ref().map_or",
+          "lineNumber": 339
+        },
+        {
+          "caller": "is_universal",
+          "callee": "self.syntax.as_ref",
+          "lineNumber": 339
+        },
+        {
+          "caller": "is_universal",
+          "callee": "s.is_universal",
+          "lineNumber": 339
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 12,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style/properties_and_values/syntax/ascii.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "trim_ascii_whitespace",
+          "startLine": 6,
+          "endLine": 48,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "trim_ascii_whitespace_test",
+          "startLine": 51,
+          "endLine": 60,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "trim_ascii_whitespace",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.is_empty",
+          "lineNumber": 7
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.as_bytes().iter",
+          "lineNumber": 13
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.as_bytes",
+          "lineNumber": 13
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "iter.next",
+          "lineNumber": 15
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "byte.is_ascii_whitespace",
+          "lineNumber": 20
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.as_bytes()[start..].iter().rev",
+          "lineNumber": 30
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.as_bytes()[start..].iter",
+          "lineNumber": 30
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "input.as_bytes",
+          "lineNumber": 30
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "iter.next",
+          "lineNumber": 32
+        },
+        {
+          "caller": "trim_ascii_whitespace",
+          "callee": "byte.is_ascii_whitespace",
+          "lineNumber": 40
+        },
+        {
+          "caller": "trim_ascii_whitespace_test",
+          "callee": "test",
+          "lineNumber": 56
+        },
+        {
+          "caller": "trim_ascii_whitespace_test",
+          "callee": "test",
+          "lineNumber": 57
+        },
+        {
+          "caller": "trim_ascii_whitespace_test",
+          "callee": "test",
+          "lineNumber": 58
+        },
+        {
+          "caller": "trim_ascii_whitespace_test",
+          "callee": "test",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/properties_and_values/syntax/data_type.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 146,
+      "nonEmptyLines": 138,
+      "functions": [
+        {
+          "name": "unpremultiply",
+          "startLine": 67,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "from_str",
+          "startLine": 78,
+          "endLine": 97,
+          "params": [
+            "ty"
+          ]
+        },
+        {
+          "name": "dependent_types",
+          "startLine": 100,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 122,
+          "endLine": 145,
+          "params": [
+            "dest"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DependentDataTypes",
+          "startLine": 14,
+          "endLine": 14,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "DataType",
+          "startLine": 26,
+          "endLine": 61,
+          "methods": [
+            "unpremultiply",
+            "from_str",
+            "dependent_types",
+            "to_css"
+          ],
+          "properties": [
+            "Length",
+            "Number",
+            "Percentage",
+            "LengthPercentage",
+            "Color",
+            "Image",
+            "Url",
+            "Integer",
+            "Angle",
+            "Time",
+            "Resolution",
+            "TransformFunction",
+            "CustomIdent",
+            "TransformList",
+            "String"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DependentDataTypes",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "DataType",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "unpremultiply",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "from_str",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "dependent_types",
+          "line": 100,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "unpremultiply",
+          "callee": "Some",
+          "lineNumber": 69
+        },
+        {
+          "caller": "unpremultiply",
+          "callee": "ComponentName::DataType",
+          "lineNumber": 70
+        },
+        {
+          "caller": "unpremultiply",
+          "callee": "Some",
+          "lineNumber": 71
+        },
+        {
+          "caller": "from_str",
+          "callee": "Some",
+          "lineNumber": 79
+        },
+        {
+          "caller": "from_str",
+          "callee": "ty.as_bytes",
+          "lineNumber": 79
+        },
+        {
+          "caller": "dependent_types",
+          "callee": "DependentDataTypes::empty",
+          "lineNumber": 116
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 126
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 127
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 144
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/properties_and_values/syntax/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 445,
+      "nonEmptyLines": 390,
+      "functions": [
+        {
+          "name": "universal",
+          "startLine": 38,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "is_universal",
+          "startLine": 47,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "specified_string",
+          "startLine": 53,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "from_css_parser",
+          "startLine": 60,
+          "endLine": 102,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "try_parse_multiplier",
+          "startLine": 104,
+          "endLine": 115,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "try_parse_component_name",
+          "startLine": 117,
+          "endLine": 132,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_component_data_type_name",
+          "startLine": 134,
+          "endLine": 142,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "from_str",
+          "startLine": 146,
+          "endLine": 186,
+          "params": [
+            "css",
+            "save_specified"
+          ]
+        },
+        {
+          "name": "dependent_types",
+          "startLine": 189,
+          "endLine": 199,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 203,
+          "endLine": 225,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 230,
+          "endLine": 237,
+          "params": [
+            "_",
+            "parser"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 252,
+          "endLine": 260,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "name",
+          "startLine": 273,
+          "endLine": 275,
+          "params": []
+        },
+        {
+          "name": "multiplier",
+          "startLine": 279,
+          "endLine": 281,
+          "params": []
+        },
+        {
+          "name": "unpremultiplied",
+          "startLine": 285,
+          "endLine": 296,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 300,
+          "endLine": 306,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "unpremultiply",
+          "startLine": 319,
+          "endLine": 324,
+          "params": []
+        },
+        {
+          "name": "is_pre_multiplied",
+          "startLine": 327,
+          "endLine": 329,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 339,
+          "endLine": 345,
+          "params": [
+            "input",
+            "output"
+          ]
+        },
+        {
+          "name": "peek",
+          "startLine": 347,
+          "endLine": 349,
+          "params": []
+        },
+        {
+          "name": "parse",
+          "startLine": 351,
+          "endLine": 369,
+          "params": []
+        },
+        {
+          "name": "skip_whitespace",
+          "startLine": 371,
+          "endLine": 378,
+          "params": []
+        },
+        {
+          "name": "parse_data_type_name",
+          "startLine": 381,
+          "endLine": 399,
+          "params": []
+        },
+        {
+          "name": "parse_name",
+          "startLine": 401,
+          "endLine": 421,
+          "params": []
+        },
+        {
+          "name": "parse_multiplier",
+          "startLine": 423,
+          "endLine": 431,
+          "params": []
+        },
+        {
+          "name": "parse_component",
+          "startLine": 434,
+          "endLine": 444,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Descriptor",
+          "startLine": 28,
+          "endLine": 34,
+          "methods": [
+            "universal",
+            "is_universal",
+            "specified_string",
+            "from_css_parser",
+            "try_parse_multiplier",
+            "try_parse_component_name",
+            "parse_component_data_type_name",
+            "from_str",
+            "dependent_types",
+            "to_css",
+            "parse"
+          ],
+          "properties": [
+            "components",
+            "specified"
+          ]
+        },
+        {
+          "name": "Multiplier",
+          "startLine": 244,
+          "endLine": 249,
+          "methods": [
+            "to_css"
+          ],
+          "properties": [
+            "Space",
+            "Comma"
+          ]
+        },
+        {
+          "name": "Component",
+          "startLine": 265,
+          "endLine": 268,
+          "methods": [
+            "name",
+            "multiplier",
+            "unpremultiplied",
+            "to_css"
+          ],
+          "properties": [
+            "name",
+            "multiplier"
+          ]
+        },
+        {
+          "name": "ComponentName",
+          "startLine": 311,
+          "endLine": 316,
+          "methods": [
+            "unpremultiply",
+            "is_pre_multiplied"
+          ],
+          "properties": [
+            "DataType",
+            "Ident"
+          ]
+        },
+        {
+          "name": "Parser",
+          "startLine": 332,
+          "endLine": 336,
+          "methods": [],
+          "properties": [
+            "input",
+            "position",
+            "output"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Descriptor",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "universal",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "is_universal",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "specified_string",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "from_css_parser",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "from_str",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "dependent_types",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "Multiplier",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "Component",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "name",
+          "line": 273,
+          "isDefault": false
+        },
+        {
+          "name": "multiplier",
+          "line": 279,
+          "isDefault": false
+        },
+        {
+          "name": "unpremultiplied",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "ComponentName",
+          "line": 311,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "universal",
+          "callee": "Vec::new",
+          "lineNumber": 40
+        },
+        {
+          "caller": "is_universal",
+          "callee": "self.components.is_empty",
+          "lineNumber": 48
+        },
+        {
+          "caller": "specified_string",
+          "callee": "self.specified.as_deref",
+          "lineNumber": 54
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.try_parse(|i| i.expect_delim('*')).is_ok",
+          "lineNumber": 63
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.try_parse",
+          "lineNumber": 63
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "i.expect_delim",
+          "lineNumber": 63
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Ok",
+          "lineNumber": 64
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::universal",
+          "lineNumber": 64
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.try_parse",
+          "lineNumber": 68
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "i.expect_string_cloned",
+          "lineNumber": 68
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::from_str(syntax_string.as_ref(), /* save_specified = */ true).or_else",
+          "lineNumber": 69
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::from_str",
+          "lineNumber": 69
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "syntax_string.as_ref",
+          "lineNumber": 69
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Err",
+          "lineNumber": 70
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.new_custom_error",
+          "lineNumber": 70
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 70
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::try_parse_component_name(input).map_err",
+          "lineNumber": 75
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::try_parse_component_name",
+          "lineNumber": 75
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.new_custom_error",
+          "lineNumber": 76
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 76
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "name.is_pre_multiplied",
+          "lineNumber": 79
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Self::try_parse_multiplier",
+          "lineNumber": 82
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "components.push",
+          "lineNumber": 86
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.next",
+          "lineNumber": 87
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Token::Delim",
+          "lineNumber": 89
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Err",
+          "lineNumber": 90
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "input.new_custom_error",
+          "lineNumber": 91
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 91
+        },
+        {
+          "caller": "from_css_parser",
+          "callee": "Ok",
+          "lineNumber": 98
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "input\r\n            .try_parse(|input| {\r\n                let next = input.next_including_whitespace().map_err(|_| ())?;\r\n                match next {\r\n                    Token::Delim('+') => Ok(Multiplier::Space),\r\n                    Token::Delim('#') => Ok(Multiplier::Comma),\r\n                    _ => Err(()),\r\n                }\r\n            }).ok",
+          "lineNumber": 105
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "input.try_parse",
+          "lineNumber": 105
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "input.next_including_whitespace().map_err",
+          "lineNumber": 107
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "input.next_including_whitespace",
+          "lineNumber": 107
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "Ok",
+          "lineNumber": 109
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "Ok",
+          "lineNumber": 110
+        },
+        {
+          "caller": "try_parse_multiplier",
+          "callee": "Err",
+          "lineNumber": 111
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "input.try_parse(|input| input.expect_delim('<')).is_ok",
+          "lineNumber": 120
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "input.try_parse",
+          "lineNumber": 120
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "input.expect_delim",
+          "lineNumber": 120
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "Self::parse_component_data_type_name",
+          "lineNumber": 121
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "input.next_including_whitespace",
+          "lineNumber": 122
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "Ok",
+          "lineNumber": 123
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "ComponentName::DataType",
+          "lineNumber": 123
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "Err",
+          "lineNumber": 124
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "input.try_parse",
+          "lineNumber": 127
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "CustomIdent::parse(input, &[]).map_err",
+          "lineNumber": 128
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "CustomIdent::parse",
+          "lineNumber": 128
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "Ok",
+          "lineNumber": 129
+        },
+        {
+          "caller": "try_parse_component_name",
+          "callee": "ComponentName::Ident",
+          "lineNumber": 129
+        },
+        {
+          "caller": "parse_component_data_type_name",
+          "callee": "input.next_including_whitespace",
+          "lineNumber": 137
+        },
+        {
+          "caller": "parse_component_data_type_name",
+          "callee": "DataType::from_str",
+          "lineNumber": 138
+        },
+        {
+          "caller": "parse_component_data_type_name",
+          "callee": "ty.ok_or",
+          "lineNumber": 141
+        },
+        {
+          "caller": "from_str",
+          "callee": "ascii::trim_ascii_whitespace",
+          "lineNumber": 148
+        },
+        {
+          "caller": "from_str",
+          "callee": "input.is_empty",
+          "lineNumber": 151
+        },
+        {
+          "caller": "from_str",
+          "callee": "Err",
+          "lineNumber": 152
+        },
+        {
+          "caller": "from_str",
+          "callee": "Some",
+          "lineNumber": 156
+        },
+        {
+          "caller": "from_str",
+          "callee": "Box::from",
+          "lineNumber": 156
+        },
+        {
+          "caller": "from_str",
+          "callee": "input.len",
+          "lineNumber": 163
+        },
+        {
+          "caller": "from_str",
+          "callee": "input.as_bytes",
+          "lineNumber": 163
+        },
+        {
+          "caller": "from_str",
+          "callee": "Ok",
+          "lineNumber": 164
+        },
+        {
+          "caller": "from_str",
+          "callee": "Default::default",
+          "lineNumber": 165
+        },
+        {
+          "caller": "from_str",
+          "callee": "Parser::new",
+          "lineNumber": 178
+        },
+        {
+          "caller": "from_str",
+          "callee": "input.parse",
+          "lineNumber": 180
+        },
+        {
+          "caller": "from_str",
+          "callee": "Ok",
+          "lineNumber": 182
+        },
+        {
+          "caller": "dependent_types",
+          "callee": "DependentDataTypes::empty",
+          "lineNumber": 190
+        },
+        {
+          "caller": "dependent_types",
+          "callee": "self.components.iter",
+          "lineNumber": 191
+        },
+        {
+          "caller": "dependent_types",
+          "callee": "types.insert",
+          "lineNumber": 196
+        },
+        {
+          "caller": "dependent_types",
+          "callee": "t.dependent_types",
+          "lineNumber": 196
+        },
+        {
+          "caller": "to_css",
+          "callee": "specified.to_css",
+          "lineNumber": 208
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.is_universal",
+          "lineNumber": 211
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 212
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 218
+        },
+        {
+          "caller": "to_css",
+          "callee": "component.to_css",
+          "lineNumber": 220
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 224
+        },
+        {
+          "caller": "parse",
+          "callee": "parser.expect_string",
+          "lineNumber": 234
+        },
+        {
+          "caller": "parse",
+          "callee": "Descriptor::from_str(input.as_ref(), /* save_specified = */ true).map_err",
+          "lineNumber": 235
+        },
+        {
+          "caller": "parse",
+          "callee": "Descriptor::from_str",
+          "lineNumber": 235
+        },
+        {
+          "caller": "parse",
+          "callee": "input.as_ref",
+          "lineNumber": 235
+        },
+        {
+          "caller": "parse",
+          "callee": "parser.new_custom_error",
+          "lineNumber": 236
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 236
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 256
+        },
+        {
+          "caller": "unpremultiplied",
+          "callee": "self.name.unpremultiply",
+          "lineNumber": 286
+        },
+        {
+          "caller": "unpremultiplied",
+          "callee": "Cow::Owned",
+          "lineNumber": 292
+        },
+        {
+          "caller": "unpremultiplied",
+          "callee": "Cow::Borrowed",
+          "lineNumber": 294
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.name().to_css",
+          "lineNumber": 304
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.name",
+          "lineNumber": 304
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.multiplier().to_css",
+          "lineNumber": 305
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.multiplier",
+          "lineNumber": 305
+        },
+        {
+          "caller": "unpremultiply",
+          "callee": "t.unpremultiply",
+          "lineNumber": 321
+        },
+        {
+          "caller": "is_pre_multiplied",
+          "callee": "self.unpremultiply().is_some",
+          "lineNumber": 328
+        },
+        {
+          "caller": "is_pre_multiplied",
+          "callee": "self.unpremultiply",
+          "lineNumber": 328
+        },
+        {
+          "caller": "peek",
+          "callee": "self.input.as_bytes().get(self.position).cloned",
+          "lineNumber": 348
+        },
+        {
+          "caller": "peek",
+          "callee": "self.input.as_bytes().get",
+          "lineNumber": 348
+        },
+        {
+          "caller": "peek",
+          "callee": "self.input.as_bytes",
+          "lineNumber": 348
+        },
+        {
+          "caller": "parse",
+          "callee": "self.parse_component",
+          "lineNumber": 354
+        },
+        {
+          "caller": "parse",
+          "callee": "self.output.push",
+          "lineNumber": 355
+        },
+        {
+          "caller": "parse",
+          "callee": "self.skip_whitespace",
+          "lineNumber": 356
+        },
+        {
+          "caller": "parse",
+          "callee": "self.peek",
+          "lineNumber": 358
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 359
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 364
+        },
+        {
+          "caller": "skip_whitespace",
+          "callee": "self.peek",
+          "lineNumber": 373
+        },
+        {
+          "caller": "skip_whitespace",
+          "callee": "c.is_ascii_whitespace",
+          "lineNumber": 374
+        },
+        {
+          "caller": "parse_data_type_name",
+          "callee": "self.peek",
+          "lineNumber": 384
+        },
+        {
+          "caller": "parse_data_type_name",
+          "callee": "Err",
+          "lineNumber": 386
+        },
+        {
+          "caller": "parse_data_type_name",
+          "callee": "DataType::from_str",
+          "lineNumber": 392
+        },
+        {
+          "caller": "parse_data_type_name",
+          "callee": "Err",
+          "lineNumber": 394
+        },
+        {
+          "caller": "parse_data_type_name",
+          "callee": "Ok",
+          "lineNumber": 397
+        },
+        {
+          "caller": "parse_name",
+          "callee": "self.peek",
+          "lineNumber": 402
+        },
+        {
+          "caller": "parse_name",
+          "callee": "Err",
+          "lineNumber": 404
+        },
+        {
+          "caller": "parse_name",
+          "callee": "Ok",
+          "lineNumber": 409
+        },
+        {
+          "caller": "parse_name",
+          "callee": "ComponentName::DataType",
+          "lineNumber": 409
+        },
+        {
+          "caller": "parse_name",
+          "callee": "self.parse_data_type_name",
+          "lineNumber": 409
+        },
+        {
+          "caller": "parse_name",
+          "callee": "CSSParserInput::new",
+          "lineNumber": 413
+        },
+        {
+          "caller": "parse_name",
+          "callee": "CSSParser::new",
+          "lineNumber": 414
+        },
+        {
+          "caller": "parse_name",
+          "callee": "CustomIdent::parse",
+          "lineNumber": 415
+        },
+        {
+          "caller": "parse_name",
+          "callee": "Err",
+          "lineNumber": 417
+        },
+        {
+          "caller": "parse_name",
+          "callee": "input.position().byte_index",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_name",
+          "callee": "input.position",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_name",
+          "callee": "Ok",
+          "lineNumber": 420
+        },
+        {
+          "caller": "parse_name",
+          "callee": "ComponentName::Ident",
+          "lineNumber": 420
+        },
+        {
+          "caller": "parse_multiplier",
+          "callee": "self.peek",
+          "lineNumber": 424
+        },
+        {
+          "caller": "parse_multiplier",
+          "callee": "Some",
+          "lineNumber": 430
+        },
+        {
+          "caller": "parse_component",
+          "callee": "self.skip_whitespace",
+          "lineNumber": 436
+        },
+        {
+          "caller": "parse_component",
+          "callee": "self.parse_name",
+          "lineNumber": 437
+        },
+        {
+          "caller": "parse_component",
+          "callee": "name.is_pre_multiplied",
+          "lineNumber": 438
+        },
+        {
+          "caller": "parse_component",
+          "callee": "self.parse_multiplier",
+          "lineNumber": 441
+        },
+        {
+          "caller": "parse_component",
+          "callee": "Ok",
+          "lineNumber": 443
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 13,
+        "functionCount": 26,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "style/properties_and_values/value.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 750,
+      "nonEmptyLines": 708,
+      "functions": [
+        {
+          "name": "serialization_types",
+          "startLine": 71,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 162,
+          "endLine": 175,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 179,
+          "endLine": 201,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "eq",
+          "startLine": 221,
+          "endLine": 223,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 227,
+          "endLine": 234,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 239,
+          "endLine": 245,
+          "params": [
+            "v",
+            "url_data"
+          ]
+        },
+        {
+          "name": "universal",
+          "startLine": 248,
+          "endLine": 257,
+          "params": [
+            "var"
+          ]
+        },
+        {
+          "name": "serialization_types",
+          "startLine": 265,
+          "endLine": 274,
+          "params": []
+        },
+        {
+          "name": "to_variable_value",
+          "startLine": 277,
+          "endLine": 288,
+          "params": []
+        },
+        {
+          "name": "compute",
+          "startLine": 315,
+          "endLine": 340,
+          "params": [
+            "input",
+            "registration",
+            "namespaces",
+            "url_data",
+            "context",
+            "allow_computationally_dependent",
+            "attr_taint"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 344,
+          "endLine": 380,
+          "params": [
+            "input",
+            "syntax",
+            "url_data",
+            "namespaces",
+            "allow_computationally_dependent",
+            "attr_taint"
+          ]
+        },
+        {
+          "name": "to_declared_value",
+          "startLine": 384,
+          "endLine": 391,
+          "params": []
+        },
+        {
+          "name": "as_universal",
+          "startLine": 394,
+          "endLine": 400,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 423,
+          "endLine": 433,
+          "params": [
+            "syntax",
+            "output",
+            "output_multiplier"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 435,
+          "endLine": 473,
+          "params": [
+            "input",
+            "url_data",
+            "allow_computationally_dependent",
+            "attr_taint"
+          ]
+        },
+        {
+          "name": "parse_value",
+          "startLine": 475,
+          "endLine": 498,
+          "params": [
+            "context",
+            "input",
+            "component"
+          ]
+        },
+        {
+          "name": "parse_component_without_multiplier",
+          "startLine": 500,
+          "endLine": 590,
+          "params": [
+            "context",
+            "input",
+            "component"
+          ]
+        },
+        {
+          "name": "expect_multiplier_yielded_eof_error",
+          "startLine": 592,
+          "endLine": 600,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "expect_multiplier",
+          "startLine": 602,
+          "endLine": 617,
+          "params": [
+            "input",
+            "multiplier"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 631,
+          "endLine": 640,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "from_computed",
+          "startLine": 644,
+          "endLine": 652,
+          "params": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "from_declaration",
+          "startLine": 654,
+          "endLine": 739,
+          "params": [
+            "declaration",
+            "context"
+          ]
+        },
+        {
+          "name": "to_declaration",
+          "startLine": 741,
+          "endLine": 749,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenericValueComponent",
+          "startLine": 100,
+          "endLine": 150,
+          "methods": [],
+          "properties": [
+            "Length",
+            "Number",
+            "Percentage",
+            "LengthPercentage",
+            "Color",
+            "Image",
+            "Url",
+            "Integer",
+            "Angle",
+            "Time",
+            "Resolution",
+            "TransformFunction",
+            "CustomIdent",
+            "TransformList",
+            "String"
+          ]
+        },
+        {
+          "name": "ComponentList",
+          "startLine": 154,
+          "endLine": 159,
+          "methods": [],
+          "properties": [
+            "multiplier",
+            "components"
+          ]
+        },
+        {
+          "name": "Value",
+          "startLine": 207,
+          "endLine": 217,
+          "methods": [],
+          "properties": [
+            "v",
+            "url_data",
+            "attr_tainted"
+          ]
+        },
+        {
+          "name": "ValueInner",
+          "startLine": 295,
+          "endLine": 304,
+          "methods": [],
+          "properties": [
+            "Component",
+            "Universal",
+            "List"
+          ]
+        },
+        {
+          "name": "AllowComputationallyDependent",
+          "startLine": 407,
+          "endLine": 412,
+          "methods": [],
+          "properties": [
+            "No",
+            "Yes"
+          ]
+        },
+        {
+          "name": "Parser",
+          "startLine": 416,
+          "endLine": 420,
+          "methods": [],
+          "properties": [
+            "syntax",
+            "output",
+            "output_multiplier"
+          ]
+        },
+        {
+          "name": "CustomAnimatedValue",
+          "startLine": 622,
+          "endLine": 628,
+          "methods": [
+            "animate",
+            "from_computed",
+            "from_declaration",
+            "to_declaration"
+          ],
+          "properties": [
+            "name",
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GenericValueComponent",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "ComponentList",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "Value",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "universal",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "to_variable_value",
+          "line": 277,
+          "isDefault": false
+        },
+        {
+          "name": "ValueInner",
+          "line": 295,
+          "isDefault": false
+        },
+        {
+          "name": "compute",
+          "line": 315,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 344,
+          "isDefault": false
+        },
+        {
+          "name": "as_universal",
+          "line": 394,
+          "isDefault": false
+        },
+        {
+          "name": "AllowComputationallyDependent",
+          "line": 407,
+          "isDefault": false
+        },
+        {
+          "name": "CustomAnimatedValue",
+          "line": 622,
+          "isDefault": false
+        },
+        {
+          "name": "from_computed",
+          "line": 644,
+          "isDefault": false
+        },
+        {
+          "name": "from_declaration",
+          "line": 654,
+          "isDefault": false
+        },
+        {
+          "name": "to_declaration",
+          "line": 741,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 164
+        },
+        {
+          "caller": "animate",
+          "callee": "animated::lists::by_computed_value::animate",
+          "lineNumber": 166
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 171
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.components.iter",
+          "lineNumber": 183
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next",
+          "lineNumber": 184
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 185
+        },
+        {
+          "caller": "to_css",
+          "callee": "first.to_css",
+          "lineNumber": 187
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 197
+        },
+        {
+          "caller": "to_css",
+          "callee": "component.to_css",
+          "lineNumber": 198
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 200
+        },
+        {
+          "caller": "animate",
+          "callee": "self.v.animate",
+          "lineNumber": 228
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 229
+        },
+        {
+          "caller": "animate",
+          "callee": "self.url_data.clone",
+          "lineNumber": 231
+        },
+        {
+          "caller": "new",
+          "callee": "Default::default",
+          "lineNumber": 243
+        },
+        {
+          "caller": "universal",
+          "callee": "var.is_attr_tainted",
+          "lineNumber": 249
+        },
+        {
+          "caller": "universal",
+          "callee": "var.url_data.clone",
+          "lineNumber": 250
+        },
+        {
+          "caller": "universal",
+          "callee": "ValueInner::Universal",
+          "lineNumber": 251
+        },
+        {
+          "caller": "serialization_types",
+          "callee": "component.serialization_types",
+          "lineNumber": 267
+        },
+        {
+          "caller": "serialization_types",
+          "callee": "list\r\n                .components\r\n                .first().map_or",
+          "lineNumber": 269
+        },
+        {
+          "caller": "serialization_types",
+          "callee": "list\r\n                .components.first",
+          "lineNumber": 269
+        },
+        {
+          "caller": "serialization_types",
+          "callee": "Default::default",
+          "lineNumber": 272
+        },
+        {
+          "caller": "serialization_types",
+          "callee": "f.serialization_types",
+          "lineNumber": 272
+        },
+        {
+          "caller": "to_variable_value",
+          "callee": "(**value).clone",
+          "lineNumber": 279
+        },
+        {
+          "caller": "to_variable_value",
+          "callee": "self.serialization_types",
+          "lineNumber": 281
+        },
+        {
+          "caller": "to_variable_value",
+          "callee": "ComputedPropertyValue::new",
+          "lineNumber": 282
+        },
+        {
+          "caller": "to_variable_value",
+          "callee": "self.to_css_string",
+          "lineNumber": 283
+        },
+        {
+          "caller": "compute",
+          "callee": "Err",
+          "lineNumber": 326
+        },
+        {
+          "caller": "compute",
+          "callee": "Self::parse",
+          "lineNumber": 328
+        },
+        {
+          "caller": "compute",
+          "callee": "Err",
+          "lineNumber": 336
+        },
+        {
+          "caller": "compute",
+          "callee": "Ok",
+          "lineNumber": 339
+        },
+        {
+          "caller": "compute",
+          "callee": "value.to_computed_value",
+          "lineNumber": 339
+        },
+        {
+          "caller": "parse",
+          "callee": "syntax.is_universal",
+          "lineNumber": 352
+        },
+        {
+          "caller": "parse",
+          "callee": "ComputedPropertyValue::parse",
+          "lineNumber": 353
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 354
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::new",
+          "lineNumber": 354
+        },
+        {
+          "caller": "parse",
+          "callee": "ValueInner::Universal",
+          "lineNumber": 355
+        },
+        {
+          "caller": "parse",
+          "callee": "Arc::new",
+          "lineNumber": 355
+        },
+        {
+          "caller": "parse",
+          "callee": "url_data.clone",
+          "lineNumber": 356
+        },
+        {
+          "caller": "parse",
+          "callee": "SmallComponentVec::new",
+          "lineNumber": 360
+        },
+        {
+          "caller": "parse",
+          "callee": "Parser::new",
+          "lineNumber": 363
+        },
+        {
+          "caller": "parse",
+          "callee": "parser.parse",
+          "lineNumber": 364
+        },
+        {
+          "caller": "parse",
+          "callee": "ValueInner::List",
+          "lineNumber": 372
+        },
+        {
+          "caller": "parse",
+          "callee": "values.to_vec().into",
+          "lineNumber": 374
+        },
+        {
+          "caller": "parse",
+          "callee": "values.to_vec",
+          "lineNumber": 374
+        },
+        {
+          "caller": "parse",
+          "callee": "ValueInner::Component",
+          "lineNumber": 377
+        },
+        {
+          "caller": "parse",
+          "callee": "values[0].clone",
+          "lineNumber": 377
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 379
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::new",
+          "lineNumber": 379
+        },
+        {
+          "caller": "parse",
+          "callee": "url_data.clone",
+          "lineNumber": 379
+        },
+        {
+          "caller": "to_declared_value",
+          "callee": "properties::CustomDeclarationValue::Unparsed",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_declared_value",
+          "callee": "Arc::clone",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_declared_value",
+          "callee": "properties::CustomDeclarationValue::Parsed",
+          "lineNumber": 388
+        },
+        {
+          "caller": "to_declared_value",
+          "callee": "Arc::new",
+          "lineNumber": 388
+        },
+        {
+          "caller": "to_declared_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 388
+        },
+        {
+          "caller": "as_universal",
+          "callee": "Some",
+          "lineNumber": 396
+        },
+        {
+          "caller": "parse",
+          "callee": "ParserContext::new",
+          "lineNumber": 447
+        },
+        {
+          "caller": "parse",
+          "callee": "Some",
+          "lineNumber": 450
+        },
+        {
+          "caller": "parse",
+          "callee": "Default::default",
+          "lineNumber": 453
+        },
+        {
+          "caller": "parse",
+          "callee": "self.syntax.components.iter",
+          "lineNumber": 458
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 459
+        },
+        {
+          "caller": "parse",
+          "callee": "input.parse_entirely",
+          "lineNumber": 460
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::parse_value",
+          "lineNumber": 461
+        },
+        {
+          "caller": "parse",
+          "callee": "component.unpremultiplied",
+          "lineNumber": 461
+        },
+        {
+          "caller": "parse",
+          "callee": "self.output.extend",
+          "lineNumber": 465
+        },
+        {
+          "caller": "parse",
+          "callee": "component.multiplier",
+          "lineNumber": 466
+        },
+        {
+          "caller": "parse",
+          "callee": "self.output.is_empty",
+          "lineNumber": 469
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 470
+        },
+        {
+          "caller": "parse",
+          "callee": "input.new_error",
+          "lineNumber": 470
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 472
+        },
+        {
+          "caller": "parse_value",
+          "callee": "SmallComponentVec::new",
+          "lineNumber": 480
+        },
+        {
+          "caller": "parse_value",
+          "callee": "values.push",
+          "lineNumber": 481
+        },
+        {
+          "caller": "parse_value",
+          "callee": "Self::parse_component_without_multiplier",
+          "lineNumber": 481
+        },
+        {
+          "caller": "parse_value",
+          "callee": "component.multiplier",
+          "lineNumber": 485
+        },
+        {
+          "caller": "parse_value",
+          "callee": "Self::expect_multiplier",
+          "lineNumber": 487
+        },
+        {
+          "caller": "parse_value",
+          "callee": "Self::expect_multiplier_yielded_eof_error",
+          "lineNumber": 488
+        },
+        {
+          "caller": "parse_value",
+          "callee": "values.push",
+          "lineNumber": 492
+        },
+        {
+          "caller": "parse_value",
+          "callee": "Self::parse_component_without_multiplier",
+          "lineNumber": 492
+        },
+        {
+          "caller": "parse_value",
+          "callee": "Ok",
+          "lineNumber": 497
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "component.name",
+          "lineNumber": 505
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "CustomIdent::parse",
+          "lineNumber": 508
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Err",
+          "lineNumber": 510
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "input.new_custom_error",
+          "lineNumber": 510
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Ok",
+          "lineNumber": 512
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::CustomIdent",
+          "lineNumber": 512
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Length",
+          "lineNumber": 518
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Length::parse",
+          "lineNumber": 518
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Number",
+          "lineNumber": 521
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Number::parse",
+          "lineNumber": 521
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Percentage",
+          "lineNumber": 524
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Percentage::parse",
+          "lineNumber": 524
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::LengthPercentage",
+          "lineNumber": 526
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::LengthPercentage::parse",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Color",
+          "lineNumber": 530
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Color::parse",
+          "lineNumber": 530
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Image",
+          "lineNumber": 533
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Image::parse_forbid_none",
+          "lineNumber": 533
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Url",
+          "lineNumber": 536
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::url::SpecifiedUrl::parse",
+          "lineNumber": 536
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Integer",
+          "lineNumber": 539
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Integer::parse",
+          "lineNumber": 539
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Angle",
+          "lineNumber": 542
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Angle::parse",
+          "lineNumber": 542
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Time",
+          "lineNumber": 545
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Time::parse",
+          "lineNumber": 545
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::Resolution",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Resolution::parse",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::TransformFunction",
+          "lineNumber": 550
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Transform::parse",
+          "lineNumber": 551
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "CustomIdent::parse",
+          "lineNumber": 554
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::CustomIdent",
+          "lineNumber": 555
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "component.unpremultiplied().multiplier",
+          "lineNumber": 559
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "component.unpremultiplied",
+          "lineNumber": 559
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Err",
+          "lineNumber": 561
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "input.new_custom_error",
+          "lineNumber": 562
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "StyleParseErrorKind::PropertySyntaxField",
+          "lineNumber": 562
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "values.push",
+          "lineNumber": 569
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::TransformFunction",
+          "lineNumber": 569
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "specified::Transform::parse",
+          "lineNumber": 570
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Self::expect_multiplier",
+          "lineNumber": 572
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Self::expect_multiplier_yielded_eof_error",
+          "lineNumber": 573
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "values.into",
+          "lineNumber": 580
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::TransformList",
+          "lineNumber": 582
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "input.expect_string",
+          "lineNumber": 585
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "SpecifiedValueComponent::String",
+          "lineNumber": 586
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "string.as_ref().to_owned().into",
+          "lineNumber": 586
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "string.as_ref().to_owned",
+          "lineNumber": 586
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "string.as_ref",
+          "lineNumber": 586
+        },
+        {
+          "caller": "parse_component_without_multiplier",
+          "callee": "Ok",
+          "lineNumber": 589
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "input.expect_whitespace",
+          "lineNumber": 608
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "input.is_exhausted",
+          "lineNumber": 609
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "Err",
+          "lineNumber": 611
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "input.new_error",
+          "lineNumber": 611
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "Ok",
+          "lineNumber": 613
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "Ok",
+          "lineNumber": 615
+        },
+        {
+          "caller": "expect_multiplier",
+          "callee": "input.expect_comma",
+          "lineNumber": 615
+        },
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 633
+        },
+        {
+          "caller": "animate",
+          "callee": "self.value.animate",
+          "lineNumber": 635
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 636
+        },
+        {
+          "caller": "animate",
+          "callee": "self.name.clone",
+          "lineNumber": 637
+        },
+        {
+          "caller": "from_computed",
+          "callee": "name.clone",
+          "lineNumber": 649
+        },
+        {
+          "caller": "from_computed",
+          "callee": "value.cloned",
+          "lineNumber": 650
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Some",
+          "lineNumber": 659
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                    .builder\r\n                    .stylist\r\n                    .unwrap().get_custom_property_registration",
+          "lineNumber": 664
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                    .builder\r\n                    .stylist.unwrap",
+          "lineNumber": 664
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "registration.is_universal",
+          "lineNumber": 669
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "ComputedValue::new",
+          "lineNumber": 671
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "ValueInner::Universal",
+          "lineNumber": 672
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Arc::clone",
+          "lineNumber": 672
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "value.url_data.clone",
+          "lineNumber": 673
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "cssparser::ParserInput::new",
+          "lineNumber": 676
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "CSSParser::new",
+          "lineNumber": 677
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "SpecifiedValue::compute(\r\n                        &mut input,\r\n                        registration,\r\n                        None,\r\n                        &value.url_data,\r\n                        context,\r\n                        AllowComputationallyDependent::Yes,\r\n                        /* attr_taint */ Default::default(),\r\n                    ).unwrap_or_else",
+          "lineNumber": 678
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "SpecifiedValue::compute",
+          "lineNumber": 678
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Default::default",
+          "lineNumber": 685
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "ComputedValue::new",
+          "lineNumber": 688
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "ValueInner::Universal",
+          "lineNumber": 689
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Arc::clone",
+          "lineNumber": 689
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "value.url_data.clone",
+          "lineNumber": 690
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Some",
+          "lineNumber": 695
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "v.to_computed_value",
+          "lineNumber": 695
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context.builder.stylist.unwrap",
+          "lineNumber": 697
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "stylist.get_custom_property_registration",
+          "lineNumber": 698
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "match keyword {\r\n                    CSSWideKeyword::Initial => stylist\r\n                        .get_custom_property_initial_values()\r\n                        .get(registration, &declaration.name),\r\n                    CSSWideKeyword::Inherit => context\r\n                        .builder\r\n                        .inherited_custom_properties()\r\n                        .get(registration, &declaration.name),\r\n                    CSSWideKeyword::Unset => {\r\n                        if registration.inherits() {\r\n                            context\r\n                                .builder\r\n                                .inherited_custom_properties()\r\n                                .get(registration, &declaration.name)\r\n                        } else {\r\n                            stylist\r\n                                .get_custom_property_initial_values()\r\n                                .get(registration, &declaration.name)\r\n                        }\r\n                    },\r\n                    // FIXME(emilio, bug 1533327): I think revert (and\r\n                    // revert-layer) handling is not fine here, but what to\r\n                    // do instead?\r\n                    //\r\n                    // Seems we'd need the computed value as if it was\r\n                    // revert, somehow. Returning `None` seems fine for now...\r\n                    //\r\n                    // Note that once this is fixed, this method should be\r\n                    // able to return `Self` instead of Option<Self>`.\r\n                    CSSWideKeyword::Revert\r\n                    | CSSWideKeyword::RevertRule\r\n                    | CSSWideKeyword::RevertLayer => return None,\r\n                }.cloned",
+          "lineNumber": 699
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "stylist\r\n                        .get_custom_property_initial_values().get",
+          "lineNumber": 700
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "stylist.get_custom_property_initial_values",
+          "lineNumber": 700
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                        .builder\r\n                        .inherited_custom_properties().get",
+          "lineNumber": 703
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                        .builder.inherited_custom_properties",
+          "lineNumber": 703
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "registration.inherits",
+          "lineNumber": 708
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                                .builder\r\n                                .inherited_custom_properties().get",
+          "lineNumber": 709
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "context\r\n                                .builder.inherited_custom_properties",
+          "lineNumber": 709
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "stylist\r\n                                .get_custom_property_initial_values().get",
+          "lineNumber": 714
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "stylist.get_custom_property_initial_values",
+          "lineNumber": 714
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "Some",
+          "lineNumber": 735
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "declaration.name.clone",
+          "lineNumber": 736
+        },
+        {
+          "caller": "to_declaration",
+          "callee": "properties::PropertyDeclaration::Custom",
+          "lineNumber": 742
+        },
+        {
+          "caller": "to_declaration",
+          "callee": "self.name.clone",
+          "lineNumber": 743
+        },
+        {
+          "caller": "to_declaration",
+          "callee": "value.to_declared_value",
+          "lineNumber": 745
+        },
+        {
+          "caller": "to_declaration",
+          "callee": "CustomDeclarationValue::CSSWideKeyword",
+          "lineNumber": 746
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 23,
+        "classCount": 7
+      }
+    }
+  ]
+}

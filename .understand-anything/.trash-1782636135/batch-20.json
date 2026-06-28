@@ -1,0 +1,697 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/queries/condition.rs",
+      "type": "file",
+      "name": "condition.rs",
+      "filePath": "style/queries/condition.rs",
+      "summary": "Implements query condition parsing and evaluation for CSS media and container queries, including style queries, boolean operations (And/Or/Not), custom -moz-pref() features, and GeneralEnclosed fallback with var()-substitution re-parsing.",
+      "tags": ["media-queries", "container-queries", "css-parser", "condition-evaluation"],
+      "complexity": "complex",
+      "languageNotes": "Uses Kleene 3-valued logic (True/False/Unknown) for query evaluation, and OperationParser trait for shared boolean-combinator parsing between media and container queries."
+    },
+    {
+      "id": "class:style/queries/condition.rs:Operator",
+      "type": "class",
+      "name": "Operator",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [37, 40],
+      "summary": "Binary boolean operator enum with And and Or variants used for combining query conditions.",
+      "tags": ["enum", "boolean-operator", "query-syntax"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/condition.rs:OperationParser",
+      "type": "class",
+      "name": "OperationParser",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [60, 118],
+      "summary": "Trait defining shared parsing logic for boolean-combined query conditions (And/Or/Not), used by both StyleQuery and QueryCondition types.",
+      "tags": ["trait", "query-parser", "boolean-combinator"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/condition.rs:StyleQuery",
+      "type": "class",
+      "name": "StyleQuery",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [122, 133],
+      "summary": "Enum representing a parsed CSS container style() query with variants for boolean operations, feature checks, and general-enclosed fallback.",
+      "tags": ["enum", "container-style-query", "css-parser"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/condition.rs:StyleFeature",
+      "type": "class",
+      "name": "StyleFeature",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [317, 322],
+      "summary": "Enum representing a style query feature as either a plain property/value pair or a range expression.",
+      "tags": ["enum", "style-feature", "css-parser"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/condition.rs:StyleFeaturePlain",
+      "type": "class",
+      "name": "StyleFeaturePlain",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [350, 354],
+      "summary": "Struct representing a custom property name with optional value in a style feature, including var()-substitution logic for comparing query values against computed custom properties.",
+      "tags": ["struct", "custom-property", "css-parser", "style-query"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/queries/condition.rs:MozPrefFeature",
+      "type": "class",
+      "name": "MozPrefFeature",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [585, 588],
+      "summary": "Struct for -moz-pref() query features supporting pref name lookup with boolean, integer, or string values, gated behind chrome-rules-only access.",
+      "tags": ["struct", "mozilla-pref", "chrome-only", "media-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/condition.rs:QueryCondition",
+      "type": "class",
+      "name": "QueryCondition",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [640, 657],
+      "summary": "Main enum representing a parsed CSS query condition (media or container) with variants for feature expressions, custom idents, boolean operators, style queries, and general-enclosed fallback.",
+      "tags": ["enum", "media-query", "container-query", "condition-evaluation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/queries/condition.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [715, 721],
+      "summary": "Public entry point for parsing a QueryCondition from CSS syntax using boolean combinators with Or allowed.",
+      "tags": ["parse", "entry-point", "media-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/queries/condition.rs:cumulative_flags",
+      "type": "function",
+      "name": "cumulative_flags",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [746, 757],
+      "summary": "Computes the union of all FeatureFlags across nested conditions, used for container query requirement analysis.",
+      "tags": ["utility", "flags", "container-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/queries/condition.rs:parse_disallow_or",
+      "type": "function",
+      "name": "parse_disallow_or",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [762, 768],
+      "summary": "Parses a QueryCondition but rejects Or operators, used for legacy CSS query syntax compatibility.",
+      "tags": ["parse", "legacy-syntax", "media-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/queries/condition.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/queries/condition.rs",
+      "lineRange": [822, 850],
+      "summary": "Evaluates a QueryCondition against the computed context using Kleene 3-valued logic, delegating to each variant's evaluator.",
+      "tags": ["evaluation", "kleene-logic", "media-query", "container-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/queries/feature.rs",
+      "type": "file",
+      "name": "feature.rs",
+      "filePath": "style/queries/feature.rs",
+      "summary": "Defines the QueryFeatureDescription struct, Evaluator enum, and FeatureFlags bitflags that describe how each media/container query feature is parsed, evaluated, and configured.",
+      "tags": ["media-queries", "container-queries", "feature-description", "evaluator"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/feature.rs:Evaluator",
+      "type": "class",
+      "name": "Evaluator",
+      "filePath": "style/queries/feature.rs",
+      "lineRange": [37, 61],
+      "summary": "Enum defining the value type and evaluation strategy for a query feature, supporting Length, Integer, Float, BoolInteger, NumberRatio, Resolution, and Enumerated variants.",
+      "tags": ["enum", "evaluator", "value-type", "query-feature"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/feature.rs:FeatureFlags",
+      "type": "class",
+      "name": "FeatureFlags",
+      "filePath": "style/queries/feature.rs",
+      "lineRange": [108, 108],
+      "summary": "Bitflags describing query feature properties such as chrome/UA-only access, -webkit- prefix requirement, container axis requirements, viewport dependence, and style query dependency.",
+      "tags": ["bitflags", "feature-config", "parsing-flags"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/feature.rs:AllowsRanges",
+      "type": "class",
+      "name": "AllowsRanges",
+      "filePath": "style/queries/feature.rs",
+      "lineRange": [153, 156],
+      "summary": "Enum specifying whether a query feature supports min-/max- range prefix syntax.",
+      "tags": ["enum", "range-syntax", "query-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/feature.rs:QueryFeatureDescription",
+      "type": "class",
+      "name": "QueryFeatureDescription",
+      "filePath": "style/queries/feature.rs",
+      "lineRange": [159, 169],
+      "summary": "Struct that fully describes a query feature with its name, range-allowing status, evaluator function, and feature-specific flags.",
+      "tags": ["struct", "feature-metadata", "query-registry"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/queries/feature_expression.rs",
+      "type": "file",
+      "name": "feature_expression.rs",
+      "filePath": "style/queries/feature_expression.rs",
+      "summary": "Implements parsing and evaluation of query feature expressions including standard (feature: value), legacy range (min-/max-), modern range syntax (< > <= >=), and style range expressions for container queries.",
+      "tags": ["media-queries", "container-queries", "range-syntax", "expression-parsing", "style-range"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/queries/feature_expression.rs:FeatureType",
+      "type": "class",
+      "name": "FeatureType",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [36, 41],
+      "summary": "Enum distinguishing whether a feature expression is for a media query or a container query, determining which feature registry to use.",
+      "tags": ["enum", "media-query", "container-query", "feature-registry"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/feature_expression.rs:Operator",
+      "type": "class",
+      "name": "Operator",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [77, 88],
+      "summary": "Enum of comparison operators (=, >, >=, <, <=) for modern range syntax in query feature expressions, with compatibility checking between operators.",
+      "tags": ["enum", "comparison-operator", "range-syntax", "css-parser"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/feature_expression.rs:QueryFeatureExpression",
+      "type": "class",
+      "name": "QueryFeatureExpression",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [267, 271],
+      "summary": "Struct representing a fully parsed query feature expression with its feature type, feature registry index, and parsed value/range kind.",
+      "tags": ["struct", "feature-expression", "query-parser", "media-query"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/queries/feature_expression.rs:QueryExpressionValue",
+      "type": "class",
+      "name": "QueryExpressionValue",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [667, 699],
+      "summary": "Enum of all value types that can appear in query feature expressions, including Length, Integer, Float, Ratio, Resolution, Enumerated keywords, CSS-wide keywords, Percentage, Angle, Time, Custom idents, and substitution functions.",
+      "tags": ["enum", "value-representation", "css-values", "query-expression"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/queries/feature_expression.rs:QueryStyleRange",
+      "type": "class",
+      "name": "QueryStyleRange",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [835, 855],
+      "summary": "Enum representing two-value and three-value style range expressions for container style() queries, with value resolution, substitution, and comparison logic.",
+      "tags": ["enum", "style-range", "container-query", "value-comparison"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/queries/feature_expression.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [575, 655],
+      "summary": "Evaluates a parsed query feature expression against the computed context, dispatching to the appropriate evaluator based on the feature's Evaluator variant.",
+      "tags": ["evaluation", "feature-matching", "media-query", "kleene-logic"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/queries/feature_expression.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [903, 929],
+      "summary": "Parses a QueryStyleRange expression from CSS syntax, supporting two-value and three-value range patterns with operator compatibility validation.",
+      "tags": ["parse", "style-range", "container-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/queries/feature_expression.rs:evaluate",
+      "type": "function",
+      "name": "evaluate",
+      "filePath": "style/queries/feature_expression.rs",
+      "lineRange": [932, 998],
+      "summary": "Evaluates a QueryStyleRange by resolving each value (including custom-property lookups and var() substitution) and comparing them with the specified operators.",
+      "tags": ["evaluation", "style-range", "value-resolution"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/queries/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/queries/mod.rs",
+      "summary": "Barrel module for the style/queries subsystem declaring and re-exporting the condition, feature, feature_expression, and values submodules for use by the rest of the style crate.",
+      "tags": ["barrel", "module-root", "rust-module", "re-export"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/queries/values.rs",
+      "type": "file",
+      "name": "values.rs",
+      "filePath": "style/queries/values.rs",
+      "summary": "Defines common enumerated values shared between media and container features, specifically Orientation (Portrait/Landscape) and PrefersColorScheme (Light/Dark).",
+      "tags": ["enum-definitions", "media-query", "container-query", "shared-types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/values.rs:Orientation",
+      "type": "class",
+      "name": "Orientation",
+      "filePath": "style/queries/values.rs",
+      "lineRange": [17, 20],
+      "summary": "Enum for orientation media/container feature with Portrait and Landscape variants, including an evaluation helper that compares aspect dimensions.",
+      "tags": ["enum", "orientation", "media-feature", "container-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/queries/values.rs:PrefersColorScheme",
+      "type": "class",
+      "name": "PrefersColorScheme",
+      "filePath": "style/queries/values.rs",
+      "lineRange": [43, 46],
+      "summary": "Enum for prefers-color-scheme media feature with Light and Dark variants.",
+      "tags": ["enum", "color-scheme", "media-feature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/queries/values.rs:eval",
+      "type": "function",
+      "name": "eval",
+      "filePath": "style/queries/values.rs",
+      "lineRange": [24, 36],
+      "summary": "Evaluates an orientation query by comparing width and height dimensions, treating square viewports as portrait per CSS specification.",
+      "tags": ["evaluation", "orientation", "media-query"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/queries/mod.rs",
+      "target": "file:style/queries/condition.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/queries/mod.rs",
+      "target": "file:style/queries/feature.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/queries/mod.rs",
+      "target": "file:style/queries/feature_expression.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/queries/mod.rs",
+      "target": "file:style/queries/values.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:Operator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:OperationParser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleFeature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleFeaturePlain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:MozPrefFeature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:QueryCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:cumulative_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:parse_disallow_or",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:Operator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleFeature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:StyleFeaturePlain",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:MozPrefFeature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "class:style/queries/condition.rs:QueryCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:cumulative_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:parse_disallow_or",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/condition.rs",
+      "target": "function:style/queries/condition.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:Evaluator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:FeatureFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:AllowsRanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:QueryFeatureDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:Evaluator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:FeatureFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:AllowsRanges",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature.rs",
+      "target": "class:style/queries/feature.rs:QueryFeatureDescription",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:FeatureType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:Operator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryFeatureExpression",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryExpressionValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryStyleRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:FeatureType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:Operator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryFeatureExpression",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryExpressionValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "class:style/queries/feature_expression.rs:QueryStyleRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/feature_expression.rs",
+      "target": "function:style/queries/feature_expression.rs:evaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "class:style/queries/values.rs:Orientation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "class:style/queries/values.rs:PrefersColorScheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "function:style/queries/values.rs:eval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "class:style/queries/values.rs:Orientation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "class:style/queries/values.rs:PrefersColorScheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/queries/values.rs",
+      "target": "function:style/queries/values.rs:eval",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

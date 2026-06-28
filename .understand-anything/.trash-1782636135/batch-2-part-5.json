@@ -1,0 +1,1596 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/generics/text.rs",
+      "type": "file",
+      "name": "text.rs",
+      "filePath": "style/values/generics/text.rs",
+      "summary": "Generic types for CSS text properties including hyphenate-limit-chars, initial-letter, text-decoration-length, text-underline-offset/inset, text-indent with hanging/each-line, and number-or-auto values.",
+      "tags": [
+        "generic",
+        "text",
+        "css-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/generics/transform.rs",
+      "summary": "Generic types for CSS transform values including 2D/3D matrices, transform operations (matrix, rotate, scale, translate, skew, perspective), and conversion to computed matrix representations.",
+      "tags": [
+        "generic",
+        "transform",
+        "css-values",
+        "matrix"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements trait hierarchy with ToTransformComponent, ToMatrix, ToRadians, ToFloat for multi-step transform computation."
+    },
+    {
+      "id": "file:style/values/generics/transition.rs",
+      "type": "file",
+      "name": "transition.rs",
+      "filePath": "style/values/generics/transition.rs",
+      "summary": "Generic types for CSS transition properties. File was not found on disk during extraction.",
+      "tags": [
+        "generic",
+        "transition",
+        "css-values",
+        "missing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/generics/ui.rs",
+      "type": "file",
+      "name": "ui.rs",
+      "filePath": "style/values/generics/ui.rs",
+      "summary": "Generic types for CSS UI properties including cursor with hotspot coordinates, cursor-image for custom cursors, and scrollbar-color for thumb/track styling.",
+      "tags": [
+        "generic",
+        "ui",
+        "css-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/url.rs",
+      "type": "file",
+      "name": "url.rs",
+      "filePath": "style/values/generics/url.rs",
+      "summary": "Generic type for CSS url() or none values, providing an Option-like wrapper for optional URL references across CSS properties.",
+      "tags": [
+        "generic",
+        "url",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/text.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        66,
+        84
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/text.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        112,
+        117
+      ],
+      "summary": "Factory method returning the normal variant for a CSS generic type in text.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/text.rs:get_initial_value",
+      "type": "function",
+      "name": "get_initial_value",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        200,
+        205
+      ],
+      "summary": "get_initial_value() in text - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/text.rs:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        265,
+        271
+      ],
+      "summary": "Returns the zero value for types implementing the Zero trait, for animation interpolation.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:NumberOrAuto",
+      "type": "class",
+      "name": "NumberOrAuto",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        31,
+        36
+      ],
+      "summary": "Generic CSS text value type defined in text with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:GenericHyphenateLimitChars",
+      "type": "class",
+      "name": "GenericHyphenateLimitChars",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        56,
+        63
+      ],
+      "summary": "Generic type alias for HyphenateLimitChars, a CSS text value type with 0 method(s) for text.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:GenericInitialLetter",
+      "type": "class",
+      "name": "GenericInitialLetter",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        101,
+        106
+      ],
+      "summary": "Generic type alias for InitialLetter, a CSS text value type with 0 method(s) for text.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:GenericTextDecorationLength",
+      "type": "class",
+      "name": "GenericTextDecorationLength",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        163,
+        167
+      ],
+      "summary": "Generic type alias for TextDecorationLength, a CSS text value type with 0 method(s) for text.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:GenericTextDecorationInset",
+      "type": "class",
+      "name": "GenericTextDecorationInset",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        189,
+        195
+      ],
+      "summary": "Generic type alias for TextDecorationInset, a CSS text value type with 0 method(s) for text.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/text.rs:GenericTextIndent",
+      "type": "class",
+      "name": "GenericTextIndent",
+      "filePath": "style/values/generics/text.rs",
+      "lineRange": [
+        250,
+        261
+      ],
+      "summary": "Generic type alias for TextIndent, a CSS text value type with 0 method(s) for text.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        149,
+        155
+      ],
+      "summary": "Constructor creating a new instance of a CSS generic type from component values.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:infinity_or",
+      "type": "function",
+      "name": "infinity_or",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        189,
+        194
+      ],
+      "summary": "infinity_or() in transform - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_transform_component",
+      "type": "function",
+      "name": "to_transform_component",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        346,
+        489
+      ],
+      "summary": "Converts generic transform types to computed 3D matrix representations for rendering.",
+      "tags": [
+        "function",
+        "serialization",
+        "transform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        513,
+        529
+      ],
+      "summary": "Houdini Typed OM serialization via the ToTyped trait for CSS numeric and keyword values.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:is_rotate",
+      "type": "function",
+      "name": "is_rotate",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        540,
+        546
+      ],
+      "summary": "Checks if a transform operation is of a specific type (rotate, translate, or scale).",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:is_translate",
+      "type": "function",
+      "name": "is_translate",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        549,
+        557
+      ],
+      "summary": "Checks if a transform operation is of a specific type (rotate, translate, or scale).",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:is_scale",
+      "type": "function",
+      "name": "is_scale",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        560,
+        566
+      ],
+      "summary": "Checks if a transform operation is of a specific type (rotate, translate, or scale).",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_3d_matrix",
+      "type": "function",
+      "name": "to_3d_matrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        706,
+        800
+      ],
+      "summary": "to_3d_matrix() in transform - Complex multi-step operation for CSS value processing.",
+      "tags": [
+        "function",
+        "serialization",
+        "transform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        805,
+        807
+      ],
+      "summary": "Factory method returning the none variant for a CSS generic type in transform.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_transform_3d_matrix",
+      "type": "function",
+      "name": "to_transform_3d_matrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        816,
+        821
+      ],
+      "summary": "Converts generic transform types to computed 3D matrix representations for rendering.",
+      "tags": [
+        "function",
+        "serialization",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:components_to_transform_3d_matrix",
+      "type": "function",
+      "name": "components_to_transform_3d_matrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        825,
+        842
+      ],
+      "summary": "components_to_transform_3d_matrix() in transform - Core logic function for CSS value computation.",
+      "tags": [
+        "function",
+        "transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_transform_3d_matrix_f64",
+      "type": "function",
+      "name": "to_transform_3d_matrix_f64",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        845,
+        850
+      ],
+      "summary": "Converts generic transform types to computed 3D matrix representations for rendering.",
+      "tags": [
+        "function",
+        "serialization",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:components_to_transform_3d_matrix_f64",
+      "type": "function",
+      "name": "components_to_transform_3d_matrix_f64",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        853,
+        873
+      ],
+      "summary": "components_to_transform_3d_matrix_f64() in transform - Core logic function for CSS value computation.",
+      "tags": [
+        "function",
+        "transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:create_perspective_matrix",
+      "type": "function",
+      "name": "create_perspective_matrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        878,
+        884
+      ],
+      "summary": "create_perspective_matrix() in transform - Simple method for a CSS generic type.",
+      "tags": [
+        "function",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:get_normalized_vector_and_angle",
+      "type": "function",
+      "name": "get_normalized_vector_and_angle",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        887,
+        905
+      ],
+      "summary": "get_normalized_vector_and_angle() in transform - Core logic function for CSS value computation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/transform.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        952,
+        1021
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericMatrix",
+      "type": "class",
+      "name": "GenericMatrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        47,
+        54
+      ],
+      "summary": "Generic type alias for Matrix, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericMatrix3D",
+      "type": "class",
+      "name": "GenericMatrix3D",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        77,
+        82
+      ],
+      "summary": "Generic type alias for Matrix3D, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericTransformOrigin",
+      "type": "class",
+      "name": "GenericTransformOrigin",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        136,
+        143
+      ],
+      "summary": "Generic type alias for TransformOrigin, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericPerspectiveFunction",
+      "type": "class",
+      "name": "GenericPerspectiveFunction",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        180,
+        185
+      ],
+      "summary": "Generic type alias for PerspectiveFunction, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericTransformOperation",
+      "type": "class",
+      "name": "GenericTransformOperation",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        215,
+        324
+      ],
+      "summary": "Generic type alias for TransformOperation, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:ToTransformComponent",
+      "type": "class",
+      "name": "ToTransformComponent",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        329,
+        336
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericTransform",
+      "type": "class",
+      "name": "GenericTransform",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        508,
+        508
+      ],
+      "summary": "Generic type alias for Transform, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:ToAbsoluteLength",
+      "type": "class",
+      "name": "ToAbsoluteLength",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        570,
+        573
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:ToMatrix",
+      "type": "class",
+      "name": "ToMatrix",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        618,
+        627
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 2 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:ToRadians",
+      "type": "class",
+      "name": "ToRadians",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        630,
+        633
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:ToFloat",
+      "type": "class",
+      "name": "ToFloat",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        651,
+        657
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 2 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericRotate",
+      "type": "class",
+      "name": "GenericRotate",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        928,
+        935
+      ],
+      "summary": "Generic type alias for Rotate, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:IsParallelTo",
+      "type": "class",
+      "name": "IsParallelTo",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        941,
+        944
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericScale",
+      "type": "class",
+      "name": "GenericScale",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        1044,
+        1049
+      ],
+      "summary": "Generic type alias for Scale, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:GenericTranslate",
+      "type": "class",
+      "name": "GenericTranslate",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        1121,
+        1134
+      ],
+      "summary": "Generic type alias for Translate, a CSS transform value type with 0 method(s) for transform.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/transform.rs:TransformStyle",
+      "type": "class",
+      "name": "TransformStyle",
+      "filePath": "style/values/generics/transform.rs",
+      "lineRange": [
+        1154,
+        1158
+      ],
+      "summary": "Generic CSS transform value type defined in transform with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/ui.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/generics/ui.rs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "Factory method returning the auto variant for a CSS generic type in ui.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/ui.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/ui.rs",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/ui.rs:GenericCursor",
+      "type": "class",
+      "name": "GenericCursor",
+      "filePath": "style/values/generics/ui.rs",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Generic type alias for Cursor, a CSS value type with 0 method(s) for ui.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/ui.rs:GenericCursorImage",
+      "type": "class",
+      "name": "GenericCursorImage",
+      "filePath": "style/values/generics/ui.rs",
+      "lineRange": [
+        78,
+        87
+      ],
+      "summary": "Generic type alias for CursorImage, a CSS value type with 0 method(s) for ui.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/ui.rs:GenericScrollbarColor",
+      "type": "class",
+      "name": "GenericScrollbarColor",
+      "filePath": "style/values/generics/ui.rs",
+      "lineRange": [
+        128,
+        138
+      ],
+      "summary": "Generic type alias for ScrollbarColor, a CSS value type with 0 method(s) for ui.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "color"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/url.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/generics/url.rs",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "Factory method returning the none variant for a CSS generic type in url.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/url.rs:is_none",
+      "type": "function",
+      "name": "is_none",
+      "filePath": "style/values/generics/url.rs",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "Predicate checking if the value matches the none variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/url.rs:GenericUrlOrNone",
+      "type": "class",
+      "name": "GenericUrlOrNone",
+      "filePath": "style/values/generics/url.rs",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Generic type alias for UrlOrNone, a CSS value type with 0 method(s) for url.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:get_initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:NumberOrAuto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericHyphenateLimitChars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericInitialLetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextDecorationLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextDecorationInset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextIndent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:infinity_or",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_transform_component",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_rotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_translate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_scale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_3d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_transform_3d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:components_to_transform_3d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_transform_3d_matrix_f64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:components_to_transform_3d_matrix_f64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:create_perspective_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:get_normalized_vector_and_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericMatrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericMatrix3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransformOrigin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericPerspectiveFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransformOperation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToTransformComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToAbsoluteLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToMatrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToRadians",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToFloat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericRotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:IsParallelTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTranslate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:TransformStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "function:style/values/generics/ui.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "function:style/values/generics/ui.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericCursor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericCursorImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericScrollbarColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "function:style/values/generics/url.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "function:style/values/generics/url.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "class:style/values/generics/url.rs:GenericUrlOrNone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:NumberOrAuto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericHyphenateLimitChars",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericInitialLetter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextDecorationLength",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextDecorationInset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:get_initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "class:style/values/generics/text.rs:GenericTextIndent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/text.rs",
+      "target": "function:style/values/generics/text.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericMatrix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericMatrix3D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransformOrigin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericPerspectiveFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:infinity_or",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransformOperation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToTransformComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTransform",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_rotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_translate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:is_scale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToAbsoluteLength",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToMatrix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToRadians",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:ToFloat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_transform_3d_matrix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:components_to_transform_3d_matrix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:to_transform_3d_matrix_f64",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:create_perspective_matrix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "function:style/values/generics/transform.rs:get_normalized_vector_and_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericRotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:IsParallelTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericScale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:GenericTranslate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/transform.rs",
+      "target": "class:style/values/generics/transform.rs:TransformStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericCursor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "function:style/values/generics/ui.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericCursorImage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/ui.rs",
+      "target": "class:style/values/generics/ui.rs:GenericScrollbarColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "class:style/values/generics/url.rs:GenericUrlOrNone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "function:style/values/generics/url.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/url.rs",
+      "target": "function:style/values/generics/url.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:style/values/generics/transform.rs:to_3d_matrix",
+      "target": "function:style/values/generics/transform.rs:get_normalized_vector_and_angle",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:style/values/generics/transform.rs:to_3d_matrix",
+      "target": "function:style/values/generics/transform.rs:create_perspective_matrix",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

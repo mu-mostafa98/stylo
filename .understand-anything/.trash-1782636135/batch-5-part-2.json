@@ -1,0 +1,1331 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/background.rs",
+      "type": "file",
+      "name": "background.rs",
+      "filePath": "style/values/specified/background.rs",
+      "summary": "Defines specified types for CSS background properties, including BackgroundRepeatKeyword and BackgroundRepeat types supporting two-value repeat syntax.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "background",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/background.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        24,
+        39
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/background.rs:repeat",
+      "type": "function",
+      "name": "repeat",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        86,
+        91
+      ],
+      "summary": "Handles repeat for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/background.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        95,
+        115
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/background.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        119,
+        138
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/background.rs:BackgroundRepeatKeyword",
+      "type": "class",
+      "name": "BackgroundRepeatKeyword",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/background.rs:BackgroundRepeat",
+      "type": "class",
+      "name": "BackgroundRepeat",
+      "filePath": "style/values/specified/background.rs",
+      "lineRange": [
+        82,
+        82
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/basic_shape.rs",
+      "type": "file",
+      "name": "basic_shape.rs",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "summary": "Defines specified types for CSS basic shapes used in clip-path, shape-outside, and offset-path, including inset(), circle(), ellipse(), polygon(), path() and rect()/xywh() functions.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "shapes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_shape_or_box",
+      "type": "function",
+      "name": "parse_shape_or_box",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        202,
+        238
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        242,
+        261
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_round",
+      "type": "function",
+      "name": "parse_round",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        363,
+        375
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_at_position",
+      "type": "function",
+      "name": "parse_at_position",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        389,
+        398
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "function",
+      "name": "parse_function_arguments",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        411,
+        421
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_fill_rule",
+      "type": "function",
+      "name": "parse_fill_rule",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        457,
+        486
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:round_to_css",
+      "type": "function",
+      "name": "round_to_css",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        533,
+        542
+      ],
+      "summary": "Handles round to css for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        545,
+        557
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        613,
+        683
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_hline",
+      "type": "function",
+      "name": "parse_hline",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        908,
+        933
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:parse_vline",
+      "type": "function",
+      "name": "parse_vline",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        936,
+        962
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/basic_shape.rs:is_abs",
+      "type": "function",
+      "name": "is_abs",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        1016,
+        1018
+      ],
+      "summary": "Handles is abs for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/basic_shape.rs:Xywh",
+      "type": "class",
+      "name": "Xywh",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        79,
+        91
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/basic_shape.rs:ShapeRectFunction",
+      "type": "class",
+      "name": "ShapeRectFunction",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        98,
+        111
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/basic_shape.rs:BasicShapeRect",
+      "type": "class",
+      "name": "BasicShapeRect",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        118,
+        127
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/basic_shape.rs:ShapeType",
+      "type": "class",
+      "name": "ShapeType",
+      "filePath": "style/values/specified/basic_shape.rs",
+      "lineRange": [
+        135,
+        140
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/border.rs",
+      "type": "file",
+      "name": "border.rs",
+      "filePath": "style/values/specified/border.rs",
+      "summary": "Defines specified types for CSS border properties, including BorderStyle, LineWidth, BorderSideWidth, BorderSideOffset, BorderImageRepeat and related width/slice types.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "border-styles"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:none_or_hidden",
+      "type": "function",
+      "name": "none_or_hidden",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "Handles none or hidden for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:hundred_percent",
+      "type": "function",
+      "name": "hundred_percent",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        93,
+        98
+      ],
+      "summary": "Returns the 100% value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        117,
+        119
+      ],
+      "summary": "Returns the zero value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:parse_quirky",
+      "type": "function",
+      "name": "parse_quirky",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        121,
+        136
+      ],
+      "summary": "Parses CSS input with quirks mode support.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:medium",
+      "type": "function",
+      "name": "medium",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        175,
+        177
+      ],
+      "summary": "Returns the medium value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:from_px",
+      "type": "function",
+      "name": "from_px",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        180,
+        182
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:snap_as_border_width",
+      "type": "function",
+      "name": "snap_as_border_width",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        204,
+        215
+      ],
+      "summary": "Handles snap as border width for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        244,
+        259
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:one",
+      "type": "function",
+      "name": "one",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        270,
+        272
+      ],
+      "summary": "Handles one for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        276,
+        286
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        377,
+        387
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/border.rs:stretch",
+      "type": "function",
+      "name": "stretch",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        393,
+        398
+      ],
+      "summary": "Handles stretch for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:BorderStyle",
+      "type": "class",
+      "name": "BorderStyle",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        50,
+        61
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:LineWidth",
+      "type": "class",
+      "name": "LineWidth",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        103,
+        112
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:BorderSideWidth",
+      "type": "class",
+      "name": "BorderSideWidth",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        171,
+        171
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:BorderSideOffset",
+      "type": "class",
+      "name": "BorderSideOffset",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        238,
+        238
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:BorderImageRepeatKeyword",
+      "type": "class",
+      "name": "BorderImageRepeatKeyword",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        350,
+        355
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/border.rs:BorderImageRepeat",
+      "type": "class",
+      "name": "BorderImageRepeat",
+      "filePath": "style/values/specified/border.rs",
+      "lineRange": [
+        374,
+        374
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:repeat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:repeat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "function:style/values/specified/background.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "class:style/values/specified/background.rs:BackgroundRepeatKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "class:style/values/specified/background.rs:BackgroundRepeatKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "class:style/values/specified/background.rs:BackgroundRepeat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/background.rs",
+      "target": "class:style/values/specified/background.rs:BackgroundRepeat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_shape_or_box",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_round",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_at_position",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_fill_rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:round_to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_function_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_hline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_hline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_vline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:parse_vline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:is_abs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "function:style/values/specified/basic_shape.rs:is_abs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:Xywh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:Xywh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:ShapeRectFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:ShapeRectFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:BasicShapeRect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:BasicShapeRect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:ShapeType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/basic_shape.rs",
+      "target": "class:style/values/specified/basic_shape.rs:ShapeType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:none_or_hidden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:none_or_hidden",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:hundred_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:hundred_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:medium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:medium",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:from_px",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:from_px",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:snap_as_border_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:one",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:stretch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:stretch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "function:style/values/specified/border.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:LineWidth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:LineWidth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderSideWidth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderSideWidth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderSideOffset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderSideOffset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderImageRepeatKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderImageRepeatKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderImageRepeat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/border.rs",
+      "target": "class:style/values/specified/border.rs:BorderImageRepeat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

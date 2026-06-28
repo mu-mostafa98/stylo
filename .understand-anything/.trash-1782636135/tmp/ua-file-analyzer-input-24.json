@@ -1,0 +1,16 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "to_shmem_derive/lib.rs", "language": "rust", "sizeLines": 16, "fileCategory": "code"},
+    {"path": "to_shmem_derive/to_shmem.rs", "language": "rust", "sizeLines": 80, "fileCategory": "code"},
+    {"path": "to_shmem_derive/util.rs", "language": "rust", "sizeLines": 80, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "to_shmem_derive/lib.rs": [
+      "to_shmem_derive/to_shmem.rs",
+      "to_shmem_derive/util.rs"
+    ],
+    "to_shmem_derive/to_shmem.rs": [],
+    "to_shmem_derive/util.rs": []
+  }
+}

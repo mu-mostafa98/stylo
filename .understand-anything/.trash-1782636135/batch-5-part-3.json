@@ -1,0 +1,2137 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/calc.rs",
+      "type": "file",
+      "name": "calc.rs",
+      "filePath": "style/values/specified/calc.rs",
+      "summary": "Defines the calc() expression system for CSS values, including CalcNumeric, Leaf node types, math function parsing, and anchor()/anchor-size() function support.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "calc-expressions"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        104,
+        117
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        121,
+        132
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:with_clamping_mode",
+      "type": "function",
+      "name": "with_clamping_mode",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        151,
+        156
+      ],
+      "summary": "Handles with clamping mode for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:with_leaf_node",
+      "type": "function",
+      "name": "with_leaf_node",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        159,
+        164
+      ],
+      "summary": "Handles with leaf node for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        167,
+        176
+      ],
+      "summary": "Resolves a calc expression to a numeric value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:as_number",
+      "type": "function",
+      "name": "as_number",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        179,
+        184
+      ],
+      "summary": "Handles as number for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:as_percentage",
+      "type": "function",
+      "name": "as_percentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        187,
+        192
+      ],
+      "summary": "Handles as percentage for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:as_time",
+      "type": "function",
+      "name": "as_time",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        195,
+        200
+      ],
+      "summary": "Handles as time for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:as_resolution",
+      "type": "function",
+      "name": "as_resolution",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        203,
+        208
+      ],
+      "summary": "Handles as resolution for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:as_angle",
+      "type": "function",
+      "name": "as_angle",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        211,
+        216
+      ],
+      "summary": "Handles as angle for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        263,
+        269
+      ],
+      "summary": "Creates a new instance of the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:unit",
+      "type": "function",
+      "name": "unit",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        284,
+        293
+      ],
+      "summary": "Handles unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:unitless_value",
+      "type": "function",
+      "name": "unitless_value",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        295,
+        305
+      ],
+      "summary": "Handles unitless value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:is_same_unit_as",
+      "type": "function",
+      "name": "is_same_unit_as",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        307,
+        332
+      ],
+      "summary": "Handles is same unit as for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:compare",
+      "type": "function",
+      "name": "compare",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        350,
+        388
+      ],
+      "summary": "Handles compare for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:sort_key",
+      "type": "function",
+      "name": "sort_key",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        402,
+        412
+      ],
+      "summary": "Handles sort key for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:simplify",
+      "type": "function",
+      "name": "simplify",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        414,
+        426
+      ],
+      "summary": "Handles simplify for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:try_sum_in_place",
+      "type": "function",
+      "name": "try_sum_in_place",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        432,
+        474
+      ],
+      "summary": "Handles try sum in place for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:try_product_in_place",
+      "type": "function",
+      "name": "try_product_in_place",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        476,
+        502
+      ],
+      "summary": "Handles try product in place for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:try_op",
+      "type": "function",
+      "name": "try_op",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        504,
+        561
+      ],
+      "summary": "Handles try op for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:map",
+      "type": "function",
+      "name": "map",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        563,
+        573
+      ],
+      "summary": "Handles map for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_in_calc",
+      "type": "function",
+      "name": "parse_in_calc",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        577,
+        589
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_anchor_function_fallback",
+      "type": "function",
+      "name": "parse_anchor_function_fallback",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        592,
+        633
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_one",
+      "type": "function",
+      "name": "parse_one",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        696,
+        790
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        795,
+        1000
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_argument",
+      "type": "function",
+      "name": "parse_argument",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1002,
+        1049
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_product",
+      "type": "function",
+      "name": "parse_product",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1060,
+        1148
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:resolve_computed",
+      "type": "function",
+      "name": "resolve_computed",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1154,
+        1172
+      ],
+      "summary": "Handles resolve computed for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_length_or_percentage",
+      "type": "function",
+      "name": "into_length_or_percentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1176,
+        1193
+      ],
+      "summary": "Handles into length or percentage for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_time",
+      "type": "function",
+      "name": "into_time",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1196,
+        1208
+      ],
+      "summary": "Handles into time for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_resolution",
+      "type": "function",
+      "name": "into_resolution",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1211,
+        1223
+      ],
+      "summary": "Handles into resolution for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_angle",
+      "type": "function",
+      "name": "into_angle",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1226,
+        1238
+      ],
+      "summary": "Handles into angle for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_number",
+      "type": "function",
+      "name": "into_number",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1242,
+        1254
+      ],
+      "summary": "Handles into number for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:into_percentage",
+      "type": "function",
+      "name": "into_percentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1258,
+        1270
+      ],
+      "summary": "Handles into percentage for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:math_function",
+      "type": "function",
+      "name": "math_function",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1275,
+        1288
+      ],
+      "summary": "Handles math function for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_length_or_percentage",
+      "type": "function",
+      "name": "parse_length_or_percentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1291,
+        1318
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_percentage",
+      "type": "function",
+      "name": "parse_percentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1321,
+        1335
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_length",
+      "type": "function",
+      "name": "parse_length",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1338,
+        1347
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_number",
+      "type": "function",
+      "name": "parse_number",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1350,
+        1364
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_angle",
+      "type": "function",
+      "name": "parse_angle",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1367,
+        1375
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_time",
+      "type": "function",
+      "name": "parse_time",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1378,
+        1387
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/calc.rs:parse_resolution",
+      "type": "function",
+      "name": "parse_resolution",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        1390,
+        1403
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:MathFunction",
+      "type": "class",
+      "name": "MathFunction",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        38,
+        81
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:Leaf",
+      "type": "class",
+      "name": "Leaf",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        86,
+        101
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:CalcNumeric",
+      "type": "class",
+      "name": "CalcNumeric",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        143,
+        147
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:CalcLengthPercentage",
+      "type": "class",
+      "name": "CalcLengthPercentage",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        223,
+        223
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:AllowAnchorPositioningFunctions",
+      "type": "class",
+      "name": "AllowAnchorPositioningFunctions",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        229,
+        236
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/calc.rs:AllowParse",
+      "type": "class",
+      "name": "AllowParse",
+      "filePath": "style/values/specified/calc.rs",
+      "lineRange": [
+        252,
+        259
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/color.rs",
+      "type": "file",
+      "name": "color.rs",
+      "filePath": "style/values/specified/color.rs",
+      "summary": "Defines specified color types for CSS, including Color, Absolute, SystemColor, ColorScheme and related types with parsing for hex/rgb/hsl/color-mix/hwb/light-dark().",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "color-values"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        35,
+        148
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        161,
+        170
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:compute",
+      "type": "function",
+      "name": "compute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        438,
+        451
+      ],
+      "summary": "Handles compute for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_internal",
+      "type": "function",
+      "name": "parse_internal",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        545,
+        617
+      ],
+      "summary": "Internal parsing method for the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:is_valid",
+      "type": "function",
+      "name": "is_valid",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        620,
+        624
+      ],
+      "summary": "Handles is valid for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "function",
+      "name": "parse_and_compute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        627,
+        667
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "function",
+      "name": "honored_in_forced_colors_mode",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        694,
+        727
+      ],
+      "summary": "Handles honored in forced colors mode for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:currentcolor",
+      "type": "function",
+      "name": "currentcolor",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        731,
+        733
+      ],
+      "summary": "Handles currentcolor for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:transparent",
+      "type": "function",
+      "name": "transparent",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        737,
+        740
+      ],
+      "summary": "Handles transparent for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:from_absolute_color",
+      "type": "function",
+      "name": "from_absolute_color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        743,
+        748
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        754,
+        775
+      ],
+      "summary": "Handles resolve to absolute for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "function",
+      "name": "parse_quirky",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        780,
+        791
+      ],
+      "summary": "Parses CSS input with quirks mode support.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_hash",
+      "type": "function",
+      "name": "parse_hash",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        793,
+        803
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_quirky_color",
+      "type": "function",
+      "name": "parse_quirky_color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        808,
+        868
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "function",
+      "name": "to_computed_color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        876,
+        940
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        956,
+        973
+      ],
+      "summary": "Converts a computed value back to a specified value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:collect_completion_keywords",
+      "type": "function",
+      "name": "collect_completion_keywords",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        979,
+        1002
+      ],
+      "summary": "Handles collect completion keywords for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1106,
+        1111
+      ],
+      "summary": "Returns the normal/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:raw_bits",
+      "type": "function",
+      "name": "raw_bits",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1114,
+        1116
+      ],
+      "summary": "Handles raw bits for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:is_active",
+      "type": "function",
+      "name": "is_active",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1258,
+        1260
+      ],
+      "summary": "Handles is active for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:Absolute",
+      "type": "class",
+      "name": "Absolute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        153,
+        158
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:Color",
+      "type": "class",
+      "name": "Color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        176,
+        194
+      ],
+      "summary": "Specified CSS color value with various color space representations.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:SystemColor",
+      "type": "class",
+      "name": "SystemColor",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        215,
+        433
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "class",
+      "name": "ColorPropertyValue",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1009,
+        1009
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "class",
+      "name": "ColorSchemeFlags",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1069,
+        1069
+      ],
+      "summary": "Bitflags representing CSS keyword values for the property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "class",
+      "name": "ColorScheme",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1097,
+        1102
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "class",
+      "name": "PrintColorAdjust",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1212,
+        1217
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "class",
+      "name": "ForcedColorAdjust",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1235,
+        1240
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "class",
+      "name": "ForcedColors",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [
+        1246,
+        1254
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/column.rs",
+      "type": "file",
+      "name": "column.rs",
+      "filePath": "style/values/specified/column.rs",
+      "summary": "Defines the ColumnCount type for CSS multi-column layout column-count property as a re-export from generics.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "multicolumn"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:with_clamping_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:with_clamping_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:with_leaf_node",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:with_leaf_node",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_number",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_resolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_resolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:unitless_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:is_same_unit_as",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:compare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:as_number",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:sort_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:simplify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:try_sum_in_place",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:try_product_in_place",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:try_op",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_in_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_anchor_function_fallback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_in_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_in_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_argument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_product",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:resolve_computed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:resolve_computed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_length_or_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_length_or_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_resolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:into_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:math_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:math_function",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_length_or_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_length_or_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_length",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_number",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_resolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "function:style/values/specified/calc.rs:parse_resolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:MathFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:MathFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:Leaf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:Leaf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:CalcNumeric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:CalcNumeric",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:CalcLengthPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:CalcLengthPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:AllowAnchorPositioningFunctions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:AllowAnchorPositioningFunctions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:AllowParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/calc.rs",
+      "target": "class:style/values/specified/calc.rs:AllowParse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:is_valid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:is_valid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:currentcolor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:currentcolor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:transparent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:transparent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:from_absolute_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:from_absolute_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_quirky_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:collect_completion_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:raw_bits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:raw_bits",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:is_active",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:is_active",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

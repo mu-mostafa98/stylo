@@ -1,0 +1,512 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/properties/build.py",
+      "type": "file",
+      "name": "build.py",
+      "filePath": "style/properties/build.py",
+      "summary": "Build script that generates Rust CSS property definitions from TOML data files using Mako templates, producing both properties.rs and CSS documentation artifacts for Servo and Gecko engines.",
+      "tags": ["build-system", "code-generation", "css-properties", "python-script"],
+      "complexity": "moderate",
+      "languageNotes": "Uses Mako template engine from vendored wheels to generate Rust source code from TOML property definitions."
+    },
+    {
+      "id": "file:style/properties/counted_unknown_properties.py",
+      "type": "file",
+      "name": "counted_unknown_properties.py",
+      "filePath": "style/properties/counted_unknown_properties.py",
+      "summary": "Data file containing a list of vendor-prefixed and legacy CSS property names that are recognized but not fully implemented, used for telemetry counting of unknown property usage.",
+      "tags": ["data", "css-properties", "webkit", "vendor-prefix", "telemetry"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/data.py",
+      "type": "file",
+      "name": "data.py",
+      "filePath": "style/properties/data.py",
+      "summary": "Core data model for CSS property definitions, defining classes for longhands, shorthands, aliases, keywords, and style structs, parsed from TOML configuration files and used to generate Rust code for the Servo and Gecko style engines.",
+      "tags": ["data-model", "css-properties", "code-generation", "property-definition", "toml-config"],
+      "complexity": "complex",
+      "languageNotes": "Employs a declarative TOML-driven class hierarchy where Property, Longhand, and Shorthand subclasses encapsulate engine-specific behavior for Servo and Gecko."
+    },
+    {
+      "id": "function:style/properties/build.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "style/properties/build.py",
+      "lineRange": [27, 78],
+      "summary": "Entry point that loads CSS property data, renders properties.rs via Mako templates, and outputs CSS documentation artifacts (HTML and JSON) for the specified engine type.",
+      "tags": ["entry-point", "build-script", "code-generation", "css-properties"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/properties/build.py:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "style/properties/build.py",
+      "lineRange": [86, 104],
+      "summary": "Renders a Mako template file with the given context, setting up strict undefined variable checking for reliable code generation.",
+      "tags": ["template-rendering", "mako", "utility", "code-generation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/build.py:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "style/properties/build.py",
+      "lineRange": [107, 115],
+      "summary": "Writes generated content to a file, creating parent directories as needed, and validates output for stray Python object address strings that would indicate bugs.",
+      "tags": ["file-io", "utility", "validation", "output"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/data.py:rule_values_from_arg",
+      "type": "function",
+      "name": "rule_values_from_arg",
+      "filePath": "style/properties/data.py",
+      "lineRange": [116, 122],
+      "summary": "Converts a list of rule type names into a bitmask for determining which CSS rule types a property declaration is valid in.",
+      "tags": ["utility", "css-properties", "bitmask", "rule-types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/data.py:parse_property_aliases",
+      "type": "function",
+      "name": "parse_property_aliases",
+      "filePath": "style/properties/data.py",
+      "lineRange": [261, 267],
+      "summary": "Parses alias strings in the format 'name:pref' into tuples for property alias and prefix definitions.",
+      "tags": ["utility", "parsing", "aliases"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/data.py:_add_logical_props",
+      "type": "function",
+      "name": "_add_logical_props",
+      "filePath": "style/properties/data.py",
+      "lineRange": [1054, 1065],
+      "summary": "Expands a set of properties to include all logical-group counterparts for CSS pseudo-element restriction sets.",
+      "tags": ["utility", "css-properties", "logical-properties", "pseudo-elements"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/data.py:_remove_common_first_line_and_first_letter_properties",
+      "type": "function",
+      "name": "_remove_common_first_line_and_first_letter_properties",
+      "filePath": "style/properties/data.py",
+      "lineRange": [1069, 1086],
+      "summary": "Removes CSS properties that are not allowed in ::first-line and ::first-letter pseudo-element styling per spec, with Gecko-specific exceptions.",
+      "tags": ["utility", "css-properties", "pseudo-elements", "gecko"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:Vector",
+      "type": "class",
+      "name": "Vector",
+      "filePath": "style/properties/data.py",
+      "lineRange": [168, 181],
+      "summary": "Configures CSS property vector types, controlling index requirements, separator, animation type, and simple binding optimizations.",
+      "tags": ["data-model", "css-properties", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:Keyword",
+      "type": "class",
+      "name": "Keyword",
+      "filePath": "style/properties/data.py",
+      "lineRange": [184, 258],
+      "summary": "Represents a CSS keyword property with its allowed values, engine-specific aliases, and Gecko FFI constant generation for both enum-prefix and constant-prefix styles.",
+      "tags": ["data-model", "css-properties", "keyword", "enum", "code-generation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/data.py:Property",
+      "type": "class",
+      "name": "Property",
+      "filePath": "style/properties/data.py",
+      "lineRange": [274, 339],
+      "summary": "Base class for CSS property definitions, handling name normalization, engine preferences, rule type validation, and visited-link/priority property detection.",
+      "tags": ["data-model", "css-properties", "base-class", "abstraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/data.py:Longhand",
+      "type": "class",
+      "name": "Longhand",
+      "filePath": "style/properties/data.py",
+      "lineRange": [342, 660],
+      "summary": "Defines a CSS longhand property with parsing methods, initial values, animation types, style struct assignment, logical property mapping, zoom dependency checks, and copy optimization analysis.",
+      "tags": ["data-model", "css-properties", "longhand", "animation", "code-generation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/data.py:Shorthand",
+      "type": "class",
+      "name": "Shorthand",
+      "filePath": "style/properties/data.py",
+      "lineRange": [663, 709],
+      "summary": "Defines a CSS shorthand property as a collection of sub-properties, with serialization and value-info derivation controls.",
+      "tags": ["data-model", "css-properties", "shorthand", "code-generation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:Alias",
+      "type": "class",
+      "name": "Alias",
+      "filePath": "style/properties/data.py",
+      "lineRange": [712, 753],
+      "summary": "Represents a CSS property alias that delegates to an original property, carrying ident, camel_case, and engine-specific pref overrides.",
+      "tags": ["data-model", "css-properties", "alias", "vendor-prefix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:Method",
+      "type": "class",
+      "name": "Method",
+      "filePath": "style/properties/data.py",
+      "lineRange": [756, 778],
+      "summary": "Describes a generated Rust method signature for style struct FFI, with parameter types, return type, and mutability flags.",
+      "tags": ["data-model", "ffi", "rust-code-generation", "method-signature"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:StyleStruct",
+      "type": "class",
+      "name": "StyleStruct",
+      "filePath": "style/properties/data.py",
+      "lineRange": [781, 791],
+      "summary": "Defines a CSS style struct grouping related longhand properties, with inherited/non-inherited classification and Gecko FFI naming conventions.",
+      "tags": ["data-model", "css-properties", "style-struct", "inheritance"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:Descriptor",
+      "type": "class",
+      "name": "Descriptor",
+      "filePath": "style/properties/data.py",
+      "lineRange": [794, 802],
+      "summary": "Defines a CSS at-rule descriptor (e.g. @font-face, @counter-style) with type information and parser method reference.",
+      "tags": ["data-model", "css-properties", "at-rule", "descriptor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/data.py:PropertiesData",
+      "type": "class",
+      "name": "PropertiesData",
+      "filePath": "style/properties/data.py",
+      "lineRange": [805, 1051],
+      "summary": "Central data container that loads and organizes all CSS property definitions from TOML files, managing longhands, shorthands, aliases, style structs, logical groups, and descriptor collections for code generation.",
+      "tags": ["data-model", "css-properties", "code-generation", "toml-config", "orchestrator"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/data.py:PropertyRestrictions",
+      "type": "class",
+      "name": "PropertyRestrictions",
+      "filePath": "style/properties/data.py",
+      "lineRange": [1089, 1289],
+      "summary": "Provides static methods that compute allowed CSS property sets for pseudo-elements (::first-letter, ::first-line, ::placeholder, ::marker, ::cue) per CSS specifications.",
+      "tags": ["css-properties", "pseudo-elements", "specification", "restrictions"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/data.py:CountedUnknownProperty",
+      "type": "class",
+      "name": "CountedUnknownProperty",
+      "filePath": "style/properties/data.py",
+      "lineRange": [1292, 1296],
+      "summary": "Represents a vendor-prefixed or legacy CSS property that is tracked for telemetry counting rather than fully implemented.",
+      "tags": ["data-model", "css-properties", "telemetry", "unknown-properties"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/properties/build.py",
+      "target": "file:style/properties/data.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "file:style/properties/counted_unknown_properties.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:render",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/build.py",
+      "target": "function:style/properties/build.py:write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:style/properties/build.py:main",
+      "target": "class:style/properties/data.py:PropertiesData",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:rule_values_from_arg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:parse_property_aliases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:_add_logical_props",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:_remove_common_first_line_and_first_letter_properties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Vector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Property",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Longhand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Shorthand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Alias",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Method",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:StyleStruct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:PropertiesData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:PropertyRestrictions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:CountedUnknownProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:rule_values_from_arg",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:parse_property_aliases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:_add_logical_props",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "function:style/properties/data.py:_remove_common_first_line_and_first_letter_properties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Vector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Property",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Longhand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Shorthand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Alias",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Method",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:StyleStruct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:PropertiesData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:PropertyRestrictions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/data.py",
+      "target": "class:style/properties/data.py:CountedUnknownProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

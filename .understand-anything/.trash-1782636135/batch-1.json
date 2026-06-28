@@ -1,0 +1,1086 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/stylesheets/appearance_base_rule.rs",
+      "type": "file",
+      "name": "appearance_base_rule.rs",
+      "filePath": "style/stylesheets/appearance_base_rule.rs",
+      "summary": "Defines the @appearance-base CSS rule for user-agent stylesheet appearance-dependent styles, wrapping nested CSS rules with memory measurement, CSS serialization, and deep cloning support.",
+      "tags": ["css-rule", "ua-stylesheet", "appearance", "stylesheets"],
+      "complexity": "simple",
+      "languageNotes": "Gated behind #[cfg(feature = \"gecko\")] for heap size measurement."
+    },
+    {
+      "id": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "class",
+      "name": "AppearanceBaseRule",
+      "filePath": "style/stylesheets/appearance_base_rule.rs",
+      "lineRange": [20, 25],
+      "summary": "Represents an @appearance-base rule containing nested CSS rules and source location, with support for heap size measurement, CSS serialization via ToCssWithGuard, and deep cloning via DeepCloneWithLock.",
+      "tags": ["css-rule", "appearance", "ua-stylesheet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/appearance_base_rule.rs:size_of",
+      "type": "function",
+      "name": "size_of",
+      "filePath": "style/stylesheets/appearance_base_rule.rs",
+      "lineRange": [30, 33],
+      "summary": "Measures heap memory usage of the appearance base rule, summing the shallow size of the rules Arc and the deep size of the locked CSS rules.",
+      "tags": ["memory-measurement", "heap-profiling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/container_rule.rs",
+      "type": "file",
+      "name": "container_rule.rs",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "summary": "Implements the CSS @container rule from CSS Containment Level 3, providing container query parsing, container-name matching, container size query evaluation, and traversal of the element tree to find query containers.",
+      "tags": ["css-rule", "container-query", "stylesheet", "css-contain"],
+      "complexity": "complex",
+      "languageNotes": "Uses a TraversalResult enum for tree walking with InProgress/StopTraversal/Done states, and a lazy evaluation pattern via ContainerSizeQuery's NotEvaluated/Evaluated variants."
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "class",
+      "name": "ContainerRule",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [38, 45],
+      "summary": "Represents a parsed @container CSS rule with container conditions, nested rules, and source location, with heap measurement, deep cloning, and CSS serialization support.",
+      "tags": ["css-rule", "container-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "class",
+      "name": "ContainerCondition",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [88, 94],
+      "summary": "Combines a container name filter with an optional query condition and pre-computed feature flags for efficient container matching against elements in the DOM tree.",
+      "tags": ["container-query", "matching", "condition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerLookupResult",
+      "type": "class",
+      "name": "ContainerLookupResult",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [97, 104],
+      "summary": "Result of a successful container query lookup, holding the container element, sizing and writing-mode information, and the element's computed style.",
+      "tags": ["container-query", "lookup-result"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "class",
+      "name": "ContainerInfo",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [340, 344],
+      "summary": "Information needed to evaluate an individual container query, including the container's physical size, writing mode, and inherited style reference.",
+      "tags": ["container-query", "sizing", "writing-mode"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "class",
+      "name": "ContainerSizeQueryResult",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [455, 458],
+      "summary": "Result of a container size query holding optional width and height in app units, with methods to resolve logical dimensions and merge results from multiple container lookups.",
+      "tags": ["container-query", "sizing", "result"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerSizeQuery",
+      "type": "class",
+      "name": "ContainerSizeQuery",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [530, 535],
+      "summary": "A lazy or cached container size query that traverses ancestors to find size containers, implemented as an enum with deferred lookup and evaluated result caching.",
+      "tags": ["container-query", "lazy-evaluation", "sizing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:size_of",
+      "type": "function",
+      "name": "size_of",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [50, 54],
+      "summary": "Measures heap memory usage of the ContainerRule by summing shallow Arc size and deep CSS rules size.",
+      "tags": ["memory-measurement", "heap-profiling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:container_type_axes",
+      "type": "function",
+      "name": "container_type_axes",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [106, 119],
+      "summary": "Determines which feature flags (axes) a container type provides, mapping SIZE to all axes, INLINE_SIZE to the appropriate physical axis based on writing mode, and empty for none.",
+      "tags": ["container-query", "feature-flags", "helper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:traverse_container",
+      "type": "function",
+      "name": "traverse_container",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [127, 153],
+      "summary": "Walks up the element tree calling an evaluator function at each level, starting from the originating element if a style is provided, and returns the first Done result.",
+      "tags": ["container-query", "tree-traversal", "helper"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [167, 189],
+      "summary": "Parses a ContainerCondition from CSS syntax, extracting optional container name, optional query condition, and computing cumulative feature flags.",
+      "tags": ["container-query", "parsing", "css-syntax"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:valid_container_info",
+      "type": "function",
+      "name": "valid_container_info",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [191, 245],
+      "summary": "Checks whether a potential container element satisfies the container-type and container-name filters, returning the lookup result or instructing traversal to continue or stop.",
+      "tags": ["container-query", "matching", "validation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:find_container",
+      "type": "function",
+      "name": "find_container",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [248, 266],
+      "summary": "Public API to find a matching container element for a given element by traversing ancestors and validating each against the condition's filters.",
+      "tags": ["container-query", "lookup", "public-api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [269, 335],
+      "summary": "Evaluates a container query condition for a given element by finding the container, setting up size query evaluation, and running the condition against the container context, updating invalidation flags for viewport and font-relative unit dependencies.",
+      "tags": ["container-query", "evaluation", "matching", "invalidation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get_container_inline_size",
+      "type": "function",
+      "name": "get_container_inline_size",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [474, 485],
+      "summary": "Resolves the container's inline-size, using cached physical width/height based on writing mode, falling back to logical viewport size.",
+      "tags": ["container-query", "sizing", "logical-properties"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get_container_block_size",
+      "type": "function",
+      "name": "get_container_block_size",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [488, 494],
+      "summary": "Resolves the container's block-size, delegating to get_container_height or get_container_width based on writing mode.",
+      "tags": ["container-query", "sizing", "logical-properties"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get_container_width",
+      "type": "function",
+      "name": "get_container_width",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [497, 502],
+      "summary": "Returns the container's physical width from cache or falls back to the viewport width.",
+      "tags": ["container-query", "sizing", "public-api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get_container_height",
+      "type": "function",
+      "name": "get_container_height",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [505, 510],
+      "summary": "Returns the container's physical height from cache or falls back to the viewport height.",
+      "tags": ["container-query", "sizing", "public-api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:merge",
+      "type": "function",
+      "name": "merge",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [513, 522],
+      "summary": "Merges two ContainerSizeQueryResults by filling in missing width/height from the new result, preferring the initial result's values.",
+      "tags": ["container-query", "sizing", "merge"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:evaluate_potential_size_container",
+      "type": "function",
+      "name": "evaluate_potential_size_container",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [538, 589],
+      "summary": "Evaluates whether an element is a potential size container by checking its container-type and returning the appropriate size result (full SIZE, partial INLINE_SIZE, or continuing traversal).",
+      "tags": ["container-query", "sizing", "evaluation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:lookup",
+      "type": "function",
+      "name": "lookup",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [592, 616],
+      "summary": "Finds the query container size by traversing ancestors, collecting results from potentially multiple size containers when a single lookup is incomplete.",
+      "tags": ["container-query", "sizing", "lookup"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "function",
+      "name": "for_element",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [619, 654],
+      "summary": "Creates a new ContainerSizeQuery for a given element, with deferred ancestor traversal that optionally checks the parent style for the size container flag.",
+      "tags": ["container-query", "sizing", "public-api"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "function",
+      "name": "for_option_element",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [657, 670],
+      "summary": "Creates a ContainerSizeQuery for an optional element, returning a none query if the element is absent.",
+      "tags": ["container-query", "sizing", "public-api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [678, 689],
+      "summary": "Returns the result of a container size query, performing the deferred lookup on first call and caching the evaluated result.",
+      "tags": ["container-query", "lazy-evaluation", "public-api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/stylesheets/counter_style_rule.rs",
+      "type": "file",
+      "name": "counter_style_rule.rs",
+      "filePath": "style/stylesheets/counter_style_rule.rs",
+      "summary": "Re-exports the CounterStyleRule struct from the counter_style module as the public API surface for @counter-style rules in the stylesheets module.",
+      "tags": ["re-export", "barrel", "counter-style", "css-rule"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/document_rule.rs",
+      "type": "file",
+      "name": "document_rule.rs",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "summary": "Implements the @-moz-document CSS rule with URL matching functions (url, url-prefix, domain, regexp, media-document, etc.), parsing, evaluation for Gecko, and document condition chaining.",
+      "tags": ["css-rule", "document-rule", "url-matching", "moz-prefixed"],
+      "complexity": "moderate",
+      "languageNotes": "Uses cfg(feature = \"gecko\") and cfg(feature = \"servo\") feature gates with separate evaluate and allowed_in implementations per browser engine."
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "class",
+      "name": "DocumentRule",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [25, 32],
+      "summary": "Represents a @-moz-document CSS rule with a parsed document condition, child rules, and source location, with heap measurement, CSS serialization, and deep cloning.",
+      "tags": ["css-rule", "document-rule", "moz-prefixed"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:MediaDocumentKind",
+      "type": "class",
+      "name": "MediaDocumentKind",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [72, 76],
+      "summary": "Enumeration of media document types (All, Image, Video) used by the media-document URL matching function.",
+      "tags": ["enum", "media-document", "url-matching"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "class",
+      "name": "DocumentMatchingFunction",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [80, 114],
+      "summary": "Enum of URL matching functions for @-moz-document rules including Url, UrlPrefix, Domain, Regexp, MediaDocument, PlainTextDocument, and UnobservableDocument, with parsing and Gecko evaluation.",
+      "tags": ["enum", "url-matching", "matching-function"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "class",
+      "name": "DocumentCondition",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [243, 243],
+      "summary": "A comma-separated list of URL matching functions that evaluates to true when any one function matches, with Gecko-specific allowed_in validation.",
+      "tags": ["document-rule", "condition", "url-matching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:size_of",
+      "type": "function",
+      "name": "size_of",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [37, 41],
+      "summary": "Measures heap memory usage of the DocumentRule by summing shallow and deep sizes of the CSS rules.",
+      "tags": ["memory-measurement", "heap-profiling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [45, 54],
+      "summary": "Serializes the DocumentRule to CSS string format including the @-moz-document at-rule, conditions, and nested rules.",
+      "tags": ["css-serialization", "to-css"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_parse",
+      "type": "function",
+      "name": "DocumentMatchingFunction_parse",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [135, 186],
+      "summary": "Parses a URL matching function from CSS syntax, handling url(), url-prefix(), domain(), regexp(), media-document(), plain-text-document(), and unobservable-document() function forms.",
+      "tags": ["parsing", "url-matching", "css-syntax"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_evaluate",
+      "type": "function",
+      "name": "DocumentMatchingFunction_evaluate",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [190, 225],
+      "summary": "Evaluates a URL matching function against a Gecko document by delegating to the Gecko_DocumentRule_UseForPresentation FFI call.",
+      "tags": ["evaluation", "gecko-ffi", "url-matching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:DocumentCondition_parse",
+      "type": "function",
+      "name": "DocumentCondition_parse",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [247, 259],
+      "summary": "Parses a document condition as a comma-separated list of URL matching functions, validating the result against allowed-in rules.",
+      "tags": ["parsing", "document-rule", "css-syntax"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:DocumentCondition_evaluate",
+      "type": "function",
+      "name": "DocumentCondition_evaluate",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [262, 266],
+      "summary": "Evaluates a document condition by checking if any URL matching function matches the given device.",
+      "tags": ["evaluation", "document-rule", "url-matching"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/document_rule.rs:allowed_in",
+      "type": "function",
+      "name": "allowed_in",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [274, 291],
+      "summary": "Validates whether a document condition is allowed in a given parser context, permitting chrome rules unconditionally and otherwise allowing only a single empty url-prefix() for compatibility.",
+      "tags": ["validation", "gecko", "security"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/stylesheets/font_face_rule.rs",
+      "type": "file",
+      "name": "font_face_rule.rs",
+      "filePath": "style/stylesheets/font_face_rule.rs",
+      "summary": "Re-exports the FontFaceRule struct from the font_face module as the public API surface for @font-face rules in the stylesheets module.",
+      "tags": ["re-export", "barrel", "font-face", "css-rule"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "function:style/stylesheets/appearance_base_rule.rs:size_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "function:style/stylesheets/appearance_base_rule.rs:size_of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "file:crate::values::computed::ColorScheme",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "file:crate::values::generics::ui::BoolInteger",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerLookupResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:size_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:container_type_axes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:traverse_container",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:valid_container_info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:find_container",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_inline_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_block_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_height",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:merge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:evaluate_potential_size_container",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:lookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerLookupResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:size_of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:find_container",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_inline_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_block_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_width",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get_container_height",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylist::CascadeData",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::shared_lock::Locked",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::CssRule",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::CssRuleType",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::CssRules",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::CssRulesMutators",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::ErrorReporter",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::RuleContainerParser",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylesheets::rules::check_for_bad_selector_usage",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::stylist::CascadeData",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::values::computed::font::FontSize",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:crate::values::specified::length::NoCalcLength",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:selectors::parser::AncestorHashes",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:selectors::parser::Selector",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "file:selectors::parser::SelectorList",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:MediaDocumentKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:size_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentCondition_parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentCondition_evaluate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:allowed_in",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:MediaDocumentKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:size_of",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentMatchingFunction_evaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentCondition_parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "function:style/stylesheets/document_rule.rs:DocumentCondition_evaluate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::parser::Parse",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::shared_lock::Locked",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::CssRule",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::CssRuleType",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::CssRules",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::CssRulesMutators",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::ErrorReporter",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::RuleContainerParser",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::stylesheets::rules::check_for_bad_selector_usage",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:crate::values::computed::UrlExtraData",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:selectors::attr::NamespaceConstraint",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:selectors::attr::NamespaceConstraint::",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:selectors::parser::AncestorHashes",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:selectors::parser::Selector",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:selectors::parser::SelectorList",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

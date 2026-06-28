@@ -1,0 +1,1061 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/properties/cascade.rs",
+      "type": "file",
+      "name": "cascade.rs",
+      "filePath": "style/properties/cascade.rs",
+      "summary": "Implements the main CSS cascading algorithm, handling priority-based declaration iteration via tree-shaped rule nodes, variable substitution, forced-colors mode tweaks, visited-style computation, and font-size recalculation for zoom/math/script changes.",
+      "tags": [
+        "cascade",
+        "css",
+        "style-system",
+        "computed-values"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/properties/declaration_block.rs",
+      "type": "file",
+      "name": "declaration_block.rs",
+      "filePath": "style/properties/declaration_block.rs",
+      "summary": "Defines the PropertyDeclarationBlock and associated types for storing, serializing, and mutating CSS property declarations, including importance tracking, shorthand expansion, CSSOM property update operations, and animation value extraction.",
+      "tags": [
+        "css",
+        "declaration-block",
+        "serialization",
+        "style-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/properties/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/properties/mod.rs",
+      "summary": "Root module for the style system properties layer, re-exporting cascade, declaration_block, shorthands, and generated property definitions, and defining core property ID types (LonghandId, ShorthandId, PropertyId, NonCustomPropertyId), CSS-wide keywords, property flag sets, and parsing infrastructure.",
+      "tags": [
+        "module-root",
+        "css-properties",
+        "type-definitions",
+        "re-exports"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/properties/cascade.rs:cascade",
+      "type": "function",
+      "name": "cascade",
+      "filePath": "style/properties/cascade.rs",
+      "lineRange": [
+        66,
+        101
+      ],
+      "summary": "Primary entry point for CSS cascade computation. Accepts stylist, rule node, parent style, pseudo-element, and flags, and delegates to cascade_rules to produce computed values for an element.",
+      "tags": [
+        "cascade",
+        "entry-point",
+        "style-computation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/properties/cascade.rs:apply_declarations",
+      "type": "function",
+      "name": "apply_declarations",
+      "filePath": "style/properties/cascade.rs",
+      "lineRange": [
+        260,
+        430
+      ],
+      "summary": "Core function that applies CSS property declarations to a style builder, handling variable substitution, prioritary property resolution (writing-mode, font-family, zoom), visited style computation, rule cache usage, and style adjustment.",
+      "tags": [
+        "cascade",
+        "declaration-application",
+        "style-computation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/cascade.rs:FirstLineReparenting",
+      "type": "class",
+      "name": "FirstLineReparenting",
+      "filePath": "style/properties/cascade.rs",
+      "lineRange": [
+        40,
+        50
+      ],
+      "summary": "Enum controlling whether we are resolving a style for ::first-line reparenting, carrying the style to reparent from when active.",
+      "tags": [
+        "enum",
+        "first-line",
+        "pseudo-element"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/cascade.rs:CascadeMode",
+      "type": "class",
+      "name": "CascadeMode",
+      "filePath": "style/properties/cascade.rs",
+      "lineRange": [
+        221,
+        233
+      ],
+      "summary": "Enum distinguishing unvisited vs visited style cascading. The visited variant carries a reference to the unvisited context for correct property computation.",
+      "tags": [
+        "enum",
+        "visited-style",
+        "cascade"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/declaration_block.rs:parse_style_attribute",
+      "type": "function",
+      "name": "parse_style_attribute",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        1415,
+        1436
+      ],
+      "summary": "Parses the inline style attribute of an element into a PropertyDeclarationBlock, sharing logic between Servo and Gecko backends.",
+      "tags": [
+        "parsing",
+        "style-attribute",
+        "inline-styles"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/declaration_block.rs:parse_one_declaration_into",
+      "type": "function",
+      "name": "parse_one_declaration_into",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        1443,
+        1491
+      ],
+      "summary": "Parses a single CSS property declaration from a string into a SourcePropertyDeclaration, handling error reporting for invalid property values.",
+      "tags": [
+        "parsing",
+        "css-declaration",
+        "error-reporting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/declaration_block.rs:parse_property_declaration_list",
+      "type": "function",
+      "name": "parse_property_declaration_list",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        1751,
+        1770
+      ],
+      "summary": "Parses a full list of CSS property declarations from a parser into a PropertyDeclarationBlock, collecting and reporting errors.",
+      "tags": [
+        "parsing",
+        "declaration-list",
+        "css-parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/declaration_block.rs:append_serialization",
+      "type": "function",
+      "name": "append_serialization",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        1386,
+        1408
+      ],
+      "summary": "Serializes a property name and its appendable value to a CSS string writer, including !important marker and semicolon terminator.",
+      "tags": [
+        "serialization",
+        "css-output",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:PropertyDeclarationBlock",
+      "type": "class",
+      "name": "PropertyDeclarationBlock",
+      "filePath": "style/properties/declaration_block.rs",
+      "summary": "Core data structure holding a deduplicated list of property declarations with importance flags and a property ID set. Provides methods for CSSOM get/remove/update operations, shorthand serialization, animation value extraction, and full CSS serialization per the CSSOM specification.",
+      "tags": [
+        "cssom",
+        "declaration-storage",
+        "serialization",
+        "core-type"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:Importance",
+      "type": "class",
+      "name": "Importance",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        97,
+        120
+      ],
+      "summary": "Simple enum distinguishing Normal from Important CSS declarations, with utility methods for checking importance and defaulting to Normal.",
+      "tags": [
+        "enum",
+        "css-importance",
+        "declaration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:DeclarationImportanceIterator",
+      "type": "class",
+      "name": "DeclarationImportanceIterator",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        292,
+        350
+      ],
+      "summary": "Double-ended iterator yielding (PropertyDeclaration, Importance) pairs by zipping declaration and importance bit vector iterators.",
+      "tags": [
+        "iterator",
+        "declaration-traversal",
+        "importance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:AnimationValueIterator",
+      "type": "class",
+      "name": "AnimationValueIterator",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        353,
+        401
+      ],
+      "summary": "Iterator that generates AnimationValue instances from PropertyDeclarationBlock declarations, skipping important declarations and using a provided context and style.",
+      "tags": [
+        "iterator",
+        "animation",
+        "keyframe-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:PropertyDeclarationIdSet",
+      "type": "class",
+      "name": "PropertyDeclarationIdSet",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        123,
+        207
+      ],
+      "summary": "Set of PropertyDeclarationId values (longhands and custom properties) backed by a LonghandIdSet and a hash set of custom property names, with insert/contains/remove/clear/iteration operations.",
+      "tags": [
+        "set",
+        "property-ids",
+        "lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/declaration_block.rs:AnimationDeclarations",
+      "type": "class",
+      "name": "AnimationDeclarations",
+      "filePath": "style/properties/declaration_block.rs",
+      "lineRange": [
+        55,
+        68
+      ],
+      "summary": "Container holding optional Arc<Locked<PropertyDeclarationBlock>> for both animations and transitions.",
+      "tags": [
+        "animation",
+        "transitions",
+        "declaration-storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/mod.rs:enabled_arbitrary_substitution_functions",
+      "type": "function",
+      "name": "enabled_arbitrary_substitution_functions",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        739,
+        745
+      ],
+      "summary": "Returns the list of enabled CSS substitution functions (var, env, and optionally attr based on pref) that the parser should look for.",
+      "tags": [
+        "css-functions",
+        "var",
+        "env",
+        "attr",
+        "substitution"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:CSSWideKeyword",
+      "type": "class",
+      "name": "CSSWideKeyword",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        89,
+        148
+      ],
+      "summary": "Enum representing CSS-wide keyword values (initial, inherit, unset, revert, revert-layer, revert-rule) with parsing, serialization, and revert-kind resolution.",
+      "tags": [
+        "enum",
+        "css-keywords",
+        "css-wide"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:PropertyFlags",
+      "type": "class",
+      "name": "PropertyFlags",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        51,
+        83
+      ],
+      "summary": "Bitflags for CSS property metadata: applies-to pseudo-element restrictions (first-letter, first-line, placeholder, cue, marker) and legacy shorthand marker.",
+      "tags": [
+        "bitflags",
+        "property-metadata",
+        "pseudo-elements"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:NonCustomPropertyId",
+      "type": "class",
+      "name": "NonCustomPropertyId",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        218,
+        354
+      ],
+      "summary": "U16 wrapper representing a non-custom CSS property (longhand, shorthand, or alias) with methods for conversion between LonghandId, ShorthandId, AliasId, Gecko FFI types, and alias resolution.",
+      "tags": [
+        "property-id",
+        "conversion",
+        "ffi",
+        "core-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/mod.rs:PropertyId",
+      "type": "class",
+      "name": "PropertyId",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        358,
+        562
+      ],
+      "summary": "Enum representing any CSS property: NonCustom (longhand/shorthand/alias) or Custom, with parsing, enabled-for-content checks, allowed-in-context validation, and shorthand vs declaration-id disambiguation.",
+      "tags": [
+        "enum",
+        "property-id",
+        "parsing",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/mod.rs:PropertyDeclarationId",
+      "type": "class",
+      "name": "PropertyDeclarationId",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1034,
+        1194
+      ],
+      "summary": "Enum identifying a property declaration as either a Longhand or a Custom property, with methods for flags, logical-to-physical mapping, animatability, and Gecko FFI conversions.",
+      "tags": [
+        "enum",
+        "declaration-id",
+        "property-lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/mod.rs:OwnedPropertyDeclarationId",
+      "type": "class",
+      "name": "OwnedPropertyDeclarationId",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        997,
+        1030
+      ],
+      "summary": "Owned version of PropertyDeclarationId suitable for use as a hash map key, with conversion to borrowed form and from Gecko CSSPropertyId.",
+      "tags": [
+        "enum",
+        "owned-id",
+        "hash-map-key"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:LonghandIdSet",
+      "type": "class",
+      "name": "LonghandIdSet",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1226,
+        1320
+      ],
+      "summary": "Fixed-size bit set for LonghandId values backed by a u32 array, supporting insert/remove/contains, subset/superset checks with contains_all/contains_any, and iteration via LonghandIdSetIterator.",
+      "tags": [
+        "bitset",
+        "longhand-set",
+        "efficient-lookup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/mod.rs:NonCustomPropertyIdSet",
+      "type": "class",
+      "name": "NonCustomPropertyIdSet",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1197,
+        1223
+      ],
+      "summary": "Fixed-size bit set for NonCustomPropertyId values, providing insert and contains operations.",
+      "tags": [
+        "bitset",
+        "property-set",
+        "lookup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:SourcePropertyDeclaration",
+      "type": "class",
+      "name": "SourcePropertyDeclaration",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1366,
+        1413
+      ],
+      "summary": "Stack-allocated vector large enough to hold the expansion of one CSS shorthand, with a separate slot for the all shorthand, and drain/clear/push/is_empty operations.",
+      "tags": [
+        "stack-allocated",
+        "shorthand-expansion",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:UnparsedValue",
+      "type": "class",
+      "name": "UnparsedValue",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1425,
+        1593
+      ],
+      "summary": "Holds an unparsed CSS property value containing var() references and an optional shorthand source, providing variable substitution with caching, fallback to initial/inherit on invalid state, and CSS serialization.",
+      "tags": [
+        "css-variables",
+        "substitution",
+        "caching",
+        "var"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/mod.rs:WideKeywordDeclaration",
+      "type": "class",
+      "name": "WideKeywordDeclaration",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        152,
+        166
+      ],
+      "summary": "A property declaration using a CSS-wide keyword, with a longhand ID and the keyword value, convertible to TypedValue.",
+      "tags": [
+        "declaration",
+        "css-wide-keyword"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:VariableDeclaration",
+      "type": "class",
+      "name": "VariableDeclaration",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        169,
+        177
+      ],
+      "summary": "An unparsed property declaration that contains var() function references, carrying a longhand ID and the unparsed value in an Arc.",
+      "tags": [
+        "declaration",
+        "css-variables",
+        "unparsed"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:CustomDeclaration",
+      "type": "class",
+      "name": "CustomDeclaration",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        192,
+        201
+      ],
+      "summary": "A custom property (CSS variable) declaration with the property name and the declared value (unparsed, parsed, or CSS-wide keyword).",
+      "tags": [
+        "css-variables",
+        "custom-property",
+        "declaration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:CustomDeclarationValue",
+      "type": "class",
+      "name": "CustomDeclarationValue",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        182,
+        189
+      ],
+      "summary": "Enum of possible custom property declaration values: unparsed value, already-parsed @property value, or CSS-wide keyword.",
+      "tags": [
+        "enum",
+        "css-variables",
+        "custom-property-value"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:AllShorthand",
+      "type": "class",
+      "name": "AllShorthand",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1595,
+        1619
+      ],
+      "summary": "Enum tracking whether the CSS all shorthand was specified and in what form (not set, CSS-wide keyword, or with var() references), with a declarations() iterator.",
+      "tags": [
+        "enum",
+        "all-shorthand",
+        "css-universal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/mod.rs:TransitionPropertyIterator",
+      "type": "class",
+      "name": "TransitionPropertyIterator",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1671,
+        1741
+      ],
+      "summary": "Iterator over transition properties in a ComputedValues style, handling shorthand expansion and providing longhand-level iteration with index tracking.",
+      "tags": [
+        "iterator",
+        "transitions",
+        "property-enumeration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/mod.rs:TransitionPropertyIteration",
+      "type": "class",
+      "name": "TransitionPropertyIteration",
+      "filePath": "style/properties/mod.rs",
+      "lineRange": [
+        1689,
+        1695
+      ],
+      "summary": "Single transition property iteration result carrying the owned property declaration ID and its index in the transition property list.",
+      "tags": [
+        "iteration-result",
+        "transitions"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "file:style/properties/cascade.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "file:style/properties/declaration_block.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "file:style/properties/shorthands.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "function:style/properties/cascade.rs:cascade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "function:style/properties/cascade.rs:apply_declarations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "class:style/properties/cascade.rs:FirstLineReparenting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "class:style/properties/cascade.rs:CascadeMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "function:style/properties/cascade.rs:cascade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "function:style/properties/cascade.rs:apply_declarations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "class:style/properties/cascade.rs:FirstLineReparenting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/cascade.rs",
+      "target": "class:style/properties/cascade.rs:CascadeMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_style_attribute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_one_declaration_into",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_property_declaration_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:append_serialization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:PropertyDeclarationBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:Importance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:DeclarationImportanceIterator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:AnimationValueIterator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:PropertyDeclarationIdSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:AnimationDeclarations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_style_attribute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_one_declaration_into",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:parse_property_declaration_list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "function:style/properties/declaration_block.rs:append_serialization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:PropertyDeclarationBlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:Importance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:DeclarationImportanceIterator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:AnimationValueIterator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:PropertyDeclarationIdSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/declaration_block.rs",
+      "target": "class:style/properties/declaration_block.rs:AnimationDeclarations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "function:style/properties/mod.rs:enabled_arbitrary_substitution_functions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CSSWideKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:NonCustomPropertyId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyDeclarationId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:OwnedPropertyDeclarationId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:LonghandIdSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:NonCustomPropertyIdSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:SourcePropertyDeclaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:UnparsedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:WideKeywordDeclaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:VariableDeclaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CustomDeclaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CustomDeclarationValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:AllShorthand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:TransitionPropertyIterator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:TransitionPropertyIteration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "function:style/properties/mod.rs:enabled_arbitrary_substitution_functions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CSSWideKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:NonCustomPropertyId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:PropertyDeclarationId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:OwnedPropertyDeclarationId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:LonghandIdSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:NonCustomPropertyIdSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:SourcePropertyDeclaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:UnparsedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:WideKeywordDeclaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:VariableDeclaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CustomDeclaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:CustomDeclarationValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:AllShorthand",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:TransitionPropertyIterator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/mod.rs",
+      "target": "class:style/properties/mod.rs:TransitionPropertyIteration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

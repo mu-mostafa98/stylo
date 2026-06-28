@@ -1,0 +1,1491 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/properties_and_values/syntax/data_type.rs",
+      "type": "file",
+      "name": "data_type.rs",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "summary": "Defines the DataType enum representing all supported CSS data types in @property syntax descriptors, with parsing, serialization, and dependency tracking.",
+      "tags": [
+        "data-type",
+        "css-values",
+        "syntax-parsing"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses bitflags for DependentDataTypes to track which dependent properties (length, color) a syntax descriptor may reference."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/data_type.rs:DependentDataTypes",
+      "type": "class",
+      "name": "DependentDataTypes",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        14,
+        14
+      ],
+      "tags": [
+        "bitflags",
+        "dependency",
+        "data-types"
+      ],
+      "complexity": "simple",
+      "summary": "Bitflags tracking which dependent data types (length, color) a syntax descriptor may reference for computation."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/data_type.rs:DataType",
+      "type": "class",
+      "name": "DataType",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        26,
+        61
+      ],
+      "tags": [
+        "enum",
+        "data-types",
+        "css-values"
+      ],
+      "complexity": "moderate",
+      "summary": "Enum of all supported CSS data types for @property syntax descriptors, including length, number, color, image, transform, and string."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/data_type.rs:unpremultiply",
+      "type": "function",
+      "name": "unpremultiply",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        67,
+        75
+      ],
+      "tags": [
+        "utility",
+        "syntax-component"
+      ],
+      "complexity": "simple",
+      "summary": "Converts a pre-multiplied data type (TransformList) to its un-premultiplied equivalent component."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/data_type.rs:from_str",
+      "type": "function",
+      "name": "from_str",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        78,
+        97
+      ],
+      "tags": [
+        "parsing",
+        "data-types"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses a data type name string to the corresponding DataType enum variant."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/data_type.rs:dependent_types",
+      "type": "function",
+      "name": "dependent_types",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        100,
+        118
+      ],
+      "tags": [
+        "dependency-analysis",
+        "data-types"
+      ],
+      "complexity": "simple",
+      "summary": "Returns which dependent data types (length, color) a given data type may reference."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/data_type.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/properties_and_values/syntax/data_type.rs",
+      "lineRange": [
+        122,
+        145
+      ],
+      "tags": [
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate",
+      "summary": "Serializes a DataType to its CSS syntax representation (e.g. <length>, <color>)."
+    },
+    {
+      "id": "file:style/properties_and_values/syntax/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "summary": "Parses and serializes @property syntax descriptor strings per the CSS Properties and Values API grammar, with support for data type names, custom idents, and space/comma multipliers.",
+      "tags": [
+        "syntax-parser",
+        "css-houdini",
+        "descriptor",
+        "parsing"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Contains a custom character-level recursive parser for syntax descriptor grammar, implementing the full spec algorithm from CSS Properties and Values API."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/mod.rs:Descriptor",
+      "type": "class",
+      "name": "Descriptor",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        28,
+        34
+      ],
+      "tags": [
+        "syntax-descriptor",
+        "parsing",
+        "data-model"
+      ],
+      "complexity": "simple",
+      "summary": "A parsed @property syntax descriptor containing a list of syntax components with methods for parsing, serialization, and dependent type analysis."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/mod.rs:Multiplier",
+      "type": "class",
+      "name": "Multiplier",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        244,
+        249
+      ],
+      "tags": [
+        "enum",
+        "multiplier",
+        "syntax"
+      ],
+      "complexity": "simple",
+      "summary": "Enum representing space or comma multipliers for syntax component lists."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/mod.rs:Component",
+      "type": "class",
+      "name": "Component",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        265,
+        268
+      ],
+      "tags": [
+        "syntax-component",
+        "data-model"
+      ],
+      "complexity": "simple",
+      "summary": "A single syntax component with a name (data type or custom ident) and optional multiplier."
+    },
+    {
+      "id": "class:style/properties_and_values/syntax/mod.rs:ComponentName",
+      "type": "class",
+      "name": "ComponentName",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        311,
+        316
+      ],
+      "tags": [
+        "enum",
+        "component-name",
+        "syntax"
+      ],
+      "complexity": "simple",
+      "summary": "Enum representing a syntax component name, either a data type (e.g. <length>) or a custom ident."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:universal",
+      "type": "function",
+      "name": "universal",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        38,
+        43
+      ],
+      "tags": [
+        "factory",
+        "syntax-descriptor"
+      ],
+      "complexity": "simple",
+      "summary": "Creates the universal syntax descriptor (matches any value)."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:is_universal",
+      "type": "function",
+      "name": "is_universal",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        47,
+        49
+      ],
+      "tags": [
+        "getter",
+        "syntax-descriptor"
+      ],
+      "complexity": "simple",
+      "summary": "Checks whether this descriptor is the universal syntax definition."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:specified_string",
+      "type": "function",
+      "name": "specified_string",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        53,
+        55
+      ],
+      "tags": [
+        "getter",
+        "syntax-descriptor"
+      ],
+      "complexity": "simple",
+      "summary": "Returns the original specified syntax string if one was saved."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:from_css_parser",
+      "type": "function",
+      "name": "from_css_parser",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        60,
+        102
+      ],
+      "tags": [
+        "parsing",
+        "syntax-descriptor"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses a syntax descriptor from a CSS parser token stream."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:try_parse_multiplier",
+      "type": "function",
+      "name": "try_parse_multiplier",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        104,
+        115
+      ],
+      "tags": [
+        "parsing",
+        "multiplier"
+      ],
+      "complexity": "simple",
+      "summary": "Attempts to parse a space (+) or comma (#) multiplier from the CSS parser."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:try_parse_component_name",
+      "type": "function",
+      "name": "try_parse_component_name",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        117,
+        132
+      ],
+      "tags": [
+        "parsing",
+        "component-name"
+      ],
+      "complexity": "simple",
+      "summary": "Attempts to parse a syntax component name, either a data type or custom ident."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:from_str",
+      "type": "function",
+      "name": "from_str",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        146,
+        186
+      ],
+      "tags": [
+        "parsing",
+        "syntax-descriptor"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses a syntax descriptor from a string, implementing the spec algorithm for consuming a syntax definition."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:dependent_types",
+      "type": "function",
+      "name": "dependent_types",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        189,
+        199
+      ],
+      "tags": [
+        "dependency-analysis",
+        "syntax-descriptor"
+      ],
+      "complexity": "simple",
+      "summary": "Returns bitflags of dependent data types across all syntax components."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        203,
+        225
+      ],
+      "tags": [
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate",
+      "summary": "Serializes the syntax descriptor to CSS, using the specified string if available."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:name",
+      "type": "function",
+      "name": "name",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        273,
+        275
+      ],
+      "tags": [
+        "getter",
+        "syntax-component"
+      ],
+      "complexity": "simple",
+      "summary": "Returns the syntax component name reference."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:multiplier",
+      "type": "function",
+      "name": "multiplier",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        279,
+        281
+      ],
+      "tags": [
+        "getter",
+        "syntax-component"
+      ],
+      "complexity": "simple",
+      "summary": "Returns the optional multiplier for the syntax component."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:unpremultiplied",
+      "type": "function",
+      "name": "unpremultiplied",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        285,
+        296
+      ],
+      "tags": [
+        "utility",
+        "syntax-component"
+      ],
+      "complexity": "simple",
+      "summary": "Returns the un-premultiplied component, resolving type names like transform-list."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        351,
+        369
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "simple",
+      "summary": "Internal recursive parser that iterates syntax components separated by pipes."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:parse_data_type_name",
+      "type": "function",
+      "name": "parse_data_type_name",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        381,
+        399
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "simple",
+      "summary": "Character-level parsing of a data type name within angle brackets."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:parse_name",
+      "type": "function",
+      "name": "parse_name",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        401,
+        421
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "moderate",
+      "summary": "Character-level parsing of a component name (data type or custom ident)."
+    },
+    {
+      "id": "function:style/properties_and_values/syntax/mod.rs:parse_component",
+      "type": "function",
+      "name": "parse_component",
+      "filePath": "style/properties_and_values/syntax/mod.rs",
+      "lineRange": [
+        434,
+        444
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "simple",
+      "summary": "Parses a single syntax component including optional multiplier."
+    },
+    {
+      "id": "file:style/properties_and_values/value.rs",
+      "type": "file",
+      "name": "value.rs",
+      "filePath": "style/properties_and_values/value.rs",
+      "summary": "Defines generic value types for registered custom property values, including parsing, computation, animation, and serialization for both specified and computed value domains.",
+      "tags": [
+        "value-types",
+        "custom-properties",
+        "parsing",
+        "computation",
+        "animation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Heavily generic with 12 type parameters on GenericValueComponent, supporting all CSS data types (length, color, transform, string, etc.) via type-level abstraction."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:GenericValueComponent",
+      "type": "class",
+      "name": "GenericValueComponent",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        100,
+        150
+      ],
+      "tags": [
+        "generic-enum",
+        "value-component",
+        "css-types"
+      ],
+      "complexity": "complex",
+      "summary": "Generic enum with 12 type parameters representing a single value component of a registered custom property, supporting all CSS data types."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:ComponentList",
+      "type": "class",
+      "name": "ComponentList",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        154,
+        159
+      ],
+      "tags": [
+        "value-list",
+        "multiplier"
+      ],
+      "complexity": "simple",
+      "summary": "A list of value components with an associated multiplier (space or comma separated)."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:Value",
+      "type": "class",
+      "name": "Value",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        207,
+        217
+      ],
+      "tags": [
+        "value-wrapper",
+        "custom-property"
+      ],
+      "complexity": "simple",
+      "summary": "A registered custom property value that preserves its URL data for recomputation and attr taint flag for security."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:ValueInner",
+      "type": "class",
+      "name": "ValueInner",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        295,
+        304
+      ],
+      "tags": [
+        "enum",
+        "value-inner"
+      ],
+      "complexity": "simple",
+      "summary": "Enum representing the inner value of a registered custom property: single component, universal value, or list."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:AllowComputationallyDependent",
+      "type": "class",
+      "name": "AllowComputationallyDependent",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        407,
+        412
+      ],
+      "tags": [
+        "enum",
+        "parsing-mode"
+      ],
+      "complexity": "simple",
+      "summary": "Enum controlling whether computationally dependent values (like 3em or var()) are permitted during parsing."
+    },
+    {
+      "id": "class:style/properties_and_values/value.rs:CustomAnimatedValue",
+      "type": "class",
+      "name": "CustomAnimatedValue",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        622,
+        628
+      ],
+      "tags": [
+        "animation",
+        "custom-property"
+      ],
+      "complexity": "simple",
+      "summary": "An animated custom property value that tracks the property name and supports construction from computed values or declarations."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:serialization_types",
+      "type": "function",
+      "name": "serialization_types",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        71,
+        92
+      ],
+      "tags": [
+        "serialization",
+        "css-tokens"
+      ],
+      "complexity": "moderate",
+      "summary": "Determines CSS token serialization types (dimension, number, percentage, etc.) for a GenericValueComponent."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:animate",
+      "type": "function",
+      "name": "animate",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        162,
+        175
+      ],
+      "tags": [
+        "animation",
+        "interpolation"
+      ],
+      "complexity": "simple",
+      "summary": "Animates a ComponentList by interpolating component values with the same multiplier."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        179,
+        201
+      ],
+      "tags": [
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate",
+      "summary": "Serializes a ComponentList to CSS with appropriate space or comma separators."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        239,
+        245
+      ],
+      "tags": [
+        "constructor",
+        "value-type"
+      ],
+      "complexity": "simple",
+      "summary": "Constructs a new Value with the given inner value and URL data."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:universal",
+      "type": "function",
+      "name": "universal",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        248,
+        257
+      ],
+      "tags": [
+        "constructor",
+        "universal-value"
+      ],
+      "complexity": "simple",
+      "summary": "Creates a universal Value from an untyped variable value, preserving attr taint."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:serialization_types_l265",
+      "type": "function",
+      "name": "serialization_types_l265",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        265,
+        274
+      ],
+      "tags": [
+        "serialization",
+        "css-tokens"
+      ],
+      "complexity": "simple",
+      "summary": "Delegates serialization type determination to the inner value component or list."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:to_variable_value",
+      "type": "function",
+      "name": "to_variable_value",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        277,
+        288
+      ],
+      "tags": [
+        "conversion",
+        "serialization"
+      ],
+      "complexity": "simple",
+      "summary": "Converts a typed registered value to an untyped variable value for CSSOM serialization."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:compute",
+      "type": "function",
+      "name": "compute",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        315,
+        340
+      ],
+      "tags": [
+        "computation",
+        "value-conversion"
+      ],
+      "complexity": "moderate",
+      "summary": "Computes a registered custom property value from specified to computed form using a property registration."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        344,
+        380
+      ],
+      "tags": [
+        "parsing",
+        "value-parsing",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses and validates a registered custom property value according to its syntax descriptor."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:as_universal",
+      "type": "function",
+      "name": "as_universal",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        394,
+        400
+      ],
+      "tags": [
+        "accessor",
+        "universal-value"
+      ],
+      "complexity": "simple",
+      "summary": "Returns the contained universal variable value if present, otherwise None."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:new::syntax",
+      "type": "function",
+      "name": "new::syntax",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        423,
+        433
+      ],
+      "tags": [
+        "constructor",
+        "parser"
+      ],
+      "complexity": "simple",
+      "summary": "Creates a new Parser instance for parsing custom property values."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:parse::input",
+      "type": "function",
+      "name": "parse::input",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        435,
+        473
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses custom property value components against syntax descriptor components."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:parse_value",
+      "type": "function",
+      "name": "parse_value",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        475,
+        498
+      ],
+      "tags": [
+        "parsing",
+        "internal"
+      ],
+      "complexity": "moderate",
+      "summary": "Parses one or more value components for a syntax component with optional multiplier."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:parse_component_without_multiplier",
+      "type": "function",
+      "name": "parse_component_without_multiplier",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        500,
+        590
+      ],
+      "tags": [
+        "parsing",
+        "data-types"
+      ],
+      "complexity": "complex",
+      "summary": "Parses a single syntax component value (length, color, transform, etc.) without multiplier handling."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:expect_multiplier",
+      "type": "function",
+      "name": "expect_multiplier",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        602,
+        617
+      ],
+      "tags": [
+        "parsing",
+        "multiplier"
+      ],
+      "complexity": "simple",
+      "summary": "Expects and consumes a multiplier separator (whitespace or comma) from the CSS token stream."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:animate::other",
+      "type": "function",
+      "name": "animate::other",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        631,
+        640
+      ],
+      "tags": [
+        "animation",
+        "interpolation"
+      ],
+      "complexity": "simple",
+      "summary": "Interpolates two CustomAnimatedValues with the same property name."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:from_computed",
+      "type": "function",
+      "name": "from_computed",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        644,
+        652
+      ],
+      "tags": [
+        "constructor",
+        "animation"
+      ],
+      "complexity": "simple",
+      "summary": "Constructs a CustomAnimatedValue from a computed value."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:from_declaration",
+      "type": "function",
+      "name": "from_declaration",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        654,
+        739
+      ],
+      "tags": [
+        "constructor",
+        "conversion",
+        "animation"
+      ],
+      "complexity": "complex",
+      "summary": "Constructs a CustomAnimatedValue from a property declaration, handling CSS-wide keywords and unparsed values."
+    },
+    {
+      "id": "function:style/properties_and_values/value.rs:to_declaration",
+      "type": "function",
+      "name": "to_declaration",
+      "filePath": "style/properties_and_values/value.rs",
+      "lineRange": [
+        741,
+        749
+      ],
+      "tags": [
+        "conversion",
+        "property-declaration"
+      ],
+      "complexity": "simple",
+      "summary": "Converts an animated value back to a PropertyDeclaration."
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "class:style/properties_and_values/syntax/data_type.rs:DependentDataTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "class:style/properties_and_values/syntax/data_type.rs:DataType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:unpremultiply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:from_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:dependent_types",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "class:style/properties_and_values/syntax/data_type.rs:DependentDataTypes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "class:style/properties_and_values/syntax/data_type.rs:DataType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:unpremultiply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:from_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/data_type.rs",
+      "target": "function:style/properties_and_values/syntax/data_type.rs:dependent_types",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Multiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Component",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:ComponentName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:universal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:is_universal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:specified_string",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:from_css_parser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:try_parse_multiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:try_parse_component_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:from_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:dependent_types",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:multiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:unpremultiplied",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:parse_data_type_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:parse_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:parse_component",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Multiplier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:Component",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "class:style/properties_and_values/syntax/mod.rs:ComponentName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:universal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:is_universal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:specified_string",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:from_css_parser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:from_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:dependent_types",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:multiplier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "function:style/properties_and_values/syntax/mod.rs:unpremultiplied",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "file:style/properties_and_values/syntax/ascii.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties_and_values/syntax/mod.rs",
+      "target": "file:style/properties_and_values/syntax/data_type.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:GenericValueComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:ComponentList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:Value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:ValueInner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:AllowComputationallyDependent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:CustomAnimatedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:serialization_types",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:universal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:serialization_types_l265",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:to_variable_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:as_universal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:new::syntax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse::input",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse_component_without_multiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:expect_multiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:animate::other",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:from_computed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:from_declaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:to_declaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:GenericValueComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:ComponentList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:Value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:ValueInner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:AllowComputationallyDependent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "class:style/properties_and_values/value.rs:CustomAnimatedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:universal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:to_variable_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:as_universal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:new::syntax",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:parse::input",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:from_computed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:from_declaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties_and_values/value.rs",
+      "target": "function:style/properties_and_values/value.rs:to_declaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

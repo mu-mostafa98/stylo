@@ -1,0 +1,999 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/gecko/arc_types.rs",
+      "type": "file",
+      "name": "arc_types.rs",
+      "filePath": "style/gecko/arc_types.rs",
+      "summary": "Defines Gecko FFI atomic reference-counted pointer types (RefPtr, AlreadyAddRefed) via the gecko_arc_types macro for use in Servo style system.",
+      "tags": [
+        "type-definition",
+        "ffi",
+        "memory-management"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses Rust atomics and macro-generated wrapped pointer types for safe FFI interop with Gecko."
+    },
+    {
+      "id": "file:style/gecko/conversions.rs",
+      "type": "file",
+      "name": "conversions.rs",
+      "filePath": "style/gecko/conversions.rs",
+      "summary": "Converts between Servo's internal CSS matrix types and Gecko's matrix representation, bridging the two style engines.",
+      "tags": [
+        "conversion",
+        "ffi",
+        "matrix"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko/conversions.rs:from",
+      "type": "function",
+      "name": "from",
+      "filePath": "style/gecko/conversions.rs",
+      "summary": "Converts a Gecko nsStyleTransformMatrix to Servo's Matrix4D representation, handling 3D transform decomposition.",
+      "tags": [
+        "conversion",
+        "matrix",
+        "transform"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        29,
+        48
+      ]
+    },
+    {
+      "id": "file:style/gecko/data.rs",
+      "type": "file",
+      "name": "data.rs",
+      "filePath": "style/gecko/data.rs",
+      "summary": "Provides Gecko-style sheet wrappers (GeckoStyleSheet) and per-document style data containers for managing stylesheet ownership and style flushing.",
+      "tags": [
+        "stylesheet",
+        "data-model",
+        "document"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/gecko/data.rs:GeckoStyleSheet",
+      "type": "class",
+      "name": "GeckoStyleSheet",
+      "filePath": "style/gecko/data.rs",
+      "summary": "Wraps a raw Gecko raw-stylesheet pointer, providing safe Rust access to stylesheet origin, media, contents, and implicit scope root.",
+      "tags": [
+        "stylesheet",
+        "ffi",
+        "wrapper"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        30,
+        30
+      ]
+    },
+    {
+      "id": "class:style/gecko/data.rs:PerDocumentStyleDataImpl",
+      "type": "class",
+      "name": "PerDocumentStyleDataImpl",
+      "filePath": "style/gecko/data.rs",
+      "summary": "Holds the Stylist, undisplayed styles cache, and per-document style data, with methods for stylesheet flushing and memory reporting.",
+      "tags": [
+        "document",
+        "style-data",
+        "stylist"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        159,
+        168
+      ]
+    },
+    {
+      "id": "class:style/gecko/data.rs:PerDocumentStyleData",
+      "type": "class",
+      "name": "PerDocumentStyleData",
+      "filePath": "style/gecko/data.rs",
+      "summary": "AtomicRefCell wrapper around PerDocumentStyleDataImpl providing interior mutability for concurrent style access.",
+      "tags": [
+        "concurrency",
+        "wrapper",
+        "document"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        173,
+        173
+      ]
+    },
+    {
+      "id": "function:style/gecko/data.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/gecko/data.rs",
+      "summary": "Creates a new PerDocumentStyleData from a Device, initializing the Stylist and default values.",
+      "tags": [
+        "constructor",
+        "document"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        177,
+        186
+      ]
+    },
+    {
+      "id": "function:style/gecko/data.rs:implicit_scope_root",
+      "type": "function",
+      "name": "implicit_scope_root",
+      "filePath": "style/gecko/data.rs",
+      "summary": "Determines the implicit scope root of a stylesheet based on shadow host or shadow tree membership.",
+      "tags": [
+        "stylesheet",
+        "shadow-dom",
+        "scoping"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        130,
+        154
+      ]
+    },
+    {
+      "id": "file:style/gecko/media_features.rs",
+      "type": "file",
+      "name": "media_features.rs",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Implements CSS media feature evaluation for Gecko, covering viewport dimensions, display mode, color, pointer, HDR, accessibility preferences, and platform-specific queries.",
+      "tags": [
+        "media-query",
+        "css",
+        "feature-detection"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:DisplayMode",
+      "type": "class",
+      "name": "DisplayMode",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing the display modes: Browser, MinimalUi, Standalone, Fullscreen, PictureInPicture.",
+      "tags": [
+        "enum",
+        "display-mode",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        90,
+        97
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:ColorGamut",
+      "type": "class",
+      "name": "ColorGamut",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing color gamut capabilities: Srgb, P3, Rec2020.",
+      "tags": [
+        "enum",
+        "color",
+        "display"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        159,
+        166
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:DynamicRange",
+      "type": "class",
+      "name": "DynamicRange",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing dynamic range: Standard, High.",
+      "tags": [
+        "enum",
+        "hdr",
+        "display"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        208,
+        211
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:PrefersContrast",
+      "type": "class",
+      "name": "PrefersContrast",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing prefers-contrast media feature values: More, Less, Custom, NoPreference.",
+      "tags": [
+        "enum",
+        "accessibility",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        254,
+        263
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:Platform",
+      "type": "class",
+      "name": "Platform",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum identifying the target platform: Android, Linux, Ios, Macos, Windows.",
+      "tags": [
+        "enum",
+        "platform",
+        "os"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        546,
+        560
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:GtkThemeFamily",
+      "type": "class",
+      "name": "GtkThemeFamily",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing detected GTK theme family: Unknown, Adwaita, Breeze, Yaru.",
+      "tags": [
+        "enum",
+        "theme",
+        "gtk"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        574,
+        583
+      ]
+    },
+    {
+      "id": "class:style/gecko/media_features.rs:Scripting",
+      "type": "class",
+      "name": "Scripting",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Enum representing scripting capability: None, InitialOnly, Enabled.",
+      "tags": [
+        "enum",
+        "scripting",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        597,
+        607
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:device_size",
+      "type": "function",
+      "name": "device_size",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Retrieves the device viewport size via FFI and returns it as CSS pixel dimensions.",
+      "tags": [
+        "ffi",
+        "viewport",
+        "media-query"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        20,
+        27
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_display_mode",
+      "type": "function",
+      "name": "eval_display_mode",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates the display-mode media feature against Gecko's current display state.",
+      "tags": [
+        "media-query",
+        "display-mode",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        100,
+        109
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_color_gamut",
+      "type": "function",
+      "name": "eval_color_gamut",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates the color-gamut media feature by querying Gecko for screen color capabilities.",
+      "tags": [
+        "media-query",
+        "color-gamut",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        169,
+        178
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_prefers_reduced_motion",
+      "type": "function",
+      "name": "eval_prefers_reduced_motion",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates the prefers-reduced-motion accessibility media feature.",
+      "tags": [
+        "accessibility",
+        "media-query",
+        "prefers-reduced-motion"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        214,
+        229
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_prefers_reduced_transparency",
+      "type": "function",
+      "name": "eval_prefers_reduced_transparency",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates the prefers-reduced-transparency accessibility media feature.",
+      "tags": [
+        "accessibility",
+        "media-query",
+        "prefers-reduced-transparency"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        232,
+        248
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_overflow_block",
+      "type": "function",
+      "name": "eval_overflow_block",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates the overflow-block media feature based on print mode and viewport behavior.",
+      "tags": [
+        "media-query",
+        "overflow",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        319,
+        338
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_pointer_capabilities",
+      "type": "function",
+      "name": "eval_pointer_capabilities",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates pointer capabilities (fine/coarse/none) from Gecko pointer capability bitfield.",
+      "tags": [
+        "media-query",
+        "pointer",
+        "input"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        464,
+        478
+      ]
+    },
+    {
+      "id": "function:style/gecko/media_features.rs:eval_hover_capabilities",
+      "type": "function",
+      "name": "eval_hover_capabilities",
+      "filePath": "style/gecko/media_features.rs",
+      "summary": "Evaluates hover capabilities from Gecko pointer capability bitfield.",
+      "tags": [
+        "media-query",
+        "hover",
+        "input"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        497,
+        511
+      ]
+    },
+    {
+      "id": "file:style/gecko/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/gecko/mod.rs",
+      "summary": "Module root for style::gecko, re-exporting all submodules (arc_types, data, media_features, pseudo_element, snapshot, wrapper, etc.) as the public API surface for Gecko integration.",
+      "tags": [
+        "module-root",
+        "barrel",
+        "re-exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko/non_ts_pseudo_class_list.rs",
+      "type": "file",
+      "name": "non_ts_pseudo_class_list.rs",
+      "filePath": "style/gecko/non_ts_pseudo_class_list.rs",
+      "summary": "Macro-generated list of non-tree-structural pseudo-class definitions for Gecko, enumerating all supported pseudo-classes with their flags.",
+      "tags": [
+        "macro-generated",
+        "pseudo-class",
+        "css-selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko/pseudo_element.rs",
+      "type": "file",
+      "name": "pseudo_element.rs",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Defines PseudoElement types and their parsing/serialization for Gecko, including support for named view transitions, highlighting, and anonymous boxes.",
+      "tags": [
+        "pseudo-element",
+        "css",
+        "parsing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/gecko/pseudo_element.rs:Target",
+      "type": "class",
+      "name": "Target",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Enum for pseudo-element target types: Selector (for ::part()) and Cssom.",
+      "tags": [
+        "enum",
+        "pseudo-element",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        75,
+        81
+      ]
+    },
+    {
+      "id": "class:style/gecko/pseudo_element.rs:PtNameAndClassSelector",
+      "type": "class",
+      "name": "PtNameAndClassSelector",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Represents a named view-transition pseudo-element with optional custom class names, with parsing and CSS serialization.",
+      "tags": [
+        "view-transition",
+        "pseudo-element",
+        "css"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        99,
+        99
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Parses a named view transition pseudo-element from CSS selector input, handling name, whitespace, and optional class identifiers.",
+      "tags": [
+        "parsing",
+        "view-transition",
+        "css-selector"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        130,
+        193
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Serializes a view transition pseudo-element back to CSS text with proper ::view-transition syntax.",
+      "tags": [
+        "serialization",
+        "css",
+        "view-transition"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        197,
+        215
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:cascade_type",
+      "type": "function",
+      "name": "cascade_type",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Determines the cascade type (Eager, Precomputed, Lazy) for a pseudo-element based on its flags.",
+      "tags": [
+        "cascade",
+        "pseudo-element",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        284,
+        295
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:specificity_count",
+      "type": "function",
+      "name": "specificity_count",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Returns the specificity contribution of named view transition pseudo-elements with classes.",
+      "tags": [
+        "specificity",
+        "css-cascade",
+        "view-transition"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        434,
+        453
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:parse_ignore_enabled_state",
+      "type": "function",
+      "name": "parse_ignore_enabled_state",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Parses a pseudo-element from CSS input ignoring enabled-state checks, supporting CSS2 legacy and functional pseudo-elements.",
+      "tags": [
+        "parsing",
+        "pseudo-element",
+        "css-parser"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        538,
+        583
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:matches_named_view_transition_pseudo_element",
+      "type": "function",
+      "name": "matches_named_view_transition_pseudo_element",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Checks if a selector matches a specific named view transition pseudo-element by comparing names, classes, and FFI class matching.",
+      "tags": [
+        "selector-matching",
+        "view-transition",
+        "css"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        586,
+        624
+      ]
+    },
+    {
+      "id": "function:style/gecko/pseudo_element.rs:should_exist",
+      "type": "function",
+      "name": "should_exist",
+      "filePath": "style/gecko/pseudo_element.rs",
+      "summary": "Determines whether a pseudo-element should exist for a given style based on its display and content property values.",
+      "tags": [
+        "pseudo-element",
+        "css-style",
+        "validation"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        521,
+        533
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/gecko/conversions.rs",
+      "target": "function:style/gecko/conversions.rs:from",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:GeckoStyleSheet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:PerDocumentStyleDataImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:PerDocumentStyleData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "function:style/gecko/data.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "function:style/gecko/data.rs:implicit_scope_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:GeckoStyleSheet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:PerDocumentStyleDataImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "class:style/gecko/data.rs:PerDocumentStyleData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/data.rs",
+      "target": "function:style/gecko/data.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:DisplayMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:ColorGamut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:DynamicRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:PrefersContrast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:Platform",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:GtkThemeFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:Scripting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:device_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_display_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_color_gamut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_prefers_reduced_motion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_prefers_reduced_transparency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_overflow_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_pointer_capabilities",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "function:style/gecko/media_features.rs:eval_hover_capabilities",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:DisplayMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:ColorGamut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:DynamicRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:PrefersContrast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:Platform",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:GtkThemeFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/media_features.rs",
+      "target": "class:style/gecko/media_features.rs:Scripting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "class:style/gecko/pseudo_element.rs:Target",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "class:style/gecko/pseudo_element.rs:PtNameAndClassSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:cascade_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:specificity_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:parse_ignore_enabled_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:matches_named_view_transition_pseudo_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "function:style/gecko/pseudo_element.rs:should_exist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "class:style/gecko/pseudo_element.rs:Target",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/pseudo_element.rs",
+      "target": "class:style/gecko/pseudo_element.rs:PtNameAndClassSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/arc_types.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/conversions.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/data.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/media_features.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/non_ts_pseudo_class_list.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/pseudo_element.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/restyle_damage.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/selector_parser.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/snapshot_helpers.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/snapshot.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/traversal.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/gecko/wrapper.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/gecko/mod.rs",
+      "target": "file:style/lib.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

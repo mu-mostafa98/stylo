@@ -1,0 +1,617 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/values/computed/list.rs",
+      "language": "rust",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/mod.rs",
+      "language": "rust",
+      "sizeLines": 1079,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/motion.rs",
+      "language": "rust",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/outline.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/page.rs",
+      "language": "rust",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/percentage.rs",
+      "language": "rust",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/position.rs",
+      "language": "rust",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ratio.rs",
+      "language": "rust",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/rect.rs",
+      "language": "rust",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/resolution.rs",
+      "language": "rust",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/svg.rs",
+      "language": "rust",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/table.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/text.rs",
+      "language": "rust",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/time.rs",
+      "language": "rust",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/transform.rs",
+      "language": "rust",
+      "sizeLines": 559,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ui.rs",
+      "language": "rust",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/url.rs",
+      "language": "rust",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/table.rs",
+      "language": "rust",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/values/computed/list.rs": [],
+    "style/values/computed/mod.rs": [
+      "style/values/animated/mod.rs",
+      "style/values/computed/align.rs",
+      "style/values/computed/angle.rs",
+      "style/values/computed/animation.rs",
+      "style/values/computed/background.rs",
+      "style/values/computed/basic_shape.rs",
+      "style/values/computed/border.rs",
+      "style/values/computed/calc.rs",
+      "style/values/computed/color.rs",
+      "style/values/computed/column.rs",
+      "style/values/computed/corner_shape.rs",
+      "style/values/computed/counters.rs",
+      "style/values/computed/easing.rs",
+      "style/values/computed/effects.rs",
+      "style/values/computed/flex.rs",
+      "style/values/computed/font.rs",
+      "style/values/computed/image.rs",
+      "style/values/computed/length_percentage.rs",
+      "style/values/computed/length.rs",
+      "style/values/computed/list.rs",
+      "style/values/computed/motion.rs",
+      "style/values/computed/outline.rs",
+      "style/values/computed/page.rs",
+      "style/values/computed/percentage.rs",
+      "style/values/computed/position.rs",
+      "style/values/computed/ratio.rs",
+      "style/values/computed/rect.rs",
+      "style/values/computed/resolution.rs",
+      "style/values/computed/svg.rs",
+      "style/values/computed/table.rs",
+      "style/values/computed/text.rs",
+      "style/values/computed/time.rs",
+      "style/values/computed/transform.rs",
+      "style/values/computed/ui.rs",
+      "style/values/computed/url.rs",
+      "style/values/generics/grid.rs",
+      "style/values/generics/mod.rs",
+      "style/values/generics/transform.rs",
+      "style/values/specified/mod.rs"
+    ],
+    "style/values/computed/motion.rs": [],
+    "style/values/computed/outline.rs": [],
+    "style/values/computed/page.rs": [],
+    "style/values/computed/percentage.rs": [],
+    "style/values/computed/position.rs": [],
+    "style/values/computed/ratio.rs": [],
+    "style/values/computed/rect.rs": [],
+    "style/values/computed/resolution.rs": [],
+    "style/values/computed/svg.rs": [],
+    "style/values/computed/table.rs": [
+      "style/values/specified/table.rs"
+    ],
+    "style/values/computed/text.rs": [],
+    "style/values/computed/time.rs": [],
+    "style/values/computed/transform.rs": [],
+    "style/values/computed/ui.rs": [],
+    "style/values/computed/url.rs": [],
+    "style/values/specified/table.rs": []
+  },
+  "neighborMap": {
+    "style/values/computed/mod.rs": [
+      {
+        "path": "style/values/animated/mod.rs",
+        "batchIndex": 10,
+        "symbols": [
+          "compare_property_priority",
+          "animate_multiplicative_factor",
+          "Animate",
+          "Procedure",
+          "Context",
+          "ToAnimatedValue",
+          "ToAnimatedZero",
+          "weights"
+        ]
+      },
+      {
+        "path": "style/values/computed/align.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "ComputedJustifyItems",
+          "legacy"
+        ]
+      },
+      {
+        "path": "style/values/computed/angle.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "Angle",
+          "from_radians",
+          "from_degrees",
+          "radians",
+          "radians64",
+          "degrees"
+        ]
+      },
+      {
+        "path": "style/values/computed/animation.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "seconds",
+          "AnimationIterationCount",
+          "one",
+          "normal",
+          "normal"
+        ]
+      },
+      {
+        "path": "style/values/computed/background.rs",
+        "batchIndex": 7,
+        "symbols": []
+      },
+      {
+        "path": "style/values/computed/basic_shape.rs",
+        "batchIndex": 7,
+        "symbols": []
+      },
+      {
+        "path": "style/values/computed/border.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "BorderSideWidth",
+          "medium",
+          "one",
+          "hundred_percent",
+          "zero",
+          "horizontal",
+          "vertical"
+        ]
+      },
+      {
+        "path": "style/values/computed/calc.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "ComputedLeaf",
+          "is_zero_length"
+        ]
+      },
+      {
+        "path": "style/values/computed/color.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "from_color_mix",
+          "resolve_to_absolute"
+        ]
+      },
+      {
+        "path": "style/values/computed/column.rs",
+        "batchIndex": 7,
+        "symbols": []
+      },
+      {
+        "path": "style/values/computed/corner_shape.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "CornerShape",
+          "round",
+          "bevel",
+          "square",
+          "notch",
+          "scoop",
+          "squircle",
+          "is_round",
+          "round_all"
+        ]
+      },
+      {
+        "path": "style/values/computed/counters.rs",
+        "batchIndex": 7,
+        "symbols": []
+      },
+      {
+        "path": "style/values/computed/easing.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "calculate_output"
+        ]
+      },
+      {
+        "path": "style/values/computed/effects.rs",
+        "batchIndex": 7,
+        "symbols": []
+      },
+      {
+        "path": "style/values/computed/flex.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "auto"
+        ]
+      },
+      {
+        "path": "style/values/computed/font.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "FixedPoint",
+          "from_float",
+          "to_float",
+          "FontWeight",
+          "normal",
+          "is_bold",
+          "value",
+          "from_float",
+          "bolder",
+          "lighter",
+          "FontSize",
+          "computed_size",
+          "used_size",
+          "zoom",
+          "medium",
+          "FontFamily",
+          "serif",
+          "moz_bullet",
+          "for_system_font",
+          "generic",
+          "FamilyName",
+          "FontFamilyNameSyntax",
+          "SingleFontFamily",
+          "GenericFontFamily",
+          "valid_for_user_font_prioritization",
+          "FontFamilyList",
+          "iter",
+          "prioritize_first_generic_or_prepend",
+          "needs_user_font_prioritization",
+          "single_generic",
+          "none",
+          "FontLanguageOverride",
+          "normal",
+          "to_str",
+          "from_u32",
+          "FontStyle",
+          "normal",
+          "oblique",
+          "oblique_degrees",
+          "FontStretch",
+          "hundred",
+          "to_percentage",
+          "from_percentage",
+          "from_keyword",
+          "as_keyword"
+        ]
+      },
+      {
+        "path": "style/values/computed/image.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "LineDirection"
+        ]
+      },
+      {
+        "path": "style/values/computed/length_percentage.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "LengthPercentageTag",
+          "LengthPercentage",
+          "Unpacked",
+          "one",
+          "zero_percent",
+          "hundred_percent",
+          "new_length",
+          "new_percent",
+          "hundred_percent_minus",
+          "hundred_percent_minus_list",
+          "new_calc",
+          "unpack",
+          "resolve",
+          "percentage_relative_to",
+          "has_percentage",
+          "to_length",
+          "to_percentage",
+          "to_percentage_of",
+          "to_used_value",
+          "to_pixel_length",
+          "maybe_to_used_value",
+          "maybe_percentage_relative_to",
+          "CalcLengthPercentage",
+          "CalcLengthPercentageResolution",
+          "AllowAnchorPosResolutionInCalcPercentage",
+          "to_axis",
+          "resolve",
+          "resolve_anchor",
+          "to_computed_value_zoomed",
+          "to_computed_pixel_length_without_context",
+          "to_computed_pixel_length_with_font_metrics",
+          "to_computed_value",
+          "to_used_value",
+          "maybe_to_used_value"
+        ]
+      },
+      {
+        "path": "style/values/computed/length.rs",
+        "batchIndex": 7,
+        "symbols": [
+          "clamp_to_non_negative",
+          "as_ref",
+          "percentage_relative_to",
+          "maybe_percentage_relative_to",
+          "CSSPixelLength",
+          "new",
+          "normalized",
+          "finite",
+          "scale_by",
+          "px",
+          "zoom",
+          "to_i32_au",
+          "abs",
+          "clamp_to_non_negative",
+          "min",
+          "max",
+          "max_assign",
+          "clamp_between_extremums",
+          "clamp_below_max",
+          "new",
+          "px",
+          "clamp",
+          "resolve_anchor_size"
+        ]
+      },
+      {
+        "path": "style/values/generics/grid.rs",
+        "batchIndex": 2,
+        "symbols": [
+          "GenericGridLine",
+          "auto",
+          "is_auto",
+          "is_ident_only",
+          "can_omit",
+          "Flex",
+          "GenericTrackBreadth",
+          "is_fixed",
+          "GenericTrackSize",
+          "initial_value",
+          "is_initial",
+          "is_fixed",
+          "GenericImplicitGridTracks",
+          "is_initial",
+          "concat_serialize_idents",
+          "RepeatCount",
+          "GenericTrackRepeat",
+          "GenericTrackListValue",
+          "is_initial",
+          "GenericTrackList",
+          "is_explicit",
+          "has_auto_repeat",
+          "GenericNameRepeat",
+          "is_auto_fill",
+          "GenericLineNameListValue",
+          "GenericLineNameList",
+          "GenericGridTemplateComponent",
+          "track_list_len",
+          "is_initial"
+        ]
+      },
+      {
+        "path": "style/values/generics/mod.rs",
+        "batchIndex": 2,
+        "symbols": [
+          "NonNegative",
+          "ClampToNonNegative",
+          "GreaterThanOrEqualToOne",
+          "ZeroToOne",
+          "GenericClipRect",
+          "GenericClipRectOrAuto",
+          "auto",
+          "is_auto",
+          "Optional",
+          "is_some",
+          "is_none",
+          "into_rust",
+          "as_ref",
+          "as_mut",
+          "map"
+        ]
+      },
+      {
+        "path": "style/values/generics/transform.rs",
+        "batchIndex": 2,
+        "symbols": [
+          "GenericMatrix",
+          "GenericMatrix3D",
+          "GenericTransformOrigin",
+          "new",
+          "GenericPerspectiveFunction",
+          "infinity_or",
+          "GenericTransformOperation",
+          "ToTransformComponent",
+          "GenericTransform",
+          "is_rotate",
+          "is_translate",
+          "is_scale",
+          "ToAbsoluteLength",
+          "ToMatrix",
+          "ToRadians",
+          "ToFloat",
+          "none",
+          "to_transform_3d_matrix",
+          "components_to_transform_3d_matrix",
+          "to_transform_3d_matrix_f64",
+          "create_perspective_matrix",
+          "get_normalized_vector_and_angle",
+          "GenericRotate",
+          "IsParallelTo",
+          "GenericScale",
+          "GenericTranslate",
+          "TransformStyle"
+        ]
+      },
+      {
+        "path": "style/values/specified/mod.rs",
+        "batchIndex": 6,
+        "symbols": [
+          "AngleOrPercentage",
+          "parse_with_unitless",
+          "NumberOrPercentage",
+          "parse_non_negative",
+          "to_percentage",
+          "to_number",
+          "as_percentage",
+          "into_simplified_number",
+          "to_computed_value_without_context",
+          "hundred_percent",
+          "new_number",
+          "Opacity",
+          "parse_quirky",
+          "AllowQuirks",
+          "allowed",
+          "ParsedNamespace",
+          "parse",
+          "Attr",
+          "parse_namespace",
+          "parse_function"
+        ]
+      },
+      {
+        "path": "style/values/mod.rs",
+        "batchIndex": 10,
+        "symbols": [
+          "normalize",
+          "serialize_atom_identifier",
+          "serialize_atom_identifier",
+          "serialize_atom_name",
+          "serialize_atom_name",
+          "serialize_number",
+          "serialize_specified_dimension",
+          "AtomString",
+          "GenericAtomIdent",
+          "new",
+          "cast",
+          "AtomIdent",
+          "new",
+          "with",
+          "cast",
+          "serialize_percentage",
+          "serialize_normalized_percentage",
+          "reify_percentage",
+          "Impossible",
+          "Either",
+          "CustomIdent",
+          "parse",
+          "from_ident",
+          "DashedIdent",
+          "from_ident",
+          "empty",
+          "is_empty",
+          "undashed",
+          "KeyframesName",
+          "from_ident",
+          "none",
+          "is_none",
+          "from_atom",
+          "as_atom"
+        ]
+      }
+    ],
+    "style/values/specified/table.rs": [
+      {
+        "path": "style/values/specified/mod.rs",
+        "batchIndex": 6,
+        "symbols": [
+          "AngleOrPercentage",
+          "parse_with_unitless",
+          "NumberOrPercentage",
+          "parse_non_negative",
+          "to_percentage",
+          "to_number",
+          "as_percentage",
+          "into_simplified_number",
+          "to_computed_value_without_context",
+          "hundred_percent",
+          "new_number",
+          "Opacity",
+          "parse_quirky",
+          "AllowQuirks",
+          "allowed",
+          "ParsedNamespace",
+          "parse",
+          "Attr",
+          "parse_namespace",
+          "parse_function"
+        ]
+      }
+    ]
+  }
+}

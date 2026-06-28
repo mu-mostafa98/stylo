@@ -1,0 +1,800 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/servo/animation.rs",
+      "type": "file",
+      "name": "animation.rs",
+      "filePath": "style/servo/animation.rs",
+      "summary": "Implements CSS keyframe animations and transitions for the Servo browser engine, including property animation interpolation, keyframe computation, animation state management, and transition handling per the CSS Animations and Transitions specifications.",
+      "tags": ["animation", "css-transitions", "keyframes", "servo", "rendering"],
+      "complexity": "complex",
+      "languageNotes": "Uses Rust enums extensively for animation state machines and implements CSS timing function interpolation with discrete fallback."
+    },
+    {
+      "id": "file:style/servo/attr.rs",
+      "type": "file",
+      "name": "attr.rs",
+      "filePath": "style/servo/attr.rs",
+      "summary": "Provides parsed representations of DOM attributes for the Servo style system, including typed attribute values (string, integer, color, length) and HTML spec-compliant parsers for integers, floats, legacy colors, and dimension values.",
+      "tags": ["dom-attributes", "parsing", "serialization", "html-spec", "servo"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/servo/encoding_support.rs",
+      "type": "file",
+      "name": "encoding_support.rs",
+      "filePath": "style/servo/encoding_support.rs",
+      "summary": "Handles CSS stylesheet decoding from bytes by implementing encoding detection and transcoding via the cssparser stylesheet_encoding pipeline, enabling Servo to load stylesheets with various character encodings.",
+      "tags": ["encoding", "css-parsing", "stylesheet", "decoding", "servo"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/servo/media_features.rs",
+      "type": "file",
+      "name": "media_features.rs",
+      "filePath": "style/servo/media_features.rs",
+      "summary": "Defines Servo's CSS media feature evaluators for responsive design queries including width, resolution, pointer capabilities, hover, aspect-ratio, scan, device-pixel-ratio, and prefers-color-scheme.",
+      "tags": ["media-queries", "css", "responsive-design", "servo", "evaluation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/servo/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/servo/mod.rs",
+      "summary": "Module declaration file that re-exports the Servo-specific style submodules: animation, attr, encoding_support, media_features, restyle_damage, selector_parser, and shadow_parts, compiling only in Servo builds.",
+      "tags": ["module", "barrel", "servo", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/servo/restyle_damage.rs",
+      "type": "file",
+      "name": "restyle_damage.rs",
+      "filePath": "style/servo/restyle_damage.rs",
+      "summary": "Computes restyle damage hints that inform the Servo layout engine which operations are needed after incremental style changes, including repaint, stacking context rebuild, overflow recalculation, and full relayout.",
+      "tags": ["restyle", "layout", "damage-tracking", "incremental-update", "servo"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/servo/selector_parser.rs",
+      "type": "file",
+      "name": "selector_parser.rs",
+      "filePath": "style/servo/selector_parser.rs",
+      "summary": "Implements Servo's CSS selector parser including the PseudoElement enum (::before, ::after, ::selection, ::placeholder, etc.), non-tree-structural pseudo-classes, SelectorImpl, element snapshot handling for style invalidation, and RFC 4647 language filtering.",
+      "tags": ["css-selectors", "parsing", "pseudo-elements", "style-invalidation", "servo"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/servo/shadow_parts.rs",
+      "type": "file",
+      "name": "shadow_parts.rs",
+      "filePath": "style/servo/shadow_parts.rs",
+      "summary": "Parses CSS Shadow Parts exportparts attribute mapping lists according to the CSS Shadow Parts specification, enabling Servo to export and map shadow DOM internal parts to external names.",
+      "tags": ["shadow-dom", "css-shadow-parts", "parsing", "servo", "web-components"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/animation.rs:PropertyAnimation",
+      "type": "class",
+      "name": "PropertyAnimation",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [41, 53],
+      "summary": "Represents an animation for a single CSS property, storing the from/to animation values, timing function, and duration for interpolation.",
+      "tags": ["animation", "property", "interpolation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/animation.rs:AnimationState",
+      "type": "class",
+      "name": "AnimationState",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [91, 104],
+      "summary": "Enum representing the lifecycle state of a CSS animation or transition: Pending, Running, Paused (with progress), Finished, or Canceled.",
+      "tags": ["animation", "state-machine", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/animation.rs:KeyframesIterationState",
+      "type": "class",
+      "name": "KeyframesIterationState",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [123, 128],
+      "summary": "Enum tracking the current iteration state of a keyframe animation, supporting both infinite and finite iteration counts.",
+      "tags": ["animation", "iteration", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/animation.rs:Animation",
+      "type": "class",
+      "name": "Animation",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [526, 567],
+      "summary": "Represents a full CSS animation including its name, computed keyframe steps, timing, direction, fill mode, iteration state, and animation progress calculation per the CSS Animations specification.",
+      "tags": ["animation", "css-animations", "keyframes", "timing"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/servo/animation.rs:Transition",
+      "type": "class",
+      "name": "Transition",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [992, 1017],
+      "summary": "Represents a CSS transition with start time, delay, property animation, and support for reversed transitions per the CSS Transitions specification.",
+      "tags": ["transition", "css-transitions", "animation", "reversing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/animation.rs:ElementAnimationSet",
+      "type": "class",
+      "name": "ElementAnimationSet",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [1132, 1142],
+      "summary": "Holds all animation and transition state for a single DOM element, managing cancellation, application, and lifecycle updates per style changes.",
+      "tags": ["animation", "element", "state-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/servo/animation.rs:AnimationSetKey",
+      "type": "class",
+      "name": "AnimationSetKey",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [1568, 1574],
+      "summary": "A key used to identify animation sets in the document-level animation storage, combining an opaque node reference with an optional pseudo-element.",
+      "tags": ["animation", "lookup-key", "node"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/animation.rs:DocumentAnimationSet",
+      "type": "class",
+      "name": "DocumentAnimationSet",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [1604, 1608],
+      "summary": "Thread-safe collection of all element animation sets for a document, providing methods to query and retrieve animation and transition property declarations.",
+      "tags": ["animation", "document", "thread-safe", "lookup"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/attr.rs:LengthOrPercentageOrAuto",
+      "type": "class",
+      "name": "LengthOrPercentageOrAuto",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [38, 42],
+      "summary": "Enum representing an attribute value that can be Auto, a Percentage (f32), or a Length (Au).",
+      "tags": ["attributes", "length", "percentage", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/attr.rs:AttrValue",
+      "type": "class",
+      "name": "AttrValue",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [46, 87],
+      "summary": "Rich enum for parsed DOM attribute values supporting strings, atoms, token lists, integers, doubles, colors, dimensions, URLs, shadow parts, and inline style declarations with lazy serialization.",
+      "tags": ["attributes", "dom", "serialization", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/attr.rs:AttrIdentifier",
+      "type": "class",
+      "name": "AttrIdentifier",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [712, 717],
+      "summary": "Uniquely identifies a DOM element attribute by its local name, full name, namespace, and optional prefix.",
+      "tags": ["attributes", "dom", "identifier"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:PseudoElement",
+      "type": "class",
+      "name": "PseudoElement",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [43, 84],
+      "summary": "Enum of all supported CSS pseudo-elements in Servo including eager (::before, ::after, ::selection, ::first-letter), lazy (::backdrop, ::marker, ::placeholder, ::slider-*), and Servo-specific anonymous box pseudos.",
+      "tags": ["pseudo-elements", "css-selectors", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:CustomState",
+      "type": "class",
+      "name": "CustomState",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [361, 361],
+      "summary": "Represents the argument to the :state() pseudo-class, storing a custom state identifier for custom element state matching.",
+      "tags": ["custom-elements", "pseudo-class", "state"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:NonTSPseudoClass",
+      "type": "class",
+      "name": "NonTSPseudoClass",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [367, 406],
+      "summary": "Enum of non-tree-structural pseudo-classes supported by Servo including :active, :hover, :focus, :checked, :disabled, :valid, :lang(), :state(), and various browser-specific pseudos.",
+      "tags": ["pseudo-classes", "css-selectors", "enum", "interaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:SelectorImpl",
+      "type": "class",
+      "name": "SelectorImpl",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [550, 550],
+      "summary": "The SelectorImpl marker struct that ties Servo's concrete pseudo-element, pseudo-class, attribute value, and identifier types to the generic selectors crate.",
+      "tags": ["css-selectors", "selector-impl", "traits"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:ExtraMatchingData",
+      "type": "class",
+      "name": "ExtraMatchingData",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [555, 566],
+      "summary": "Additional data carried during selector matching including invalidation tracking data, cascade input flags from container queries, and the originating element style for pseudo-element evaluation.",
+      "tags": ["selector-matching", "invalidation", "container-queries"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:SnapshotMap",
+      "type": "class",
+      "name": "SnapshotMap",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [797, 797],
+      "summary": "A map from opaque node references to ServoElementSnapshots, used during style invalidation to compare element state before and after DOM changes.",
+      "tags": ["style-invalidation", "snapshot", "element-state"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/servo/selector_parser.rs:ServoElementSnapshot",
+      "type": "class",
+      "name": "ServoElementSnapshot",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [827, 840],
+      "summary": "Servo's element snapshot for style invalidation, storing state flags, attribute values, changed attribute tracking, and providing methods for class, ID, part, and lang attribute matching.",
+      "tags": ["style-invalidation", "snapshot", "attributes", "element"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/servo/shadow_parts.rs:ShadowParts",
+      "type": "class",
+      "name": "ShadowParts",
+      "filePath": "style/servo/shadow_parts.rs",
+      "lineRange": [12, 17],
+      "summary": "Stores parsed CSS Shadow Parts exportparts mappings as a list of (from, to) atom pairs, providing lookup methods for exported and imported part names.",
+      "tags": ["shadow-dom", "css-shadow-parts", "mapping"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/servo/animation.rs:start_transitions_if_applicable",
+      "type": "function",
+      "name": "start_transitions_if_applicable",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [1705, 1749],
+      "summary": "Evaluates CSS transition properties on style changes and starts new transitions when the before-change style differs from the after-change style for transitionable properties.",
+      "tags": ["transition", "css-transitions", "style-diff", "spec-implementation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/animation.rs:maybe_start_animations",
+      "type": "function",
+      "name": "maybe_start_animations",
+      "filePath": "style/servo/animation.rs",
+      "lineRange": [1753, 1876],
+      "summary": "Initiates CSS keyframe animations for an element by looking up animation names in the stylist, computing keyframes, handling negative delays, and updating existing animations from new style declarations.",
+      "tags": ["animation", "keyframes", "css-animations", "style-update"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/servo/attr.rs:parse_double",
+      "type": "function",
+      "name": "parse_double",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [159, 203],
+      "summary": "Parses a floating-point number from a string per the HTML spec's rules for parsing floating-point number values, handling signs, fractions, and exponents.",
+      "tags": ["parsing", "double", "html-spec", "number"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/attr.rs:parse_legacy_color",
+      "type": "function",
+      "name": "parse_legacy_color",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [525, 648],
+      "summary": "Parses a legacy HTML color string per the HTML spec, handling named colors, short hex, long hex, transparent, and malformed color values with the standard error-recovery algorithm.",
+      "tags": ["parsing", "color", "html-spec", "legacy"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/attr.rs:parse_length",
+      "type": "function",
+      "name": "parse_length",
+      "filePath": "style/servo/attr.rs",
+      "lineRange": [654, 707],
+      "summary": "Parses a dimension value string per the HTML spec, returning Auto, Percentage, or Length (Au), handling digits, decimal points, percent signs, and malformed input.",
+      "tags": ["parsing", "length", "dimension", "html-spec"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/encoding_support.rs:from_bytes",
+      "type": "function",
+      "name": "from_bytes",
+      "filePath": "style/servo/encoding_support.rs",
+      "lineRange": [56, 80],
+      "summary": "Parses a CSS stylesheet from raw bytes by detecting the character encoding and decoding before delegating to Stylesheet::from_str.",
+      "tags": ["stylesheet", "parsing", "encoding", "bytes"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/servo/restyle_damage.rs:compute_style_difference",
+      "type": "function",
+      "name": "compute_style_difference",
+      "filePath": "style/servo/restyle_damage.rs",
+      "lineRange": [58, 106],
+      "summary": "Computes the StyleDifference between old and new computed values, determining restyle damage flags and whether properties changed (reset-only or inherited), including custom property change detection.",
+      "tags": ["restyle", "style-diff", "damage", "custom-properties"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/selector_parser.rs:extended_filtering",
+      "type": "function",
+      "name": "extended_filtering",
+      "filePath": "style/servo/selector_parser.rs",
+      "lineRange": [989, 1039],
+      "summary": "Implements RFC 4647 extended language range filtering for the :lang() pseudo-class, supporting wildcards and subtag matching across comma-separated language ranges.",
+      "tags": ["language-filtering", "rfc4647", "pseudo-class", "matching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/servo/shadow_parts.rs:parse_part_mapping",
+      "type": "function",
+      "name": "parse_part_mapping",
+      "filePath": "style/servo/shadow_parts.rs",
+      "lineRange": [22, 85],
+      "summary": "Parses a single CSS Shadow Parts exportparts mapping (token:token) per the CSS spec, handling whitespace trimming, colon delimiters, and validation.",
+      "tags": ["shadow-dom", "parsing", "css-shadow-parts", "mapping"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:PropertyAnimation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:AnimationState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:KeyframesIterationState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:Animation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:Transition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:ElementAnimationSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:AnimationSetKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:DocumentAnimationSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "function:style/servo/animation.rs:start_transitions_if_applicable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "function:style/servo/animation.rs:maybe_start_animations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:LengthOrPercentageOrAuto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:AttrValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:AttrIdentifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_double",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_legacy_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/encoding_support.rs",
+      "target": "function:style/servo/encoding_support.rs:from_bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/restyle_damage.rs",
+      "target": "function:style/servo/restyle_damage.rs:compute_style_difference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:PseudoElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:CustomState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:NonTSPseudoClass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:SelectorImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:ExtraMatchingData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:SnapshotMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:ServoElementSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "function:style/servo/selector_parser.rs:extended_filtering",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/shadow_parts.rs",
+      "target": "class:style/servo/shadow_parts.rs:ShadowParts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/shadow_parts.rs",
+      "target": "function:style/servo/shadow_parts.rs:parse_part_mapping",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:PropertyAnimation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:AnimationState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:KeyframesIterationState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:Animation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:Transition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:ElementAnimationSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:AnimationSetKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "class:style/servo/animation.rs:DocumentAnimationSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "function:style/servo/animation.rs:start_transitions_if_applicable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/animation.rs",
+      "target": "function:style/servo/animation.rs:maybe_start_animations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:LengthOrPercentageOrAuto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:AttrValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "class:style/servo/attr.rs:AttrIdentifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_double",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_legacy_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/attr.rs",
+      "target": "function:style/servo/attr.rs:parse_length",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/encoding_support.rs",
+      "target": "function:style/servo/encoding_support.rs:from_bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/restyle_damage.rs",
+      "target": "function:style/servo/restyle_damage.rs:compute_style_difference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:PseudoElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:CustomState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:NonTSPseudoClass",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:SelectorImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:ExtraMatchingData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:SnapshotMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "class:style/servo/selector_parser.rs:ServoElementSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/selector_parser.rs",
+      "target": "function:style/servo/selector_parser.rs:extended_filtering",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/shadow_parts.rs",
+      "target": "class:style/servo/shadow_parts.rs:ShadowParts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/shadow_parts.rs",
+      "target": "function:style/servo/shadow_parts.rs:parse_part_mapping",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/animation.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/attr.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/encoding_support.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/media_features.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/restyle_damage.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/selector_parser.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/servo/mod.rs",
+      "target": "file:style/servo/shadow_parts.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

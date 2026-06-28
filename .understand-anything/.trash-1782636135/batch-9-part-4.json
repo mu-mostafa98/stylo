@@ -1,0 +1,3994 @@
+{
+  "nodes": [
+    {
+      "id": "function:selectors/parser.rs:mark_as_intentionally_leaked:402",
+      "type": "function",
+      "name": "mark_as_intentionally_leaked",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        402,
+        409
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:from_one:411",
+      "type": "function",
+      "name": "from_one",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        411,
+        422
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:from_iter:424",
+      "type": "function",
+      "name": "from_iter",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        424,
+        433
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:slice:436",
+      "type": "function",
+      "name": "slice",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        436,
+        445
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:len:448",
+      "type": "function",
+      "name": "len",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        448,
+        453
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:thin_arc_heap_ptr:456",
+      "type": "function",
+      "name": "thin_arc_heap_ptr",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        456,
+        461
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:471",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        471,
+        473
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:scope:505",
+      "type": "function",
+      "name": "scope",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        505,
+        507
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:implicit_scope:509",
+      "type": "function",
+      "name": "implicit_scope",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        509,
+        511
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse:517",
+      "type": "function",
+      "name": "parse",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        517,
+        532
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_disallow_pseudo:535",
+      "type": "function",
+      "name": "parse_disallow_pseudo",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        535,
+        550
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_forgiving:552",
+      "type": "function",
+      "name": "parse_forgiving",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        552,
+        567
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_with_state:570",
+      "type": "function",
+      "name": "parse_with_state",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        570,
+        602
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:replace_parent_selector:605",
+      "type": "function",
+      "name": "replace_parent_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        605,
+        611
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:from_vec:615",
+      "type": "function",
+      "name": "from_vec",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        615,
+        617
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_inner_compound_selector:621",
+      "type": "function",
+      "name": "parse_inner_compound_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        621,
+        636
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:collect_selector_hashes:658",
+      "type": "function",
+      "name": "collect_selector_hashes",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        658,
+        747
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:collect_ancestor_hashes:749",
+      "type": "function",
+      "name": "collect_ancestor_hashes",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        749,
+        787
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:790",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        790,
+        809
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:fourth_hash:812",
+      "type": "function",
+      "name": "fourth_hash",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        812,
+        816
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:namespace_empty_string:820",
+      "type": "function",
+      "name": "namespace_empty_string",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        820,
+        823
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:may_match:842",
+      "type": "function",
+      "name": "may_match",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        842,
+        844
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:mark_as_intentionally_leaked:871",
+      "type": "function",
+      "name": "mark_as_intentionally_leaked",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        871,
+        873
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:scope:875",
+      "type": "function",
+      "name": "scope",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        875,
+        883
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:implicit_scope:886",
+      "type": "function",
+      "name": "implicit_scope",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        886,
+        894
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:specificity:897",
+      "type": "function",
+      "name": "specificity",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        897,
+        899
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:flags:902",
+      "type": "function",
+      "name": "flags",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        902,
+        904
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:has_pseudo_element:907",
+      "type": "function",
+      "name": "has_pseudo_element",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        907,
+        909
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:has_parent_selector:912",
+      "type": "function",
+      "name": "has_parent_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        912,
+        914
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:has_scope_selector:917",
+      "type": "function",
+      "name": "has_scope_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        917,
+        919
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_slotted:922",
+      "type": "function",
+      "name": "is_slotted",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        922,
+        924
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_part:927",
+      "type": "function",
+      "name": "is_part",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        927,
+        929
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parts:932",
+      "type": "function",
+      "name": "parts",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        932,
+        954
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:pseudo_element:957",
+      "type": "function",
+      "name": "pseudo_element",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        957,
+        970
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:pseudo_elements:973",
+      "type": "function",
+      "name": "pseudo_elements",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        973,
+        996
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_universal:1002",
+      "type": "function",
+      "name": "is_universal",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1002,
+        1012
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:matches_featureless_host:1017",
+      "type": "function",
+      "name": "matches_featureless_host",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1017,
+        1048
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:iter:1054",
+      "type": "function",
+      "name": "iter",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1054,
+        1059
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:iter_skip_relative_selector_anchor:1063",
+      "type": "function",
+      "name": "iter_skip_relative_selector_anchor",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1063,
+        1083
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:iter_from:1088",
+      "type": "function",
+      "name": "iter_from",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1088,
+        1094
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:combinator_at_match_order:1099",
+      "type": "function",
+      "name": "combinator_at_match_order",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1099,
+        1107
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:iter_raw_match_order:1112",
+      "type": "function",
+      "name": "iter_raw_match_order",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1112,
+        1114
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:combinator_at_parse_order:1119",
+      "type": "function",
+      "name": "combinator_at_parse_order",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1119,
+        1127
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:iter_raw_parse_order_from:1133",
+      "type": "function",
+      "name": "iter_raw_parse_order_from",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1133,
+        1138
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:from_vec:1142",
+      "type": "function",
+      "name": "from_vec",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1142,
+        1157
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:replace_parent_selector:1164",
+      "type": "function",
+      "name": "replace_parent_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1164,
+        1380
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:len:1384",
+      "type": "function",
+      "name": "len",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1384,
+        1386
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:thin_arc_heap_ptr:1389",
+      "type": "function",
+      "name": "thin_arc_heap_ptr",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1389,
+        1391
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:visit:1411",
+      "type": "function",
+      "name": "visit",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1411,
+        1435
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse:1439",
+      "type": "function",
+      "name": "parse",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1439,
+        1452
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new_invalid:1454",
+      "type": "function",
+      "name": "new_invalid",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1454,
+        1496
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_rightmost:1499",
+      "type": "function",
+      "name": "is_rightmost",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1499,
+        1507
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:next_sequence:1520",
+      "type": "function",
+      "name": "next_sequence",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1520,
+        1522
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:1536",
+      "type": "function",
+      "name": "matches_for_stateless_pseudo_element",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1536,
+        1544
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:matches_for_stateless_pseudo_element_internal:1547",
+      "type": "function",
+      "name": "matches_for_stateless_pseudo_element_internal",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1547,
+        1560
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:selector_length:1564",
+      "type": "function",
+      "name": "selector_length",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1564,
+        1566
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:next:1573",
+      "type": "function",
+      "name": "next",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1573,
+        1585
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:1601",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1601,
+        1605
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:next:1614",
+      "type": "function",
+      "name": "next",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1614,
+        1618
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:next:1625",
+      "type": "function",
+      "name": "next",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1625,
+        1636
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:matches_index:1717",
+      "type": "function",
+      "name": "matches_index",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1717,
+        1726
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css:1733",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1733,
+        1749
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:only:1767",
+      "type": "function",
+      "name": "only",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1767,
+        1777
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:first:1781",
+      "type": "function",
+      "name": "first",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1781,
+        1791
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:last:1795",
+      "type": "function",
+      "name": "last",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1795,
+        1805
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_simple_edge:1809",
+      "type": "function",
+      "name": "is_simple_edge",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1809,
+        1814
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:write_start:1818",
+      "type": "function",
+      "name": "write_start",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1818,
+        1831
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:1852",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1852,
+        1857
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:nth_data:1861",
+      "type": "function",
+      "name": "nth_data",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1861,
+        1863
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:selectors:1867",
+      "type": "function",
+      "name": "selectors",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1867,
+        1869
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:1892",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1892,
+        1934
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_descendant_direction:1937",
+      "type": "function",
+      "name": "is_descendant_direction",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1937,
+        1939
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_next_sibling:1942",
+      "type": "function",
+      "name": "is_next_sibling",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1942,
+        1944
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_subtree:1947",
+      "type": "function",
+      "name": "is_subtree",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1947,
+        1952
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:new:1965",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1965,
+        1990
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:get_match_hint:1993",
+      "type": "function",
+      "name": "get_match_hint",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1993,
+        1999
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:for_relative_selector:2024",
+      "type": "function",
+      "name": "for_relative_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2024,
+        2043
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:from_selector_list:2047",
+      "type": "function",
+      "name": "from_selector_list",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2047,
+        2081
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_combinator:2201",
+      "type": "function",
+      "name": "is_combinator",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2201,
+        2203
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_host:2207",
+      "type": "function",
+      "name": "is_host",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2207,
+        2209
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:as_combinator:2212",
+      "type": "function",
+      "name": "as_combinator",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2212,
+        2217
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:2222",
+      "type": "function",
+      "name": "matches_for_stateless_pseudo_element",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2222,
+        2238
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:visit:2240",
+      "type": "function",
+      "name": "visit",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2240,
+        2325
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:has_indexed_selector_in_subject:2330",
+      "type": "function",
+      "name": "has_indexed_selector_in_subject",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2330,
+        2349
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:fmt:2362",
+      "type": "function",
+      "name": "fmt",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2362,
+        2371
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:serialize_selector_list:2390",
+      "type": "function",
+      "name": "serialize_selector_list",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2390,
+        2405
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css:2417",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2417,
+        2558
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css_internal:2562",
+      "type": "function",
+      "name": "to_css_internal",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2562,
+        2584
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css:2595",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2595,
+        2600
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css:2604",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2604,
+        2735
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_css:2739",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2739,
+        2772
+      ],
+      "summary": "CSS selector serialization method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:is_css2_pseudo_element:3556",
+      "type": "function",
+      "name": "is_css2_pseudo_element",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3556,
+        3562
+      ],
+      "summary": "Exported parser type method.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_selector:2788",
+      "type": "function",
+      "name": "parse_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2788,
+        2863
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:try_parse_combinator:2865",
+      "type": "function",
+      "name": "try_parse_combinator",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2865,
+        2891
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_type_selector:2896",
+      "type": "function",
+      "name": "parse_type_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2896,
+        2963
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_qualified_name:2992",
+      "type": "function",
+      "name": "parse_qualified_name",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2992,
+        3085
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_attribute_selector:3087",
+      "type": "function",
+      "name": "parse_attribute_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3087,
+        3207
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:to_case_sensitivity:3220",
+      "type": "function",
+      "name": "to_case_sensitivity",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3220,
+        3242
+      ],
+      "summary": "Internal parser helper.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_attribute_flags:3245",
+      "type": "function",
+      "name": "parse_attribute_flags",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3245,
+        3269
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_negation:3273",
+      "type": "function",
+      "name": "parse_negation",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3273,
+        3293
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_compound_selector:3301",
+      "type": "function",
+      "name": "parse_compound_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3301,
+        3402
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_is_where:3404",
+      "type": "function",
+      "name": "parse_is_where",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3404,
+        3430
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_has:3432",
+      "type": "function",
+      "name": "parse_has",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3432,
+        3462
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_functional_pseudo_class:3464",
+      "type": "function",
+      "name": "parse_functional_pseudo_class",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3464,
+        3507
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_nth_pseudo_class:3509",
+      "type": "function",
+      "name": "parse_nth_pseudo_class",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3509,
+        3551
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_one_simple_selector:3569",
+      "type": "function",
+      "name": "parse_one_simple_selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3569,
+        3710
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/parser.rs:parse_simple_pseudo_class:3712",
+      "type": "function",
+      "name": "parse_simple_pseudo_class",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        3712,
+        3765
+      ],
+      "summary": "Parser combinator for a CSS selector grammar production.",
+      "tags": [
+        "selector",
+        "parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selectors/parser.rs:PseudoElement",
+      "type": "class",
+      "name": "PseudoElement",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        35,
+        79
+      ],
+      "summary": "Pseudo-element representation.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/parser.rs:NonTSPseudoClass",
+      "type": "class",
+      "name": "NonTSPseudoClass",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        82,
+        100
+      ],
+      "summary": "Non-type-selector pseudo-class representation.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/parser.rs:SelectorParseErrorKind",
+      "type": "class",
+      "name": "SelectorParseErrorKind",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        202,
+        223
+      ],
+      "summary": "CSS selector parsing error types.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/parser.rs:Parser",
+      "type": "class",
+      "name": "Parser",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        278,
+        388
+      ],
+      "summary": "Main CSS selector parser with parsing mode state and error reporting.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selectors/parser.rs:SelectorList",
+      "type": "class",
+      "name": "SelectorList",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        395,
+        398
+      ],
+      "summary": "List of parsed selectors.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:SelectorKey",
+      "type": "class",
+      "name": "SelectorKey",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        467,
+        467
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:ParseRelative",
+      "type": "class",
+      "name": "ParseRelative",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        490,
+        501
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:AncestorHashes",
+      "type": "class",
+      "name": "AncestorHashes",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        654,
+        656
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:MatchesFeaturelessHost",
+      "type": "class",
+      "name": "MatchesFeaturelessHost",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        830,
+        837
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:Selector",
+      "type": "class",
+      "name": "Selector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        865,
+        867
+      ],
+      "summary": "Parsed CSS selector with specificity and flags.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:SelectorIter",
+      "type": "class",
+      "name": "SelectorIter",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1511,
+        1514
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:Combinator",
+      "type": "class",
+      "name": "Combinator",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1641,
+        1659
+      ],
+      "summary": "CSS combinator types (descendant, child, sibling, etc.).",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/parser.rs:NthType",
+      "type": "class",
+      "name": "NthType",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1686,
+        1693
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:AnPlusB",
+      "type": "class",
+      "name": "AnPlusB",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1713,
+        1713
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:NthSelectorData",
+      "type": "class",
+      "name": "NthSelectorData",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1758,
+        1762
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:NthOfSelectorData",
+      "type": "class",
+      "name": "NthOfSelectorData",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1845,
+        1847
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:RelativeSelectorMatchHint",
+      "type": "class",
+      "name": "RelativeSelectorMatchHint",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1875,
+        1888
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:RelativeSelectorCombinatorCount",
+      "type": "class",
+      "name": "RelativeSelectorCombinatorCount",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        1957,
+        1961
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:RelativeSelector",
+      "type": "class",
+      "name": "RelativeSelector",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2006,
+        2012
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/parser.rs:Component",
+      "type": "class",
+      "name": "Component",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2091,
+        2196
+      ],
+      "summary": "Enum of all CSS selector component types.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selectors/parser.rs:LocalName",
+      "type": "class",
+      "name": "LocalName",
+      "filePath": "selectors/parser.rs",
+      "lineRange": [
+        2355,
+        2359
+      ],
+      "summary": "Parser support type for CSS selector grammar.",
+      "tags": [
+        "selector",
+        "parser",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/relative_selector/cache.rs:matched",
+      "type": "function",
+      "name": "matched",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "Cache operation for relative selector matching.",
+      "tags": [
+        "relative-selector",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/relative_selector/cache.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        45,
+        53
+      ],
+      "summary": "Cache operation for relative selector matching.",
+      "tags": [
+        "relative-selector",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/relative_selector/cache.rs:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        64,
+        71
+      ],
+      "summary": "Cache operation for relative selector matching.",
+      "tags": [
+        "relative-selector",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/relative_selector/cache.rs:lookup",
+      "type": "function",
+      "name": "lookup",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        74,
+        80
+      ],
+      "summary": "Cache operation for relative selector matching.",
+      "tags": [
+        "relative-selector",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/relative_selector/cache.rs:RelativeSelectorCachedMatch",
+      "type": "class",
+      "name": "RelativeSelectorCachedMatch",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        24,
+        29
+      ],
+      "summary": "Cached match result for a relative selector.",
+      "tags": [
+        "relative-selector",
+        "cache",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/relative_selector/cache.rs:RelativeSelectorCache",
+      "type": "class",
+      "name": "RelativeSelectorCache",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "Cache container for relative selector results keyed by element and selector.",
+      "tags": [
+        "relative-selector",
+        "cache",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/relative_selector/filter.rs:add_to_filter:30",
+      "type": "function",
+      "name": "add_to_filter",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "lineRange": [
+        30,
+        44
+      ],
+      "summary": "Internal Bloom filter management for relative selector pre-filtering.",
+      "tags": [
+        "relative-selector",
+        "bloom-filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/relative_selector/filter.rs:fast_reject:55",
+      "type": "function",
+      "name": "fast_reject",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "lineRange": [
+        55,
+        84
+      ],
+      "summary": "Exported fast-rejection check for relative selectors.",
+      "tags": [
+        "relative-selector",
+        "bloom-filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/relative_selector/filter.rs:get_filter:87",
+      "type": "function",
+      "name": "get_filter",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "lineRange": [
+        87,
+        109
+      ],
+      "summary": "Internal Bloom filter management for relative selector pre-filtering.",
+      "tags": [
+        "relative-selector",
+        "bloom-filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/relative_selector/filter.rs:fast_reject:116",
+      "type": "function",
+      "name": "fast_reject",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "lineRange": [
+        116,
+        158
+      ],
+      "summary": "Exported fast-rejection check for relative selectors.",
+      "tags": [
+        "relative-selector",
+        "bloom-filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/relative_selector/filter.rs:RelativeSelectorFilterMap",
+      "type": "class",
+      "name": "RelativeSelectorFilterMap",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "Map from element to Bloom filter for relative selector fast-rejection.",
+      "tags": [
+        "relative-selector",
+        "bloom-filter",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/parser.rs",
+      "type": "file",
+      "name": "parser.rs",
+      "filePath": "selectors/parser.rs",
+      "summary": "Comprehensive CSS selector parser implementing full selector grammar including pseudo-classes, pseudo-elements, combinators, attribute selectors, nesting, relative selectors, and forgiving selector lists.",
+      "tags": [
+        "selector",
+        "parser",
+        "css-grammar"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selectors/relative_selector/cache.rs",
+      "type": "file",
+      "name": "cache.rs",
+      "filePath": "selectors/relative_selector/cache.rs",
+      "summary": "Caches relative selector match results per element to avoid redundant matching during DOM traversal.",
+      "tags": [
+        "selector",
+        "relative-selector",
+        "cache"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selectors/relative_selector/filter.rs",
+      "type": "file",
+      "name": "filter.rs",
+      "filePath": "selectors/relative_selector/filter.rs",
+      "summary": "Implements Bloom-filter-based fast rejection for relative selectors, pre-computing descendant/child hashes per element to quickly eliminate non-matching selectors.",
+      "tags": [
+        "selector",
+        "relative-selector",
+        "bloom-filter"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:mark_as_intentionally_leaked:402",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:mark_as_intentionally_leaked:402",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_one:411",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_one:411",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_iter:424",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_iter:424",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:slice:436",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:slice:436",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:len:448",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:len:448",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:thin_arc_heap_ptr:456",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:thin_arc_heap_ptr:456",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:471",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:471",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:scope:505",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:scope:505",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:implicit_scope:509",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:implicit_scope:509",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse:517",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse:517",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_disallow_pseudo:535",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_disallow_pseudo:535",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_forgiving:552",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_forgiving:552",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_with_state:570",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:replace_parent_selector:605",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:replace_parent_selector:605",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_vec:615",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_vec:615",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_inner_compound_selector:621",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:collect_selector_hashes:658",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:collect_selector_hashes:658",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:collect_ancestor_hashes:749",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:790",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:790",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:fourth_hash:812",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:fourth_hash:812",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:namespace_empty_string:820",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:namespace_empty_string:820",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:may_match:842",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:may_match:842",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:mark_as_intentionally_leaked:871",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:mark_as_intentionally_leaked:871",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:scope:875",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:scope:875",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:implicit_scope:886",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:implicit_scope:886",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:specificity:897",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:specificity:897",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:flags:902",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:flags:902",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_pseudo_element:907",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_pseudo_element:907",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_parent_selector:912",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_parent_selector:912",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_scope_selector:917",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_scope_selector:917",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_slotted:922",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_slotted:922",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_part:927",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_part:927",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parts:932",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parts:932",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:pseudo_element:957",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:pseudo_element:957",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:pseudo_elements:973",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:pseudo_elements:973",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_universal:1002",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_universal:1002",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_featureless_host:1017",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_featureless_host:1017",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter:1054",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter:1054",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_skip_relative_selector_anchor:1063",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_skip_relative_selector_anchor:1063",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_from:1088",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_from:1088",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:combinator_at_match_order:1099",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:combinator_at_match_order:1099",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_raw_match_order:1112",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_raw_match_order:1112",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:combinator_at_parse_order:1119",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:combinator_at_parse_order:1119",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_raw_parse_order_from:1133",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:iter_raw_parse_order_from:1133",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_vec:1142",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_vec:1142",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:replace_parent_selector:1164",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:replace_parent_selector:1164",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:len:1384",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:len:1384",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:thin_arc_heap_ptr:1389",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:thin_arc_heap_ptr:1389",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:visit:1411",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:visit:1411",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse:1439",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse:1439",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new_invalid:1454",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new_invalid:1454",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_rightmost:1499",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_rightmost:1499",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:next_sequence:1520",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:next_sequence:1520",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:1536",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:1536",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_for_stateless_pseudo_element_internal:1547",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:selector_length:1564",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:selector_length:1564",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:next:1573",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1601",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1601",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:next:1614",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:next:1625",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_index:1717",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_index:1717",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css:1733",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:only:1767",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:only:1767",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:first:1781",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:first:1781",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:last:1795",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:last:1795",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_simple_edge:1809",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_simple_edge:1809",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:write_start:1818",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1852",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1852",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:nth_data:1861",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:nth_data:1861",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:selectors:1867",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:selectors:1867",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1892",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1892",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_descendant_direction:1937",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_descendant_direction:1937",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_next_sibling:1942",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_next_sibling:1942",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_subtree:1947",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_subtree:1947",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1965",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:new:1965",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:get_match_hint:1993",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:get_match_hint:1993",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:for_relative_selector:2024",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:from_selector_list:2047",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_combinator:2201",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_combinator:2201",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_host:2207",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_host:2207",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:as_combinator:2212",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:as_combinator:2212",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:2222",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:matches_for_stateless_pseudo_element:2222",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:visit:2240",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:visit:2240",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_indexed_selector_in_subject:2330",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:has_indexed_selector_in_subject:2330",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:fmt:2362",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:serialize_selector_list:2390",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css:2417",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css_internal:2562",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css:2595",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css:2604",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_css:2739",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_css2_pseudo_element:3556",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:is_css2_pseudo_element:3556",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_selector:2788",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:try_parse_combinator:2865",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_type_selector:2896",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_qualified_name:2992",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_attribute_selector:3087",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:to_case_sensitivity:3220",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_attribute_flags:3245",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_negation:3273",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_compound_selector:3301",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_is_where:3404",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_has:3432",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_functional_pseudo_class:3464",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_nth_pseudo_class:3509",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_one_simple_selector:3569",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "function:selectors/parser.rs:parse_simple_pseudo_class:3712",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:PseudoElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:PseudoElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NonTSPseudoClass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NonTSPseudoClass",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorParseErrorKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorParseErrorKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Parser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Parser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:ParseRelative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:ParseRelative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:AncestorHashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:AncestorHashes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:MatchesFeaturelessHost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:MatchesFeaturelessHost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Selector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorIter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:SelectorIter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Combinator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Combinator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:AnPlusB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:AnPlusB",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthSelectorData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthSelectorData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthOfSelectorData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:NthOfSelectorData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelectorMatchHint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelectorMatchHint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelectorCombinatorCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelectorCombinatorCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:RelativeSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Component",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:Component",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:LocalName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/parser.rs",
+      "target": "class:selectors/parser.rs:LocalName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:matched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:matched",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:lookup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "function:selectors/relative_selector/cache.rs:lookup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "class:selectors/relative_selector/cache.rs:RelativeSelectorCachedMatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "class:selectors/relative_selector/cache.rs:RelativeSelectorCachedMatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "class:selectors/relative_selector/cache.rs:RelativeSelectorCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/cache.rs",
+      "target": "class:selectors/relative_selector/cache.rs:RelativeSelectorCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:add_to_filter:30",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:fast_reject:55",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:fast_reject:55",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:get_filter:87",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:fast_reject:116",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "function:selectors/relative_selector/filter.rs:fast_reject:116",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "class:selectors/relative_selector/filter.rs:RelativeSelectorFilterMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/relative_selector/filter.rs",
+      "target": "class:selectors/relative_selector/filter.rs:RelativeSelectorFilterMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

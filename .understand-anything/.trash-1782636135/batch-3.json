@@ -1,0 +1,599 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/stylesheets/media_rule.rs",
+      "type": "file",
+      "name": "media_rule.rs",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "summary": "Implements the @media and @custom-media CSS at-rules, including media query storage, serialization, and custom media query evaluation with cycle detection.",
+      "tags": ["css", "media-query", "at-rule", "rule", "serialization"],
+      "complexity": "moderate",
+      "languageNotes": "Uses KleeneValue for three-valued logic in custom media query evaluation, with cycle detection through PrecomputedHashSet tracking."
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "class",
+      "name": "MediaRule",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [30, 37],
+      "summary": "Represents a @media CSS rule containing media queries, nested CSS rules, and source location, with serialization and deep cloning support.",
+      "tags": ["struct", "at-rule", "media-query", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "class",
+      "name": "CustomMediaCondition",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [75, 82],
+      "summary": "Enum representing custom media query conditions: unconditionally true, unconditionally false, or a MediaList for dynamic evaluation.",
+      "tags": ["enum", "media-query", "condition", "custom-media"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "class",
+      "name": "CustomMediaRule",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [109, 116],
+      "summary": "Represents a @custom-media CSS rule with a dashed-ident name and a custom media condition, with serialization and deep cloning support.",
+      "tags": ["struct", "at-rule", "custom-media", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:CustomMediaEvaluator",
+      "type": "class",
+      "name": "CustomMediaEvaluator",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [149, 153],
+      "summary": "Evaluates custom media queries with cycle detection, holding a reference to the effective custom media map and evaluating each query against a computed context.",
+      "tags": ["struct", "evaluator", "media-query", "cycle-detection"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [173, 192],
+      "summary": "Evaluates a custom media query by name using the evaluator's map, with cycle detection via a hash set that returns False on cycles, and delegates to MediaList evaluation.",
+      "tags": ["method", "evaluation", "cycle-detection", "media-query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/stylesheets/namespace_rule.rs",
+      "type": "file",
+      "name": "namespace_rule.rs",
+      "filePath": "style/stylesheets/namespace_rule.rs",
+      "summary": "Implements the @namespace CSS at-rule for declaring XML namespace prefixes and default namespaces used in CSS selector matching.",
+      "tags": ["css", "namespace", "at-rule", "rule", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "class",
+      "name": "NamespaceRule",
+      "filePath": "style/stylesheets/namespace_rule.rs",
+      "lineRange": [17, 24],
+      "summary": "Represents a @namespace CSS rule with an optional prefix and a namespace URL, with CSS serialization support.",
+      "tags": ["struct", "at-rule", "namespace", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/nested_declarations_rule.rs",
+      "type": "file",
+      "name": "nested_declarations_rule.rs",
+      "filePath": "style/stylesheets/nested_declarations_rule.rs",
+      "summary": "Implements the CSS nested declarations rule, containing a property declaration block within a CSS nesting context as defined by the CSS Nesting specification.",
+      "tags": ["css", "nesting", "at-rule", "declaration", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/nested_declarations_rule.rs:NestedDeclarationsRule",
+      "type": "class",
+      "name": "NestedDeclarationsRule",
+      "filePath": "style/stylesheets/nested_declarations_rule.rs",
+      "lineRange": [20, 25],
+      "summary": "Represents a CSS nested declarations rule with a property declaration block, source location, and support for heap measurement, deep cloning, and CSS serialization.",
+      "tags": ["struct", "css-nesting", "declaration", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/origin.rs",
+      "type": "file",
+      "name": "origin.rs",
+      "filePath": "style/stylesheets/origin.rs",
+      "summary": "Defines CSS cascade origins (UserAgent, User, Author) with bitflag sets, a generic per-origin data container, and iterators for traversing origins in cascading priority order.",
+      "tags": ["css", "cascade", "origin", "priority", "iterator"],
+      "complexity": "complex",
+      "languageNotes": "Implements CSS cascade origin iteration using safe and unsafe iterator patterns with PhantomData for variance control, matching Gecko's OriginFlags representation."
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:Origin",
+      "type": "class",
+      "name": "Origin",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [16, 25],
+      "summary": "Enum representing the three CSS cascade origins (UserAgent, User, Author) with bitflag-compatible u8 values and iterator support from highest to lowest specificity.",
+      "tags": ["enum", "cascade", "origin", "priority"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "class",
+      "name": "OriginSet",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [62, 62],
+      "summary": "Bitflags set for CSS cascade origins, equivalent to Gecko's OriginFlags, with conversion from Origin and iteration over contained origins.",
+      "tags": ["bitflags", "set", "cascade", "origin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:OriginSetIterator",
+      "type": "class",
+      "name": "OriginSetIterator",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [103, 107],
+      "summary": "Iterator over CSS cascade origins in an OriginSet, yielding origins from highest priority (Author) to lowest (UserAgent) or in reverse.",
+      "tags": ["iterator", "cascade", "origin", "priority"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:PerOrigin",
+      "type": "class",
+      "name": "PerOrigin",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [131, 140],
+      "summary": "Generic container storing a value of type T for each of the three CSS cascade origins (UserAgent, User, Author) with accessors and iterators.",
+      "tags": ["generic", "container", "per-origin", "cascade"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:PerOriginIter",
+      "type": "class",
+      "name": "PerOriginIter",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [200, 204],
+      "summary": "Immutable iterator over PerOrigin references, yielding (reference, Origin) pairs from highest priority (Author) to lowest (UserAgent).",
+      "tags": ["iterator", "per-origin", "cascade", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:PerOriginIterMut",
+      "type": "class",
+      "name": "PerOriginIterMut",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [227, 231],
+      "summary": "Mutable iterator over PerOrigin references using unsafe code, yielding (mutable reference, Origin) pairs from highest to lowest priority.",
+      "tags": ["iterator", "per-origin", "cascade", "unsafe", "mutable"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/page_rule.rs",
+      "type": "file",
+      "name": "page_rule.rs",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "summary": "Implements the @page CSS at-rule for print and paged media, including page selectors with pseudo-classes (first, blank, left, right) and specificity calculation.",
+      "tags": ["css", "page", "at-rule", "print", "paged-media"],
+      "complexity": "complex",
+      "languageNotes": "Implements page selector specificity as a packed u32 value with hard limits on pseudo-class counts, using SmallVec for compact pseudo-class storage."
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "class",
+      "name": "PageSelector",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [128, 137],
+      "summary": "A @page selector with a page name and optional pseudo-classes (first, blank, left, right), supporting identity matching, specificity calculation, and CSS serialization.",
+      "tags": ["struct", "page-selector", "pseudo-class", "specificity"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "class",
+      "name": "PageSelectors",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [254, 254],
+      "summary": "A comma-separated list of @page selectors with parsing from CSS input, emptiness checks, and slice access.",
+      "tags": ["struct", "page-selector", "list", "parsing", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "class",
+      "name": "PageRule",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [293, 302],
+      "summary": "Represents a @page CSS rule with page selectors, nested rules, a property declaration block, and source location, with specificity computation and serialization.",
+      "tags": ["struct", "page-rule", "at-rule", "specificity", "serialization"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaEvaluator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaEvaluator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/media_queries/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/selector_map.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/shared_lock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/stylesheets/rule_list.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/values/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style/gecko_string_cache/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:selectors/kleene_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:servo_arc/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "file:style_traits/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "file:style/shared_lock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "file:style/gecko_string_cache/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "file:style_traits/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "class:style/stylesheets/nested_declarations_rule.rs:NestedDeclarationsRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "class:style/stylesheets/nested_declarations_rule.rs:NestedDeclarationsRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "file:style/properties/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "file:style/shared_lock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "file:servo_arc/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/nested_declarations_rule.rs",
+      "target": "file:style_traits/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:Origin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSetIterator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOrigin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOriginIter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOriginIterMut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:Origin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSetIterator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOrigin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOriginIter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:PerOriginIterMut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style/parser.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style/properties/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style/shared_lock.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style/stylesheets/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style/values/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:servo_arc/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "file:style_traits/lib.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/gecko/restyle_damage.rs",
+      "type": "file",
+      "name": "restyle_damage.rs",
+      "filePath": "style/gecko/restyle_damage.rs",
+      "summary": "Defines GeckoRestyleDamage, which computes minimal style-change hints by diffing old and new computed styles through Gecko FFI.",
+      "tags": [
+        "restyle",
+        "style-diffing",
+        "performance"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/gecko/restyle_damage.rs:GeckoRestyleDamage",
+      "type": "class",
+      "name": "GeckoRestyleDamage",
+      "filePath": "style/gecko/restyle_damage.rs",
+      "summary": "Wraps a Gecko nsChangeHint bitfield, providing methods to compute style differences, check damage containment, and compose hints.",
+      "tags": [
+        "ffi",
+        "restyle",
+        "change-hint"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "function:style/gecko/restyle_damage.rs:compute_style_difference",
+      "type": "function",
+      "name": "compute_style_difference",
+      "filePath": "style/gecko/restyle_damage.rs",
+      "summary": "Diffs old and new computed styles via Gecko FFI to produce the minimal restyle damage hint.",
+      "tags": [
+        "style-diffing",
+        "ffi",
+        "restyle"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        46,
+        82
+      ]
+    },
+    {
+      "id": "file:style/gecko/selector_parser.rs",
+      "type": "file",
+      "name": "selector_parser.rs",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Implements the Gecko selector parser, handling pseudo-class, pseudo-element, namespace, and parent-selector parsing with feature-gating and error recovery.",
+      "tags": [
+        "css-selector",
+        "parsing",
+        "pseudo-class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/gecko/selector_parser.rs:SelectorImpl",
+      "type": "class",
+      "name": "SelectorImpl",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Implements the selectors crate's SelectorImpl trait for Gecko, defining how pseudo-classes, pseudo-elements, and attribute matching work.",
+      "tags": [
+        "selector-engine",
+        "css",
+        "trait-impl"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        330,
+        330
+      ]
+    },
+    {
+      "id": "class:style/gecko/selector_parser.rs:ExtraMatchingData",
+      "type": "class",
+      "name": "ExtraMatchingData",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Container for extra data collected during selector matching: invalidation data, cascade input flags, and originating element style.",
+      "tags": [
+        "selector-matching",
+        "cascade",
+        "invalidation"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        335,
+        346
+      ]
+    },
+    {
+      "id": "function:style/gecko/selector_parser.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Serializes a non-tree-structural pseudo-class to CSS text, handling complex pseudo-classes like :dir() and :lang().",
+      "tags": [
+        "serialization",
+        "pseudo-class",
+        "css"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        104,
+        165
+      ]
+    },
+    {
+      "id": "function:style/gecko/selector_parser.rs:parse_functional_pseudo_element_with_name",
+      "type": "function",
+      "name": "parse_functional_pseudo_element_with_name",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Parses functional pseudo-elements like ::highlight(...) and ::view-transition(...) with their arguments.",
+      "tags": [
+        "parsing",
+        "pseudo-element",
+        "css-selector"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        409,
+        472
+      ]
+    },
+    {
+      "id": "function:style/gecko/selector_parser.rs:parse_non_ts_functional_pseudo_class",
+      "type": "function",
+      "name": "parse_non_ts_functional_pseudo_class",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Parses functional non-tree-structural pseudo-classes like :lang(), :dir() with feature-gating checks.",
+      "tags": [
+        "parsing",
+        "pseudo-class",
+        "css-selector"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        540,
+        593
+      ]
+    },
+    {
+      "id": "function:style/gecko/selector_parser.rs:has_any_flag",
+      "type": "function",
+      "name": "has_any_flag",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Checks whether a non-TS pseudo-class has any of the specified feature flags, determining its enabled contexts.",
+      "tags": [
+        "feature-gating",
+        "pseudo-class",
+        "validation"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        193,
+        216
+      ]
+    },
+    {
+      "id": "function:style/gecko/selector_parser.rs:is_enabled_in_content",
+      "type": "function",
+      "name": "is_enabled_in_content",
+      "filePath": "style/gecko/selector_parser.rs",
+      "summary": "Checks if a pseudo-class is enabled for use in content (non-UA, non-chrome) stylesheets.",
+      "tags": [
+        "feature-gating",
+        "content",
+        "pseudo-class"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        220,
+        246
+      ]
+    },
+    {
+      "id": "file:style/gecko/snapshot.rs",
+      "type": "file",
+      "name": "snapshot.rs",
+      "filePath": "style/gecko/snapshot.rs",
+      "summary": "Implements GeckoElementSnapshot, capturing element attribute/state changes for restyle invalidation and selector matching during style recalc.",
+      "tags": [
+        "snapshot",
+        "invalidation",
+        "restyle"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/gecko/snapshot.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/gecko/snapshot.rs",
+      "summary": "Retrieves or creates a snapshot for an element using Gecko FFI, transmuting between element representations.",
+      "tags": [
+        "snapshot",
+        "ffi",
+        "restyle"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        40,
+        47
+      ]
+    },
+    {
+      "id": "function:style/gecko/snapshot.rs:attr_matches",
+      "type": "function",
+      "name": "attr_matches",
+      "filePath": "style/gecko/snapshot.rs",
+      "summary": "Delegates attribute selector matching to the snapshot_helpers module for the captured snapshot.",
+      "tags": [
+        "attribute-matching",
+        "selector",
+        "snapshot"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        87,
+        94
+      ]
+    },
+    {
+      "id": "function:style/gecko/snapshot.rs:state",
+      "type": "function",
+      "name": "state",
+      "filePath": "style/gecko/snapshot.rs",
+      "summary": "Returns the element state captured in the snapshot if the state has changed.",
+      "tags": [
+        "element-state",
+        "snapshot",
+        "css"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        107,
+        113
+      ]
+    },
+    {
+      "id": "file:style/gecko/snapshot_helpers.rs",
+      "type": "file",
+      "name": "snapshot_helpers.rs",
+      "filePath": "style/gecko/snapshot_helpers.rs",
+      "summary": "Provides attribute matching and class/part enumeration helpers for Gecko element snapshots, including CSS selector attribute matching operations.",
+      "tags": [
+        "attribute-matching",
+        "selector-engine",
+        "snapshot"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/gecko/snapshot_helpers.rs:get_class_or_part_from_attr",
+      "type": "function",
+      "name": "get_class_or_part_from_attr",
+      "filePath": "style/gecko/snapshot_helpers.rs",
+      "summary": "Extracts class or part attribute values from Gecko's raw attribute storage, handling single and multiple atom representations.",
+      "tags": [
+        "attribute-parsing",
+        "class",
+        "part"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        40,
+        66
+      ]
+    },
+    {
+      "id": "function:style/gecko/snapshot_helpers.rs:attr_matches_checked_name",
+      "type": "function",
+      "name": "attr_matches_checked_name",
+      "filePath": "style/gecko/snapshot_helpers.rs",
+      "summary": "Performs CSS attribute selector matching (equals, includes, dash-equals, prefix, suffix, substring) on a Gecko attribute via FFI.",
+      "tags": [
+        "attribute-matching",
+        "css-selector",
+        "ffi"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        261,
+        316
+      ]
+    },
+    {
+      "id": "function:style/gecko/snapshot_helpers.rs:has_class_or_part",
+      "type": "function",
+      "name": "has_class_or_part",
+      "filePath": "style/gecko/snapshot_helpers.rs",
+      "summary": "Checks if an element has a specific class or part name, handling case sensitivity and ASCII case-insensitive matching.",
+      "tags": [
+        "class-matching",
+        "part-matching",
+        "selector"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        165,
+        185
+      ]
+    },
+    {
+      "id": "function:style/gecko/snapshot_helpers.rs:attr_matches",
+      "type": "function",
+      "name": "attr_matches",
+      "filePath": "style/gecko/snapshot_helpers.rs",
+      "summary": "Iterates over element attributes to find matching ones by namespace and local name, then delegates to checked name matching.",
+      "tags": [
+        "attribute-matching",
+        "selector",
+        "iteration"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        233,
+        257
+      ]
+    },
+    {
+      "id": "file:style/gecko/traversal.rs",
+      "type": "file",
+      "name": "traversal.rs",
+      "filePath": "style/gecko/traversal.rs",
+      "summary": "Implements the DOM tree traversal for style recalculation in Gecko, providing preorder and postorder processing with data initialization.",
+      "tags": [
+        "traversal",
+        "dom",
+        "restyle"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/gecko/traversal.rs:RecalcStyleOnly",
+      "type": "class",
+      "name": "RecalcStyleOnly",
+      "filePath": "style/gecko/traversal.rs",
+      "summary": "Traversal implementation that only performs style recalculation without layout or frame construction.",
+      "tags": [
+        "traversal",
+        "style-recalc",
+        "dom"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        14,
+        16
+      ]
+    },
+    {
+      "id": "function:style/gecko/traversal.rs:process_preorder",
+      "type": "function",
+      "name": "process_preorder",
+      "filePath": "style/gecko/traversal.rs",
+      "summary": "Processes a DOM node in preorder during style traversal, ensuring element data and calling recalc_style_at.",
+      "tags": [
+        "traversal",
+        "preorder",
+        "style-recalc"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        26,
+        39
+      ]
+    },
+    {
+      "id": "file:style/gecko/wrapper.rs",
+      "type": "file",
+      "name": "wrapper.rs",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Core Gecko DOM element/node wrappers (GeckoElement, GeckoNode, GeckoDocument, GeckoShadowRoot) implementing Servo's TElement/TNode traits for style system integration.",
+      "tags": [
+        "dom-wrapper",
+        "element",
+        "ffi-bridge"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/gecko/wrapper.rs:GeckoDocument",
+      "type": "class",
+      "name": "GeckoDocument",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Wraps a raw Gecko document pointer, providing access to element lookups by ID, shared lock, stylesheets, and quirks mode.",
+      "tags": [
+        "document",
+        "dom-wrapper",
+        "ffi"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        111,
+        111
+      ]
+    },
+    {
+      "id": "class:style/gecko/wrapper.rs:GeckoShadowRoot",
+      "type": "class",
+      "name": "GeckoShadowRoot",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Wraps a raw Gecko shadow root pointer, providing element lookup by ID, parts mapping, and implicit scope for stylesheets.",
+      "tags": [
+        "shadow-dom",
+        "dom-wrapper",
+        "scoping"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        148,
+        148
+      ]
+    },
+    {
+      "id": "class:style/gecko/wrapper.rs:GeckoNode",
+      "type": "class",
+      "name": "GeckoNode",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Wraps a raw Gecko DOM node pointer, implementing node traversal, flags, and parent/child/sibling access for the Servo style system.",
+      "tags": [
+        "dom-node",
+        "traversal",
+        "dom-wrapper"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        230,
+        230
+      ]
+    },
+    {
+      "id": "class:style/gecko/wrapper.rs:GeckoElement",
+      "type": "class",
+      "name": "GeckoElement",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Wraps a raw Gecko DOM element pointer, implementing the full TElement trait with attribute matching, state handling, animations, and CSS transitions.",
+      "tags": [
+        "dom-element",
+        "style-system",
+        "ffi-bridge"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        637,
+        637
+      ]
+    },
+    {
+      "id": "class:style/gecko/wrapper.rs:GeckoChildrenIterator",
+      "type": "class",
+      "name": "GeckoChildrenIterator",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Iterator for traversing Gecko DOM children, supporting both current and Gecko iterator modes.",
+      "tags": [
+        "iteration",
+        "dom-children",
+        "traversal"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        594,
+        600
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:match_non_ts_pseudo_class",
+      "type": "function",
+      "name": "match_non_ts_pseudo_class",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Core pseudo-class matching entry point dispatching to individual pseudo-class handlers (hover, active, focus, lang, dir, etc.) via Gecko element state.",
+      "tags": [
+        "pseudo-class-matching",
+        "selector-engine",
+        "element-state"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        2017,
+        2172
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:note_explicit_hints",
+      "type": "function",
+      "name": "note_explicit_hints",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Records restyle hints and change hints on an element, updating hint bitfields and scheduling animation processing via Gecko FFI.",
+      "tags": [
+        "restyle",
+        "change-hint",
+        "ffi"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        817,
+        845
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:synthesize_presentational_hints_for_legacy_attributes",
+      "type": "function",
+      "name": "synthesize_presentational_hints_for_legacy_attributes",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Converts legacy HTML presentational attributes (bgcolor, align, border, etc.) into modern CSS property declarations for Servo cascade.",
+      "tags": [
+        "attribute-conversion",
+        "legacy-html",
+        "css-cascade"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1633,
+        1788
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:needs_transitions_update",
+      "type": "function",
+      "name": "needs_transitions_update",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Determines whether CSS transitions need updating by comparing before/after style and checking property overlap.",
+      "tags": [
+        "css-transitions",
+        "animation",
+        "style-diffing"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1523,
+        1561
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:update_animations",
+      "type": "function",
+      "name": "update_animations",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Updates CSS animations and transitions for an element, dispatching animation tasks to Gecko via FFI.",
+      "tags": [
+        "animation",
+        "css-transitions",
+        "ffi"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1474,
+        1498
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:get_animation_rule",
+      "type": "function",
+      "name": "get_animation_rule",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Retrieves the animation cascade rule for an element from Gecko animation system.",
+      "tags": [
+        "animation-rule",
+        "cascade",
+        "ffi"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        978,
+        1000
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:flattened_tree_parent",
+      "type": "function",
+      "name": "flattened_tree_parent",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Computes the flattened tree parent of a node, handling shadow DOM boundaries and slot assignment.",
+      "tags": [
+        "shadow-dom",
+        "tree-traversal",
+        "flattened-tree"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        390,
+        410
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:clear_data",
+      "type": "function",
+      "name": "clear_data",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Clears per-element style data when an element is removed from the tree, releasing Gecko references.",
+      "tags": [
+        "cleanup",
+        "memory",
+        "style-data"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        1426,
+        1445
+      ]
+    },
+    {
+      "id": "function:style/gecko/wrapper.rs:apply_selector_flags",
+      "type": "function",
+      "name": "apply_selector_flags",
+      "filePath": "style/gecko/wrapper.rs",
+      "summary": "Applies selector-derived flags to a node, optimizing subsequent selector matching by caching matching outcomes.",
+      "tags": [
+        "selector-matching",
+        "optimization",
+        "flags"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        1937,
+        1954
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/gecko/restyle_damage.rs",
+      "target": "class:style/gecko/restyle_damage.rs:GeckoRestyleDamage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/restyle_damage.rs",
+      "target": "function:style/gecko/restyle_damage.rs:compute_style_difference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/restyle_damage.rs",
+      "target": "class:style/gecko/restyle_damage.rs:GeckoRestyleDamage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "class:style/gecko/selector_parser.rs:SelectorImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "class:style/gecko/selector_parser.rs:ExtraMatchingData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "function:style/gecko/selector_parser.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "function:style/gecko/selector_parser.rs:parse_functional_pseudo_element_with_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "function:style/gecko/selector_parser.rs:parse_non_ts_functional_pseudo_class",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "function:style/gecko/selector_parser.rs:has_any_flag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "function:style/gecko/selector_parser.rs:is_enabled_in_content",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "class:style/gecko/selector_parser.rs:SelectorImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/selector_parser.rs",
+      "target": "class:style/gecko/selector_parser.rs:ExtraMatchingData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/snapshot.rs",
+      "target": "function:style/gecko/snapshot.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot.rs",
+      "target": "function:style/gecko/snapshot.rs:attr_matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot.rs",
+      "target": "function:style/gecko/snapshot.rs:state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot_helpers.rs",
+      "target": "function:style/gecko/snapshot_helpers.rs:get_class_or_part_from_attr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot_helpers.rs",
+      "target": "function:style/gecko/snapshot_helpers.rs:attr_matches_checked_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot_helpers.rs",
+      "target": "function:style/gecko/snapshot_helpers.rs:has_class_or_part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/snapshot_helpers.rs",
+      "target": "function:style/gecko/snapshot_helpers.rs:attr_matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/traversal.rs",
+      "target": "class:style/gecko/traversal.rs:RecalcStyleOnly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/traversal.rs",
+      "target": "function:style/gecko/traversal.rs:process_preorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/traversal.rs",
+      "target": "class:style/gecko/traversal.rs:RecalcStyleOnly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoShadowRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoChildrenIterator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:match_non_ts_pseudo_class",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:note_explicit_hints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:synthesize_presentational_hints_for_legacy_attributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:needs_transitions_update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:update_animations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:get_animation_rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:flattened_tree_parent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:clear_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "function:style/gecko/wrapper.rs:apply_selector_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoDocument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoShadowRoot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko/wrapper.rs",
+      "target": "class:style/gecko/wrapper.rs:GeckoChildrenIterator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

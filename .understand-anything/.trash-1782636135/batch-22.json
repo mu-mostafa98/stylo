@@ -1,0 +1,697 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/typed_om/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/typed_om/mod.rs",
+      "summary": "Main module for the CSS Typed OM implementation providing property-agnostic value representations including numeric values, transform components, and the ToTyped reification trait, following the CSS Typed OM Level 1 specification.",
+      "tags": ["typed-om", "css-values", "type-definition", "reification", "data-model"],
+      "complexity": "complex",
+      "languageNotes": "Uses repr(C) for FFI compatibility with Gecko/Servo. ThinVec used for space-efficient inline storage. Derived trait implementations for Clone and Debug on all types."
+    },
+    {
+      "id": "file:style/typed_om/numeric_declaration.rs",
+      "type": "file",
+      "name": "numeric_declaration.rs",
+      "filePath": "style/typed_om/numeric_declaration.rs",
+      "summary": "Defines NumericDeclaration, an enum representing CSS numeric values either directly or as calc() expressions, with parsing support from CSS token streams.",
+      "tags": ["typed-om", "css-parser", "numeric-values"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/typed_om/numeric_values.rs",
+      "type": "file",
+      "name": "numeric_values.rs",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "summary": "Defines NoCalcNumeric, an enum representing CSS numeric values without calc() expressions, providing unit conversion and parsing for lengths, angles, times, numbers, and percentages.",
+      "tags": ["typed-om", "css-values", "unit-conversion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:UnparsedSegment",
+      "type": "class",
+      "name": "UnparsedSegment",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [31, 43],
+      "summary": "Enum representing a single segment of an unparsed Typed OM value, either a string fragment or a CSSVariableReferenceValue.",
+      "tags": ["typed-om", "enum", "css-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:VariableReferenceValue",
+      "type": "class",
+      "name": "VariableReferenceValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [68, 89],
+      "summary": "Represents a CSSVariableReferenceValue with the referenced custom property name, optional fallback value, and a flag distinguishing absent from explicitly empty fallbacks.",
+      "tags": ["typed-om", "css-custom-properties", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:KeywordValue",
+      "type": "class",
+      "name": "KeywordValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [99, 99],
+      "summary": "A CSSKeywordValue wrapper storing a keyword as a CssString for property-agnostic representation of values like none, block, or thin.",
+      "tags": ["typed-om", "keyword", "css-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:UnitValue",
+      "type": "class",
+      "name": "UnitValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [107, 113],
+      "summary": "Represents a CSSUnitValue with a numeric component and an associated unit string such as px, em, or deg.",
+      "tags": ["typed-om", "numeric", "css-value", "unit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:MathSum",
+      "type": "class",
+      "name": "MathSum",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [122, 125],
+      "summary": "Represents a CSSMathSum as a list of NumericValue terms for expressions such as 10px + 2em.",
+      "tags": ["typed-om", "numeric", "css-math"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:NumericValue",
+      "type": "class",
+      "name": "NumericValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [138, 148],
+      "summary": "Enum representing CSSNumericValue, either a concrete CSSUnitValue (unit and number) or a CSSMathSum (composite expression), with Zero and One trait implementations.",
+      "tags": ["typed-om", "numeric", "enum", "css-value"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/typed_om/mod.rs:zero_px",
+      "type": "function",
+      "name": "zero_px",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [153, 158],
+      "summary": "Returns a zero pixel UnitValue for initializing NumericValue transform components.",
+      "tags": ["typed-om", "utility", "numeric"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:TranslateComponent",
+      "type": "class",
+      "name": "TranslateComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [207, 219],
+      "summary": "Represents a CSSTranslate transform with x, y, z components and an is_2d flag, corresponding to CSS translate() and translate3d() functions.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:RotateComponent",
+      "type": "class",
+      "name": "RotateComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [232, 247],
+      "summary": "Represents a CSSRotate transform with angle and axis components, corresponding to CSS rotate() and rotate3d() functions.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:ScaleComponent",
+      "type": "class",
+      "name": "ScaleComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [259, 271],
+      "summary": "Represents a CSSScale transform with x, y, z scale factors, corresponding to CSS scale() and scale3d() functions.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:SkewComponent",
+      "type": "class",
+      "name": "SkewComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [282, 288],
+      "summary": "Represents a CSSSkew transform with ax and ay skew angles, always two-dimensional.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:PerspectiveValue",
+      "type": "class",
+      "name": "PerspectiveValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [312, 322],
+      "summary": "Union of CSSNumericValue and CSSKeywordValue for representing a perspective length value in a CSSPerspective transform.",
+      "tags": ["typed-om", "transform", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:PerspectiveComponent",
+      "type": "class",
+      "name": "PerspectiveComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [332, 335],
+      "summary": "Represents a CSSPerspective transform with a perspective length, always three-dimensional.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:MatrixComponent",
+      "type": "class",
+      "name": "MatrixComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [349, 355],
+      "summary": "Represents a CSSMatrixComponent storing a 4x4 transformation matrix with an is_2d flag.",
+      "tags": ["typed-om", "transform", "struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:TransformComponent",
+      "type": "class",
+      "name": "TransformComponent",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [363, 403],
+      "summary": "Enum covering all CSSTransformComponent variants including translate, rotate, scale, skew, perspective, and matrix, representing a CSS transform-list item.",
+      "tags": ["typed-om", "transform", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:ImageValue",
+      "type": "class",
+      "name": "ImageValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [419, 431],
+      "summary": "Enum representing a CSSImageValue with either a specified (relative) or computed (resolved) URL.",
+      "tags": ["typed-om", "image", "enum", "css-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:TypedValue",
+      "type": "class",
+      "name": "TypedValue",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [440, 469],
+      "summary": "Enum covering the primary CSSStyleValue subclasses used by Typed OM: Unparsed, Keyword, Numeric, Transform, and Image value variants.",
+      "tags": ["typed-om", "enum", "css-value"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:TypedValueList",
+      "type": "class",
+      "name": "TypedValueList",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [478, 481],
+      "summary": "Represents a list of TypedValue items for CSS values that reify to multiple property-agnostic components.",
+      "tags": ["typed-om", "struct", "css-value"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/typed_om/mod.rs:ToTyped",
+      "type": "class",
+      "name": "ToTyped",
+      "filePath": "style/typed_om/mod.rs",
+      "lineRange": [575, 623],
+      "summary": "Trait for converting CSS values into property-agnostic Typed OM representations, analogous to ToCss but producing CSSStyleValue subclasses. Derivable with #[derive(ToTyped)].",
+      "tags": ["typed-om", "trait", "reification", "derive"],
+      "complexity": "moderate",
+      "languageNotes": "Rust trait pattern with default method implementations. Provides blanket impls for references, Box, and Arc. Derivable via a custom derive macro."
+    },
+    {
+      "id": "class:style/typed_om/numeric_declaration.rs:NumericDeclaration",
+      "type": "class",
+      "name": "NumericDeclaration",
+      "filePath": "style/typed_om/numeric_declaration.rs",
+      "lineRange": [19, 27],
+      "summary": "Enum representing a CSS numeric declaration, either as a direct NoCalc value or as a calc() expression parsed from CSS tokens.",
+      "tags": ["typed-om", "enum", "css-parser", "numeric-values"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/typed_om/numeric_declaration.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/typed_om/numeric_declaration.rs",
+      "lineRange": [31, 78],
+      "summary": "Parses a NumericDeclaration from a CSS token stream, handling dimension tokens as NoCalc values and function tokens as calc() expressions.",
+      "tags": ["typed-om", "css-parser", "parsing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/typed_om/numeric_values.rs:NoCalcNumeric",
+      "type": "class",
+      "name": "NoCalcNumeric",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [18, 44],
+      "summary": "Enum representing CSS numeric values without calc() expressions, covering length, angle, time, number, and percentage types.",
+      "tags": ["typed-om", "enum", "css-values", "numeric"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/typed_om/numeric_values.rs:unitless_value",
+      "type": "function",
+      "name": "unitless_value",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [48, 56],
+      "summary": "Returns the raw unitless numeric value from a NoCalcNumeric variant by delegating to each variant's own unitless_value method.",
+      "tags": ["typed-om", "utility", "numeric"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/typed_om/numeric_values.rs:unit",
+      "type": "function",
+      "name": "unit",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [63, 71],
+      "summary": "Returns the unit string associated with a NoCalcNumeric value by delegating to each variant's unit method.",
+      "tags": ["typed-om", "utility", "numeric"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/typed_om/numeric_values.rs:canonical_unit",
+      "type": "function",
+      "name": "canonical_unit",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [77, 85],
+      "summary": "Returns the canonical unit for a NoCalcNumeric value, if one exists, for conversion operations.",
+      "tags": ["typed-om", "utility", "numeric", "conversion"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/typed_om/numeric_values.rs:to",
+      "type": "function",
+      "name": "to",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [91, 99],
+      "summary": "Converts a NoCalcNumeric value to a specified target unit if the types are compatible, propagating conversion errors.",
+      "tags": ["typed-om", "utility", "numeric", "conversion"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/typed_om/numeric_values.rs:parse_unit_value",
+      "type": "function",
+      "name": "parse_unit_value",
+      "filePath": "style/typed_om/numeric_values.rs",
+      "lineRange": [102, 127],
+      "summary": "Parses a dimension value with a unit string into the appropriate NoCalcNumeric variant by attempting length, angle, time, number, and percentage parsers in order.",
+      "tags": ["typed-om", "parsing", "numeric"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:UnparsedSegment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:UnparsedSegment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:VariableReferenceValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:VariableReferenceValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:KeywordValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:KeywordValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:UnitValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:UnitValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:MathSum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:MathSum",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:NumericValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:NumericValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "function:style/typed_om/mod.rs:zero_px",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "function:style/typed_om/mod.rs:zero_px",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TranslateComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TranslateComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:RotateComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:RotateComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ScaleComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ScaleComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:SkewComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:SkewComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:PerspectiveValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:PerspectiveValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:PerspectiveComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:PerspectiveComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:MatrixComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:MatrixComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TransformComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TransformComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ImageValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ImageValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TypedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TypedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TypedValueList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:TypedValueList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ToTyped",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "class:style/typed_om/mod.rs:ToTyped",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "file:style/typed_om/numeric_declaration.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "file:style/typed_om/numeric_values.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/typed_om/mod.rs",
+      "target": "file:style/typed_om/sum_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/typed_om/numeric_declaration.rs",
+      "target": "class:style/typed_om/numeric_declaration.rs:NumericDeclaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_declaration.rs",
+      "target": "class:style/typed_om/numeric_declaration.rs:NumericDeclaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_declaration.rs",
+      "target": "function:style/typed_om/numeric_declaration.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "class:style/typed_om/numeric_values.rs:NoCalcNumeric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "class:style/typed_om/numeric_values.rs:NoCalcNumeric",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:unitless_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:unitless_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:canonical_unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:canonical_unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:to",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:to",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:parse_unit_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/typed_om/numeric_values.rs",
+      "target": "function:style/typed_om/numeric_values.rs:parse_unit_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

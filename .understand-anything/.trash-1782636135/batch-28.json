@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "id": "document:selectors/CHANGES.md",
+      "type": "document",
+      "name": "CHANGES.md",
+      "filePath": "selectors/CHANGES.md",
+      "summary": "Changelog documenting a single API change in the selectors crate's parser.rs, noting that values are no longer wrapped in quotes by to_css and must be wrapped by the caller.",
+      "tags": ["documentation", "changelog", "selectors"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:selectors/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "selectors/Cargo.toml",
+      "summary": "Package manifest for the selectors v0.38.0 Rust crate, defining library configuration, feature flags (bench, to_shmem), and dependencies including cssparser, bitflags, servo_arc, and phf for CSS selector parsing and matching.",
+      "tags": ["configuration", "rust", "package-manifest", "build-system", "selectors"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:selectors/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "selectors/README.md",
+      "summary": "Project overview for the rust-selectors crate providing CSS selector parsing, serialization, and generic tree-matching functionality, with usage guidance and links to documentation and related projects like Kuchiki.",
+      "tags": ["documentation", "selectors", "rust", "crate-overview"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:selectors/Cargo.toml",
+      "target": "file:selectors/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:selectors/README.md",
+      "target": "file:selectors/lib.rs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:selectors/CHANGES.md",
+      "target": "file:selectors/parser.rs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

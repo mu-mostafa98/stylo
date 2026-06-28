@@ -1,0 +1,31 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/color/color_function.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/component.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/convert.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/mod.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/parsing.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/well_founded.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/color/write.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/specified/color.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/color/color_function.rs": [],
+    "style/color/component.rs": [],
+    "style/color/convert.rs": [],
+    "style/color/mod.rs": [
+      "style/color/color_function.rs",
+      "style/color/component.rs",
+      "style/color/convert.rs",
+      "style/color/gamut.rs",
+      "style/color/mix.rs",
+      "style/color/parsing.rs",
+      "style/color/to_css.rs"
+    ],
+    "style/color/parsing.rs": [],
+    "style/color/well_founded.rs": [],
+    "style/color/write.rs": [],
+    "style/values/specified/color.rs": []
+  }
+}

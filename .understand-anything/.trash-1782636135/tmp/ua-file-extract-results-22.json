@@ -1,0 +1,968 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [
+    "style/typed_om/output.rs"
+  ],
+  "results": [
+    {
+      "path": "style/typed_om/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 680,
+      "nonEmptyLines": 611,
+      "functions": [
+        {
+          "name": "zero_px",
+          "startLine": 153,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "zero",
+          "startLine": 163,
+          "endLine": 168,
+          "params": []
+        },
+        {
+          "name": "is_zero",
+          "startLine": 171,
+          "endLine": 176,
+          "params": []
+        },
+        {
+          "name": "one",
+          "startLine": 181,
+          "endLine": 186,
+          "params": []
+        },
+        {
+          "name": "is_one",
+          "startLine": 189,
+          "endLine": 194,
+          "params": []
+        },
+        {
+          "name": "to_typed",
+          "startLine": 629,
+          "endLine": 631,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 638,
+          "endLine": 640,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 647,
+          "endLine": 649,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 653,
+          "endLine": 661,
+          "params": [
+            "dest"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UnparsedSegment",
+          "startLine": 31,
+          "endLine": 43,
+          "methods": [],
+          "properties": [
+            "String",
+            "VariableReference"
+          ]
+        },
+        {
+          "name": "VariableReferenceValue",
+          "startLine": 68,
+          "endLine": 89,
+          "methods": [],
+          "properties": [
+            "variable",
+            "fallback",
+            "has_fallback"
+          ]
+        },
+        {
+          "name": "KeywordValue",
+          "startLine": 99,
+          "endLine": 99,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "UnitValue",
+          "startLine": 107,
+          "endLine": 113,
+          "methods": [],
+          "properties": [
+            "value",
+            "unit"
+          ]
+        },
+        {
+          "name": "MathSum",
+          "startLine": 122,
+          "endLine": 125,
+          "methods": [],
+          "properties": [
+            "values"
+          ]
+        },
+        {
+          "name": "NumericValue",
+          "startLine": 138,
+          "endLine": 148,
+          "methods": [
+            "zero_px",
+            "zero",
+            "is_zero",
+            "one",
+            "is_one"
+          ],
+          "properties": [
+            "Unit",
+            "Sum"
+          ]
+        },
+        {
+          "name": "TranslateComponent",
+          "startLine": 207,
+          "endLine": 219,
+          "methods": [],
+          "properties": [
+            "x",
+            "y",
+            "z",
+            "is_2d"
+          ]
+        },
+        {
+          "name": "RotateComponent",
+          "startLine": 232,
+          "endLine": 247,
+          "methods": [],
+          "properties": [
+            "angle",
+            "x",
+            "y",
+            "z",
+            "is_2d"
+          ]
+        },
+        {
+          "name": "ScaleComponent",
+          "startLine": 259,
+          "endLine": 271,
+          "methods": [],
+          "properties": [
+            "x",
+            "y",
+            "z",
+            "is_2d"
+          ]
+        },
+        {
+          "name": "SkewComponent",
+          "startLine": 282,
+          "endLine": 288,
+          "methods": [],
+          "properties": [
+            "ax",
+            "ay"
+          ]
+        },
+        {
+          "name": "PerspectiveValue",
+          "startLine": 312,
+          "endLine": 322,
+          "methods": [],
+          "properties": [
+            "Numeric",
+            "Keyword"
+          ]
+        },
+        {
+          "name": "PerspectiveComponent",
+          "startLine": 332,
+          "endLine": 335,
+          "methods": [],
+          "properties": [
+            "length"
+          ]
+        },
+        {
+          "name": "MatrixComponent",
+          "startLine": 349,
+          "endLine": 355,
+          "methods": [],
+          "properties": [
+            "matrix",
+            "is_2d"
+          ]
+        },
+        {
+          "name": "TransformComponent",
+          "startLine": 363,
+          "endLine": 403,
+          "methods": [],
+          "properties": [
+            "Translate",
+            "Rotate",
+            "Scale",
+            "Skew",
+            "SkewX",
+            "SkewY",
+            "Perspective",
+            "Matrix"
+          ]
+        },
+        {
+          "name": "ImageValue",
+          "startLine": 419,
+          "endLine": 431,
+          "methods": [],
+          "properties": [
+            "Specified",
+            "Computed"
+          ]
+        },
+        {
+          "name": "TypedValue",
+          "startLine": 440,
+          "endLine": 469,
+          "methods": [],
+          "properties": [
+            "Unparsed",
+            "Keyword",
+            "Numeric",
+            "Transform",
+            "Image"
+          ]
+        },
+        {
+          "name": "TypedValueList",
+          "startLine": 478,
+          "endLine": 481,
+          "methods": [],
+          "properties": [
+            "values"
+          ]
+        },
+        {
+          "name": "ToTyped",
+          "startLine": 575,
+          "endLine": 623,
+          "methods": [
+            "to_typed",
+            "to_typed_value",
+            "to_numeric_value",
+            "to_typed_value_list"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnparsedSegment",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "VariableReferenceValue",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "KeywordValue",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "UnitValue",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "MathSum",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "NumericValue",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "zero_px",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "TranslateComponent",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "RotateComponent",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "ScaleComponent",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "SkewComponent",
+          "line": 282,
+          "isDefault": false
+        },
+        {
+          "name": "PerspectiveValue",
+          "line": 312,
+          "isDefault": false
+        },
+        {
+          "name": "PerspectiveComponent",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "MatrixComponent",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "TransformComponent",
+          "line": 363,
+          "isDefault": false
+        },
+        {
+          "name": "ImageValue",
+          "line": 419,
+          "isDefault": false
+        },
+        {
+          "name": "TypedValue",
+          "line": 440,
+          "isDefault": false
+        },
+        {
+          "name": "TypedValueList",
+          "line": 478,
+          "isDefault": false
+        },
+        {
+          "name": "ToTyped",
+          "line": 575,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "zero_px",
+          "callee": "Self::Unit",
+          "lineNumber": 154
+        },
+        {
+          "caller": "zero_px",
+          "callee": "CssString::from",
+          "lineNumber": 156
+        },
+        {
+          "caller": "zero",
+          "callee": "Self::Unit",
+          "lineNumber": 164
+        },
+        {
+          "caller": "zero",
+          "callee": "CssString::from",
+          "lineNumber": 166
+        },
+        {
+          "caller": "one",
+          "callee": "Self::Unit",
+          "lineNumber": 182
+        },
+        {
+          "caller": "one",
+          "callee": "CssString::from",
+          "lineNumber": 184
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Err",
+          "lineNumber": 586
+        },
+        {
+          "caller": "to_typed_value",
+          "callee": "ThinVec::new",
+          "lineNumber": 596
+        },
+        {
+          "caller": "to_typed_value",
+          "callee": "self.to_typed(&mut dest).ok",
+          "lineNumber": 597
+        },
+        {
+          "caller": "to_typed_value",
+          "callee": "self.to_typed",
+          "lineNumber": 597
+        },
+        {
+          "caller": "to_typed_value",
+          "callee": "dest.into_iter().next",
+          "lineNumber": 598
+        },
+        {
+          "caller": "to_typed_value",
+          "callee": "dest.into_iter",
+          "lineNumber": 598
+        },
+        {
+          "caller": "to_numeric_value",
+          "callee": "self.to_typed_value",
+          "lineNumber": 606
+        },
+        {
+          "caller": "to_numeric_value",
+          "callee": "Some",
+          "lineNumber": 607
+        },
+        {
+          "caller": "to_typed_value_list",
+          "callee": "ThinVec::new",
+          "lineNumber": 619
+        },
+        {
+          "caller": "to_typed_value_list",
+          "callee": "self.to_typed(&mut dest).ok",
+          "lineNumber": 620
+        },
+        {
+          "caller": "to_typed_value_list",
+          "callee": "self.to_typed",
+          "lineNumber": 620
+        },
+        {
+          "caller": "to_typed_value_list",
+          "callee": "Some",
+          "lineNumber": 621
+        },
+        {
+          "caller": "to_typed",
+          "callee": "(*self).to_typed",
+          "lineNumber": 630
+        },
+        {
+          "caller": "to_typed",
+          "callee": "(**self).to_typed",
+          "lineNumber": 639
+        },
+        {
+          "caller": "to_typed",
+          "callee": "(**self).to_typed",
+          "lineNumber": 648
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.to_f32_px",
+          "lineNumber": 654
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 655
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 656
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Numeric",
+          "lineNumber": 656
+        },
+        {
+          "caller": "to_typed",
+          "callee": "NumericValue::Unit",
+          "lineNumber": 656
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 660
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 19,
+        "functionCount": 9,
+        "classCount": 18
+      }
+    },
+    {
+      "path": "style/typed_om/numeric_declaration.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "parse",
+          "startLine": 31,
+          "endLine": 78,
+          "params": [
+            "context",
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NumericDeclaration",
+          "startLine": 19,
+          "endLine": 27,
+          "methods": [
+            "parse"
+          ],
+          "properties": [
+            "NoCalc",
+            "Calc"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NumericDeclaration",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse",
+          "callee": "input.current_source_location",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parse",
+          "callee": "input.next",
+          "lineNumber": 38
+        },
+        {
+          "caller": "parse",
+          "callee": "NoCalcLength::parse_dimension_with_context(context, value, unit)\r\n                    .map(NoCalcNumeric::Length)\r\n                    .map(Self::NoCalc).map_err",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parse",
+          "callee": "NoCalcLength::parse_dimension_with_context(context, value, unit)\r\n                    .map(NoCalcNumeric::Length).map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parse",
+          "callee": "NoCalcLength::parse_dimension_with_context(context, value, unit).map",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parse",
+          "callee": "NoCalcLength::parse_dimension_with_context",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parse",
+          "callee": "location.new_unexpected_token_error",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parse",
+          "callee": "token.clone",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parse",
+          "callee": "CalcNode::math_function",
+          "lineNumber": 59
+        },
+        {
+          "caller": "parse",
+          "callee": "AllowParse::new",
+          "lineNumber": 60
+        },
+        {
+          "caller": "parse",
+          "callee": "CalcNode::parse",
+          "lineNumber": 61
+        },
+        {
+          "caller": "parse",
+          "callee": "node\r\n                    .clone()\r\n                    .into_length_or_percentage(allow_all_types).map_err",
+          "lineNumber": 64
+        },
+        {
+          "caller": "parse",
+          "callee": "node\r\n                    .clone().into_length_or_percentage",
+          "lineNumber": 64
+        },
+        {
+          "caller": "parse",
+          "callee": "node.clone",
+          "lineNumber": 64
+        },
+        {
+          "caller": "parse",
+          "callee": "location.new_custom_error",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 73
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::Calc",
+          "lineNumber": 73
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 76
+        },
+        {
+          "caller": "parse",
+          "callee": "location.new_unexpected_token_error",
+          "lineNumber": 76
+        },
+        {
+          "caller": "parse",
+          "callee": "token.clone",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/typed_om/numeric_values.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 128,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "unitless_value",
+          "startLine": 48,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "unit",
+          "startLine": 63,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "canonical_unit",
+          "startLine": 77,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "to",
+          "startLine": 91,
+          "endLine": 99,
+          "params": [
+            "unit"
+          ]
+        },
+        {
+          "name": "parse_unit_value",
+          "startLine": 102,
+          "endLine": 127,
+          "params": [
+            "value",
+            "unit"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "NoCalcNumeric",
+          "startLine": 18,
+          "endLine": 44,
+          "methods": [
+            "unitless_value",
+            "unit",
+            "canonical_unit",
+            "to",
+            "parse_unit_value"
+          ],
+          "properties": [
+            "Length",
+            "Angle",
+            "Time",
+            "Number",
+            "Percentage"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NoCalcNumeric",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "unitless_value",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "unit",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "canonical_unit",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "to",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "parse_unit_value",
+          "line": 102,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "unitless_value",
+          "callee": "v.unitless_value",
+          "lineNumber": 50
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "v.unitless_value",
+          "lineNumber": 51
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "v.unitless_value",
+          "lineNumber": 52
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "v.get",
+          "lineNumber": 53
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "v.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "unit",
+          "callee": "v.unit",
+          "lineNumber": 65
+        },
+        {
+          "caller": "unit",
+          "callee": "v.unit",
+          "lineNumber": 66
+        },
+        {
+          "caller": "unit",
+          "callee": "v.unit",
+          "lineNumber": 67
+        },
+        {
+          "caller": "unit",
+          "callee": "v.unit",
+          "lineNumber": 68
+        },
+        {
+          "caller": "unit",
+          "callee": "v.unit",
+          "lineNumber": 69
+        },
+        {
+          "caller": "canonical_unit",
+          "callee": "v.canonical_unit",
+          "lineNumber": 79
+        },
+        {
+          "caller": "canonical_unit",
+          "callee": "v.canonical_unit",
+          "lineNumber": 80
+        },
+        {
+          "caller": "canonical_unit",
+          "callee": "v.canonical_unit",
+          "lineNumber": 81
+        },
+        {
+          "caller": "canonical_unit",
+          "callee": "v.canonical_unit",
+          "lineNumber": 82
+        },
+        {
+          "caller": "canonical_unit",
+          "callee": "v.canonical_unit",
+          "lineNumber": 83
+        },
+        {
+          "caller": "to",
+          "callee": "Ok",
+          "lineNumber": 93
+        },
+        {
+          "caller": "to",
+          "callee": "Self::Length",
+          "lineNumber": 93
+        },
+        {
+          "caller": "to",
+          "callee": "v.to",
+          "lineNumber": 93
+        },
+        {
+          "caller": "to",
+          "callee": "Ok",
+          "lineNumber": 94
+        },
+        {
+          "caller": "to",
+          "callee": "Self::Angle",
+          "lineNumber": 94
+        },
+        {
+          "caller": "to",
+          "callee": "v.to",
+          "lineNumber": 94
+        },
+        {
+          "caller": "to",
+          "callee": "Ok",
+          "lineNumber": 95
+        },
+        {
+          "caller": "to",
+          "callee": "Self::Time",
+          "lineNumber": 95
+        },
+        {
+          "caller": "to",
+          "callee": "v.to",
+          "lineNumber": 95
+        },
+        {
+          "caller": "to",
+          "callee": "Ok",
+          "lineNumber": 96
+        },
+        {
+          "caller": "to",
+          "callee": "Self::Number",
+          "lineNumber": 96
+        },
+        {
+          "caller": "to",
+          "callee": "v.to",
+          "lineNumber": 96
+        },
+        {
+          "caller": "to",
+          "callee": "Ok",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to",
+          "callee": "Self::Percentage",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to",
+          "callee": "v.to",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcLength::parse_dimension_with_flags",
+          "lineNumber": 103
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "Ok",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcNumeric::Length",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcAngle::parse_dimension",
+          "lineNumber": 112
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "Ok",
+          "lineNumber": 113
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcNumeric::Angle",
+          "lineNumber": 113
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcTime::parse_dimension",
+          "lineNumber": 116
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "Ok",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse_unit_value",
+          "callee": "NoCalcNumeric::Time",
+          "lineNumber": 117
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

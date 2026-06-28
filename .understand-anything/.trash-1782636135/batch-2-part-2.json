@@ -1,0 +1,634 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/generics/column.rs",
+      "type": "file",
+      "name": "column.rs",
+      "filePath": "style/values/generics/column.rs",
+      "summary": "Generic type for the CSS column-count property, defining a bounded non-negative integer type with auto value for multi-column layout.",
+      "tags": [
+        "generic",
+        "column",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/generics/content.rs",
+      "type": "file",
+      "name": "content.rs",
+      "filePath": "style/values/generics/content.rs",
+      "summary": "Generic types for CSS content property values. File was not found on disk during extraction.",
+      "tags": [
+        "generic",
+        "content",
+        "css-values",
+        "missing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/generics/counters.rs",
+      "type": "file",
+      "name": "counters.rs",
+      "filePath": "style/values/generics/counters.rs",
+      "summary": "Generic types for CSS counter properties including counter-increment, counter-set, counter-reset, and structured content items for the content property with counter references.",
+      "tags": [
+        "generic",
+        "counter",
+        "css-values",
+        "content"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/effects.rs",
+      "type": "file",
+      "name": "effects.rs",
+      "filePath": "style/values/generics/effects.rs",
+      "summary": "Generic types for CSS visual effects including box-shadow, filter functions (blur, brightness, contrast, etc.), and simple-shadow values used across the styling engine.",
+      "tags": [
+        "generic",
+        "effects",
+        "css-values",
+        "filter"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/flex.rs",
+      "type": "file",
+      "name": "flex.rs",
+      "filePath": "style/values/generics/flex.rs",
+      "summary": "Generic type for the CSS flex-basis property, defining the initial main size of a flex item as either a length-percentage or the content keyword.",
+      "tags": [
+        "generic",
+        "flex",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/column.rs:is_auto",
+      "type": "function",
+      "name": "is_auto",
+      "filePath": "style/values/generics/column.rs",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "Predicate checking if the value matches the auto variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/column.rs:GenericColumnCount",
+      "type": "class",
+      "name": "GenericColumnCount",
+      "filePath": "style/values/generics/column.rs",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "Generic type alias for ColumnCount, a CSS value type with 0 method(s) for column.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/counters.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        42,
+        58
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/counters.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        83,
+        85
+      ],
+      "summary": "Constructor creating a new instance of a CSS generic type from component values.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/counters.rs:is_items",
+      "type": "function",
+      "name": "is_items",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        263,
+        265
+      ],
+      "summary": "is_items() in counters - Trivial accessor or factory method.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/counters.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        269,
+        271
+      ],
+      "summary": "Factory method returning the normal variant for a CSS generic type in counters.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericCounterPair",
+      "type": "class",
+      "name": "GenericCounterPair",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        27,
+        35
+      ],
+      "summary": "Generic type alias for CounterPair, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericCounterIncrement",
+      "type": "class",
+      "name": "GenericCounterIncrement",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        77,
+        77
+      ],
+      "summary": "Generic type alias for CounterIncrement, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericCounterSet",
+      "type": "class",
+      "name": "GenericCounterSet",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        113,
+        113
+      ],
+      "summary": "Generic type alias for CounterSet, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericCounterReset",
+      "type": "class",
+      "name": "GenericCounterReset",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        149,
+        149
+      ],
+      "summary": "Generic type alias for CounterReset, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericCounters",
+      "type": "class",
+      "name": "GenericCounters",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        185,
+        189
+      ],
+      "summary": "Generic type alias for Counters, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericContentItems",
+      "type": "class",
+      "name": "GenericContentItems",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        202,
+        209
+      ],
+      "summary": "Generic type alias for ContentItems, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericContent",
+      "type": "class",
+      "name": "GenericContent",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        249,
+        256
+      ],
+      "summary": "Generic type alias for Content, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/counters.rs:GenericContentItem",
+      "type": "class",
+      "name": "GenericContentItem",
+      "filePath": "style/values/generics/counters.rs",
+      "lineRange": [
+        288,
+        321
+      ],
+      "summary": "Generic type alias for ContentItem, a CSS value type with 0 method(s) for counters.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/effects.rs:GenericBoxShadow",
+      "type": "class",
+      "name": "GenericBoxShadow",
+      "filePath": "style/values/generics/effects.rs",
+      "lineRange": [
+        28,
+        37
+      ],
+      "summary": "Generic type alias for BoxShadow, a CSS value type with 0 method(s) for effects.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/effects.rs:GenericFilter",
+      "type": "class",
+      "name": "GenericFilter",
+      "filePath": "style/values/generics/effects.rs",
+      "lineRange": [
+        60,
+        94
+      ],
+      "summary": "Generic type alias for Filter, a CSS value type with 0 method(s) for effects.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/effects.rs:GenericSimpleShadow",
+      "type": "class",
+      "name": "GenericSimpleShadow",
+      "filePath": "style/values/generics/effects.rs",
+      "lineRange": [
+        119,
+        128
+      ],
+      "summary": "Generic type alias for SimpleShadow, a CSS value type with 0 method(s) for effects.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/flex.rs:GenericFlexBasis",
+      "type": "class",
+      "name": "GenericFlexBasis",
+      "filePath": "style/values/generics/flex.rs",
+      "lineRange": [
+        27,
+        32
+      ],
+      "summary": "Generic type alias for FlexBasis, a CSS value type with 0 method(s) for flex.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/generics/column.rs",
+      "target": "function:style/values/generics/column.rs:is_auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/column.rs",
+      "target": "class:style/values/generics/column.rs:GenericColumnCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:is_items",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterPair",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterIncrement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterReset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContentItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContentItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericBoxShadow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericSimpleShadow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/flex.rs",
+      "target": "class:style/values/generics/flex.rs:GenericFlexBasis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/column.rs",
+      "target": "class:style/values/generics/column.rs:GenericColumnCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/column.rs",
+      "target": "function:style/values/generics/column.rs:is_auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterPair",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterIncrement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounterReset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericCounters",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContentItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:is_items",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "function:style/values/generics/counters.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/counters.rs",
+      "target": "class:style/values/generics/counters.rs:GenericContentItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericBoxShadow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericFilter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/effects.rs",
+      "target": "class:style/values/generics/effects.rs:GenericSimpleShadow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/flex.rs",
+      "target": "class:style/values/generics/flex.rs:GenericFlexBasis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

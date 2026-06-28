@@ -1,0 +1,12 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/properties/counter_style_descriptors.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/font_face_descriptors.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/longhands.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/Shorthands/Animation.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/Shorthands/Border.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/Shorthands/Overflow.toml", "language": "toml", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

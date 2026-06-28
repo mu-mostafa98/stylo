@@ -1,0 +1,482 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/corner_shape.rs",
+      "type": "file",
+      "name": "corner_shape.rs",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "summary": "Defines specified types for CSS corner-shape property, including CornerShape and SuperellipseArg types.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "corner-shape",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/corner_shape.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        35,
+        54
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/corner_shape.rs:to_k",
+      "type": "function",
+      "name": "to_k",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        57,
+        63
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/corner_shape.rs:round",
+      "type": "function",
+      "name": "round",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        92,
+        94
+      ],
+      "summary": "Handles round for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/corner_shape.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        123,
+        137
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/corner_shape.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        139,
+        148
+      ],
+      "summary": "Converts a computed value back to a specified value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "class",
+      "name": "SuperellipseArg",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        24,
+        32
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "class",
+      "name": "CornerShape",
+      "filePath": "style/values/specified/corner_shape.rs",
+      "lineRange": [
+        71,
+        87
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/counters.rs",
+      "type": "file",
+      "name": "counters.rs",
+      "filePath": "style/values/specified/counters.rs",
+      "summary": "Defines specified types for CSS counter properties, including Content, ContentItem, CounterIncrement, CounterReset and CounterSet types with counter()/counters() function parsing.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "counters",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/counters.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/counters.rs",
+      "lineRange": [
+        39,
+        48
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/counters.rs:parse_counters",
+      "type": "function",
+      "name": "parse_counters",
+      "filePath": "style/values/specified/counters.rs",
+      "lineRange": [
+        79,
+        140
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/easing.rs",
+      "type": "file",
+      "name": "easing.rs",
+      "filePath": "style/values/specified/easing.rs",
+      "summary": "Defines the TimingFunction specified type for CSS easing functions, parsing cubic-bezier(), steps(), linear() and keyword easing values.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "easing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        22,
+        51
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:parse_cubic_bezier",
+      "type": "function",
+      "name": "parse_cubic_bezier",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        55,
+        80
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:parse_steps",
+      "type": "function",
+      "name": "parse_steps",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        82,
+        111
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:parse_linear_function",
+      "type": "function",
+      "name": "parse_linear_function",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        113,
+        170
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:match_keywords",
+      "type": "function",
+      "name": "match_keywords",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        174,
+        182
+      ],
+      "summary": "Handles match keywords for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:to_computed_value_without_context",
+      "type": "function",
+      "name": "to_computed_value_without_context",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        190,
+        211
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/easing.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/specified/easing.rs",
+      "lineRange": [
+        220,
+        234
+      ],
+      "summary": "Converts a computed value back to a specified value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:to_k",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:to_k",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:round",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:round",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:round",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "function:style/values/specified/corner_shape.rs:round",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:SuperellipseArg",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/corner_shape.rs",
+      "target": "class:style/values/specified/corner_shape.rs:CornerShape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/counters.rs",
+      "target": "function:style/values/specified/counters.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/counters.rs",
+      "target": "function:style/values/specified/counters.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/counters.rs",
+      "target": "function:style/values/specified/counters.rs:parse_counters",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/counters.rs",
+      "target": "function:style/values/specified/counters.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:parse_cubic_bezier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:parse_steps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:parse_linear_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:match_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:match_keywords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:to_computed_value_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:to_computed_value_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/easing.rs",
+      "target": "function:style/values/specified/easing.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

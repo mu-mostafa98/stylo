@@ -1,0 +1,1321 @@
+{
+  "nodes": [
+    {
+      "id": "function:selectors/attr.rs:namespace",
+      "type": "function",
+      "name": "namespace",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "Exported helper for CSS attribute selector matching.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/attr.rs:eval_str",
+      "type": "function",
+      "name": "eval_str",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        65,
+        77
+      ],
+      "summary": "Exported helper for CSS attribute selector matching.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/attr.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        92,
+        106
+      ],
+      "summary": "Internal helper for attribute selector serialization.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/attr.rs:eval_str:110",
+      "type": "function",
+      "name": "eval_str",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        110,
+        140
+      ],
+      "summary": "Exported helper for CSS attribute selector matching.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/attr.rs:eq",
+      "type": "function",
+      "name": "eq",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        166,
+        171
+      ],
+      "summary": "Exported helper for CSS attribute selector matching.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/attr.rs:contains",
+      "type": "function",
+      "name": "contains",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        173,
+        195
+      ],
+      "summary": "Exported helper for CSS attribute selector matching.",
+      "tags": [
+        "selector",
+        "attribute-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/attr.rs:AttrSelectorWithOptionalNamespace",
+      "type": "class",
+      "name": "AttrSelectorWithOptionalNamespace",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        15,
+        23
+      ],
+      "summary": "CSS attribute selector struct for attribute matching.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:NamespaceConstraint",
+      "type": "class",
+      "name": "NamespaceConstraint",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        36,
+        41
+      ],
+      "summary": "CSS attribute selector namespace constraint variant.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:ParsedAttrSelectorOperation",
+      "type": "class",
+      "name": "ParsedAttrSelectorOperation",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        45,
+        52
+      ],
+      "summary": "CSS attribute selector intermediate parsed representation.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:AttrSelectorOperation",
+      "type": "class",
+      "name": "AttrSelectorOperation",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        55,
+        62
+      ],
+      "summary": "CSS attribute selector struct for attribute matching.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:AttrSelectorOperator",
+      "type": "class",
+      "name": "AttrSelectorOperator",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        82,
+        89
+      ],
+      "summary": "CSS attribute selector struct for attribute matching.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:ParsedCaseSensitivity",
+      "type": "class",
+      "name": "ParsedCaseSensitivity",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        148,
+        157
+      ],
+      "summary": "CSS attribute selector intermediate parsed representation.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/attr.rs:CaseSensitivity",
+      "type": "class",
+      "name": "CaseSensitivity",
+      "filePath": "selectors/attr.rs",
+      "lineRange": [
+        160,
+        163
+      ],
+      "summary": "CSS attribute selector case sensitivity enum.",
+      "tags": [
+        "selector",
+        "css",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:new:81",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        81,
+        83
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:clear:86",
+      "type": "function",
+      "name": "clear",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        86,
+        88
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:is_zeroed:93",
+      "type": "function",
+      "name": "is_zeroed",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        93,
+        95
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:is_zeroed:98",
+      "type": "function",
+      "name": "is_zeroed",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        98,
+        100
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:insert_hash:104",
+      "type": "function",
+      "name": "insert_hash",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        104,
+        107
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:remove_hash:111",
+      "type": "function",
+      "name": "remove_hash",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        111,
+        114
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:might_contain_hash:120",
+      "type": "function",
+      "name": "might_contain_hash",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        120,
+        122
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:adjust_slot:183",
+      "type": "function",
+      "name": "adjust_slot",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        183,
+        193
+      ],
+      "summary": "Internal Bloom storage method.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:is_zeroed:201",
+      "type": "function",
+      "name": "is_zeroed",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        201,
+        203
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:adjust_slot:229",
+      "type": "function",
+      "name": "adjust_slot",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        229,
+        244
+      ],
+      "summary": "Internal Bloom storage method.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/bloom.rs:is_zeroed:253",
+      "type": "function",
+      "name": "is_zeroed",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        253,
+        255
+      ],
+      "summary": "Exported Bloom filter operation for selector pre-filtering.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/bloom.rs:create_and_insert_some_stuff:285",
+      "type": "function",
+      "name": "create_and_insert_some_stuff",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        285,
+        339
+      ],
+      "summary": "Internal Bloom storage method.",
+      "tags": [
+        "bloom-filter",
+        "selector"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/bloom.rs:CountingBloomFilter",
+      "type": "class",
+      "name": "CountingBloomFilter",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        68,
+        73
+      ],
+      "summary": "Counting Bloom filter for CSS selector matching.",
+      "tags": [
+        "bloom-filter",
+        "data-structure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/bloom.rs:BloomStorage",
+      "type": "class",
+      "name": "BloomStorage",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        140,
+        174
+      ],
+      "summary": "Trait abstracting Bloom filter storage operations.",
+      "tags": [
+        "bloom-filter",
+        "data-structure"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/bloom.rs:BloomStorageU8",
+      "type": "class",
+      "name": "BloomStorageU8",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        177,
+        179
+      ],
+      "summary": "Concrete Bloom filter storage backend.",
+      "tags": [
+        "bloom-filter",
+        "data-structure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/bloom.rs:BloomStorageBool",
+      "type": "class",
+      "name": "BloomStorageBool",
+      "filePath": "selectors/bloom.rs",
+      "lineRange": [
+        223,
+        225
+      ],
+      "summary": "Concrete Bloom filter storage backend.",
+      "tags": [
+        "bloom-filter",
+        "data-structure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:push_simple_selector",
+      "type": "function",
+      "name": "push_simple_selector",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        66,
+        69
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:push_combinator",
+      "type": "function",
+      "name": "push_combinator",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        74,
+        78
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:has_combinators",
+      "type": "function",
+      "name": "has_combinators",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        87,
+        89
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        93,
+        100
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:build_with_specificity_and_flags",
+      "type": "function",
+      "name": "build_with_specificity_and_flags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        105,
+        150
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/builder.rs:forbidden_for_nesting",
+      "type": "function",
+      "name": "forbidden_for_nesting",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        228,
+        230
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:single_class_like",
+      "type": "function",
+      "name": "single_class_like",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        255,
+        261
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/builder.rs:specificity_and_flags",
+      "type": "function",
+      "name": "specificity_and_flags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        285,
+        425
+      ],
+      "summary": "Internal specificity computation helper.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/builder.rs:selector_list_specificity_and_flags",
+      "type": "function",
+      "name": "selector_list_specificity_and_flags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        428,
+        448
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/builder.rs:relative_selector_list_specificity_and_flags",
+      "type": "function",
+      "name": "relative_selector_list_specificity_and_flags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        450,
+        455
+      ],
+      "summary": "Exported selector builder operation.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/builder.rs:SelectorBuilder",
+      "type": "class",
+      "name": "SelectorBuilder",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        48,
+        55
+      ],
+      "summary": "Builder for constructing CSS selectors incrementally.",
+      "tags": [
+        "selector",
+        "specificity",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/builder.rs:SelectorFlags",
+      "type": "class",
+      "name": "SelectorFlags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        198,
+        198
+      ],
+      "summary": "Flags indicating selector properties for optimization.",
+      "tags": [
+        "selector",
+        "specificity",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/builder.rs:SpecificityAndFlags",
+      "type": "class",
+      "name": "SpecificityAndFlags",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        235,
+        241
+      ],
+      "summary": "Pair of selector specificity and flags.",
+      "tags": [
+        "selector",
+        "specificity",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/builder.rs:Specificity",
+      "type": "class",
+      "name": "Specificity",
+      "filePath": "selectors/builder.rs",
+      "lineRange": [
+        246,
+        250
+      ],
+      "summary": "CSS selector specificity value (id, class, element counts).",
+      "tags": [
+        "selector",
+        "specificity",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/attr.rs",
+      "type": "file",
+      "name": "attr.rs",
+      "filePath": "selectors/attr.rs",
+      "summary": "Defines attribute selector types and matching operations for CSS attribute selectors, including namespace constraints, case sensitivity handling, and string evaluation for equality and containment checks.",
+      "tags": [
+        "selector",
+        "attribute-matching",
+        "css"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selectors/bloom.rs",
+      "type": "file",
+      "name": "bloom.rs",
+      "filePath": "selectors/bloom.rs",
+      "summary": "Implements counting Bloom filters for fast CSS selector pre-filtering, with BloomStorage trait abstraction supporting u8 and bool backends.",
+      "tags": [
+        "selector",
+        "bloom-filter",
+        "optimization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:selectors/builder.rs",
+      "type": "file",
+      "name": "builder.rs",
+      "filePath": "selectors/builder.rs",
+      "summary": "Provides SelectorBuilder for constructing CSS selectors incrementally, and Specificity structs for computing selector specificity and flags.",
+      "tags": [
+        "selector",
+        "builder",
+        "specificity"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:namespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:namespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eval_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eval_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eval_str:110",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eval_str:110",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:eq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:contains",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "function:selectors/attr.rs:contains",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorWithOptionalNamespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorWithOptionalNamespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:NamespaceConstraint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:NamespaceConstraint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:ParsedAttrSelectorOperation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:ParsedAttrSelectorOperation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorOperation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorOperation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorOperator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:AttrSelectorOperator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:ParsedCaseSensitivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:ParsedCaseSensitivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:CaseSensitivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/attr.rs",
+      "target": "class:selectors/attr.rs:CaseSensitivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:new:81",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:new:81",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:clear:86",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:clear:86",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:93",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:93",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:98",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:98",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:insert_hash:104",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:insert_hash:104",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:remove_hash:111",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:remove_hash:111",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:might_contain_hash:120",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:might_contain_hash:120",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:adjust_slot:183",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:201",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:201",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:adjust_slot:229",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:253",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:is_zeroed:253",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "function:selectors/bloom.rs:create_and_insert_some_stuff:285",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:CountingBloomFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:CountingBloomFilter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorageU8",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorageU8",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorageBool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/bloom.rs",
+      "target": "class:selectors/bloom.rs:BloomStorageBool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:push_simple_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:push_simple_selector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:push_combinator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:push_combinator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:has_combinators",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:has_combinators",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:build",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:build_with_specificity_and_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:build_with_specificity_and_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:forbidden_for_nesting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:forbidden_for_nesting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:single_class_like",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:single_class_like",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:specificity_and_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:selector_list_specificity_and_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:selector_list_specificity_and_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:relative_selector_list_specificity_and_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "function:selectors/builder.rs:relative_selector_list_specificity_and_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SelectorBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SelectorBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SelectorFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SelectorFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SpecificityAndFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:SpecificityAndFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:Specificity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/builder.rs",
+      "target": "class:selectors/builder.rs:Specificity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

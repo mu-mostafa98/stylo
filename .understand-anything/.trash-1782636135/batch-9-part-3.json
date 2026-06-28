@@ -1,0 +1,1289 @@
+{
+  "nodes": [
+    {
+      "id": "function:selectors/matching.rs:for_self",
+      "type": "function",
+      "name": "for_self",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        92,
+        98
+      ],
+      "summary": "Direction helper for combinator traversal.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:for_parent",
+      "type": "function",
+      "name": "for_parent",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        101,
+        107
+      ],
+      "summary": "Direction helper for combinator traversal.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_selector_list",
+      "type": "function",
+      "name": "matches_selector_list",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        118,
+        136
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:selector_may_match",
+      "type": "function",
+      "name": "selector_may_match",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        141,
+        166
+      ],
+      "summary": "Exported selector matching utility.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_selector",
+      "type": "function",
+      "name": "matches_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        255,
+        275
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_selector_kleene",
+      "type": "function",
+      "name": "matches_selector_kleene",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        279,
+        307
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:early_reject_by_local_name",
+      "type": "function",
+      "name": "early_reject_by_local_name",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        332,
+        350
+      ],
+      "summary": "Exported selector matching utility.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_compound_selector_from",
+      "type": "function",
+      "name": "matches_compound_selector_from",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        359,
+        436
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_complex_selector",
+      "type": "function",
+      "name": "matches_complex_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        440,
+        489
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_complex_selector_list",
+      "type": "function",
+      "name": "matches_complex_selector_list",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        492,
+        501
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_relative_selector",
+      "type": "function",
+      "name": "matches_relative_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        503,
+        591
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:relative_selector_match_early",
+      "type": "function",
+      "name": "relative_selector_match_early",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        593,
+        621
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:match_relative_selectors",
+      "type": "function",
+      "name": "match_relative_selectors",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        623,
+        652
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:do_match_relative_selectors",
+      "type": "function",
+      "name": "do_match_relative_selectors",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        655,
+        700
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_relative_selector_subtree",
+      "type": "function",
+      "name": "matches_relative_selector_subtree",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        702,
+        728
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:hover_and_active_quirk_applies",
+      "type": "function",
+      "name": "hover_and_active_quirk_applies",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        733,
+        756
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:host_for_part",
+      "type": "function",
+      "name": "host_for_part",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        764,
+        780
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:assigned_slot",
+      "type": "function",
+      "name": "assigned_slot",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        782,
+        795
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:next_element_for_combinator",
+      "type": "function",
+      "name": "next_element_for_combinator",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        813,
+        843
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_complex_selector_internal",
+      "type": "function",
+      "name": "matches_complex_selector_internal",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        845,
+        997
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_part",
+      "type": "function",
+      "name": "matches_part",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1008,
+        1052
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_host",
+      "type": "function",
+      "name": "matches_host",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1054,
+        1078
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_slotted",
+      "type": "function",
+      "name": "matches_slotted",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1080,
+        1094
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_rare_attribute_selector",
+      "type": "function",
+      "name": "matches_rare_attribute_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1096,
+        1127
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:compound_matches_featureless_host",
+      "type": "function",
+      "name": "compound_matches_featureless_host",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1132,
+        1188
+      ],
+      "summary": "Exported selector matching utility.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_compound_selector",
+      "type": "function",
+      "name": "matches_compound_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1192,
+        1222
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_simple_selector",
+      "type": "function",
+      "name": "matches_simple_selector",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1225,
+        1361
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:select_name",
+      "type": "function",
+      "name": "select_name",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1364,
+        1374
+      ],
+      "summary": "Exported selector matching utility.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:to_unconditional_case_sensitivity",
+      "type": "function",
+      "name": "to_unconditional_case_sensitivity",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1377,
+        1394
+      ],
+      "summary": "Exported selector matching utility.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/matching.rs:matches_generic_nth_child",
+      "type": "function",
+      "name": "matches_generic_nth_child",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1396,
+        1522
+      ],
+      "summary": "Core selector matching function.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:selectors/matching.rs:nth_child_index",
+      "type": "function",
+      "name": "nth_child_index",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        1525,
+        1609
+      ],
+      "summary": "Internal selector matching helper.",
+      "tags": [
+        "selector",
+        "matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:selectors/matching.rs:LocalMatchingContext",
+      "type": "class",
+      "name": "LocalMatchingContext",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        111,
+        115
+      ],
+      "summary": "Internal helper type for selector matching.",
+      "tags": [
+        "selector",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/matching.rs:SelectorMatchingResult",
+      "type": "class",
+      "name": "SelectorMatchingResult",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        225,
+        231
+      ],
+      "summary": "Internal helper type for selector matching.",
+      "tags": [
+        "selector",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/matching.rs:CompoundSelectorMatchingResult",
+      "type": "class",
+      "name": "CompoundSelectorMatchingResult",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        311,
+        319
+      ],
+      "summary": "Result type for compound selector matching with featureless host handling.",
+      "tags": [
+        "selector",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/matching.rs:SubjectOrPseudoElement",
+      "type": "class",
+      "name": "SubjectOrPseudoElement",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        759,
+        762
+      ],
+      "summary": "Internal helper type for selector matching.",
+      "tags": [
+        "selector",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/matching.rs:NextElement",
+      "type": "class",
+      "name": "NextElement",
+      "filePath": "selectors/matching.rs",
+      "lineRange": [
+        797,
+        800
+      ],
+      "summary": "Internal helper type for selector matching.",
+      "tags": [
+        "selector",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/nth_index_cache.rs:get:27",
+      "type": "function",
+      "name": "get",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        27,
+        52
+      ],
+      "summary": "Cache operation for nth-index lookup.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/nth_index_cache.rs:lookup:73",
+      "type": "function",
+      "name": "lookup",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        73,
+        80
+      ],
+      "summary": "Cache operation for nth-index lookup.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/nth_index_cache.rs:lookup:89",
+      "type": "function",
+      "name": "lookup",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        89,
+        91
+      ],
+      "summary": "Cache operation for nth-index lookup.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/nth_index_cache.rs:insert:94",
+      "type": "function",
+      "name": "insert",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        94,
+        96
+      ],
+      "summary": "Cache operation for nth-index lookup.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/nth_index_cache.rs:is_empty:99",
+      "type": "function",
+      "name": "is_empty",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        99,
+        101
+      ],
+      "summary": "Cache operation for nth-index lookup.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/nth_index_cache.rs:NthIndexCache",
+      "type": "class",
+      "name": "NthIndexCache",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        16,
+        23
+      ],
+      "summary": "Top-level cache for nth-child/nth-of-type indices.",
+      "tags": [
+        "selector",
+        "cache",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/nth_index_cache.rs:NthIndexOfSelectorsCaches",
+      "type": "class",
+      "name": "NthIndexOfSelectorsCaches",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        68,
+        68
+      ],
+      "summary": "Per-selector-list cache entry.",
+      "tags": [
+        "selector",
+        "cache",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/nth_index_cache.rs:NthIndexCacheInner",
+      "type": "class",
+      "name": "NthIndexCacheInner",
+      "filePath": "selectors/nth_index_cache.rs",
+      "lineRange": [
+        85,
+        85
+      ],
+      "summary": "Inner cache storage for element indices.",
+      "tags": [
+        "selector",
+        "cache",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "selectors/lib.rs",
+      "summary": "Crate root for the selectors library, re-exporting all public modules: attribute selectors, bloom filters, builder, context, matching, parser, and related types.",
+      "tags": [
+        "entry-point",
+        "barrel",
+        "crate-root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/matching.rs",
+      "type": "file",
+      "name": "matching.rs",
+      "filePath": "selectors/matching.rs",
+      "summary": "Core CSS selector matching engine implementing compound selector, complex selector, relative selector, and pseudo-class matching against DOM elements.",
+      "tags": [
+        "selector",
+        "matching",
+        "css-engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selectors/nth_index_cache.rs",
+      "type": "file",
+      "name": "nth_index_cache.rs",
+      "filePath": "selectors/nth_index_cache.rs",
+      "summary": "Caches nth-child/nth-of-type index computations keyed by selector list identity to avoid redundant tree traversal during style recalc.",
+      "tags": [
+        "selector",
+        "cache",
+        "nth-child"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:for_self",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:for_self",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:for_parent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:for_parent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector_list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:selector_may_match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:selector_may_match",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector_kleene",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_selector_kleene",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:early_reject_by_local_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:early_reject_by_local_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_compound_selector_from",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_compound_selector_from",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_complex_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_complex_selector_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_relative_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:relative_selector_match_early",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:match_relative_selectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:do_match_relative_selectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_relative_selector_subtree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:hover_and_active_quirk_applies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:host_for_part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:assigned_slot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:next_element_for_combinator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_complex_selector_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_host",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_slotted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_rare_attribute_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:compound_matches_featureless_host",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:compound_matches_featureless_host",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_compound_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_simple_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:select_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:select_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:to_unconditional_case_sensitivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:to_unconditional_case_sensitivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:matches_generic_nth_child",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "function:selectors/matching.rs:nth_child_index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:LocalMatchingContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:SelectorMatchingResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:CompoundSelectorMatchingResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:CompoundSelectorMatchingResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:SubjectOrPseudoElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/matching.rs",
+      "target": "class:selectors/matching.rs:NextElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:get:27",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:get:27",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:lookup:73",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:lookup:73",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:lookup:89",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:lookup:89",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:insert:94",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:insert:94",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:is_empty:99",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "function:selectors/nth_index_cache.rs:is_empty:99",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexOfSelectorsCaches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexOfSelectorsCaches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexCacheInner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/nth_index_cache.rs",
+      "target": "class:selectors/nth_index_cache.rs:NthIndexCacheInner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/attr.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/bloom.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/builder.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/context.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/kleene_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/matching.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/nth_index_cache.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/parser.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/relative_selector/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/sink.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/tree.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/lib.rs",
+      "target": "file:selectors/visitor.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

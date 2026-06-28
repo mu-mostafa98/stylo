@@ -1,0 +1,74 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with the README to understand Stylo's purpose as a high-performance CSS style engine written in Rust that powers both Servo and Firefox. This document maps the crate architecture, explains the branching strategy (spidermonkey, gecko, servo), and provides essential context for how the major subsystems -- the style crate, selectors library, and support crates -- fit together.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Crate Entry Point & Workspace",
+    "description": "The workspace manifest (Cargo.toml) defines 11 member crates spanning the style engine, selector library, shared utilities, and procedural macros. The crate root (lib.rs) re-exports every public subsystem, giving you a bird's-eye view of the entire engine: from the stylist and matching modules through values, properties, and selectors. Every subsystem you will explore in later steps is declared here as a public module.",
+    "nodeIds": [
+      "file:style/lib.rs",
+      "config:Cargo.toml"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "CSS Selector Engine",
+    "description": "The selectors crate is a standalone library for parsing and matching CSS selectors according to the Selectors Level 4 specification. At 4923 lines, parser.rs is one of the largest files in the project and handles every selector type from simple type selectors through complex combinators, pseudo-classes, pseudo-elements, and :where/:is/:not specificity. The matching.rs module then evaluates parsed selectors against DOM elements, implementing the core boolean logic and specificity computation that determines whether a selector applies.",
+    "nodeIds": [
+      "file:selectors/parser.rs",
+      "file:selectors/matching.rs"
+    ],
+    "languageLesson": "The parser.rs file uses Rust's recursive descent parsing pattern extensively, matching on token streams to build a Selector AST. The matching.rs module leverages trait-based polymorphism through the SelectorImpl trait, allowing the same matching engine to work with different browser backends (Servo vs Gecko) without duplicating logic."
+  },
+  {
+    "order": 4,
+    "title": "Cascade Rule Tree",
+    "description": "The cascade rule tree organizes CSS declarations by the three axes of the cascade: origin (author, user, user-agent), specificity, and source order. Each node in the tree represents a unique combination of these axes, and declarations are stored in a garbage-collected structure that allows efficient insertion and lookup during style recalculation. The rule tree is central to performance: it avoids duplicating computed data across elements that share the same cascade path.",
+    "nodeIds": [
+      "file:style/rule_tree/mod.rs"
+    ],
+    "languageLesson": "The rule tree uses a custom unsafe_box for interior mutability and a mark-sweep GC pattern. The tree is built from multiple sub-modules (core.rs, level.rs, map.rs, source.rs) that each handle one aspect of cascade management, demonstrating Rust's module-level decomposition around a single abstraction."
+  },
+  {
+    "order": 5,
+    "title": "Style Resolution Pipeline",
+    "description": "The Stylist is the central orchestrator of the style engine: it holds the stylesheet collection, manages the selector map for efficient lookup, and dispatches matching requests for each element. The matching module ties together the DOM abstractions -- the TElement and TNode traits from dom.rs -- with traversal context from context.rs to perform full style resolution. After matching, the StyleAdjuster applies fixups for writing modes, display types, and other properties that depend on the computed values of other properties, completing the pipeline from raw DOM to fully styled element.",
+    "nodeIds": [
+      "file:style/stylist.rs",
+      "file:style/matching.rs",
+      "file:style/dom.rs",
+      "file:style/context.rs",
+      "file:style/style_adjuster.rs"
+    ],
+    "languageLesson": "The TElement and TNode traits in dom.rs are the primary abstraction boundary of the engine. They define the DOM contract using associated types and trait methods, allowing the same matching and styling logic to work with Servo's DOM (servo/mod.rs) and Firefox's DOM via FFI (gecko/wrapper.rs) without changing the core algorithm."
+  },
+  {
+    "order": 6,
+    "title": "CSS Values & Property System",
+    "description": "CSS values flow through three distinct representations: specified values (as written in the stylesheet), computed values (resolved for layout), and animated values (interpolated between states). The values module barrel re-exports all value types organized into specified/, computed/, animated/, and generics/ sub-modules. The property system defines the property ID registry, declaration blocks that hold property-value pairs, and the cascading logic that merges declarations from multiple sources. The color module handles modern CSS color syntax including OKLab, display-p3, and relative color syntax, which feeds into both the values and properties systems.",
+    "nodeIds": [
+      "file:style/values/mod.rs",
+      "file:style/properties/mod.rs",
+      "file:style/color/mod.rs"
+    ],
+    "languageLesson": "The values system uses a three-phase architecture (specified -> computed -> animated) common to all browser engines. Each phase is a separate sub-module with its own type representations. The generics/ sub-module contains parameterized value types (e.g., GenericLength, GenericTransform) that are instantiated with either specified or computed representations, using Rust's generics to avoid code duplication."
+  },
+  {
+    "order": 7,
+    "title": "Browser Integration & Style Invalidation",
+    "description": "The Gecko wrapper (2267 lines) implements the TElement trait using Firefox's internal DOM representation accessed via FFI, allowing the engine to run inside Firefox without modifying its core algorithm. The Servo animation module handles CSS animations and transitions with Servo-specific types for keyframe and transition management. The invalidation map tracks dependency relationships between elements, classes, attributes, and states so the engine knows exactly which elements need restyling when something changes -- avoiding full re-traversals. The stylesheet rules module defines the master CssRule enum that dispatches to all @-rule types (@import, @media, @container, @keyframes, etc.), forming the backbone of the stylesheet subsystem.",
+    "nodeIds": [
+      "file:style/gecko/wrapper.rs",
+      "file:style/servo/animation.rs",
+      "file:style/invalidation/element/invalidation_map.rs",
+      "file:style/stylesheets/rules.rs"
+    ],
+    "languageLesson": "The Gecko FFI layer uses #[repr(C)] structs and extern \"C\" function declarations to bridge Rust and C++. The wrapper.rs file demonstrates the adapter pattern at scale: it implements the pure-Rust TElement trait by translating calls into Gecko's C++ DOM API, handling reference counting, thread safety, and memory layout differences between the two runtimes."
+  }
+]

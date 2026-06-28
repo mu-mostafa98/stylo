@@ -1,0 +1,4002 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style_derive/animate.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 12,
+          "endLine": 67,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "derive_variant_arm",
+          "startLine": 69,
+          "endLine": 116,
+          "params": [
+            "variant",
+            "where_clause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AnimationInputAttrs",
+          "startLine": 120,
+          "endLine": 122,
+          "methods": [],
+          "properties": [
+            "no_bound"
+          ]
+        },
+        {
+          "name": "AnimationVariantAttrs",
+          "startLine": 126,
+          "endLine": 131,
+          "methods": [],
+          "properties": [
+            "error",
+            "no_bound"
+          ]
+        },
+        {
+          "name": "AnimationFieldAttrs",
+          "startLine": 135,
+          "endLine": 138,
+          "methods": [],
+          "properties": [
+            "constant",
+            "field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationInputAttrs",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationVariantAttrs",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationFieldAttrs",
+          "line": 135,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<AnimationInputAttrs>",
+          "lineNumber": 13
+        },
+        {
+          "caller": "derive",
+          "callee": "animation_input_attrs.no_bound.unwrap_or_default",
+          "lineNumber": 15
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter().any",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "name.is_ident",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 19
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants",
+          "lineNumber": 27
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().iter().fold",
+          "lineNumber": 28
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().iter",
+          "lineNumber": 28
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants",
+          "lineNumber": 28
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_variant_arm",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive",
+          "callee": "match_body.append_all",
+          "lineNumber": 40
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 47
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_variant_attrs_from_ast::<AnimationVariantAttrs>",
+          "lineNumber": 73
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast",
+          "lineNumber": 73
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::ref_pattern",
+          "lineNumber": 74
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::ref_pattern",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::value",
+          "lineNumber": 83
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "result_info.iter().zip",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "result_info.iter",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.iter().zip",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.iter",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "computations.append_all",
+          "lineNumber": 86
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "iter.map",
+          "lineNumber": 86
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_field_attrs::<AnimationFieldAttrs>",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "result.ast",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this.ast",
+          "lineNumber": 89
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::add_predicate",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style_derive/cg.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 409,
+      "nonEmptyLines": 386,
+      "functions": [
+        {
+          "name": "propagate_clauses_to_output_type",
+          "startLine": 35,
+          "endLine": 80,
+          "params": [
+            "where_clause",
+            "generics",
+            "trait_path",
+            "trait_output"
+          ]
+        },
+        {
+          "name": "add_predicate",
+          "startLine": 82,
+          "endLine": 87,
+          "params": [
+            "where_clause",
+            "pred"
+          ]
+        },
+        {
+          "name": "fmap_match",
+          "startLine": 89,
+          "endLine": 94,
+          "params": [
+            "input",
+            "bind_style",
+            "f"
+          ]
+        },
+        {
+          "name": "fmap2_match",
+          "startLine": 96,
+          "endLine": 129,
+          "params": [
+            "input",
+            "bind_style",
+            "f",
+            "g"
+          ]
+        },
+        {
+          "name": "fmap_trait_output",
+          "startLine": 131,
+          "endLine": 163,
+          "params": [
+            "input",
+            "trait_path",
+            "trait_output"
+          ]
+        },
+        {
+          "name": "map_type_params",
+          "startLine": 165,
+          "endLine": 236,
+          "params": [
+            "ty",
+            "params",
+            "self_type",
+            "f"
+          ]
+        },
+        {
+          "name": "map_type_params_in_path",
+          "startLine": 238,
+          "endLine": 283,
+          "params": [
+            "path",
+            "params",
+            "self_type",
+            "f"
+          ]
+        },
+        {
+          "name": "path_to_ident",
+          "startLine": 285,
+          "endLine": 299,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "parse_field_attrs",
+          "startLine": 301,
+          "endLine": 309,
+          "params": [
+            "field"
+          ]
+        },
+        {
+          "name": "parse_input_attrs",
+          "startLine": 311,
+          "endLine": 319,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_variant_attrs_from_ast",
+          "startLine": 321,
+          "endLine": 332,
+          "params": [
+            "variant"
+          ]
+        },
+        {
+          "name": "parse_variant_attrs",
+          "startLine": 334,
+          "endLine": 342,
+          "params": [
+            "variant"
+          ]
+        },
+        {
+          "name": "ref_pattern",
+          "startLine": 344,
+          "endLine": 354,
+          "params": [
+            "variant",
+            "prefix"
+          ]
+        },
+        {
+          "name": "value",
+          "startLine": 356,
+          "endLine": 366,
+          "params": [
+            "variant",
+            "prefix"
+          ]
+        },
+        {
+          "name": "to_css_identifier",
+          "startLine": 372,
+          "endLine": 390,
+          "params": [
+            "camel_case"
+          ]
+        },
+        {
+          "name": "to_scream_case",
+          "startLine": 393,
+          "endLine": 395,
+          "params": [
+            "css_case"
+          ]
+        },
+        {
+          "name": "split_camel_segment",
+          "startLine": 398,
+          "endLine": 409,
+          "params": [
+            "camel_case"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "propagate_clauses_to_output_type",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "add_predicate",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "fmap_match",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "fmap2_match",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "fmap_trait_output",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "map_type_params",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "parse_field_attrs",
+          "line": 301,
+          "isDefault": false
+        },
+        {
+          "name": "parse_input_attrs",
+          "line": 311,
+          "isDefault": false
+        },
+        {
+          "name": "parse_variant_attrs_from_ast",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "parse_variant_attrs",
+          "line": 334,
+          "isDefault": false
+        },
+        {
+          "name": "ref_pattern",
+          "line": 344,
+          "isDefault": false
+        },
+        {
+          "name": "value",
+          "line": 356,
+          "isDefault": false
+        },
+        {
+          "name": "to_css_identifier",
+          "line": 372,
+          "isDefault": false
+        },
+        {
+          "name": "to_scream_case",
+          "line": 393,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "path_to_ident",
+          "lineNumber": 63
+        },
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "generics.type_params().any",
+          "lineNumber": 68
+        },
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "generics.type_params",
+          "lineNumber": 68
+        },
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "extra_bounds.push",
+          "lineNumber": 69
+        },
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "ty.clone",
+          "lineNumber": 69
+        },
+        {
+          "caller": "propagate_clauses_to_output_type",
+          "callee": "where_clause\r\n            .predicates.push",
+          "lineNumber": 76
+        },
+        {
+          "caller": "add_predicate",
+          "callee": "where_clause\r\n        .get_or_insert(parse_quote!(where))\r\n        .predicates.push",
+          "lineNumber": 83
+        },
+        {
+          "caller": "add_predicate",
+          "callee": "where_clause.get_or_insert",
+          "lineNumber": 83
+        },
+        {
+          "caller": "fmap_match",
+          "callee": "fmap2_match",
+          "lineNumber": 93
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "synstructure::Structure::new",
+          "lineNumber": 106
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut().iter_mut().for_each",
+          "lineNumber": 107
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut().iter_mut",
+          "lineNumber": 107
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut",
+          "lineNumber": 107
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "v.bind_with",
+          "lineNumber": 108
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.each_variant",
+          "lineNumber": 110
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "value",
+          "lineNumber": 111
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings().iter().zip",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings().iter",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields.iter",
+          "lineNumber": 112
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 114
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "fields_pairs.map",
+          "lineNumber": 114
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "f",
+          "lineNumber": 115
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 118
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields\r\n                .iter().map",
+          "lineNumber": 119
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields.iter",
+          "lineNumber": 119
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "g",
+          "lineNumber": 121
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 126
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "Some",
+          "lineNumber": 127
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "input.ident.clone",
+          "lineNumber": 137
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "PathArguments::AngleBracketed",
+          "lineNumber": 138
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "input\r\n                .generics\r\n                .params\r\n                .iter()\r\n                .map(|arg| match arg {\r\n                    &GenericParam::Lifetime(ref data) => {\r\n                        GenericArgument::Lifetime(data.lifetime.clone())\r\n                    },\r\n                    &GenericParam::Type(ref data) => {\r\n                        let ident = &data.ident;\r\n                        GenericArgument::Type(parse_quote!(<#ident as #trait_path>::#trait_output))\r\n                    },\r\n                    &GenericParam::Const(ref inner) => {\r\n                        let ident = &inner.ident;\r\n                        GenericArgument::Const(parse_quote!(#ident))\r\n                    },\r\n                }).collect",
+          "lineNumber": 139
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "input\r\n                .generics\r\n                .params\r\n                .iter().map",
+          "lineNumber": 139
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "input\r\n                .generics\r\n                .params.iter",
+          "lineNumber": 139
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "GenericArgument::Lifetime",
+          "lineNumber": 145
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "data.lifetime.clone",
+          "lineNumber": 145
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "GenericArgument::Type",
+          "lineNumber": 149
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "GenericArgument::Const",
+          "lineNumber": 153
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "Default::default",
+          "lineNumber": 157
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "Default::default",
+          "lineNumber": 158
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "Default::default",
+          "lineNumber": 159
+        },
+        {
+          "caller": "fmap_trait_output",
+          "callee": "segment.into",
+          "lineNumber": 162
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 175
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Box::new",
+          "lineNumber": 176
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 176
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner.clone",
+          "lineNumber": 177
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 181
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Box::new",
+          "lineNumber": 182
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 182
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner.clone",
+          "lineNumber": 183
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "ty.clone",
+          "lineNumber": 186
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 187
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner\r\n                .elems\r\n                .iter()\r\n                .map(|ty| map_type_params(&ty, params, self_type, f)).collect",
+          "lineNumber": 188
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner\r\n                .elems\r\n                .iter().map",
+          "lineNumber": 188
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner\r\n                .elems.iter",
+          "lineNumber": 188
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 191
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner.clone",
+          "lineNumber": 193
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "path_to_ident",
+          "lineNumber": 199
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "params.iter().any",
+          "lineNumber": 200
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "params.iter",
+          "lineNumber": 200
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "f",
+          "lineNumber": 201
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 204
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "self_type.clone",
+          "lineNumber": 206
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 210
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params_in_path",
+          "lineNumber": 212
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 218
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "qself.as_ref().map",
+          "lineNumber": 219
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "qself.as_ref",
+          "lineNumber": 219
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Box::new",
+          "lineNumber": 220
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 220
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "qself.clone",
+          "lineNumber": 222
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params_in_path",
+          "lineNumber": 224
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 226
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Box::new",
+          "lineNumber": 227
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 227
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner.clone",
+          "lineNumber": 228
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Type::from",
+          "lineNumber": 230
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "Box::new",
+          "lineNumber": 231
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "map_type_params",
+          "lineNumber": 231
+        },
+        {
+          "caller": "map_type_params",
+          "callee": "inner.clone",
+          "lineNumber": 232
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "path\r\n            .segments\r\n            .iter()\r\n            .map(|segment| PathSegment {\r\n                ident: segment.ident.clone(),\r\n                arguments: match segment.arguments {\r\n                    PathArguments::AngleBracketed(ref data) => {\r\n                        PathArguments::AngleBracketed(AngleBracketedGenericArguments {\r\n                            args: data\r\n                                .args\r\n                                .iter()\r\n                                .map(|arg| match arg {\r\n                                    ty @ &GenericArgument::Lifetime(_) => ty.clone(),\r\n                                    &GenericArgument::Type(ref data) => GenericArgument::Type(\r\n                                        map_type_params(data, params, self_type, f),\r\n                                    ),\r\n                                    &GenericArgument::AssocType(ref data) => {\r\n                                        GenericArgument::AssocType(AssocType {\r\n                                            ty: map_type_params(&data.ty, params, self_type, f),\r\n                                            ..data.clone()\r\n                                        })\r\n                                    },\r\n                                    ref arg => panic!(\"arguments {:?} cannot be mapped yet\", arg),\r\n                                })\r\n                                .collect(),\r\n                            ..data.clone()\r\n                        })\r\n                    },\r\n                    ref arg @ PathArguments::None => arg.clone(),\r\n                    ref parameters => panic!(\"parameters {:?} cannot be mapped yet\", parameters),\r\n                },\r\n            }).collect",
+          "lineNumber": 249
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "path\r\n            .segments\r\n            .iter().map",
+          "lineNumber": 249
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "path\r\n            .segments.iter",
+          "lineNumber": 249
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "segment.ident.clone",
+          "lineNumber": 253
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "PathArguments::AngleBracketed",
+          "lineNumber": 256
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "data\r\n                                .args\r\n                                .iter()\r\n                                .map(|arg| match arg {\r\n                                    ty @ &GenericArgument::Lifetime(_) => ty.clone(),\r\n                                    &GenericArgument::Type(ref data) => GenericArgument::Type(\r\n                                        map_type_params(data, params, self_type, f),\r\n                                    ),\r\n                                    &GenericArgument::AssocType(ref data) => {\r\n                                        GenericArgument::AssocType(AssocType {\r\n                                            ty: map_type_params(&data.ty, params, self_type, f),\r\n                                            ..data.clone()\r\n                                        })\r\n                                    },\r\n                                    ref arg => panic!(\"arguments {:?} cannot be mapped yet\", arg),\r\n                                }).collect",
+          "lineNumber": 257
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "data\r\n                                .args\r\n                                .iter().map",
+          "lineNumber": 257
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "data\r\n                                .args.iter",
+          "lineNumber": 257
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "ty.clone",
+          "lineNumber": 261
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "GenericArgument::Type",
+          "lineNumber": 262
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "map_type_params",
+          "lineNumber": 263
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "GenericArgument::AssocType",
+          "lineNumber": 266
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "map_type_params",
+          "lineNumber": 267
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "data.clone",
+          "lineNumber": 268
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "data.clone",
+          "lineNumber": 274
+        },
+        {
+          "caller": "map_type_params_in_path",
+          "callee": "arg.clone",
+          "lineNumber": 277
+        },
+        {
+          "caller": "path_to_ident",
+          "callee": "segments.len",
+          "lineNumber": 290
+        },
+        {
+          "caller": "path_to_ident",
+          "callee": "segments[0].arguments.is_empty",
+          "lineNumber": 291
+        },
+        {
+          "caller": "path_to_ident",
+          "callee": "Some",
+          "lineNumber": 292
+        },
+        {
+          "caller": "parse_field_attrs",
+          "callee": "A::from_field",
+          "lineNumber": 305
+        },
+        {
+          "caller": "parse_input_attrs",
+          "callee": "A::from_derive_input",
+          "lineNumber": 315
+        },
+        {
+          "caller": "parse_variant_attrs_from_ast",
+          "callee": "variant.ident.clone",
+          "lineNumber": 326
+        },
+        {
+          "caller": "parse_variant_attrs_from_ast",
+          "callee": "variant.attrs.to_vec",
+          "lineNumber": 327
+        },
+        {
+          "caller": "parse_variant_attrs_from_ast",
+          "callee": "variant.fields.clone",
+          "lineNumber": 328
+        },
+        {
+          "caller": "parse_variant_attrs_from_ast",
+          "callee": "variant.discriminant.clone",
+          "lineNumber": 329
+        },
+        {
+          "caller": "parse_variant_attrs_from_ast",
+          "callee": "parse_variant_attrs",
+          "lineNumber": 331
+        },
+        {
+          "caller": "parse_variant_attrs",
+          "callee": "A::from_variant",
+          "lineNumber": 338
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "variant.clone",
+          "lineNumber": 348
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bind_with",
+          "lineNumber": 349
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bindings_mut().iter_mut().for_each",
+          "lineNumber": 350
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bindings_mut().iter_mut",
+          "lineNumber": 350
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bindings_mut",
+          "lineNumber": 350
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "Ident::new",
+          "lineNumber": 351
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "Span::call_site",
+          "lineNumber": 351
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.pat",
+          "lineNumber": 353
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bindings().to_vec",
+          "lineNumber": 353
+        },
+        {
+          "caller": "ref_pattern",
+          "callee": "v.bindings",
+          "lineNumber": 353
+        },
+        {
+          "caller": "value",
+          "callee": "variant.clone",
+          "lineNumber": 360
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut().iter_mut().for_each",
+          "lineNumber": 361
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut().iter_mut",
+          "lineNumber": 361
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut",
+          "lineNumber": 361
+        },
+        {
+          "caller": "value",
+          "callee": "Ident::new",
+          "lineNumber": 362
+        },
+        {
+          "caller": "value",
+          "callee": "Span::call_site",
+          "lineNumber": 362
+        },
+        {
+          "caller": "value",
+          "callee": "v.bind_with",
+          "lineNumber": 364
+        },
+        {
+          "caller": "value",
+          "callee": "v.pat",
+          "lineNumber": 365
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings().to_vec",
+          "lineNumber": 365
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings",
+          "lineNumber": 365
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "camel_case.trim_end_matches",
+          "lineNumber": 373
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "String::with_capacity",
+          "lineNumber": 375
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "camel_case.len",
+          "lineNumber": 375
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "split_camel_segment",
+          "lineNumber": 376
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "result.push",
+          "lineNumber": 384
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "result.push_str",
+          "lineNumber": 387
+        },
+        {
+          "caller": "to_css_identifier",
+          "callee": "segment.to_lowercase",
+          "lineNumber": 387
+        },
+        {
+          "caller": "to_scream_case",
+          "callee": "css_case.to_uppercase().replace",
+          "lineNumber": 394
+        },
+        {
+          "caller": "to_scream_case",
+          "callee": "css_case.to_uppercase",
+          "lineNumber": 394
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "camel_case.chars().next",
+          "lineNumber": 399
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "camel_case.chars",
+          "lineNumber": 399
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "ch.len_utf8",
+          "lineNumber": 401
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "camel_case[index..]\r\n        .find(char::is_uppercase).map_or",
+          "lineNumber": 403
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "camel_case[index..].find",
+          "lineNumber": 403
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "camel_case.len",
+          "lineNumber": 405
+        },
+        {
+          "caller": "split_camel_segment",
+          "callee": "Some",
+          "lineNumber": 408
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 17,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style_derive/compute_squared_distance.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 129,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 12,
+          "endLine": 69,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "derive_variant_arm",
+          "startLine": 71,
+          "endLine": 123,
+          "params": [
+            "variant",
+            "where_clause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DistanceFieldAttrs",
+          "startLine": 127,
+          "endLine": 129,
+          "methods": [],
+          "properties": [
+            "field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<AnimationInputAttrs>",
+          "lineNumber": 13
+        },
+        {
+          "caller": "derive",
+          "callee": "animation_input_attrs.no_bound.unwrap_or_default",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 15
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter().any",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "name.is_ident",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "synstructure::Structure::new",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants",
+          "lineNumber": 27
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().iter().fold",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().iter",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_variant_arm",
+          "lineNumber": 30
+        },
+        {
+          "caller": "derive",
+          "callee": "match_body.append_all",
+          "lineNumber": 43
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 50
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_variant_attrs_from_ast::<AnimationVariantAttrs>",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::ref_pattern",
+          "lineNumber": 76
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::ref_pattern",
+          "lineNumber": 77
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.is_empty",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "sum.append_separated",
+          "lineNumber": 89
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.iter().zip(&other_info).map",
+          "lineNumber": 89
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.iter().zip",
+          "lineNumber": 89
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this_info.iter",
+          "lineNumber": 89
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_field_attrs::<DistanceFieldAttrs>",
+          "lineNumber": 90
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this.ast",
+          "lineNumber": 90
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this.ast",
+          "lineNumber": 92
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::add_predicate",
+          "lineNumber": 93
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_field_attrs::<AnimationFieldAttrs>",
+          "lineNumber": 100
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "this.ast",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style_derive/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "derive_animate",
+          "startLine": 32,
+          "endLine": 35,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_compute_squared_distance",
+          "startLine": 38,
+          "endLine": 41,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_animated_value",
+          "startLine": 44,
+          "endLine": 47,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_parse",
+          "startLine": 50,
+          "endLine": 53,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_animated_zero",
+          "startLine": 56,
+          "endLine": 59,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_computed_value",
+          "startLine": 62,
+          "endLine": 65,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_resolved_value",
+          "startLine": 68,
+          "endLine": 71,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_css",
+          "startLine": 74,
+          "endLine": 77,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_specified_value_info",
+          "startLine": 80,
+          "endLine": 83,
+          "params": [
+            "stream"
+          ]
+        },
+        {
+          "name": "derive_to_typed",
+          "startLine": 86,
+          "endLine": 89,
+          "params": [
+            "stream"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive_animate",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "derive_compute_squared_distance",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_animated_value",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "derive_parse",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_animated_zero",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_computed_value",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_resolved_value",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_css",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "derive_specified_value_info",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "derive_to_typed",
+          "line": 86,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive_animate",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 33
+        },
+        {
+          "caller": "derive_animate",
+          "callee": "syn::parse",
+          "lineNumber": 33
+        },
+        {
+          "caller": "derive_animate",
+          "callee": "animate::derive(input).into",
+          "lineNumber": 34
+        },
+        {
+          "caller": "derive_animate",
+          "callee": "animate::derive",
+          "lineNumber": 34
+        },
+        {
+          "caller": "derive_compute_squared_distance",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 39
+        },
+        {
+          "caller": "derive_compute_squared_distance",
+          "callee": "syn::parse",
+          "lineNumber": 39
+        },
+        {
+          "caller": "derive_compute_squared_distance",
+          "callee": "compute_squared_distance::derive(input).into",
+          "lineNumber": 40
+        },
+        {
+          "caller": "derive_compute_squared_distance",
+          "callee": "compute_squared_distance::derive",
+          "lineNumber": 40
+        },
+        {
+          "caller": "derive_to_animated_value",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 45
+        },
+        {
+          "caller": "derive_to_animated_value",
+          "callee": "syn::parse",
+          "lineNumber": 45
+        },
+        {
+          "caller": "derive_to_animated_value",
+          "callee": "to_animated_value::derive(input).into",
+          "lineNumber": 46
+        },
+        {
+          "caller": "derive_to_animated_value",
+          "callee": "to_animated_value::derive",
+          "lineNumber": 46
+        },
+        {
+          "caller": "derive_parse",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 51
+        },
+        {
+          "caller": "derive_parse",
+          "callee": "syn::parse",
+          "lineNumber": 51
+        },
+        {
+          "caller": "derive_parse",
+          "callee": "parse::derive(input).into",
+          "lineNumber": 52
+        },
+        {
+          "caller": "derive_parse",
+          "callee": "parse::derive",
+          "lineNumber": 52
+        },
+        {
+          "caller": "derive_to_animated_zero",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 57
+        },
+        {
+          "caller": "derive_to_animated_zero",
+          "callee": "syn::parse",
+          "lineNumber": 57
+        },
+        {
+          "caller": "derive_to_animated_zero",
+          "callee": "to_animated_zero::derive(input).into",
+          "lineNumber": 58
+        },
+        {
+          "caller": "derive_to_animated_zero",
+          "callee": "to_animated_zero::derive",
+          "lineNumber": 58
+        },
+        {
+          "caller": "derive_to_computed_value",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 63
+        },
+        {
+          "caller": "derive_to_computed_value",
+          "callee": "syn::parse",
+          "lineNumber": 63
+        },
+        {
+          "caller": "derive_to_computed_value",
+          "callee": "to_computed_value::derive(input).into",
+          "lineNumber": 64
+        },
+        {
+          "caller": "derive_to_computed_value",
+          "callee": "to_computed_value::derive",
+          "lineNumber": 64
+        },
+        {
+          "caller": "derive_to_resolved_value",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 69
+        },
+        {
+          "caller": "derive_to_resolved_value",
+          "callee": "syn::parse",
+          "lineNumber": 69
+        },
+        {
+          "caller": "derive_to_resolved_value",
+          "callee": "to_resolved_value::derive(input).into",
+          "lineNumber": 70
+        },
+        {
+          "caller": "derive_to_resolved_value",
+          "callee": "to_resolved_value::derive",
+          "lineNumber": 70
+        },
+        {
+          "caller": "derive_to_css",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive_to_css",
+          "callee": "syn::parse",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive_to_css",
+          "callee": "to_css::derive(input).into",
+          "lineNumber": 76
+        },
+        {
+          "caller": "derive_to_css",
+          "callee": "to_css::derive",
+          "lineNumber": 76
+        },
+        {
+          "caller": "derive_specified_value_info",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 81
+        },
+        {
+          "caller": "derive_specified_value_info",
+          "callee": "syn::parse",
+          "lineNumber": 81
+        },
+        {
+          "caller": "derive_specified_value_info",
+          "callee": "specified_value_info::derive(input).into",
+          "lineNumber": 82
+        },
+        {
+          "caller": "derive_specified_value_info",
+          "callee": "specified_value_info::derive",
+          "lineNumber": 82
+        },
+        {
+          "caller": "derive_to_typed",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive_to_typed",
+          "callee": "syn::parse",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive_to_typed",
+          "callee": "to_typed::derive(input).into",
+          "lineNumber": 88
+        },
+        {
+          "caller": "derive_to_typed",
+          "callee": "to_typed::derive",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 10,
+        "functionCount": 10,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style_derive/parse.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 332,
+      "nonEmptyLines": 284,
+      "functions": [
+        {
+          "name": "parse_bitflags",
+          "startLine": 26,
+          "endLine": 88,
+          "params": [
+            "bitflags"
+          ]
+        },
+        {
+          "name": "parse_non_keyword_variant",
+          "startLine": 90,
+          "endLine": 169,
+          "params": [
+            "where_clause",
+            "variant",
+            "variant_attrs",
+            "parse_attrs",
+            "skip_try"
+          ]
+        },
+        {
+          "name": "derive",
+          "startLine": 171,
+          "endLine": 332,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ParseVariantAttrs",
+          "startLine": 14,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "aliases",
+            "condition",
+            "parse_fn"
+          ]
+        },
+        {
+          "name": "ParseFieldAttrs",
+          "startLine": 22,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ParseVariantAttrs",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "ParseFieldAttrs",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "derive",
+          "line": 171,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_bitflags",
+          "callee": "TokenStream::new",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "bitflags.single_flags",
+          "lineNumber": 28
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 29
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 29
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "match_arms.append_all",
+          "lineNumber": 30
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "bitflags.mixed_flags",
+          "lineNumber": 38
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 39
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 39
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "match_arms.append_all",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parse_bitflags",
+          "callee": "validate_condition.append_all",
+          "lineNumber": 47
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "variant.bindings",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "bindings[0].ast",
+          "lineNumber": 106
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "parse_bitflags",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "cg::parse_field_attrs::<ParseFieldAttrs>",
+          "lineNumber": 120
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "cg::add_predicate",
+          "lineNumber": 123
+        },
+        {
+          "caller": "parse_non_keyword_variant",
+          "callee": "variant.ast",
+          "lineNumber": 132
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 172
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 173
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 174
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 181
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants().iter",
+          "lineNumber": 188
+        },
+        {
+          "caller": "derive",
+          "callee": "s.variants",
+          "lineNumber": 188
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs_from_ast::<CssVariantAttrs>",
+          "lineNumber": 189
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast",
+          "lineNumber": 189
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs_from_ast::<ParseVariantAttrs>",
+          "lineNumber": 195
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast",
+          "lineNumber": 195
+        },
+        {
+          "caller": "derive",
+          "callee": "parse_attrs.condition.is_some",
+          "lineNumber": 197
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings().is_empty",
+          "lineNumber": 199
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings",
+          "lineNumber": 199
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.push",
+          "lineNumber": 200
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 206
+        },
+        {
+          "caller": "derive",
+          "callee": "css_variant_attrs\r\n                .keyword.unwrap_or_else",
+          "lineNumber": 207
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast().ident.to_string",
+          "lineNumber": 209
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast",
+          "lineNumber": 209
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast",
+          "lineNumber": 211
+        },
+        {
+          "caller": "derive",
+          "callee": "match_keywords.extend",
+          "lineNumber": 218
+        },
+        {
+          "caller": "derive",
+          "callee": "aliases.split",
+          "lineNumber": 227
+        },
+        {
+          "caller": "derive",
+          "callee": "match_keywords.extend",
+          "lineNumber": 228
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.is_empty",
+          "lineNumber": 234
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.len",
+          "lineNumber": 242
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.iter().enumerate",
+          "lineNumber": 245
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.iter",
+          "lineNumber": 245
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.len",
+          "lineNumber": 246
+        },
+        {
+          "caller": "derive",
+          "callee": "parse_non_keyword_variant",
+          "lineNumber": 248
+        },
+        {
+          "caller": "derive",
+          "callee": "parse_non_keywords.extend",
+          "lineNumber": 249
+        },
+        {
+          "caller": "derive",
+          "callee": "non_keywords.is_empty",
+          "lineNumber": 276
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 279
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style_derive/specified_value_info.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 196,
+      "nonEmptyLines": 180,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 12,
+          "endLine": 135,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "derive_struct_fields",
+          "startLine": 139,
+          "endLine": 174,
+          "params": [
+            "fields",
+            "types",
+            "values"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValueInfoInputAttrs",
+          "startLine": 178,
+          "endLine": 181,
+          "methods": [],
+          "properties": [
+            "ty",
+            "other_values"
+          ]
+        },
+        {
+          "name": "ValueInfoVariantAttrs",
+          "startLine": 185,
+          "endLine": 189,
+          "methods": [],
+          "properties": [
+            "starts_with_keyword",
+            "skip",
+            "other_values"
+          ]
+        },
+        {
+          "name": "ValueInfoFieldAttrs",
+          "startLine": 193,
+          "endLine": 196,
+          "methods": [],
+          "properties": [
+            "skip",
+            "other_values"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<CssInputAttrs>",
+          "lineNumber": 13
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "input_ident.to_string",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 20
+        },
+        {
+          "caller": "derive",
+          "callee": "function.explicit().unwrap_or_else",
+          "lineNumber": 20
+        },
+        {
+          "caller": "derive",
+          "callee": "function.explicit",
+          "lineNumber": 20
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 24
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 25
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "e.variants.iter",
+          "lineNumber": 35
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs::<CssVariantAttrs>",
+          "lineNumber": 36
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs::<ValueInfoVariantAttrs>",
+          "lineNumber": 37
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs::<ParseVariantAttrs>",
+          "lineNumber": 38
+        },
+        {
+          "caller": "derive",
+          "callee": "aliases.split",
+          "lineNumber": 43
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 44
+        },
+        {
+          "caller": "derive",
+          "callee": "alias.to_string",
+          "lineNumber": 44
+        },
+        {
+          "caller": "derive",
+          "callee": "other_values.split",
+          "lineNumber": 48
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 49
+        },
+        {
+          "caller": "derive",
+          "callee": "value.to_string",
+          "lineNumber": 49
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 53
+        },
+        {
+          "caller": "derive",
+          "callee": "ident.to_string",
+          "lineNumber": 53
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 55
+        },
+        {
+          "caller": "derive",
+          "callee": "variant_name",
+          "lineNumber": 55
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 59
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 63
+        },
+        {
+          "caller": "derive",
+          "callee": "function.explicit().unwrap_or_else",
+          "lineNumber": 63
+        },
+        {
+          "caller": "derive",
+          "callee": "function.explicit",
+          "lineNumber": 63
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_struct_fields",
+          "lineNumber": 64
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 65
+        },
+        {
+          "caller": "derive",
+          "callee": "variant_name",
+          "lineNumber": 65
+        },
+        {
+          "caller": "derive",
+          "callee": "bitflags.single_flags",
+          "lineNumber": 71
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 72
+        },
+        {
+          "caller": "derive",
+          "callee": "bitflags.mixed_flags",
+          "lineNumber": 74
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 75
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_struct_fields",
+          "lineNumber": 77
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 78
+        },
+        {
+          "caller": "derive",
+          "callee": "input_name",
+          "lineNumber": 78
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<ValueInfoInputAttrs>",
+          "lineNumber": 85
+        },
+        {
+          "caller": "derive",
+          "callee": "other_values.split",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive",
+          "callee": "values.push",
+          "lineNumber": 88
+        },
+        {
+          "caller": "derive",
+          "callee": "value.to_string",
+          "lineNumber": 88
+        },
+        {
+          "caller": "derive",
+          "callee": "types_value.append_all",
+          "lineNumber": 93
+        },
+        {
+          "caller": "derive",
+          "callee": "types.iter().map",
+          "lineNumber": 93
+        },
+        {
+          "caller": "derive",
+          "callee": "types.iter",
+          "lineNumber": 93
+        },
+        {
+          "caller": "derive",
+          "callee": "nested_collects.append_all",
+          "lineNumber": 100
+        },
+        {
+          "caller": "derive",
+          "callee": "types.iter().map",
+          "lineNumber": 100
+        },
+        {
+          "caller": "derive",
+          "callee": "types.iter",
+          "lineNumber": 100
+        },
+        {
+          "caller": "derive",
+          "callee": "types_value.append_all",
+          "lineNumber": 107
+        },
+        {
+          "caller": "derive",
+          "callee": "values.is_empty",
+          "lineNumber": 112
+        },
+        {
+          "caller": "derive",
+          "callee": "value_list.append_separated",
+          "lineNumber": 116
+        },
+        {
+          "caller": "derive",
+          "callee": "values.iter",
+          "lineNumber": 116
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 121
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "fields.named.iter",
+          "lineNumber": 146
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "fields.unnamed.iter",
+          "lineNumber": 147
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "types.extend",
+          "lineNumber": 149
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "fields.filter_map",
+          "lineNumber": 149
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "cg::parse_field_attrs::<ValueInfoFieldAttrs>",
+          "lineNumber": 150
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "other_values.split",
+          "lineNumber": 152
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "values.push",
+          "lineNumber": 153
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "value.to_string",
+          "lineNumber": 153
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "cg::parse_field_attrs::<CssFieldAttrs>",
+          "lineNumber": 156
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "field\r\n                .ident\r\n                .as_ref().expect",
+          "lineNumber": 158
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "field\r\n                .ident.as_ref",
+          "lineNumber": 158
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "values.push",
+          "lineNumber": 162
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "cg::to_css_identifier(&ident.to_string()).replace",
+          "lineNumber": 162
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 162
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "ident.to_string",
+          "lineNumber": 162
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "values.push",
+          "lineNumber": 166
+        },
+        {
+          "caller": "derive_struct_fields",
+          "callee": "Some",
+          "lineNumber": 171
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style_derive/to_animated_value.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 11,
+          "endLine": 42,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "to_computed_value::derive_to_value",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_field_attrs::<AnimationFieldAttrs>",
+          "lineNumber": 32
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style_derive/to_animated_zero.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 12,
+          "endLine": 65,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<AnimationInputAttrs>",
+          "lineNumber": 13
+        },
+        {
+          "caller": "derive",
+          "callee": "animation_input_attrs.no_bound.unwrap_or_default",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 15
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter().any",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "no_bound.iter",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "name.is_ident",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 18
+        },
+        {
+          "caller": "derive",
+          "callee": "synstructure::Structure::new(&input).each_variant",
+          "lineNumber": 25
+        },
+        {
+          "caller": "derive",
+          "callee": "synstructure::Structure::new",
+          "lineNumber": 25
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_variant_attrs_from_ast::<AnimationVariantAttrs>",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.ast",
+          "lineNumber": 26
+        },
+        {
+          "caller": "derive",
+          "callee": "Some",
+          "lineNumber": 28
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::value",
+          "lineNumber": 30
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings().iter().zip",
+          "lineNumber": 31
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings().iter",
+          "lineNumber": 31
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings",
+          "lineNumber": 31
+        },
+        {
+          "caller": "derive",
+          "callee": "computations.append_all",
+          "lineNumber": 33
+        },
+        {
+          "caller": "derive",
+          "callee": "bindings_pairs.map",
+          "lineNumber": 33
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_field_attrs::<AnimationFieldAttrs>",
+          "lineNumber": 34
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 34
+        },
+        {
+          "caller": "derive",
+          "callee": "computations.append_all",
+          "lineNumber": 46
+        },
+        {
+          "caller": "derive",
+          "callee": "Some",
+          "lineNumber": 47
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style_derive/to_computed_value.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 205,
+      "nonEmptyLines": 177,
+      "functions": [
+        {
+          "name": "derive_to_value",
+          "startLine": 10,
+          "endLine": 158,
+          "params": [
+            "input",
+            "trait_path",
+            "output_type_name",
+            "bind_style",
+            "binding_attrs",
+            "call_from",
+            "call_to",
+            "trait_impl"
+          ]
+        },
+        {
+          "name": "derive",
+          "startLine": 160,
+          "endLine": 192,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ToValueAttrs",
+          "startLine": 195,
+          "endLine": 198,
+          "methods": [],
+          "properties": [
+            "field_bound",
+            "no_field_bound"
+          ]
+        },
+        {
+          "name": "ComputedValueAttrs",
+          "startLine": 202,
+          "endLine": 205,
+          "methods": [],
+          "properties": [
+            "field_bound",
+            "no_field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive_to_value",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "derive",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "ToValueAttrs",
+          "line": 195,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive_to_value",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 32
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::propagate_clauses_to_output_type",
+          "lineNumber": 33
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "input.generics.type_params().collect::<Vec<_>>",
+          "lineNumber": 45
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "input.generics.type_params",
+          "lineNumber": 45
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::add_predicate",
+          "lineNumber": 47
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::fmap_trait_output",
+          "lineNumber": 50
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "binding.ast",
+          "lineNumber": 53
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::map_type_params",
+          "lineNumber": 55
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::add_predicate",
+          "lineNumber": 62
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "params.is_empty",
+          "lineNumber": 70
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "synstructure::Structure::new",
+          "lineNumber": 71
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "s.variants_mut().iter_mut().for_each",
+          "lineNumber": 72
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "s.variants_mut().iter_mut",
+          "lineNumber": 72
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "s.variants_mut",
+          "lineNumber": 72
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "v.bind_with",
+          "lineNumber": 73
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "s.variants",
+          "lineNumber": 76
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "variant.bindings",
+          "lineNumber": 77
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "binding_attrs",
+          "lineNumber": 78
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "add_field_bound",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::fmap_match",
+          "lineNumber": 106
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "binding_attrs",
+          "lineNumber": 107
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "add_field_bound",
+          "lineNumber": 113
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "call_to",
+          "lineNumber": 115
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "cg::fmap_match",
+          "lineNumber": 118
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "call_from",
+          "lineNumber": 118
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 147
+        },
+        {
+          "caller": "derive_to_value",
+          "callee": "trait_impl",
+          "lineNumber": 149
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_to_value",
+          "lineNumber": 176
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_field_attrs::<ComputedValueAttrs>",
+          "lineNumber": 182
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 182
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style_derive/to_css.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 383,
+      "nonEmptyLines": 348,
+      "functions": [
+        {
+          "name": "derive_bitflags",
+          "startLine": 12,
+          "endLine": 78,
+          "params": [
+            "input",
+            "bitflags"
+          ]
+        },
+        {
+          "name": "derive",
+          "startLine": 80,
+          "endLine": 148,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "derive_variant_arm",
+          "startLine": 150,
+          "endLine": 184,
+          "params": [
+            "variant",
+            "generics"
+          ]
+        },
+        {
+          "name": "derive_variant_fields_expr",
+          "startLine": 186,
+          "endLine": 248,
+          "params": [
+            "bindings",
+            "where_clause",
+            "separator"
+          ]
+        },
+        {
+          "name": "derive_single_field_expr",
+          "startLine": 250,
+          "endLine": 313,
+          "params": [
+            "field",
+            "attrs",
+            "where_clause",
+            "bindings"
+          ]
+        },
+        {
+          "name": "names",
+          "startLine": 331,
+          "endLine": 339,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "single_flags",
+          "startLine": 341,
+          "endLine": 343,
+          "params": []
+        },
+        {
+          "name": "mixed_flags",
+          "startLine": 345,
+          "endLine": 347,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CssBitflagAttrs",
+          "startLine": 317,
+          "endLine": 327,
+          "methods": [
+            "names",
+            "single_flags",
+            "mixed_flags"
+          ],
+          "properties": [
+            "single",
+            "mixed",
+            "validate_mixed",
+            "overlapping_bits"
+          ]
+        },
+        {
+          "name": "CssInputAttrs",
+          "startLine": 352,
+          "endLine": 359,
+          "methods": [],
+          "properties": [
+            "derive_debug",
+            "function",
+            "comma",
+            "bitflags"
+          ]
+        },
+        {
+          "name": "CssVariantAttrs",
+          "startLine": 363,
+          "endLine": 371,
+          "methods": [],
+          "properties": [
+            "function",
+            "derive_debug",
+            "comma",
+            "bitflags",
+            "keyword",
+            "skip"
+          ]
+        },
+        {
+          "name": "CssFieldAttrs",
+          "startLine": 375,
+          "endLine": 383,
+          "methods": [],
+          "properties": [
+            "if_empty",
+            "field_bound",
+            "iterable",
+            "skip",
+            "represents_keyword",
+            "contextual_skip_if",
+            "skip_if"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "CssBitflagAttrs",
+          "line": 317,
+          "isDefault": false
+        },
+        {
+          "name": "single_flags",
+          "line": 341,
+          "isDefault": false
+        },
+        {
+          "name": "mixed_flags",
+          "line": 345,
+          "isDefault": false
+        },
+        {
+          "name": "CssInputAttrs",
+          "line": 352,
+          "isDefault": false
+        },
+        {
+          "name": "CssVariantAttrs",
+          "line": 363,
+          "isDefault": false
+        },
+        {
+          "name": "CssFieldAttrs",
+          "line": 375,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive_bitflags",
+          "callee": "TokenStream::new",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "bitflags.single_flags",
+          "lineNumber": 15
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 24
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "bitflags.mixed_flags",
+          "lineNumber": 34
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 35
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 35
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 44
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 51
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 59
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 81
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 82
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::add_predicate",
+          "lineNumber": 83
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<CssInputAttrs>",
+          "lineNumber": 86
+        },
+        {
+          "caller": "derive",
+          "callee": "input_attrs.bitflags.is_some",
+          "lineNumber": 87
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_bitflags",
+          "lineNumber": 104
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 108
+        },
+        {
+          "caller": "derive",
+          "callee": "s.each_variant",
+          "lineNumber": 109
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_variant_arm",
+          "lineNumber": 109
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 114
+        },
+        {
+          "caller": "derive",
+          "callee": "impls.append_all",
+          "lineNumber": 135
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.bindings",
+          "lineNumber": 151
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 152
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast().ident.to_string",
+          "lineNumber": 152
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast",
+          "lineNumber": 152
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast",
+          "lineNumber": 153
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_variant_attrs_from_ast::<CssVariantAttrs>",
+          "lineNumber": 154
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "bindings.is_empty",
+          "lineNumber": 166
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "derive_variant_fields_expr",
+          "lineNumber": 167
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "function.explicit().map_or",
+          "lineNumber": 175
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "function.explicit",
+          "lineNumber": 175
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "identifier.push",
+          "lineNumber": 176
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings\r\n        .iter()\r\n        .filter_map(|binding| {\r\n            let attrs = cg::parse_field_attrs::<CssFieldAttrs>(&binding.ast());\r\n            if attrs.skip {\r\n                return None;\r\n            }\r\n            Some((binding, attrs))\r\n        }).peekable",
+          "lineNumber": 191
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings\r\n        .iter().filter_map",
+          "lineNumber": 191
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings.iter",
+          "lineNumber": 191
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "cg::parse_field_attrs::<CssFieldAttrs>",
+          "lineNumber": 194
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "binding.ast",
+          "lineNumber": 194
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "Some",
+          "lineNumber": 198
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.next",
+          "lineNumber": 202
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "first.ast",
+          "lineNumber": 207
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "cg::add_predicate",
+          "lineNumber": 216
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.peek().is_none",
+          "lineNumber": 218
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.peek",
+          "lineNumber": 218
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr",
+          "lineNumber": 238
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr(binding, attrs, where_clause, bindings).to_tokens",
+          "lineNumber": 240
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr",
+          "lineNumber": 240
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field\r\n            .ast()\r\n            .ident\r\n            .as_ref().expect",
+          "lineNumber": 277
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field\r\n            .ast()\r\n            .ident.as_ref",
+          "lineNumber": 277
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field.ast",
+          "lineNumber": 277
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::to_css_identifier(&ident.to_string()).replace",
+          "lineNumber": 282
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 282
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "ident.to_string",
+          "lineNumber": 282
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field.ast",
+          "lineNumber": 290
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::add_predicate",
+          "lineNumber": 291
+        },
+        {
+          "caller": "names",
+          "callee": "s.split(',')\r\n            .map(|css_name| (cg::to_scream_case(css_name), css_name.to_owned())).collect",
+          "lineNumber": 336
+        },
+        {
+          "caller": "names",
+          "callee": "s.split(',').map",
+          "lineNumber": 336
+        },
+        {
+          "caller": "names",
+          "callee": "s.split",
+          "lineNumber": 336
+        },
+        {
+          "caller": "names",
+          "callee": "cg::to_scream_case",
+          "lineNumber": 337
+        },
+        {
+          "caller": "names",
+          "callee": "css_name.to_owned",
+          "lineNumber": 337
+        },
+        {
+          "caller": "single_flags",
+          "callee": "Self::names",
+          "lineNumber": 342
+        },
+        {
+          "caller": "mixed_flags",
+          "callee": "Self::names",
+          "lineNumber": 346
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 8,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "style_derive/to_resolved_value.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 11,
+          "endLine": 45,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResolvedValueAttrs",
+          "startLine": 49,
+          "endLine": 52,
+          "methods": [],
+          "properties": [
+            "field_bound",
+            "no_field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "to_computed_value::derive_to_value",
+          "lineNumber": 29
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_field_attrs::<ResolvedValueAttrs>",
+          "lineNumber": 35
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style_derive/to_typed.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 720,
+      "nonEmptyLines": 656,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 103,
+          "endLine": 213,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "derive_bitflags",
+          "startLine": 226,
+          "endLine": 301,
+          "params": [
+            "input",
+            "bitflags"
+          ]
+        },
+        {
+          "name": "derive_variant_arm",
+          "startLine": 320,
+          "endLine": 377,
+          "params": [
+            "variant",
+            "skip_derive_fields",
+            "where_clause"
+          ]
+        },
+        {
+          "name": "derive_variant_fields_expr",
+          "startLine": 395,
+          "endLine": 457,
+          "params": [
+            "bindings",
+            "where_clause",
+            "allow_multiple_values"
+          ]
+        },
+        {
+          "name": "derive_single_field_expr",
+          "startLine": 476,
+          "endLine": 588,
+          "params": [
+            "field",
+            "css_field_attrs",
+            "field_attrs",
+            "where_clause",
+            "bindings"
+          ]
+        },
+        {
+          "name": "field_generic_arguments",
+          "startLine": 607,
+          "endLine": 635,
+          "params": [
+            "field"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TypedInputAttrs",
+          "startLine": 639,
+          "endLine": 666,
+          "methods": [],
+          "properties": [
+            "skip_derive_fields",
+            "todo_derive_fields",
+            "no_multiple_values"
+          ]
+        },
+        {
+          "name": "TypedVariantAttrs",
+          "startLine": 670,
+          "endLine": 703,
+          "methods": [],
+          "properties": [
+            "skip_derive_fields",
+            "todo_derive_fields",
+            "no_multiple_values",
+            "skip",
+            "todo"
+          ]
+        },
+        {
+          "name": "TypedFieldAttrs",
+          "startLine": 707,
+          "endLine": 720,
+          "methods": [],
+          "properties": [
+            "skip_if",
+            "contextual_skip_if"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "field_generic_arguments",
+          "line": 607,
+          "isDefault": false
+        },
+        {
+          "name": "TypedInputAttrs",
+          "line": 639,
+          "isDefault": false
+        },
+        {
+          "name": "TypedVariantAttrs",
+          "line": 670,
+          "isDefault": false
+        },
+        {
+          "name": "TypedFieldAttrs",
+          "line": 707,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 111
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<CssInputAttrs>",
+          "lineNumber": 113
+        },
+        {
+          "caller": "derive",
+          "callee": "cg::parse_input_attrs::<TypedInputAttrs>",
+          "lineNumber": 115
+        },
+        {
+          "caller": "derive",
+          "callee": "css_input_attrs.bitflags.is_some",
+          "lineNumber": 117
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_bitflags",
+          "lineNumber": 126
+        },
+        {
+          "caller": "derive",
+          "callee": "variants.iter().all",
+          "lineNumber": 133
+        },
+        {
+          "caller": "derive",
+          "callee": "variants.iter",
+          "lineNumber": 133
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 152
+        },
+        {
+          "caller": "derive",
+          "callee": "s.each_variant",
+          "lineNumber": 153
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_variant_arm",
+          "lineNumber": 154
+        },
+        {
+          "caller": "derive",
+          "callee": "css_input_attrs.bitflags.is_none",
+          "lineNumber": 173
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 174
+        },
+        {
+          "caller": "derive",
+          "callee": "s.each_variant",
+          "lineNumber": 175
+        },
+        {
+          "caller": "derive",
+          "callee": "derive_variant_arm",
+          "lineNumber": 176
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 205
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "TokenStream::new",
+          "lineNumber": 228
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "bitflags.single_flags",
+          "lineNumber": 230
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 231
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 231
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 232
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 242
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 249
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "bitflags.mixed_flags",
+          "lineNumber": 254
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Ident::new",
+          "lineNumber": 255
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "Span::call_site",
+          "lineNumber": 255
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 263
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 270
+        },
+        {
+          "caller": "derive_bitflags",
+          "callee": "body.append_all",
+          "lineNumber": 278
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.bindings",
+          "lineNumber": 325
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "variant.ast",
+          "lineNumber": 327
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_variant_attrs_from_ast::<CssVariantAttrs>",
+          "lineNumber": 331
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::parse_variant_attrs_from_ast::<TypedVariantAttrs>",
+          "lineNumber": 334
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "bindings.is_empty",
+          "lineNumber": 350
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "css_variant_attrs\r\n            .keyword.unwrap_or_else",
+          "lineNumber": 354
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 356
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "identifier.to_string",
+          "lineNumber": 356
+        },
+        {
+          "caller": "derive_variant_arm",
+          "callee": "derive_variant_fields_expr",
+          "lineNumber": 368
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings\r\n        .iter()\r\n        .filter_map(|binding| {\r\n            let css_field_attrs = cg::parse_field_attrs::<CssFieldAttrs>(&binding.ast());\r\n            let field_attrs = cg::parse_field_attrs::<TypedFieldAttrs>(&binding.ast());\r\n            if css_field_attrs.skip {\r\n                return None;\r\n            }\r\n            Some((binding, css_field_attrs, field_attrs))\r\n        }).peekable",
+          "lineNumber": 402
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings\r\n        .iter().filter_map",
+          "lineNumber": 402
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "bindings.iter",
+          "lineNumber": 402
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "cg::parse_field_attrs::<CssFieldAttrs>",
+          "lineNumber": 405
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "binding.ast",
+          "lineNumber": 405
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "cg::parse_field_attrs::<TypedFieldAttrs>",
+          "lineNumber": 406
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "binding.ast",
+          "lineNumber": 406
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "Some",
+          "lineNumber": 410
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.next",
+          "lineNumber": 415
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.peek().is_none",
+          "lineNumber": 423
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "iter.peek",
+          "lineNumber": 423
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr",
+          "lineNumber": 425
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr",
+          "lineNumber": 436
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr(\r\n            binding,\r\n            css_field_attrs,\r\n            field_attrs,\r\n            where_clause,\r\n            bindings,\r\n        ).to_tokens",
+          "lineNumber": 438
+        },
+        {
+          "caller": "derive_variant_fields_expr",
+          "callee": "derive_single_field_expr",
+          "lineNumber": 438
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field_generic_arguments",
+          "lineNumber": 495
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::add_predicate",
+          "lineNumber": 496
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field\r\n            .ast()\r\n            .ident\r\n            .as_ref().expect",
+          "lineNumber": 523
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field\r\n            .ast()\r\n            .ident.as_ref",
+          "lineNumber": 523
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field.ast",
+          "lineNumber": 523
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::to_css_identifier(&ident.to_string()).replace",
+          "lineNumber": 528
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::to_css_identifier",
+          "lineNumber": 528
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "ident.to_string",
+          "lineNumber": 528
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field.ast",
+          "lineNumber": 540
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "cg::add_predicate",
+          "lineNumber": 541
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field_attrs.skip_if.is_some",
+          "lineNumber": 548
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field_attrs.contextual_skip_if.is_some",
+          "lineNumber": 548
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field_attrs.skip_if.or_else",
+          "lineNumber": 550
+        },
+        {
+          "caller": "derive_single_field_expr",
+          "callee": "field_attrs.contextual_skip_if.or_else",
+          "lineNumber": 558
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "field.ast",
+          "lineNumber": 610
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "type_path.path.segments.last",
+          "lineNumber": 615
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "Vec::new",
+          "lineNumber": 622
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "result.push",
+          "lineNumber": 630
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "(*arr.elem).clone",
+          "lineNumber": 630
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "result.push",
+          "lineNumber": 631
+        },
+        {
+          "caller": "field_generic_arguments",
+          "callee": "arg_ty.clone",
+          "lineNumber": 631
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 3
+      }
+    }
+  ]
+}

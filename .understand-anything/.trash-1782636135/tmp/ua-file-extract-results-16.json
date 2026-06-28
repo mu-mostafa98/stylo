@@ -1,0 +1,6723 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/servo/animation.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1876,
+      "nonEmptyLines": 1669,
+      "functions": [
+        {
+          "name": "property_id",
+          "startLine": 57,
+          "endLine": 60,
+          "params": []
+        },
+        {
+          "name": "timing_function_output",
+          "startLine": 63,
+          "endLine": 72,
+          "params": [
+            "progress"
+          ]
+        },
+        {
+          "name": "calculate_value",
+          "startLine": 75,
+          "endLine": 86,
+          "params": [
+            "progress"
+          ]
+        },
+        {
+          "name": "needs_to_be_ticked",
+          "startLine": 108,
+          "endLine": 110,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 142,
+          "endLine": 148,
+          "params": [
+            "start_percentage"
+          ]
+        },
+        {
+          "name": "generate_for_keyframes",
+          "startLine": 152,
+          "endLine": 180,
+          "params": [
+            "animation",
+            "context",
+            "base_style"
+          ]
+        },
+        {
+          "name": "update_from_step",
+          "startLine": 182,
+          "endLine": 219,
+          "params": [
+            "step",
+            "context",
+            "base_style"
+          ]
+        },
+        {
+          "name": "resolve_style",
+          "startLine": 221,
+          "endLine": 261,
+          "params": [
+            "element",
+            "context",
+            "base_style",
+            "resolver"
+          ]
+        },
+        {
+          "name": "relative_to_animation_direction",
+          "startLine": 339,
+          "endLine": 345,
+          "params": [
+            "reverse"
+          ]
+        },
+        {
+          "name": "next_relevant_keyframe_for_property_in_direction",
+          "startLine": 353,
+          "endLine": 387,
+          "params": [
+            "property_index",
+            "keyframe_index",
+            "direction"
+          ]
+        },
+        {
+          "name": "generate_for_keyframes",
+          "startLine": 390,
+          "endLine": 521,
+          "params": [
+            "element",
+            "animation",
+            "context",
+            "base_style",
+            "default_timing_function",
+            "resolver",
+            "animating_properties",
+            "number_of_animating_properties"
+          ]
+        },
+        {
+          "name": "is_cancelled_in_new_style",
+          "startLine": 571,
+          "endLine": 582,
+          "params": [
+            "new_style"
+          ]
+        },
+        {
+          "name": "iterate_if_necessary",
+          "startLine": 587,
+          "endLine": 603,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "iterate",
+          "startLine": 605,
+          "endLine": 631,
+          "params": []
+        },
+        {
+          "name": "current_iteration_end_progress",
+          "startLine": 637,
+          "endLine": 642,
+          "params": []
+        },
+        {
+          "name": "current_iteration_duration",
+          "startLine": 646,
+          "endLine": 648,
+          "params": []
+        },
+        {
+          "name": "iteration_over",
+          "startLine": 652,
+          "endLine": 654,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "on_last_iteration",
+          "startLine": 657,
+          "endLine": 662,
+          "params": []
+        },
+        {
+          "name": "has_ended",
+          "startLine": 667,
+          "endLine": 680,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "update_from_other",
+          "startLine": 689,
+          "endLine": 797,
+          "params": [
+            "other",
+            "now"
+          ]
+        },
+        {
+          "name": "get_property_declaration_at_time",
+          "startLine": 801,
+          "endLine": 971,
+          "params": [
+            "now",
+            "map"
+          ]
+        },
+        {
+          "name": "fmt",
+          "startLine": 975,
+          "endLine": 987,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 1020,
+          "endLine": 1043,
+          "params": [
+            "start_time",
+            "delay",
+            "duration",
+            "from",
+            "to",
+            "timing_function"
+          ]
+        },
+        {
+          "name": "update_for_possibly_reversed_transition",
+          "startLine": 1045,
+          "endLine": 1113,
+          "params": [
+            "replaced_transition",
+            "delay",
+            "now"
+          ]
+        },
+        {
+          "name": "has_ended",
+          "startLine": 1118,
+          "endLine": 1120,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "calculate_value",
+          "startLine": 1123,
+          "endLine": 1127,
+          "params": [
+            "time"
+          ]
+        },
+        {
+          "name": "cancel_all_animations",
+          "startLine": 1147,
+          "endLine": 1153,
+          "params": []
+        },
+        {
+          "name": "cancel_active_transitions",
+          "startLine": 1155,
+          "endLine": 1162,
+          "params": []
+        },
+        {
+          "name": "apply_active_animations",
+          "startLine": 1165,
+          "endLine": 1183,
+          "params": [
+            "context",
+            "style"
+          ]
+        },
+        {
+          "name": "clear_canceled_animations",
+          "startLine": 1186,
+          "endLine": 1191,
+          "params": []
+        },
+        {
+          "name": "is_empty",
+          "startLine": 1195,
+          "endLine": 1197,
+          "params": []
+        },
+        {
+          "name": "needs_animation_ticks",
+          "startLine": 1201,
+          "endLine": 1209,
+          "params": []
+        },
+        {
+          "name": "running_animation_and_transition_count",
+          "startLine": 1212,
+          "endLine": 1222,
+          "params": []
+        },
+        {
+          "name": "has_active_animation",
+          "startLine": 1225,
+          "endLine": 1229,
+          "params": []
+        },
+        {
+          "name": "has_active_transition",
+          "startLine": 1232,
+          "endLine": 1236,
+          "params": []
+        },
+        {
+          "name": "update_animations_for_new_style",
+          "startLine": 1240,
+          "endLine": 1256,
+          "params": [
+            "element",
+            "context",
+            "new_style",
+            "resolver"
+          ]
+        },
+        {
+          "name": "update_transitions_for_new_style",
+          "startLine": 1260,
+          "endLine": 1320,
+          "params": [
+            "might_need_transitions_update",
+            "context",
+            "old_style",
+            "after_change_style"
+          ]
+        },
+        {
+          "name": "start_transition_if_applicable",
+          "startLine": 1322,
+          "endLine": 1511,
+          "params": [
+            "context",
+            "property_declaration_id",
+            "index",
+            "old_style",
+            "new_style"
+          ]
+        },
+        {
+          "name": "get_value_map_for_transitions",
+          "startLine": 1516,
+          "endLine": 1548,
+          "params": [
+            "now",
+            "ignore_transitions"
+          ]
+        },
+        {
+          "name": "get_value_map_for_active_animations",
+          "startLine": 1552,
+          "endLine": 1563,
+          "params": [
+            "now"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 1578,
+          "endLine": 1583,
+          "params": [
+            "node",
+            "pseudo_element"
+          ]
+        },
+        {
+          "name": "new_for_non_pseudo",
+          "startLine": 1586,
+          "endLine": 1591,
+          "params": [
+            "node"
+          ]
+        },
+        {
+          "name": "new_for_pseudo",
+          "startLine": 1594,
+          "endLine": 1599,
+          "params": [
+            "node",
+            "pseudo_element"
+          ]
+        },
+        {
+          "name": "has_active_animations",
+          "startLine": 1612,
+          "endLine": 1617,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "has_active_transitions",
+          "startLine": 1620,
+          "endLine": 1625,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "get_animation_declarations",
+          "startLine": 1629,
+          "endLine": 1643,
+          "params": [
+            "key",
+            "time",
+            "shared_lock"
+          ]
+        },
+        {
+          "name": "get_transition_declarations",
+          "startLine": 1647,
+          "endLine": 1663,
+          "params": [
+            "key",
+            "time",
+            "shared_lock"
+          ]
+        },
+        {
+          "name": "get_all_declarations",
+          "startLine": 1667,
+          "endLine": 1693,
+          "params": [
+            "key",
+            "time",
+            "shared_lock"
+          ]
+        },
+        {
+          "name": "cancel_all_animations_for_key",
+          "startLine": 1696,
+          "endLine": 1700,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "start_transitions_if_applicable",
+          "startLine": 1705,
+          "endLine": 1749,
+          "params": [
+            "context",
+            "old_style",
+            "new_style",
+            "animation_state"
+          ]
+        },
+        {
+          "name": "maybe_start_animations",
+          "startLine": 1753,
+          "endLine": 1876,
+          "params": [
+            "element",
+            "context",
+            "new_style",
+            "animation_state",
+            "resolver"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PropertyAnimation",
+          "startLine": 41,
+          "endLine": 53,
+          "methods": [
+            "property_id",
+            "timing_function_output",
+            "calculate_value"
+          ],
+          "properties": [
+            "from",
+            "to",
+            "timing_function",
+            "duration"
+          ]
+        },
+        {
+          "name": "AnimationState",
+          "startLine": 91,
+          "endLine": 104,
+          "methods": [
+            "needs_to_be_ticked"
+          ],
+          "properties": [
+            "Pending",
+            "Running",
+            "Paused",
+            "Finished",
+            "Canceled"
+          ]
+        },
+        {
+          "name": "IgnoreTransitions",
+          "startLine": 113,
+          "endLine": 116,
+          "methods": [],
+          "properties": [
+            "Canceled",
+            "CanceledAndFinished"
+          ]
+        },
+        {
+          "name": "KeyframesIterationState",
+          "startLine": 123,
+          "endLine": 128,
+          "methods": [],
+          "properties": [
+            "Infinite",
+            "Finite"
+          ]
+        },
+        {
+          "name": "IntermediateComputedKeyframe",
+          "startLine": 135,
+          "endLine": 139,
+          "methods": [
+            "new",
+            "generate_for_keyframes",
+            "update_from_step",
+            "resolve_style"
+          ],
+          "properties": [
+            "declarations",
+            "timing_function",
+            "start_percentage"
+          ]
+        },
+        {
+          "name": "PropertyDeclarationOffsets",
+          "startLine": 265,
+          "endLine": 272,
+          "methods": [],
+          "properties": [
+            "preceding_declaration",
+            "following_declaration"
+          ]
+        },
+        {
+          "name": "AnimationValueOrReference",
+          "startLine": 275,
+          "endLine": 280,
+          "methods": [],
+          "properties": [
+            "AnimationValue",
+            "NotDefinedHere"
+          ]
+        },
+        {
+          "name": "ComputedKeyframe",
+          "startLine": 284,
+          "endLine": 296,
+          "methods": [
+            "generate_for_keyframes"
+          ],
+          "properties": [
+            "timing_function",
+            "start_percentage",
+            "values"
+          ]
+        },
+        {
+          "name": "KeyframeOffsetCacheForProperty",
+          "startLine": 304,
+          "endLine": 318,
+          "methods": [],
+          "properties": [
+            "last_keyframe_that_defined_property",
+            "next_keyframe_that_defines_property"
+          ]
+        },
+        {
+          "name": "KeyframeDataForProperty",
+          "startLine": 320,
+          "endLine": 330,
+          "methods": [],
+          "properties": [
+            "timing_function",
+            "start_percentage",
+            "value"
+          ]
+        },
+        {
+          "name": "Direction",
+          "startLine": 333,
+          "endLine": 336,
+          "methods": [
+            "relative_to_animation_direction"
+          ],
+          "properties": [
+            "Forward",
+            "Backward"
+          ]
+        },
+        {
+          "name": "Animation",
+          "startLine": 526,
+          "endLine": 567,
+          "methods": [
+            "next_relevant_keyframe_for_property_in_direction",
+            "is_cancelled_in_new_style",
+            "iterate_if_necessary",
+            "iterate",
+            "current_iteration_end_progress",
+            "current_iteration_duration",
+            "iteration_over",
+            "on_last_iteration",
+            "has_ended",
+            "update_from_other",
+            "get_property_declaration_at_time",
+            "fmt"
+          ],
+          "properties": [
+            "name",
+            "properties_changed",
+            "computed_steps",
+            "started_at",
+            "duration",
+            "delay",
+            "fill_mode",
+            "iteration_state",
+            "state",
+            "direction",
+            "current_direction",
+            "number_of_animating_properties",
+            "is_new"
+          ]
+        },
+        {
+          "name": "Transition",
+          "startLine": 992,
+          "endLine": 1017,
+          "methods": [
+            "new",
+            "update_for_possibly_reversed_transition",
+            "has_ended",
+            "calculate_value"
+          ],
+          "properties": [
+            "start_time",
+            "delay",
+            "property_animation",
+            "state",
+            "is_new",
+            "reversing_adjusted_start_value",
+            "reversing_shortening_factor"
+          ]
+        },
+        {
+          "name": "ElementAnimationSet",
+          "startLine": 1132,
+          "endLine": 1142,
+          "methods": [
+            "cancel_all_animations",
+            "cancel_active_transitions",
+            "apply_active_animations",
+            "clear_canceled_animations",
+            "is_empty",
+            "needs_animation_ticks",
+            "running_animation_and_transition_count",
+            "has_active_animation",
+            "has_active_transition",
+            "update_animations_for_new_style",
+            "update_transitions_for_new_style",
+            "start_transition_if_applicable",
+            "get_value_map_for_transitions",
+            "get_value_map_for_active_animations"
+          ],
+          "properties": [
+            "animations",
+            "transitions",
+            "dirty"
+          ]
+        },
+        {
+          "name": "AnimationSetKey",
+          "startLine": 1568,
+          "endLine": 1574,
+          "methods": [
+            "new",
+            "new_for_non_pseudo",
+            "new_for_pseudo"
+          ],
+          "properties": [
+            "node",
+            "pseudo_element"
+          ]
+        },
+        {
+          "name": "DocumentAnimationSet",
+          "startLine": 1604,
+          "endLine": 1608,
+          "methods": [
+            "has_active_animations",
+            "has_active_transitions",
+            "get_animation_declarations",
+            "get_transition_declarations",
+            "get_all_declarations",
+            "cancel_all_animations_for_key"
+          ],
+          "properties": [
+            "sets"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PropertyAnimation",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "property_id",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationState",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "KeyframesIterationState",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "Animation",
+          "line": 526,
+          "isDefault": false
+        },
+        {
+          "name": "iterate_if_necessary",
+          "line": 587,
+          "isDefault": false
+        },
+        {
+          "name": "current_iteration_end_progress",
+          "line": 637,
+          "isDefault": false
+        },
+        {
+          "name": "current_iteration_duration",
+          "line": 646,
+          "isDefault": false
+        },
+        {
+          "name": "has_ended",
+          "line": 667,
+          "isDefault": false
+        },
+        {
+          "name": "update_from_other",
+          "line": 689,
+          "isDefault": false
+        },
+        {
+          "name": "Transition",
+          "line": 992,
+          "isDefault": false
+        },
+        {
+          "name": "has_ended",
+          "line": 1118,
+          "isDefault": false
+        },
+        {
+          "name": "calculate_value",
+          "line": 1123,
+          "isDefault": false
+        },
+        {
+          "name": "ElementAnimationSet",
+          "line": 1132,
+          "isDefault": false
+        },
+        {
+          "name": "cancel_all_animations",
+          "line": 1147,
+          "isDefault": false
+        },
+        {
+          "name": "apply_active_animations",
+          "line": 1165,
+          "isDefault": false
+        },
+        {
+          "name": "clear_canceled_animations",
+          "line": 1186,
+          "isDefault": false
+        },
+        {
+          "name": "is_empty",
+          "line": 1195,
+          "isDefault": false
+        },
+        {
+          "name": "needs_animation_ticks",
+          "line": 1201,
+          "isDefault": false
+        },
+        {
+          "name": "running_animation_and_transition_count",
+          "line": 1212,
+          "isDefault": false
+        },
+        {
+          "name": "has_active_animation",
+          "line": 1225,
+          "isDefault": false
+        },
+        {
+          "name": "has_active_transition",
+          "line": 1232,
+          "isDefault": false
+        },
+        {
+          "name": "update_animations_for_new_style",
+          "line": 1240,
+          "isDefault": false
+        },
+        {
+          "name": "update_transitions_for_new_style",
+          "line": 1260,
+          "isDefault": false
+        },
+        {
+          "name": "get_value_map_for_active_animations",
+          "line": 1552,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationSetKey",
+          "line": 1568,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 1578,
+          "isDefault": false
+        },
+        {
+          "name": "new_for_non_pseudo",
+          "line": 1586,
+          "isDefault": false
+        },
+        {
+          "name": "new_for_pseudo",
+          "line": 1594,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentAnimationSet",
+          "line": 1604,
+          "isDefault": false
+        },
+        {
+          "name": "has_active_animations",
+          "line": 1612,
+          "isDefault": false
+        },
+        {
+          "name": "has_active_transitions",
+          "line": 1620,
+          "isDefault": false
+        },
+        {
+          "name": "get_animation_declarations",
+          "line": 1629,
+          "isDefault": false
+        },
+        {
+          "name": "get_transition_declarations",
+          "line": 1647,
+          "isDefault": false
+        },
+        {
+          "name": "get_all_declarations",
+          "line": 1667,
+          "isDefault": false
+        },
+        {
+          "name": "cancel_all_animations_for_key",
+          "line": 1696,
+          "isDefault": false
+        },
+        {
+          "name": "start_transitions_if_applicable",
+          "line": 1705,
+          "isDefault": false
+        },
+        {
+          "name": "maybe_start_animations",
+          "line": 1753,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "property_id",
+          "callee": "self.from.id",
+          "lineNumber": 59
+        },
+        {
+          "caller": "timing_function_output",
+          "callee": "self.timing_function.calculate_output",
+          "lineNumber": 70
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.timing_function_output",
+          "lineNumber": 76
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.from.animate(&self.to, procedure).unwrap_or_else",
+          "lineNumber": 78
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.from.animate",
+          "lineNumber": 78
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.from.clone",
+          "lineNumber": 81
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.to.clone",
+          "lineNumber": 83
+        },
+        {
+          "caller": "new",
+          "callee": "PropertyDeclarationBlock::new",
+          "lineNumber": 144
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animation.steps.is_empty",
+          "lineNumber": 157
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "Vec::with_capacity",
+          "lineNumber": 161
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animation.steps.len",
+          "lineNumber": 161
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "IntermediateComputedKeyframe::new",
+          "lineNumber": 162
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animation.steps.iter",
+          "lineNumber": 163
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "IntermediateComputedKeyframe::new",
+          "lineNumber": 166
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "intermediate_steps.push",
+          "lineNumber": 167
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "std::mem::replace",
+          "lineNumber": 167
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "current_step.update_from_step",
+          "lineNumber": 170
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "intermediate_steps.push",
+          "lineNumber": 172
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "step.get_animation_timing_function",
+          "lineNumber": 191
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "Some",
+          "lineNumber": 192
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "timing_function.to_computed_value_without_context",
+          "lineNumber": 192
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "block.read_with",
+          "lineNumber": 202
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "guard.normal_declaration_iter",
+          "lineNumber": 203
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "declaration.id",
+          "lineNumber": 204
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "id.is_animatable",
+          "lineNumber": 209
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "self.declarations.push",
+          "lineNumber": 214
+        },
+        {
+          "caller": "update_from_step",
+          "callee": "declaration.to_physical",
+          "lineNumber": 215
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "self.declarations.any_normal",
+          "lineNumber": 231
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.clone",
+          "lineNumber": 232
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "element.as_node().owner_doc",
+          "lineNumber": 235
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "element.as_node",
+          "lineNumber": 235
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "Arc::new",
+          "lineNumber": 236
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "document.shared_lock().wrap",
+          "lineNumber": 236
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "document.shared_lock",
+          "lineNumber": 236
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.rules().clone",
+          "lineNumber": 238
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.rules",
+          "lineNumber": 238
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "context.stylist.rule_tree().update_rule_at_level",
+          "lineNumber": 239
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "context.stylist.rule_tree",
+          "lineNumber": 239
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 240
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "LayerOrder::root",
+          "lineNumber": 241
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "Some",
+          "lineNumber": 242
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "locked_block.borrow_arc",
+          "lineNumber": 242
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "new_node.is_none",
+          "lineNumber": 248
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.clone",
+          "lineNumber": 249
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.visited_rules().cloned",
+          "lineNumber": 254
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.visited_rules",
+          "lineNumber": 254
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "base_style.flags.for_cascade_inputs",
+          "lineNumber": 255
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 256
+        },
+        {
+          "caller": "resolve_style",
+          "callee": "resolver.cascade_style_and_visited_with_default_parents",
+          "lineNumber": 258
+        },
+        {
+          "caller": "next_relevant_keyframe_for_property_in_direction",
+          "callee": "Some",
+          "lineNumber": 386
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties\r\n            .iter()\r\n            .map(|property| {\r\n                AnimationValue::from_computed_values(property, &**base_style)\r\n                    .expect(\"Unexpected non-animatable property.\")\r\n            }).collect",
+          "lineNumber": 403
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties\r\n            .iter().map",
+          "lineNumber": 403
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties.iter",
+          "lineNumber": 403
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValue::from_computed_values(property, &**base_style).expect",
+          "lineNumber": 406
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValue::from_computed_values",
+          "lineNumber": 406
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "IntermediateComputedKeyframe::generate_for_keyframes",
+          "lineNumber": 412
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "Vec::with_capacity",
+          "lineNumber": 420
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "intermediate_steps.len",
+          "lineNumber": 420
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "intermediate_steps.into_iter",
+          "lineNumber": 421
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.next",
+          "lineNumber": 423
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step.declarations.property_ids().clone",
+          "lineNumber": 425
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step.declarations.property_ids",
+          "lineNumber": 425
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step\r\n                .timing_function\r\n                .clone().unwrap_or_else",
+          "lineNumber": 426
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step\r\n                .timing_function.clone",
+          "lineNumber": 426
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "default_timing_function.clone",
+          "lineNumber": 429
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step.resolve_style",
+          "lineNumber": 430
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties\r\n                    .iter()\r\n                    .enumerate()\r\n                    .map(|(property_index, property_declaration)| {\r\n                        let keyframe_offset_cache = &mut keyframe_offset_caches[property_index];\r\n                        if properties_changed_in_step.contains(property_declaration) {\r\n                            keyframe_offset_cache.last_keyframe_that_defined_property = step_index;\r\n                            let animation_value = AnimationValue::from_computed_values(\r\n                                property_declaration,\r\n                                &step_style,\r\n                            )\r\n                            .unwrap();\r\n                            return AnimationValueOrReference::AnimationValue(animation_value);\r\n                        }\r\n\r\n                        // https://drafts.csswg.org/css-animations/#keyframes\r\n                        // > If a 0% or from keyframe is not specified, then the user agent constructs a 0% keyframe\r\n                        // > using the computed values of the properties being animated. If a 100% or to keyframe is\r\n                        // > not specified, then the user agent constructs a 100% keyframe using the computed values\r\n                        // > of the properties being animated.\r\n                        if step_index == 0 || remaining_steps.as_slice().is_empty() {\r\n                            return AnimationValueOrReference::AnimationValue(\r\n                                animation_values_from_style[property_index].clone(),\r\n                            );\r\n                        }\r\n\r\n                        // This animating property is not defined on this keyframe - we should act as if this keyframe\r\n                        // didn't exist for this property, so we calculate an interpolated value.\r\n                        // (https://drafts.csswg.org/css-animations/#keyframes)\r\n                        //\r\n                        // If the property was not defined on any previous keyframe then we use the value from style.\r\n                        // and if it's not defined on any following keyframe then we've already finished animating it.\r\n                        let preceding_declaration =\r\n                            keyframe_offset_cache.last_keyframe_that_defined_property;\r\n                        let following_declaration = keyframe_offset_cache\r\n                            .next_keyframe_that_defines_property\r\n                            .filter(|offset| *offset > step_index)\r\n                            .unwrap_or_else(|| {\r\n                                let relative_offset = remaining_steps\r\n                                    .as_slice()\r\n                                    .iter()\r\n                                    .position(|step| {\r\n                                        step.declarations.contains(property_declaration)\r\n                                    })\r\n                                    .unwrap_or(remaining_steps.as_slice().len() - 1);\r\n                                let absolute_offset = step_index + 1 + relative_offset;\r\n\r\n                                keyframe_offset_cache.next_keyframe_that_defines_property =\r\n                                    Some(absolute_offset);\r\n                                absolute_offset\r\n                            });\r\n\r\n                        AnimationValueOrReference::NotDefinedHere(PropertyDeclarationOffsets {\r\n                            preceding_declaration,\r\n                            following_declaration,\r\n                        })\r\n                    }).collect",
+          "lineNumber": 435
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties\r\n                    .iter()\r\n                    .enumerate().map",
+          "lineNumber": 435
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties\r\n                    .iter().enumerate",
+          "lineNumber": 435
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animating_properties.iter",
+          "lineNumber": 435
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "properties_changed_in_step.contains",
+          "lineNumber": 440
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValue::from_computed_values(\r\n                                property_declaration,\r\n                                &step_style,\r\n                            ).unwrap",
+          "lineNumber": 442
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValue::from_computed_values",
+          "lineNumber": 442
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValueOrReference::AnimationValue",
+          "lineNumber": 447
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.as_slice().is_empty",
+          "lineNumber": 455
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.as_slice",
+          "lineNumber": 455
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValueOrReference::AnimationValue",
+          "lineNumber": 456
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "animation_values_from_style[property_index].clone",
+          "lineNumber": 457
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "keyframe_offset_cache\r\n                            .next_keyframe_that_defines_property\r\n                            .filter(|offset| *offset > step_index).unwrap_or_else",
+          "lineNumber": 469
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "keyframe_offset_cache\r\n                            .next_keyframe_that_defines_property.filter",
+          "lineNumber": 469
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps\r\n                                    .as_slice()\r\n                                    .iter()\r\n                                    .position(|step| {\r\n                                        step.declarations.contains(property_declaration)\r\n                                    }).unwrap_or",
+          "lineNumber": 473
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps\r\n                                    .as_slice()\r\n                                    .iter().position",
+          "lineNumber": 473
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps\r\n                                    .as_slice().iter",
+          "lineNumber": 473
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.as_slice",
+          "lineNumber": 473
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "step.declarations.contains",
+          "lineNumber": 477
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.as_slice().len",
+          "lineNumber": 479
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "remaining_steps.as_slice",
+          "lineNumber": 479
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "Some",
+          "lineNumber": 483
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "AnimationValueOrReference::NotDefinedHere",
+          "lineNumber": 487
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "computed_steps.push",
+          "lineNumber": 496
+        },
+        {
+          "caller": "generate_for_keyframes",
+          "callee": "computed_steps.into_boxed_slice",
+          "lineNumber": 520
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "new_style.get_ui",
+          "lineNumber": 572
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "new_ui\r\n            .animation_name_iter().position",
+          "lineNumber": 573
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "new_ui.animation_name_iter",
+          "lineNumber": 573
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "Some",
+          "lineNumber": 575
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "animation_name.as_atom",
+          "lineNumber": 575
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "new_ui.animation_duration_mod(index).seconds",
+          "lineNumber": 581
+        },
+        {
+          "caller": "is_cancelled_in_new_style",
+          "callee": "new_ui.animation_duration_mod",
+          "lineNumber": 581
+        },
+        {
+          "caller": "iterate_if_necessary",
+          "callee": "self.iteration_over",
+          "lineNumber": 588
+        },
+        {
+          "caller": "iterate_if_necessary",
+          "callee": "self.on_last_iteration",
+          "lineNumber": 597
+        },
+        {
+          "caller": "iterate_if_necessary",
+          "callee": "self.iterate",
+          "lineNumber": 601
+        },
+        {
+          "caller": "iterate",
+          "callee": "(*current + 1.).min",
+          "lineNumber": 609
+        },
+        {
+          "caller": "current_iteration_end_progress",
+          "callee": "(max - current).min",
+          "lineNumber": 639
+        },
+        {
+          "caller": "current_iteration_duration",
+          "callee": "self.current_iteration_end_progress",
+          "lineNumber": 647
+        },
+        {
+          "caller": "iteration_over",
+          "callee": "self.current_iteration_duration",
+          "lineNumber": 653
+        },
+        {
+          "caller": "has_ended",
+          "callee": "self.on_last_iteration",
+          "lineNumber": 668
+        },
+        {
+          "caller": "has_ended",
+          "callee": "self.current_iteration_end_progress",
+          "lineNumber": 679
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.state.clone",
+          "lineNumber": 703
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.iteration_state.clone",
+          "lineNumber": 704
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "other.clone",
+          "lineNumber": 706
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.on_last_iteration",
+          "lineNumber": 717
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.iterate",
+          "lineNumber": 718
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "Paused",
+          "lineNumber": 721
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.has_ended",
+          "lineNumber": 724
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.on_last_iteration",
+          "lineNumber": 740
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.iterate",
+          "lineNumber": 741
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "std::mem::replace",
+          "lineNumber": 767
+        },
+        {
+          "caller": "update_from_other",
+          "callee": "self.has_ended",
+          "lineNumber": 768
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.is_empty",
+          "lineNumber": 802
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.has_ended",
+          "lineNumber": 823
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "keyframe.values.iter",
+          "lineNumber": 833
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "map.insert",
+          "lineNumber": 837
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "value.id().to_owned",
+          "lineNumber": 837
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "value.id",
+          "lineNumber": 837
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "value.clone",
+          "lineNumber": 837
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.first",
+          "lineNumber": 844
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.last",
+          "lineNumber": 845
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "add_declarations_to_map",
+          "lineNumber": 848
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "progress.min(self.current_iteration_end_progress()).max",
+          "lineNumber": 854
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "progress.min",
+          "lineNumber": 854
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.current_iteration_end_progress",
+          "lineNumber": 854
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.last().unwrap",
+          "lineNumber": 859
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.last",
+          "lineNumber": 859
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.first().unwrap",
+          "lineNumber": 860
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.first",
+          "lineNumber": 860
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "add_declarations_to_map",
+          "lineNumber": 863
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.computed_steps.len",
+          "lineNumber": 870
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps\r\n                    .iter().position",
+          "lineNumber": 873
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps.iter",
+          "lineNumber": 873
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "next_keyframe_index\r\n                    .and_then(|pos| if pos != 0 { Some(pos - 1) } else { None }).unwrap_or",
+          "lineNumber": 877
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "next_keyframe_index.and_then",
+          "lineNumber": 877
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "Some",
+          "lineNumber": 878
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps\r\n                    .iter()\r\n                    .rev()\r\n                    .position(|step| total_progress <= 1. - step.start_percentage).map",
+          "lineNumber": 882
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps\r\n                    .iter()\r\n                    .rev().position",
+          "lineNumber": 882
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps\r\n                    .iter().rev",
+          "lineNumber": 882
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self\r\n                    .computed_steps.iter",
+          "lineNumber": 882
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "next_keyframe_index\r\n                    .and_then(|pos| {\r\n                        if pos != num_steps - 1 {\r\n                            Some(pos + 1)\r\n                        } else {\r\n                            None\r\n                        }\r\n                    }).unwrap_or",
+          "lineNumber": 888
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "next_keyframe_index.and_then",
+          "lineNumber": 888
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "Some",
+          "lineNumber": 891
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "add_declarations_to_map",
+          "lineNumber": 921
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.next_relevant_keyframe_for_property_in_direction",
+          "lineNumber": 928
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "Direction::Backward.relative_to_animation_direction",
+          "lineNumber": 931
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "self.next_relevant_keyframe_for_property_in_direction",
+          "lineNumber": 937
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "Direction::Forward.relative_to_animation_direction",
+          "lineNumber": 940
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "map.insert",
+          "lineNumber": 943
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "previous_keyframe.value.id().to_owned",
+          "lineNumber": 944
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "previous_keyframe.value.id",
+          "lineNumber": 944
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "previous_keyframe.value.clone",
+          "lineNumber": 945
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "(next_keyframe.start_percentage - previous_keyframe.start_percentage).abs",
+          "lineNumber": 951
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "previous_keyframe.value.clone",
+          "lineNumber": 962
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "next_keyframe.value.clone",
+          "lineNumber": 963
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "previous_keyframe.timing_function.clone",
+          "lineNumber": 964
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "animation.calculate_value",
+          "lineNumber": 968
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "map.insert",
+          "lineNumber": 969
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "value.id().to_owned",
+          "lineNumber": 969
+        },
+        {
+          "caller": "get_property_declaration_at_time",
+          "callee": "value.id",
+          "lineNumber": 969
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay)\r\n            .field(\"iteration_state\", &self.iteration_state)\r\n            .field(\"state\", &self.state)\r\n            .field(\"direction\", &self.direction)\r\n            .field(\"current_direction\", &self.current_direction)\r\n            .field(\"cascade_style\", &()).finish",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay)\r\n            .field(\"iteration_state\", &self.iteration_state)\r\n            .field(\"state\", &self.state)\r\n            .field(\"direction\", &self.direction)\r\n            .field(\"current_direction\", &self.current_direction).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay)\r\n            .field(\"iteration_state\", &self.iteration_state)\r\n            .field(\"state\", &self.state)\r\n            .field(\"direction\", &self.direction).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay)\r\n            .field(\"iteration_state\", &self.iteration_state)\r\n            .field(\"state\", &self.state).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay)\r\n            .field(\"iteration_state\", &self.iteration_state).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration)\r\n            .field(\"delay\", &self.delay).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at)\r\n            .field(\"duration\", &self.duration).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"started_at\", &self.started_at).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\")\r\n            .field(\"name\", &self.name).field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"Animation\").field",
+          "lineNumber": 976
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct",
+          "lineNumber": 976
+        },
+        {
+          "caller": "new",
+          "callee": "from.clone",
+          "lineNumber": 1029
+        },
+        {
+          "caller": "new",
+          "callee": "timing_function.clone",
+          "lineNumber": 1031
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "replaced_animation.to.clone",
+          "lineNumber": 1065
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "((now - replaced_transition.start_time)\r\n            / (replaced_transition.property_animation.duration))\r\n            .min(1.0).max",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "((now - replaced_transition.start_time)\r\n            / (replaced_transition.property_animation.duration)).min",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "replaced_animation.timing_function_output",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "((timing_function_output\r\n            * old_reversing_shortening_factor)\r\n            + (1.0 - old_reversing_shortening_factor))\r\n            .abs()\r\n            .min(1.0).max",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "((timing_function_output\r\n            * old_reversing_shortening_factor)\r\n            + (1.0 - old_reversing_shortening_factor))\r\n            .abs().min",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "((timing_function_output\r\n            * old_reversing_shortening_factor)\r\n            + (1.0 - old_reversing_shortening_factor)).abs",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "update_for_possibly_reversed_transition",
+          "callee": "replaced_animation\r\n            .from.animate",
+          "lineNumber": 1106
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "self.property_animation.calculate_value",
+          "lineNumber": 1125
+        },
+        {
+          "caller": "calculate_value",
+          "callee": "progress.clamp",
+          "lineNumber": 1126
+        },
+        {
+          "caller": "cancel_all_animations",
+          "callee": "self.animations.is_empty",
+          "lineNumber": 1148
+        },
+        {
+          "caller": "cancel_all_animations",
+          "callee": "self.animations.iter_mut",
+          "lineNumber": 1149
+        },
+        {
+          "caller": "cancel_all_animations",
+          "callee": "self.cancel_active_transitions",
+          "lineNumber": 1152
+        },
+        {
+          "caller": "cancel_active_transitions",
+          "callee": "self.transitions.iter_mut",
+          "lineNumber": 1156
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "Arc::make_mut",
+          "lineNumber": 1171
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "self.get_value_map_for_active_animations",
+          "lineNumber": 1172
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "map.values",
+          "lineNumber": 1173
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "value.set_in_style_for_servo",
+          "lineNumber": 1174
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "self.get_value_map_for_transitions",
+          "lineNumber": 1178
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "map.values",
+          "lineNumber": 1179
+        },
+        {
+          "caller": "apply_active_animations",
+          "callee": "value.set_in_style_for_servo",
+          "lineNumber": 1180
+        },
+        {
+          "caller": "clear_canceled_animations",
+          "callee": "self.animations.retain",
+          "lineNumber": 1187
+        },
+        {
+          "caller": "clear_canceled_animations",
+          "callee": "self.transitions.retain",
+          "lineNumber": 1189
+        },
+        {
+          "caller": "is_empty",
+          "callee": "self.animations.is_empty",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "is_empty",
+          "callee": "self.transitions.is_empty",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "self.animations\r\n            .iter().any",
+          "lineNumber": 1202
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "self.animations.iter",
+          "lineNumber": 1202
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "animation.state.needs_to_be_ticked",
+          "lineNumber": 1204
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "self\r\n                .transitions\r\n                .iter().any",
+          "lineNumber": 1205
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "self\r\n                .transitions.iter",
+          "lineNumber": 1205
+        },
+        {
+          "caller": "needs_animation_ticks",
+          "callee": "transition.state.needs_to_be_ticked",
+          "lineNumber": 1208
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self.animations\r\n            .iter()\r\n            .filter(|animation| animation.state.needs_to_be_ticked()).count",
+          "lineNumber": 1213
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self.animations\r\n            .iter().filter",
+          "lineNumber": 1213
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self.animations.iter",
+          "lineNumber": 1213
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "animation.state.needs_to_be_ticked",
+          "lineNumber": 1215
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self\r\n                .transitions\r\n                .iter()\r\n                .filter(|transition| transition.state.needs_to_be_ticked()).count",
+          "lineNumber": 1217
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self\r\n                .transitions\r\n                .iter().filter",
+          "lineNumber": 1217
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "self\r\n                .transitions.iter",
+          "lineNumber": 1217
+        },
+        {
+          "caller": "running_animation_and_transition_count",
+          "callee": "transition.state.needs_to_be_ticked",
+          "lineNumber": 1220
+        },
+        {
+          "caller": "has_active_animation",
+          "callee": "self.animations\r\n            .iter().any",
+          "lineNumber": 1226
+        },
+        {
+          "caller": "has_active_animation",
+          "callee": "self.animations.iter",
+          "lineNumber": 1226
+        },
+        {
+          "caller": "has_active_transition",
+          "callee": "self.transitions\r\n            .iter().any",
+          "lineNumber": 1233
+        },
+        {
+          "caller": "has_active_transition",
+          "callee": "self.transitions.iter",
+          "lineNumber": 1233
+        },
+        {
+          "caller": "update_animations_for_new_style",
+          "callee": "self.animations.iter_mut",
+          "lineNumber": 1249
+        },
+        {
+          "caller": "update_animations_for_new_style",
+          "callee": "animation.is_cancelled_in_new_style",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "update_animations_for_new_style",
+          "callee": "maybe_start_animations",
+          "lineNumber": 1255
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "Arc::clone",
+          "lineNumber": 1270
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "after_change_style.get_box().clone_display().is_none",
+          "lineNumber": 1275
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "after_change_style.get_box().clone_display",
+          "lineNumber": 1275
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "after_change_style.get_box",
+          "lineNumber": 1275
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "self.cancel_active_transitions",
+          "lineNumber": 1276
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "self.has_active_transition",
+          "lineNumber": 1285
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "self.has_active_animation",
+          "lineNumber": 1285
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "self.apply_active_animations",
+          "lineNumber": 1286
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "start_transitions_if_applicable",
+          "lineNumber": 1289
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "self.transitions.iter_mut",
+          "lineNumber": 1308
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "transitioning_properties.contains",
+          "lineNumber": 1314
+        },
+        {
+          "caller": "update_transitions_for_new_style",
+          "callee": "transition.property_animation.property_id",
+          "lineNumber": 1314
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "new_style.get_ui",
+          "lineNumber": 1330
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_behavior_mod",
+          "lineNumber": 1332
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "AnimationValue::from_computed_values",
+          "lineNumber": 1335
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "AnimationValue::from_computed_values",
+          "lineNumber": 1339
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_timing_function_mod",
+          "lineNumber": 1344
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_duration_mod(index).seconds",
+          "lineNumber": 1345
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_duration_mod",
+          "lineNumber": 1345
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_delay_mod(index).seconds",
+          "lineNumber": 1346
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "style.transition_delay_mod",
+          "lineNumber": 1346
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "property_declaration_id.is_animatable",
+          "lineNumber": 1348
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "property_declaration_id.is_discrete_animatable",
+          "lineNumber": 1349
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "from.interpolable_with",
+          "lineNumber": 1350
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "self.transitions.iter_mut().find",
+          "lineNumber": 1352
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "self.transitions.iter_mut",
+          "lineNumber": 1352
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "transition.property_animation.property_id",
+          "lineNumber": 1353
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.as_ref().is_some_and",
+          "lineNumber": 1370
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.as_ref",
+          "lineNumber": 1370
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.as_ref().is_none_or",
+          "lineNumber": 1375
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.as_ref",
+          "lineNumber": 1375
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "self.transitions.push",
+          "lineNumber": 1395
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "Transition::new",
+          "lineNumber": 1395
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.as_mut",
+          "lineNumber": 1429
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "existing_transition.calculate_value",
+          "lineNumber": 1442
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "current_value.interpolable_with",
+          "lineNumber": 1444
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "Transition::new",
+          "lineNumber": 1470
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "transition.update_for_possibly_reversed_transition",
+          "lineNumber": 1481
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "self.transitions.push",
+          "lineNumber": 1487
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "self.transitions.push",
+          "lineNumber": 1501
+        },
+        {
+          "caller": "start_transition_if_applicable",
+          "callee": "Transition::new",
+          "lineNumber": 1501
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "self.has_active_transition",
+          "lineNumber": 1521
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "AnimationValueMap::with_capacity_and_hasher",
+          "lineNumber": 1526
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "self.transitions.len",
+          "lineNumber": 1526
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "Default::default",
+          "lineNumber": 1526
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "transition.calculate_value",
+          "lineNumber": 1543
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "map.insert",
+          "lineNumber": 1544
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "value.id().to_owned",
+          "lineNumber": 1544
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "value.id",
+          "lineNumber": 1544
+        },
+        {
+          "caller": "get_value_map_for_transitions",
+          "callee": "Some",
+          "lineNumber": 1547
+        },
+        {
+          "caller": "get_value_map_for_active_animations",
+          "callee": "self.has_active_animation",
+          "lineNumber": 1553
+        },
+        {
+          "caller": "get_value_map_for_active_animations",
+          "callee": "Default::default",
+          "lineNumber": 1557
+        },
+        {
+          "caller": "get_value_map_for_active_animations",
+          "callee": "animation.get_property_declaration_at_time",
+          "lineNumber": 1559
+        },
+        {
+          "caller": "get_value_map_for_active_animations",
+          "callee": "Some",
+          "lineNumber": 1562
+        },
+        {
+          "caller": "new_for_pseudo",
+          "callee": "Some",
+          "lineNumber": 1597
+        },
+        {
+          "caller": "has_active_animations",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key).map_or",
+          "lineNumber": 1613
+        },
+        {
+          "caller": "has_active_animations",
+          "callee": "self.sets\r\n            .read().get",
+          "lineNumber": 1613
+        },
+        {
+          "caller": "has_active_animations",
+          "callee": "self.sets.read",
+          "lineNumber": 1613
+        },
+        {
+          "caller": "has_active_animations",
+          "callee": "set.has_active_animation",
+          "lineNumber": 1616
+        },
+        {
+          "caller": "has_active_transitions",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key).map_or",
+          "lineNumber": 1621
+        },
+        {
+          "caller": "has_active_transitions",
+          "callee": "self.sets\r\n            .read().get",
+          "lineNumber": 1621
+        },
+        {
+          "caller": "has_active_transitions",
+          "callee": "self.sets.read",
+          "lineNumber": 1621
+        },
+        {
+          "caller": "has_active_transitions",
+          "callee": "set.has_active_transition",
+          "lineNumber": 1624
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key)\r\n            .and_then(|set| set.get_value_map_for_active_animations(time)).map",
+          "lineNumber": 1635
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key).and_then",
+          "lineNumber": 1635
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "self.sets\r\n            .read().get",
+          "lineNumber": 1635
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "self.sets.read",
+          "lineNumber": 1635
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "set.get_value_map_for_active_animations",
+          "lineNumber": 1638
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "PropertyDeclarationBlock::from_animation_value_map",
+          "lineNumber": 1640
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "Arc::new",
+          "lineNumber": 1641
+        },
+        {
+          "caller": "get_animation_declarations",
+          "callee": "shared_lock.wrap",
+          "lineNumber": 1641
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key)\r\n            .and_then(|set| {\r\n                set.get_value_map_for_transitions(time, IgnoreTransitions::CanceledAndFinished)\r\n            }).map",
+          "lineNumber": 1653
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "self.sets\r\n            .read()\r\n            .get(key).and_then",
+          "lineNumber": 1653
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "self.sets\r\n            .read().get",
+          "lineNumber": 1653
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "self.sets.read",
+          "lineNumber": 1653
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "set.get_value_map_for_transitions",
+          "lineNumber": 1657
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "PropertyDeclarationBlock::from_animation_value_map",
+          "lineNumber": 1660
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "Arc::new",
+          "lineNumber": 1661
+        },
+        {
+          "caller": "get_transition_declarations",
+          "callee": "shared_lock.wrap",
+          "lineNumber": 1661
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "self.sets.read",
+          "lineNumber": 1673
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "sets.get",
+          "lineNumber": 1674
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "Default::default",
+          "lineNumber": 1676
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "set.get_value_map_for_active_animations(time).map",
+          "lineNumber": 1679
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "set.get_value_map_for_active_animations",
+          "lineNumber": 1679
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "PropertyDeclarationBlock::from_animation_value_map",
+          "lineNumber": 1680
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "Arc::new",
+          "lineNumber": 1681
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "shared_lock.wrap",
+          "lineNumber": 1681
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "set\r\n            .get_value_map_for_transitions(time, IgnoreTransitions::CanceledAndFinished).map",
+          "lineNumber": 1683
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "set.get_value_map_for_transitions",
+          "lineNumber": 1683
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "PropertyDeclarationBlock::from_animation_value_map",
+          "lineNumber": 1686
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "Arc::new",
+          "lineNumber": 1687
+        },
+        {
+          "caller": "get_all_declarations",
+          "callee": "shared_lock.wrap",
+          "lineNumber": 1687
+        },
+        {
+          "caller": "cancel_all_animations_for_key",
+          "callee": "self.sets.write().get_mut",
+          "lineNumber": 1697
+        },
+        {
+          "caller": "cancel_all_animations_for_key",
+          "callee": "self.sets.write",
+          "lineNumber": 1697
+        },
+        {
+          "caller": "cancel_all_animations_for_key",
+          "callee": "set.cancel_all_animations",
+          "lineNumber": 1698
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "new_style.transition_properties().collect::<Vec<_>>",
+          "lineNumber": 1725
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "new_style.transition_properties",
+          "lineNumber": 1725
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "transition_properties.reverse",
+          "lineNumber": 1726
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "PropertyDeclarationIdSet::default",
+          "lineNumber": 1728
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "transition\r\n            .property\r\n            .as_borrowed().to_physical",
+          "lineNumber": 1730
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "transition\r\n            .property.as_borrowed",
+          "lineNumber": 1730
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "properties_that_transition.contains",
+          "lineNumber": 1734
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "properties_that_transition.insert",
+          "lineNumber": 1738
+        },
+        {
+          "caller": "start_transitions_if_applicable",
+          "callee": "animation_state.start_transition_if_applicable",
+          "lineNumber": 1739
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "new_style.get_ui",
+          "lineNumber": 1762
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_name_iter().enumerate",
+          "lineNumber": 1763
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_name_iter",
+          "lineNumber": 1763
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "name.as_atom",
+          "lineNumber": 1764
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_duration_mod(i).seconds",
+          "lineNumber": 1770
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_duration_mod",
+          "lineNumber": 1770
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "context.stylist.lookup_keyframes",
+          "lineNumber": 1775
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_delay_mod(i).seconds",
+          "lineNumber": 1784
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_delay_mod",
+          "lineNumber": 1784
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_iteration_count_mod",
+          "lineNumber": 1786
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "iteration_count.0.is_infinite",
+          "lineNumber": 1787
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "KeyframesIterationState::Infinite",
+          "lineNumber": 1788
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "KeyframesIterationState::Finite",
+          "lineNumber": 1790
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_direction_mod",
+          "lineNumber": 1793
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_play_state_mod",
+          "lineNumber": 1807
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "AnimationState::Paused",
+          "lineNumber": 1808
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "PropertyDeclarationIdSet::default",
+          "lineNumber": 1815
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "keyframe_animation.properties_changed.iter",
+          "lineNumber": 1817
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "animating_properties.insert",
+          "lineNumber": 1820
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "property.to_physical",
+          "lineNumber": 1820
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "ComputedKeyframe::generate_for_keyframes",
+          "lineNumber": 1825
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_timing_function_mod",
+          "lineNumber": 1830
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "name.clone",
+          "lineNumber": 1837
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "keyframe_animation.properties_changed.clone",
+          "lineNumber": 1838
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "style.animation_fill_mode_mod",
+          "lineNumber": 1842
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "new_animation.on_last_iteration",
+          "lineNumber": 1854
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "new_animation.iterate",
+          "lineNumber": 1855
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "animation_state.animations.iter_mut",
+          "lineNumber": 1862
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "existing_animation.update_from_other",
+          "lineNumber": 1868
+        },
+        {
+          "caller": "maybe_start_animations",
+          "callee": "animation_state.animations.push",
+          "lineNumber": 1874
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 38,
+        "functionCount": 51,
+        "classCount": 16
+      }
+    },
+    {
+      "path": "style/servo/attr.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 717,
+      "nonEmptyLines": 635,
+      "functions": [
+        {
+          "name": "from",
+          "startLine": 90,
+          "endLine": 92,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 102,
+          "endLine": 104,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 114,
+          "endLine": 116,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "do_parse_integer",
+          "startLine": 122,
+          "endLine": 143,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_integer",
+          "startLine": 147,
+          "endLine": 149,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_unsigned_integer",
+          "startLine": 153,
+          "endLine": 155,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_double",
+          "startLine": 159,
+          "endLine": 203,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_serialized_tokenlist",
+          "startLine": 206,
+          "endLine": 217,
+          "params": [
+            "tokens"
+          ]
+        },
+        {
+          "name": "from_comma_separated_tokenlist",
+          "startLine": 219,
+          "endLine": 229,
+          "params": [
+            "tokens"
+          ]
+        },
+        {
+          "name": "from_u32",
+          "startLine": 232,
+          "endLine": 240,
+          "params": [
+            "string",
+            "default"
+          ]
+        },
+        {
+          "name": "from_i32",
+          "startLine": 242,
+          "endLine": 245,
+          "params": [
+            "string",
+            "default"
+          ]
+        },
+        {
+          "name": "from_double",
+          "startLine": 248,
+          "endLine": 256,
+          "params": [
+            "string",
+            "default"
+          ]
+        },
+        {
+          "name": "from_limited_i32",
+          "startLine": 259,
+          "endLine": 267,
+          "params": [
+            "string",
+            "default"
+          ]
+        },
+        {
+          "name": "from_limited_u32",
+          "startLine": 270,
+          "endLine": 278,
+          "params": [
+            "string",
+            "default"
+          ]
+        },
+        {
+          "name": "from_atomic",
+          "startLine": 280,
+          "endLine": 282,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_resolved_url",
+          "startLine": 284,
+          "endLine": 287,
+          "params": [
+            "base",
+            "url"
+          ]
+        },
+        {
+          "name": "from_legacy_color",
+          "startLine": 289,
+          "endLine": 292,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_dimension",
+          "startLine": 294,
+          "endLine": 297,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_nonzero_dimension",
+          "startLine": 299,
+          "endLine": 302,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_shadow_parts",
+          "startLine": 304,
+          "endLine": 307,
+          "params": [
+            "string"
+          ]
+        },
+        {
+          "name": "from_declaration",
+          "startLine": 309,
+          "endLine": 318,
+          "params": [
+            "block",
+            "lock"
+          ]
+        },
+        {
+          "name": "as_tokens",
+          "startLine": 325,
+          "endLine": 330,
+          "params": []
+        },
+        {
+          "name": "as_atom",
+          "startLine": 337,
+          "endLine": 342,
+          "params": []
+        },
+        {
+          "name": "as_length_percentage",
+          "startLine": 349,
+          "endLine": 354,
+          "params": []
+        },
+        {
+          "name": "as_color",
+          "startLine": 361,
+          "endLine": 366,
+          "params": []
+        },
+        {
+          "name": "as_dimension",
+          "startLine": 373,
+          "endLine": 378,
+          "params": []
+        },
+        {
+          "name": "as_resolved_url",
+          "startLine": 385,
+          "endLine": 390,
+          "params": []
+        },
+        {
+          "name": "as_int",
+          "startLine": 399,
+          "endLine": 405,
+          "params": []
+        },
+        {
+          "name": "as_uint",
+          "startLine": 414,
+          "endLine": 420,
+          "params": []
+        },
+        {
+          "name": "as_uint_px_dimension",
+          "startLine": 431,
+          "endLine": 437,
+          "params": []
+        },
+        {
+          "name": "as_shadow_parts",
+          "startLine": 447,
+          "endLine": 453,
+          "params": []
+        },
+        {
+          "name": "eval_selector",
+          "startLine": 455,
+          "endLine": 460,
+          "params": [
+            "selector"
+          ]
+        },
+        {
+          "name": "deref",
+          "startLine": 466,
+          "endLine": 501,
+          "params": []
+        },
+        {
+          "name": "eq",
+          "startLine": 505,
+          "endLine": 510,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "parse_nonzero_length",
+          "startLine": 514,
+          "endLine": 520,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "parse_legacy_color",
+          "startLine": 525,
+          "endLine": 648,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_length",
+          "startLine": 654,
+          "endLine": 707,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LengthOrPercentageOrAuto",
+          "startLine": 38,
+          "endLine": 42,
+          "methods": [],
+          "properties": [
+            "Auto",
+            "Percentage",
+            "Length"
+          ]
+        },
+        {
+          "name": "AttrValue",
+          "startLine": 46,
+          "endLine": 87,
+          "methods": [
+            "from",
+            "from",
+            "from",
+            "from",
+            "from",
+            "from_serialized_tokenlist",
+            "from_comma_separated_tokenlist",
+            "from_u32",
+            "from_i32",
+            "from_double",
+            "from_limited_i32",
+            "from_limited_u32",
+            "from_atomic",
+            "from_resolved_url",
+            "from_legacy_color",
+            "from_dimension",
+            "from_nonzero_dimension",
+            "from_shadow_parts",
+            "from_declaration",
+            "as_tokens",
+            "as_atom",
+            "as_length_percentage",
+            "as_color",
+            "as_dimension",
+            "as_resolved_url",
+            "as_int",
+            "as_uint",
+            "as_uint_px_dimension",
+            "as_shadow_parts",
+            "eval_selector",
+            "deref",
+            "eq"
+          ],
+          "properties": [
+            "String",
+            "Atom",
+            "TokenList",
+            "UInt",
+            "Int",
+            "Double",
+            "Declaration",
+            "LengthPercentage",
+            "Color",
+            "Dimension",
+            "ResolvedUrl",
+            "ShadowParts"
+          ]
+        },
+        {
+          "name": "AttrIdentifier",
+          "startLine": 712,
+          "endLine": 717,
+          "methods": [],
+          "properties": [
+            "local_name",
+            "name",
+            "namespace",
+            "prefix"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LengthOrPercentageOrAuto",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "AttrValue",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "parse_integer",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "parse_unsigned_integer",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "parse_double",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "from_serialized_tokenlist",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "from_comma_separated_tokenlist",
+          "line": 219,
+          "isDefault": false
+        },
+        {
+          "name": "from_u32",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "from_i32",
+          "line": 242,
+          "isDefault": false
+        },
+        {
+          "name": "from_double",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "from_limited_i32",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "from_limited_u32",
+          "line": 270,
+          "isDefault": false
+        },
+        {
+          "name": "from_atomic",
+          "line": 280,
+          "isDefault": false
+        },
+        {
+          "name": "from_resolved_url",
+          "line": 284,
+          "isDefault": false
+        },
+        {
+          "name": "from_legacy_color",
+          "line": 289,
+          "isDefault": false
+        },
+        {
+          "name": "from_dimension",
+          "line": 294,
+          "isDefault": false
+        },
+        {
+          "name": "from_nonzero_dimension",
+          "line": 299,
+          "isDefault": false
+        },
+        {
+          "name": "from_shadow_parts",
+          "line": 304,
+          "isDefault": false
+        },
+        {
+          "name": "from_declaration",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "as_tokens",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "as_atom",
+          "line": 337,
+          "isDefault": false
+        },
+        {
+          "name": "as_length_percentage",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "as_color",
+          "line": 361,
+          "isDefault": false
+        },
+        {
+          "name": "as_dimension",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "as_resolved_url",
+          "line": 385,
+          "isDefault": false
+        },
+        {
+          "name": "as_int",
+          "line": 399,
+          "isDefault": false
+        },
+        {
+          "name": "as_uint",
+          "line": 414,
+          "isDefault": false
+        },
+        {
+          "name": "as_uint_px_dimension",
+          "line": 431,
+          "isDefault": false
+        },
+        {
+          "name": "as_shadow_parts",
+          "line": 447,
+          "isDefault": false
+        },
+        {
+          "name": "eval_selector",
+          "line": 455,
+          "isDefault": false
+        },
+        {
+          "name": "parse_nonzero_length",
+          "line": 514,
+          "isDefault": false
+        },
+        {
+          "name": "parse_legacy_color",
+          "line": 525,
+          "isDefault": false
+        },
+        {
+          "name": "parse_length",
+          "line": 654,
+          "isDefault": false
+        },
+        {
+          "name": "AttrIdentifier",
+          "line": 712,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "from",
+          "callee": "Self::String",
+          "lineNumber": 91
+        },
+        {
+          "caller": "from",
+          "callee": "Self::UInt",
+          "lineNumber": 97
+        },
+        {
+          "caller": "from",
+          "callee": "OnceLock::new",
+          "lineNumber": 97
+        },
+        {
+          "caller": "from",
+          "callee": "Self::Int",
+          "lineNumber": 103
+        },
+        {
+          "caller": "from",
+          "callee": "OnceLock::new",
+          "lineNumber": 103
+        },
+        {
+          "caller": "from",
+          "callee": "Self::Double",
+          "lineNumber": 109
+        },
+        {
+          "caller": "from",
+          "callee": "OnceLock::new",
+          "lineNumber": 109
+        },
+        {
+          "caller": "from",
+          "callee": "Self::TokenList",
+          "lineNumber": 115
+        },
+        {
+          "caller": "from",
+          "callee": "OnceLock::new",
+          "lineNumber": 115
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "input\r\n        .skip_while(|c| HTML_SPACE_CHARACTERS.iter().any(|s| s == c)).peekable",
+          "lineNumber": 123
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "input.skip_while",
+          "lineNumber": 123
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "HTML_SPACE_CHARACTERS.iter().any",
+          "lineNumber": 124
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "HTML_SPACE_CHARACTERS.iter",
+          "lineNumber": 124
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "input.peek",
+          "lineNumber": 127
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "Err",
+          "lineNumber": 128
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "input.next",
+          "lineNumber": 130
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "input.next",
+          "lineNumber": 134
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "read_numbers",
+          "lineNumber": 140
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "value.and_then(|value| value.checked_mul(sign)).ok_or",
+          "lineNumber": 142
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "value.and_then",
+          "lineNumber": 142
+        },
+        {
+          "caller": "do_parse_integer",
+          "callee": "value.checked_mul",
+          "lineNumber": 142
+        },
+        {
+          "caller": "parse_integer",
+          "callee": "do_parse_integer(input).and_then",
+          "lineNumber": 148
+        },
+        {
+          "caller": "parse_integer",
+          "callee": "do_parse_integer",
+          "lineNumber": 148
+        },
+        {
+          "caller": "parse_integer",
+          "callee": "result.to_i32().ok_or",
+          "lineNumber": 148
+        },
+        {
+          "caller": "parse_integer",
+          "callee": "result.to_i32",
+          "lineNumber": 148
+        },
+        {
+          "caller": "parse_unsigned_integer",
+          "callee": "do_parse_integer(input).and_then",
+          "lineNumber": 154
+        },
+        {
+          "caller": "parse_unsigned_integer",
+          "callee": "do_parse_integer",
+          "lineNumber": 154
+        },
+        {
+          "caller": "parse_unsigned_integer",
+          "callee": "result.to_u32().ok_or",
+          "lineNumber": 154
+        },
+        {
+          "caller": "parse_unsigned_integer",
+          "callee": "result.to_u32",
+          "lineNumber": 154
+        },
+        {
+          "caller": "parse_double",
+          "callee": "string.trim_matches",
+          "lineNumber": 160
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed.chars().peekable",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed.chars",
+          "lineNumber": 161
+        },
+        {
+          "caller": "parse_double",
+          "callee": "input.peek",
+          "lineNumber": 163
+        },
+        {
+          "caller": "parse_double",
+          "callee": "Err",
+          "lineNumber": 164
+        },
+        {
+          "caller": "parse_double",
+          "callee": "input.next",
+          "lineNumber": 166
+        },
+        {
+          "caller": "parse_double",
+          "callee": "input.next",
+          "lineNumber": 170
+        },
+        {
+          "caller": "parse_double",
+          "callee": "input.peek",
+          "lineNumber": 176
+        },
+        {
+          "caller": "parse_double",
+          "callee": "read_numbers",
+          "lineNumber": 179
+        },
+        {
+          "caller": "parse_double",
+          "callee": "read_val.and_then(|result| result.to_f64()).unwrap_or",
+          "lineNumber": 181
+        },
+        {
+          "caller": "parse_double",
+          "callee": "read_val.and_then",
+          "lineNumber": 181
+        },
+        {
+          "caller": "parse_double",
+          "callee": "result.to_f64",
+          "lineNumber": 181
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed\r\n        .chars()\r\n        .skip(value_digits + chars_skipped).peekable",
+          "lineNumber": 186
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed\r\n        .chars().skip",
+          "lineNumber": 186
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed.chars",
+          "lineNumber": 186
+        },
+        {
+          "caller": "parse_double",
+          "callee": "read_fraction",
+          "lineNumber": 191
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed\r\n        .chars()\r\n        .skip(value_digits + chars_skipped + fraction_digits).peekable",
+          "lineNumber": 193
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed\r\n        .chars().skip",
+          "lineNumber": 193
+        },
+        {
+          "caller": "parse_double",
+          "callee": "trimmed.chars",
+          "lineNumber": 193
+        },
+        {
+          "caller": "parse_double",
+          "callee": "read_exponent",
+          "lineNumber": 198
+        },
+        {
+          "caller": "parse_double",
+          "callee": "10f64.powi",
+          "lineNumber": 199
+        },
+        {
+          "caller": "parse_double",
+          "callee": "Ok",
+          "lineNumber": 202
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "split_html_space_chars(&tokens)\r\n                .map(Atom::from).fold",
+          "lineNumber": 208
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "split_html_space_chars(&tokens).map",
+          "lineNumber": 208
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "split_html_space_chars",
+          "lineNumber": 208
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "acc.contains",
+          "lineNumber": 211
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "acc.push",
+          "lineNumber": 212
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "AttrValue::TokenList",
+          "lineNumber": 216
+        },
+        {
+          "caller": "from_serialized_tokenlist",
+          "callee": "tokens.into",
+          "lineNumber": 216
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "split_commas(&tokens)\r\n            .map(Atom::from).fold",
+          "lineNumber": 220
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "split_commas(&tokens).map",
+          "lineNumber": 220
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "split_commas",
+          "lineNumber": 220
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "acc.contains",
+          "lineNumber": 223
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "acc.push",
+          "lineNumber": 224
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "AttrValue::TokenList",
+          "lineNumber": 228
+        },
+        {
+          "caller": "from_comma_separated_tokenlist",
+          "callee": "tokens.into",
+          "lineNumber": 228
+        },
+        {
+          "caller": "from_u32",
+          "callee": "parse_unsigned_integer(string.chars()).unwrap_or",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from_u32",
+          "callee": "parse_unsigned_integer",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from_u32",
+          "callee": "string.chars",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from_u32",
+          "callee": "AttrValue::UInt",
+          "lineNumber": 239
+        },
+        {
+          "caller": "from_u32",
+          "callee": "string.into",
+          "lineNumber": 239
+        },
+        {
+          "caller": "from_i32",
+          "callee": "parse_integer(string.chars()).unwrap_or",
+          "lineNumber": 243
+        },
+        {
+          "caller": "from_i32",
+          "callee": "parse_integer",
+          "lineNumber": 243
+        },
+        {
+          "caller": "from_i32",
+          "callee": "string.chars",
+          "lineNumber": 243
+        },
+        {
+          "caller": "from_i32",
+          "callee": "AttrValue::Int",
+          "lineNumber": 244
+        },
+        {
+          "caller": "from_i32",
+          "callee": "string.into",
+          "lineNumber": 244
+        },
+        {
+          "caller": "from_double",
+          "callee": "parse_double(&string).unwrap_or",
+          "lineNumber": 249
+        },
+        {
+          "caller": "from_double",
+          "callee": "parse_double",
+          "lineNumber": 249
+        },
+        {
+          "caller": "from_double",
+          "callee": "result.is_normal",
+          "lineNumber": 251
+        },
+        {
+          "caller": "from_double",
+          "callee": "AttrValue::Double",
+          "lineNumber": 252
+        },
+        {
+          "caller": "from_double",
+          "callee": "string.into",
+          "lineNumber": 252
+        },
+        {
+          "caller": "from_double",
+          "callee": "AttrValue::Double",
+          "lineNumber": 254
+        },
+        {
+          "caller": "from_double",
+          "callee": "string.into",
+          "lineNumber": 254
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "parse_integer(string.chars()).unwrap_or",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "parse_integer",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "string.chars",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "AttrValue::Int",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "string.into",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "AttrValue::Int",
+          "lineNumber": 265
+        },
+        {
+          "caller": "from_limited_i32",
+          "callee": "string.into",
+          "lineNumber": 265
+        },
+        {
+          "caller": "from_limited_u32",
+          "callee": "parse_unsigned_integer(string.chars()).unwrap_or",
+          "lineNumber": 271
+        },
+        {
+          "caller": "from_limited_u32",
+          "callee": "parse_unsigned_integer",
+          "lineNumber": 271
+        },
+        {
+          "caller": "from_limited_u32",
+          "callee": "string.chars",
+          "lineNumber": 271
+        },
+        {
+          "caller": "from_limited_u32",
+          "callee": "AttrValue::UInt",
+          "lineNumber": 277
+        },
+        {
+          "caller": "from_limited_u32",
+          "callee": "string.into",
+          "lineNumber": 277
+        },
+        {
+          "caller": "from_atomic",
+          "callee": "AttrValue::Atom",
+          "lineNumber": 281
+        },
+        {
+          "caller": "from_atomic",
+          "callee": "string.into",
+          "lineNumber": 281
+        },
+        {
+          "caller": "from_resolved_url",
+          "callee": "base.join(&url).ok().map",
+          "lineNumber": 285
+        },
+        {
+          "caller": "from_resolved_url",
+          "callee": "base.join(&url).ok",
+          "lineNumber": 285
+        },
+        {
+          "caller": "from_resolved_url",
+          "callee": "base.join",
+          "lineNumber": 285
+        },
+        {
+          "caller": "from_resolved_url",
+          "callee": "AttrValue::ResolvedUrl",
+          "lineNumber": 286
+        },
+        {
+          "caller": "from_legacy_color",
+          "callee": "parse_legacy_color(&string).ok",
+          "lineNumber": 290
+        },
+        {
+          "caller": "from_legacy_color",
+          "callee": "parse_legacy_color",
+          "lineNumber": 290
+        },
+        {
+          "caller": "from_legacy_color",
+          "callee": "AttrValue::Color",
+          "lineNumber": 291
+        },
+        {
+          "caller": "from_dimension",
+          "callee": "parse_length",
+          "lineNumber": 295
+        },
+        {
+          "caller": "from_dimension",
+          "callee": "AttrValue::Dimension",
+          "lineNumber": 296
+        },
+        {
+          "caller": "from_nonzero_dimension",
+          "callee": "parse_nonzero_length",
+          "lineNumber": 300
+        },
+        {
+          "caller": "from_nonzero_dimension",
+          "callee": "AttrValue::Dimension",
+          "lineNumber": 301
+        },
+        {
+          "caller": "from_shadow_parts",
+          "callee": "ShadowParts::parse",
+          "lineNumber": 305
+        },
+        {
+          "caller": "from_shadow_parts",
+          "callee": "AttrValue::ShadowParts",
+          "lineNumber": 306
+        },
+        {
+          "caller": "from_declaration",
+          "callee": "OnceLock::new",
+          "lineNumber": 316
+        },
+        {
+          "caller": "as_length_percentage",
+          "callee": "length_percentage.as_ref",
+          "lineNumber": 351
+        },
+        {
+          "caller": "as_color",
+          "callee": "color.as_ref",
+          "lineNumber": 363
+        },
+        {
+          "caller": "as_resolved_url",
+          "callee": "url.as_ref",
+          "lineNumber": 387
+        },
+        {
+          "caller": "as_uint_px_dimension",
+          "callee": "LengthOrPercentageOrAuto::Length",
+          "lineNumber": 433
+        },
+        {
+          "caller": "as_uint_px_dimension",
+          "callee": "Au::from_px",
+          "lineNumber": 433
+        },
+        {
+          "caller": "eval_selector",
+          "callee": "selector.eval_str",
+          "lineNumber": 459
+        },
+        {
+          "caller": "deref",
+          "callee": "serialization.get_or_init",
+          "lineNumber": 471
+        },
+        {
+          "caller": "deref",
+          "callee": "str_join",
+          "lineNumber": 473
+        },
+        {
+          "caller": "deref",
+          "callee": "serialization.get_or_init",
+          "lineNumber": 477
+        },
+        {
+          "caller": "deref",
+          "callee": "value.to_string",
+          "lineNumber": 477
+        },
+        {
+          "caller": "deref",
+          "callee": "serialization.get_or_init",
+          "lineNumber": 480
+        },
+        {
+          "caller": "deref",
+          "callee": "value.to_string",
+          "lineNumber": 480
+        },
+        {
+          "caller": "deref",
+          "callee": "serialization.get_or_init",
+          "lineNumber": 482
+        },
+        {
+          "caller": "deref",
+          "callee": "value.to_string",
+          "lineNumber": 482
+        },
+        {
+          "caller": "deref",
+          "callee": "serialization.get_or_init",
+          "lineNumber": 487
+        },
+        {
+          "caller": "deref",
+          "callee": "String::new",
+          "lineNumber": 488
+        },
+        {
+          "caller": "deref",
+          "callee": "block\r\n                    .read_with(&lock.read())\r\n                    .to_css(&mut serialization).expect",
+          "lineNumber": 489
+        },
+        {
+          "caller": "deref",
+          "callee": "block\r\n                    .read_with(&lock.read()).to_css",
+          "lineNumber": 489
+        },
+        {
+          "caller": "deref",
+          "callee": "block.read_with",
+          "lineNumber": 489
+        },
+        {
+          "caller": "deref",
+          "callee": "lock.read",
+          "lineNumber": 490
+        },
+        {
+          "caller": "parse_nonzero_length",
+          "callee": "parse_length",
+          "lineNumber": 515
+        },
+        {
+          "caller": "parse_nonzero_length",
+          "callee": "Au::zero",
+          "lineNumber": 516
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.is_empty",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Err",
+          "lineNumber": 528
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.trim_matches",
+          "lineNumber": 532
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.eq_ignore_ascii_case",
+          "lineNumber": 535
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Err",
+          "lineNumber": 536
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "parse_color_keyword",
+          "lineNumber": 540
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Ok",
+          "lineNumber": 541
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.len",
+          "lineNumber": 545
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.as_bytes",
+          "lineNumber": 547
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.as_bytes",
+          "lineNumber": 548
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex",
+          "lineNumber": 549
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.as_bytes",
+          "lineNumber": 549
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex",
+          "lineNumber": 550
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.as_bytes",
+          "lineNumber": 550
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Ok",
+          "lineNumber": 552
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "AbsoluteColor::srgb_legacy",
+          "lineNumber": 552
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "String::new",
+          "lineNumber": 557
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.chars",
+          "lineNumber": 558
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "new_input.push_str",
+          "lineNumber": 560
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "new_input.push",
+          "lineNumber": 562
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.char_indices().enumerate",
+          "lineNumber": 568
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.char_indices",
+          "lineNumber": 568
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.as_bytes",
+          "lineNumber": 576
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Vec::new",
+          "lineNumber": 581
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.chars",
+          "lineNumber": 582
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex(ch).is_ok",
+          "lineNumber": 583
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex",
+          "lineNumber": 583
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "new_input.push",
+          "lineNumber": 584
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "new_input.push",
+          "lineNumber": 586
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.is_empty",
+          "lineNumber": 592
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.len",
+          "lineNumber": 592
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.push",
+          "lineNumber": 593
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "input.len",
+          "lineNumber": 597
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "Ok",
+          "lineNumber": 621
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "AbsoluteColor::srgb_legacy",
+          "lineNumber": 621
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string(red).unwrap",
+          "lineNumber": 622
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string",
+          "lineNumber": 622
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string(green).unwrap",
+          "lineNumber": 623
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string",
+          "lineNumber": 623
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string(blue).unwrap",
+          "lineNumber": 624
+        },
+        {
+          "caller": "parse_legacy_color",
+          "callee": "hex_string",
+          "lineNumber": 624
+        },
+        {
+          "caller": "hex",
+          "callee": "Ok",
+          "lineNumber": 630
+        },
+        {
+          "caller": "hex",
+          "callee": "Ok",
+          "lineNumber": 631
+        },
+        {
+          "caller": "hex",
+          "callee": "Ok",
+          "lineNumber": 632
+        },
+        {
+          "caller": "hex",
+          "callee": "Err",
+          "lineNumber": 633
+        },
+        {
+          "caller": "hex_string",
+          "callee": "string.len",
+          "lineNumber": 638
+        },
+        {
+          "caller": "hex_string",
+          "callee": "Err",
+          "lineNumber": 639
+        },
+        {
+          "caller": "hex_string",
+          "callee": "hex",
+          "lineNumber": 640
+        },
+        {
+          "caller": "hex_string",
+          "callee": "hex",
+          "lineNumber": 642
+        },
+        {
+          "caller": "hex_string",
+          "callee": "hex",
+          "lineNumber": 643
+        },
+        {
+          "caller": "hex_string",
+          "callee": "Ok",
+          "lineNumber": 644
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.trim_start_matches",
+          "lineNumber": 658
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.chars().nth",
+          "lineNumber": 661
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.chars",
+          "lineNumber": 661
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.len",
+          "lineNumber": 673
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.chars().enumerate",
+          "lineNumber": 675
+        },
+        {
+          "caller": "parse_length",
+          "callee": "value.chars",
+          "lineNumber": 675
+        },
+        {
+          "caller": "parse_length",
+          "callee": "FromStr::from_str",
+          "lineNumber": 696
+        },
+        {
+          "caller": "parse_length",
+          "callee": "LengthOrPercentageOrAuto::Percentage",
+          "lineNumber": 698
+        },
+        {
+          "caller": "parse_length",
+          "callee": "FromStr::from_str",
+          "lineNumber": 703
+        },
+        {
+          "caller": "parse_length",
+          "callee": "LengthOrPercentageOrAuto::Length",
+          "lineNumber": 704
+        },
+        {
+          "caller": "parse_length",
+          "callee": "Au::from_f64_px",
+          "lineNumber": 704
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 34,
+        "functionCount": 39,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style/servo/encoding_support.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "utf8",
+          "startLine": 22,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "is_utf16_be_or_le",
+          "startLine": 26,
+          "endLine": 28,
+          "params": [
+            "encoding"
+          ]
+        },
+        {
+          "name": "from_label",
+          "startLine": 30,
+          "endLine": 32,
+          "params": [
+            "ascii_label"
+          ]
+        },
+        {
+          "name": "decode_stylesheet_bytes",
+          "startLine": 35,
+          "endLine": 48,
+          "params": [
+            "css",
+            "protocol_encoding_label",
+            "environment_encoding"
+          ]
+        },
+        {
+          "name": "from_bytes",
+          "startLine": 56,
+          "endLine": 80,
+          "params": [
+            "bytes",
+            "url_data",
+            "protocol_encoding_label",
+            "environment_encoding",
+            "origin",
+            "media",
+            "shared_lock",
+            "stylesheet_loader",
+            "error_reporter",
+            "quirks_mode"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EncodingRs",
+          "startLine": 17,
+          "endLine": 17,
+          "methods": [
+            "utf8",
+            "is_utf16_be_or_le",
+            "from_label"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "from_bytes",
+          "line": 56,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "from_label",
+          "callee": "encoding_rs::Encoding::for_label",
+          "lineNumber": 31
+        },
+        {
+          "caller": "decode_stylesheet_bytes",
+          "callee": "stylesheet_encoding::<EncodingRs>",
+          "lineNumber": 40
+        },
+        {
+          "caller": "decode_stylesheet_bytes",
+          "callee": "protocol_encoding_label.map",
+          "lineNumber": 42
+        },
+        {
+          "caller": "decode_stylesheet_bytes",
+          "callee": "fallback_encoding.decode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "from_bytes",
+          "callee": "decode_stylesheet_bytes",
+          "lineNumber": 68
+        },
+        {
+          "caller": "from_bytes",
+          "callee": "Stylesheet::from_str",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/servo/media_features.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 206,
+      "nonEmptyLines": 186,
+      "functions": [
+        {
+          "name": "eval_width",
+          "startLine": 14,
+          "endLine": 16,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "eval_scan",
+          "startLine": 26,
+          "endLine": 30,
+          "params": [
+            "_",
+            "_"
+          ]
+        },
+        {
+          "name": "eval_resolution",
+          "startLine": 33,
+          "endLine": 35,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "eval_device_pixel_ratio",
+          "startLine": 38,
+          "endLine": 40,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "eval_prefers_color_scheme",
+          "startLine": 42,
+          "endLine": 47,
+          "params": [
+            "context",
+            "query_value"
+          ]
+        },
+        {
+          "name": "default",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "default",
+          "startLine": 68,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "eval_pointer_capabilities",
+          "startLine": 81,
+          "endLine": 91,
+          "params": [
+            "query_value",
+            "pointer_capabilities"
+          ]
+        },
+        {
+          "name": "eval_pointer",
+          "startLine": 94,
+          "endLine": 96,
+          "params": [
+            "context",
+            "query_value"
+          ]
+        },
+        {
+          "name": "eval_any_pointer",
+          "startLine": 99,
+          "endLine": 101,
+          "params": [
+            "context",
+            "query_value"
+          ]
+        },
+        {
+          "name": "eval_hover_capabilities",
+          "startLine": 110,
+          "endLine": 120,
+          "params": [
+            "query_value",
+            "pointer_capabilities"
+          ]
+        },
+        {
+          "name": "eval_hover",
+          "startLine": 123,
+          "endLine": 125,
+          "params": [
+            "context",
+            "query_value"
+          ]
+        },
+        {
+          "name": "eval_any_hover",
+          "startLine": 128,
+          "endLine": 130,
+          "params": [
+            "context",
+            "query_value"
+          ]
+        },
+        {
+          "name": "eval_aspect_ratio",
+          "startLine": 133,
+          "endLine": 136,
+          "params": [
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Scan",
+          "startLine": 20,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "Progressive",
+            "Interlace"
+          ]
+        },
+        {
+          "name": "Pointer",
+          "startLine": 75,
+          "endLine": 79,
+          "methods": [],
+          "properties": [
+            "None",
+            "Coarse",
+            "Fine"
+          ]
+        },
+        {
+          "name": "Hover",
+          "startLine": 105,
+          "endLine": 108,
+          "methods": [],
+          "properties": [
+            "None",
+            "Hover"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "eval_width",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 15
+        },
+        {
+          "caller": "eval_width",
+          "callee": "context.device().au_viewport_size().width.to_f32_px",
+          "lineNumber": 15
+        },
+        {
+          "caller": "eval_width",
+          "callee": "context.device().au_viewport_size",
+          "lineNumber": 15
+        },
+        {
+          "caller": "eval_width",
+          "callee": "context.device",
+          "lineNumber": 15
+        },
+        {
+          "caller": "eval_resolution",
+          "callee": "Resolution::from_dppx",
+          "lineNumber": 34
+        },
+        {
+          "caller": "eval_resolution",
+          "callee": "context.device().device_pixel_ratio",
+          "lineNumber": 34
+        },
+        {
+          "caller": "eval_resolution",
+          "callee": "context.device",
+          "lineNumber": 34
+        },
+        {
+          "caller": "eval_device_pixel_ratio",
+          "callee": "eval_resolution(context).dppx",
+          "lineNumber": 39
+        },
+        {
+          "caller": "eval_device_pixel_ratio",
+          "callee": "eval_resolution",
+          "lineNumber": 39
+        },
+        {
+          "caller": "eval_prefers_color_scheme",
+          "callee": "context.device().color_scheme",
+          "lineNumber": 44
+        },
+        {
+          "caller": "eval_prefers_color_scheme",
+          "callee": "context.device",
+          "lineNumber": 44
+        },
+        {
+          "caller": "eval_pointer_capabilities",
+          "callee": "pointer_capabilities.is_empty",
+          "lineNumber": 86
+        },
+        {
+          "caller": "eval_pointer_capabilities",
+          "callee": "pointer_capabilities.is_empty",
+          "lineNumber": 87
+        },
+        {
+          "caller": "eval_pointer_capabilities",
+          "callee": "pointer_capabilities.intersects",
+          "lineNumber": 88
+        },
+        {
+          "caller": "eval_pointer_capabilities",
+          "callee": "pointer_capabilities.intersects",
+          "lineNumber": 89
+        },
+        {
+          "caller": "eval_pointer",
+          "callee": "eval_pointer_capabilities",
+          "lineNumber": 95
+        },
+        {
+          "caller": "eval_pointer",
+          "callee": "context.device().primary_pointer_capabilities",
+          "lineNumber": 95
+        },
+        {
+          "caller": "eval_pointer",
+          "callee": "context.device",
+          "lineNumber": 95
+        },
+        {
+          "caller": "eval_any_pointer",
+          "callee": "eval_pointer_capabilities",
+          "lineNumber": 100
+        },
+        {
+          "caller": "eval_any_pointer",
+          "callee": "context.device().all_pointer_capabilities",
+          "lineNumber": 100
+        },
+        {
+          "caller": "eval_any_pointer",
+          "callee": "context.device",
+          "lineNumber": 100
+        },
+        {
+          "caller": "eval_hover_capabilities",
+          "callee": "pointer_capabilities.intersects",
+          "lineNumber": 114
+        },
+        {
+          "caller": "eval_hover",
+          "callee": "eval_hover_capabilities",
+          "lineNumber": 124
+        },
+        {
+          "caller": "eval_hover",
+          "callee": "context.device().primary_pointer_capabilities",
+          "lineNumber": 124
+        },
+        {
+          "caller": "eval_hover",
+          "callee": "context.device",
+          "lineNumber": 124
+        },
+        {
+          "caller": "eval_any_hover",
+          "callee": "eval_hover_capabilities",
+          "lineNumber": 129
+        },
+        {
+          "caller": "eval_any_hover",
+          "callee": "context.device().all_pointer_capabilities",
+          "lineNumber": 129
+        },
+        {
+          "caller": "eval_any_hover",
+          "callee": "context.device",
+          "lineNumber": 129
+        },
+        {
+          "caller": "eval_aspect_ratio",
+          "callee": "context.device().au_viewport_size",
+          "lineNumber": 134
+        },
+        {
+          "caller": "eval_aspect_ratio",
+          "callee": "context.device",
+          "lineNumber": 134
+        },
+        {
+          "caller": "eval_aspect_ratio",
+          "callee": "Ratio::new",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 14,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style/servo/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/servo/restyle_damage.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 215,
+      "nonEmptyLines": 189,
+      "functions": [
+        {
+          "name": "compute_style_difference",
+          "startLine": 58,
+          "endLine": 106,
+          "params": [
+            "old",
+            "new"
+          ]
+        },
+        {
+          "name": "reconstruct",
+          "startLine": 109,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "default",
+          "startLine": 117,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 123,
+          "endLine": 154,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "augmented_restyle_damage_rebuild_box",
+          "startLine": 157,
+          "endLine": 164,
+          "params": [
+            "old",
+            "new"
+          ]
+        },
+        {
+          "name": "augmented_restyle_damage_rebuild_stacking_context",
+          "startLine": 166,
+          "endLine": 172,
+          "params": [
+            "old",
+            "new"
+          ]
+        },
+        {
+          "name": "compute_damage",
+          "startLine": 174,
+          "endLine": 188,
+          "params": [
+            "old",
+            "new"
+          ]
+        },
+        {
+          "name": "guarantees_stacking_context",
+          "startLine": 197,
+          "endLine": 202,
+          "params": []
+        },
+        {
+          "name": "has_transform_or_perspective",
+          "startLine": 207,
+          "endLine": 214,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "compute_style_difference",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "reconstruct",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "guarantees_stacking_context",
+          "line": 197,
+          "isDefault": false
+        },
+        {
+          "name": "has_transform_or_perspective",
+          "line": 207,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "compute_style_difference",
+          "callee": "std::ptr::eq",
+          "lineNumber": 62
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "ServoRestyleDamage::empty",
+          "lineNumber": 64
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "compute_damage",
+          "lineNumber": 69
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "damage.contains",
+          "lineNumber": 70
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "E::compute_layout_damage",
+          "lineNumber": 71
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "damage.is_empty",
+          "lineNumber": 74
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "old.custom_properties",
+          "lineNumber": 80
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "new.custom_properties",
+          "lineNumber": 81
+        },
+        {
+          "caller": "compute_style_difference",
+          "callee": "damage.insert",
+          "lineNumber": 93
+        },
+        {
+          "caller": "reconstruct",
+          "callee": "ServoRestyleDamage::from_bits_retain",
+          "lineNumber": 112
+        },
+        {
+          "caller": "default",
+          "callee": "Self::empty",
+          "lineNumber": 118
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.contains",
+          "lineNumber": 140
+        },
+        {
+          "caller": "fmt",
+          "callee": "Ok",
+          "lineNumber": 153
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "old.get_box",
+          "lineNumber": 158
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "new.get_box",
+          "lineNumber": 159
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "restyle_damage_rebuild_box",
+          "lineNumber": 160
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "old_box.has_transform_or_perspective",
+          "lineNumber": 162
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "new_box.has_transform_or_perspective",
+          "lineNumber": 162
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "old.get_effects().filter.0.is_empty",
+          "lineNumber": 163
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "old.get_effects",
+          "lineNumber": 163
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "new.get_effects().filter.0.is_empty",
+          "lineNumber": 163
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_box",
+          "callee": "new.get_effects",
+          "lineNumber": 163
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_stacking_context",
+          "callee": "restyle_damage_rebuild_stacking_context",
+          "lineNumber": 170
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_stacking_context",
+          "callee": "old.guarantees_stacking_context",
+          "lineNumber": 171
+        },
+        {
+          "caller": "augmented_restyle_damage_rebuild_stacking_context",
+          "callee": "new.guarantees_stacking_context",
+          "lineNumber": 171
+        },
+        {
+          "caller": "compute_damage",
+          "callee": "augmented_restyle_damage_rebuild_box",
+          "lineNumber": 177
+        },
+        {
+          "caller": "compute_damage",
+          "callee": "restyle_damage_recalculate_overflow",
+          "lineNumber": 179
+        },
+        {
+          "caller": "compute_damage",
+          "callee": "augmented_restyle_damage_rebuild_stacking_context",
+          "lineNumber": 181
+        },
+        {
+          "caller": "compute_damage",
+          "callee": "restyle_damage_repaint",
+          "lineNumber": 183
+        },
+        {
+          "caller": "compute_damage",
+          "callee": "ServoRestyleDamage::empty",
+          "lineNumber": 186
+        },
+        {
+          "caller": "guarantees_stacking_context",
+          "callee": "self.get_effects",
+          "lineNumber": 198
+        },
+        {
+          "caller": "guarantees_stacking_context",
+          "callee": "self.get_effects",
+          "lineNumber": 199
+        },
+        {
+          "caller": "guarantees_stacking_context",
+          "callee": "self.get_svg",
+          "lineNumber": 200
+        },
+        {
+          "caller": "guarantees_stacking_context",
+          "callee": "self.get_box",
+          "lineNumber": 201
+        },
+        {
+          "caller": "has_transform_or_perspective",
+          "callee": "self.transform.0.is_empty",
+          "lineNumber": 208
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/servo/selector_parser.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1039,
+      "nonEmptyLines": 929,
+      "functions": [
+        {
+          "name": "to_css",
+          "startLine": 90,
+          "endLine": 118,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parses_as_element_backed",
+          "startLine": 124,
+          "endLine": 126,
+          "params": []
+        },
+        {
+          "name": "eager_index",
+          "startLine": 135,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "index",
+          "startLine": 142,
+          "endLine": 144,
+          "params": []
+        },
+        {
+          "name": "pseudo_none_array",
+          "startLine": 147,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "from_eager_index",
+          "startLine": 153,
+          "endLine": 158,
+          "params": [
+            "i"
+          ]
+        },
+        {
+          "name": "is_before_or_after",
+          "startLine": 162,
+          "endLine": 164,
+          "params": []
+        },
+        {
+          "name": "is_unknown_webkit_pseudo_element",
+          "startLine": 168,
+          "endLine": 170,
+          "params": []
+        },
+        {
+          "name": "is_marker",
+          "startLine": 174,
+          "endLine": 176,
+          "params": []
+        },
+        {
+          "name": "is_selection",
+          "startLine": 180,
+          "endLine": 182,
+          "params": []
+        },
+        {
+          "name": "is_before",
+          "startLine": 186,
+          "endLine": 188,
+          "params": []
+        },
+        {
+          "name": "is_after",
+          "startLine": 192,
+          "endLine": 194,
+          "params": []
+        },
+        {
+          "name": "is_first_letter",
+          "startLine": 198,
+          "endLine": 200,
+          "params": []
+        },
+        {
+          "name": "is_first_line",
+          "startLine": 204,
+          "endLine": 206,
+          "params": []
+        },
+        {
+          "name": "is_color_swatch",
+          "startLine": 211,
+          "endLine": 213,
+          "params": []
+        },
+        {
+          "name": "is_eager",
+          "startLine": 217,
+          "endLine": 219,
+          "params": []
+        },
+        {
+          "name": "is_lazy",
+          "startLine": 223,
+          "endLine": 225,
+          "params": []
+        },
+        {
+          "name": "is_anon_box",
+          "startLine": 228,
+          "endLine": 230,
+          "params": []
+        },
+        {
+          "name": "skip_item_display_fixup",
+          "startLine": 235,
+          "endLine": 237,
+          "params": []
+        },
+        {
+          "name": "is_precomputed",
+          "startLine": 241,
+          "endLine": 243,
+          "params": []
+        },
+        {
+          "name": "cascade_type",
+          "startLine": 253,
+          "endLine": 277,
+          "params": []
+        },
+        {
+          "name": "canonical",
+          "startLine": 281,
+          "endLine": 283,
+          "params": []
+        },
+        {
+          "name": "pseudo_info",
+          "startLine": 286,
+          "endLine": 288,
+          "params": []
+        },
+        {
+          "name": "property_restriction",
+          "startLine": 292,
+          "endLine": 301,
+          "params": []
+        },
+        {
+          "name": "should_exist",
+          "startLine": 305,
+          "endLine": 315,
+          "params": [
+            "style"
+          ]
+        },
+        {
+          "name": "is_highlight",
+          "startLine": 318,
+          "endLine": 320,
+          "params": []
+        },
+        {
+          "name": "is_target_text",
+          "startLine": 324,
+          "endLine": 326,
+          "params": []
+        },
+        {
+          "name": "is_lazy_painted_highlight_pseudo",
+          "startLine": 332,
+          "endLine": 334,
+          "params": []
+        },
+        {
+          "name": "is_element_backed",
+          "startLine": 339,
+          "endLine": 353,
+          "params": []
+        },
+        {
+          "name": "is_active_or_hover",
+          "startLine": 412,
+          "endLine": 414,
+          "params": []
+        },
+        {
+          "name": "is_user_action_state",
+          "startLine": 417,
+          "endLine": 422,
+          "params": []
+        },
+        {
+          "name": "visit",
+          "startLine": 424,
+          "endLine": 429,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 433,
+          "endLine": 487,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "state_flag",
+          "startLine": 493,
+          "endLine": 533,
+          "params": []
+        },
+        {
+          "name": "document_state_flag",
+          "startLine": 536,
+          "endLine": 538,
+          "params": []
+        },
+        {
+          "name": "needs_cache_revalidation",
+          "startLine": 541,
+          "endLine": 543,
+          "params": []
+        },
+        {
+          "name": "parse_nth_child_of",
+          "startLine": 587,
+          "endLine": 589,
+          "params": []
+        },
+        {
+          "name": "parse_is_and_where",
+          "startLine": 592,
+          "endLine": 594,
+          "params": []
+        },
+        {
+          "name": "parse_has",
+          "startLine": 597,
+          "endLine": 599,
+          "params": []
+        },
+        {
+          "name": "parse_parent_selector",
+          "startLine": 602,
+          "endLine": 604,
+          "params": []
+        },
+        {
+          "name": "parse_part",
+          "startLine": 607,
+          "endLine": 609,
+          "params": []
+        },
+        {
+          "name": "allow_forgiving_selectors",
+          "startLine": 612,
+          "endLine": 614,
+          "params": []
+        },
+        {
+          "name": "parse_non_ts_pseudo_class",
+          "startLine": 616,
+          "endLine": 667,
+          "params": [
+            "location",
+            "name"
+          ]
+        },
+        {
+          "name": "parse_non_ts_functional_pseudo_class",
+          "startLine": 669,
+          "endLine": 687,
+          "params": [
+            "name",
+            "parser",
+            "after_part"
+          ]
+        },
+        {
+          "name": "parse_pseudo_element",
+          "startLine": 689,
+          "endLine": 762,
+          "params": [
+            "location",
+            "name"
+          ]
+        },
+        {
+          "name": "default_namespace",
+          "startLine": 764,
+          "endLine": 766,
+          "params": []
+        },
+        {
+          "name": "namespace_for_prefix",
+          "startLine": 768,
+          "endLine": 770,
+          "params": [
+            "prefix"
+          ]
+        },
+        {
+          "name": "parse_host",
+          "startLine": 772,
+          "endLine": 774,
+          "params": []
+        },
+        {
+          "name": "parse_slotted",
+          "startLine": 776,
+          "endLine": 778,
+          "params": []
+        },
+        {
+          "name": "each_eagerly_cascaded_pseudo_element",
+          "startLine": 785,
+          "endLine": 792,
+          "params": [
+            "fun"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 801,
+          "endLine": 803,
+          "params": []
+        },
+        {
+          "name": "get",
+          "startLine": 806,
+          "endLine": 808,
+          "params": [
+            "el"
+          ]
+        },
+        {
+          "name": "deref",
+          "startLine": 814,
+          "endLine": 816,
+          "params": []
+        },
+        {
+          "name": "deref_mut",
+          "startLine": 820,
+          "endLine": 822,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 844,
+          "endLine": 846,
+          "params": []
+        },
+        {
+          "name": "id_changed",
+          "startLine": 849,
+          "endLine": 851,
+          "params": []
+        },
+        {
+          "name": "class_changed",
+          "startLine": 854,
+          "endLine": 856,
+          "params": []
+        },
+        {
+          "name": "other_attr_changed",
+          "startLine": 859,
+          "endLine": 861,
+          "params": []
+        },
+        {
+          "name": "get_attr",
+          "startLine": 863,
+          "endLine": 870,
+          "params": [
+            "namespace",
+            "name"
+          ]
+        },
+        {
+          "name": "each_attr_changed",
+          "startLine": 874,
+          "endLine": 881,
+          "params": [
+            "callback"
+          ]
+        },
+        {
+          "name": "any_attr_ignore_ns",
+          "startLine": 883,
+          "endLine": 892,
+          "params": [
+            "name",
+            "f"
+          ]
+        },
+        {
+          "name": "state",
+          "startLine": 896,
+          "endLine": 898,
+          "params": []
+        },
+        {
+          "name": "has_attrs",
+          "startLine": 900,
+          "endLine": 902,
+          "params": []
+        },
+        {
+          "name": "id_attr",
+          "startLine": 904,
+          "endLine": 907,
+          "params": []
+        },
+        {
+          "name": "is_part",
+          "startLine": 909,
+          "endLine": 916,
+          "params": [
+            "part_name"
+          ]
+        },
+        {
+          "name": "imported_part",
+          "startLine": 918,
+          "endLine": 920,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "has_class",
+          "startLine": 922,
+          "endLine": 929,
+          "params": [
+            "name",
+            "case_sensitivity"
+          ]
+        },
+        {
+          "name": "each_class",
+          "startLine": 931,
+          "endLine": 940,
+          "params": [
+            "callback"
+          ]
+        },
+        {
+          "name": "lang_attr",
+          "startLine": 942,
+          "endLine": 946,
+          "params": []
+        },
+        {
+          "name": "has_custom_states",
+          "startLine": 950,
+          "endLine": 952,
+          "params": []
+        },
+        {
+          "name": "has_custom_state",
+          "startLine": 956,
+          "endLine": 958,
+          "params": [
+            "_state"
+          ]
+        },
+        {
+          "name": "each_custom_state",
+          "startLine": 961,
+          "endLine": 965,
+          "params": [
+            "_callback"
+          ]
+        },
+        {
+          "name": "attr_matches",
+          "startLine": 970,
+          "endLine": 984,
+          "params": [
+            "ns",
+            "local_name",
+            "operation"
+          ]
+        },
+        {
+          "name": "extended_filtering",
+          "startLine": 989,
+          "endLine": 1039,
+          "params": [
+            "tag",
+            "range"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PseudoElement",
+          "startLine": 43,
+          "endLine": 84,
+          "methods": [
+            "to_css",
+            "parses_as_element_backed",
+            "eager_index",
+            "index",
+            "pseudo_none_array",
+            "from_eager_index",
+            "is_before_or_after",
+            "is_unknown_webkit_pseudo_element",
+            "is_marker",
+            "is_selection",
+            "is_before",
+            "is_after",
+            "is_first_letter",
+            "is_first_line",
+            "is_color_swatch",
+            "is_eager",
+            "is_lazy",
+            "is_anon_box",
+            "skip_item_display_fixup",
+            "is_precomputed",
+            "cascade_type",
+            "canonical",
+            "pseudo_info",
+            "property_restriction",
+            "should_exist",
+            "is_highlight",
+            "is_target_text",
+            "is_lazy_painted_highlight_pseudo",
+            "is_element_backed"
+          ],
+          "properties": [
+            "After",
+            "Before",
+            "Selection",
+            "FirstLetter",
+            "Backdrop",
+            "DetailsContent",
+            "Marker",
+            "ColorSwatch",
+            "FileSelectorButton",
+            "Placeholder",
+            "SliderFill",
+            "SliderThumb",
+            "SliderTrack",
+            "ServoTextControlInnerContainer",
+            "ServoTextControlInnerEditor",
+            "ServoAnonymousBox",
+            "ServoAnonymousTable",
+            "ServoAnonymousTableCell",
+            "ServoAnonymousTableRow",
+            "ServoTableGrid",
+            "ServoTableWrapper"
+          ]
+        },
+        {
+          "name": "CustomState",
+          "startLine": 361,
+          "endLine": 361,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "NonTSPseudoClass",
+          "startLine": 367,
+          "endLine": 406,
+          "methods": [
+            "is_active_or_hover",
+            "is_user_action_state",
+            "visit",
+            "to_css",
+            "state_flag",
+            "document_state_flag",
+            "needs_cache_revalidation"
+          ],
+          "properties": [
+            "Active",
+            "AnyLink",
+            "Autofill",
+            "Checked",
+            "CustomState",
+            "Default",
+            "Defined",
+            "Disabled",
+            "Enabled",
+            "Focus",
+            "FocusWithin",
+            "FocusVisible",
+            "Fullscreen",
+            "Hover",
+            "InRange",
+            "Indeterminate",
+            "Invalid",
+            "Lang",
+            "Link",
+            "Modal",
+            "MozMeterOptimum",
+            "MozMeterSubOptimum",
+            "MozMeterSubSubOptimum",
+            "Open",
+            "Optional",
+            "OutOfRange",
+            "PlaceholderShown",
+            "PopoverOpen",
+            "ReadOnly",
+            "ReadWrite",
+            "Required",
+            "ServoNonZeroBorder",
+            "Target",
+            "UserInvalid",
+            "UserValid",
+            "Valid",
+            "Visited"
+          ]
+        },
+        {
+          "name": "SelectorImpl",
+          "startLine": 550,
+          "endLine": 550,
+          "methods": [
+            "each_eagerly_cascaded_pseudo_element"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ExtraMatchingData",
+          "startLine": 555,
+          "endLine": 566,
+          "methods": [],
+          "properties": [
+            "invalidation_data",
+            "cascade_input_flags",
+            "originating_element_style"
+          ]
+        },
+        {
+          "name": "SnapshotMap",
+          "startLine": 797,
+          "endLine": 797,
+          "methods": [
+            "new",
+            "get",
+            "deref",
+            "deref_mut"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ServoElementSnapshot",
+          "startLine": 827,
+          "endLine": 840,
+          "methods": [
+            "new",
+            "id_changed",
+            "class_changed",
+            "other_attr_changed",
+            "get_attr",
+            "each_attr_changed",
+            "any_attr_ignore_ns",
+            "state",
+            "has_attrs",
+            "id_attr",
+            "is_part",
+            "imported_part",
+            "has_class",
+            "each_class",
+            "lang_attr",
+            "has_custom_states",
+            "has_custom_state",
+            "each_custom_state",
+            "attr_matches"
+          ],
+          "properties": [
+            "state",
+            "attrs",
+            "changed_attrs",
+            "class_changed",
+            "id_changed",
+            "other_attributes_changed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PseudoElement",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "eager_index",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "index",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "pseudo_none_array",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "from_eager_index",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "is_before_or_after",
+          "line": 162,
+          "isDefault": false
+        },
+        {
+          "name": "is_unknown_webkit_pseudo_element",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "is_marker",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "is_selection",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "is_before",
+          "line": 186,
+          "isDefault": false
+        },
+        {
+          "name": "is_after",
+          "line": 192,
+          "isDefault": false
+        },
+        {
+          "name": "is_first_letter",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "is_first_line",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "is_color_swatch",
+          "line": 211,
+          "isDefault": false
+        },
+        {
+          "name": "is_eager",
+          "line": 217,
+          "isDefault": false
+        },
+        {
+          "name": "is_lazy",
+          "line": 223,
+          "isDefault": false
+        },
+        {
+          "name": "is_anon_box",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "skip_item_display_fixup",
+          "line": 235,
+          "isDefault": false
+        },
+        {
+          "name": "is_precomputed",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "cascade_type",
+          "line": 253,
+          "isDefault": false
+        },
+        {
+          "name": "canonical",
+          "line": 281,
+          "isDefault": false
+        },
+        {
+          "name": "pseudo_info",
+          "line": 286,
+          "isDefault": false
+        },
+        {
+          "name": "property_restriction",
+          "line": 292,
+          "isDefault": false
+        },
+        {
+          "name": "should_exist",
+          "line": 305,
+          "isDefault": false
+        },
+        {
+          "name": "is_highlight",
+          "line": 318,
+          "isDefault": false
+        },
+        {
+          "name": "is_target_text",
+          "line": 324,
+          "isDefault": false
+        },
+        {
+          "name": "is_lazy_painted_highlight_pseudo",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "is_element_backed",
+          "line": 339,
+          "isDefault": false
+        },
+        {
+          "name": "CustomState",
+          "line": 361,
+          "isDefault": false
+        },
+        {
+          "name": "NonTSPseudoClass",
+          "line": 367,
+          "isDefault": false
+        },
+        {
+          "name": "state_flag",
+          "line": 493,
+          "isDefault": false
+        },
+        {
+          "name": "document_state_flag",
+          "line": 536,
+          "isDefault": false
+        },
+        {
+          "name": "needs_cache_revalidation",
+          "line": 541,
+          "isDefault": false
+        },
+        {
+          "name": "SelectorImpl",
+          "line": 550,
+          "isDefault": false
+        },
+        {
+          "name": "ExtraMatchingData",
+          "line": 555,
+          "isDefault": false
+        },
+        {
+          "name": "each_eagerly_cascaded_pseudo_element",
+          "line": 785,
+          "isDefault": false
+        },
+        {
+          "name": "SnapshotMap",
+          "line": 797,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 801,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 806,
+          "isDefault": false
+        },
+        {
+          "name": "ServoElementSnapshot",
+          "line": 827,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 844,
+          "isDefault": false
+        },
+        {
+          "name": "id_changed",
+          "line": 849,
+          "isDefault": false
+        },
+        {
+          "name": "class_changed",
+          "line": 854,
+          "isDefault": false
+        },
+        {
+          "name": "other_attr_changed",
+          "line": 859,
+          "isDefault": false
+        },
+        {
+          "name": "each_attr_changed",
+          "line": 874,
+          "isDefault": false
+        },
+        {
+          "name": "attr_matches",
+          "line": 970,
+          "isDefault": false
+        },
+        {
+          "name": "extended_filtering",
+          "line": 989,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 95
+        },
+        {
+          "caller": "eager_index",
+          "callee": "self.clone",
+          "lineNumber": 137
+        },
+        {
+          "caller": "index",
+          "callee": "self.clone",
+          "lineNumber": 143
+        },
+        {
+          "caller": "pseudo_none_array",
+          "callee": "Default::default",
+          "lineNumber": 148
+        },
+        {
+          "caller": "from_eager_index",
+          "callee": "mem::transmute",
+          "lineNumber": 155
+        },
+        {
+          "caller": "is_before_or_after",
+          "callee": "self.is_before",
+          "lineNumber": 163
+        },
+        {
+          "caller": "is_before_or_after",
+          "callee": "self.is_after",
+          "lineNumber": 163
+        },
+        {
+          "caller": "is_eager",
+          "callee": "self.cascade_type",
+          "lineNumber": 218
+        },
+        {
+          "caller": "is_lazy",
+          "callee": "self.cascade_type",
+          "lineNumber": 224
+        },
+        {
+          "caller": "is_anon_box",
+          "callee": "self.is_precomputed",
+          "lineNumber": 229
+        },
+        {
+          "caller": "skip_item_display_fixup",
+          "callee": "self.is_before_or_after",
+          "lineNumber": 236
+        },
+        {
+          "caller": "is_precomputed",
+          "callee": "self.cascade_type",
+          "lineNumber": 242
+        },
+        {
+          "caller": "canonical",
+          "callee": "self.clone",
+          "lineNumber": 282
+        },
+        {
+          "caller": "property_restriction",
+          "callee": "Some",
+          "lineNumber": 293
+        },
+        {
+          "caller": "should_exist",
+          "callee": "style.get_box().clone_display",
+          "lineNumber": 306
+        },
+        {
+          "caller": "should_exist",
+          "callee": "style.get_box",
+          "lineNumber": 306
+        },
+        {
+          "caller": "should_exist",
+          "callee": "self.is_before_or_after",
+          "lineNumber": 310
+        },
+        {
+          "caller": "should_exist",
+          "callee": "style.ineffective_content_property",
+          "lineNumber": 310
+        },
+        {
+          "caller": "is_lazy_painted_highlight_pseudo",
+          "callee": "self.is_selection",
+          "lineNumber": 333
+        },
+        {
+          "caller": "is_lazy_painted_highlight_pseudo",
+          "callee": "self.is_highlight",
+          "lineNumber": 333
+        },
+        {
+          "caller": "is_lazy_painted_highlight_pseudo",
+          "callee": "self.is_target_text",
+          "lineNumber": 333
+        },
+        {
+          "caller": "is_element_backed",
+          "callee": "self.parses_as_element_backed",
+          "lineNumber": 341
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 439
+        },
+        {
+          "caller": "to_css",
+          "callee": "serialize_identifier",
+          "lineNumber": 440
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 441
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 444
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 450
+        },
+        {
+          "caller": "to_css",
+          "callee": "state.0.to_css",
+          "lineNumber": 451
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 452
+        },
+        {
+          "caller": "state_flag",
+          "callee": "ElementState::empty",
+          "lineNumber": 530
+        },
+        {
+          "caller": "document_state_flag",
+          "callee": "DocumentState::empty",
+          "lineNumber": 537
+        },
+        {
+          "caller": "needs_cache_revalidation",
+          "callee": "self.state_flag().is_empty",
+          "lineNumber": 542
+        },
+        {
+          "caller": "needs_cache_revalidation",
+          "callee": "self.state_flag",
+          "lineNumber": 542
+        },
+        {
+          "caller": "parse_non_ts_pseudo_class",
+          "callee": "Ok",
+          "lineNumber": 666
+        },
+        {
+          "caller": "parse_non_ts_functional_pseudo_class",
+          "callee": "Ok",
+          "lineNumber": 686
+        },
+        {
+          "caller": "parse_pseudo_element",
+          "callee": "Ok",
+          "lineNumber": 761
+        },
+        {
+          "caller": "default_namespace",
+          "callee": "self.namespaces.default.as_ref().map",
+          "lineNumber": 765
+        },
+        {
+          "caller": "default_namespace",
+          "callee": "self.namespaces.default.as_ref",
+          "lineNumber": 765
+        },
+        {
+          "caller": "default_namespace",
+          "callee": "ns.clone",
+          "lineNumber": 765
+        },
+        {
+          "caller": "namespace_for_prefix",
+          "callee": "self.namespaces.prefixes.get(prefix).cloned",
+          "lineNumber": 769
+        },
+        {
+          "caller": "namespace_for_prefix",
+          "callee": "self.namespaces.prefixes.get",
+          "lineNumber": 769
+        },
+        {
+          "caller": "each_eagerly_cascaded_pseudo_element",
+          "callee": "fun",
+          "lineNumber": 790
+        },
+        {
+          "caller": "each_eagerly_cascaded_pseudo_element",
+          "callee": "PseudoElement::from_eager_index",
+          "lineNumber": 790
+        },
+        {
+          "caller": "new",
+          "callee": "SnapshotMap",
+          "lineNumber": 802
+        },
+        {
+          "caller": "new",
+          "callee": "FxHashMap::default",
+          "lineNumber": 802
+        },
+        {
+          "caller": "get",
+          "callee": "self.0.get",
+          "lineNumber": 807
+        },
+        {
+          "caller": "get",
+          "callee": "el.as_node().opaque",
+          "lineNumber": 807
+        },
+        {
+          "caller": "get",
+          "callee": "el.as_node",
+          "lineNumber": 807
+        },
+        {
+          "caller": "new",
+          "callee": "Self::default",
+          "lineNumber": 845
+        },
+        {
+          "caller": "get_attr",
+          "callee": "self.attrs\r\n            .as_ref()\r\n            .unwrap()\r\n            .iter()\r\n            .find(|&&(ref ident, _)| ident.local_name == *name && ident.namespace == *namespace).map",
+          "lineNumber": 864
+        },
+        {
+          "caller": "get_attr",
+          "callee": "self.attrs\r\n            .as_ref()\r\n            .unwrap()\r\n            .iter().find",
+          "lineNumber": 864
+        },
+        {
+          "caller": "get_attr",
+          "callee": "self.attrs\r\n            .as_ref()\r\n            .unwrap().iter",
+          "lineNumber": 864
+        },
+        {
+          "caller": "get_attr",
+          "callee": "self.attrs\r\n            .as_ref().unwrap",
+          "lineNumber": 864
+        },
+        {
+          "caller": "get_attr",
+          "callee": "self.attrs.as_ref",
+          "lineNumber": 864
+        },
+        {
+          "caller": "each_attr_changed",
+          "callee": "callback",
+          "lineNumber": 879
+        },
+        {
+          "caller": "any_attr_ignore_ns",
+          "callee": "self.attrs\r\n            .as_ref()\r\n            .unwrap()\r\n            .iter().any",
+          "lineNumber": 887
+        },
+        {
+          "caller": "any_attr_ignore_ns",
+          "callee": "self.attrs\r\n            .as_ref()\r\n            .unwrap().iter",
+          "lineNumber": 887
+        },
+        {
+          "caller": "any_attr_ignore_ns",
+          "callee": "self.attrs\r\n            .as_ref().unwrap",
+          "lineNumber": 887
+        },
+        {
+          "caller": "any_attr_ignore_ns",
+          "callee": "self.attrs.as_ref",
+          "lineNumber": 887
+        },
+        {
+          "caller": "any_attr_ignore_ns",
+          "callee": "f",
+          "lineNumber": 891
+        },
+        {
+          "caller": "state",
+          "callee": "self.state.clone",
+          "lineNumber": 897
+        },
+        {
+          "caller": "has_attrs",
+          "callee": "self.attrs.is_some",
+          "lineNumber": 901
+        },
+        {
+          "caller": "id_attr",
+          "callee": "self.get_attr(&ns!(), &local_name!(\"id\")).map",
+          "lineNumber": 905
+        },
+        {
+          "caller": "id_attr",
+          "callee": "self.get_attr",
+          "lineNumber": 905
+        },
+        {
+          "caller": "id_attr",
+          "callee": "v.as_atom",
+          "lineNumber": 906
+        },
+        {
+          "caller": "is_part",
+          "callee": "self.get_attr(&ns!(), &local_name!(\"part\")).is_some_and",
+          "lineNumber": 910
+        },
+        {
+          "caller": "is_part",
+          "callee": "self.get_attr",
+          "lineNumber": 910
+        },
+        {
+          "caller": "is_part",
+          "callee": "v.as_tokens()\r\n                    .iter().any",
+          "lineNumber": 912
+        },
+        {
+          "caller": "is_part",
+          "callee": "v.as_tokens().iter",
+          "lineNumber": 912
+        },
+        {
+          "caller": "is_part",
+          "callee": "v.as_tokens",
+          "lineNumber": 912
+        },
+        {
+          "caller": "is_part",
+          "callee": "CaseSensitivity::CaseSensitive.eq_atom",
+          "lineNumber": 914
+        },
+        {
+          "caller": "has_class",
+          "callee": "self.get_attr(&ns!(), &local_name!(\"class\")).map_or",
+          "lineNumber": 923
+        },
+        {
+          "caller": "has_class",
+          "callee": "self.get_attr",
+          "lineNumber": 923
+        },
+        {
+          "caller": "has_class",
+          "callee": "v.as_tokens()\r\n                    .iter().any",
+          "lineNumber": 925
+        },
+        {
+          "caller": "has_class",
+          "callee": "v.as_tokens().iter",
+          "lineNumber": 925
+        },
+        {
+          "caller": "has_class",
+          "callee": "v.as_tokens",
+          "lineNumber": 925
+        },
+        {
+          "caller": "has_class",
+          "callee": "case_sensitivity.eq_atom",
+          "lineNumber": 927
+        },
+        {
+          "caller": "each_class",
+          "callee": "self.get_attr",
+          "lineNumber": 935
+        },
+        {
+          "caller": "each_class",
+          "callee": "v.as_tokens",
+          "lineNumber": 936
+        },
+        {
+          "caller": "each_class",
+          "callee": "callback",
+          "lineNumber": 937
+        },
+        {
+          "caller": "each_class",
+          "callee": "AtomIdent::cast",
+          "lineNumber": 937
+        },
+        {
+          "caller": "lang_attr",
+          "callee": "self.get_attr(&ns!(xml), &local_name!(\"lang\"))\r\n            .or_else(|| self.get_attr(&ns!(), &local_name!(\"lang\"))).map",
+          "lineNumber": 943
+        },
+        {
+          "caller": "lang_attr",
+          "callee": "self.get_attr(&ns!(xml), &local_name!(\"lang\")).or_else",
+          "lineNumber": 943
+        },
+        {
+          "caller": "lang_attr",
+          "callee": "self.get_attr",
+          "lineNumber": 943
+        },
+        {
+          "caller": "lang_attr",
+          "callee": "self.get_attr",
+          "lineNumber": 944
+        },
+        {
+          "caller": "lang_attr",
+          "callee": "SelectorAttrValue::from",
+          "lineNumber": 945
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "self\r\n                .get_attr(ns, local_name).map_or",
+          "lineNumber": 977
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "self.get_attr",
+          "lineNumber": 977
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "value.eval_selector",
+          "lineNumber": 979
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "self.any_attr_ignore_ns",
+          "lineNumber": 981
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "value.eval_selector",
+          "lineNumber": 981
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range.split(',').any",
+          "lineNumber": 990
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range.split",
+          "lineNumber": 990
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "lang_range.split",
+          "lineNumber": 992
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag.split",
+          "lineNumber": 993
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range_subtags.next",
+          "lineNumber": 997
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag_subtags.next",
+          "lineNumber": 997
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range_subtag.eq_ignore_ascii_case",
+          "lineNumber": 998
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range_subtag.eq_ignore_ascii_case",
+          "lineNumber": 999
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag_subtags.next",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "current_tag_subtag.clone",
+          "lineNumber": 1013
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "range_subtag.eq_ignore_ascii_case",
+          "lineNumber": 1016
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag_subtags.next",
+          "lineNumber": 1017
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag_subtag.len",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "tag_subtags.next",
+          "lineNumber": 1025
+        },
+        {
+          "caller": "extended_filtering",
+          "callee": "current_tag_subtag.is_none",
+          "lineNumber": 1026
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 47,
+        "functionCount": 74,
+        "classCount": 7
+      }
+    },
+    {
+      "path": "style/servo/shadow_parts.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 179,
+      "functions": [
+        {
+          "name": "parse_part_mapping",
+          "startLine": 22,
+          "endLine": 85,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_mapping_list",
+          "startLine": 88,
+          "endLine": 111,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 114,
+          "endLine": 120,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "for_each_exported_part",
+          "startLine": 123,
+          "endLine": 132,
+          "params": [
+            "name",
+            "callback"
+          ]
+        },
+        {
+          "name": "imported_part",
+          "startLine": 134,
+          "endLine": 139,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ShadowParts",
+          "startLine": 12,
+          "endLine": 17,
+          "methods": [
+            "parse",
+            "for_each_exported_part",
+            "imported_part"
+          ],
+          "properties": [
+            "mappings"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ShadowParts",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "parse_part_mapping",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "for_each_exported_part",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "imported_part",
+          "line": 134,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.trim_start_matches",
+          "lineNumber": 28
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices()\r\n        .find(|(_, c)| matches!(c, ' ' | ':'))\r\n        .map(|(index, _)| index).unwrap_or",
+          "lineNumber": 32
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices()\r\n        .find(|(_, c)| matches!(c, ' ' | ':')).map",
+          "lineNumber": 32
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices().find",
+          "lineNumber": 32
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.char_indices",
+          "lineNumber": 32
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.len",
+          "lineNumber": 36
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.split_at",
+          "lineNumber": 37
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "first_token.is_empty",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.trim_start_matches",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.is_empty",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "Some",
+          "lineNumber": 49
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.strip_prefix",
+          "lineNumber": 54
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.trim_start_matches",
+          "lineNumber": 59
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices()\r\n        .find(|(_, c)| matches!(c, ' ' | ':'))\r\n        .map(|(index, _)| index).unwrap_or",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices()\r\n        .find(|(_, c)| matches!(c, ' ' | ':')).map",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input\r\n        .char_indices().find",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.char_indices",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.len",
+          "lineNumber": 67
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.split_at",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "second_token.is_empty",
+          "lineNumber": 71
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.trim_start_matches",
+          "lineNumber": 76
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "input.is_empty",
+          "lineNumber": 79
+        },
+        {
+          "caller": "parse_part_mapping",
+          "callee": "Some",
+          "lineNumber": 84
+        },
+        {
+          "caller": "parse_mapping_list",
+          "callee": "input.split",
+          "lineNumber": 91
+        },
+        {
+          "caller": "parse_mapping_list",
+          "callee": "unparsed_mappings.filter_map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_mapping_list",
+          "callee": "unparsed_mapping.chars().all",
+          "lineNumber": 101
+        },
+        {
+          "caller": "parse_mapping_list",
+          "callee": "unparsed_mapping.chars",
+          "lineNumber": 101
+        },
+        {
+          "caller": "parse_mapping_list",
+          "callee": "parse_part_mapping",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parse",
+          "callee": "parse_mapping_list(input)\r\n                .map(|(first, second)| (first.into(), second.into())).collect",
+          "lineNumber": 116
+        },
+        {
+          "caller": "parse",
+          "callee": "parse_mapping_list(input).map",
+          "lineNumber": 116
+        },
+        {
+          "caller": "parse",
+          "callee": "parse_mapping_list",
+          "lineNumber": 116
+        },
+        {
+          "caller": "parse",
+          "callee": "first.into",
+          "lineNumber": 117
+        },
+        {
+          "caller": "parse",
+          "callee": "second.into",
+          "lineNumber": 117
+        },
+        {
+          "caller": "for_each_exported_part",
+          "callee": "callback",
+          "lineNumber": 129
+        },
+        {
+          "caller": "for_each_exported_part",
+          "callee": "AtomIdent::cast",
+          "lineNumber": 129
+        },
+        {
+          "caller": "imported_part",
+          "callee": "self.mappings\r\n            .iter()\r\n            .find(|(_, to)| to == name).map",
+          "lineNumber": 135
+        },
+        {
+          "caller": "imported_part",
+          "callee": "self.mappings\r\n            .iter().find",
+          "lineNumber": 135
+        },
+        {
+          "caller": "imported_part",
+          "callee": "self.mappings.iter",
+          "lineNumber": 135
+        },
+        {
+          "caller": "parse_valid_mapping_list",
+          "callee": "parse_mapping_list",
+          "lineNumber": 195
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

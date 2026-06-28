@@ -1,0 +1,14 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "Cargo.toml", "language": "toml", "sizeLines": 36, "fileCategory": "config"},
+    {"path": "README.md", "language": "markdown", "sizeLines": 105, "fileCategory": "docs"},
+    {"path": "SYNCING.md", "language": "markdown", "sizeLines": 7, "fileCategory": "docs"},
+    {"path": "commit-from-merge.sh", "language": "shell", "sizeLines": 15, "fileCategory": "script"},
+    {"path": "commit-from-squashed.sh", "language": "shell", "sizeLines": 14, "fileCategory": "script"},
+    {"path": "start-rebase.sh", "language": "shell", "sizeLines": 7, "fileCategory": "script"},
+    {"path": "style.paths", "language": "txt", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "shell.nix", "language": "nix", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

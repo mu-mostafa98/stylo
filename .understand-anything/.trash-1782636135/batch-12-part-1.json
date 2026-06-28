@@ -1,0 +1,1207 @@
+{
+  "nodes": [
+    {
+      "id": "file:style_derive/animate.rs",
+      "type": "file",
+      "name": "animate.rs",
+      "filePath": "style_derive/animate.rs",
+      "summary": "Derive macro implementation for the `Animate` trait, generating animation interpolation code for CSS style types.",
+      "tags": [
+        "derive-macro",
+        "animation",
+        "rust-proc-macro"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses synstructure for enum variant iteration and darling for attribute parsing."
+    },
+    {
+      "id": "file:style_derive/cg.rs",
+      "type": "file",
+      "name": "cg.rs",
+      "filePath": "style_derive/cg.rs",
+      "summary": "Code generation utilities shared across all style derive macros, providing attribute parsing, type mapping, and pattern-binding helpers.",
+      "tags": [
+        "utility",
+        "code-generation",
+        "helper-functions"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Central helper module implementing the synstructure-based derive pattern used by all style_derive submodules."
+    },
+    {
+      "id": "file:style_derive/compute_squared_distance.rs",
+      "type": "file",
+      "name": "compute_squared_distance.rs",
+      "filePath": "style_derive/compute_squared_distance.rs",
+      "summary": "Derive macro implementation for the `ComputeSquaredDistance` trait, generating distance computation for CSS animation interpolation.",
+      "tags": [
+        "derive-macro",
+        "animation",
+        "distance"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style_derive/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "style_derive/lib.rs",
+      "summary": "Crate root that declares all submodules and registers all proc-macro derive functions for the style_derive crate.",
+      "tags": [
+        "entry-point",
+        "proc-macro",
+        "crate-root"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Proc-macro crate entry point registering 10 custom derive macros via #[proc_macro_derive]."
+    },
+    {
+      "id": "file:style_derive/parse.rs",
+      "type": "file",
+      "name": "parse.rs",
+      "filePath": "style_derive/parse.rs",
+      "summary": "Derive macro implementation for the `Parse` trait, generating CSS keyword and function parsing code.",
+      "tags": [
+        "derive-macro",
+        "parsing",
+        "css-parser"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style_derive/specified_value_info.rs",
+      "type": "file",
+      "name": "specified_value_info.rs",
+      "filePath": "style_derive/specified_value_info.rs",
+      "summary": "Derive macro implementation for the `SpecifiedValueInfo` trait, generating supported keyword and type metadata.",
+      "tags": [
+        "derive-macro",
+        "metadata",
+        "css"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/animate.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/animate.rs",
+      "lineRange": [
+        12,
+        67
+      ],
+      "summary": "Generates Animate trait impl with match-body per variant, adding where-clause bounds for type parameters.",
+      "tags": [
+        "derive-macro",
+        "code-generation",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/animate.rs:derive_variant_arm",
+      "type": "function",
+      "name": "derive_variant_arm",
+      "filePath": "style_derive/animate.rs",
+      "lineRange": [
+        69,
+        116
+      ],
+      "summary": "Generates a single match arm for an enum variant's Animate implementation, handling error, constant, and field-bound cases.",
+      "tags": [
+        "derive-macro",
+        "code-generation",
+        "pattern-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_derive/animate.rs:AnimationInputAttrs",
+      "type": "class",
+      "name": "AnimationInputAttrs",
+      "filePath": "style_derive/animate.rs",
+      "lineRange": [
+        120,
+        122
+      ],
+      "summary": "Derive input attributes parsed from #[animation(...)] for controlling Animate derive behavior.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/animate.rs:AnimationVariantAttrs",
+      "type": "class",
+      "name": "AnimationVariantAttrs",
+      "filePath": "style_derive/animate.rs",
+      "lineRange": [
+        126,
+        131
+      ],
+      "summary": "Variant-level attributes parsed from #[animation(...)] for error handling and bound control.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/animate.rs:AnimationFieldAttrs",
+      "type": "class",
+      "name": "AnimationFieldAttrs",
+      "filePath": "style_derive/animate.rs",
+      "lineRange": [
+        135,
+        138
+      ],
+      "summary": "Field-level attributes parsed from #[animation(...)] for constant and field-bound settings.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:propagate_clauses_to_output_type",
+      "type": "function",
+      "name": "propagate_clauses_to_output_type",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        35,
+        80
+      ],
+      "summary": "Propagates where-clause bounds from input types to their associated output types in trait implementations.",
+      "tags": [
+        "code-generation",
+        "type-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/cg.rs:add_predicate",
+      "type": "function",
+      "name": "add_predicate",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        82,
+        87
+      ],
+      "summary": "Adds a where-clause predicate, initializing the clause if necessary.",
+      "tags": [
+        "utility",
+        "code-generation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:fmap2_match",
+      "type": "function",
+      "name": "fmap2_match",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        96,
+        129
+      ],
+      "summary": "Core pattern-matching code generator that transforms variant bindings with two mapping closures for value conversion.",
+      "tags": [
+        "code-generation",
+        "pattern-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/cg.rs:fmap_trait_output",
+      "type": "function",
+      "name": "fmap_trait_output",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        131,
+        163
+      ],
+      "summary": "Constructs the output type path by mapping each generic parameter to its trait-associated type.",
+      "tags": [
+        "code-generation",
+        "type-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/cg.rs:map_type_params",
+      "type": "function",
+      "name": "map_type_params",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        165,
+        236
+      ],
+      "summary": "Recursively maps type parameters within complex type expressions, handling slices, arrays, tuples, paths, and qualified self-types.",
+      "tags": [
+        "code-generation",
+        "type-system"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style_derive/cg.rs:map_type_params_in_path",
+      "type": "function",
+      "name": "map_type_params_in_path",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        238,
+        283
+      ],
+      "summary": "Maps type parameters within path segments, handling angle-bracketed generic arguments and associated types.",
+      "tags": [
+        "code-generation",
+        "type-system"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/cg.rs:parse_field_attrs",
+      "type": "function",
+      "name": "parse_field_attrs",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        301,
+        309
+      ],
+      "summary": "Parses darling attributes from a syn Field node with panic-on-error.",
+      "tags": [
+        "attribute-parsing",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:parse_input_attrs",
+      "type": "function",
+      "name": "parse_input_attrs",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        311,
+        319
+      ],
+      "summary": "Parses darling attributes from a syn DeriveInput node with panic-on-error.",
+      "tags": [
+        "attribute-parsing",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:parse_variant_attrs_from_ast",
+      "type": "function",
+      "name": "parse_variant_attrs_from_ast",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        321,
+        332
+      ],
+      "summary": "Parses darling attributes from a synstructure VariantAst by converting to syn Variant first.",
+      "tags": [
+        "attribute-parsing",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:ref_pattern",
+      "type": "function",
+      "name": "ref_pattern",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        344,
+        354
+      ],
+      "summary": "Creates a ref-pattern with renamed bindings for use in match arms during derive code generation.",
+      "tags": [
+        "code-generation",
+        "pattern-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:value",
+      "type": "function",
+      "name": "value",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        356,
+        366
+      ],
+      "summary": "Creates a move-pattern with renamed bindings for generating result values in derive match arms.",
+      "tags": [
+        "code-generation",
+        "pattern-matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/cg.rs:to_css_identifier",
+      "type": "function",
+      "name": "to_css_identifier",
+      "filePath": "style_derive/cg.rs",
+      "lineRange": [
+        372,
+        390
+      ],
+      "summary": "Converts CamelCase Rust identifiers to hyphenated CSS identifiers, handling Moz/Webkit/Servo vendor prefixes.",
+      "tags": [
+        "utility",
+        "string-conversion",
+        "css"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/compute_squared_distance.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/compute_squared_distance.rs",
+      "lineRange": [
+        12,
+        69
+      ],
+      "summary": "Generates ComputeSquaredDistance trait impl with match-body, adding bounds for type parameters.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/compute_squared_distance.rs:derive_variant_arm",
+      "type": "function",
+      "name": "derive_variant_arm",
+      "filePath": "style_derive/compute_squared_distance.rs",
+      "lineRange": [
+        71,
+        123
+      ],
+      "summary": "Generates match arm summing squared distances for each field, with constant and field-bound handling.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_animate",
+      "type": "function",
+      "name": "derive_animate",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        32,
+        35
+      ],
+      "summary": "Proc-macro entry point for #[derive(Animate)], delegating to animate::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_compute_squared_distance",
+      "type": "function",
+      "name": "derive_compute_squared_distance",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "Proc-macro entry point for #[derive(ComputeSquaredDistance)], delegating to compute_squared_distance::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_animated_value",
+      "type": "function",
+      "name": "derive_to_animated_value",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        44,
+        47
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToAnimatedValue)], delegating to to_animated_value::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_parse",
+      "type": "function",
+      "name": "derive_parse",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        50,
+        53
+      ],
+      "summary": "Proc-macro entry point for #[derive(Parse)], delegating to parse::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_animated_zero",
+      "type": "function",
+      "name": "derive_to_animated_zero",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        56,
+        59
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToAnimatedZero)], delegating to to_animated_zero::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_computed_value",
+      "type": "function",
+      "name": "derive_to_computed_value",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        62,
+        65
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToComputedValue)], delegating to to_computed_value::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_resolved_value",
+      "type": "function",
+      "name": "derive_to_resolved_value",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        68,
+        71
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToResolvedValue)], delegating to to_resolved_value::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_css",
+      "type": "function",
+      "name": "derive_to_css",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        74,
+        77
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToCss)], delegating to to_css::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_specified_value_info",
+      "type": "function",
+      "name": "derive_specified_value_info",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        80,
+        83
+      ],
+      "summary": "Proc-macro entry point for #[derive(SpecifiedValueInfo)], delegating to specified_value_info::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/lib.rs:derive_to_typed",
+      "type": "function",
+      "name": "derive_to_typed",
+      "filePath": "style_derive/lib.rs",
+      "lineRange": [
+        86,
+        89
+      ],
+      "summary": "Proc-macro entry point for #[derive(ToTyped)], delegating to to_typed::derive.",
+      "tags": [
+        "entry-point",
+        "proc-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/parse.rs:parse_bitflags",
+      "type": "function",
+      "name": "parse_bitflags",
+      "filePath": "style_derive/parse.rs",
+      "lineRange": [
+        26,
+        88
+      ],
+      "summary": "Generates CSS bitflag parsing code that handles single keywords, mixed flags, and duplicate detection.",
+      "tags": [
+        "code-generation",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/parse.rs:parse_non_keyword_variant",
+      "type": "function",
+      "name": "parse_non_keyword_variant",
+      "filePath": "style_derive/parse.rs",
+      "lineRange": [
+        90,
+        169
+      ],
+      "summary": "Generates parsing code for enum variants with data fields, handling custom parse functions, conditions, and bitflags.",
+      "tags": [
+        "code-generation",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/parse.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/parse.rs",
+      "lineRange": [
+        171,
+        332
+      ],
+      "summary": "Main Parse derive entry point generating Parse trait impl and keyword methods for simple enums.",
+      "tags": [
+        "derive-macro",
+        "code-generation",
+        "parsing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style_derive/parse.rs:ParseVariantAttrs",
+      "type": "class",
+      "name": "ParseVariantAttrs",
+      "filePath": "style_derive/parse.rs",
+      "lineRange": [
+        14,
+        18
+      ],
+      "summary": "Variant-level attributes parsed from #[parse(...)] for aliases, conditions, and custom parse functions.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/parse.rs:ParseFieldAttrs",
+      "type": "class",
+      "name": "ParseFieldAttrs",
+      "filePath": "style_derive/parse.rs",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "Field-level attributes parsed from #[parse(...)] for field-bound settings.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/specified_value_info.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/specified_value_info.rs",
+      "lineRange": [
+        12,
+        135
+      ],
+      "summary": "Generates SpecifiedValueInfo trait impl collecting supported CSS types, keywords, and completion values from variant/struct fields.",
+      "tags": [
+        "derive-macro",
+        "code-generation",
+        "metadata"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style_derive/specified_value_info.rs:derive_struct_fields",
+      "type": "function",
+      "name": "derive_struct_fields",
+      "filePath": "style_derive/specified_value_info.rs",
+      "lineRange": [
+        139,
+        174
+      ],
+      "summary": "Processes struct fields for SpecifiedValueInfo, collecting types and values while respecting represents_keyword and skip attributes.",
+      "tags": [
+        "code-generation",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "function:style_derive/animate.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "function:style_derive/animate.rs:derive_variant_arm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationInputAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationVariantAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationFieldAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "function:style_derive/animate.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationInputAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationVariantAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/animate.rs",
+      "target": "class:style_derive/animate.rs:AnimationFieldAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:propagate_clauses_to_output_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:add_predicate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:fmap2_match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:fmap_trait_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:map_type_params",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:map_type_params_in_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_field_attrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_input_attrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_variant_attrs_from_ast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:ref_pattern",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:to_css_identifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:propagate_clauses_to_output_type",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:add_predicate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:fmap2_match",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:fmap_trait_output",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:map_type_params",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_field_attrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_input_attrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:parse_variant_attrs_from_ast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:ref_pattern",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/cg.rs",
+      "target": "function:style_derive/cg.rs:to_css_identifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/compute_squared_distance.rs",
+      "target": "function:style_derive/compute_squared_distance.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/compute_squared_distance.rs",
+      "target": "function:style_derive/compute_squared_distance.rs:derive_variant_arm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/compute_squared_distance.rs",
+      "target": "function:style_derive/compute_squared_distance.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_animated_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_animated_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_resolved_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_specified_value_info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_animate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_compute_squared_distance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_animated_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_animated_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_computed_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_resolved_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_css",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_specified_value_info",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "function:style_derive/lib.rs:derive_to_typed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "function:style_derive/parse.rs:parse_bitflags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "function:style_derive/parse.rs:parse_non_keyword_variant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "function:style_derive/parse.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "class:style_derive/parse.rs:ParseVariantAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "class:style_derive/parse.rs:ParseFieldAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "function:style_derive/parse.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "class:style_derive/parse.rs:ParseVariantAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/parse.rs",
+      "target": "class:style_derive/parse.rs:ParseFieldAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/specified_value_info.rs",
+      "target": "function:style_derive/specified_value_info.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/specified_value_info.rs",
+      "target": "function:style_derive/specified_value_info.rs:derive_struct_fields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/specified_value_info.rs",
+      "target": "function:style_derive/specified_value_info.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/animate.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/cg.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/compute_squared_distance.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/parse.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/specified_value_info.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_animated_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_animated_zero.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_computed_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_css.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_resolved_value.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_derive/lib.rs",
+      "target": "file:style_derive/to_typed.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

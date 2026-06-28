@@ -1,0 +1,10 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "style/properties/cascade.rs",
+    "style/properties/declaration_block.rs",
+    "style/properties/mod.rs"
+  ],
+  "results": []
+}

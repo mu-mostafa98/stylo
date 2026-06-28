@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "config:.understand-anything/tmp/ua-import-map-input.json",
+      "type": "config",
+      "name": "ua-import-map-input.json",
+      "filePath": ".understand-anything/tmp/ua-import-map-input.json",
+      "summary": "Input inventory for the Understand-Anything import map scanner, listing all 388 project files with detected languages and file categories for import resolution.",
+      "tags": ["configuration", "import-map", "intermediate-data"],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.understand-anything/tmp/ua-import-map-output.json",
+      "type": "config",
+      "name": "ua-import-map-output.json",
+      "filePath": ".understand-anything/tmp/ua-import-map-output.json",
+      "summary": "Output of the import map scanner containing resolved project-internal import relationships for all 388 files across 37 modules with 318 import edges.",
+      "tags": ["configuration", "import-map", "intermediate-data"],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.understand-anything/tmp/ua-scan-files.json",
+      "type": "config",
+      "name": "ua-scan-files.json",
+      "filePath": ".understand-anything/tmp/ua-scan-files.json",
+      "summary": "Comprehensive project scan output containing file metadata (line counts, languages, categories) for all 388 project files, categorized as large/complex with Rust as the dominant language.",
+      "tags": ["configuration", "project-scan", "intermediate-data"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:.understand-anything/tmp/ua-scan-files.json",
+      "target": "config:.understand-anything/tmp/ua-import-map-input.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:.understand-anything/tmp/ua-import-map-input.json",
+      "target": "config:.understand-anything/tmp/ua-import-map-output.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

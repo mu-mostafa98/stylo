@@ -1,0 +1,999 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/generics/wayland.rs",
+      "type": "file",
+      "name": "wayland.rs",
+      "filePath": "style/values/generics/wayland.rs",
+      "summary": "Generic types for CSS Wayland-specific values. File was not found on disk during extraction.",
+      "tags": [
+        "generic",
+        "wayland",
+        "css-values",
+        "missing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/mod.rs",
+      "summary": "Module root and re-export hub for all CSS value types, defining core primitives: CSSFloat, CSSInteger, AtomString, AtomIdent, CustomIdent, DashedIdent, KeyframesName, Impossible, Either, and serialization utilities.",
+      "tags": [
+        "module-root",
+        "core",
+        "css-values",
+        "serialization"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses cfg(feature = \"servo\") and cfg(feature = \"gecko\") extensively for dual-engine FFI compatibility."
+    },
+    {
+      "id": "function:style/values/mod.rs:normalize",
+      "type": "function",
+      "name": "normalize",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        42,
+        48
+      ],
+      "summary": "Normalizes a CSS float value, replacing NaN with zero.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_atom_identifier",
+      "type": "function",
+      "name": "serialize_atom_identifier",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        55,
+        60
+      ],
+      "summary": "Helper function for CSS serialization of atom identifier.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_atom_name",
+      "type": "function",
+      "name": "serialize_atom_name",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        77,
+        82
+      ],
+      "summary": "Helper function for CSS serialization of atom name.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_number",
+      "type": "function",
+      "name": "serialize_number",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        98,
+        103
+      ],
+      "summary": "Helper function for CSS serialization of number.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_specified_dimension",
+      "type": "function",
+      "name": "serialize_specified_dimension",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        106,
+        146
+      ],
+      "summary": "Helper function for CSS serialization of specified dimension.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/mod.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        174,
+        176
+      ],
+      "summary": "CSS value parsing implementation, converting CSS syntax tokens into this generic type.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        180,
+        196
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/mod.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        342,
+        344
+      ],
+      "summary": "Constructor creating a new instance of a CSS generic type from component values.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:cast",
+      "type": "function",
+      "name": "cast",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        348,
+        352
+      ],
+      "summary": "cast() in mod - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:with",
+      "type": "function",
+      "name": "with",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        408,
+        417
+      ],
+      "summary": "with() in mod - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_percentage",
+      "type": "function",
+      "name": "serialize_percentage",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        437,
+        442
+      ],
+      "summary": "Helper function for CSS serialization of percentage.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:serialize_normalized_percentage",
+      "type": "function",
+      "name": "serialize_normalized_percentage",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        445,
+        451
+      ],
+      "summary": "Helper function for CSS serialization of normalized percentage.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:reify_percentage",
+      "type": "function",
+      "name": "reify_percentage",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        454,
+        474
+      ],
+      "summary": "reify_percentage() in mod - Core logic function for CSS value computation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/mod.rs:from_ident",
+      "type": "function",
+      "name": "from_ident",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        577,
+        592
+      ],
+      "summary": "CSS value parsing implementation, converting CSS syntax tokens into this generic type.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/mod.rs:is_valid",
+      "type": "function",
+      "name": "is_valid",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        594,
+        608
+      ],
+      "summary": "Validates CSS custom-ident syntax per CSS Values specification rules.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:empty",
+      "type": "function",
+      "name": "empty",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        664,
+        666
+      ],
+      "summary": "empty() in mod - Trivial accessor or factory method.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:is_empty",
+      "type": "function",
+      "name": "is_empty",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        669,
+        671
+      ],
+      "summary": "Predicate checking if the value matches the empty variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:undashed",
+      "type": "function",
+      "name": "undashed",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        678,
+        685
+      ],
+      "summary": "Strips the leading -- prefix from a CSS dashed-ident to get the underlying name.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        741,
+        743
+      ],
+      "summary": "Factory method returning the none variant for a CSS generic type in mod.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:is_none",
+      "type": "function",
+      "name": "is_none",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        746,
+        748
+      ],
+      "summary": "Predicate checking if the value matches the none variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:from_atom",
+      "type": "function",
+      "name": "from_atom",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        752,
+        754
+      ],
+      "summary": "from_atom() in mod - Trivial accessor or factory method.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/mod.rs:as_atom",
+      "type": "function",
+      "name": "as_atom",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        757,
+        759
+      ],
+      "summary": "Accessor returning a reference to the underlying atom value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/mod.rs:AtomString",
+      "type": "class",
+      "name": "AtomString",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        164,
+        164
+      ],
+      "summary": "CSS identifier type stored as an Atom for interning, with AtomString syntax validation and serialization.",
+      "tags": [
+        "class",
+        "generic-type",
+        "complex",
+        "identifier"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/mod.rs:GenericAtomIdent",
+      "type": "class",
+      "name": "GenericAtomIdent",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        226,
+        228
+      ],
+      "summary": "Generic type alias for AtomIdent, a CSS value type with 0 method(s) for mod.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/mod.rs:AtomIdent",
+      "type": "class",
+      "name": "AtomIdent",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        361,
+        361
+      ],
+      "summary": "CSS identifier type stored as an Atom for interning, with AtomIdent syntax validation and serialization.",
+      "tags": [
+        "class",
+        "generic-type",
+        "complex",
+        "identifier"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/mod.rs:Impossible",
+      "type": "class",
+      "name": "Impossible",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        489,
+        489
+      ],
+      "summary": "Void type used to disable CSS properties at the type level, with uninhabited enum pattern for compile-time guarantees.",
+      "tags": [
+        "class",
+        "generic-type",
+        "void-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/mod.rs:Either",
+      "type": "class",
+      "name": "Either",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        528,
+        533
+      ],
+      "summary": "Generic enum representing one of two possible CSS value types (A | B), with full derive macro support.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "container"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/mod.rs:CustomIdent",
+      "type": "class",
+      "name": "CustomIdent",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        560,
+        560
+      ],
+      "summary": "CSS identifier type stored as an Atom for interning, with CustomIdent syntax validation and serialization.",
+      "tags": [
+        "class",
+        "generic-type",
+        "complex",
+        "identifier"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/mod.rs:DashedIdent",
+      "type": "class",
+      "name": "DashedIdent",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        647,
+        647
+      ],
+      "summary": "CSS identifier type stored as an Atom for interning, with DashedIdent syntax validation and serialization.",
+      "tags": [
+        "class",
+        "generic-type",
+        "complex",
+        "identifier"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/mod.rs:KeyframesName",
+      "type": "class",
+      "name": "KeyframesName",
+      "filePath": "style/values/mod.rs",
+      "lineRange": [
+        732,
+        732
+      ],
+      "summary": "CSS @keyframes animation name type supporting identifiers, quoted strings, and the special none value.",
+      "tags": [
+        "class",
+        "generic-type",
+        "complex",
+        "identifier"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:normalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_atom_identifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_atom_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_specified_dimension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:cast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:with",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_normalized_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:reify_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:from_ident",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:is_valid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:empty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:is_empty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:undashed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:from_atom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:as_atom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:AtomString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:GenericAtomIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:AtomIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:Impossible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:Either",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:CustomIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:DashedIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:KeyframesName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:normalize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_atom_identifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_atom_name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_number",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_specified_dimension",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:AtomString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:GenericAtomIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:cast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:AtomIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:with",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:serialize_normalized_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:reify_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:Impossible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:Either",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:CustomIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:from_ident",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:DashedIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:empty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:is_empty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:undashed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "class:style/values/mod.rs:KeyframesName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:from_atom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "function:style/values/mod.rs:as_atom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/animated/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/computed/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/distance.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/generics/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/resolved/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/specified/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/mod.rs",
+      "target": "file:style/values/tagged_numeric.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:style/values/mod.rs:serialize_number",
+      "target": "function:style/values/mod.rs:serialize_specified_dimension",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:style/values/mod.rs:to_css",
+      "target": "function:style/values/mod.rs:serialize_atom_identifier",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:style/values/mod.rs:serialize_percentage",
+      "target": "function:style/values/mod.rs:serialize_specified_dimension",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/rule_tree/core.rs",
+      "type": "file",
+      "name": "core.rs",
+      "filePath": "style/rule_tree/core.rs",
+      "summary": "Core implementation of the CSS rule tree, a structure that preserves selector matching results by organizing rules as a tree of StrongRuleNode/WeakRuleNode with refcounting, a free list, and generational GC for reuse of likely-to-match-again rules.",
+      "tags": ["rule-tree", "css-cascade", "memory-management", "gc", "servo"],
+      "complexity": "complex",
+      "languageNotes": "Uses unsafe Rust with atomic refcounting, manual free-list management, and pointer-based tree structures for lock-free concurrent access."
+    },
+    {
+      "id": "file:style/rule_tree/level.rs",
+      "type": "file",
+      "name": "level.rs",
+      "filePath": "style/rule_tree/level.rs",
+      "summary": "Defines CSS cascade level types including CascadeLevel (packed bitfield for origin, importance, and shadow cascade order), CascadeOrigin (UA/User/PresHints/Author/Animations/Transitions), and ShadowCascadeOrder for tracking shadow DOM rule nesting.",
+      "tags": ["css-cascade", "cascade-origin", "shadow-dom", "type-definition", "servo"],
+      "complexity": "complex",
+      "languageNotes": "Uses Rust bitflags for compact CascadeLevel representation packing origin (3 bits), importance (1 bit), shadow order (3 bits), and sign (1 bit) into a single u8."
+    },
+    {
+      "id": "file:style/rule_tree/map.rs",
+      "type": "file",
+      "name": "map.rs",
+      "filePath": "style/rule_tree/map.rs",
+      "summary": "Provides a space-optimized Map<K, V> data structure that starts as Empty, transitions to One for single-element storage, and grows into a full FxHashMap only when multiple entries are present, used for rule node children storage.",
+      "tags": ["data-structure", "optimization", "hash-map", "servo"],
+      "complexity": "moderate",
+      "languageNotes": "Implements a three-state enum (Empty/One/Map) that avoids heap allocation for the common case of zero or one child per rule node."
+    },
+    {
+      "id": "file:style/rule_tree/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/rule_tree/mod.rs",
+      "summary": "Module root for the rule tree subsystem, re-exporting RuleTree, StrongRuleNode, CascadeLevel, CascadeOrigin, ShadowCascadeOrder, and StyleSource, and implementing high-level rule insertion, update, animation removal, and rule node querying methods.",
+      "tags": ["module-barrel", "rule-tree", "css-cascade", "servo", "re-exports"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/rule_tree/source.rs",
+      "type": "file",
+      "name": "source.rs",
+      "filePath": "style/rule_tree/source.rs",
+      "summary": "Defines StyleSource, a wrapper around an Arc<Locked<PropertyDeclarationBlock>> representing the style source for a rule node, which may come from a style rule, animation, transition, SMIL, presentational hint, or style attribute.",
+      "tags": ["style-source", "declaration-block", "wrapper", "servo"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/rule_tree/unsafe_box.rs",
+      "type": "file",
+      "name": "unsafe_box.rs",
+      "filePath": "style/rule_tree/unsafe_box.rs",
+      "summary": "Provides UnsafeBox<T>, a manually-managed Box wrapper that suppresses Drop and allows unsafe operations like raw pointer cloning and manual drop for use in the rule tree's lock-free memory management.",
+      "tags": ["memory-management", "unsafe", "wrapper", "servo"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/rule_tree/core.rs:RuleTree",
+      "type": "class",
+      "name": "RuleTree",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [40, 42],
+      "summary": "Root of the CSS rule tree structure that manages rule nodes with a free list and generational GC, providing the root node access and garbage collection methods.",
+      "tags": ["rule-tree", "css-cascade", "gc", "entry-point"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/rule_tree/core.rs:RuleNode",
+      "type": "class",
+      "name": "RuleNode",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [207, 266],
+      "summary": "Internal node in the rule tree, storing a style source, cascade priority, parent/root pointers, atomic refcount, children map, and free list pointer. Forms the core data structure shared via StrongRuleNode and WeakRuleNode.",
+      "tags": ["rule-tree", "node", "memory-management", "unsafe"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/rule_tree/core.rs:StrongRuleNode",
+      "type": "class",
+      "name": "StrongRuleNode",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [521, 523],
+      "summary": "Public strong reference to a rule node, providing the primary API for rule tree traversal, child creation, style source access, debugging dump, and refcounted clone/drop semantics with free list integration.",
+      "tags": ["rule-tree", "smart-pointer", "reference-counting", "api"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/rule_tree/level.rs:CascadeLevel",
+      "type": "class",
+      "name": "CascadeLevel",
+      "filePath": "style/rule_tree/level.rs",
+      "lineRange": [52, 52],
+      "summary": "Packed bitfield representing CSS cascade level, encoding origin, importance, and shadow cascade order in a single u8. Provides comparison, importance toggling, and shadow root lookup methods.",
+      "tags": ["css-cascade", "bitfield", "cascade-level", "type-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/rule_tree/level.rs:CascadeOrigin",
+      "type": "class",
+      "name": "CascadeOrigin",
+      "filePath": "style/rule_tree/level.rs",
+      "lineRange": [97, 114],
+      "summary": "Enum of CSS cascade origins in ascending precedence order: UA, User, PresHints, Author, PositionFallback, SMILOverride, Animations, Transitions with helper methods for origin simplification and guard selection.",
+      "tags": ["css-cascade", "cascade-origin", "enum", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/rule_tree/level.rs:ShadowCascadeOrder",
+      "type": "class",
+      "name": "ShadowCascadeOrder",
+      "filePath": "style/rule_tree/level.rs",
+      "lineRange": [335, 335],
+      "summary": "Signed integer wrapper (range -7 to 7) tracking how many shadow root rules deep a cascade level is, used for CSS scoping shadow cascading order resolution.",
+      "tags": ["shadow-dom", "css-cascade", "order", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/rule_tree/source.rs:StyleSource",
+      "type": "class",
+      "name": "StyleSource",
+      "filePath": "style/rule_tree/source.rs",
+      "lineRange": [20, 20],
+      "summary": "Wrapper around Arc<Locked<PropertyDeclarationBlock>> representing the declaration block source for a rule node, providing read access, pointer equality comparison, and rule tree marking.",
+      "tags": ["style-source", "declaration-block", "wrapper", "api"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/rule_tree/core.rs:RuleTree::swap_free_list_and_gc",
+      "type": "function",
+      "name": "swap_free_list_and_gc",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [151, 198],
+      "summary": "Steals the free list from the root node, iterates all nodes in it, and drops those whose refcount reaches zero after decrementing, using acquire/release semantics for safe concurrent memory reclamation.",
+      "tags": ["gc", "memory-management", "unsafe", "lock-free"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/rule_tree/core.rs:RuleNode::drop_without_free_list",
+      "type": "function",
+      "name": "drop_without_free_list",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [371, 450],
+      "summary": "Drops a rule node bypassing the free list, removing it from its parent's children map under a write lock and recursively dropping ancestors whose refcount also reaches zero, preventing stack overflow from deep hierarchies.",
+      "tags": ["memory-management", "drop", "recursive", "lock-free"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/rule_tree/core.rs:RuleNode::push_on_free_list",
+      "type": "function",
+      "name": "push_on_free_list",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [455, 499],
+      "summary": "Atomically pushes a rule node onto the tree's shared free list using compare-exchange, incrementing the approximate free count and handling the case where the tree has been dropped.",
+      "tags": ["memory-management", "free-list", "lock-free", "atomic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/rule_tree/core.rs:StrongRuleNode::ensure_child",
+      "type": "function",
+      "name": "ensure_child",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [556, 599],
+      "summary": "Looks up or creates a child rule node under the current node for a given style source and cascade priority, using upgradable read locks for concurrency and double-checked locking.",
+      "tags": ["rule-tree", "child-management", "lock-free", "api"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/rule_tree/core.rs:StrongRuleNode::drop",
+      "type": "function",
+      "name": "drop",
+      "filePath": "style/rule_tree/core.rs",
+      "lineRange": [686, 727],
+      "summary": "Drop implementation for StrongRuleNode that decrements the atomic refcount, and if reaching zero, pretends to be on the free list, pushes onto the free list, or falls through to drop_without_free_list for root or destroyed-tree cases.",
+      "tags": ["memory-management", "drop", "refcount", "free-list"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/rule_tree/level.rs:CascadeLevel::cmp",
+      "type": "function",
+      "name": "cmp",
+      "filePath": "style/rule_tree/level.rs",
+      "lineRange": [144, 169],
+      "summary": "Orders CascadeLevel by importance (important rules override non-important, except transitions), then by origin and shadow cascade order, with origins reversed for important rules.",
+      "tags": ["css-cascade", "ordering", "comparison"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/rule_tree/level.rs:CascadeLevel::get_shadow_root_for_scoped",
+      "type": "function",
+      "name": "get_shadow_root_for_scoped",
+      "filePath": "style/rule_tree/level.rs",
+      "lineRange": [293, 324],
+      "summary": "Resolves the shadow root corresponding to a cascade level's shadow order for a given element, handling both inner (negative) and outer (positive) shadow tree traversal through slots.",
+      "tags": ["shadow-dom", "scoping", "traversal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/rule_tree/map.rs:Map::entry",
+      "type": "function",
+      "name": "entry",
+      "filePath": "style/rule_tree/map.rs",
+      "lineRange": [109, 157],
+      "summary": "Provides a hash-map-style entry API for the three-state Map, transitioning from Empty to One, or One to a full FxHashMap when a second entry is inserted, handling key equality via a closure.",
+      "tags": ["data-structure", "entry-api", "optimization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/rule_tree/mod.rs:RuleTree::insert_ordered_rules_with_important",
+      "type": "function",
+      "name": "insert_ordered_rules_with_important",
+      "filePath": "style/rule_tree/mod.rs",
+      "lineRange": [59, 173],
+      "summary": "Inserts rules in specificity order while detecting and separating !important rules into author/user/UA buckets, then inserting them in increasing importance order after normal rules, followed by transition rules.",
+      "tags": ["rule-insertion", "important-rules", "css-cascade", "api"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/rule_tree/mod.rs:RuleTree::update_rule_at_level",
+      "type": "function",
+      "name": "update_rule_at_level",
+      "filePath": "style/rule_tree/mod.rs",
+      "lineRange": [212, 302],
+      "summary": "Replaces a rule at a given cascade level in an existing rule tree path, walking up to find the matching level, replacing the declaration block, and re-inserting child rules to build a new valid path.",
+      "tags": ["rule-replacement", "css-cascade", "api", "optimization"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "file:style/rule_tree/core.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "file:style/rule_tree/level.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "file:style/rule_tree/map.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "file:style/rule_tree/source.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "file:style/rule_tree/unsafe_box.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "class:style/rule_tree/core.rs:RuleTree",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "class:style/rule_tree/core.rs:RuleNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "class:style/rule_tree/core.rs:StrongRuleNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "function:style/rule_tree/core.rs:RuleTree::swap_free_list_and_gc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "function:style/rule_tree/core.rs:RuleNode::drop_without_free_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "function:style/rule_tree/core.rs:RuleNode::push_on_free_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "function:style/rule_tree/core.rs:StrongRuleNode::ensure_child",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "function:style/rule_tree/core.rs:StrongRuleNode::drop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeOrigin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:ShadowCascadeOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "function:style/rule_tree/level.rs:CascadeLevel::cmp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "function:style/rule_tree/level.rs:CascadeLevel::get_shadow_root_for_scoped",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/map.rs",
+      "target": "function:style/rule_tree/map.rs:Map::entry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "function:style/rule_tree/mod.rs:RuleTree::insert_ordered_rules_with_important",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "function:style/rule_tree/mod.rs:RuleTree::update_rule_at_level",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/source.rs",
+      "target": "class:style/rule_tree/source.rs:StyleSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "class:style/rule_tree/core.rs:RuleTree",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/core.rs",
+      "target": "class:style/rule_tree/core.rs:StrongRuleNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeOrigin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/level.rs",
+      "target": "class:style/rule_tree/level.rs:ShadowCascadeOrder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/source.rs",
+      "target": "class:style/rule_tree/source.rs:StyleSource",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/core.rs:RuleTree",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/core.rs:StrongRuleNode",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeLevel",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/level.rs:CascadeOrigin",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/level.rs:ShadowCascadeOrder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/rule_tree/mod.rs",
+      "target": "class:style/rule_tree/source.rs:StyleSource",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

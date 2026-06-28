@@ -1,0 +1,3508 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/rule_tree/core.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 777,
+      "nonEmptyLines": 667,
+      "functions": [
+        {
+          "name": "drop",
+          "startLine": 45,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "size_of",
+          "startLine": 51,
+          "endLine": 66,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 76,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "root",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "gc",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "maybe_gc",
+          "startLine": 93,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "maybe_dump_stats",
+          "startLine": 103,
+          "endLine": 148,
+          "params": []
+        },
+        {
+          "name": "swap_free_list_and_gc",
+          "startLine": 151,
+          "endLine": 198,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "log_new",
+          "startLine": 299,
+          "endLine": 302,
+          "params": [
+            "_ptr"
+          ]
+        },
+        {
+          "name": "log_drop",
+          "startLine": 305,
+          "endLine": 308,
+          "params": [
+            "_ptr"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 313,
+          "endLine": 331,
+          "params": [
+            "root",
+            "parent",
+            "source",
+            "cascade_priority"
+          ]
+        },
+        {
+          "name": "root",
+          "startLine": 333,
+          "endLine": 348,
+          "params": []
+        },
+        {
+          "name": "key",
+          "startLine": 350,
+          "endLine": 358,
+          "params": []
+        },
+        {
+          "name": "drop_without_free_list",
+          "startLine": 371,
+          "endLine": 450,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "push_on_free_list",
+          "startLine": 455,
+          "endLine": 499,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "pretend_to_be_on_free_list",
+          "startLine": 505,
+          "endLine": 509,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "as_mut_ptr",
+          "startLine": 511,
+          "endLine": 513,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 529,
+          "endLine": 539,
+          "params": [
+            "n"
+          ]
+        },
+        {
+          "name": "from_unsafe_box",
+          "startLine": 541,
+          "endLine": 543,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "downgrade",
+          "startLine": 545,
+          "endLine": 549,
+          "params": []
+        },
+        {
+          "name": "parent",
+          "startLine": 552,
+          "endLine": 554,
+          "params": []
+        },
+        {
+          "name": "ensure_child",
+          "startLine": 556,
+          "endLine": 599,
+          "params": [
+            "root",
+            "source",
+            "cascade_priority"
+          ]
+        },
+        {
+          "name": "style_source",
+          "startLine": 604,
+          "endLine": 606,
+          "params": []
+        },
+        {
+          "name": "cascade_priority",
+          "startLine": 610,
+          "endLine": 612,
+          "params": []
+        },
+        {
+          "name": "cascade_level",
+          "startLine": 616,
+          "endLine": 618,
+          "params": []
+        },
+        {
+          "name": "importance",
+          "startLine": 622,
+          "endLine": 624,
+          "params": []
+        },
+        {
+          "name": "has_children_for_testing",
+          "startLine": 628,
+          "endLine": 630,
+          "params": []
+        },
+        {
+          "name": "dump",
+          "startLine": 632,
+          "endLine": 668,
+          "params": [
+            "guards",
+            "writer",
+            "indent"
+          ]
+        },
+        {
+          "name": "clone",
+          "startLine": 672,
+          "endLine": 681,
+          "params": []
+        },
+        {
+          "name": "drop",
+          "startLine": 686,
+          "endLine": 727,
+          "params": []
+        },
+        {
+          "name": "upgrade",
+          "startLine": 735,
+          "endLine": 749,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 753,
+          "endLine": 755,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "eq",
+          "startLine": 760,
+          "endLine": 762,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "hash",
+          "startLine": 766,
+          "endLine": 771,
+          "params": [
+            "state"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuleTree",
+          "startLine": 40,
+          "endLine": 42,
+          "methods": [
+            "drop",
+            "size_of",
+            "new",
+            "root",
+            "gc",
+            "maybe_gc",
+            "maybe_dump_stats",
+            "swap_free_list_and_gc"
+          ],
+          "properties": [
+            "root"
+          ]
+        },
+        {
+          "name": "ChildKey",
+          "startLine": 70,
+          "endLine": 70,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "RuleNode",
+          "startLine": 207,
+          "endLine": 266,
+          "methods": [
+            "new",
+            "root",
+            "key",
+            "drop_without_free_list",
+            "push_on_free_list",
+            "pretend_to_be_on_free_list",
+            "as_mut_ptr"
+          ],
+          "properties": [
+            "root",
+            "parent",
+            "source",
+            "cascade_priority",
+            "refcount",
+            "approximate_free_count",
+            "children",
+            "next_free"
+          ]
+        },
+        {
+          "name": "WeakRuleNode",
+          "startLine": 516,
+          "endLine": 518,
+          "methods": [
+            "upgrade"
+          ],
+          "properties": [
+            "p"
+          ]
+        },
+        {
+          "name": "StrongRuleNode",
+          "startLine": 521,
+          "endLine": 523,
+          "methods": [
+            "new",
+            "from_unsafe_box",
+            "downgrade",
+            "parent",
+            "ensure_child",
+            "style_source",
+            "cascade_priority",
+            "cascade_level",
+            "importance",
+            "has_children_for_testing",
+            "dump",
+            "clone",
+            "drop",
+            "fmt",
+            "eq",
+            "hash"
+          ],
+          "properties": [
+            "p"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RuleTree",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "root",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "gc",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "maybe_gc",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "WeakRuleNode",
+          "line": 516,
+          "isDefault": false
+        },
+        {
+          "name": "StrongRuleNode",
+          "line": 521,
+          "isDefault": false
+        },
+        {
+          "name": "parent",
+          "line": 552,
+          "isDefault": false
+        },
+        {
+          "name": "ensure_child",
+          "line": 556,
+          "isDefault": false
+        },
+        {
+          "name": "style_source",
+          "line": 604,
+          "isDefault": false
+        },
+        {
+          "name": "cascade_priority",
+          "line": 610,
+          "isDefault": false
+        },
+        {
+          "name": "cascade_level",
+          "line": 616,
+          "isDefault": false
+        },
+        {
+          "name": "importance",
+          "line": 622,
+          "isDefault": false
+        },
+        {
+          "name": "has_children_for_testing",
+          "line": 628,
+          "isDefault": false
+        },
+        {
+          "name": "dump",
+          "line": 632,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "drop",
+          "callee": "self.swap_free_list_and_gc",
+          "lineNumber": 46
+        },
+        {
+          "caller": "drop",
+          "callee": "ptr::null_mut",
+          "lineNumber": 46
+        },
+        {
+          "caller": "size_of",
+          "callee": "SmallVec::<[_; 32]>::new",
+          "lineNumber": 53
+        },
+        {
+          "caller": "size_of",
+          "callee": "stack.push",
+          "lineNumber": 54
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.root.clone",
+          "lineNumber": 54
+        },
+        {
+          "caller": "size_of",
+          "callee": "stack.pop",
+          "lineNumber": 56
+        },
+        {
+          "caller": "size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 57
+        },
+        {
+          "caller": "size_of",
+          "callee": "node.p.children.read",
+          "lineNumber": 58
+        },
+        {
+          "caller": "size_of",
+          "callee": "children.shallow_size_of",
+          "lineNumber": 59
+        },
+        {
+          "caller": "size_of",
+          "callee": "stack.push",
+          "lineNumber": 61
+        },
+        {
+          "caller": "size_of",
+          "callee": "c.upgrade",
+          "lineNumber": 61
+        },
+        {
+          "caller": "new",
+          "callee": "StrongRuleNode::new",
+          "lineNumber": 78
+        },
+        {
+          "caller": "new",
+          "callee": "Box::new",
+          "lineNumber": 78
+        },
+        {
+          "caller": "new",
+          "callee": "RuleNode::root",
+          "lineNumber": 78
+        },
+        {
+          "caller": "gc",
+          "callee": "self.swap_free_list_and_gc",
+          "lineNumber": 89
+        },
+        {
+          "caller": "maybe_gc",
+          "callee": "self.maybe_dump_stats",
+          "lineNumber": 95
+        },
+        {
+          "caller": "maybe_gc",
+          "callee": "self.root.p.approximate_free_count.load",
+          "lineNumber": 97
+        },
+        {
+          "caller": "maybe_gc",
+          "callee": "self.gc",
+          "lineNumber": 98
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "Duration::from_secs",
+          "lineNumber": 112
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "LAST_STATS.with",
+          "lineNumber": 118
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "Instant::now",
+          "lineNumber": 119
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "now.duration_since",
+          "lineNumber": 120
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "s.get",
+          "lineNumber": 120
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "s.set",
+          "lineNumber": 123
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "rustc_hash::FxHashMap::default",
+          "lineNumber": 131
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "SmallVec::<[_; 32]>::new",
+          "lineNumber": 133
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "stack.push",
+          "lineNumber": 134
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "self.root.clone",
+          "lineNumber": 134
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "stack.pop",
+          "lineNumber": 135
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "node.p.children.read",
+          "lineNumber": 136
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "children_count.entry(children.len()).or_insert",
+          "lineNumber": 137
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "children_count.entry",
+          "lineNumber": 137
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "children.len",
+          "lineNumber": 137
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "stack.push",
+          "lineNumber": 139
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "c.upgrade",
+          "lineNumber": 139
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "children_count.keys().sorted",
+          "lineNumber": 144
+        },
+        {
+          "caller": "maybe_dump_stats",
+          "callee": "children_count.keys",
+          "lineNumber": 144
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "root.approximate_free_count.store",
+          "lineNumber": 158
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "root.next_free.swap",
+          "lineNumber": 164
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "UnsafeBox::from_raw",
+          "lineNumber": 169
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "node.next_free.swap",
+          "lineNumber": 181
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "ptr::null_mut",
+          "lineNumber": 181
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "node.refcount.fetch_sub",
+          "lineNumber": 187
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "RuleNode::pretend_to_be_on_free_list",
+          "lineNumber": 191
+        },
+        {
+          "caller": "swap_free_list_and_gc",
+          "callee": "RuleNode::drop_without_free_list",
+          "lineNumber": 195
+        },
+        {
+          "caller": "log_ctor",
+          "callee": "NS_LogCtor",
+          "lineNumber": 285
+        },
+        {
+          "caller": "log_ctor",
+          "callee": "size_of::<RuleNode>",
+          "lineNumber": 285
+        },
+        {
+          "caller": "log_dtor",
+          "callee": "NS_LogDtor",
+          "lineNumber": 293
+        },
+        {
+          "caller": "log_dtor",
+          "callee": "size_of::<RuleNode>",
+          "lineNumber": 293
+        },
+        {
+          "caller": "log_new",
+          "callee": "gecko_leak_checking::log_ctor",
+          "lineNumber": 301
+        },
+        {
+          "caller": "log_drop",
+          "callee": "gecko_leak_checking::log_dtor",
+          "lineNumber": 307
+        },
+        {
+          "caller": "new",
+          "callee": "source.mark_in_rule_tree",
+          "lineNumber": 320
+        },
+        {
+          "caller": "new",
+          "callee": "Some",
+          "lineNumber": 322
+        },
+        {
+          "caller": "new",
+          "callee": "Some",
+          "lineNumber": 323
+        },
+        {
+          "caller": "new",
+          "callee": "Some",
+          "lineNumber": 324
+        },
+        {
+          "caller": "new",
+          "callee": "AtomicUsize::new",
+          "lineNumber": 326
+        },
+        {
+          "caller": "new",
+          "callee": "Default::default",
+          "lineNumber": 327
+        },
+        {
+          "caller": "new",
+          "callee": "AtomicUsize::new",
+          "lineNumber": 328
+        },
+        {
+          "caller": "new",
+          "callee": "AtomicPtr::new",
+          "lineNumber": 329
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::null_mut",
+          "lineNumber": 329
+        },
+        {
+          "caller": "root",
+          "callee": "CascadePriority::new",
+          "lineNumber": 338
+        },
+        {
+          "caller": "root",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 339
+        },
+        {
+          "caller": "root",
+          "callee": "LayerOrder::root",
+          "lineNumber": 340
+        },
+        {
+          "caller": "root",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 341
+        },
+        {
+          "caller": "root",
+          "callee": "AtomicUsize::new",
+          "lineNumber": 343
+        },
+        {
+          "caller": "root",
+          "callee": "AtomicUsize::new",
+          "lineNumber": 344
+        },
+        {
+          "caller": "root",
+          "callee": "Default::default",
+          "lineNumber": 345
+        },
+        {
+          "caller": "root",
+          "callee": "AtomicPtr::new",
+          "lineNumber": 346
+        },
+        {
+          "caller": "key",
+          "callee": "ChildKey",
+          "lineNumber": 351
+        },
+        {
+          "caller": "key",
+          "callee": "self.source\r\n                .as_ref()\r\n                .expect(\"Called key() on the root node\").key",
+          "lineNumber": 353
+        },
+        {
+          "caller": "key",
+          "callee": "self.source\r\n                .as_ref().expect",
+          "lineNumber": 353
+        },
+        {
+          "caller": "key",
+          "callee": "self.source.as_ref",
+          "lineNumber": 353
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "UnsafeBox::clone",
+          "lineNumber": 374
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.parent.as_ref",
+          "lineNumber": 378
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "parent.p.children.write",
+          "lineNumber": 384
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.next_free.store",
+          "lineNumber": 386
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "ptr::null_mut",
+          "lineNumber": 386
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.refcount.fetch_sub",
+          "lineNumber": 390
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "children.remove(&this.key(), |node| node.p.key()).unwrap",
+          "lineNumber": 406
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "children.remove",
+          "lineNumber": 406
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.key",
+          "lineNumber": 406
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "node.p.key",
+          "lineNumber": 406
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "atomic::fence",
+          "lineNumber": 419
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "UnsafeBox::deref_mut(&mut this).parent.take",
+          "lineNumber": 423
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "UnsafeBox::deref_mut",
+          "lineNumber": 423
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "log_drop",
+          "lineNumber": 427
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "UnsafeBox::drop",
+          "lineNumber": 428
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "UnsafeBox::clone",
+          "lineNumber": 436
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "mem::forget",
+          "lineNumber": 437
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.refcount.fetch_sub",
+          "lineNumber": 438
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "this.root.is_some",
+          "lineNumber": 440
+        },
+        {
+          "caller": "drop_without_free_list",
+          "callee": "RuleNode::pretend_to_be_on_free_list",
+          "lineNumber": 441
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "this.root.as_ref().unwrap",
+          "lineNumber": 456
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "this.root.as_ref",
+          "lineNumber": 456
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "root.approximate_free_count.fetch_add",
+          "lineNumber": 462
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "root.next_free.load",
+          "lineNumber": 466
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "head.is_null",
+          "lineNumber": 468
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "this.next_free.store",
+          "lineNumber": 475
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "root.next_free.compare_exchange_weak",
+          "lineNumber": 480
+        },
+        {
+          "caller": "push_on_free_list",
+          "callee": "this.as_mut_ptr",
+          "lineNumber": 482
+        },
+        {
+          "caller": "pretend_to_be_on_free_list",
+          "callee": "this.refcount.fetch_add",
+          "lineNumber": 507
+        },
+        {
+          "caller": "pretend_to_be_on_free_list",
+          "callee": "this.next_free.store",
+          "lineNumber": 508
+        },
+        {
+          "caller": "new",
+          "callee": "log_new",
+          "lineNumber": 532
+        },
+        {
+          "caller": "new",
+          "callee": "UnsafeBox::from_box",
+          "lineNumber": 537
+        },
+        {
+          "caller": "downgrade",
+          "callee": "UnsafeBox::clone",
+          "lineNumber": 547
+        },
+        {
+          "caller": "parent",
+          "callee": "self.p.parent.as_ref",
+          "lineNumber": 553
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "ChildKey",
+          "lineNumber": 573
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "source.key",
+          "lineNumber": 573
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "self.p.children.upgradable_read",
+          "lineNumber": 574
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "children.get",
+          "lineNumber": 575
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "node.p.key",
+          "lineNumber": 575
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "child.upgrade",
+          "lineNumber": 577
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "RwLockUpgradableReadGuard::upgrade",
+          "lineNumber": 579
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "children.entry",
+          "lineNumber": 580
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "node.p.key",
+          "lineNumber": 580
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "child.upgrade",
+          "lineNumber": 583
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "StrongRuleNode::new",
+          "lineNumber": 586
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "Box::new",
+          "lineNumber": 586
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "RuleNode::new",
+          "lineNumber": 586
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "root.downgrade",
+          "lineNumber": 587
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "self.clone",
+          "lineNumber": 588
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "entry.insert",
+          "lineNumber": 595
+        },
+        {
+          "caller": "ensure_child",
+          "callee": "node.downgrade",
+          "lineNumber": 595
+        },
+        {
+          "caller": "style_source",
+          "callee": "self.p.source.as_ref",
+          "lineNumber": 605
+        },
+        {
+          "caller": "cascade_level",
+          "callee": "self.cascade_priority().cascade_level",
+          "lineNumber": 617
+        },
+        {
+          "caller": "cascade_level",
+          "callee": "self.cascade_priority",
+          "lineNumber": 617
+        },
+        {
+          "caller": "importance",
+          "callee": "self.cascade_level().importance",
+          "lineNumber": 623
+        },
+        {
+          "caller": "importance",
+          "callee": "self.cascade_level",
+          "lineNumber": 623
+        },
+        {
+          "caller": "has_children_for_testing",
+          "callee": "self.p.children.read().is_empty",
+          "lineNumber": 629
+        },
+        {
+          "caller": "has_children_for_testing",
+          "callee": "self.p.children.read",
+          "lineNumber": 629
+        },
+        {
+          "caller": "dump",
+          "callee": "self.style_source",
+          "lineNumber": 651
+        },
+        {
+          "caller": "dump",
+          "callee": "source.dump",
+          "lineNumber": 652
+        },
+        {
+          "caller": "dump",
+          "callee": "self.cascade_level().guard",
+          "lineNumber": 652
+        },
+        {
+          "caller": "dump",
+          "callee": "self.cascade_level",
+          "lineNumber": 652
+        },
+        {
+          "caller": "dump",
+          "callee": "self.p.children.read",
+          "lineNumber": 661
+        },
+        {
+          "caller": "dump",
+          "callee": "child\r\n                    .upgrade().dump",
+          "lineNumber": 663
+        },
+        {
+          "caller": "dump",
+          "callee": "child.upgrade",
+          "lineNumber": 663
+        },
+        {
+          "caller": "clone",
+          "callee": "self.p.refcount.fetch_add",
+          "lineNumber": 679
+        },
+        {
+          "caller": "clone",
+          "callee": "StrongRuleNode::from_unsafe_box",
+          "lineNumber": 680
+        },
+        {
+          "caller": "clone",
+          "callee": "UnsafeBox::clone",
+          "lineNumber": 680
+        },
+        {
+          "caller": "drop",
+          "callee": "node.refcount.fetch_sub",
+          "lineNumber": 698
+        },
+        {
+          "caller": "drop",
+          "callee": "node.root.is_some",
+          "lineNumber": 708
+        },
+        {
+          "caller": "drop",
+          "callee": "RuleNode::pretend_to_be_on_free_list",
+          "lineNumber": 713
+        },
+        {
+          "caller": "drop",
+          "callee": "RuleNode::push_on_free_list",
+          "lineNumber": 717
+        },
+        {
+          "caller": "drop",
+          "callee": "RuleNode::drop_without_free_list",
+          "lineNumber": 725
+        },
+        {
+          "caller": "upgrade",
+          "callee": "self.p.refcount.fetch_add",
+          "lineNumber": 738
+        },
+        {
+          "caller": "upgrade",
+          "callee": "atomic::fence",
+          "lineNumber": 745
+        },
+        {
+          "caller": "upgrade",
+          "callee": "self.p.next_free.load(Ordering::Relaxed).is_null",
+          "lineNumber": 746
+        },
+        {
+          "caller": "upgrade",
+          "callee": "self.p.next_free.load",
+          "lineNumber": 746
+        },
+        {
+          "caller": "upgrade",
+          "callee": "StrongRuleNode::from_unsafe_box",
+          "lineNumber": 748
+        },
+        {
+          "caller": "upgrade",
+          "callee": "UnsafeBox::clone",
+          "lineNumber": 748
+        },
+        {
+          "caller": "fmt",
+          "callee": "(&*self.p as *const RuleNode).fmt",
+          "lineNumber": 754
+        },
+        {
+          "caller": "hash",
+          "callee": "(&*self.p as *const RuleNode).hash",
+          "lineNumber": 770
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 34,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "style/rule_tree/level.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 389,
+      "nonEmptyLines": 353,
+      "functions": [
+        {
+          "name": "origin",
+          "startLine": 119,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "is_author_origin",
+          "startLine": 129,
+          "endLine": 131,
+          "params": []
+        },
+        {
+          "name": "guard",
+          "startLine": 135,
+          "endLine": 140,
+          "params": [
+            "guards"
+          ]
+        },
+        {
+          "name": "cmp",
+          "startLine": 144,
+          "endLine": 169,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "partial_cmp",
+          "startLine": 173,
+          "endLine": 175,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 185,
+          "endLine": 189,
+          "params": [
+            "origin"
+          ]
+        },
+        {
+          "name": "origin",
+          "startLine": 193,
+          "endLine": 197,
+          "params": []
+        },
+        {
+          "name": "important",
+          "startLine": 200,
+          "endLine": 211,
+          "params": []
+        },
+        {
+          "name": "unimportant",
+          "startLine": 214,
+          "endLine": 218,
+          "params": []
+        },
+        {
+          "name": "guard",
+          "startLine": 222,
+          "endLine": 224,
+          "params": [
+            "guards"
+          ]
+        },
+        {
+          "name": "same_tree_author_important",
+          "startLine": 229,
+          "endLine": 231,
+          "params": []
+        },
+        {
+          "name": "same_tree_author_normal",
+          "startLine": 236,
+          "endLine": 238,
+          "params": []
+        },
+        {
+          "name": "is_important",
+          "startLine": 243,
+          "endLine": 245,
+          "params": []
+        },
+        {
+          "name": "importance",
+          "startLine": 250,
+          "endLine": 256,
+          "params": []
+        },
+        {
+          "name": "is_animation",
+          "startLine": 260,
+          "endLine": 267,
+          "params": []
+        },
+        {
+          "name": "is_tree",
+          "startLine": 271,
+          "endLine": 273,
+          "params": []
+        },
+        {
+          "name": "shadow_order",
+          "startLine": 276,
+          "endLine": 280,
+          "params": []
+        },
+        {
+          "name": "author_normal",
+          "startLine": 284,
+          "endLine": 290,
+          "params": [
+            "shadow_cascade_order"
+          ]
+        },
+        {
+          "name": "get_shadow_root_for_scoped",
+          "startLine": 293,
+          "endLine": 324,
+          "params": [
+            "element"
+          ]
+        },
+        {
+          "name": "for_outermost_shadow_tree",
+          "startLine": 345,
+          "endLine": 347,
+          "params": []
+        },
+        {
+          "name": "for_same_tree",
+          "startLine": 351,
+          "endLine": 353,
+          "params": []
+        },
+        {
+          "name": "for_innermost_containing_tree",
+          "startLine": 358,
+          "endLine": 360,
+          "params": []
+        },
+        {
+          "name": "dec",
+          "startLine": 365,
+          "endLine": 370,
+          "params": []
+        },
+        {
+          "name": "inc",
+          "startLine": 375,
+          "endLine": 380,
+          "params": []
+        },
+        {
+          "name": "neg",
+          "startLine": 386,
+          "endLine": 388,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CascadeLevel",
+          "startLine": 52,
+          "endLine": 52,
+          "methods": [
+            "cmp",
+            "partial_cmp",
+            "new",
+            "origin",
+            "important",
+            "unimportant",
+            "guard",
+            "same_tree_author_important",
+            "same_tree_author_normal",
+            "is_important",
+            "importance",
+            "is_animation",
+            "is_tree",
+            "shadow_order",
+            "author_normal",
+            "get_shadow_root_for_scoped"
+          ],
+          "properties": []
+        },
+        {
+          "name": "CascadeOrigin",
+          "startLine": 97,
+          "endLine": 114,
+          "methods": [
+            "origin",
+            "is_author_origin",
+            "guard"
+          ],
+          "properties": [
+            "UA",
+            "User",
+            "PresHints",
+            "Author",
+            "PositionFallback",
+            "SMILOverride",
+            "Animations",
+            "Transitions"
+          ]
+        },
+        {
+          "name": "ShadowCascadeOrder",
+          "startLine": 335,
+          "endLine": 335,
+          "methods": [
+            "for_outermost_shadow_tree",
+            "for_same_tree",
+            "for_innermost_containing_tree",
+            "dec",
+            "inc",
+            "neg"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CascadeLevel",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "CascadeOrigin",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "origin",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "is_author_origin",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "guard",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "origin",
+          "line": 193,
+          "isDefault": false
+        },
+        {
+          "name": "important",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "unimportant",
+          "line": 214,
+          "isDefault": false
+        },
+        {
+          "name": "guard",
+          "line": 222,
+          "isDefault": false
+        },
+        {
+          "name": "same_tree_author_important",
+          "line": 229,
+          "isDefault": false
+        },
+        {
+          "name": "same_tree_author_normal",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "is_important",
+          "line": 243,
+          "isDefault": false
+        },
+        {
+          "name": "importance",
+          "line": 250,
+          "isDefault": false
+        },
+        {
+          "name": "is_animation",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "is_tree",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "author_normal",
+          "line": 284,
+          "isDefault": false
+        },
+        {
+          "name": "get_shadow_root_for_scoped",
+          "line": 293,
+          "isDefault": false
+        },
+        {
+          "name": "ShadowCascadeOrder",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "for_outermost_shadow_tree",
+          "line": 345,
+          "isDefault": false
+        },
+        {
+          "name": "for_same_tree",
+          "line": 351,
+          "isDefault": false
+        },
+        {
+          "name": "for_innermost_containing_tree",
+          "line": 358,
+          "isDefault": false
+        },
+        {
+          "name": "dec",
+          "line": 365,
+          "isDefault": false
+        },
+        {
+          "name": "inc",
+          "line": 375,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "cmp",
+          "callee": "self.is_important",
+          "lineNumber": 145
+        },
+        {
+          "caller": "cmp",
+          "callee": "other.is_important",
+          "lineNumber": 146
+        },
+        {
+          "caller": "cmp",
+          "callee": "other.origin",
+          "lineNumber": 148
+        },
+        {
+          "caller": "cmp",
+          "callee": "self.origin",
+          "lineNumber": 154
+        },
+        {
+          "caller": "cmp",
+          "callee": "self\r\n            .origin()\r\n            .cmp(&other.origin()).then_with",
+          "lineNumber": 160
+        },
+        {
+          "caller": "cmp",
+          "callee": "self\r\n            .origin().cmp",
+          "lineNumber": 160
+        },
+        {
+          "caller": "cmp",
+          "callee": "self.origin",
+          "lineNumber": 160
+        },
+        {
+          "caller": "cmp",
+          "callee": "other.origin",
+          "lineNumber": 162
+        },
+        {
+          "caller": "cmp",
+          "callee": "self.shadow_order().cmp",
+          "lineNumber": 163
+        },
+        {
+          "caller": "cmp",
+          "callee": "self.shadow_order",
+          "lineNumber": 163
+        },
+        {
+          "caller": "cmp",
+          "callee": "other.shadow_order",
+          "lineNumber": 163
+        },
+        {
+          "caller": "cmp",
+          "callee": "origin_cmp.reverse",
+          "lineNumber": 165
+        },
+        {
+          "caller": "partial_cmp",
+          "callee": "Some",
+          "lineNumber": 174
+        },
+        {
+          "caller": "partial_cmp",
+          "callee": "self.cmp",
+          "lineNumber": 174
+        },
+        {
+          "caller": "new",
+          "callee": "Self",
+          "lineNumber": 188
+        },
+        {
+          "caller": "origin",
+          "callee": "(self & Self::ORIGIN_BITS).bits",
+          "lineNumber": 195
+        },
+        {
+          "caller": "origin",
+          "callee": "CascadeOrigin::from_u8(origin).unwrap",
+          "lineNumber": 196
+        },
+        {
+          "caller": "origin",
+          "callee": "CascadeOrigin::from_u8",
+          "lineNumber": 196
+        },
+        {
+          "caller": "important",
+          "callee": "result.insert",
+          "lineNumber": 209
+        },
+        {
+          "caller": "unimportant",
+          "callee": "result.remove",
+          "lineNumber": 216
+        },
+        {
+          "caller": "guard",
+          "callee": "self.origin().guard",
+          "lineNumber": 223
+        },
+        {
+          "caller": "guard",
+          "callee": "self.origin",
+          "lineNumber": 223
+        },
+        {
+          "caller": "same_tree_author_important",
+          "callee": "Self::new(CascadeOrigin::Author).important",
+          "lineNumber": 230
+        },
+        {
+          "caller": "same_tree_author_important",
+          "callee": "Self::new",
+          "lineNumber": 230
+        },
+        {
+          "caller": "same_tree_author_normal",
+          "callee": "Self::new",
+          "lineNumber": 237
+        },
+        {
+          "caller": "is_important",
+          "callee": "self.intersects",
+          "lineNumber": 244
+        },
+        {
+          "caller": "importance",
+          "callee": "self.is_important",
+          "lineNumber": 251
+        },
+        {
+          "caller": "is_animation",
+          "callee": "self.origin",
+          "lineNumber": 261
+        },
+        {
+          "caller": "is_tree",
+          "callee": "self.origin",
+          "lineNumber": 272
+        },
+        {
+          "caller": "shadow_order",
+          "callee": "self.intersects",
+          "lineNumber": 277
+        },
+        {
+          "caller": "shadow_order",
+          "callee": "(self & Self::CASCADE_ORDER_BITS).bits",
+          "lineNumber": 278
+        },
+        {
+          "caller": "shadow_order",
+          "callee": "ShadowCascadeOrder",
+          "lineNumber": 279
+        },
+        {
+          "caller": "author_normal",
+          "callee": "shadow_cascade_order.0.abs",
+          "lineNumber": 285
+        },
+        {
+          "caller": "author_normal",
+          "callee": "Self::new",
+          "lineNumber": 286
+        },
+        {
+          "caller": "author_normal",
+          "callee": "Self::from_bits_truncate",
+          "lineNumber": 287
+        },
+        {
+          "caller": "author_normal",
+          "callee": "result.set",
+          "lineNumber": 288
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "self.shadow_order",
+          "lineNumber": 297
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "element.ultimate_originating_element",
+          "lineNumber": 299
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "element.assigned_slot",
+          "lineNumber": 300
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "s.containing_shadow",
+          "lineNumber": 304
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "s.assigned_slot",
+          "lineNumber": 306
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "element.shadow_root",
+          "lineNumber": 312
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "element.containing_shadow",
+          "lineNumber": 315
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "s.host().containing_shadow",
+          "lineNumber": 321
+        },
+        {
+          "caller": "get_shadow_root_for_scoped",
+          "callee": "s.host",
+          "lineNumber": 321
+        },
+        {
+          "caller": "for_outermost_shadow_tree",
+          "callee": "Self",
+          "lineNumber": 346
+        },
+        {
+          "caller": "for_same_tree",
+          "callee": "Self",
+          "lineNumber": 352
+        },
+        {
+          "caller": "for_innermost_containing_tree",
+          "callee": "Self",
+          "lineNumber": 359
+        },
+        {
+          "caller": "neg",
+          "callee": "Self",
+          "lineNumber": 387
+        },
+        {
+          "caller": "neg",
+          "callee": "self.0.neg",
+          "lineNumber": 387
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 25,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "style/rule_tree/map.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 180,
+      "functions": [
+        {
+          "name": "default",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "into_iter",
+          "startLine": 58,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "next",
+          "startLine": 72,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "is_empty",
+          "startLine": 84,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "len",
+          "startLine": 93,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "get",
+          "startLine": 101,
+          "endLine": 107,
+          "params": [
+            "key",
+            "key_from_value"
+          ]
+        },
+        {
+          "name": "entry",
+          "startLine": 109,
+          "endLine": 157,
+          "params": [
+            "key",
+            "key_from_value"
+          ]
+        },
+        {
+          "name": "remove",
+          "startLine": 159,
+          "endLine": 170,
+          "params": [
+            "key",
+            "key_from_value"
+          ]
+        },
+        {
+          "name": "insert",
+          "startLine": 174,
+          "endLine": 185,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 192,
+          "endLine": 200,
+          "params": [
+            "ops"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Map",
+          "startLine": 13,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "inner"
+          ]
+        },
+        {
+          "name": "MapInner",
+          "startLine": 17,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "Empty",
+            "One",
+            "Map"
+          ]
+        },
+        {
+          "name": "MapIter",
+          "startLine": 23,
+          "endLine": 25,
+          "methods": [],
+          "properties": [
+            "inner"
+          ]
+        },
+        {
+          "name": "MapIterInner",
+          "startLine": 27,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "One",
+            "Map"
+          ]
+        },
+        {
+          "name": "Entry",
+          "startLine": 32,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "Occupied",
+            "Vacant"
+          ]
+        },
+        {
+          "name": "VacantEntry",
+          "startLine": 37,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "inner"
+          ]
+        },
+        {
+          "name": "VacantEntryInner",
+          "startLine": 41,
+          "endLine": 44,
+          "methods": [],
+          "properties": [
+            "One",
+            "Map"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Map",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "MapIter",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "Entry",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "VacantEntry",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "is_empty",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "len",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "entry",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "remove",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "insert",
+          "line": 174,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "into_iter",
+          "callee": "MapIterInner::One",
+          "lineNumber": 61
+        },
+        {
+          "caller": "into_iter",
+          "callee": "None.into_iter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "into_iter",
+          "callee": "MapIterInner::One",
+          "lineNumber": 62
+        },
+        {
+          "caller": "into_iter",
+          "callee": "Some(one).into_iter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "into_iter",
+          "callee": "Some",
+          "lineNumber": 62
+        },
+        {
+          "caller": "into_iter",
+          "callee": "MapIterInner::Map",
+          "lineNumber": 63
+        },
+        {
+          "caller": "into_iter",
+          "callee": "map.values",
+          "lineNumber": 63
+        },
+        {
+          "caller": "next",
+          "callee": "one_iter.next",
+          "lineNumber": 74
+        },
+        {
+          "caller": "next",
+          "callee": "map_iter.next",
+          "lineNumber": 75
+        },
+        {
+          "caller": "is_empty",
+          "callee": "map.is_empty",
+          "lineNumber": 88
+        },
+        {
+          "caller": "len",
+          "callee": "map.len",
+          "lineNumber": 97
+        },
+        {
+          "caller": "get",
+          "callee": "key_from_value",
+          "lineNumber": 103
+        },
+        {
+          "caller": "get",
+          "callee": "Some",
+          "lineNumber": 103
+        },
+        {
+          "caller": "get",
+          "callee": "map.get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "entry",
+          "callee": "Entry::Vacant",
+          "lineNumber": 115
+        },
+        {
+          "caller": "entry",
+          "callee": "VacantEntryInner::One",
+          "lineNumber": 116
+        },
+        {
+          "caller": "entry",
+          "callee": "mem::replace",
+          "lineNumber": 119
+        },
+        {
+          "caller": "entry",
+          "callee": "key_from_value",
+          "lineNumber": 124
+        },
+        {
+          "caller": "entry",
+          "callee": "MapInner::One",
+          "lineNumber": 127
+        },
+        {
+          "caller": "entry",
+          "callee": "Entry::Occupied",
+          "lineNumber": 132
+        },
+        {
+          "caller": "entry",
+          "callee": "MapInner::Map",
+          "lineNumber": 134
+        },
+        {
+          "caller": "entry",
+          "callee": "Box::new",
+          "lineNumber": 134
+        },
+        {
+          "caller": "entry",
+          "callee": "FxHashMap::with_capacity_and_hasher",
+          "lineNumber": 134
+        },
+        {
+          "caller": "entry",
+          "callee": "Default::default",
+          "lineNumber": 136
+        },
+        {
+          "caller": "entry",
+          "callee": "map.insert",
+          "lineNumber": 142
+        },
+        {
+          "caller": "entry",
+          "callee": "map.entry",
+          "lineNumber": 143
+        },
+        {
+          "caller": "entry",
+          "callee": "Entry::Vacant",
+          "lineNumber": 144
+        },
+        {
+          "caller": "entry",
+          "callee": "VacantEntryInner::Map",
+          "lineNumber": 145
+        },
+        {
+          "caller": "entry",
+          "callee": "map.entry",
+          "lineNumber": 150
+        },
+        {
+          "caller": "entry",
+          "callee": "Entry::Occupied",
+          "lineNumber": 151
+        },
+        {
+          "caller": "entry",
+          "callee": "entry.into_mut",
+          "lineNumber": 151
+        },
+        {
+          "caller": "entry",
+          "callee": "Entry::Vacant",
+          "lineNumber": 152
+        },
+        {
+          "caller": "entry",
+          "callee": "VacantEntryInner::Map",
+          "lineNumber": 153
+        },
+        {
+          "caller": "remove",
+          "callee": "key_from_value",
+          "lineNumber": 161
+        },
+        {
+          "caller": "remove",
+          "callee": "mem::replace",
+          "lineNumber": 162
+        },
+        {
+          "caller": "remove",
+          "callee": "Some",
+          "lineNumber": 163
+        },
+        {
+          "caller": "remove",
+          "callee": "map.remove",
+          "lineNumber": 167
+        },
+        {
+          "caller": "insert",
+          "callee": "MapInner::One",
+          "lineNumber": 177
+        },
+        {
+          "caller": "insert",
+          "callee": "entry.insert",
+          "lineNumber": 183
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "m.shallow_size_of",
+          "lineNumber": 196
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "(**m).shallow_size_of",
+          "lineNumber": 196
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 10,
+        "classCount": 7
+      }
+    },
+    {
+      "path": "style/rule_tree/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 430,
+      "nonEmptyLines": 382,
+      "functions": [
+        {
+          "name": "dump",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "guards",
+            "writer"
+          ]
+        },
+        {
+          "name": "dump_stdout",
+          "startLine": 48,
+          "endLine": 51,
+          "params": [
+            "guards"
+          ]
+        },
+        {
+          "name": "insert_ordered_rules_with_important",
+          "startLine": 59,
+          "endLine": 173,
+          "params": [
+            "iter",
+            "guards"
+          ]
+        },
+        {
+          "name": "compute_rule_node",
+          "startLine": 177,
+          "endLine": 186,
+          "params": [
+            "applicable_declarations",
+            "guards"
+          ]
+        },
+        {
+          "name": "insert_ordered_rules",
+          "startLine": 190,
+          "endLine": 195,
+          "params": [
+            "iter"
+          ]
+        },
+        {
+          "name": "insert_ordered_rules_from",
+          "startLine": 197,
+          "endLine": 206,
+          "params": [
+            "from",
+            "iter"
+          ]
+        },
+        {
+          "name": "update_rule_at_level",
+          "startLine": 212,
+          "endLine": 302,
+          "params": [
+            "level",
+            "layer_order",
+            "pdb",
+            "path",
+            "guards",
+            "important_rules_changed"
+          ]
+        },
+        {
+          "name": "has_starting_style",
+          "startLine": 305,
+          "endLine": 311,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "remove_transition_rule_if_applicable",
+          "startLine": 314,
+          "endLine": 321,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "remove_animation_rules",
+          "startLine": 324,
+          "endLine": 348,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "self_and_ancestors",
+          "startLine": 353,
+          "endLine": 357,
+          "params": []
+        },
+        {
+          "name": "has_animation_or_transition_rules",
+          "startLine": 360,
+          "endLine": 366,
+          "params": []
+        },
+        {
+          "name": "get_properties_overriding_animations",
+          "startLine": 373,
+          "endLine": 412,
+          "params": [
+            "guards"
+          ]
+        },
+        {
+          "name": "next",
+          "startLine": 424,
+          "endLine": 429,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SelfAndAncestors",
+          "startLine": 417,
+          "endLine": 419,
+          "methods": [],
+          "properties": [
+            "current"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "dump_stdout",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "insert_ordered_rules_with_important",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "compute_rule_node",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "insert_ordered_rules",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "update_rule_at_level",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "has_starting_style",
+          "line": 305,
+          "isDefault": false
+        },
+        {
+          "name": "remove_transition_rule_if_applicable",
+          "line": 314,
+          "isDefault": false
+        },
+        {
+          "name": "remove_animation_rules",
+          "line": 324,
+          "isDefault": false
+        },
+        {
+          "name": "self_and_ancestors",
+          "line": 353,
+          "isDefault": false
+        },
+        {
+          "name": "has_animation_or_transition_rules",
+          "line": 360,
+          "isDefault": false
+        },
+        {
+          "name": "get_properties_overriding_animations",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "SelfAndAncestors",
+          "line": 417,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "dump",
+          "callee": "self.root().dump",
+          "lineNumber": 44
+        },
+        {
+          "caller": "dump",
+          "callee": "self.root",
+          "lineNumber": 44
+        },
+        {
+          "caller": "dump_stdout",
+          "callee": "io::stdout",
+          "lineNumber": 49
+        },
+        {
+          "caller": "dump_stdout",
+          "callee": "self.dump",
+          "lineNumber": 50
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root().clone",
+          "lineNumber": 67
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 67
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "SmallVec::<[(StyleSource, CascadePriority); 4]>::new",
+          "lineNumber": 71
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "SmallVec::<[(StyleSource, CascadePriority); 4]>::new",
+          "lineNumber": 72
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "SmallVec::<[(StyleSource, CascadePriority); 4]>::new",
+          "lineNumber": 73
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "priority.cascade_level",
+          "lineNumber": 77
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "source.read",
+          "lineNumber": 81
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "level.guard",
+          "lineNumber": 81
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "pdb.any_important",
+          "lineNumber": 82
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "level.origin",
+          "lineNumber": 87
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.push",
+          "lineNumber": 89
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "source.clone",
+          "lineNumber": 89
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "priority.important",
+          "lineNumber": 89
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_ua.push",
+          "lineNumber": 91
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "source.clone",
+          "lineNumber": 91
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "priority.important",
+          "lineNumber": 91
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_user.push",
+          "lineNumber": 93
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "source.clone",
+          "lineNumber": 93
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "priority.important",
+          "lineNumber": 93
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "level.origin",
+          "lineNumber": 109
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "Some",
+          "lineNumber": 114
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "current.ensure_child",
+          "lineNumber": 116
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 116
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.is_empty",
+          "lineNumber": 130
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.first().unwrap",
+          "lineNumber": 131
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.first",
+          "lineNumber": 131
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.last().unwrap",
+          "lineNumber": 131
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.last",
+          "lineNumber": 131
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.sort_by_key",
+          "lineNumber": 145
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_author.drain",
+          "lineNumber": 148
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "current.ensure_child",
+          "lineNumber": 149
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 149
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_user.drain",
+          "lineNumber": 152
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "current.ensure_child",
+          "lineNumber": 153
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 153
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "important_ua.drain",
+          "lineNumber": 156
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "current.ensure_child",
+          "lineNumber": 157
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 157
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "current.ensure_child",
+          "lineNumber": 161
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "self.root",
+          "lineNumber": 162
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "CascadePriority::new",
+          "lineNumber": 164
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 165
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "LayerOrder::root",
+          "lineNumber": 166
+        },
+        {
+          "caller": "insert_ordered_rules_with_important",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 167
+        },
+        {
+          "caller": "compute_rule_node",
+          "callee": "self.insert_ordered_rules_with_important",
+          "lineNumber": 182
+        },
+        {
+          "caller": "compute_rule_node",
+          "callee": "applicable_declarations.drain(..).map",
+          "lineNumber": 183
+        },
+        {
+          "caller": "compute_rule_node",
+          "callee": "applicable_declarations.drain",
+          "lineNumber": 183
+        },
+        {
+          "caller": "compute_rule_node",
+          "callee": "d.for_rule_tree",
+          "lineNumber": 183
+        },
+        {
+          "caller": "insert_ordered_rules",
+          "callee": "self.insert_ordered_rules_from",
+          "lineNumber": 194
+        },
+        {
+          "caller": "insert_ordered_rules",
+          "callee": "self.root().clone",
+          "lineNumber": 194
+        },
+        {
+          "caller": "insert_ordered_rules",
+          "callee": "self.root",
+          "lineNumber": 194
+        },
+        {
+          "caller": "insert_ordered_rules_from",
+          "callee": "current.ensure_child",
+          "lineNumber": 203
+        },
+        {
+          "caller": "insert_ordered_rules_from",
+          "callee": "self.root",
+          "lineNumber": 203
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "path.clone",
+          "lineNumber": 223
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "SmallVec::<[_; 10]>::new",
+          "lineNumber": 227
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.cascade_priority().cascade_level",
+          "lineNumber": 228
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.cascade_priority",
+          "lineNumber": 228
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "children.push",
+          "lineNumber": 229
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source().unwrap().clone",
+          "lineNumber": 230
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source().unwrap",
+          "lineNumber": 230
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source",
+          "lineNumber": 230
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.cascade_priority",
+          "lineNumber": 231
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent().unwrap().clone",
+          "lineNumber": 233
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent().unwrap",
+          "lineNumber": 233
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent",
+          "lineNumber": 233
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "CascadePriority::new",
+          "lineNumber": 236
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 236
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.cascade_priority",
+          "lineNumber": 246
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "level.is_important",
+          "lineNumber": 247
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source().unwrap().get",
+          "lineNumber": 249
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source().unwrap",
+          "lineNumber": 249
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.style_source",
+          "lineNumber": 249
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "ArcBorrow::ptr_eq",
+          "lineNumber": 263
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current_decls.borrow_arc",
+          "lineNumber": 263
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent().unwrap().clone",
+          "lineNumber": 270
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent().unwrap",
+          "lineNumber": 270
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.parent",
+          "lineNumber": 270
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "level.is_important",
+          "lineNumber": 278
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.read_with(level.guard(guards)).any_important",
+          "lineNumber": 279
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.read_with",
+          "lineNumber": 279
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "level.guard",
+          "lineNumber": 279
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.ensure_child",
+          "lineNumber": 280
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "self.root",
+          "lineNumber": 281
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "StyleSource::from_declarations",
+          "lineNumber": 282
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.clone_arc",
+          "lineNumber": 282
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.read_with(level.guard(guards)).any_normal",
+          "lineNumber": 288
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.read_with",
+          "lineNumber": 288
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "level.guard",
+          "lineNumber": 288
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "current.ensure_child",
+          "lineNumber": 289
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "self.root",
+          "lineNumber": 290
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "StyleSource::from_declarations",
+          "lineNumber": 291
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "pdb.clone_arc",
+          "lineNumber": 291
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "self.insert_ordered_rules_from",
+          "lineNumber": 300
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "children.drain(..).rev",
+          "lineNumber": 300
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "children.drain",
+          "lineNumber": 300
+        },
+        {
+          "caller": "update_rule_at_level",
+          "callee": "Some",
+          "lineNumber": 301
+        },
+        {
+          "caller": "has_starting_style",
+          "callee": "path.self_and_ancestors().any",
+          "lineNumber": 306
+        },
+        {
+          "caller": "has_starting_style",
+          "callee": "path.self_and_ancestors",
+          "lineNumber": 306
+        },
+        {
+          "caller": "has_starting_style",
+          "callee": "node.cascade_priority()\r\n                .flags().intersects",
+          "lineNumber": 307
+        },
+        {
+          "caller": "has_starting_style",
+          "callee": "node.cascade_priority().flags",
+          "lineNumber": 307
+        },
+        {
+          "caller": "has_starting_style",
+          "callee": "node.cascade_priority",
+          "lineNumber": 307
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.cascade_level().origin",
+          "lineNumber": 316
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.cascade_level",
+          "lineNumber": 316
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.clone",
+          "lineNumber": 317
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.parent().unwrap().clone",
+          "lineNumber": 320
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.parent().unwrap",
+          "lineNumber": 320
+        },
+        {
+          "caller": "remove_transition_rule_if_applicable",
+          "callee": "path.parent",
+          "lineNumber": 320
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "path.has_animation_or_transition_rules",
+          "lineNumber": 326
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "path.clone",
+          "lineNumber": 327
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "path.self_and_ancestors().take_while",
+          "lineNumber": 330
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "path.self_and_ancestors",
+          "lineNumber": 330
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.cascade_level",
+          "lineNumber": 331
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 331
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "SmallVec::<[_; 10]>::new",
+          "lineNumber": 334
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.cascade_level().is_animation",
+          "lineNumber": 336
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.cascade_level",
+          "lineNumber": 336
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "children.push",
+          "lineNumber": 337
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.style_source().unwrap().clone",
+          "lineNumber": 338
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.style_source().unwrap",
+          "lineNumber": 338
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.style_source",
+          "lineNumber": 338
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "node.cascade_priority",
+          "lineNumber": 339
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "self.insert_ordered_rules_from",
+          "lineNumber": 345
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "last.parent().unwrap().clone",
+          "lineNumber": 346
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "last.parent().unwrap",
+          "lineNumber": 346
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "last.parent",
+          "lineNumber": 346
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "children.drain(..).rev",
+          "lineNumber": 346
+        },
+        {
+          "caller": "remove_animation_rules",
+          "callee": "children.drain",
+          "lineNumber": 346
+        },
+        {
+          "caller": "self_and_ancestors",
+          "callee": "Some",
+          "lineNumber": 355
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "self.self_and_ancestors()\r\n            .take_while(|node| {\r\n                node.cascade_level() >= CascadeLevel::new(CascadeOrigin::SMILOverride)\r\n            }).any",
+          "lineNumber": 361
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "self.self_and_ancestors().take_while",
+          "lineNumber": 361
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "self.self_and_ancestors",
+          "lineNumber": 361
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "node.cascade_level",
+          "lineNumber": 363
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 363
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "node.cascade_level().is_animation",
+          "lineNumber": 365
+        },
+        {
+          "caller": "has_animation_or_transition_rules",
+          "callee": "node.cascade_level",
+          "lineNumber": 365
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "self\r\n            .self_and_ancestors()\r\n            .skip_while(|node| node.cascade_level().origin() == CascadeOrigin::Transitions).take_while",
+          "lineNumber": 387
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "self\r\n            .self_and_ancestors().skip_while",
+          "lineNumber": 387
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "self.self_and_ancestors",
+          "lineNumber": 387
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.cascade_level().origin",
+          "lineNumber": 389
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.cascade_level",
+          "lineNumber": 389
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.cascade_level",
+          "lineNumber": 390
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "CascadeLevel::new",
+          "lineNumber": 390
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "LonghandIdSet::new",
+          "lineNumber": 391
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.style_source().unwrap",
+          "lineNumber": 393
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.style_source",
+          "lineNumber": 393
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "style\r\n                .read(node.cascade_level().guard(guards)).declaration_importance_iter",
+          "lineNumber": 394
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "style.read",
+          "lineNumber": 394
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.cascade_level().guard",
+          "lineNumber": 395
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "node.cascade_level",
+          "lineNumber": 395
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "important.important",
+          "lineNumber": 403
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "decl.id",
+          "lineNumber": 404
+        },
+        {
+          "caller": "get_properties_overriding_animations",
+          "callee": "result.0.insert",
+          "lineNumber": 405
+        },
+        {
+          "caller": "next",
+          "callee": "self.current.map",
+          "lineNumber": 425
+        },
+        {
+          "caller": "next",
+          "callee": "node.parent",
+          "lineNumber": 426
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 12,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/rule_tree/source.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "eq",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "key",
+          "startLine": 30,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "from_declarations",
+          "startLine": 36,
+          "endLine": 38,
+          "params": [
+            "decls"
+          ]
+        },
+        {
+          "name": "dump",
+          "startLine": 40,
+          "endLine": 42,
+          "params": [
+            "guard",
+            "writer"
+          ]
+        },
+        {
+          "name": "read",
+          "startLine": 47,
+          "endLine": 49,
+          "params": [
+            "guard"
+          ]
+        },
+        {
+          "name": "get",
+          "startLine": 53,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "mark_in_rule_tree",
+          "startLine": 59,
+          "endLine": 76,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StyleSource",
+          "startLine": 20,
+          "endLine": 20,
+          "methods": [
+            "eq",
+            "key",
+            "from_declarations",
+            "dump",
+            "read",
+            "get",
+            "mark_in_rule_tree"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StyleSource",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "key",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "from_declarations",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "dump",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "read",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "mark_in_rule_tree",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "eq",
+          "callee": "Arc::ptr_eq",
+          "lineNumber": 24
+        },
+        {
+          "caller": "key",
+          "callee": "self.0.raw_ptr",
+          "lineNumber": 31
+        },
+        {
+          "caller": "from_declarations",
+          "callee": "Self",
+          "lineNumber": 37
+        },
+        {
+          "caller": "read",
+          "callee": "self.0.read_with",
+          "lineNumber": 48
+        },
+        {
+          "caller": "mark_in_rule_tree",
+          "callee": "self.0.is_static",
+          "lineNumber": 61
+        },
+        {
+          "caller": "mark_in_rule_tree",
+          "callee": "self.0\r\n                .read_unchecked()\r\n                .immutable.store",
+          "lineNumber": 71
+        },
+        {
+          "caller": "mark_in_rule_tree",
+          "callee": "self.0.read_unchecked",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/rule_tree/unsafe_box.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "from_box",
+          "startLine": 18,
+          "endLine": 22,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "from_raw",
+          "startLine": 29,
+          "endLine": 33,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "clone",
+          "startLine": 41,
+          "endLine": 45,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "deref_mut",
+          "startLine": 53,
+          "endLine": 55,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "drop",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "deref",
+          "startLine": 71,
+          "endLine": 73,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "UnsafeBox",
+          "startLine": 12,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "inner"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnsafeBox",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "from_box",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "from_raw",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "clone",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "deref_mut",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "drop",
+          "line": 63,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "from_box",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 20
+        },
+        {
+          "caller": "from_raw",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 31
+        },
+        {
+          "caller": "from_raw",
+          "callee": "Box::from_raw",
+          "lineNumber": 31
+        },
+        {
+          "caller": "clone",
+          "callee": "ptr::read",
+          "lineNumber": 43
+        },
+        {
+          "caller": "drop",
+          "callee": "ManuallyDrop::drop",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

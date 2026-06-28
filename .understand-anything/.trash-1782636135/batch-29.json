@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/properties/counter_style_descriptors.toml",
+      "type": "file",
+      "name": "counter_style_descriptors.toml",
+      "filePath": "style/properties/counter_style_descriptors.toml",
+      "summary": "Defines the descriptors for the CSS @counter-style rule, specifying Rust types for system, negative, prefix, suffix, range, pad, fallback, symbols, additive-symbols, and speak-as descriptors.",
+      "tags": ["property-definition", "css", "counter-style", "build-system", "schema"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/font_face_descriptors.toml",
+      "type": "file",
+      "name": "font_face_descriptors.toml",
+      "filePath": "style/properties/font_face_descriptors.toml",
+      "summary": "Defines the descriptors for the CSS @font-face rule, specifying Rust types for font-family, src, font-style, font-weight, font-stretch, font-display, unicode-range, font-feature-settings, font-variation-settings, and override descriptors.",
+      "tags": ["property-definition", "css", "font-face", "build-system", "schema"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/longhands.toml",
+      "type": "file",
+      "name": "longhands.toml",
+      "filePath": "style/properties/longhands.toml",
+      "summary": "Defines all CSS longhand properties with their Rust types, initial values, style struct assignments, spec URLs, and engine-specific configuration for the Servo/Stylo build system's code generator.",
+      "tags": ["property-definition", "css", "code-generation", "build-system", "schema"],
+      "complexity": "complex",
+      "languageNotes": "Contains 429 CSS property definitions processed by the build system to generate the Rust property module code. Each section specifies the property's Rust type, style struct membership, engine support (gecko/servo), animation behavior, and vendor prefixes."
+    }
+  ],
+  "edges": []
+}

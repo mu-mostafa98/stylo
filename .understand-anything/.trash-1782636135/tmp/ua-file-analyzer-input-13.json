@@ -1,0 +1,104 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/invalidation/element/document_state.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/element_wrapper.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/invalidation_map.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/mod.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/restyle_flags.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/state_constants.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/mod.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/stylesheets.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/view.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/animation.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/background_only.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/namespaced.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/invalidation/element/document_state.rs": [],
+    "style/invalidation/element/element_wrapper.rs": [],
+    "style/invalidation/element/invalidation_map.rs": [],
+    "style/invalidation/element/mod.rs": [
+      "style/invalidation/element/document_state.rs",
+      "style/invalidation/element/element_wrapper.rs",
+      "style/invalidation/element/invalidation_map.rs",
+      "style/invalidation/element/invalidator.rs",
+      "style/invalidation/element/relative_selector.rs",
+      "style/invalidation/element/restyle_hints.rs",
+      "style/invalidation/element/state_and_attributes.rs"
+    ],
+    "style/invalidation/element/restyle_flags.rs": [],
+    "style/invalidation/element/state_constants.rs": [],
+    "style/invalidation/mod.rs": [
+      "style/invalidation/element/mod.rs",
+      "style/invalidation/media_queries.rs",
+      "style/invalidation/stylesheets.rs",
+      "style/invalidation/viewport_units.rs"
+    ],
+    "style/invalidation/stylesheets.rs": [],
+    "style/invalidation/view.rs": [],
+    "style/invalidation/element/animation.rs": [],
+    "style/invalidation/element/background_only.rs": [],
+    "style/invalidation/element/namespaced.rs": []
+  }
+}

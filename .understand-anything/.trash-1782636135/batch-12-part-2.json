@@ -1,0 +1,751 @@
+{
+  "nodes": [
+    {
+      "id": "file:style_derive/to_animated_value.rs",
+      "type": "file",
+      "name": "to_animated_value.rs",
+      "filePath": "style_derive/to_animated_value.rs",
+      "summary": "Derive macro implementation for the `ToAnimatedValue` trait, generating conversion between animated and computed values.",
+      "tags": [
+        "derive-macro",
+        "animation",
+        "value-conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style_derive/to_animated_zero.rs",
+      "type": "file",
+      "name": "to_animated_zero.rs",
+      "filePath": "style_derive/to_animated_zero.rs",
+      "summary": "Derive macro implementation for the `ToAnimatedZero` trait, generating zero-value creation for animation.",
+      "tags": [
+        "derive-macro",
+        "animation",
+        "default-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style_derive/to_computed_value.rs",
+      "type": "file",
+      "name": "to_computed_value.rs",
+      "filePath": "style_derive/to_computed_value.rs",
+      "summary": "Shared derive infrastructure and specific ToComputedValue derive implementation for resolving specified to computed values.",
+      "tags": [
+        "derive-macro",
+        "value-conversion",
+        "computed-values"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style_derive/to_css.rs",
+      "type": "file",
+      "name": "to_css.rs",
+      "filePath": "style_derive/to_css.rs",
+      "summary": "Derive macro implementation for the `ToCss` trait, generating CSS serialization code for style types.",
+      "tags": [
+        "derive-macro",
+        "css-serialization",
+        "code-generation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style_derive/to_resolved_value.rs",
+      "type": "file",
+      "name": "to_resolved_value.rs",
+      "filePath": "style_derive/to_resolved_value.rs",
+      "summary": "Derive macro implementation for the `ToResolvedValue` trait, generating resolved value conversion using shared infrastructure.",
+      "tags": [
+        "derive-macro",
+        "value-conversion",
+        "resolved-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style_derive/to_typed.rs",
+      "type": "file",
+      "name": "to_typed.rs",
+      "filePath": "style_derive/to_typed.rs",
+      "summary": "Derive macro implementation for the `ToTyped` trait, generating Typed OM reification for CSS types.",
+      "tags": [
+        "derive-macro",
+        "typed-om",
+        "css-types"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements Typed OM reification with support for pure keyword enums, mixed enums, bitflags, and conditional skip annotations."
+    },
+    {
+      "id": "function:style_derive/to_animated_value.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_animated_value.rs",
+      "lineRange": [
+        11,
+        42
+      ],
+      "summary": "Generates ToAnimatedValue trait impl by delegating to the shared derive_to_value infrastructure.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_animated_zero.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_animated_zero.rs",
+      "lineRange": [
+        12,
+        65
+      ],
+      "summary": "Generates ToAnimatedZero trait impl with match-body, handling error variants, constant fields, and recursive zero conversion.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_computed_value.rs:derive_to_value",
+      "type": "function",
+      "name": "derive_to_value",
+      "filePath": "style_derive/to_computed_value.rs",
+      "lineRange": [
+        10,
+        158
+      ],
+      "summary": "Generic derive infrastructure shared by ToComputedValue, ToAnimatedValue, and ToResolvedValue for generating value conversion impls.",
+      "tags": [
+        "code-generation",
+        "value-conversion",
+        "shared-infrastructure"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style_derive/to_computed_value.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_computed_value.rs",
+      "lineRange": [
+        160,
+        192
+      ],
+      "summary": "Generates ToComputedValue trait impl with clone-based ref conversion using derive_to_value.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_derive/to_computed_value.rs:ToValueAttrs",
+      "type": "class",
+      "name": "ToValueAttrs",
+      "filePath": "style_derive/to_computed_value.rs",
+      "lineRange": [
+        195,
+        198
+      ],
+      "summary": "Shared attribute config for field-bound and no-field-bound settings in value conversion derives.",
+      "tags": [
+        "attribute-parsing",
+        "derive-macro"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/to_css.rs:derive_bitflags",
+      "type": "function",
+      "name": "derive_bitflags",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        12,
+        78
+      ],
+      "summary": "Generates ToCss implementation for CSS bitflags types, handling single/mixed flags and overlapping bits.",
+      "tags": [
+        "code-generation",
+        "css-serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_css.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        80,
+        148
+      ],
+      "summary": "Main ToCss derive entry point generating CSS serialization code for enums and structs with optional Debug derivation.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_css.rs:derive_variant_arm",
+      "type": "function",
+      "name": "derive_variant_arm",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        150,
+        184
+      ],
+      "summary": "Generates a single match arm for ToCss enum variant serialization, handling keywords, functions, and field expressions.",
+      "tags": [
+        "code-generation",
+        "css-serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_css.rs:derive_variant_fields_expr",
+      "type": "function",
+      "name": "derive_variant_fields_expr",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        186,
+        248
+      ],
+      "summary": "Generates CSS serialization expression for variant fields with separator handling, skip conditions, and iterable support.",
+      "tags": [
+        "code-generation",
+        "css-serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_css.rs:derive_single_field_expr",
+      "type": "function",
+      "name": "derive_single_field_expr",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        250,
+        313
+      ],
+      "summary": "Generates serialization expression for a single field, handling iterable, represents_keyword, and skip_if conditions.",
+      "tags": [
+        "code-generation",
+        "css-serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_derive/to_css.rs:CssBitflagAttrs",
+      "type": "class",
+      "name": "CssBitflagAttrs",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        317,
+        327
+      ],
+      "summary": "Bitflag metadata for CSS serialization, with single/mixed flag lists, validation, and overlapping bits support.",
+      "tags": [
+        "attribute-parsing",
+        "css-serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_derive/to_css.rs:CssInputAttrs",
+      "type": "class",
+      "name": "CssInputAttrs",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        352,
+        359
+      ],
+      "summary": "Type-level CSS attributes controlling Debug derivation, function wrapping, comma separation, and bitflag mode.",
+      "tags": [
+        "attribute-parsing",
+        "css-serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/to_css.rs:CssVariantAttrs",
+      "type": "class",
+      "name": "CssVariantAttrs",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        363,
+        371
+      ],
+      "summary": "Variant-level CSS attributes for function wrapping, keyword override, bitflags, skip, and comma separation.",
+      "tags": [
+        "attribute-parsing",
+        "css-serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/to_css.rs:CssFieldAttrs",
+      "type": "class",
+      "name": "CssFieldAttrs",
+      "filePath": "style_derive/to_css.rs",
+      "lineRange": [
+        375,
+        383
+      ],
+      "summary": "Field-level CSS attributes for if_empty, field_bound, iterable, skip, represents_keyword, and skip_if conditions.",
+      "tags": [
+        "attribute-parsing",
+        "css-serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_derive/to_resolved_value.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_resolved_value.rs",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "Generates ToResolvedValue trait impl by delegating to the shared derive_to_value infrastructure.",
+      "tags": [
+        "derive-macro",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        103,
+        213
+      ],
+      "summary": "Main ToTyped derive entry generating keyword reification for pure enums or match-based reification for mixed enums and structs.",
+      "tags": [
+        "derive-macro",
+        "code-generation",
+        "typed-om"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:derive_bitflags",
+      "type": "function",
+      "name": "derive_bitflags",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        226,
+        301
+      ],
+      "summary": "Generates ToTyped implementation for CSS bitflags, producing single-keyword reification or error for multi-keyword values.",
+      "tags": [
+        "code-generation",
+        "typed-om"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:derive_variant_arm",
+      "type": "function",
+      "name": "derive_variant_arm",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        320,
+        377
+      ],
+      "summary": "Generates a ToTyped match arm for a variant, handling keywords, skip annotations, and field reification.",
+      "tags": [
+        "code-generation",
+        "typed-om"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:derive_variant_fields_expr",
+      "type": "function",
+      "name": "derive_variant_fields_expr",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        395,
+        457
+      ],
+      "summary": "Generates field-level ToTyped reification expression with support for multiple values and single-value validation.",
+      "tags": [
+        "code-generation",
+        "typed-om"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:derive_single_field_expr",
+      "type": "function",
+      "name": "derive_single_field_expr",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        476,
+        588
+      ],
+      "summary": "Generates reification expression for a single field with iterable, represents_keyword, and conditional skip support.",
+      "tags": [
+        "code-generation",
+        "typed-om"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style_derive/to_typed.rs:field_generic_arguments",
+      "type": "function",
+      "name": "field_generic_arguments",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        607,
+        635
+      ],
+      "summary": "Extracts generic type arguments from field types to add ToTyped bounds for iterable element types.",
+      "tags": [
+        "utility",
+        "type-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/to_typed.rs:TypedInputAttrs",
+      "type": "class",
+      "name": "TypedInputAttrs",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        639,
+        666
+      ],
+      "summary": "Top-level ToTyped attributes for skipping field recursion, marking TODO, and restricting multiple values.",
+      "tags": [
+        "attribute-parsing",
+        "typed-om"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/to_typed.rs:TypedVariantAttrs",
+      "type": "class",
+      "name": "TypedVariantAttrs",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        670,
+        703
+      ],
+      "summary": "Variant-level ToTyped attributes for skip, todo, skip_derive_fields, and no_multiple_values.",
+      "tags": [
+        "attribute-parsing",
+        "typed-om"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_derive/to_typed.rs:TypedFieldAttrs",
+      "type": "class",
+      "name": "TypedFieldAttrs",
+      "filePath": "style_derive/to_typed.rs",
+      "lineRange": [
+        707,
+        720
+      ],
+      "summary": "Field-level ToTyped attributes for conditional skip_if and contextual_skip_if annotations.",
+      "tags": [
+        "attribute-parsing",
+        "typed-om"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style_derive/to_animated_value.rs",
+      "target": "function:style_derive/to_animated_value.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_animated_value.rs",
+      "target": "function:style_derive/to_animated_value.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_animated_zero.rs",
+      "target": "function:style_derive/to_animated_zero.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_animated_zero.rs",
+      "target": "function:style_derive/to_animated_zero.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "function:style_derive/to_computed_value.rs:derive_to_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "function:style_derive/to_computed_value.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "class:style_derive/to_computed_value.rs:ToValueAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "function:style_derive/to_computed_value.rs:derive_to_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "function:style_derive/to_computed_value.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_computed_value.rs",
+      "target": "class:style_derive/to_computed_value.rs:ToValueAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive_bitflags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive_variant_arm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive_variant_fields_expr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive_single_field_expr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssBitflagAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssInputAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssVariantAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssFieldAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "function:style_derive/to_css.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssBitflagAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssInputAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssVariantAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_css.rs",
+      "target": "class:style_derive/to_css.rs:CssFieldAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_resolved_value.rs",
+      "target": "function:style_derive/to_resolved_value.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_resolved_value.rs",
+      "target": "function:style_derive/to_resolved_value.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive_bitflags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive_variant_arm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive_variant_fields_expr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive_single_field_expr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:field_generic_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedInputAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedVariantAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedFieldAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "function:style_derive/to_typed.rs:field_generic_arguments",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedInputAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedVariantAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_derive/to_typed.rs",
+      "target": "class:style_derive/to_typed.rs:TypedFieldAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

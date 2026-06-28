@@ -1,0 +1,185 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 36,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "workspace",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "workspace.package",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "workspace.dependencies",
+          "level": 2,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 105,
+      "nonEmptyLines": 73,
+      "sections": [
+        {
+          "heading": "High-Level Documentation",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Branches",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Crates",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "Stylo Crates",
+          "level": 3,
+          "line": 40
+        },
+        {
+          "heading": "Standalone Crates",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Support Crates",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Building Servo Against a Local Copy of Stylo",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "Releases",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "License",
+          "level": 2,
+          "line": 103
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "SYNCING.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 63,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Syncing",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Syncing `upstream` with mozilla-central",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Rebasing `main` onto `upstream`",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "commit-from-merge.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "commit-from-squashed.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 14,
+      "nonEmptyLines": 12,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "start-rebase.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 10,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style.paths",
+      "language": "txt",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 6,
+      "metrics": {}
+    },
+    {
+      "path": "shell.nix",
+      "language": "nix",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "metrics": {}
+    }
+  ]
+}

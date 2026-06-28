@@ -1,0 +1,80 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/typed_om/mod.rs",
+      "language": "rust",
+      "sizeLines": 680,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_declaration.rs",
+      "language": "rust",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_values.rs",
+      "language": "rust",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/output.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/typed_om/mod.rs": [
+      "style/typed_om/numeric_declaration.rs",
+      "style/typed_om/numeric_values.rs",
+      "style/typed_om/sum_value.rs"
+    ],
+    "style/typed_om/numeric_declaration.rs": [],
+    "style/typed_om/numeric_values.rs": [],
+    "style/typed_om/output.rs": []
+  },
+  "neighborMap": {
+    "style/typed_om/mod.rs": [
+      {"path": "style/lib.rs", "symbols": []},
+      {"path": "style/custom_properties.rs", "symbols": []},
+      {"path": "style/values/mod.rs", "symbols": []},
+      {"path": "style/properties/mod.rs", "symbols": []},
+      {"path": "style/properties/declaration_block.rs", "symbols": []},
+      {"path": "style/properties/properties.mako.rs", "symbols": []},
+      {"path": "style/values/specified/box.rs", "symbols": []},
+      {"path": "style/values/specified/length.rs", "symbols": []},
+      {"path": "style/values/specified/angle.rs", "symbols": []},
+      {"path": "style/values/specified/time.rs", "symbols": []},
+      {"path": "style/values/specified/percentage.rs", "symbols": []},
+      {"path": "style/values/specified/number.rs", "symbols": []},
+      {"path": "style/values/specified/image.rs", "symbols": []},
+      {"path": "style/values/specified/background.rs", "symbols": []},
+      {"path": "style/values/specified/calc.rs", "symbols": []},
+      {"path": "style/values/specified/animation.rs", "symbols": []},
+      {"path": "style/values/computed/length.rs", "symbols": []},
+      {"path": "style/values/computed/length_percentage.rs", "symbols": []},
+      {"path": "style/values/computed/angle.rs", "symbols": []},
+      {"path": "style/values/computed/time.rs", "symbols": []},
+      {"path": "style/values/computed/percentage.rs", "symbols": []},
+      {"path": "style/values/computed/resolution.rs", "symbols": []},
+      {"path": "style/values/computed/image.rs", "symbols": []},
+      {"path": "style/values/computed/font.rs", "symbols": []},
+      {"path": "style/values/computed/animation.rs", "symbols": []},
+      {"path": "style/values/computed/text.rs", "symbols": []},
+      {"path": "style/values/generics/transform.rs", "symbols": []},
+      {"path": "style/values/generics/animation.rs", "symbols": []},
+      {"path": "style/values/generics/calc.rs", "symbols": []},
+      {"path": "style/values/generics/grid.rs", "symbols": []},
+      {"path": "style/values/generics/ui.rs", "symbols": []},
+      {"path": "style/values/generics/font.rs", "symbols": []}
+    ],
+    "style/typed_om/numeric_declaration.rs": [],
+    "style/typed_om/numeric_values.rs": [
+      {"path": "style/typed_om/sum_value.rs", "symbols": []}
+    ],
+    "style/typed_om/output.rs": []
+  }
+}

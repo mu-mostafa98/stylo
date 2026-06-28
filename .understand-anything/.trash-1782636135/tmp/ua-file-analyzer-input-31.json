@@ -1,0 +1,182 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/properties/computed_value_flags.rs",
+      "language": "rust",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/gecko.mako.rs",
+      "language": "rust",
+      "sizeLines": 1540,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers.mako.rs",
+      "language": "rust",
+      "sizeLines": 766,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers/animated_properties.mako.rs",
+      "language": "rust",
+      "sizeLines": 762,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.html.mako",
+      "language": "mako",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.mako.rs",
+      "language": "rust",
+      "sizeLines": 3091,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "language": "whl",
+      "sizeLines": 311,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/__init__.py",
+      "language": "python",
+      "sizeLines": 384,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/LICENSE.txt",
+      "language": "txt",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl",
+      "language": "whl",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/README.md",
+      "language": "markdown",
+      "sizeLines": 6,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/values/computed/box.rs",
+      "language": "rust",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/box.rs",
+      "language": "rust",
+      "sizeLines": 340,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/box.rs",
+      "language": "rust",
+      "sizeLines": 2092,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/build.rs",
+      "language": "rust",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_atoms/lib.rs",
+      "language": "rust",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/predefined_counter_styles.rs",
+      "language": "rust",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/static_atoms.txt",
+      "language": "txt",
+      "sizeLines": 193,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "stylo_dom/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_dom/lib.rs",
+      "language": "rust",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/build.rs",
+      "language": "rust",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/preferences.toml",
+      "language": "toml",
+      "sizeLines": 44,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/src/lib.rs",
+      "language": "rust",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/properties/computed_value_flags.rs": [],
+    "style/properties/gecko.mako.rs": [],
+    "style/properties/helpers.mako.rs": [],
+    "style/properties/helpers/animated_properties.mako.rs": [],
+    "style/properties/properties.html.mako": [],
+    "style/properties/properties.mako.rs": [],
+    "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl": [],
+    "style/properties/vendored_python/markupsafe/__init__.py": [],
+    "style/properties/vendored_python/markupsafe/LICENSE.txt": [],
+    "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl": [],
+    "style/README.md": [],
+    "style/values/computed/box.rs": [],
+    "style/values/generics/box.rs": [],
+    "style/values/specified/box.rs": [],
+    "stylo_atoms/build.rs": [],
+    "stylo_atoms/Cargo.toml": [],
+    "stylo_atoms/lib.rs": [],
+    "stylo_atoms/predefined_counter_styles.rs": [],
+    "stylo_atoms/static_atoms.txt": [],
+    "stylo_dom/Cargo.toml": [],
+    "stylo_dom/lib.rs": [],
+    "stylo_static_prefs/build.rs": [],
+    "stylo_static_prefs/Cargo.toml": [],
+    "stylo_static_prefs/preferences.toml": [],
+    "stylo_static_prefs/src/lib.rs": []
+  }
+}

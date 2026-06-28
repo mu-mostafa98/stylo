@@ -1,0 +1,32 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style/media_queries/media_query.rs", "language": "rust", "sizeLines": 641, "fileCategory": "code"},
+    {"path": "style/media_queries/mod.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/parallel.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/str.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/style_adjuster.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/style_resolver.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/stylesheet_set.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/thread_state.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/traversal.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/traversal_flags.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/color.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/effects.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/font.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/mod.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/text.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/animated/transform.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/angle.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/background.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/basic_shape.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/color.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/column.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/easing.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/effects.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/flex.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/font.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/values/computed/image.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

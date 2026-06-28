@@ -1,0 +1,276 @@
+{
+  "nodes": [
+    {
+      "id": "file:to_shmem_derive/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "to_shmem_derive/lib.rs",
+      "summary": "Entry point for the to_shmem_derive proc-macro crate. Defines the #[derive(ToShmem)] custom derive macro that delegates to the to_shmem and util modules.",
+      "tags": ["proc-macro", "entry-point", "derive", "rust"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:to_shmem_derive/to_shmem.rs",
+      "type": "file",
+      "name": "to_shmem.rs",
+      "filePath": "to_shmem_derive/to_shmem.rs",
+      "summary": "Core implementation of the ToShmem derive macro. Generates trait impl code that serializes struct/enum fields into shared memory buffers using the to_shmem crate.",
+      "tags": ["derive", "serialization", "proc-macro", "rust"],
+      "complexity": "moderate",
+      "languageNotes": "Uses synstructure for pattern-matching code generation and darling for attribute parsing, enabling zero-copy sharing of Rust data across FFI boundaries."
+    },
+    {
+      "id": "file:to_shmem_derive/util.rs",
+      "type": "file",
+      "name": "util.rs",
+      "filePath": "to_shmem_derive/util.rs",
+      "summary": "Utility functions for the to_shmem_derive crate providing attribute parsing helpers, predicate addition, and a higher-order function for two-phase field mapping in token stream generation.",
+      "tags": ["utility", "proc-macro", "code-generation", "rust"],
+      "complexity": "moderate",
+      "languageNotes": "Uses darling for derive-input/field attribute extraction and synstructure for safe enum variant binding with custom binding styles."
+    },
+    {
+      "id": "function:to_shmem_derive/lib.rs:derive_to_shmem",
+      "type": "function",
+      "name": "derive_to_shmem",
+      "filePath": "to_shmem_derive/lib.rs",
+      "lineRange": [13, 16],
+      "summary": "Entry point for the #[derive(ToShmem)] proc-macro. Parses the input token stream and delegates to the derive function in the to_shmem module.",
+      "tags": ["proc-macro", "entry-point", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem_derive/to_shmem.rs:derive",
+      "type": "function",
+      "name": "derive",
+      "filePath": "to_shmem_derive/to_shmem.rs",
+      "lineRange": [12, 68],
+      "summary": "Generates the ToShmem trait implementation for a given struct or enum. Adds where-clause bounds, processes each variant's bindings with a two-phase mapping that first calls to_shmem on each field then wraps the result in ManuallyDrop.",
+      "tags": ["derive", "code-generation", "trait-impl", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:to_shmem_derive/to_shmem.rs:ShmemInputAttrs",
+      "type": "class",
+      "name": "ShmemInputAttrs",
+      "filePath": "to_shmem_derive/to_shmem.rs",
+      "lineRange": [72, 74],
+      "summary": "Attribute struct parsed from #[shmem(no_bounds)] on the derive input, controlling whether generic type parameter bounds are generated.",
+      "tags": ["attribute", "configuration", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:to_shmem_derive/to_shmem.rs:ShmemFieldAttrs",
+      "type": "class",
+      "name": "ShmemFieldAttrs",
+      "filePath": "to_shmem_derive/to_shmem.rs",
+      "lineRange": [78, 80],
+      "summary": "Attribute struct parsed from #[shmem(field_bound)] on individual fields, controlling whether a where-clause predicate is added for that field's type.",
+      "tags": ["attribute", "configuration", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem_derive/util.rs:parse_input_attrs",
+      "type": "function",
+      "name": "parse_input_attrs",
+      "filePath": "to_shmem_derive/util.rs",
+      "lineRange": [11, 19],
+      "summary": "Parses derive-input attributes (e.g. #[shmem(...)]) using darling's FromDeriveInput, panicking on parse failure.",
+      "tags": ["utility", "attribute-parsing", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem_derive/util.rs:parse_field_attrs",
+      "type": "function",
+      "name": "parse_field_attrs",
+      "filePath": "to_shmem_derive/util.rs",
+      "lineRange": [21, 29],
+      "summary": "Parses field-level attributes (e.g. #[shmem(field_bound)]) using darling's FromField, panicking on parse failure.",
+      "tags": ["utility", "attribute-parsing", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem_derive/util.rs:add_predicate",
+      "type": "function",
+      "name": "add_predicate",
+      "filePath": "to_shmem_derive/util.rs",
+      "lineRange": [31, 36],
+      "summary": "Adds a where-clause predicate to an optional WhereClause, initializing the clause if it does not already exist.",
+      "tags": ["utility", "syn-helpers", "code-generation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem_derive/util.rs:fmap2_match",
+      "type": "function",
+      "name": "fmap2_match",
+      "filePath": "to_shmem_derive/util.rs",
+      "lineRange": [38, 71],
+      "summary": "Higher-order function that generates a two-phase token stream for each enum variant: first maps each binding through a closure f, then optionally through closure g, enabling patterns like serialization-then-ownership-transfer.",
+      "tags": ["utility", "code-generation", "higher-order", "synstructure"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:to_shmem_derive/lib.rs",
+      "target": "file:to_shmem_derive/to_shmem.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:to_shmem_derive/lib.rs",
+      "target": "file:to_shmem_derive/util.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:to_shmem_derive/lib.rs",
+      "target": "function:to_shmem_derive/lib.rs:derive_to_shmem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "function:to_shmem_derive/to_shmem.rs:derive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "class:to_shmem_derive/to_shmem.rs:ShmemInputAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "class:to_shmem_derive/to_shmem.rs:ShmemFieldAttrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:parse_input_attrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:parse_field_attrs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:add_predicate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:fmap2_match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem_derive/lib.rs",
+      "target": "function:to_shmem_derive/lib.rs:derive_to_shmem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "function:to_shmem_derive/to_shmem.rs:derive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "class:to_shmem_derive/to_shmem.rs:ShmemInputAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/to_shmem.rs",
+      "target": "class:to_shmem_derive/to_shmem.rs:ShmemFieldAttrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:parse_input_attrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:parse_field_attrs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:add_predicate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem_derive/util.rs",
+      "target": "function:to_shmem_derive/util.rs:fmap2_match",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:to_shmem_derive/lib.rs:derive_to_shmem",
+      "target": "function:to_shmem_derive/to_shmem.rs:derive",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:to_shmem_derive/to_shmem.rs:derive",
+      "target": "function:to_shmem_derive/util.rs:parse_input_attrs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:to_shmem_derive/to_shmem.rs:derive",
+      "target": "function:to_shmem_derive/util.rs:add_predicate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:to_shmem_derive/to_shmem.rs:derive",
+      "target": "function:to_shmem_derive/util.rs:parse_field_attrs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:to_shmem_derive/to_shmem.rs:derive",
+      "target": "function:to_shmem_derive/util.rs:fmap2_match",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

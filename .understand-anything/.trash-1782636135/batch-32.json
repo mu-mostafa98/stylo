@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "id": "config:to_shmem_derive/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "to_shmem_derive/Cargo.toml",
+      "summary": "Configuration for the to_shmem_derive proc-macro crate that generates ToShmem trait implementations via derive macros.",
+      "tags": ["configuration", "proc-macro", "derive"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:to_shmem/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "to_shmem/Cargo.toml",
+      "summary": "Configuration for the to_shmem library crate with feature flags for servo, gecko, and optional dependency gating.",
+      "tags": ["configuration", "library", "feature-flags"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:to_shmem/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "to_shmem/lib.rs",
+      "summary": "Provides the SharedMemoryBuilder type and ToShmem trait for cloning data into a contiguous shared memory buffer, with implementations for standard library types and feature-gated support for servo_arc, smallvec, thin-vec, smallbitvec, string_cache, and cssparser types.",
+      "tags": ["shared-memory", "trait", "unsafe", "serialization"],
+      "complexity": "complex",
+      "languageNotes": "Extensive use of unsafe pointer arithmetic, ManuallyDrop, and custom Layout-based allocation to ensure zero-copy semantics when writing into a pre-allocated shared memory buffer. Trait impls are feature-gated for Servo/Gecko build configurations."
+    },
+    {
+      "id": "function:to_shmem/lib.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [68, 76],
+      "summary": "Creates a new SharedMemoryBuilder wrapping a raw buffer pointer with a specified capacity.",
+      "tags": ["constructor", "shared-memory", "unsafe"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:len",
+      "type": "function",
+      "name": "len",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [80, 82],
+      "summary": "Returns the number of bytes currently consumed in the shared memory buffer.",
+      "tags": ["accessor", "shared-memory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [91, 106],
+      "summary": "Writes a value into the shared memory buffer by calling ToShmem::to_shmem and copying the result, returning a pointer to the stored copy.",
+      "tags": ["writer", "shared-memory", "trait-dispatch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:alloc_value",
+      "type": "function",
+      "name": "alloc_value",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [112, 114],
+      "summary": "Reserves space in the shared memory buffer for a single value of type T and returns a pointer to that space.",
+      "tags": ["allocator", "shared-memory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:alloc_array",
+      "type": "function",
+      "name": "alloc_array",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [120, 129],
+      "summary": "Reserves space for an array of T values, handling the zero-length case with a dangling pointer.",
+      "tags": ["allocator", "array", "shared-memory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:alloc",
+      "type": "function",
+      "name": "alloc",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [135, 153],
+      "summary": "Core memory reservation function that computes alignment padding, checks capacity bounds, and returns a pointer into the buffer for a given Layout.",
+      "tags": ["allocator", "pointer-arithmetic", "unsafe"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "function",
+      "name": "to_shmem_slice",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [281, 291],
+      "summary": "Allocates a slice in shared memory and writes all items from an iterator into it, returning a pointer to the slice.",
+      "tags": ["utility", "shared-memory", "iterator"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:to_shmem_slice_ptr",
+      "type": "function",
+      "name": "to_shmem_slice_ptr",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [259, 277],
+      "summary": "Internal helper that iterates over source items, converts each via ToShmem, writes them into a pre-allocated destination slice, and returns a mutable slice pointer.",
+      "tags": ["utility", "unsafe", "iterator"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "class",
+      "name": "SharedMemoryBuilder",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [39, 53],
+      "summary": "A builder that transforms and copies values into a fixed-size shared memory buffer, tracking buffer position and providing allocation methods with alignment support.",
+      "tags": ["shared-memory", "builder", "allocator"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:to_shmem/lib.rs:ToShmem",
+      "type": "class",
+      "name": "ToShmem",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [157, 171],
+      "summary": "Trait defining how to clone a value into a SharedMemoryBuilder with ManuallyDrop wrapping, implemented for primitives, collections, smart pointers, and Servo-specific types via feature gates.",
+      "tags": ["trait", "serialization", "shared-memory"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc_array",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:to_shmem_slice_ptr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:ToShmem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc_array",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:alloc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:ToShmem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:to_shmem/Cargo.toml",
+      "target": "file:to_shmem/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:to_shmem_derive/Cargo.toml",
+      "target": "config:to_shmem/Cargo.toml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style/queries/condition.rs", "language": "rust", "sizeLines": 993, "fileCategory": "code"},
+    {"path": "style/queries/feature.rs", "language": "rust", "sizeLines": 199, "fileCategory": "code"},
+    {"path": "style/queries/feature_expression.rs", "language": "rust", "sizeLines": 1152, "fileCategory": "code"},
+    {"path": "style/queries/mod.rs", "language": "rust", "sizeLines": 19, "fileCategory": "code"},
+    {"path": "style/queries/values.rs", "language": "rust", "sizeLines": 46, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/queries/condition.rs": [],
+    "style/queries/feature.rs": [],
+    "style/queries/feature_expression.rs": [],
+    "style/queries/mod.rs": [
+      "style/queries/condition.rs",
+      "style/queries/feature_expression.rs",
+      "style/queries/feature.rs",
+      "style/queries/values.rs"
+    ],
+    "style/queries/values.rs": []
+  },
+  "neighborMap": {
+    "style/queries/mod.rs": [
+      {
+        "path": "style/lib.rs",
+        "batchIndex": 3,
+        "symbols": [
+          "CaseSensitivityExt",
+          "Zero",
+          "ZeroNoPercent",
+          "One",
+          "AllocErr",
+          "ShrinkIfNeeded"
+        ]
+      }
+    ]
+  }
+}

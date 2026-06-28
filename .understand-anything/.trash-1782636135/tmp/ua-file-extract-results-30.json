@@ -1,0 +1,5323 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    },
+    {
+      "path": "malloc_size_of/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 27,
+      "nonEmptyLines": 24,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "malloc_size_of/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 848,
+      "nonEmptyLines": 757,
+      "functions": [
+        {
+          "name": "new",
+          "startLine": 80,
+          "endLine": 90,
+          "params": [
+            "size_of",
+            "malloc_enclosing_size_of",
+            "have_seen_ptr"
+          ]
+        },
+        {
+          "name": "is_empty",
+          "startLine": 94,
+          "endLine": 103,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "malloc_size_of",
+          "startLine": 107,
+          "endLine": 113,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "has_malloc_enclosing_size_of",
+          "startLine": 116,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "malloc_enclosing_size_of",
+          "startLine": 122,
+          "endLine": 125,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "have_seen_ptr",
+          "startLine": 128,
+          "endLine": 134,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 186,
+          "endLine": 188,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 192,
+          "endLine": 195,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 199,
+          "endLine": 201,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 205,
+          "endLine": 207,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 211,
+          "endLine": 213,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 221,
+          "endLine": 223,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 232,
+          "endLine": 234,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 244,
+          "endLine": 246,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 250,
+          "endLine": 256,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 260,
+          "endLine": 265,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 269,
+          "endLine": 271,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 275,
+          "endLine": 277,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 281,
+          "endLine": 285,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 292,
+          "endLine": 297,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 301,
+          "endLine": 307,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 311,
+          "endLine": 313,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 317,
+          "endLine": 323,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 327,
+          "endLine": 340,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 344,
+          "endLine": 350,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 354,
+          "endLine": 360,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 368,
+          "endLine": 374,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 378,
+          "endLine": 389,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 393,
+          "endLine": 399,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "shallow_size_of",
+          "startLine": 486,
+          "endLine": 494,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 502,
+          "endLine": 509,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 514,
+          "endLine": 516,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "unconditional_shallow_size_of",
+          "startLine": 527,
+          "endLine": 529,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "unconditional_size_of",
+          "startLine": 533,
+          "endLine": 535,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "conditional_shallow_size_of",
+          "startLine": 539,
+          "endLine": 545,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "conditional_size_of",
+          "startLine": 549,
+          "endLine": 555,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 565,
+          "endLine": 567,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 571,
+          "endLine": 577,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 581,
+          "endLine": 583,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 587,
+          "endLine": 589,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 593,
+          "endLine": 595,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 599,
+          "endLine": 601,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 605,
+          "endLine": 610,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 614,
+          "endLine": 616,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 620,
+          "endLine": 627,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 631,
+          "endLine": 648,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 652,
+          "endLine": 654,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 658,
+          "endLine": 661,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "unconditional_size_of",
+          "startLine": 670,
+          "endLine": 682,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "unconditional_size_of",
+          "startLine": 691,
+          "endLine": 703,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "unconditional_size_of",
+          "startLine": 712,
+          "endLine": 748,
+          "params": [
+            "ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 754,
+          "endLine": 756,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 760,
+          "endLine": 762,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 767,
+          "endLine": 769,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "size_of",
+          "startLine": 774,
+          "endLine": 776,
+          "params": [
+            "_ops"
+          ]
+        },
+        {
+          "name": "deref",
+          "startLine": 839,
+          "endLine": 841,
+          "params": []
+        },
+        {
+          "name": "deref_mut",
+          "startLine": 845,
+          "endLine": 847,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MallocSizeOfOps",
+          "startLine": 63,
+          "endLine": 77,
+          "methods": [
+            "new",
+            "is_empty",
+            "malloc_size_of",
+            "has_malloc_enclosing_size_of",
+            "malloc_enclosing_size_of",
+            "have_seen_ptr"
+          ],
+          "properties": [
+            "size_of_op",
+            "enclosing_size_of_op",
+            "have_seen_ptr_op"
+          ]
+        },
+        {
+          "name": "MallocSizeOf",
+          "startLine": 139,
+          "endLine": 143,
+          "methods": [
+            "size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MallocShallowSizeOf",
+          "startLine": 146,
+          "endLine": 152,
+          "methods": [
+            "shallow_size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MallocUnconditionalSizeOf",
+          "startLine": 157,
+          "endLine": 161,
+          "methods": [
+            "unconditional_size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MallocUnconditionalShallowSizeOf",
+          "startLine": 164,
+          "endLine": 167,
+          "methods": [
+            "unconditional_shallow_size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MallocConditionalSizeOf",
+          "startLine": 172,
+          "endLine": 177,
+          "methods": [
+            "conditional_size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MallocConditionalShallowSizeOf",
+          "startLine": 180,
+          "endLine": 183,
+          "methods": [
+            "conditional_shallow_size_of"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Measurable",
+          "startLine": 834,
+          "endLine": 834,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MallocSizeOfOps",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "malloc_size_of",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "has_malloc_enclosing_size_of",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "malloc_enclosing_size_of",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "have_seen_ptr",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "MallocSizeOf",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "MallocShallowSizeOf",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "MallocUnconditionalSizeOf",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "MallocUnconditionalShallowSizeOf",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "MallocConditionalSizeOf",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "MallocConditionalShallowSizeOf",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "Measurable",
+          "line": 834,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "malloc_size_of",
+          "callee": "MallocSizeOfOps::is_empty",
+          "lineNumber": 108
+        },
+        {
+          "caller": "malloc_size_of",
+          "callee": "(self.size_of_op)",
+          "lineNumber": 111
+        },
+        {
+          "caller": "has_malloc_enclosing_size_of",
+          "callee": "self.enclosing_size_of_op.is_some",
+          "lineNumber": 117
+        },
+        {
+          "caller": "malloc_enclosing_size_of",
+          "callee": "(self.enclosing_size_of_op.unwrap())",
+          "lineNumber": 124
+        },
+        {
+          "caller": "malloc_enclosing_size_of",
+          "callee": "self.enclosing_size_of_op.unwrap",
+          "lineNumber": 124
+        },
+        {
+          "caller": "have_seen_ptr",
+          "callee": "self\r\n            .have_seen_ptr_op\r\n            .as_mut().expect",
+          "lineNumber": 129
+        },
+        {
+          "caller": "have_seen_ptr",
+          "callee": "self\r\n            .have_seen_ptr_op.as_mut",
+          "lineNumber": 129
+        },
+        {
+          "caller": "have_seen_ptr",
+          "callee": "have_seen_ptr_op",
+          "lineNumber": 133
+        },
+        {
+          "caller": "size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 187
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.as_ptr",
+          "lineNumber": 187
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 200
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 206
+        },
+        {
+          "caller": "size_of",
+          "callee": "(**self).size_of",
+          "lineNumber": 206
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.0.size_of",
+          "lineNumber": 222
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.1.size_of",
+          "lineNumber": 222
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.0.size_of",
+          "lineNumber": 233
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.1.size_of",
+          "lineNumber": 233
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.2.size_of",
+          "lineNumber": 233
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.0.size_of",
+          "lineNumber": 245
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.1.size_of",
+          "lineNumber": 245
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.2.size_of",
+          "lineNumber": 245
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.3.size_of",
+          "lineNumber": 245
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.as_ref",
+          "lineNumber": 251
+        },
+        {
+          "caller": "size_of",
+          "callee": "val.size_of",
+          "lineNumber": 252
+        },
+        {
+          "caller": "size_of",
+          "callee": "x.size_of",
+          "lineNumber": 262
+        },
+        {
+          "caller": "size_of",
+          "callee": "e.size_of",
+          "lineNumber": 263
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.get().size_of",
+          "lineNumber": 270
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.get",
+          "lineNumber": 270
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.borrow().size_of",
+          "lineNumber": 276
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.borrow",
+          "lineNumber": 276
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.get()\r\n            .map(|value| value.size_of(ops)).unwrap_or_default",
+          "lineNumber": 282
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.get().map",
+          "lineNumber": 282
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.get",
+          "lineNumber": 282
+        },
+        {
+          "caller": "size_of",
+          "callee": "value.size_of",
+          "lineNumber": 283
+        },
+        {
+          "caller": "size_of",
+          "callee": "b.size_of",
+          "lineNumber": 295
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 303
+        },
+        {
+          "caller": "size_of",
+          "callee": "elem.size_of",
+          "lineNumber": 304
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 312
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.as_ptr",
+          "lineNumber": 312
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 318
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 319
+        },
+        {
+          "caller": "size_of",
+          "callee": "elem.size_of",
+          "lineNumber": 320
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.has_malloc_enclosing_size_of",
+          "lineNumber": 328
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.front",
+          "lineNumber": 329
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_enclosing_size_of",
+          "lineNumber": 331
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.capacity",
+          "lineNumber": 338
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "size_of::<T>",
+          "lineNumber": 338
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 345
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 346
+        },
+        {
+          "caller": "size_of",
+          "callee": "elem.size_of",
+          "lineNumber": 347
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.spilled",
+          "lineNumber": 355
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 356
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.as_ptr",
+          "lineNumber": 356
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 369
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 370
+        },
+        {
+          "caller": "size_of",
+          "callee": "elem.size_of",
+          "lineNumber": 371
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.capacity",
+          "lineNumber": 379
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 388
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 394
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 395
+        },
+        {
+          "caller": "size_of",
+          "callee": "elem.size_of",
+          "lineNumber": 396
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.has_malloc_enclosing_size_of",
+          "lineNumber": 487
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.values()\r\n                .next().map_or",
+          "lineNumber": 488
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.values().next",
+          "lineNumber": 488
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.values",
+          "lineNumber": 488
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "ops.malloc_enclosing_size_of",
+          "lineNumber": 490
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "self.len",
+          "lineNumber": 492
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "size_of::<V>",
+          "lineNumber": 492
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "size_of::<K>",
+          "lineNumber": 492
+        },
+        {
+          "caller": "shallow_size_of",
+          "callee": "size_of::<usize>",
+          "lineNumber": 492
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.shallow_size_of",
+          "lineNumber": 503
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.iter",
+          "lineNumber": 504
+        },
+        {
+          "caller": "size_of",
+          "callee": "k.size_of",
+          "lineNumber": 505
+        },
+        {
+          "caller": "size_of",
+          "callee": "v.size_of",
+          "lineNumber": 506
+        },
+        {
+          "caller": "unconditional_shallow_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 528
+        },
+        {
+          "caller": "unconditional_shallow_size_of",
+          "callee": "self.heap_ptr",
+          "lineNumber": 528
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.unconditional_shallow_size_of",
+          "lineNumber": 534
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "(**self).size_of",
+          "lineNumber": 534
+        },
+        {
+          "caller": "conditional_shallow_size_of",
+          "callee": "ops.have_seen_ptr",
+          "lineNumber": 540
+        },
+        {
+          "caller": "conditional_shallow_size_of",
+          "callee": "self.heap_ptr",
+          "lineNumber": 540
+        },
+        {
+          "caller": "conditional_shallow_size_of",
+          "callee": "self.unconditional_shallow_size_of",
+          "lineNumber": 543
+        },
+        {
+          "caller": "conditional_size_of",
+          "callee": "ops.have_seen_ptr",
+          "lineNumber": 550
+        },
+        {
+          "caller": "conditional_size_of",
+          "callee": "self.heap_ptr",
+          "lineNumber": 550
+        },
+        {
+          "caller": "conditional_size_of",
+          "callee": "self.unconditional_size_of",
+          "lineNumber": 553
+        },
+        {
+          "caller": "size_of",
+          "callee": "(*self.lock().unwrap()).size_of",
+          "lineNumber": 566
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.lock().unwrap",
+          "lineNumber": 566
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.lock",
+          "lineNumber": 566
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.heap_ptr",
+          "lineNumber": 572
+        },
+        {
+          "caller": "size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 573
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.0.size_of",
+          "lineNumber": 582
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.0.size_of",
+          "lineNumber": 588
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.x.size_of",
+          "lineNumber": 594
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.y.size_of",
+          "lineNumber": 594
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.origin.size_of",
+          "lineNumber": 600
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.size.size_of",
+          "lineNumber": 600
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.top.size_of",
+          "lineNumber": 606
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.right.size_of",
+          "lineNumber": 607
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.bottom.size_of",
+          "lineNumber": 608
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.left.size_of",
+          "lineNumber": 609
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.width.size_of",
+          "lineNumber": 615
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.height.size_of",
+          "lineNumber": 615
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m11.size_of",
+          "lineNumber": 621
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m12.size_of",
+          "lineNumber": 622
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m21.size_of",
+          "lineNumber": 623
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m22.size_of",
+          "lineNumber": 624
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m31.size_of",
+          "lineNumber": 625
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m32.size_of",
+          "lineNumber": 626
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m11.size_of",
+          "lineNumber": 632
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m12.size_of",
+          "lineNumber": 633
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m13.size_of",
+          "lineNumber": 634
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m14.size_of",
+          "lineNumber": 635
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m21.size_of",
+          "lineNumber": 636
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m22.size_of",
+          "lineNumber": 637
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m23.size_of",
+          "lineNumber": 638
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m24.size_of",
+          "lineNumber": 639
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m31.size_of",
+          "lineNumber": 640
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m32.size_of",
+          "lineNumber": 641
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m33.size_of",
+          "lineNumber": 642
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m34.size_of",
+          "lineNumber": 643
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m41.size_of",
+          "lineNumber": 644
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m42.size_of",
+          "lineNumber": 645
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m43.size_of",
+          "lineNumber": 646
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.m44.size_of",
+          "lineNumber": 647
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.x.size_of",
+          "lineNumber": 653
+        },
+        {
+          "caller": "size_of",
+          "callee": "self.y.size_of",
+          "lineNumber": 653
+        },
+        {
+          "caller": "size_of",
+          "callee": "packed_hashes.size_of",
+          "lineNumber": 660
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 676
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.thin_arc_heap_ptr",
+          "lineNumber": 676
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.iter_raw_match_order",
+          "lineNumber": 677
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "component.size_of",
+          "lineNumber": 678
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "ops.malloc_size_of",
+          "lineNumber": 696
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.thin_arc_heap_ptr",
+          "lineNumber": 696
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.len",
+          "lineNumber": 697
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.slice().iter",
+          "lineNumber": 698
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "self.slice",
+          "lineNumber": 698
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "selector.size_of",
+          "lineNumber": 699
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "attr_selector.size_of",
+          "lineNumber": 716
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "components.unconditional_size_of",
+          "lineNumber": 717
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "(*pseudo).size_of",
+          "lineNumber": 718
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "selector.unconditional_size_of",
+          "lineNumber": 720
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "list.unconditional_size_of",
+          "lineNumber": 722
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "relative_selectors.size_of",
+          "lineNumber": 723
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "nth_of_data.size_of",
+          "lineNumber": 724
+        },
+        {
+          "caller": "unconditional_size_of",
+          "callee": "(*pseudo).size_of",
+          "lineNumber": 725
+        },
+        {
+          "caller": "size_of",
+          "callee": "void::unreachable",
+          "lineNumber": 768
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 57,
+        "classCount": 8
+      }
+    },
+    {
+      "path": "malloc_size_of/LICENSE-APACHE",
+      "language": "unknown",
+      "fileCategory": "docs",
+      "totalLines": 201,
+      "nonEmptyLines": 169,
+      "metrics": {}
+    },
+    {
+      "path": "malloc_size_of/LICENSE-MIT",
+      "language": "unknown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 21,
+      "metrics": {}
+    },
+    {
+      "path": "servo_arc/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "servo_arc/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1202,
+      "nonEmptyLines": 1068,
+      "functions": [
+        {
+          "name": "new",
+          "startLine": 105,
+          "endLine": 107,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "new_uninit",
+          "startLine": 111,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "shareable",
+          "startLine": 136,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "assume_init",
+          "startLine": 144,
+          "endLine": 149,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "deref",
+          "startLine": 154,
+          "endLine": 156,
+          "params": []
+        },
+        {
+          "name": "deref_mut",
+          "startLine": 160,
+          "endLine": 163,
+          "params": []
+        },
+        {
+          "name": "data_offset",
+          "startLine": 195,
+          "endLine": 200,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 205,
+          "endLine": 235,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "new_leaked",
+          "startLine": 239,
+          "endLine": 243,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "into_raw",
+          "startLine": 249,
+          "endLine": 253,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "from_raw",
+          "startLine": 260,
+          "endLine": 268,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "from_raw_addrefed",
+          "startLine": 272,
+          "endLine": 276,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "new_static",
+          "startLine": 286,
+          "endLine": 306,
+          "params": [
+            "alloc",
+            "data"
+          ]
+        },
+        {
+          "name": "borrow_arc",
+          "startLine": 313,
+          "endLine": 315,
+          "params": []
+        },
+        {
+          "name": "heap_ptr",
+          "startLine": 321,
+          "endLine": 327,
+          "params": []
+        },
+        {
+          "name": "inner",
+          "startLine": 332,
+          "endLine": 339,
+          "params": []
+        },
+        {
+          "name": "record_drop",
+          "startLine": 342,
+          "endLine": 347,
+          "params": []
+        },
+        {
+          "name": "mark_as_intentionally_leaked",
+          "startLine": 355,
+          "endLine": 357,
+          "params": []
+        },
+        {
+          "name": "drop_slow",
+          "startLine": 362,
+          "endLine": 372,
+          "params": []
+        },
+        {
+          "name": "ptr_eq",
+          "startLine": 377,
+          "endLine": 379,
+          "params": [
+            "this",
+            "other"
+          ]
+        },
+        {
+          "name": "ptr",
+          "startLine": 381,
+          "endLine": 383,
+          "params": []
+        },
+        {
+          "name": "raw_ptr",
+          "startLine": 386,
+          "endLine": 388,
+          "params": []
+        },
+        {
+          "name": "clone",
+          "startLine": 407,
+          "endLine": 447,
+          "params": []
+        },
+        {
+          "name": "deref",
+          "startLine": 454,
+          "endLine": 456,
+          "params": []
+        },
+        {
+          "name": "make_mut",
+          "startLine": 474,
+          "endLine": 488,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "get_mut",
+          "startLine": 494,
+          "endLine": 503,
+          "params": [
+            "this"
+          ]
+        },
+        {
+          "name": "is_static",
+          "startLine": 507,
+          "endLine": 511,
+          "params": []
+        },
+        {
+          "name": "is_unique",
+          "startLine": 516,
+          "endLine": 521,
+          "params": []
+        },
+        {
+          "name": "drop",
+          "startLine": 526,
+          "endLine": 564,
+          "params": []
+        },
+        {
+          "name": "eq",
+          "startLine": 568,
+          "endLine": 570,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "ne",
+          "startLine": 572,
+          "endLine": 574,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "partial_cmp",
+          "startLine": 578,
+          "endLine": 580,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "lt",
+          "startLine": 582,
+          "endLine": 584,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "le",
+          "startLine": 586,
+          "endLine": 588,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "gt",
+          "startLine": 590,
+          "endLine": 592,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "ge",
+          "startLine": 594,
+          "endLine": 596,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "cmp",
+          "startLine": 599,
+          "endLine": 601,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "fmt",
+          "startLine": 606,
+          "endLine": 608,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "fmt",
+          "startLine": 612,
+          "endLine": 614,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "fmt",
+          "startLine": 618,
+          "endLine": 620,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "default",
+          "startLine": 624,
+          "endLine": 626,
+          "params": []
+        },
+        {
+          "name": "hash",
+          "startLine": 630,
+          "endLine": 632,
+          "params": [
+            "state"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 637,
+          "endLine": 639,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "borrow",
+          "startLine": 644,
+          "endLine": 646,
+          "params": []
+        },
+        {
+          "name": "as_ref",
+          "startLine": 651,
+          "endLine": 653,
+          "params": []
+        },
+        {
+          "name": "deserialize",
+          "startLine": 661,
+          "endLine": 666,
+          "params": [
+            "deserializer"
+          ]
+        },
+        {
+          "name": "serialize",
+          "startLine": 671,
+          "endLine": 676,
+          "params": [
+            "serializer"
+          ]
+        },
+        {
+          "name": "eq",
+          "startLine": 698,
+          "endLine": 700,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "drop",
+          "startLine": 704,
+          "endLine": 712,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 716,
+          "endLine": 721,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "slice",
+          "startLine": 727,
+          "endLine": 729,
+          "params": []
+        },
+        {
+          "name": "data",
+          "startLine": 732,
+          "endLine": 734,
+          "params": []
+        },
+        {
+          "name": "data_mut",
+          "startLine": 737,
+          "endLine": 739,
+          "params": []
+        },
+        {
+          "name": "slice_mut",
+          "startLine": 743,
+          "endLine": 745,
+          "params": []
+        },
+        {
+          "name": "len",
+          "startLine": 749,
+          "endLine": 751,
+          "params": []
+        },
+        {
+          "name": "from_header_and_iter_alloc",
+          "startLine": 767,
+          "endLine": 850,
+          "params": [
+            "alloc",
+            "header",
+            "items",
+            "num_items",
+            "is_static"
+          ]
+        },
+        {
+          "name": "from_header_and_iter_with_size",
+          "startLine": 855,
+          "endLine": 866,
+          "params": [
+            "header",
+            "items",
+            "num_items"
+          ]
+        },
+        {
+          "name": "from_header_and_iter",
+          "startLine": 871,
+          "endLine": 877,
+          "params": [
+            "header",
+            "items"
+          ]
+        },
+        {
+          "name": "from_header_and_iter",
+          "startLine": 894,
+          "endLine": 899,
+          "params": [
+            "header",
+            "items"
+          ]
+        },
+        {
+          "name": "from_header_and_iter_with_size",
+          "startLine": 902,
+          "endLine": 909,
+          "params": [
+            "header",
+            "items",
+            "num_items"
+          ]
+        },
+        {
+          "name": "header_mut",
+          "startLine": 912,
+          "endLine": 915,
+          "params": []
+        },
+        {
+          "name": "data_mut",
+          "startLine": 918,
+          "endLine": 921,
+          "params": []
+        },
+        {
+          "name": "clone",
+          "startLine": 944,
+          "endLine": 946,
+          "params": []
+        },
+        {
+          "name": "clone_arc",
+          "startLine": 952,
+          "endLine": 957,
+          "params": []
+        },
+        {
+          "name": "from_ref",
+          "startLine": 962,
+          "endLine": 964,
+          "params": [
+            "r"
+          ]
+        },
+        {
+          "name": "ptr_eq",
+          "startLine": 968,
+          "endLine": 970,
+          "params": [
+            "this",
+            "other"
+          ]
+        },
+        {
+          "name": "with_arc",
+          "startLine": 975,
+          "endLine": 988,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "get",
+          "startLine": 993,
+          "endLine": 995,
+          "params": []
+        },
+        {
+          "name": "deref",
+          "startLine": 1002,
+          "endLine": 1004,
+          "params": []
+        },
+        {
+          "name": "eq",
+          "startLine": 1026,
+          "endLine": 1033,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 1046,
+          "endLine": 1052,
+          "params": [
+            "ptr"
+          ]
+        },
+        {
+          "name": "ptr_eq",
+          "startLine": 1056,
+          "endLine": 1058,
+          "params": [
+            "this",
+            "other"
+          ]
+        },
+        {
+          "name": "ptr",
+          "startLine": 1061,
+          "endLine": 1063,
+          "params": []
+        },
+        {
+          "name": "borrow",
+          "startLine": 1067,
+          "endLine": 1077,
+          "params": []
+        },
+        {
+          "name": "from_first",
+          "startLine": 1080,
+          "endLine": 1084,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "from_second",
+          "startLine": 1087,
+          "endLine": 1091,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "is_first",
+          "startLine": 1094,
+          "endLine": 1096,
+          "params": []
+        },
+        {
+          "name": "is_second",
+          "startLine": 1099,
+          "endLine": 1101,
+          "params": []
+        },
+        {
+          "name": "as_first",
+          "startLine": 1104,
+          "endLine": 1109,
+          "params": []
+        },
+        {
+          "name": "as_second",
+          "startLine": 1112,
+          "endLine": 1117,
+          "params": []
+        },
+        {
+          "name": "clone",
+          "startLine": 1121,
+          "endLine": 1126,
+          "params": []
+        },
+        {
+          "name": "drop",
+          "startLine": 1130,
+          "endLine": 1139,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 1143,
+          "endLine": 1145,
+          "params": [
+            "f"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Arc",
+          "startLine": 69,
+          "endLine": 72,
+          "methods": [],
+          "properties": [
+            "p",
+            "phantom"
+          ]
+        },
+        {
+          "name": "UniqueArc",
+          "startLine": 100,
+          "endLine": 100,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ArcInner",
+          "startLine": 176,
+          "endLine": 189,
+          "methods": [],
+          "properties": [
+            "count",
+            "alloc_size",
+            "data"
+          ]
+        },
+        {
+          "name": "HeaderSlice",
+          "startLine": 686,
+          "endLine": 695,
+          "methods": [],
+          "properties": [
+            "header",
+            "len",
+            "data"
+          ]
+        },
+        {
+          "name": "ArcBorrow",
+          "startLine": 939,
+          "endLine": 939,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ArcUnion",
+          "startLine": 1016,
+          "endLine": 1020,
+          "methods": [],
+          "properties": [
+            "p",
+            "phantom_a",
+            "phantom_b"
+          ]
+        },
+        {
+          "name": "ArcUnionBorrow",
+          "startLine": 1040,
+          "endLine": 1043,
+          "methods": [],
+          "properties": [
+            "First",
+            "Second"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Arc",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "UniqueArc",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "new_uninit",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "shareable",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "assume_init",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 205,
+          "isDefault": false
+        },
+        {
+          "name": "new_leaked",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "into_raw",
+          "line": 249,
+          "isDefault": false
+        },
+        {
+          "name": "from_raw",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "from_raw_addrefed",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "new_static",
+          "line": 286,
+          "isDefault": false
+        },
+        {
+          "name": "borrow_arc",
+          "line": 313,
+          "isDefault": false
+        },
+        {
+          "name": "heap_ptr",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "mark_as_intentionally_leaked",
+          "line": 355,
+          "isDefault": false
+        },
+        {
+          "name": "ptr_eq",
+          "line": 377,
+          "isDefault": false
+        },
+        {
+          "name": "raw_ptr",
+          "line": 386,
+          "isDefault": false
+        },
+        {
+          "name": "make_mut",
+          "line": 474,
+          "isDefault": false
+        },
+        {
+          "name": "get_mut",
+          "line": 494,
+          "isDefault": false
+        },
+        {
+          "name": "is_static",
+          "line": 507,
+          "isDefault": false
+        },
+        {
+          "name": "is_unique",
+          "line": 516,
+          "isDefault": false
+        },
+        {
+          "name": "HeaderSlice",
+          "line": 686,
+          "isDefault": false
+        },
+        {
+          "name": "slice",
+          "line": 727,
+          "isDefault": false
+        },
+        {
+          "name": "slice_mut",
+          "line": 743,
+          "isDefault": false
+        },
+        {
+          "name": "len",
+          "line": 749,
+          "isDefault": false
+        },
+        {
+          "name": "from_header_and_iter_alloc",
+          "line": 767,
+          "isDefault": false
+        },
+        {
+          "name": "from_header_and_iter_with_size",
+          "line": 855,
+          "isDefault": false
+        },
+        {
+          "name": "from_header_and_iter",
+          "line": 871,
+          "isDefault": false
+        },
+        {
+          "name": "from_header_and_iter",
+          "line": 894,
+          "isDefault": false
+        },
+        {
+          "name": "from_header_and_iter_with_size",
+          "line": 902,
+          "isDefault": false
+        },
+        {
+          "name": "header_mut",
+          "line": 912,
+          "isDefault": false
+        },
+        {
+          "name": "data_mut",
+          "line": 918,
+          "isDefault": false
+        },
+        {
+          "name": "ArcBorrow",
+          "line": 939,
+          "isDefault": false
+        },
+        {
+          "name": "clone_arc",
+          "line": 952,
+          "isDefault": false
+        },
+        {
+          "name": "from_ref",
+          "line": 962,
+          "isDefault": false
+        },
+        {
+          "name": "ptr_eq",
+          "line": 968,
+          "isDefault": false
+        },
+        {
+          "name": "with_arc",
+          "line": 975,
+          "isDefault": false
+        },
+        {
+          "name": "get",
+          "line": 993,
+          "isDefault": false
+        },
+        {
+          "name": "ArcUnion",
+          "line": 1016,
+          "isDefault": false
+        },
+        {
+          "name": "ArcUnionBorrow",
+          "line": 1040,
+          "isDefault": false
+        },
+        {
+          "name": "ptr_eq",
+          "line": 1056,
+          "isDefault": false
+        },
+        {
+          "name": "ptr",
+          "line": 1061,
+          "isDefault": false
+        },
+        {
+          "name": "borrow",
+          "line": 1067,
+          "isDefault": false
+        },
+        {
+          "name": "from_first",
+          "line": 1080,
+          "isDefault": false
+        },
+        {
+          "name": "from_second",
+          "line": 1087,
+          "isDefault": false
+        },
+        {
+          "name": "is_first",
+          "line": 1094,
+          "isDefault": false
+        },
+        {
+          "name": "is_second",
+          "line": 1099,
+          "isDefault": false
+        },
+        {
+          "name": "as_first",
+          "line": 1104,
+          "isDefault": false
+        },
+        {
+          "name": "as_second",
+          "line": 1112,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "new",
+          "callee": "UniqueArc",
+          "lineNumber": 106
+        },
+        {
+          "caller": "new",
+          "callee": "Arc::new",
+          "lineNumber": 106
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "Layout::new::<ArcInner<mem::MaybeUninit<T>>>",
+          "lineNumber": 113
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "alloc::alloc",
+          "lineNumber": 114
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "ptr::NonNull::new(ptr)\r\n                .unwrap_or_else(|| alloc::handle_alloc_error(layout))\r\n                .cast::<ArcInner<mem::MaybeUninit<T>>>",
+          "lineNumber": 115
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "ptr::NonNull::new(ptr).unwrap_or_else",
+          "lineNumber": 115
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "ptr::NonNull::new",
+          "lineNumber": 115
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "alloc::handle_alloc_error",
+          "lineNumber": 116
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "ptr::write",
+          "lineNumber": 118
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "p.as_mut",
+          "lineNumber": 118
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 118
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "ptr::write",
+          "lineNumber": 120
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "p.as_mut",
+          "lineNumber": 120
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "layout.size",
+          "lineNumber": 120
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "NS_LogCtor",
+          "lineNumber": 124
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "p.as_ptr",
+          "lineNumber": 124
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "b\"ServoArc\\0\".as_ptr",
+          "lineNumber": 124
+        },
+        {
+          "caller": "new_uninit",
+          "callee": "UniqueArc",
+          "lineNumber": 127
+        },
+        {
+          "caller": "assume_init",
+          "callee": "UniqueArc",
+          "lineNumber": 145
+        },
+        {
+          "caller": "assume_init",
+          "callee": "mem::ManuallyDrop::new(this).0.p.cast",
+          "lineNumber": 146
+        },
+        {
+          "caller": "assume_init",
+          "callee": "mem::ManuallyDrop::new",
+          "lineNumber": 146
+        },
+        {
+          "caller": "deref_mut",
+          "callee": "self.0.ptr",
+          "lineNumber": 162
+        },
+        {
+          "caller": "data_offset",
+          "callee": "size_of::<ArcInner<()>>",
+          "lineNumber": 196
+        },
+        {
+          "caller": "data_offset",
+          "callee": "align_of::<T>",
+          "lineNumber": 197
+        },
+        {
+          "caller": "data_offset",
+          "callee": "size.wrapping_add(align).wrapping_sub",
+          "lineNumber": 199
+        },
+        {
+          "caller": "data_offset",
+          "callee": "size.wrapping_add",
+          "lineNumber": 199
+        },
+        {
+          "caller": "data_offset",
+          "callee": "align.wrapping_sub",
+          "lineNumber": 199
+        },
+        {
+          "caller": "new",
+          "callee": "Layout::new::<ArcInner<T>>",
+          "lineNumber": 206
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::NonNull::new(alloc::alloc(layout))\r\n                .unwrap_or_else(|| alloc::handle_alloc_error(layout))\r\n                .cast::<ArcInner<T>>",
+          "lineNumber": 208
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::NonNull::new(alloc::alloc(layout)).unwrap_or_else",
+          "lineNumber": 208
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::NonNull::new",
+          "lineNumber": 208
+        },
+        {
+          "caller": "new",
+          "callee": "alloc::alloc",
+          "lineNumber": 208
+        },
+        {
+          "caller": "new",
+          "callee": "alloc::handle_alloc_error",
+          "lineNumber": 209
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::write",
+          "lineNumber": 211
+        },
+        {
+          "caller": "new",
+          "callee": "ptr.as_ptr",
+          "lineNumber": 212
+        },
+        {
+          "caller": "new",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 214
+        },
+        {
+          "caller": "new",
+          "callee": "layout.size",
+          "lineNumber": 216
+        },
+        {
+          "caller": "new",
+          "callee": "NS_LogCtor",
+          "lineNumber": 228
+        },
+        {
+          "caller": "new",
+          "callee": "p.as_ptr",
+          "lineNumber": 228
+        },
+        {
+          "caller": "new",
+          "callee": "b\"ServoArc\\0\".as_ptr",
+          "lineNumber": 228
+        },
+        {
+          "caller": "new_leaked",
+          "callee": "Self::new",
+          "lineNumber": 240
+        },
+        {
+          "caller": "new_leaked",
+          "callee": "arc.mark_as_intentionally_leaked",
+          "lineNumber": 241
+        },
+        {
+          "caller": "into_raw",
+          "callee": "this.ptr",
+          "lineNumber": 250
+        },
+        {
+          "caller": "into_raw",
+          "callee": "mem::forget",
+          "lineNumber": 251
+        },
+        {
+          "caller": "from_raw",
+          "callee": "(ptr as *const u8).sub",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_raw",
+          "callee": "data_offset::<T>",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_raw",
+          "callee": "ptr::NonNull::new_unchecked",
+          "lineNumber": 265
+        },
+        {
+          "caller": "from_raw_addrefed",
+          "callee": "Self::from_raw",
+          "lineNumber": 273
+        },
+        {
+          "caller": "from_raw_addrefed",
+          "callee": "mem::forget",
+          "lineNumber": 274
+        },
+        {
+          "caller": "from_raw_addrefed",
+          "callee": "arc.clone",
+          "lineNumber": 274
+        },
+        {
+          "caller": "new_static",
+          "callee": "Layout::new::<ArcInner<T>>",
+          "lineNumber": 290
+        },
+        {
+          "caller": "new_static",
+          "callee": "alloc",
+          "lineNumber": 291
+        },
+        {
+          "caller": "new_static",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 294
+        },
+        {
+          "caller": "new_static",
+          "callee": "layout.size",
+          "lineNumber": 296
+        },
+        {
+          "caller": "new_static",
+          "callee": "ptr::write",
+          "lineNumber": 300
+        },
+        {
+          "caller": "new_static",
+          "callee": "ptr::NonNull::new_unchecked",
+          "lineNumber": 303
+        },
+        {
+          "caller": "borrow_arc",
+          "callee": "ArcBorrow",
+          "lineNumber": 314
+        },
+        {
+          "caller": "heap_ptr",
+          "callee": "self.inner().count.load",
+          "lineNumber": 322
+        },
+        {
+          "caller": "heap_ptr",
+          "callee": "self.inner",
+          "lineNumber": 322
+        },
+        {
+          "caller": "heap_ptr",
+          "callee": "ptr::null",
+          "lineNumber": 323
+        },
+        {
+          "caller": "heap_ptr",
+          "callee": "self.p.as_ptr",
+          "lineNumber": 325
+        },
+        {
+          "caller": "inner",
+          "callee": "self.ptr",
+          "lineNumber": 338
+        },
+        {
+          "caller": "record_drop",
+          "callee": "NS_LogDtor",
+          "lineNumber": 345
+        },
+        {
+          "caller": "record_drop",
+          "callee": "self.ptr",
+          "lineNumber": 345
+        },
+        {
+          "caller": "record_drop",
+          "callee": "b\"ServoArc\\0\".as_ptr",
+          "lineNumber": 345
+        },
+        {
+          "caller": "mark_as_intentionally_leaked",
+          "callee": "self.record_drop",
+          "lineNumber": 356
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "self.record_drop",
+          "lineNumber": 363
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "self.ptr",
+          "lineNumber": 364
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "Layout::for_value",
+          "lineNumber": 366
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "Layout::from_size_align_unchecked",
+          "lineNumber": 368
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "layout.align",
+          "lineNumber": 368
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "std::ptr::drop_in_place",
+          "lineNumber": 370
+        },
+        {
+          "caller": "drop_slow",
+          "callee": "alloc::dealloc",
+          "lineNumber": 371
+        },
+        {
+          "caller": "ptr_eq",
+          "callee": "this.raw_ptr",
+          "lineNumber": 378
+        },
+        {
+          "caller": "ptr_eq",
+          "callee": "other.raw_ptr",
+          "lineNumber": 378
+        },
+        {
+          "caller": "ptr",
+          "callee": "self.p.as_ptr",
+          "lineNumber": 382
+        },
+        {
+          "caller": "raw_ptr",
+          "callee": "self.p.cast",
+          "lineNumber": 387
+        },
+        {
+          "caller": "clone",
+          "callee": "self.inner().count.load",
+          "lineNumber": 413
+        },
+        {
+          "caller": "clone",
+          "callee": "self.inner",
+          "lineNumber": 413
+        },
+        {
+          "caller": "clone",
+          "callee": "self.inner().count.fetch_add",
+          "lineNumber": 425
+        },
+        {
+          "caller": "clone",
+          "callee": "self.inner",
+          "lineNumber": 425
+        },
+        {
+          "caller": "clone",
+          "callee": "process::abort",
+          "lineNumber": 437
+        },
+        {
+          "caller": "clone",
+          "callee": "ptr::NonNull::new_unchecked",
+          "lineNumber": 443
+        },
+        {
+          "caller": "clone",
+          "callee": "self.ptr",
+          "lineNumber": 443
+        },
+        {
+          "caller": "deref",
+          "callee": "self.inner",
+          "lineNumber": 455
+        },
+        {
+          "caller": "make_mut",
+          "callee": "this.is_unique",
+          "lineNumber": 475
+        },
+        {
+          "caller": "make_mut",
+          "callee": "Arc::new",
+          "lineNumber": 477
+        },
+        {
+          "caller": "make_mut",
+          "callee": "(**this).clone",
+          "lineNumber": 477
+        },
+        {
+          "caller": "make_mut",
+          "callee": "this.ptr",
+          "lineNumber": 486
+        },
+        {
+          "caller": "get_mut",
+          "callee": "this.is_unique",
+          "lineNumber": 495
+        },
+        {
+          "caller": "get_mut",
+          "callee": "Some",
+          "lineNumber": 498
+        },
+        {
+          "caller": "get_mut",
+          "callee": "this.ptr",
+          "lineNumber": 498
+        },
+        {
+          "caller": "is_static",
+          "callee": "self.inner().count.load",
+          "lineNumber": 510
+        },
+        {
+          "caller": "is_static",
+          "callee": "self.inner",
+          "lineNumber": 510
+        },
+        {
+          "caller": "is_unique",
+          "callee": "self.inner().count.load",
+          "lineNumber": 520
+        },
+        {
+          "caller": "is_unique",
+          "callee": "self.inner",
+          "lineNumber": 520
+        },
+        {
+          "caller": "drop",
+          "callee": "self.is_static",
+          "lineNumber": 529
+        },
+        {
+          "caller": "drop",
+          "callee": "self.inner().count.fetch_sub",
+          "lineNumber": 535
+        },
+        {
+          "caller": "drop",
+          "callee": "self.inner",
+          "lineNumber": 535
+        },
+        {
+          "caller": "drop",
+          "callee": "self.inner().count.load",
+          "lineNumber": 559
+        },
+        {
+          "caller": "drop",
+          "callee": "self.inner",
+          "lineNumber": 559
+        },
+        {
+          "caller": "drop",
+          "callee": "self.drop_slow",
+          "lineNumber": 562
+        },
+        {
+          "caller": "eq",
+          "callee": "Self::ptr_eq",
+          "lineNumber": 569
+        },
+        {
+          "caller": "ne",
+          "callee": "Self::ptr_eq",
+          "lineNumber": 573
+        },
+        {
+          "caller": "partial_cmp",
+          "callee": "(**self).partial_cmp",
+          "lineNumber": 579
+        },
+        {
+          "caller": "cmp",
+          "callee": "(**self).cmp",
+          "lineNumber": 600
+        },
+        {
+          "caller": "fmt",
+          "callee": "fmt::Display::fmt",
+          "lineNumber": 607
+        },
+        {
+          "caller": "fmt",
+          "callee": "fmt::Debug::fmt",
+          "lineNumber": 613
+        },
+        {
+          "caller": "fmt",
+          "callee": "fmt::Pointer::fmt",
+          "lineNumber": 619
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.ptr",
+          "lineNumber": 619
+        },
+        {
+          "caller": "default",
+          "callee": "Arc::new",
+          "lineNumber": 625
+        },
+        {
+          "caller": "default",
+          "callee": "Default::default",
+          "lineNumber": 625
+        },
+        {
+          "caller": "hash",
+          "callee": "(**self).hash",
+          "lineNumber": 631
+        },
+        {
+          "caller": "from",
+          "callee": "Arc::new",
+          "lineNumber": 638
+        },
+        {
+          "caller": "deserialize",
+          "callee": "T::deserialize(deserializer).map",
+          "lineNumber": 665
+        },
+        {
+          "caller": "deserialize",
+          "callee": "T::deserialize",
+          "lineNumber": 665
+        },
+        {
+          "caller": "serialize",
+          "callee": "(**self).serialize",
+          "lineNumber": 675
+        },
+        {
+          "caller": "eq",
+          "callee": "self.slice",
+          "lineNumber": 699
+        },
+        {
+          "caller": "eq",
+          "callee": "other.slice",
+          "lineNumber": 699
+        },
+        {
+          "caller": "drop",
+          "callee": "self.data_mut",
+          "lineNumber": 706
+        },
+        {
+          "caller": "drop",
+          "callee": "std::ptr::drop_in_place",
+          "lineNumber": 708
+        },
+        {
+          "caller": "drop",
+          "callee": "ptr.offset",
+          "lineNumber": 709
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"HeaderSlice\")\r\n            .field(\"header\", &self.header)\r\n            .field(\"slice\", &self.slice()).finish",
+          "lineNumber": 717
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"HeaderSlice\")\r\n            .field(\"header\", &self.header).field",
+          "lineNumber": 717
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"HeaderSlice\").field",
+          "lineNumber": 717
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct",
+          "lineNumber": 717
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.slice",
+          "lineNumber": 719
+        },
+        {
+          "caller": "slice",
+          "callee": "std::slice::from_raw_parts",
+          "lineNumber": 728
+        },
+        {
+          "caller": "slice",
+          "callee": "self.data",
+          "lineNumber": 728
+        },
+        {
+          "caller": "slice_mut",
+          "callee": "std::slice::from_raw_parts_mut",
+          "lineNumber": 744
+        },
+        {
+          "caller": "slice_mut",
+          "callee": "self.data_mut",
+          "lineNumber": 744
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "Layout::new::<ArcInner<HeaderSlice<H, T>>>",
+          "lineNumber": 780
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "Layout::array::<T>(num_items).expect",
+          "lineNumber": 783
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "Layout::array::<T>",
+          "lineNumber": 783
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "layout.extend(array_layout).expect",
+          "lineNumber": 784
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "layout.extend",
+          "lineNumber": 784
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "alloc",
+          "lineNumber": 787
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::NonNull::new(buffer)\r\n                .unwrap_or_else(|| alloc::handle_alloc_error(layout))\r\n                .cast::<ArcInner<HeaderSlice<H, T>>>",
+          "lineNumber": 788
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::NonNull::new(buffer).unwrap_or_else",
+          "lineNumber": 788
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::NonNull::new",
+          "lineNumber": 788
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "alloc::handle_alloc_error",
+          "lineNumber": 789
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 797
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 799
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::write",
+          "lineNumber": 801
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "p.as_mut",
+          "lineNumber": 801
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::write",
+          "lineNumber": 803
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "p.as_mut",
+          "lineNumber": 803
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "layout.size",
+          "lineNumber": 803
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::write",
+          "lineNumber": 804
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "p.as_mut",
+          "lineNumber": 804
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::write",
+          "lineNumber": 805
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "p.as_mut",
+          "lineNumber": 805
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "ptr::write",
+          "lineNumber": 809
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "items\r\n                            .next().expect",
+          "lineNumber": 811
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "items.next",
+          "lineNumber": 811
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "current.offset",
+          "lineNumber": 815
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "NS_LogCtor",
+          "lineNumber": 835
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "p.as_ptr",
+          "lineNumber": 835
+        },
+        {
+          "caller": "from_header_and_iter_alloc",
+          "callee": "b\"ServoArc\\0\".as_ptr",
+          "lineNumber": 835
+        },
+        {
+          "caller": "from_header_and_iter_with_size",
+          "callee": "Arc::from_header_and_iter_alloc",
+          "lineNumber": 859
+        },
+        {
+          "caller": "from_header_and_iter_with_size",
+          "callee": "alloc::alloc",
+          "lineNumber": 860
+        },
+        {
+          "caller": "from_header_and_iter",
+          "callee": "items.len",
+          "lineNumber": 875
+        },
+        {
+          "caller": "from_header_and_iter",
+          "callee": "Self::from_header_and_iter_with_size",
+          "lineNumber": 876
+        },
+        {
+          "caller": "from_header_and_iter",
+          "callee": "Self",
+          "lineNumber": 898
+        },
+        {
+          "caller": "from_header_and_iter",
+          "callee": "Arc::from_header_and_iter",
+          "lineNumber": 898
+        },
+        {
+          "caller": "from_header_and_iter_with_size",
+          "callee": "Self",
+          "lineNumber": 906
+        },
+        {
+          "caller": "from_header_and_iter_with_size",
+          "callee": "Arc::from_header_and_iter_with_size",
+          "lineNumber": 906
+        },
+        {
+          "caller": "header_mut",
+          "callee": "self.0.ptr",
+          "lineNumber": 914
+        },
+        {
+          "caller": "data_mut",
+          "callee": "(*self.0.ptr()).data.slice_mut",
+          "lineNumber": 920
+        },
+        {
+          "caller": "data_mut",
+          "callee": "self.0.ptr",
+          "lineNumber": 920
+        },
+        {
+          "caller": "clone_arc",
+          "callee": "Arc::from_raw",
+          "lineNumber": 953
+        },
+        {
+          "caller": "clone_arc",
+          "callee": "mem::forget",
+          "lineNumber": 955
+        },
+        {
+          "caller": "clone_arc",
+          "callee": "arc.clone",
+          "lineNumber": 955
+        },
+        {
+          "caller": "from_ref",
+          "callee": "ArcBorrow",
+          "lineNumber": 963
+        },
+        {
+          "caller": "with_arc",
+          "callee": "mem::ManuallyDrop::new",
+          "lineNumber": 981
+        },
+        {
+          "caller": "with_arc",
+          "callee": "Arc::from_raw",
+          "lineNumber": 981
+        },
+        {
+          "caller": "with_arc",
+          "callee": "f",
+          "lineNumber": 984
+        },
+        {
+          "caller": "eq",
+          "callee": "self.borrow",
+          "lineNumber": 1028
+        },
+        {
+          "caller": "eq",
+          "callee": "other.borrow",
+          "lineNumber": 1028
+        },
+        {
+          "caller": "new",
+          "callee": "ptr::NonNull::new_unchecked",
+          "lineNumber": 1048
+        },
+        {
+          "caller": "borrow",
+          "callee": "self.is_first",
+          "lineNumber": 1068
+        },
+        {
+          "caller": "borrow",
+          "callee": "self.p.as_ptr",
+          "lineNumber": 1069
+        },
+        {
+          "caller": "borrow",
+          "callee": "ArcBorrow::from_ref",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "borrow",
+          "callee": "ArcUnionBorrow::First",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "borrow",
+          "callee": "self.p.as_ptr",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "borrow",
+          "callee": "ArcBorrow::from_ref",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "borrow",
+          "callee": "ArcUnionBorrow::Second",
+          "lineNumber": 1075
+        },
+        {
+          "caller": "from_first",
+          "callee": "Self::new",
+          "lineNumber": 1081
+        },
+        {
+          "caller": "from_first",
+          "callee": "other.ptr",
+          "lineNumber": 1081
+        },
+        {
+          "caller": "from_first",
+          "callee": "mem::forget",
+          "lineNumber": 1082
+        },
+        {
+          "caller": "from_second",
+          "callee": "Self::new",
+          "lineNumber": 1088
+        },
+        {
+          "caller": "from_second",
+          "callee": "other.ptr",
+          "lineNumber": 1088
+        },
+        {
+          "caller": "from_second",
+          "callee": "mem::forget",
+          "lineNumber": 1089
+        },
+        {
+          "caller": "is_first",
+          "callee": "self.p.as_ptr",
+          "lineNumber": 1095
+        },
+        {
+          "caller": "is_second",
+          "callee": "self.is_first",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "as_first",
+          "callee": "self.borrow",
+          "lineNumber": 1105
+        },
+        {
+          "caller": "as_first",
+          "callee": "Some",
+          "lineNumber": 1106
+        },
+        {
+          "caller": "as_second",
+          "callee": "self.borrow",
+          "lineNumber": 1113
+        },
+        {
+          "caller": "as_second",
+          "callee": "Some",
+          "lineNumber": 1115
+        },
+        {
+          "caller": "clone",
+          "callee": "self.borrow",
+          "lineNumber": 1122
+        },
+        {
+          "caller": "clone",
+          "callee": "ArcUnion::from_first",
+          "lineNumber": 1123
+        },
+        {
+          "caller": "clone",
+          "callee": "x.clone_arc",
+          "lineNumber": 1123
+        },
+        {
+          "caller": "clone",
+          "callee": "ArcUnion::from_second",
+          "lineNumber": 1124
+        },
+        {
+          "caller": "clone",
+          "callee": "x.clone_arc",
+          "lineNumber": 1124
+        },
+        {
+          "caller": "drop",
+          "callee": "self.borrow",
+          "lineNumber": 1131
+        },
+        {
+          "caller": "drop",
+          "callee": "Arc::from_raw",
+          "lineNumber": 1133
+        },
+        {
+          "caller": "drop",
+          "callee": "Arc::from_raw",
+          "lineNumber": 1136
+        },
+        {
+          "caller": "fmt",
+          "callee": "fmt::Debug::fmt",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.borrow",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "drop",
+          "callee": "(*self.0).fetch_add",
+          "lineNumber": 1162
+        },
+        {
+          "caller": "empty_thin",
+          "callee": "Arc::from_header_and_iter",
+          "lineNumber": 1169
+        },
+        {
+          "caller": "empty_thin",
+          "callee": "std::iter::empty::<i32>",
+          "lineNumber": 1169
+        },
+        {
+          "caller": "thin_assert_padding",
+          "callee": "ThinArc::from_header_and_iter",
+          "lineNumber": 1184
+        },
+        {
+          "caller": "thin_assert_padding",
+          "callee": "items.into_iter",
+          "lineNumber": 1184
+        },
+        {
+          "caller": "slices_and_thin",
+          "callee": "atomic::AtomicUsize::new",
+          "lineNumber": 1192
+        },
+        {
+          "caller": "slices_and_thin",
+          "callee": "Canary",
+          "lineNumber": 1193
+        },
+        {
+          "caller": "slices_and_thin",
+          "callee": "Arc::from_header_and_iter",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "slices_and_thin",
+          "callee": "v.into_iter",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "slices_and_thin",
+          "callee": "x.clone",
+          "lineNumber": 1197
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 49,
+        "functionCount": 83,
+        "classCount": 7
+      }
+    },
+    {
+      "path": "servo_arc/LICENSE-APACHE",
+      "language": "unknown",
+      "fileCategory": "docs",
+      "totalLines": 201,
+      "nonEmptyLines": 169,
+      "metrics": {}
+    },
+    {
+      "path": "servo_arc/LICENSE-MIT",
+      "language": "unknown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 21,
+      "metrics": {}
+    },
+    {
+      "path": "stylo_atoms/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "build-dependencies",
+          "level": 1,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "stylo_atoms/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "stylo_atoms/build.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 10,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "Path::new(&env::var_os(\"CARGO_MANIFEST_DIR\").unwrap()).join",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "Path::new",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "env::var_os(\"CARGO_MANIFEST_DIR\").unwrap",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "env::var_os",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "BufReader::new",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "File::open(&static_atoms).unwrap",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "File::open",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "string_cache_codegen::AtomType::new",
+          "lineNumber": 14
+        },
+        {
+          "caller": "main",
+          "callee": "atom_type\r\n        .atoms(static_atoms.lines().map(Result::unwrap))\r\n        .write_to_file(&Path::new(&env::var_os(\"OUT_DIR\").unwrap()).join(\"atom.rs\")).unwrap",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "atom_type\r\n        .atoms(static_atoms.lines().map(Result::unwrap)).write_to_file",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "atom_type.atoms",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "static_atoms.lines().map",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "static_atoms.lines",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "Path::new(&env::var_os(\"OUT_DIR\").unwrap()).join",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "Path::new",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "env::var_os(\"OUT_DIR\").unwrap",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "env::var_os",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "stylo_atoms/predefined_counter_styles.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 64,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "stylo_dom/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "stylo_dom/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 196,
+      "nonEmptyLines": 185,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "stylo_static_prefs/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "build-dependencies",
+          "level": 1,
+          "line": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "stylo_static_prefs/src/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "test_basic_preferences",
+          "startLine": 10,
+          "endLine": 18,
+          "params": []
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style_traits/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "to_shmem/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 31,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "to_shmem/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 618,
+      "nonEmptyLines": 535,
+      "functions": [
+        {
+          "name": "padding_needed_for",
+          "startLine": 57,
+          "endLine": 59,
+          "params": [
+            "size",
+            "align"
+          ]
+        },
+        {
+          "name": "padded_size",
+          "startLine": 62,
+          "endLine": 64,
+          "params": [
+            "size",
+            "align"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 68,
+          "endLine": 76,
+          "params": [
+            "buffer",
+            "capacity"
+          ]
+        },
+        {
+          "name": "len",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "write",
+          "startLine": 91,
+          "endLine": 106,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "alloc_value",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "alloc_array",
+          "startLine": 120,
+          "endLine": 129,
+          "params": [
+            "len"
+          ]
+        },
+        {
+          "name": "alloc",
+          "startLine": 135,
+          "endLine": 153,
+          "params": [
+            "layout"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 208,
+          "endLine": 210,
+          "params": [
+            "_builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 214,
+          "endLine": 219,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 223,
+          "endLine": 228,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 232,
+          "endLine": 236,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 240,
+          "endLine": 254,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem_slice_ptr",
+          "startLine": 259,
+          "endLine": 277,
+          "params": [
+            "src",
+            "dest",
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem_slice",
+          "startLine": 281,
+          "endLine": 291,
+          "params": [
+            "src",
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 294,
+          "endLine": 299,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 303,
+          "endLine": 315,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 319,
+          "endLine": 333,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 337,
+          "endLine": 349,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 353,
+          "endLine": 359,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 366,
+          "endLine": 374,
+          "params": [
+            "_builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 378,
+          "endLine": 385,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 390,
+          "endLine": 407,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 416,
+          "endLine": 427,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 431,
+          "endLine": 459,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 463,
+          "endLine": 496,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 501,
+          "endLine": 553,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 558,
+          "endLine": 580,
+          "params": [
+            "builder"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 585,
+          "endLine": 594,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 598,
+          "endLine": 601,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "to_shmem",
+          "startLine": 612,
+          "endLine": 617,
+          "params": [
+            "_builder"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SharedMemoryBuilder",
+          "startLine": 39,
+          "endLine": 53,
+          "methods": [
+            "new",
+            "len",
+            "write",
+            "alloc_value",
+            "alloc_array",
+            "alloc"
+          ],
+          "properties": [
+            "buffer",
+            "capacity",
+            "index",
+            "shared_values"
+          ]
+        },
+        {
+          "name": "ToShmem",
+          "startLine": 157,
+          "endLine": 171,
+          "methods": [
+            "to_shmem"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SharedMemoryBuilder",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "len",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "write",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "alloc_value",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "alloc_array",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "alloc",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "ToShmem",
+          "line": 157,
+          "isDefault": false
+        },
+        {
+          "name": "to_shmem_slice",
+          "line": 281,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "padding_needed_for",
+          "callee": "padded_size(size, align).wrapping_sub",
+          "lineNumber": 58
+        },
+        {
+          "caller": "padding_needed_for",
+          "callee": "padded_size",
+          "lineNumber": 58
+        },
+        {
+          "caller": "padded_size",
+          "callee": "size.wrapping_add(align).wrapping_sub",
+          "lineNumber": 63
+        },
+        {
+          "caller": "padded_size",
+          "callee": "size.wrapping_add",
+          "lineNumber": 63
+        },
+        {
+          "caller": "padded_size",
+          "callee": "align.wrapping_sub",
+          "lineNumber": 63
+        },
+        {
+          "caller": "new",
+          "callee": "HashSet::new",
+          "lineNumber": 74
+        },
+        {
+          "caller": "write",
+          "callee": "self.alloc_value",
+          "lineNumber": 93
+        },
+        {
+          "caller": "write",
+          "callee": "value.to_shmem",
+          "lineNumber": 97
+        },
+        {
+          "caller": "write",
+          "callee": "ptr::write",
+          "lineNumber": 101
+        },
+        {
+          "caller": "write",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 101
+        },
+        {
+          "caller": "write",
+          "callee": "Ok",
+          "lineNumber": 105
+        },
+        {
+          "caller": "alloc_value",
+          "callee": "self.alloc",
+          "lineNumber": 113
+        },
+        {
+          "caller": "alloc_value",
+          "callee": "Layout::new::<T>",
+          "lineNumber": 113
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "NonNull::dangling().as_ptr",
+          "lineNumber": 122
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "NonNull::dangling",
+          "lineNumber": 122
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "mem::size_of::<T>",
+          "lineNumber": 125
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "mem::align_of::<T>",
+          "lineNumber": 126
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "self.alloc",
+          "lineNumber": 128
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "Layout::from_size_align(padded_size(size, align) * len, align).unwrap",
+          "lineNumber": 128
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "Layout::from_size_align",
+          "lineNumber": 128
+        },
+        {
+          "caller": "alloc_array",
+          "callee": "padded_size",
+          "lineNumber": 128
+        },
+        {
+          "caller": "alloc",
+          "callee": "padding_needed_for",
+          "lineNumber": 141
+        },
+        {
+          "caller": "alloc",
+          "callee": "layout.align",
+          "lineNumber": 141
+        },
+        {
+          "caller": "alloc",
+          "callee": "self.index.checked_add(padding).unwrap",
+          "lineNumber": 144
+        },
+        {
+          "caller": "alloc",
+          "callee": "self.index.checked_add",
+          "lineNumber": 144
+        },
+        {
+          "caller": "alloc",
+          "callee": "start.checked_add(layout.size()).unwrap",
+          "lineNumber": 148
+        },
+        {
+          "caller": "alloc",
+          "callee": "start.checked_add",
+          "lineNumber": 148
+        },
+        {
+          "caller": "alloc",
+          "callee": "layout.size",
+          "lineNumber": 148
+        },
+        {
+          "caller": "alloc",
+          "callee": "self.buffer.add",
+          "lineNumber": 152
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 209
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 209
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 215
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 215
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 216
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.start.to_shmem",
+          "lineNumber": 216
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 217
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.end.to_shmem",
+          "lineNumber": 217
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 224
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 224
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 225
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.0.to_shmem",
+          "lineNumber": 225
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 226
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.1.to_shmem",
+          "lineNumber": 226
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 233
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 233
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Wrapping",
+          "lineNumber": 233
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 233
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.0.to_shmem",
+          "lineNumber": 234
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc_value",
+          "lineNumber": 242
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "(**self).to_shmem",
+          "lineNumber": 246
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::write",
+          "lineNumber": 250
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 250
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 252
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 252
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Box::from_raw",
+          "lineNumber": 252
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "slice::from_raw_parts_mut",
+          "lineNumber": 268
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "src.len",
+          "lineNumber": 268
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "src.zip",
+          "lineNumber": 272
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "dest.iter_mut",
+          "lineNumber": 272
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "ptr::write",
+          "lineNumber": 273
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 273
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "src.to_shmem",
+          "lineNumber": 273
+        },
+        {
+          "caller": "to_shmem_slice_ptr",
+          "callee": "Ok",
+          "lineNumber": 276
+        },
+        {
+          "caller": "to_shmem_slice",
+          "callee": "builder.alloc_array",
+          "lineNumber": 289
+        },
+        {
+          "caller": "to_shmem_slice",
+          "callee": "src.len",
+          "lineNumber": 289
+        },
+        {
+          "caller": "to_shmem_slice",
+          "callee": "to_shmem_slice_ptr",
+          "lineNumber": 290
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "to_shmem_slice",
+          "lineNumber": 296
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.iter",
+          "lineNumber": 296
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 297
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 297
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Box::from_raw",
+          "lineNumber": 297
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc_array",
+          "lineNumber": 305
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 305
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::copy",
+          "lineNumber": 309
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_ptr",
+          "lineNumber": 309
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 309
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 311
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 311
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Box::from_raw",
+          "lineNumber": 311
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "str::from_utf8_unchecked_mut",
+          "lineNumber": 312
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "slice::from_raw_parts_mut",
+          "lineNumber": 312
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 312
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc_array",
+          "lineNumber": 321
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 321
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::copy",
+          "lineNumber": 325
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_ptr",
+          "lineNumber": 325
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 325
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 327
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 327
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "String::from_raw_parts",
+          "lineNumber": 327
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 329
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 330
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_bytes_with_nul().len",
+          "lineNumber": 338
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_bytes_with_nul",
+          "lineNumber": 338
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc_array",
+          "lineNumber": 341
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::copy",
+          "lineNumber": 345
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_ptr",
+          "lineNumber": 345
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 347
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 347
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "CString::from_raw",
+          "lineNumber": 347
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "to_shmem_slice",
+          "lineNumber": 355
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.iter",
+          "lineNumber": 355
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Vec::from_raw_parts",
+          "lineNumber": 356
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 356
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 356
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 357
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 357
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.is_empty",
+          "lineNumber": 367
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Err",
+          "lineNumber": 368
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 373
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 373
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::default",
+          "lineNumber": 373
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Some",
+          "lineNumber": 380
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 380
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "v.to_shmem",
+          "lineNumber": 380
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 384
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 384
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.spilled",
+          "lineNumber": 392
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "to_shmem_slice",
+          "lineNumber": 395
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.iter",
+          "lineNumber": 395
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::from_raw_parts",
+          "lineNumber": 396
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 396
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 396
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::new",
+          "lineNumber": 399
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "to_shmem_slice_ptr",
+          "lineNumber": 400
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.iter",
+          "lineNumber": 400
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "s.as_mut_ptr",
+          "lineNumber": 400
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "s.set_len",
+          "lineNumber": 401
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 401
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 406
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 406
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 419
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 419
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.borrow",
+          "lineNumber": 419
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::from_first",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "first.with_arc",
+          "lineNumber": 421
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "a.to_shmem",
+          "lineNumber": 421
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::from_second",
+          "lineNumber": 423
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 423
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "second.with_arc",
+          "lineNumber": 424
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "a.to_shmem",
+          "lineNumber": 424
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "(**self).to_shmem",
+          "lineNumber": 444
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::new_static",
+          "lineNumber": 449
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc",
+          "lineNumber": 450
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 451
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.shared_values.insert",
+          "lineNumber": 455
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.heap_ptr",
+          "lineNumber": 455
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 457
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 457
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.header.to_shmem",
+          "lineNumber": 475
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Vec::with_capacity",
+          "lineNumber": 476
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 476
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.slice().iter",
+          "lineNumber": 477
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.slice",
+          "lineNumber": 477
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "values.push",
+          "lineNumber": 478
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "v.to_shmem",
+          "lineNumber": 478
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "values.len",
+          "lineNumber": 483
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::from_header_and_iter_alloc",
+          "lineNumber": 484
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc",
+          "lineNumber": 485
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::into_inner",
+          "lineNumber": 486
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "values.into_iter().map",
+          "lineNumber": 487
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "values.into_iter",
+          "lineNumber": 487
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.shared_values.insert",
+          "lineNumber": 493
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.heap_ptr",
+          "lineNumber": 493
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 495
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 495
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.len",
+          "lineNumber": 507
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "mem::size_of::<u32>",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "mem::size_of::<u32>",
+          "lineNumber": 513
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "mem::size_of::<T>",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "mem::align_of::<T>",
+          "lineNumber": 516
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Layout::from_size_align(\r\n            header_size + header_padding + padded_size(item_size, item_align) * len,\r\n            item_align,\r\n        ).unwrap",
+          "lineNumber": 526
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Layout::from_size_align",
+          "lineNumber": 526
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "padded_size",
+          "lineNumber": 527
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc::<u8>",
+          "lineNumber": 532
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "shmem_header_ptr.add",
+          "lineNumber": 533
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.as_ptr",
+          "lineNumber": 535
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "data_ptr.sub",
+          "lineNumber": 536
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::copy",
+          "lineNumber": 541
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "to_shmem_slice_ptr",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.iter",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "mem::transmute",
+          "lineNumber": 545
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 551
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 551
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.clone().into_storage",
+          "lineNumber": 561
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.clone",
+          "lineNumber": 561
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "vs.len",
+          "lineNumber": 564
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "builder.alloc_array",
+          "lineNumber": 565
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "vs.as_ptr",
+          "lineNumber": 569
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ptr::copy",
+          "lineNumber": 570
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Box::from_raw",
+          "lineNumber": 573
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "slice::from_raw_parts_mut",
+          "lineNumber": 573
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "InternalStorage::Spilled",
+          "lineNumber": 574
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "InternalStorage::Inline",
+          "lineNumber": 577
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 579
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 579
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::from_storage",
+          "lineNumber": 579
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 600
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 600
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Self::new",
+          "lineNumber": 600
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "self.load",
+          "lineNumber": 600
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "Ok",
+          "lineNumber": 613
+        },
+        {
+          "caller": "to_shmem",
+          "callee": "ManuallyDrop::new",
+          "lineNumber": 613
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 31,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "to_shmem_derive/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 19,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "style/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 110,
+      "nonEmptyLines": 104,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 54
+        },
+        {
+          "heading": "build-dependencies",
+          "level": 1,
+          "line": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "selectors/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 37,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "package",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "lib",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "build-dependencies",
+          "level": 1,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "selectors/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "selectors/CHANGES.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    }
+  ]
+}

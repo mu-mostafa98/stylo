@@ -1,0 +1,4574 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/queries/condition.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 993,
+      "nonEmptyLines": 926,
+      "functions": [
+        {
+          "name": "to_css",
+          "startLine": 136,
+          "endLine": 168,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "maybe_parenthesized",
+          "startLine": 175,
+          "endLine": 186,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 188,
+          "endLine": 205,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "parse_in_parenthesis_block",
+          "startLine": 207,
+          "endLine": 223,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "try_parse_block",
+          "startLine": 225,
+          "endLine": 246,
+          "params": [
+            "context",
+            "input",
+            "start",
+            "parse"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 248,
+          "endLine": 272,
+          "params": [
+            "ctx",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "parse_in_parens",
+          "startLine": 276,
+          "endLine": 303,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "new_not",
+          "startLine": 305,
+          "endLine": 307,
+          "params": [
+            "inner"
+          ]
+        },
+        {
+          "name": "new_operation",
+          "startLine": 309,
+          "endLine": 311,
+          "params": [
+            "conditions",
+            "operator"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 325,
+          "endLine": 334,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 336,
+          "endLine": 345,
+          "params": [
+            "ctx",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 357,
+          "endLine": 375,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 379,
+          "endLine": 407,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "substitute_and_compare",
+          "startLine": 411,
+          "endLine": 453,
+          "params": [
+            "value",
+            "registration",
+            "stylist",
+            "ctx",
+            "attribute_tracker",
+            "current_value"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 455,
+          "endLine": 529,
+          "params": [
+            "ctx",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 591,
+          "endLine": 607,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 610,
+          "endLine": 616,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 619,
+          "endLine": 621,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 625,
+          "endLine": 635,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 660,
+          "endLine": 705,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "consume_any_value",
+          "startLine": 709,
+          "endLine": 711,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 715,
+          "endLine": 721,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "visit",
+          "startLine": 723,
+          "endLine": 742,
+          "params": [
+            "visitor"
+          ]
+        },
+        {
+          "name": "cumulative_flags",
+          "startLine": 746,
+          "endLine": 757,
+          "params": []
+        },
+        {
+          "name": "parse_disallow_or",
+          "startLine": 762,
+          "endLine": 768,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "parse_in_parenthesis_block",
+          "startLine": 770,
+          "endLine": 792,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "try_parse_block",
+          "startLine": 794,
+          "endLine": 815,
+          "params": [
+            "context",
+            "input",
+            "start",
+            "parse"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 822,
+          "endLine": 850,
+          "params": [
+            "context",
+            "custom",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "matches_general",
+          "startLine": 854,
+          "endLine": 932,
+          "params": [
+            "css_text",
+            "url_data",
+            "context",
+            "custom",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "parse_in_parens",
+          "startLine": 939,
+          "endLine": 984,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "new_not",
+          "startLine": 986,
+          "endLine": 988,
+          "params": [
+            "inner"
+          ]
+        },
+        {
+          "name": "new_operation",
+          "startLine": 990,
+          "endLine": 992,
+          "params": [
+            "conditions",
+            "operator"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Operator",
+          "startLine": 37,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "And",
+            "Or"
+          ]
+        },
+        {
+          "name": "AllowOr",
+          "startLine": 44,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "StyleFeatureValue",
+          "startLine": 50,
+          "endLine": 53,
+          "methods": [],
+          "properties": [
+            "Value",
+            "Keyword"
+          ]
+        },
+        {
+          "name": "OperationParser",
+          "startLine": 60,
+          "endLine": 118,
+          "methods": [
+            "parse_in_parens",
+            "new_not",
+            "new_operation",
+            "parse_internal"
+          ],
+          "properties": []
+        },
+        {
+          "name": "StyleQuery",
+          "startLine": 122,
+          "endLine": 133,
+          "methods": [
+            "to_css",
+            "maybe_parenthesized",
+            "parse",
+            "parse_in_parenthesis_block",
+            "try_parse_block",
+            "matches",
+            "parse_in_parens",
+            "new_not",
+            "new_operation"
+          ],
+          "properties": [
+            "Not",
+            "Operation",
+            "InParens",
+            "Feature",
+            "GeneralEnclosed"
+          ]
+        },
+        {
+          "name": "StyleFeature",
+          "startLine": 317,
+          "endLine": 322,
+          "methods": [
+            "parse",
+            "matches"
+          ],
+          "properties": [
+            "Plain",
+            "Range"
+          ]
+        },
+        {
+          "name": "StyleFeaturePlain",
+          "startLine": 350,
+          "endLine": 354,
+          "methods": [
+            "to_css",
+            "parse",
+            "substitute_and_compare",
+            "matches"
+          ],
+          "properties": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "BoolValue",
+          "startLine": 547,
+          "endLine": 550,
+          "methods": [],
+          "properties": [
+            "False",
+            "True"
+          ]
+        },
+        {
+          "name": "MozPrefFeatureValue",
+          "startLine": 567,
+          "endLine": 577,
+          "methods": [],
+          "properties": [
+            "None",
+            "Boolean",
+            "Integer",
+            "String"
+          ]
+        },
+        {
+          "name": "MozPrefFeature",
+          "startLine": 585,
+          "endLine": 588,
+          "methods": [
+            "parse",
+            "matches",
+            "matches",
+            "to_css"
+          ],
+          "properties": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "QueryCondition",
+          "startLine": 640,
+          "endLine": 657,
+          "methods": [
+            "to_css",
+            "parse",
+            "visit",
+            "cumulative_flags",
+            "parse_disallow_or",
+            "parse_in_parenthesis_block",
+            "try_parse_block",
+            "matches",
+            "matches_general",
+            "parse_in_parens",
+            "new_not",
+            "new_operation"
+          ],
+          "properties": [
+            "Feature",
+            "Custom",
+            "Not",
+            "Operation",
+            "InParens",
+            "Style",
+            "MozPref",
+            "GeneralEnclosed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Operator",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "StyleQuery",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "StyleFeature",
+          "line": 317,
+          "isDefault": false
+        },
+        {
+          "name": "StyleFeaturePlain",
+          "line": 350,
+          "isDefault": false
+        },
+        {
+          "name": "BoolValue",
+          "line": 547,
+          "isDefault": false
+        },
+        {
+          "name": "MozPrefFeatureValue",
+          "line": 567,
+          "isDefault": false
+        },
+        {
+          "name": "MozPrefFeature",
+          "line": 585,
+          "isDefault": false
+        },
+        {
+          "name": "QueryCondition",
+          "line": 640,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 715,
+          "isDefault": false
+        },
+        {
+          "name": "cumulative_flags",
+          "line": 746,
+          "isDefault": false
+        },
+        {
+          "name": "parse_disallow_or",
+          "line": 762,
+          "isDefault": false
+        },
+        {
+          "name": "matches",
+          "line": 822,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_internal",
+          "callee": "input.current_source_location",
+          "lineNumber": 70
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "input.try_parse(|i| i.expect_ident_matching(\"not\")).is_ok",
+          "lineNumber": 72
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "input.try_parse",
+          "lineNumber": 72
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "i.expect_ident_matching",
+          "lineNumber": 72
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::parse_in_parens",
+          "lineNumber": 73
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Ok",
+          "lineNumber": 74
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::new_not",
+          "lineNumber": 74
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Box::new",
+          "lineNumber": 74
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::parse_in_parens",
+          "lineNumber": 77
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "input.try_parse",
+          "lineNumber": 78
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Ok",
+          "lineNumber": 80
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Err",
+          "lineNumber": 84
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "location.new_custom_error",
+          "lineNumber": 84
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "conditions.push",
+          "lineNumber": 88
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "conditions.push",
+          "lineNumber": 89
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::parse_in_parens",
+          "lineNumber": 89
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "input.try_parse(|i| i.expect_ident_matching(delim)).is_err",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "input.try_parse",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "i.expect_ident_matching",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Ok",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::new_operation",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "conditions.into_boxed_slice",
+          "lineNumber": 98
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "conditions.push",
+          "lineNumber": 101
+        },
+        {
+          "caller": "parse_internal",
+          "callee": "Self::parse_in_parens",
+          "lineNumber": 101
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 142
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.maybe_parenthesized",
+          "lineNumber": 143
+        },
+        {
+          "caller": "to_css",
+          "callee": "list.iter",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next().unwrap",
+          "lineNumber": 147
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next",
+          "lineNumber": 147
+        },
+        {
+          "caller": "to_css",
+          "callee": "item.maybe_parenthesized",
+          "lineNumber": 148
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 150
+        },
+        {
+          "caller": "to_css",
+          "callee": "op.to_css",
+          "lineNumber": 151
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 152
+        },
+        {
+          "caller": "to_css",
+          "callee": "item.maybe_parenthesized",
+          "lineNumber": 153
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 155
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 159
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 160
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 161
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 163
+        },
+        {
+          "caller": "to_css",
+          "callee": "f.to_css",
+          "lineNumber": 165
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 166
+        },
+        {
+          "caller": "maybe_parenthesized",
+          "callee": "dest.write_str",
+          "lineNumber": 180
+        },
+        {
+          "caller": "maybe_parenthesized",
+          "callee": "dest.write_char",
+          "lineNumber": 182
+        },
+        {
+          "caller": "maybe_parenthesized",
+          "callee": "self.to_css",
+          "lineNumber": 183
+        },
+        {
+          "caller": "maybe_parenthesized",
+          "callee": "dest.write_char",
+          "lineNumber": 184
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 196
+        },
+        {
+          "caller": "parse",
+          "callee": "input.new_custom_error",
+          "lineNumber": 196
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 199
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleFeature::parse",
+          "lineNumber": 199
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 200
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::Feature",
+          "lineNumber": 200
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::parse_internal",
+          "lineNumber": 203
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 204
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::InParens",
+          "lineNumber": 204
+        },
+        {
+          "caller": "parse",
+          "callee": "Box::new",
+          "lineNumber": 204
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.try_parse",
+          "lineNumber": 213
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "StyleFeature::parse",
+          "lineNumber": 213
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 214
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::Feature",
+          "lineNumber": 214
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::parse",
+          "lineNumber": 218
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 219
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 222
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.try_parse",
+          "lineNumber": 234
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.parse_nested_block",
+          "lineNumber": 234
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "Some",
+          "lineNumber": 236
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "ContextualParseError::InvalidMediaRule",
+          "lineNumber": 241
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.slice_from",
+          "lineNumber": 241
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "context.log_css_error",
+          "lineNumber": 242
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx.builder.add_flags",
+          "lineNumber": 253
+        },
+        {
+          "caller": "matches",
+          "callee": "f.matches",
+          "lineNumber": 256
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 257
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 258
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::any_false",
+          "lineNumber": 262
+        },
+        {
+          "caller": "matches",
+          "callee": "conditions.iter",
+          "lineNumber": 262
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 263
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::any",
+          "lineNumber": 266
+        },
+        {
+          "caller": "matches",
+          "callee": "conditions.iter",
+          "lineNumber": 266
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 266
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 282
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.position",
+          "lineNumber": 283
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.current_source_location",
+          "lineNumber": 284
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.next",
+          "lineNumber": 285
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::try_parse_block",
+          "lineNumber": 287
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::parse_in_parenthesis_block",
+          "lineNumber": 288
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Ok",
+          "lineNumber": 290
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.parse_nested_block",
+          "lineNumber": 294
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "i.expect_ident",
+          "lineNumber": 295
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "i.expect_colon",
+          "lineNumber": 296
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "consume_any_value",
+          "lineNumber": 297
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Ok",
+          "lineNumber": 299
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::GeneralEnclosed",
+          "lineNumber": 299
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.slice_from(start).to_owned",
+          "lineNumber": 299
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.slice_from",
+          "lineNumber": 299
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Err",
+          "lineNumber": 301
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "start_location.new_unexpected_token_error",
+          "lineNumber": 301
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "t.clone",
+          "lineNumber": 301
+        },
+        {
+          "caller": "new_not",
+          "callee": "Self::Not",
+          "lineNumber": 306
+        },
+        {
+          "caller": "new_operation",
+          "callee": "Self::Operation",
+          "lineNumber": 310
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 329
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryStyleRange::parse",
+          "lineNumber": 329
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 330
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::Range",
+          "lineNumber": 330
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 333
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::Plain",
+          "lineNumber": 333
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleFeaturePlain::parse",
+          "lineNumber": 333
+        },
+        {
+          "caller": "matches",
+          "callee": "plain.matches",
+          "lineNumber": 342
+        },
+        {
+          "caller": "matches",
+          "callee": "range.evaluate",
+          "lineNumber": 343
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 361
+        },
+        {
+          "caller": "to_css",
+          "callee": "crate::values::serialize_atom_identifier",
+          "lineNumber": 362
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 365
+        },
+        {
+          "caller": "to_css",
+          "callee": "k.to_css",
+          "lineNumber": 366
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 369
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 370
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 374
+        },
+        {
+          "caller": "parse",
+          "callee": "input.expect_ident",
+          "lineNumber": 383
+        },
+        {
+          "caller": "parse",
+          "callee": "custom_properties::parse_name",
+          "lineNumber": 385
+        },
+        {
+          "caller": "parse",
+          "callee": "ident.as_ref",
+          "lineNumber": 385
+        },
+        {
+          "caller": "parse",
+          "callee": "custom_properties::Name::from",
+          "lineNumber": 386
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 387
+        },
+        {
+          "caller": "parse",
+          "callee": "input.new_custom_error",
+          "lineNumber": 387
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse(|i| i.expect_colon()).is_ok",
+          "lineNumber": 389
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 389
+        },
+        {
+          "caller": "parse",
+          "callee": "i.expect_colon",
+          "lineNumber": 389
+        },
+        {
+          "caller": "parse",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 390
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 391
+        },
+        {
+          "caller": "parse",
+          "callee": "CSSWideKeyword::parse",
+          "lineNumber": 391
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleFeatureValue::Keyword",
+          "lineNumber": 392
+        },
+        {
+          "caller": "parse",
+          "callee": "custom_properties::SpecifiedValue::parse",
+          "lineNumber": 394
+        },
+        {
+          "caller": "parse",
+          "callee": "Some",
+          "lineNumber": 396
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 400
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleFeatureValue::Value",
+          "lineNumber": 401
+        },
+        {
+          "caller": "parse",
+          "callee": "Some",
+          "lineNumber": 401
+        },
+        {
+          "caller": "parse",
+          "callee": "Arc::new",
+          "lineNumber": 401
+        },
+        {
+          "caller": "parse",
+          "callee": "StyleFeatureValue::Value",
+          "lineNumber": 404
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 406
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "custom_properties::ComputedSubstitutionFunctions::new",
+          "lineNumber": 419
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "Some",
+          "lineNumber": 420
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "ctx.inherited_custom_properties().clone",
+          "lineNumber": 420
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "ctx.inherited_custom_properties",
+          "lineNumber": 420
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "custom_properties::substitute",
+          "lineNumber": 424
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "current_value.is_none",
+          "lineNumber": 432
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "registration.is_universal",
+          "lineNumber": 434
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "v.as_universal().is_some_and",
+          "lineNumber": 436
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "v.as_universal",
+          "lineNumber": 436
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "css.is_empty",
+          "lineNumber": 437
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "cssparser::ParserInput::new",
+          "lineNumber": 440
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "Parser::new",
+          "lineNumber": 441
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "SpecifiedRegisteredValue::compute(\r\n            &mut parser,\r\n            registration,\r\n            None,\r\n            &value.url_data,\r\n            ctx,\r\n            AllowComputationallyDependent::Yes,\r\n            attr_taint,\r\n        ).ok",
+          "lineNumber": 442
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "SpecifiedRegisteredValue::compute",
+          "lineNumber": 442
+        },
+        {
+          "caller": "substitute_and_compare",
+          "callee": "computed.as_ref",
+          "lineNumber": 452
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx\r\n            .builder\r\n            .stylist.expect",
+          "lineNumber": 461
+        },
+        {
+          "caller": "matches",
+          "callee": "stylist.get_custom_property_registration",
+          "lineNumber": 465
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx\r\n            .inherited_custom_properties().get",
+          "lineNumber": 466
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx.inherited_custom_properties",
+          "lineNumber": 466
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::from",
+          "lineNumber": 469
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx.container_info.is_none",
+          "lineNumber": 471
+        },
+        {
+          "caller": "matches",
+          "callee": "v.has_references",
+          "lineNumber": 474
+        },
+        {
+          "caller": "matches",
+          "callee": "Self::substitute_and_compare",
+          "lineNumber": 477
+        },
+        {
+          "caller": "matches",
+          "callee": "custom_properties::compute_variable_value(&v, registration, ctx).as_ref",
+          "lineNumber": 486
+        },
+        {
+          "caller": "matches",
+          "callee": "custom_properties::compute_variable_value",
+          "lineNumber": 486
+        },
+        {
+          "caller": "matches",
+          "callee": "current_value.is_some",
+          "lineNumber": 490
+        },
+        {
+          "caller": "matches",
+          "callee": "current_value.is_none",
+          "lineNumber": 493
+        },
+        {
+          "caller": "matches",
+          "callee": "custom_properties::compute_variable_value",
+          "lineNumber": 496
+        },
+        {
+          "caller": "matches",
+          "callee": "v.as_ref",
+          "lineNumber": 501
+        },
+        {
+          "caller": "matches",
+          "callee": "current_value.is_none",
+          "lineNumber": 503
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx\r\n                            .container_info\r\n                            .as_ref()\r\n                            .expect(\"queries should provide container info\").inherited_style",
+          "lineNumber": 507
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx\r\n                            .container_info\r\n                            .as_ref().expect",
+          "lineNumber": 507
+        },
+        {
+          "caller": "matches",
+          "callee": "ctx\r\n                            .container_info.as_ref",
+          "lineNumber": 507
+        },
+        {
+          "caller": "matches",
+          "callee": "inherited.custom_properties().get",
+          "lineNumber": 513
+        },
+        {
+          "caller": "matches",
+          "callee": "inherited.custom_properties",
+          "lineNumber": 513
+        },
+        {
+          "caller": "parse",
+          "callee": "context.chrome_rules_enabled",
+          "lineNumber": 597
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 598
+        },
+        {
+          "caller": "parse",
+          "callee": "input.new_custom_error",
+          "lineNumber": 598
+        },
+        {
+          "caller": "parse",
+          "callee": "AtomString::parse",
+          "lineNumber": 600
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse(|i| i.expect_comma()).is_ok",
+          "lineNumber": 601
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 601
+        },
+        {
+          "caller": "parse",
+          "callee": "i.expect_comma",
+          "lineNumber": 601
+        },
+        {
+          "caller": "parse",
+          "callee": "SpecifiedMozPrefFeatureValue::parse",
+          "lineNumber": 602
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 606
+        },
+        {
+          "caller": "matches",
+          "callee": "self.value.to_computed_value",
+          "lineNumber": 612
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::from",
+          "lineNumber": 613
+        },
+        {
+          "caller": "matches",
+          "callee": "crate::gecko_bindings::bindings::Gecko_EvalMozPrefFeature",
+          "lineNumber": 614
+        },
+        {
+          "caller": "matches",
+          "callee": "self.name.as_ptr",
+          "lineNumber": 614
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.name.to_css",
+          "lineNumber": 629
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 631
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.value.to_css",
+          "lineNumber": 632
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 634
+        },
+        {
+          "caller": "to_css",
+          "callee": "f.to_css",
+          "lineNumber": 667
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 669
+        },
+        {
+          "caller": "to_css",
+          "callee": "name.to_css",
+          "lineNumber": 670
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 671
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 674
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 675
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 678
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 679
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 680
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 683
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 684
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 685
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 688
+        },
+        {
+          "caller": "to_css",
+          "callee": "c.to_css",
+          "lineNumber": 689
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 690
+        },
+        {
+          "caller": "to_css",
+          "callee": "list.iter",
+          "lineNumber": 693
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next().unwrap().to_css",
+          "lineNumber": 694
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next().unwrap",
+          "lineNumber": 694
+        },
+        {
+          "caller": "to_css",
+          "callee": "iter.next",
+          "lineNumber": 694
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 696
+        },
+        {
+          "caller": "to_css",
+          "callee": "op.to_css",
+          "lineNumber": 697
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 698
+        },
+        {
+          "caller": "to_css",
+          "callee": "item.to_css",
+          "lineNumber": 699
+        },
+        {
+          "caller": "to_css",
+          "callee": "Ok",
+          "lineNumber": 701
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 703
+        },
+        {
+          "caller": "consume_any_value",
+          "callee": "input.expect_no_error_token().map_err",
+          "lineNumber": 710
+        },
+        {
+          "caller": "consume_any_value",
+          "callee": "input.expect_no_error_token",
+          "lineNumber": 710
+        },
+        {
+          "caller": "parse",
+          "callee": "Self::parse_internal",
+          "lineNumber": 720
+        },
+        {
+          "caller": "visit",
+          "callee": "visitor",
+          "lineNumber": 727
+        },
+        {
+          "caller": "visit",
+          "callee": "cond.visit",
+          "lineNumber": 734
+        },
+        {
+          "caller": "visit",
+          "callee": "conds.iter",
+          "lineNumber": 736
+        },
+        {
+          "caller": "visit",
+          "callee": "cond.visit",
+          "lineNumber": 737
+        },
+        {
+          "caller": "visit",
+          "callee": "cond.visit",
+          "lineNumber": 740
+        },
+        {
+          "caller": "cumulative_flags",
+          "callee": "FeatureFlags::empty",
+          "lineNumber": 747
+        },
+        {
+          "caller": "cumulative_flags",
+          "callee": "self.visit",
+          "lineNumber": 748
+        },
+        {
+          "caller": "cumulative_flags",
+          "callee": "result.insert",
+          "lineNumber": 750
+        },
+        {
+          "caller": "cumulative_flags",
+          "callee": "result.insert",
+          "lineNumber": 753
+        },
+        {
+          "caller": "cumulative_flags",
+          "callee": "f.feature_flags",
+          "lineNumber": 753
+        },
+        {
+          "caller": "parse_disallow_or",
+          "callee": "Self::parse_internal",
+          "lineNumber": 767
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.try_parse",
+          "lineNumber": 777
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "QueryFeatureExpression::parse_in_parenthesis_block",
+          "lineNumber": 778
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 780
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::Feature",
+          "lineNumber": 780
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.try_parse",
+          "lineNumber": 784
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "DashedIdent::parse",
+          "lineNumber": 784
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 785
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::Custom",
+          "lineNumber": 785
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::parse",
+          "lineNumber": 788
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 789
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::InParens",
+          "lineNumber": 789
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Box::new",
+          "lineNumber": 789
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 791
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.try_parse",
+          "lineNumber": 803
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.parse_nested_block",
+          "lineNumber": 803
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "Some",
+          "lineNumber": 805
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "ContextualParseError::InvalidMediaRule",
+          "lineNumber": 810
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "input.slice_from",
+          "lineNumber": 810
+        },
+        {
+          "caller": "try_parse_block",
+          "callee": "context.log_css_error",
+          "lineNumber": 811
+        },
+        {
+          "caller": "matches",
+          "callee": "custom.matches",
+          "lineNumber": 829
+        },
+        {
+          "caller": "matches",
+          "callee": "f.matches",
+          "lineNumber": 830
+        },
+        {
+          "caller": "matches",
+          "callee": "self.matches_general",
+          "lineNumber": 832
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 834
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 835
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 836
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 837
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::any_false",
+          "lineNumber": 841
+        },
+        {
+          "caller": "matches",
+          "callee": "conditions.iter",
+          "lineNumber": 841
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 842
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::any",
+          "lineNumber": 844
+        },
+        {
+          "caller": "matches",
+          "callee": "conditions.iter",
+          "lineNumber": 844
+        },
+        {
+          "caller": "matches",
+          "callee": "c.matches",
+          "lineNumber": 845
+        },
+        {
+          "caller": "matches_general",
+          "callee": "context\r\n            .builder\r\n            .stylist.expect",
+          "lineNumber": 867
+        },
+        {
+          "caller": "matches_general",
+          "callee": "ParserInput::new",
+          "lineNumber": 873
+        },
+        {
+          "caller": "matches_general",
+          "callee": "custom_properties::SpecifiedValue::parse",
+          "lineNumber": 874
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Parser::new",
+          "lineNumber": 875
+        },
+        {
+          "caller": "matches_general",
+          "callee": "value.has_references",
+          "lineNumber": 884
+        },
+        {
+          "caller": "matches_general",
+          "callee": "custom_properties::ComputedSubstitutionFunctions::new",
+          "lineNumber": 889
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Some",
+          "lineNumber": 890
+        },
+        {
+          "caller": "matches_general",
+          "callee": "context.inherited_custom_properties().clone",
+          "lineNumber": 890
+        },
+        {
+          "caller": "matches_general",
+          "callee": "context.inherited_custom_properties",
+          "lineNumber": 890
+        },
+        {
+          "caller": "matches_general",
+          "callee": "custom_properties::substitute",
+          "lineNumber": 894
+        },
+        {
+          "caller": "matches_general",
+          "callee": "ParserContext::new",
+          "lineNumber": 906
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Some",
+          "lineNumber": 909
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Default::default",
+          "lineNumber": 912
+        },
+        {
+          "caller": "matches_general",
+          "callee": "ParserInput::new",
+          "lineNumber": 917
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Self::parse",
+          "lineNumber": 918
+        },
+        {
+          "caller": "matches_general",
+          "callee": "Parser::new",
+          "lineNumber": 920
+        },
+        {
+          "caller": "matches_general",
+          "callee": "query.matches",
+          "lineNumber": 927
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 944
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.position",
+          "lineNumber": 945
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.current_source_location",
+          "lineNumber": 946
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.next",
+          "lineNumber": 947
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::try_parse_block",
+          "lineNumber": 949
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::parse_in_parenthesis_block",
+          "lineNumber": 950
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Ok",
+          "lineNumber": 953
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Err",
+          "lineNumber": 977
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "start_location.new_unexpected_token_error",
+          "lineNumber": 977
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "t.clone",
+          "lineNumber": 977
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.parse_nested_block",
+          "lineNumber": 979
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Ok",
+          "lineNumber": 980
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "Self::GeneralEnclosed",
+          "lineNumber": 980
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.slice_from(start).to_owned",
+          "lineNumber": 981
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "input.slice_from",
+          "lineNumber": 981
+        },
+        {
+          "caller": "parse_in_parens",
+          "callee": "context.url_data.clone",
+          "lineNumber": 982
+        },
+        {
+          "caller": "new_not",
+          "callee": "Self::Not",
+          "lineNumber": 987
+        },
+        {
+          "caller": "new_operation",
+          "callee": "Self::Operation",
+          "lineNumber": 991
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 32,
+        "classCount": 11
+      }
+    },
+    {
+      "path": "style/queries/feature.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 199,
+      "nonEmptyLines": 179,
+      "functions": [
+        {
+          "name": "parsing_requirements",
+          "startLine": 132,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "all_container_axes",
+          "startLine": 137,
+          "endLine": 142,
+          "params": []
+        },
+        {
+          "name": "container_axes",
+          "startLine": 145,
+          "endLine": 147,
+          "params": []
+        },
+        {
+          "name": "allows_ranges",
+          "startLine": 174,
+          "endLine": 176,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 192,
+          "endLine": 198,
+          "params": [
+            "f"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Evaluator",
+          "startLine": 37,
+          "endLine": 61,
+          "methods": [],
+          "properties": [
+            "Length",
+            "OptionalLength",
+            "Integer",
+            "Float",
+            "BoolInteger",
+            "NumberRatio",
+            "OptionalNumberRatio",
+            "Resolution",
+            "Enumerated"
+          ]
+        },
+        {
+          "name": "FeatureFlags",
+          "startLine": 108,
+          "endLine": 108,
+          "methods": [
+            "parsing_requirements",
+            "all_container_axes",
+            "container_axes"
+          ],
+          "properties": []
+        },
+        {
+          "name": "AllowsRanges",
+          "startLine": 153,
+          "endLine": 156,
+          "methods": [],
+          "properties": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "name": "QueryFeatureDescription",
+          "startLine": 159,
+          "endLine": 169,
+          "methods": [
+            "allows_ranges",
+            "fmt"
+          ],
+          "properties": [
+            "name",
+            "allows_ranges",
+            "evaluator",
+            "flags"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Evaluator",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "FeatureFlags",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "parsing_requirements",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "all_container_axes",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "container_axes",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "AllowsRanges",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "QueryFeatureDescription",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "allows_ranges",
+          "line": 174,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parsing_requirements",
+          "callee": "self.intersection",
+          "lineNumber": 133
+        },
+        {
+          "caller": "container_axes",
+          "callee": "self.intersection",
+          "lineNumber": 146
+        },
+        {
+          "caller": "container_axes",
+          "callee": "Self::all_container_axes",
+          "lineNumber": 146
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"QueryFeatureDescription\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"allows_ranges\", &self.allows_ranges)\r\n            .field(\"flags\", &self.flags).finish",
+          "lineNumber": 193
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"QueryFeatureDescription\")\r\n            .field(\"name\", &self.name)\r\n            .field(\"allows_ranges\", &self.allows_ranges).field",
+          "lineNumber": 193
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"QueryFeatureDescription\")\r\n            .field(\"name\", &self.name).field",
+          "lineNumber": 193
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct(\"QueryFeatureDescription\").field",
+          "lineNumber": 193
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.debug_struct",
+          "lineNumber": 193
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "style/queries/feature_expression.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1152,
+      "nonEmptyLines": 1080,
+      "functions": [
+        {
+          "name": "features",
+          "startLine": 44,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "find_feature",
+          "startLine": 58,
+          "endLine": 63,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 91,
+          "endLine": 102,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "is_compatible_with",
+          "startLine": 106,
+          "endLine": 118,
+          "params": [
+            "right_op"
+          ]
+        },
+        {
+          "name": "evaluate",
+          "startLine": 120,
+          "endLine": 128,
+          "params": [
+            "cmp"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 130,
+          "endLine": 166,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "evaluate",
+          "startLine": 191,
+          "endLine": 249,
+          "params": [
+            "context_value",
+            "compute"
+          ]
+        },
+        {
+          "name": "non_ranged_value",
+          "startLine": 252,
+          "endLine": 261,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 274,
+          "endLine": 308,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "consume_operation_or_colon",
+          "startLine": 311,
+          "endLine": 318,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "disabled_by_pref",
+          "startLine": 321,
+          "endLine": 339,
+          "params": [
+            "feature",
+            "context"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 342,
+          "endLine": 353,
+          "params": [
+            "feature_type",
+            "feature_index",
+            "kind"
+          ]
+        },
+        {
+          "name": "write_name",
+          "startLine": 355,
+          "endLine": 375,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "feature",
+          "startLine": 377,
+          "endLine": 379,
+          "params": []
+        },
+        {
+          "name": "feature_flags",
+          "startLine": 382,
+          "endLine": 384,
+          "params": []
+        },
+        {
+          "name": "parse_feature_name",
+          "startLine": 386,
+          "endLine": 435,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "parse_multi_range_syntax",
+          "startLine": 441,
+          "endLine": 499,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "parse_in_parenthesis_block",
+          "startLine": 502,
+          "endLine": 572,
+          "params": [
+            "context",
+            "input",
+            "feature_type"
+          ]
+        },
+        {
+          "name": "matches",
+          "startLine": 575,
+          "endLine": 655,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 702,
+          "endLine": 732,
+          "params": [
+            "dest",
+            "for_expr"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 734,
+          "endLine": 771,
+          "params": [
+            "for_feature",
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "parse_for_style_range",
+          "startLine": 778,
+          "endLine": 830,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 858,
+          "endLine": 892,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "parse",
+          "startLine": 903,
+          "endLine": 929,
+          "params": [
+            "context",
+            "input"
+          ]
+        },
+        {
+          "name": "evaluate",
+          "startLine": 932,
+          "endLine": 998,
+          "params": [
+            "context",
+            "attribute_tracker"
+          ]
+        },
+        {
+          "name": "resolve_value",
+          "startLine": 1001,
+          "endLine": 1089,
+          "params": [
+            "value",
+            "context",
+            "attribute_tracker",
+            "visited_set"
+          ]
+        },
+        {
+          "name": "resolve_universal",
+          "startLine": 1097,
+          "endLine": 1121,
+          "params": [
+            "css_text",
+            "url_data",
+            "context",
+            "attribute_tracker",
+            "visited_set"
+          ]
+        },
+        {
+          "name": "compare_values",
+          "startLine": 1123,
+          "endLine": 1151,
+          "params": [
+            "value1",
+            "value2"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FeatureType",
+          "startLine": 36,
+          "endLine": 41,
+          "methods": [
+            "features",
+            "find_feature"
+          ],
+          "properties": [
+            "Media",
+            "Container"
+          ]
+        },
+        {
+          "name": "LegacyRange",
+          "startLine": 68,
+          "endLine": 73,
+          "methods": [],
+          "properties": [
+            "Min",
+            "Max"
+          ]
+        },
+        {
+          "name": "Operator",
+          "startLine": 77,
+          "endLine": 88,
+          "methods": [
+            "to_css",
+            "is_compatible_with",
+            "evaluate",
+            "parse"
+          ],
+          "properties": [
+            "Equal",
+            "GreaterThan",
+            "GreaterThanEqual",
+            "LessThan",
+            "LessThanEqual"
+          ]
+        },
+        {
+          "name": "QueryFeatureExpressionKind",
+          "startLine": 170,
+          "endLine": 186,
+          "methods": [
+            "evaluate",
+            "non_ranged_value"
+          ],
+          "properties": [
+            "Empty",
+            "Single",
+            "LegacyRange",
+            "Range"
+          ]
+        },
+        {
+          "name": "QueryFeatureExpression",
+          "startLine": 267,
+          "endLine": 271,
+          "methods": [
+            "to_css",
+            "new",
+            "write_name",
+            "feature",
+            "feature_flags",
+            "parse_feature_name",
+            "parse_multi_range_syntax",
+            "parse_in_parenthesis_block",
+            "matches"
+          ],
+          "properties": [
+            "feature_type",
+            "feature_index",
+            "kind"
+          ]
+        },
+        {
+          "name": "QueryExpressionValue",
+          "startLine": 667,
+          "endLine": 699,
+          "methods": [
+            "to_css",
+            "parse",
+            "parse_for_style_range"
+          ],
+          "properties": [
+            "Length",
+            "Integer",
+            "Float",
+            "BoolInteger",
+            "NumberRatio",
+            "Resolution",
+            "Enumerated",
+            "Keyword",
+            "Percentage",
+            "Angle",
+            "Time",
+            "Custom",
+            "Function"
+          ]
+        },
+        {
+          "name": "QueryStyleRange",
+          "startLine": 835,
+          "endLine": 855,
+          "methods": [
+            "to_css",
+            "parse",
+            "evaluate",
+            "resolve_value",
+            "resolve_universal",
+            "compare_values"
+          ],
+          "properties": [
+            "StyleRange2",
+            "StyleRange3"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeatureType",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "Operator",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "QueryFeatureExpression",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "feature_flags",
+          "line": 382,
+          "isDefault": false
+        },
+        {
+          "name": "parse_in_parenthesis_block",
+          "line": 502,
+          "isDefault": false
+        },
+        {
+          "name": "matches",
+          "line": 575,
+          "isDefault": false
+        },
+        {
+          "name": "QueryExpressionValue",
+          "line": 667,
+          "isDefault": false
+        },
+        {
+          "name": "QueryStyleRange",
+          "line": 835,
+          "isDefault": false
+        },
+        {
+          "name": "parse",
+          "line": 903,
+          "isDefault": false
+        },
+        {
+          "name": "evaluate",
+          "line": 932,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "find_feature",
+          "callee": "self.features()\r\n            .iter()\r\n            .enumerate().find",
+          "lineNumber": 59
+        },
+        {
+          "caller": "find_feature",
+          "callee": "self.features()\r\n            .iter().enumerate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "find_feature",
+          "callee": "self.features().iter",
+          "lineNumber": 59
+        },
+        {
+          "caller": "find_feature",
+          "callee": "self.features",
+          "lineNumber": 59
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 95
+        },
+        {
+          "caller": "parse",
+          "callee": "input.current_source_location",
+          "lineNumber": 131
+        },
+        {
+          "caller": "parse",
+          "callee": "input.next",
+          "lineNumber": 132
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 136
+        },
+        {
+          "caller": "parse",
+          "callee": "location.new_unexpected_token_error",
+          "lineNumber": 136
+        },
+        {
+          "caller": "parse",
+          "callee": "t.clone",
+          "lineNumber": 136
+        },
+        {
+          "caller": "parse",
+          "callee": "input\r\n            .try_parse(|i| {\r\n                let t = i.next_including_whitespace().map_err(|_| ())?;\r\n                if !matches!(t, Token::Delim('=')) {\r\n                    return Err(());\r\n                }\r\n                Ok(())\r\n            }).is_ok",
+          "lineNumber": 147
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 147
+        },
+        {
+          "caller": "parse",
+          "callee": "i.next_including_whitespace().map_err",
+          "lineNumber": 149
+        },
+        {
+          "caller": "parse",
+          "callee": "i.next_including_whitespace",
+          "lineNumber": 149
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 151
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 153
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 158
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 161
+        },
+        {
+          "caller": "evaluate",
+          "callee": "context_value.is_zero",
+          "lineNumber": 200
+        },
+        {
+          "caller": "evaluate",
+          "callee": "compute",
+          "lineNumber": 202
+        },
+        {
+          "caller": "evaluate",
+          "callee": "context_value.partial_cmp",
+          "lineNumber": 203
+        },
+        {
+          "caller": "evaluate",
+          "callee": "compute",
+          "lineNumber": 210
+        },
+        {
+          "caller": "evaluate",
+          "callee": "context_value.partial_cmp",
+          "lineNumber": 211
+        },
+        {
+          "caller": "evaluate",
+          "callee": "compute",
+          "lineNumber": 227
+        },
+        {
+          "caller": "evaluate",
+          "callee": "value.partial_cmp",
+          "lineNumber": 228
+        },
+        {
+          "caller": "evaluate",
+          "callee": "op.evaluate",
+          "lineNumber": 232
+        },
+        {
+          "caller": "evaluate",
+          "callee": "compute",
+          "lineNumber": 237
+        },
+        {
+          "caller": "evaluate",
+          "callee": "context_value.partial_cmp",
+          "lineNumber": 238
+        },
+        {
+          "caller": "evaluate",
+          "callee": "op.evaluate",
+          "lineNumber": 242
+        },
+        {
+          "caller": "non_ranged_value",
+          "callee": "Some",
+          "lineNumber": 255
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 278
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.write_name",
+          "lineNumber": 281
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.write_name",
+          "lineNumber": 284
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 285
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 286
+        },
+        {
+          "caller": "to_css",
+          "callee": "Some",
+          "lineNumber": 286
+        },
+        {
+          "caller": "to_css",
+          "callee": "val.to_css",
+          "lineNumber": 293
+        },
+        {
+          "caller": "to_css",
+          "callee": "Some",
+          "lineNumber": 293
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 294
+        },
+        {
+          "caller": "to_css",
+          "callee": "op.to_css",
+          "lineNumber": 295
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 296
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.write_name",
+          "lineNumber": 298
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 300
+        },
+        {
+          "caller": "to_css",
+          "callee": "op.to_css",
+          "lineNumber": 301
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 302
+        },
+        {
+          "caller": "to_css",
+          "callee": "val.to_css",
+          "lineNumber": 303
+        },
+        {
+          "caller": "to_css",
+          "callee": "Some",
+          "lineNumber": 303
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 307
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "input.try_parse(|input| input.expect_colon()).is_ok",
+          "lineNumber": 314
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "input.try_parse",
+          "lineNumber": 314
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "input.expect_colon",
+          "lineNumber": 314
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "Ok",
+          "lineNumber": 315
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "Operator::parse(input).map",
+          "lineNumber": 317
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "Operator::parse",
+          "lineNumber": 317
+        },
+        {
+          "caller": "consume_operation_or_colon",
+          "callee": "Some",
+          "lineNumber": 317
+        },
+        {
+          "caller": "disabled_by_pref",
+          "callee": "context.chrome_rules_enabled",
+          "lineNumber": 327
+        },
+        {
+          "caller": "disabled_by_pref",
+          "callee": "context.chrome_rules_enabled",
+          "lineNumber": 334
+        },
+        {
+          "caller": "write_name",
+          "callee": "self.feature",
+          "lineNumber": 359
+        },
+        {
+          "caller": "write_name",
+          "callee": "feature.flags.contains",
+          "lineNumber": 360
+        },
+        {
+          "caller": "write_name",
+          "callee": "dest.write_str",
+          "lineNumber": 361
+        },
+        {
+          "caller": "write_name",
+          "callee": "dest.write_str",
+          "lineNumber": 366
+        },
+        {
+          "caller": "write_name",
+          "callee": "dest.write_str",
+          "lineNumber": 367
+        },
+        {
+          "caller": "write_name",
+          "callee": "Ok",
+          "lineNumber": 374
+        },
+        {
+          "caller": "feature",
+          "callee": "self.feature_type.features",
+          "lineNumber": 378
+        },
+        {
+          "caller": "feature_flags",
+          "callee": "self.feature",
+          "lineNumber": 383
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "FeatureFlags::empty",
+          "lineNumber": 391
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "input.current_source_location",
+          "lineNumber": 392
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "input.expect_ident",
+          "lineNumber": 393
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "context.chrome_rules_enabled",
+          "lineNumber": 395
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "flags.insert",
+          "lineNumber": 396
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "starts_with_ignore_ascii_case",
+          "lineNumber": 400
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "flags.insert",
+          "lineNumber": 402
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "starts_with_ignore_ascii_case",
+          "lineNumber": 405
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Some",
+          "lineNumber": 407
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "starts_with_ignore_ascii_case",
+          "lineNumber": 408
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Some",
+          "lineNumber": 410
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Atom::from",
+          "lineNumber": 415
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "string_as_ascii_lowercase",
+          "lineNumber": 415
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "feature_type.find_feature",
+          "lineNumber": 416
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Err",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "location.new_custom_error",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "StyleParseErrorKind::MediaQueryExpectedFeatureName",
+          "lineNumber": 420
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "ident.clone",
+          "lineNumber": 420
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "disabled_by_pref",
+          "lineNumber": 425
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "flags.contains",
+          "lineNumber": 426
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "feature.flags.parsing_requirements",
+          "lineNumber": 426
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "range.is_some",
+          "lineNumber": 427
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "feature.allows_ranges",
+          "lineNumber": 427
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Err",
+          "lineNumber": 429
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "location.new_custom_error",
+          "lineNumber": 429
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "StyleParseErrorKind::MediaQueryExpectedFeatureName",
+          "lineNumber": 430
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "ident.clone",
+          "lineNumber": 430
+        },
+        {
+          "caller": "parse_feature_name",
+          "callee": "Ok",
+          "lineNumber": 434
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.state",
+          "lineNumber": 446
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Self::parse_feature_name",
+          "lineNumber": 453
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "range.is_some",
+          "lineNumber": 454
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Err",
+          "lineNumber": 456
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.new_custom_error",
+          "lineNumber": 456
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.is_exhausted",
+          "lineNumber": 460
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Err",
+          "lineNumber": 461
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "start\r\n                    .source_location().new_custom_error",
+          "lineNumber": 461
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "start.source_location",
+          "lineNumber": 461
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.reset",
+          "lineNumber": 467
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "feature_type.features",
+          "lineNumber": 469
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "QueryExpressionValue::parse",
+          "lineNumber": 470
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Operator::parse",
+          "lineNumber": 471
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Self::parse_feature_name",
+          "lineNumber": 474
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.try_parse(Operator::parse).ok",
+          "lineNumber": 481
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.try_parse",
+          "lineNumber": 481
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "left_op.is_compatible_with",
+          "lineNumber": 484
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Err",
+          "lineNumber": 485
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "input.new_custom_error",
+          "lineNumber": 485
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Some",
+          "lineNumber": 487
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "QueryExpressionValue::parse",
+          "lineNumber": 487
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Ok",
+          "lineNumber": 491
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Self::new",
+          "lineNumber": 491
+        },
+        {
+          "caller": "parse_multi_range_syntax",
+          "callee": "Some",
+          "lineNumber": 495
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.try_parse",
+          "lineNumber": 508
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::parse_feature_name",
+          "lineNumber": 508
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::parse_multi_range_syntax",
+          "lineNumber": 511
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 512
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 514
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.try_parse",
+          "lineNumber": 517
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "range.is_some",
+          "lineNumber": 525
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 526
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.new_custom_error",
+          "lineNumber": 527
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 531
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::new",
+          "lineNumber": 531
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "feature_type.features",
+          "lineNumber": 540
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "QueryExpressionValue::parse(feature, context, input).map_err",
+          "lineNumber": 542
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "QueryExpressionValue::parse",
+          "lineNumber": 542
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "err.location.new_custom_error",
+          "lineNumber": 543
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "operator.is_some",
+          "lineNumber": 549
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 550
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.new_custom_error",
+          "lineNumber": 551
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "QueryFeatureExpressionKind::LegacyRange",
+          "lineNumber": 554
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "feature.allows_ranges",
+          "lineNumber": 558
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Err",
+          "lineNumber": 559
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "input.new_custom_error",
+          "lineNumber": 559
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Some",
+          "lineNumber": 564
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "QueryFeatureExpressionKind::Single",
+          "lineNumber": 567
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Ok",
+          "lineNumber": 571
+        },
+        {
+          "caller": "parse_in_parenthesis_block",
+          "callee": "Self::new",
+          "lineNumber": 571
+        },
+        {
+          "caller": "matches",
+          "callee": "KleeneValue::from",
+          "lineNumber": 585
+        },
+        {
+          "caller": "matches",
+          "callee": "self.feature",
+          "lineNumber": 585
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 587
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 588
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Length, v).to_computed_value",
+          "lineNumber": 589
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 592
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 596
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Length, v).to_computed_value",
+          "lineNumber": 597
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 600
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 601
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Integer, v).to_computed_value",
+          "lineNumber": 602
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 605
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 606
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Float, v).to_computed_value",
+          "lineNumber": 607
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 610
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 615
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(NumberRatio, v)\r\n                        .to_computed_value(context).used_value",
+          "lineNumber": 616
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(NumberRatio, v).to_computed_value",
+          "lineNumber": 616
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 622
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 627
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(NumberRatio, v)\r\n                        .to_computed_value(context).used_value",
+          "lineNumber": 628
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(NumberRatio, v).to_computed_value",
+          "lineNumber": 628
+        },
+        {
+          "caller": "matches",
+          "callee": "eval(context).dppx",
+          "lineNumber": 634
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 634
+        },
+        {
+          "caller": "matches",
+          "callee": "self.kind.evaluate",
+          "lineNumber": 635
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Resolution, v).to_computed_value(context).dppx",
+          "lineNumber": 636
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(Resolution, v).to_computed_value",
+          "lineNumber": 636
+        },
+        {
+          "caller": "matches",
+          "callee": "self\r\n                    .kind\r\n                    .non_ranged_value().map",
+          "lineNumber": 640
+        },
+        {
+          "caller": "matches",
+          "callee": "self\r\n                    .kind.non_ranged_value",
+          "lineNumber": 640
+        },
+        {
+          "caller": "matches",
+          "callee": "evaluator",
+          "lineNumber": 644
+        },
+        {
+          "caller": "matches",
+          "callee": "self\r\n                    .kind\r\n                    .non_ranged_value().map",
+          "lineNumber": 647
+        },
+        {
+          "caller": "matches",
+          "callee": "self\r\n                    .kind.non_ranged_value",
+          "lineNumber": 647
+        },
+        {
+          "caller": "matches",
+          "callee": "expect!(BoolInteger, v).to_computed_value",
+          "lineNumber": 650
+        },
+        {
+          "caller": "matches",
+          "callee": "eval",
+          "lineNumber": 651
+        },
+        {
+          "caller": "matches",
+          "callee": "computed.map_or",
+          "lineNumber": 652
+        },
+        {
+          "caller": "to_css",
+          "callee": "l.to_css",
+          "lineNumber": 711
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 712
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 713
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 714
+        },
+        {
+          "caller": "to_css",
+          "callee": "ratio.to_css",
+          "lineNumber": 715
+        },
+        {
+          "caller": "to_css",
+          "callee": "r.to_css",
+          "lineNumber": 716
+        },
+        {
+          "caller": "to_css",
+          "callee": "k.to_css",
+          "lineNumber": 717
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 718
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 719
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 720
+        },
+        {
+          "caller": "to_css",
+          "callee": "v.to_css",
+          "lineNumber": 721
+        },
+        {
+          "caller": "to_css",
+          "callee": "f.to_css",
+          "lineNumber": 722
+        },
+        {
+          "caller": "to_css",
+          "callee": "for_expr\r\n                .expect(\"caller should have passed for_expr\").feature",
+          "lineNumber": 723
+        },
+        {
+          "caller": "to_css",
+          "callee": "for_expr.expect",
+          "lineNumber": 723
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 728
+        },
+        {
+          "caller": "to_css",
+          "callee": "serializer",
+          "lineNumber": 728
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 739
+        },
+        {
+          "caller": "parse",
+          "callee": "Length::parse",
+          "lineNumber": 741
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::Length",
+          "lineNumber": 742
+        },
+        {
+          "caller": "parse",
+          "callee": "Integer::parse",
+          "lineNumber": 745
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::Integer",
+          "lineNumber": 746
+        },
+        {
+          "caller": "parse",
+          "callee": "Integer::parse",
+          "lineNumber": 749
+        },
+        {
+          "caller": "parse",
+          "callee": "Err",
+          "lineNumber": 751
+        },
+        {
+          "caller": "parse",
+          "callee": "input.new_custom_error",
+          "lineNumber": 751
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::BoolInteger",
+          "lineNumber": 753
+        },
+        {
+          "caller": "parse",
+          "callee": "Number::parse",
+          "lineNumber": 756
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::Float",
+          "lineNumber": 757
+        },
+        {
+          "caller": "parse",
+          "callee": "SpecifiedRatio::parse",
+          "lineNumber": 761
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::NumberRatio",
+          "lineNumber": 762
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::Resolution",
+          "lineNumber": 765
+        },
+        {
+          "caller": "parse",
+          "callee": "Resolution::parse",
+          "lineNumber": 765
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::Enumerated",
+          "lineNumber": 768
+        },
+        {
+          "caller": "parse",
+          "callee": "parser",
+          "lineNumber": 768
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 782
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Number::parse",
+          "lineNumber": 782
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 783
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Float",
+          "lineNumber": 783
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 785
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Percentage::parse",
+          "lineNumber": 785
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 786
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Percentage",
+          "lineNumber": 786
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 788
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Length::parse",
+          "lineNumber": 788
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 789
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Length",
+          "lineNumber": 789
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 791
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Angle::parse",
+          "lineNumber": 791
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 792
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Angle",
+          "lineNumber": 792
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 794
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Time::parse",
+          "lineNumber": 794
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 795
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Time",
+          "lineNumber": 795
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 797
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Resolution::parse",
+          "lineNumber": 797
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 798
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Resolution",
+          "lineNumber": 798
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 800
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "DashedIdent::parse",
+          "lineNumber": 800
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 801
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Custom",
+          "lineNumber": 801
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.try_parse",
+          "lineNumber": 803
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "CSSWideKeyword::parse",
+          "lineNumber": 803
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 804
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Keyword",
+          "lineNumber": 804
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.skip_whitespace",
+          "lineNumber": 806
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.position",
+          "lineNumber": 807
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.next",
+          "lineNumber": 808
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.parse_nested_block",
+          "lineNumber": 813
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "i.expect_no_error_token().map_err",
+          "lineNumber": 813
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "i.expect_no_error_token",
+          "lineNumber": 813
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "ParserInput::new",
+          "lineNumber": 814
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.slice_from",
+          "lineNumber": 814
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "CustomVariableValue::parse",
+          "lineNumber": 815
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Parser::new",
+          "lineNumber": 816
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Some",
+          "lineNumber": 817
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "properties::enabled_arbitrary_substitution_functions()\r\n                .iter().any",
+          "lineNumber": 822
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "properties::enabled_arbitrary_substitution_functions().iter",
+          "lineNumber": 822
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "properties::enabled_arbitrary_substitution_functions",
+          "lineNumber": 822
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "n.eq_ignore_ascii_case",
+          "lineNumber": 824
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Ok",
+          "lineNumber": 826
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Self::Function",
+          "lineNumber": 826
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Box::new",
+          "lineNumber": 826
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "parse_func",
+          "lineNumber": 826
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "Err",
+          "lineNumber": 829
+        },
+        {
+          "caller": "parse_for_style_range",
+          "callee": "input.new_custom_error",
+          "lineNumber": 829
+        },
+        {
+          "caller": "to_css",
+          "callee": "value1.to_css",
+          "lineNumber": 868
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 869
+        },
+        {
+          "caller": "to_css",
+          "callee": "op1.to_css",
+          "lineNumber": 870
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 871
+        },
+        {
+          "caller": "to_css",
+          "callee": "value2.to_css",
+          "lineNumber": 872
+        },
+        {
+          "caller": "to_css",
+          "callee": "value1.to_css",
+          "lineNumber": 881
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 882
+        },
+        {
+          "caller": "to_css",
+          "callee": "op1.to_css",
+          "lineNumber": 883
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 884
+        },
+        {
+          "caller": "to_css",
+          "callee": "value2.to_css",
+          "lineNumber": 885
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 886
+        },
+        {
+          "caller": "to_css",
+          "callee": "op2.to_css",
+          "lineNumber": 887
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 888
+        },
+        {
+          "caller": "to_css",
+          "callee": "value3.to_css",
+          "lineNumber": 889
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::parse_for_style_range",
+          "lineNumber": 907
+        },
+        {
+          "caller": "parse",
+          "callee": "Operator::parse",
+          "lineNumber": 908
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::parse_for_style_range",
+          "lineNumber": 909
+        },
+        {
+          "caller": "parse",
+          "callee": "input.try_parse",
+          "lineNumber": 911
+        },
+        {
+          "caller": "parse",
+          "callee": "Operator::parse",
+          "lineNumber": 911
+        },
+        {
+          "caller": "parse",
+          "callee": "op1.is_compatible_with",
+          "lineNumber": 912
+        },
+        {
+          "caller": "parse",
+          "callee": "QueryExpressionValue::parse_for_style_range",
+          "lineNumber": 913
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 914
+        },
+        {
+          "caller": "parse",
+          "callee": "Ok",
+          "lineNumber": 924
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values(\r\n                Self::resolve_value(\r\n                    value1,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                )\r\n                .as_ref(),\r\n                Self::resolve_value(\r\n                    value2,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                )\r\n                .as_ref(),\r\n            )\r\n            .is_some_and(|c| op1.evaluate(c)).into",
+          "lineNumber": 942
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values(\r\n                Self::resolve_value(\r\n                    value1,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                )\r\n                .as_ref(),\r\n                Self::resolve_value(\r\n                    value2,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                )\r\n                .as_ref(),\r\n            ).is_some_and",
+          "lineNumber": 942
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values",
+          "lineNumber": 942
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value(\r\n                    value1,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                ).as_ref",
+          "lineNumber": 943
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value",
+          "lineNumber": 943
+        },
+        {
+          "caller": "evaluate",
+          "callee": "PrecomputedHashSet::default",
+          "lineNumber": 947
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value(\r\n                    value2,\r\n                    context,\r\n                    attribute_tracker,\r\n                    &mut PrecomputedHashSet::default(),\r\n                ).as_ref",
+          "lineNumber": 950
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value",
+          "lineNumber": 950
+        },
+        {
+          "caller": "evaluate",
+          "callee": "PrecomputedHashSet::default",
+          "lineNumber": 954
+        },
+        {
+          "caller": "evaluate",
+          "callee": "op1.evaluate",
+          "lineNumber": 958
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value",
+          "lineNumber": 968
+        },
+        {
+          "caller": "evaluate",
+          "callee": "PrecomputedHashSet::default",
+          "lineNumber": 972
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value",
+          "lineNumber": 974
+        },
+        {
+          "caller": "evaluate",
+          "callee": "PrecomputedHashSet::default",
+          "lineNumber": 978
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values(v1.as_ref(), v2.as_ref())\r\n                    .is_some_and(|c1| {\r\n                        op1.evaluate(c1)\r\n                            && Self::compare_values(\r\n                                v2.as_ref(),\r\n                                Self::resolve_value(\r\n                                    value3,\r\n                                    context,\r\n                                    attribute_tracker,\r\n                                    &mut PrecomputedHashSet::default(),\r\n                                )\r\n                                .as_ref(),\r\n                            )\r\n                            .is_some_and(|c2| op2.evaluate(c2))\r\n                    }).into",
+          "lineNumber": 980
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values(v1.as_ref(), v2.as_ref()).is_some_and",
+          "lineNumber": 980
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values",
+          "lineNumber": 980
+        },
+        {
+          "caller": "evaluate",
+          "callee": "v1.as_ref",
+          "lineNumber": 980
+        },
+        {
+          "caller": "evaluate",
+          "callee": "v2.as_ref",
+          "lineNumber": 980
+        },
+        {
+          "caller": "evaluate",
+          "callee": "op1.evaluate",
+          "lineNumber": 982
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values(\r\n                                v2.as_ref(),\r\n                                Self::resolve_value(\r\n                                    value3,\r\n                                    context,\r\n                                    attribute_tracker,\r\n                                    &mut PrecomputedHashSet::default(),\r\n                                )\r\n                                .as_ref(),\r\n                            ).is_some_and",
+          "lineNumber": 983
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::compare_values",
+          "lineNumber": 983
+        },
+        {
+          "caller": "evaluate",
+          "callee": "v2.as_ref",
+          "lineNumber": 984
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value(\r\n                                    value3,\r\n                                    context,\r\n                                    attribute_tracker,\r\n                                    &mut PrecomputedHashSet::default(),\r\n                                ).as_ref",
+          "lineNumber": 985
+        },
+        {
+          "caller": "evaluate",
+          "callee": "Self::resolve_value",
+          "lineNumber": 985
+        },
+        {
+          "caller": "evaluate",
+          "callee": "PrecomputedHashSet::default",
+          "lineNumber": 989
+        },
+        {
+          "caller": "evaluate",
+          "callee": "op2.evaluate",
+          "lineNumber": 993
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "ident.undashed",
+          "lineNumber": 1011
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context\r\n                    .builder\r\n                    .stylist.expect",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "stylist.get_custom_property_registration",
+          "lineNumber": 1016
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context\r\n                    .inherited_custom_properties().get",
+          "lineNumber": 1017
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context.inherited_custom_properties",
+          "lineNumber": 1017
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "component.clone",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "visited_set.insert",
+          "lineNumber": 1026
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "ident.clone",
+          "lineNumber": 1026
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Self::resolve_universal",
+          "lineNumber": 1027
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "ComputedSubstitutionFunctions::new",
+          "lineNumber": 1045
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context.inherited_custom_properties().clone",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context.inherited_custom_properties",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "context\r\n                    .builder\r\n                    .stylist.expect",
+          "lineNumber": 1049
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "custom_properties::substitute(\r\n                    &value,\r\n                    &sub_funcs,\r\n                    stylist,\r\n                    context,\r\n                    attribute_tracker,\r\n                ).ok",
+          "lineNumber": 1053
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "custom_properties::substitute",
+          "lineNumber": 1053
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Self::resolve_universal",
+          "lineNumber": 1061
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Length",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1072
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Number",
+          "lineNumber": 1072
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1072
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Resolution",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Percentage",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Angle",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Some",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "Component::Time",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "resolve_value",
+          "callee": "v.to_computed_value",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "ParserContext::new",
+          "lineNumber": 1104
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "Some",
+          "lineNumber": 1107
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "Default::default",
+          "lineNumber": 1110
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "Default::default",
+          "lineNumber": 1113
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "ParserInput::new",
+          "lineNumber": 1115
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "QueryExpressionValue::parse_for_style_range(&parser_context, &mut Parser::new(&mut input))\r\n            .ok().and_then",
+          "lineNumber": 1116
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "QueryExpressionValue::parse_for_style_range(&parser_context, &mut Parser::new(&mut input)).ok",
+          "lineNumber": 1116
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "QueryExpressionValue::parse_for_style_range",
+          "lineNumber": 1116
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "Parser::new",
+          "lineNumber": 1116
+        },
+        {
+          "caller": "resolve_universal",
+          "callee": "Self::resolve_value",
+          "lineNumber": 1119
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1127
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1128
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.dppx().partial_cmp",
+          "lineNumber": 1130
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.dppx",
+          "lineNumber": 1130
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v2.dppx",
+          "lineNumber": 1130
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1132
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1133
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1134
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v2.is_zero",
+          "lineNumber": 1136
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.partial_cmp",
+          "lineNumber": 1137
+        },
+        {
+          "caller": "compare_values",
+          "callee": "CSSPixelLength::zero",
+          "lineNumber": 1137
+        },
+        {
+          "caller": "compare_values",
+          "callee": "v1.is_zero",
+          "lineNumber": 1143
+        },
+        {
+          "caller": "compare_values",
+          "callee": "CSSPixelLength::zero().partial_cmp",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "compare_values",
+          "callee": "CSSPixelLength::zero",
+          "lineNumber": 1144
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 28,
+        "classCount": 7
+      }
+    },
+    {
+      "path": "style/queries/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/queries/values.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "eval",
+          "startLine": 24,
+          "endLine": 36,
+          "params": [
+            "size",
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Orientation",
+          "startLine": 17,
+          "endLine": 20,
+          "methods": [
+            "eval"
+          ],
+          "properties": [
+            "Portrait",
+            "Landscape"
+          ]
+        },
+        {
+          "name": "PrefersColorScheme",
+          "startLine": 43,
+          "endLine": 46,
+          "methods": [],
+          "properties": [
+            "Light",
+            "Dark"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Orientation",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "eval",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "PrefersColorScheme",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,1557 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/stylesheets/appearance_base_rule.rs",
+      "type": "file",
+      "name": "appearance_base_rule.rs",
+      "filePath": "style/stylesheets/appearance_base_rule.rs",
+      "summary": "Defines the AppearanceBaseRule struct for handling CSS @appearance-base at-rule with thread-safe rule storage and CSS serialization.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "at-rule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "class",
+      "name": "AppearanceBaseRule",
+      "filePath": "style/stylesheets/appearance_base_rule.rs",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "CSS @appearance-base rule for defining base appearance values in the style system.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "appearance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/container_rule.rs",
+      "type": "file",
+      "name": "container_rule.rs",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "summary": "Implements CSS @container query rule parsing, evaluation, and container size query logic for responsive container-based styling.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "container-queries",
+        "responsive"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "class",
+      "name": "ContainerRule",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        38,
+        45
+      ],
+      "summary": "CSS @container rule implementation storing conditions and nested rules with thread-safe deep clone.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "container-queries"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "class",
+      "name": "ContainerCondition",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        88,
+        94
+      ],
+      "summary": "Container query condition with name matching, feature evaluation, and DOM traversal for container lookup.",
+      "tags": [
+        "rust",
+        "class",
+        "container-queries",
+        "condition",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "class",
+      "name": "ContainerInfo",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        340,
+        344
+      ],
+      "summary": "Container query size information including physical/logical dimensions and inherited style.",
+      "tags": [
+        "rust",
+        "class",
+        "container-queries",
+        "size-info"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "class",
+      "name": "ContainerSizeQueryResult",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        455,
+        458
+      ],
+      "summary": "Result of container size evaluation with width/height tracking and incremental merge.",
+      "tags": [
+        "rust",
+        "class",
+        "container-queries",
+        "size-evaluation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "function",
+      "name": "for_element",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        619,
+        654
+      ],
+      "summary": "Exported function for for element operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "function",
+      "name": "for_option_element",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        657,
+        670
+      ],
+      "summary": "Exported function for for option element operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/container_rule.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/stylesheets/container_rule.rs",
+      "lineRange": [
+        678,
+        689
+      ],
+      "summary": "Exported function for get operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/counter_style_rule.rs",
+      "type": "file",
+      "name": "counter_style_rule.rs",
+      "filePath": "style/stylesheets/counter_style_rule.rs",
+      "summary": "Defines the CounterStyleRule struct for CSS @counter-style at-rule with custom counter system definitions.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "counter-style"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/document_rule.rs",
+      "type": "file",
+      "name": "document_rule.rs",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "summary": "Implements the @-moz-document at-rule with URL matching functions for gecko-specific document-level style scoping.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "gecko-specific",
+        "document-matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "class",
+      "name": "DocumentRule",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "CSS @-moz-document rule with URL-based document matching conditions.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "gecko-specific"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "class",
+      "name": "DocumentMatchingFunction",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [
+        80,
+        114
+      ],
+      "summary": "Enum of URL matching strategies for @-moz-document: url, url-prefix, domain, regexp, media-document.",
+      "tags": [
+        "rust",
+        "class",
+        "enum",
+        "document-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "class",
+      "name": "DocumentCondition",
+      "filePath": "style/stylesheets/document_rule.rs",
+      "lineRange": [
+        243,
+        243
+      ],
+      "summary": "Core type in the stylesheet subsystem providing DocumentCondition functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/font_face_rule.rs",
+      "type": "file",
+      "name": "font_face_rule.rs",
+      "filePath": "style/stylesheets/font_face_rule.rs",
+      "summary": "Defines the FontFaceRule struct for CSS @font-face at-rule enabling custom font declarations.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "fonts"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/font_feature_values_rule.rs",
+      "type": "file",
+      "name": "font_feature_values_rule.rs",
+      "filePath": "style/stylesheets/font_feature_values_rule.rs",
+      "summary": "Implements CSS @font-feature-values at-rule parsing and Gecko FFI conversion for OpenType font feature value definitions.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "fonts",
+        "opentype"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/font_feature_values_rule.rs:SingleValue",
+      "type": "class",
+      "name": "SingleValue",
+      "filePath": "style/stylesheets/font_feature_values_rule.rs",
+      "lineRange": [
+        66,
+        66
+      ],
+      "summary": "Core type in the stylesheet subsystem providing SingleValue functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/font_feature_values_rule.rs:PairValues",
+      "type": "class",
+      "name": "PairValues",
+      "filePath": "style/stylesheets/font_feature_values_rule.rs",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "Core type in the stylesheet subsystem providing PairValues functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/font_feature_values_rule.rs:VectorValues",
+      "type": "class",
+      "name": "VectorValues",
+      "filePath": "style/stylesheets/font_feature_values_rule.rs",
+      "lineRange": [
+        132,
+        132
+      ],
+      "summary": "Core type in the stylesheet subsystem providing VectorValues functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/import_rule.rs",
+      "type": "file",
+      "name": "import_rule.rs",
+      "filePath": "style/stylesheets/import_rule.rs",
+      "summary": "Implements CSS @import rule with support for layer and supports conditions, providing stylesheet loading, cloning, and serialization.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "import",
+        "stylesheet-loading"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/import_rule.rs:ImportSheet",
+      "type": "class",
+      "name": "ImportSheet",
+      "filePath": "style/stylesheets/import_rule.rs",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "Enum tracking the loading state of an imported stylesheet (Sheet, Pending, Refused).",
+      "tags": [
+        "rust",
+        "class",
+        "enum",
+        "import",
+        "loading-state"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/import_rule.rs:ImportRule",
+      "type": "class",
+      "name": "ImportRule",
+      "filePath": "style/stylesheets/import_rule.rs",
+      "lineRange": [
+        152,
+        169
+      ],
+      "summary": "CSS @import rule with layer and supports condition support for stylesheet composition.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "import",
+        "stylesheet-loading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/context.rs",
+      "type": "file",
+      "name": "context.rs",
+      "filePath": "style/context.rs",
+      "summary": "Defines shared and thread-local style traversal contexts including StyleSystemOptions, SharedStyleContext, and traversal statistics tracking.",
+      "tags": [
+        "rust",
+        "context",
+        "traversal",
+        "thread-local"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/context.rs:StyleSystemOptions",
+      "type": "class",
+      "name": "StyleSystemOptions",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        52,
+        60
+      ],
+      "summary": "Global style system configuration options controlling traversal behavior.",
+      "tags": [
+        "rust",
+        "class",
+        "configuration",
+        "system-options"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/context.rs:SharedStyleContext",
+      "type": "class",
+      "name": "SharedStyleContext",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        124,
+        157
+      ],
+      "summary": "Style sharing context carrying viewport size, device, quirk mode, and animation state.",
+      "tags": [
+        "rust",
+        "class",
+        "context",
+        "shared",
+        "traversal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/context.rs:EagerPseudoCascadeInputs",
+      "type": "class",
+      "name": "EagerPseudoCascadeInputs",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        217,
+        217
+      ],
+      "summary": "Core type in the stylesheet subsystem providing EagerPseudoCascadeInputs functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/context.rs:TraversalStatistics",
+      "type": "class",
+      "name": "TraversalStatistics",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        301,
+        320
+      ],
+      "summary": "Collects and formats style traversal performance statistics.",
+      "tags": [
+        "rust",
+        "class",
+        "statistics",
+        "traversal",
+        "performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/context.rs:StackLimitChecker",
+      "type": "class",
+      "name": "StackLimitChecker",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        534,
+        536
+      ],
+      "summary": "Checks stack space availability during recursive style traversal to prevent overflow.",
+      "tags": [
+        "rust",
+        "class",
+        "stack-check",
+        "safety"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/context.rs:ThreadLocalStyleContext",
+      "type": "class",
+      "name": "ThreadLocalStyleContext",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        601,
+        623
+      ],
+      "summary": "Thread-local style context with element cache and animation update tracking.",
+      "tags": [
+        "rust",
+        "class",
+        "context",
+        "thread-local",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/context.rs:RegisteredSpeculativePainter",
+      "type": "class",
+      "name": "RegisteredSpeculativePainter",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        653,
+        658
+      ],
+      "summary": "Core type in the stylesheet subsystem providing RegisteredSpeculativePainter functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/context.rs:execute",
+      "type": "function",
+      "name": "execute",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        462,
+        476
+      ],
+      "summary": "Exported function for execute operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/context.rs:update_animations",
+      "type": "function",
+      "name": "update_animations",
+      "filePath": "style/context.rs",
+      "lineRange": [
+        481,
+        492
+      ],
+      "summary": "Exported function for update animations operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/data.rs",
+      "type": "file",
+      "name": "data.rs",
+      "filePath": "style/data.rs",
+      "summary": "Defines element style data structures including ElementStyles, ElementData, and the restyle system for incremental style computation.",
+      "tags": [
+        "rust",
+        "element-data",
+        "restyle",
+        "style-computation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/data.rs:EagerPseudoStyles",
+      "type": "class",
+      "name": "EagerPseudoStyles",
+      "filePath": "style/data.rs",
+      "lineRange": [
+        60,
+        60
+      ],
+      "summary": "Collection of eagerly computed pseudo-element styles with array-based storage.",
+      "tags": [
+        "rust",
+        "class",
+        "pseudo-elements",
+        "styles"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/data.rs:ElementStyles",
+      "type": "class",
+      "name": "ElementStyles",
+      "filePath": "style/data.rs",
+      "lineRange": [
+        155,
+        160
+      ],
+      "summary": "Collection of computed styles for an element including primary and pseudo-element styles.",
+      "tags": [
+        "rust",
+        "class",
+        "styles",
+        "element",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/data.rs:ElementData",
+      "type": "class",
+      "name": "ElementData",
+      "filePath": "style/data.rs",
+      "lineRange": [
+        259,
+        273
+      ],
+      "summary": "Per-element style data with restyle state tracking and incremental invalidation.",
+      "tags": [
+        "rust",
+        "class",
+        "element-data",
+        "restyle",
+        "style-sharing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/data.rs:ElementDataWrapper",
+      "type": "class",
+      "name": "ElementDataWrapper",
+      "filePath": "style/data.rs",
+      "lineRange": [
+        277,
+        282
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ElementDataWrapper functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/dom.rs",
+      "type": "file",
+      "name": "dom.rs",
+      "filePath": "style/dom.rs",
+      "summary": "Defines DOM abstraction traits TNode, TElement, TDocument, and TShadowRoot with traversal and style data access methods.",
+      "tags": [
+        "rust",
+        "dom-abstraction",
+        "traits",
+        "element-interface"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/dom.rs:NodeInfo",
+      "type": "class",
+      "name": "NodeInfo",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "Core type in the stylesheet subsystem providing NodeInfo functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/dom.rs:TDocument",
+      "type": "class",
+      "name": "TDocument",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        119,
+        149
+      ],
+      "summary": "Core type in the stylesheet subsystem providing TDocument functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/dom.rs:TNode",
+      "type": "class",
+      "name": "TNode",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        153,
+        279
+      ],
+      "summary": "Trait defining the DOM node interface with parent/child traversal and type-based dispatch to element/document.",
+      "tags": [
+        "rust",
+        "class",
+        "trait",
+        "node",
+        "traversal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/dom.rs:TShadowRoot",
+      "type": "class",
+      "name": "TShadowRoot",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        364,
+        406
+      ],
+      "summary": "Core type in the stylesheet subsystem providing TShadowRoot functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/dom.rs:TElement",
+      "type": "class",
+      "name": "TElement",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        409,
+        987
+      ],
+      "summary": "Trait defining the DOM element interface for style computation including attribute and animation access.",
+      "tags": [
+        "rust",
+        "class",
+        "trait",
+        "element",
+        "dom-abstraction"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/dom.rs:query",
+      "type": "function",
+      "name": "query",
+      "filePath": "style/dom.rs",
+      "lineRange": [
+        1029,
+        1041
+      ],
+      "summary": "Exported function for query operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/dom_apis.rs",
+      "type": "file",
+      "name": "dom_apis.rs",
+      "filePath": "style/dom_apis.rs",
+      "summary": "Implements DOM querySelector/querySelectorAll algorithms with fast-path matching for efficient element selection.",
+      "tags": [
+        "rust",
+        "dom-api",
+        "query-selector",
+        "element-matching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/dom_apis.rs:SelectorQuery",
+      "type": "class",
+      "name": "SelectorQuery",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        86,
+        98
+      ],
+      "summary": "Trait abstracting querySelector/querySelectorAll with early termination and result collection.",
+      "tags": [
+        "rust",
+        "class",
+        "trait",
+        "query-selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/dom_apis.rs:QueryAll",
+      "type": "class",
+      "name": "QueryAll",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        104,
+        104
+      ],
+      "summary": "Core type in the stylesheet subsystem providing QueryAll functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/dom_apis.rs:QueryFirst",
+      "type": "class",
+      "name": "QueryFirst",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        123,
+        123
+      ],
+      "summary": "Core type in the stylesheet subsystem providing QueryFirst functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/dom_apis.rs:element_matches",
+      "type": "function",
+      "name": "element_matches",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        28,
+        49
+      ],
+      "summary": "Checks if a DOM element matches a given CSS selector list.",
+      "tags": [
+        "rust",
+        "function",
+        "element-matching",
+        "selector"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/dom_apis.rs:element_closest",
+      "type": "function",
+      "name": "element_closest",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        52,
+        82
+      ],
+      "summary": "Finds the closest ancestor of an element matching a CSS selector list.",
+      "tags": [
+        "rust",
+        "function",
+        "element-matching",
+        "selector",
+        "traversal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/dom_apis.rs:query_selector",
+      "type": "function",
+      "name": "query_selector",
+      "filePath": "style/dom_apis.rs",
+      "lineRange": [
+        843,
+        916
+      ],
+      "summary": "Queries the DOM for elements matching a selector using fast-path and slow-path strategies.",
+      "tags": [
+        "rust",
+        "function",
+        "query-selector",
+        "dom-api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/driver.rs",
+      "type": "file",
+      "name": "driver.rs",
+      "filePath": "style/driver.rs",
+      "summary": "Implements the DOM traversal driver orchestrating parallel style computation across DOM subtrees.",
+      "tags": [
+        "rust",
+        "traversal",
+        "parallel",
+        "driver"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/driver.rs:traverse_dom",
+      "type": "function",
+      "name": "traverse_dom",
+      "filePath": "style/driver.rs",
+      "lineRange": [
+        88,
+        172
+      ],
+      "summary": "Entry point for DOM traversal driving parallel style computation with work distribution.",
+      "tags": [
+        "rust",
+        "function",
+        "traversal",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/appearance_base_rule.rs",
+      "target": "class:style/stylesheets/appearance_base_rule.rs:AppearanceBaseRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "class:style/stylesheets/container_rule.rs:ContainerSizeQueryResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:for_option_element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/container_rule.rs",
+      "target": "function:style/stylesheets/container_rule.rs:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentMatchingFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "class:style/stylesheets/document_rule.rs:DocumentCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:SingleValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:SingleValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:PairValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:PairValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:VectorValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/font_feature_values_rule.rs",
+      "target": "class:style/stylesheets/font_feature_values_rule.rs:VectorValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/import_rule.rs",
+      "target": "class:style/stylesheets/import_rule.rs:ImportSheet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/import_rule.rs",
+      "target": "class:style/stylesheets/import_rule.rs:ImportSheet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/import_rule.rs",
+      "target": "class:style/stylesheets/import_rule.rs:ImportRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/import_rule.rs",
+      "target": "class:style/stylesheets/import_rule.rs:ImportRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:StyleSystemOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:StyleSystemOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:SharedStyleContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:SharedStyleContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:EagerPseudoCascadeInputs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:EagerPseudoCascadeInputs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:TraversalStatistics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:TraversalStatistics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:StackLimitChecker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:StackLimitChecker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:ThreadLocalStyleContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:ThreadLocalStyleContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:RegisteredSpeculativePainter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "class:style/context.rs:RegisteredSpeculativePainter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "function:style/context.rs:execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "function:style/context.rs:execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "function:style/context.rs:update_animations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "function:style/context.rs:update_animations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:EagerPseudoStyles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:EagerPseudoStyles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementStyles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementStyles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementDataWrapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "class:style/data.rs:ElementDataWrapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:NodeInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:NodeInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TDocument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TShadowRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TShadowRoot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "class:style/dom.rs:TElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "function:style/dom.rs:query",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom.rs",
+      "target": "function:style/dom.rs:query",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:SelectorQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:SelectorQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:QueryAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:QueryAll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:QueryFirst",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "class:style/dom_apis.rs:QueryFirst",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:element_matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:element_matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:element_closest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:element_closest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:query_selector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "function:style/dom_apis.rs:query_selector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/driver.rs",
+      "target": "function:style/driver.rs:traverse_dom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/driver.rs",
+      "target": "function:style/driver.rs:traverse_dom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/context.rs",
+      "target": "file:style/data.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/driver.rs",
+      "target": "file:style/context.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/driver.rs",
+      "target": "file:style/dom.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/dom_apis.rs",
+      "target": "file:style/dom.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylesheets/import_rule.rs",
+      "target": "file:style/stylesheets/loader.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/data.rs",
+      "target": "file:style/dom.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylesheets/document_rule.rs",
+      "target": "file:style/stylesheets/mod.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

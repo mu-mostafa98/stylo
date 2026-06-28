@@ -1,0 +1,835 @@
+{
+  "nodes": [
+    {
+      "id": "file:style_traits/arc_slice.rs",
+      "type": "file",
+      "name": "arc_slice.rs",
+      "filePath": "style_traits/arc_slice.rs",
+      "summary": "Provides ArcSlice, a thin atomically-reference-counted slice using ThinArc, with serde support and FFI-compatible pointer helpers.",
+      "tags": ["refcounted-slice", "data-structure", "ffi", "utility", "serde"],
+      "complexity": "moderate",
+      "languageNotes": "Uses ThinArc for two-word refcounted slices and repr(C) layout for cbindgen compatibility."
+    },
+    {
+      "id": "file:style_traits/dom.rs",
+      "type": "file",
+      "name": "dom.rs",
+      "filePath": "style_traits/dom.rs",
+      "summary": "Defines OpaqueNode, a safe opaque handle for representing DOM nodes from layout and graphics code without exposing script GC-managed data.",
+      "tags": ["dom", "opaque-handle", "type-definition", "safety"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style_traits/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "style_traits/lib.rs",
+      "summary": "Crate root for style_traits that re-exports submodules and defines shared CSS types: pixel units, parsing error enums, ParsingMode bitflags, and the SpeculativePainter trait.",
+      "tags": ["crate-root", "css", "error-types", "re-export", "barrel"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style_traits/owned_slice.rs",
+      "type": "file",
+      "name": "owned_slice.rs",
+      "filePath": "style_traits/owned_slice.rs",
+      "summary": "Provides OwnedSlice, a repr(C) replacement for Box<[T]> with a defined layout for FFI/cbindgen compatibility, supporting serde and memory accounting.",
+      "tags": ["slice", "ffi", "data-structure", "cbindgen", "utility"],
+      "complexity": "moderate",
+      "languageNotes": "Uses repr(C) with raw pointer and length fields to avoid fat pointers that cbindgen cannot handle."
+    },
+    {
+      "id": "file:style_traits/owned_str.rs",
+      "type": "file",
+      "name": "owned_str.rs",
+      "filePath": "style_traits/owned_str.rs",
+      "summary": "Provides OwnedStr, a repr(C) wrapper around OwnedSlice<u8> that replaces Box<str> with a defined FFI-safe layout.",
+      "tags": ["string", "ffi", "data-structure", "cbindgen", "utility"],
+      "complexity": "simple",
+      "languageNotes": "Leverages OwnedSlice<u8> internally to share the same cbindgen-compatible slice layout."
+    },
+    {
+      "id": "file:style_traits/specified_value_info.rs",
+      "type": "file",
+      "name": "specified_value_info.rs",
+      "filePath": "style_traits/specified_value_info.rs",
+      "summary": "Defines the SpecifiedValueInfo trait used by devtools to introspect CSS property value types, supported types, and completion keywords.",
+      "tags": ["trait", "devtools", "css-property", "introspection", "derive"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style_traits/values.rs",
+      "type": "file",
+      "name": "values.rs",
+      "filePath": "style_traits/values.rs",
+      "summary": "Core CSS value serialization infrastructure: defines the ToCss trait, CssWriter, SequenceWriter, separator types (Comma/Space/CommaWithSpace), and helper traits for separated value lists.",
+      "tags": ["css", "serialization", "formatting", "trait", "derive"],
+      "complexity": "complex",
+      "languageNotes": "ToCss is derivable with #[derive(ToCss)] and supports attributes like #[css(function)], #[css(comma)], and #[css(bitflags)] for flexible CSS serialization."
+    },
+    {
+      "id": "class:style_traits/arc_slice.rs:ArcSlice",
+      "type": "class",
+      "name": "ArcSlice",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [33, 33],
+      "summary": "A thin atomically-reference-counted slice backed by ThinArc, with zero-allocation empty default and serde support.",
+      "tags": ["refcounted-slice", "generic", "serde", "data-structure"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/arc_slice.rs:ForgottenArcSlicePtr",
+      "type": "class",
+      "name": "ForgottenArcSlicePtr",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [164, 164],
+      "summary": "An FFI-compatible pointer to a forgotten ArcSlice, used to transfer refcounted slice ownership across the FFI boundary.",
+      "tags": ["ffi", "pointer", "memory-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/arc_slice.rs:from_iter",
+      "type": "function",
+      "name": "from_iter",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [94, 102],
+      "summary": "Creates an ArcSlice from an ExactSizeIterator, returning the default empty slice for zero-length iterators.",
+      "tags": ["iterator", "construction", "slice"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/arc_slice.rs:from_iter_leaked",
+      "type": "function",
+      "name": "from_iter_leaked",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [108, 115],
+      "summary": "Creates an ArcSlice from an iterator and marks the underlying arc as intentionally leaked from refcount tracking.",
+      "tags": ["ffi", "memory-management", "leak"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/arc_slice.rs:forget",
+      "type": "function",
+      "name": "forget",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [120, 124],
+      "summary": "Consumes the ArcSlice and returns a raw ForgottenArcSlicePtr for FFI transfer, forgetting the Rust value.",
+      "tags": ["ffi", "memory-management", "pointer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/arc_slice.rs:leaked_empty_ptr",
+      "type": "function",
+      "name": "leaked_empty_ptr",
+      "filePath": "style_traits/arc_slice.rs",
+      "lineRange": [129, 134],
+      "summary": "Returns a void pointer to a leaked empty ArcSlice, used to construct ArcSlices from FFI.",
+      "tags": ["ffi", "static", "empty-slice"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/dom.rs:OpaqueNode",
+      "type": "class",
+      "name": "OpaqueNode",
+      "filePath": "style_traits/dom.rs",
+      "lineRange": [18, 18],
+      "summary": "An opaque handle to a DOM node that can only be compared for equality, preventing layout code from accessing script-GC-managed node data.",
+      "tags": ["dom", "opaque-handle", "comparison", "safety"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:DevicePixel",
+      "type": "class",
+      "name": "DevicePixel",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [32, 32],
+      "summary": "A unit type representing one hardware pixel, the smallest addressable element of display hardware.",
+      "tags": ["unit-type", "pixel", "display"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:PinchZoomFactor",
+      "type": "class",
+      "name": "PinchZoomFactor",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [37, 37],
+      "summary": "A newtype wrapper around f32 representing a mobile-style pinch zoom factor.",
+      "tags": ["zoom", "scale", "newtype", "mobile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:CSSPixel",
+      "type": "class",
+      "name": "CSSPixel",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [61, 61],
+      "summary": "A unit type representing one CSS pixel in the initial viewport coordinate system, accounting for desktop page zoom.",
+      "tags": ["unit-type", "css", "pixel", "viewport"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:StyleParseErrorKind",
+      "type": "class",
+      "name": "StyleParseErrorKind",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [91, 152],
+      "summary": "Comprehensive enum of CSS parsing errors including bad URLs, unbalanced brackets, invalid colors, media query errors, and @property/@import rule violations.",
+      "tags": ["css", "parsing", "error", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/lib.rs:ValueParseErrorKind",
+      "type": "class",
+      "name": "ValueParseErrorKind",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [168, 173],
+      "summary": "Enum of property-value-specific parse errors for invalid colors and filters.",
+      "tags": ["css", "parsing", "error", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:PropertySyntaxParseError",
+      "type": "class",
+      "name": "PropertySyntaxParseError",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [202, 228],
+      "summary": "Errors encountered while parsing the @property CSS rule's syntax descriptor, including empty input, invalid names, and unclosed data types.",
+      "tags": ["css-houdini", "property", "syntax", "error", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:PropertyInheritsParseError",
+      "type": "class",
+      "name": "PropertyInheritsParseError",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [232, 241],
+      "summary": "Errors encountered while parsing the @property rule's inherits descriptor, requiring the value to be true or false.",
+      "tags": ["css-houdini", "property", "inherits", "error", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/lib.rs:SpeculativePainter",
+      "type": "class",
+      "name": "SpeculativePainter",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [287, 294],
+      "summary": "A Send+Sync trait for speculatively executing CSS paint worklet code in the worklet thread pool.",
+      "tags": ["css-paint", "worklet", "rendering", "trait"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/lib.rs:new_invalid",
+      "type": "function",
+      "name": "new_invalid",
+      "filePath": "style_traits/lib.rs",
+      "lineRange": [177, 197],
+      "summary": "Constructs a StyleParseErrorKind by wrapping a ValueParseErrorKind variant (InvalidColor/InvalidFilter) with the property name, or falling back to OtherInvalidValue.",
+      "tags": ["error-construction", "css-parsing", "helper"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/owned_slice.rs:OwnedSlice",
+      "type": "class",
+      "name": "OwnedSlice",
+      "filePath": "style_traits/owned_slice.rs",
+      "lineRange": [35, 39],
+      "summary": "A repr(C) replacement for Box<[T]> that cbindgen can understand, with raw pointer/length fields and support for serde, memory accounting, and shared memory.",
+      "tags": ["slice", "ffi", "cbindgen", "data-structure", "generic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/owned_str.rs:OwnedStr",
+      "type": "class",
+      "name": "OwnedStr",
+      "filePath": "style_traits/owned_str.rs",
+      "lineRange": [17, 17],
+      "summary": "A repr(C) wrapper around OwnedSlice<u8> replacing Box<str> with a defined FFI-safe layout, providing conversion to String and Box<str>.",
+      "tags": ["string", "ffi", "data-structure", "cbindgen"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/specified_value_info.rs:SpecifiedValueInfo",
+      "type": "class",
+      "name": "SpecifiedValueInfo",
+      "filePath": "style_traits/specified_value_info.rs",
+      "lineRange": [64, 79],
+      "summary": "A derivable trait providing CSS property value type introspection for devtools, including supported CSS types and completion keyword collection.",
+      "tags": ["css", "devtools", "introspection", "trait", "derive"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/values.rs:ToCss",
+      "type": "class",
+      "name": "ToCss",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [78, 103],
+      "summary": "A derivable trait for serializing CSS values, supporting attributes like comma separation, function notation, skip conditions, and bitflags.",
+      "tags": ["css", "serialization", "trait", "derive"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/values.rs:CssWriter",
+      "type": "class",
+      "name": "CssWriter",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [174, 177],
+      "summary": "A std::fmt::Write adapter for serializing CSS values, managing optional separator prefixes between items.",
+      "tags": ["serialization", "writer", "css", "formatting"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/values.rs:SequenceWriter",
+      "type": "class",
+      "name": "SequenceWriter",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [248, 251],
+      "summary": "A helper for serializing CSS value sequences with a configurable separator, handling Optional whitespace-aware item suppression.",
+      "tags": ["serialization", "separator", "sequence", "css"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style_traits/values.rs:Comma",
+      "type": "class",
+      "name": "Comma",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [354, 354],
+      "summary": "Marker type indicating comma-separated serialization of CSS value lists.",
+      "tags": ["separator", "serialization", "css", "marker"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/values.rs:Space",
+      "type": "class",
+      "name": "Space",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [359, 359],
+      "summary": "Marker type indicating space-separated serialization of CSS value lists.",
+      "tags": ["separator", "serialization", "css", "marker"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/values.rs:CommaWithSpace",
+      "type": "class",
+      "name": "CommaWithSpace",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [365, 365],
+      "summary": "Marker type indicating comma-separated serialization where spaces without commas are also allowed during parsing.",
+      "tags": ["separator", "serialization", "css", "marker"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/values.rs:Separator",
+      "type": "class",
+      "name": "Separator",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [368, 386],
+      "summary": "Trait defining a CSS list separator with a separator string and a parser for separated sequences.",
+      "tags": ["serialization", "parsing", "separator", "trait"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style_traits/values.rs:OneOrMoreSeparated",
+      "type": "class",
+      "name": "OneOrMoreSeparated",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [462, 465],
+      "summary": "Marker trait indicating that a type's Vec<T> serialization should insert a separator (Comma or Space) between elements.",
+      "tags": ["marker-trait", "serialization", "css"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/values.rs:new (CssWriter)",
+      "type": "function",
+      "name": "new (CssWriter)",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [185, 190],
+      "summary": "Creates a new CssWriter wrapping a std::fmt::Write output, initializing the prefix to empty for the first item.",
+      "tags": ["constructor", "css-writer", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/values.rs:new (SequenceWriter)",
+      "type": "function",
+      "name": "new (SequenceWriter)",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [265, 271],
+      "summary": "Creates a new SequenceWriter with the given CssWriter and separator string, resetting the prefix state.",
+      "tags": ["constructor", "sequence-writer", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style_traits/values.rs:write_item",
+      "type": "function",
+      "name": "write_item",
+      "filePath": "style_traits/values.rs",
+      "lineRange": [275, 325],
+      "summary": "Serializes a CSS value item via a closure, managing separator insertion only after the first item produces output and tracking write state across calls.",
+      "tags": ["serialization", "separator", "item", "writer"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/arc_slice.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/dom.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/owned_slice.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/owned_str.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/specified_value_info.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "file:style_traits/values.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "class:style_traits/arc_slice.rs:ArcSlice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "class:style_traits/arc_slice.rs:ForgottenArcSlicePtr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:from_iter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:from_iter_leaked",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:forget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:leaked_empty_ptr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "class:style_traits/arc_slice.rs:ArcSlice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "class:style_traits/arc_slice.rs:ForgottenArcSlicePtr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:from_iter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:from_iter_leaked",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:forget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/arc_slice.rs",
+      "target": "function:style_traits/arc_slice.rs:leaked_empty_ptr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/dom.rs",
+      "target": "class:style_traits/dom.rs:OpaqueNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/dom.rs",
+      "target": "class:style_traits/dom.rs:OpaqueNode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:DevicePixel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PinchZoomFactor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:CSSPixel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:StyleParseErrorKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:ValueParseErrorKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PropertySyntaxParseError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PropertyInheritsParseError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:SpeculativePainter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "function:style_traits/lib.rs:new_invalid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:DevicePixel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PinchZoomFactor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:CSSPixel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:StyleParseErrorKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:ValueParseErrorKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PropertySyntaxParseError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:PropertyInheritsParseError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "class:style_traits/lib.rs:SpeculativePainter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/lib.rs",
+      "target": "function:style_traits/lib.rs:new_invalid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/owned_slice.rs",
+      "target": "class:style_traits/owned_slice.rs:OwnedSlice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/owned_slice.rs",
+      "target": "class:style_traits/owned_slice.rs:OwnedSlice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/owned_str.rs",
+      "target": "class:style_traits/owned_str.rs:OwnedStr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/owned_str.rs",
+      "target": "class:style_traits/owned_str.rs:OwnedStr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/specified_value_info.rs",
+      "target": "class:style_traits/specified_value_info.rs:SpecifiedValueInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/specified_value_info.rs",
+      "target": "class:style_traits/specified_value_info.rs:SpecifiedValueInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:ToCss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:CssWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:SequenceWriter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Comma",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Space",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:CommaWithSpace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Separator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:OneOrMoreSeparated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:new (CssWriter)",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:new (SequenceWriter)",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:write_item",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:ToCss",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:CssWriter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:SequenceWriter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Comma",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Space",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:CommaWithSpace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:Separator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "class:style_traits/values.rs:OneOrMoreSeparated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:new (CssWriter)",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:new (SequenceWriter)",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style_traits/values.rs",
+      "target": "function:style_traits/values.rs:write_item",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

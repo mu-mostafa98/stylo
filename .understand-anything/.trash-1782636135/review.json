@@ -1,0 +1,61 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'file:style/gecko_bindings/mod.rs' has no edges (orphan)",
+    "Node 'file:style/gecko_bindings/sugar/mod.rs' has no edges (orphan)",
+    "Node 'file:style/gecko_bindings/sugar/wrapper.rs' has no edges (orphan)",
+    "Node 'file:style/l10n/atoms.rs' has no edges (orphan)",
+    "Node 'file:style/l10n/longhands.rs' has no edges (orphan)",
+    "Node 'file:style/values/generics/content.rs' has no edges (orphan)",
+    "Node 'file:style/values/generics/settings.rs' has no edges (orphan)",
+    "Node 'file:style/values/generics/transition.rs' has no edges (orphan)",
+    "Node 'file:style/values/generics/wayland.rs' has no edges (orphan)",
+    "Node 'pipeline:.github/workflows/main.yml' has no edges (orphan)",
+    "Node 'pipeline:.github/workflows/mirror-to-release-branch.yml' has no edges (orphan)",
+    "Node 'pipeline:.github/workflows/sync-upstream.yml' has no edges (orphan)",
+    "Node 'file:commit-from-merge.sh' has no edges (orphan)",
+    "Node 'file:commit-from-squashed.sh' has no edges (orphan)",
+    "Node 'file:style/properties/counter_style_descriptors.toml' has no edges (orphan)",
+    "Node 'file:style/properties/font_face_descriptors.toml' has no edges (orphan)",
+    "Node 'file:style/properties/longhands.toml' has no edges (orphan)",
+    "Node 'file:style/macros.rs' has no edges (orphan)",
+    "Node 'file:.understand-anything/.understandignore' has no edges (orphan)",
+    "Node 'config:style_traits/Cargo.toml' has no edges (orphan)",
+    "Node 'config:style/Cargo.toml' has no edges (orphan)",
+    "Node 'file:style/properties/properties.html.mako' has no edges (orphan)",
+    "Node 'document:style/properties/vendored_python/markupsafe/LICENSE.txt' has no edges (orphan)",
+    "Node 'file:style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl' has no edges (orphan)",
+    "Node 'file:style/values/animated/text.rs' has no edges (orphan)",
+    "Node 'file:style/values/specified/column.rs' has no edges (orphan)",
+    "Node 'file:style/values/specified/rect.rs' has no edges (orphan)",
+    "Node 'file:style/values/specified/url.rs' has no edges (orphan)",
+    "Node 'file:style/values/computed/settings.rs' has no edges (orphan)",
+    "Node 'file:style/values/computed/source.rs' has no edges (orphan)",
+    "Node 'file:style/values/computed/transition.rs' has no edges (orphan)",
+    "Node 'file:style/values/computed/wayland.rs' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 2838,
+    "totalEdges": 4783,
+    "totalLayers": 10,
+    "tourSteps": 7,
+    "nodeTypes": {
+      "file": 295,
+      "class": 887,
+      "function": 1627,
+      "pipeline": 3,
+      "config": 15,
+      "document": 11
+    },
+    "edgeTypes": {
+      "contains": 2531,
+      "exports": 1940,
+      "depends_on": 37,
+      "imports": 192,
+      "calls": 54,
+      "related": 14,
+      "documents": 6,
+      "configures": 9
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": ".github/workflows/main.yml", "language": "yaml", "sizeLines": 77, "fileCategory": "infra"},
+    {"path": ".github/workflows/mirror-to-release-branch.yml", "language": "yaml", "sizeLines": 26, "fileCategory": "infra"},
+    {"path": ".github/workflows/sync-upstream.yml", "language": "yaml", "sizeLines": 23, "fileCategory": "infra"}
+  ],
+  "batchImportData": {}
+}

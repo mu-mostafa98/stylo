@@ -1,0 +1,1561 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/animated/color.rs",
+      "type": "file",
+      "name": "color.rs",
+      "filePath": "style/values/animated/color.rs",
+      "summary": "Animation implementations for CSS color values, providing Animate, ComputeSquaredDistance, and ToAnimatedZero trait implementations for AbsoluteColor and GenericColor types.",
+      "tags": [
+        "animation",
+        "color",
+        "css-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/animated/effects.rs",
+      "type": "file",
+      "name": "effects.rs",
+      "filePath": "style/values/animated/effects.rs",
+      "summary": "Type aliases for animated filter and shadow values used in CSS effects animations including drop-shadow and filter functions.",
+      "tags": [
+        "animation",
+        "effects",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/font.rs",
+      "type": "file",
+      "name": "font.rs",
+      "filePath": "style/values/animated/font.rs",
+      "summary": "Animation trait implementations for font variation settings, supporting interpolation of variable font axis values.",
+      "tags": [
+        "animation",
+        "font",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/animated/mod.rs",
+      "summary": "Core animated values module defining fundamental animation traits (Animate, ToAnimatedValue, ToAnimatedZero) and the Procedure enum, with blanket implementations for primitive types and standard containers.",
+      "tags": [
+        "animation",
+        "core-traits",
+        "css-values"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Defines the core animation traits Animate, ToAnimatedValue, and ToAnimatedZero with derive-compatible macros and blanket impls for Option, Vec, Box, SmallVec, and ThinVec."
+    },
+    {
+      "id": "file:style/values/animated/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/animated/transform.rs",
+      "summary": "Animation implementations for CSS transform functions, including 2D and 3D matrix decomposition, quaternion-based rotation interpolation (slerp), and individual transform property animation for rotate, translate, and scale.",
+      "tags": [
+        "animation",
+        "transform",
+        "matrix",
+        "quaternion"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements the CSS Transforms spec's decomposition algorithm (Graphics Gems unmatrix), quaternion spherical linear interpolation for 3D rotations, and feature-gated (servo/gecko) matrix animation paths."
+    },
+    {
+      "id": "file:style/values/computed/align.rs",
+      "type": "file",
+      "name": "align.rs",
+      "filePath": "style/values/computed/align.rs",
+      "summary": "Computed values for CSS Box Alignment properties, primarily handling the justify-items property with special legacy keyword semantics.",
+      "tags": [
+        "css-values",
+        "alignment",
+        "computed-style"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/animation.rs",
+      "type": "file",
+      "name": "animation.rs",
+      "filePath": "style/values/computed/animation.rs",
+      "summary": "Computed values for CSS animation and transition properties including AnimationDuration, AnimationIterationCount, AnimationTimeline, and animation range types.",
+      "tags": [
+        "animation",
+        "computed-style",
+        "css-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/border.rs",
+      "type": "file",
+      "name": "border.rs",
+      "filePath": "style/values/computed/border.rs",
+      "summary": "Computed types for CSS border properties including border-width, border-image, border-radius, and border-spacing with resolved value handling.",
+      "tags": [
+        "css-values",
+        "border",
+        "computed-style"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/box.rs",
+      "type": "file",
+      "name": "box.rs",
+      "filePath": "style/values/computed/box.rs",
+      "summary": "Computed values for CSS box properties including resize, zoom, perspective, contain-intrinsic-size, line-clamp, overflow-clip-margin, and baseline-shift.",
+      "tags": [
+        "css-values",
+        "box-model",
+        "computed-style"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/calc.rs",
+      "type": "file",
+      "name": "calc.rs",
+      "filePath": "style/values/computed/calc.rs",
+      "summary": "Computed-value calc() expression leaf type (ComputedLeaf) implementing the CalcNodeLeaf trait for unit-aware arithmetic across length, percentage, number, angle, time, and resolution unit types.",
+      "tags": [
+        "css-values",
+        "calc",
+        "computed-style"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/counters.rs",
+      "type": "file",
+      "name": "counters.rs",
+      "filePath": "style/values/computed/counters.rs",
+      "summary": "Computed type aliases for CSS counter properties including counter-increment, counter-reset, counter-set, and the content property with Image generic parameter.",
+      "tags": [
+        "css-values",
+        "counters",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/computed/transform.rs",
+      "summary": "Computed types and matrix operations for CSS 2D and 3D transforms, providing Matrix3D, Matrix, TransformOperation, and individual transform property (Rotate, Translate, Scale) implementations.",
+      "tags": [
+        "css-values",
+        "transform",
+        "matrix",
+        "computed-style"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Matrix3D implements full 4x4 matrix operations including determinant, transpose, inverse, multiply, and perspective/translate/scale manipulation used by the animation matrix decomposition algorithm."
+    },
+    {
+      "id": "function:style/values/animated/color.rs:AbsoluteColor::animate",
+      "type": "function",
+      "name": "AbsoluteColor::animate",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        20,
+        33
+      ],
+      "summary": "Animates AbsoluteColor by mixing RGBA channels using weighted color interpolation.",
+      "tags": [
+        "animation",
+        "color",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/color.rs:AbsoluteColor::compute_squared_distance",
+      "type": "function",
+      "name": "AbsoluteColor::compute_squared_distance",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        38,
+        56
+      ],
+      "summary": "Computes squared color distance using alpha-premultiplied RGBA channel differences.",
+      "tags": [
+        "animation",
+        "color",
+        "distance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/color.rs:GenericColor::animate",
+      "type": "function",
+      "name": "GenericColor::animate",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        67,
+        85
+      ],
+      "summary": "Animates GenericColor by converting to a color-mix representation with weighted percentages.",
+      "tags": [
+        "animation",
+        "color",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "function",
+      "name": "compare_property_priority",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        69,
+        90
+      ],
+      "summary": "Sorts PropertyIds for keyframe prioritization: physical longhands before logical longhands before shorthands, with shorthand ordering by subproperty count then IDL name.",
+      "tags": [
+        "animation",
+        "property-ordering",
+        "keyframes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "function",
+      "name": "animate_multiplicative_factor",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        93,
+        99
+      ],
+      "summary": "Animates multiplicative CSS values (like scale factors) by converting to additive space, interpolating, and converting back.",
+      "tags": [
+        "animation",
+        "utility",
+        "multiplicative"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:Animate",
+      "type": "class",
+      "name": "Animate",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        115,
+        118
+      ],
+      "summary": "Core trait defining how CSS values animate from one state to another given an animation procedure.",
+      "tags": [
+        "trait",
+        "animation",
+        "core"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:Procedure",
+      "type": "class",
+      "name": "Procedure",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        125,
+        132
+      ],
+      "summary": "Enum representing CSS animation procedures: Interpolate, Add, and Accumulate.",
+      "tags": [
+        "enum",
+        "animation",
+        "procedure"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "class",
+      "name": "ToAnimatedValue",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        145,
+        154
+      ],
+      "summary": "Trait for conversion between computed values and intermediate animated representations, notably used for color channel decomposition.",
+      "tags": [
+        "trait",
+        "animation",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "class",
+      "name": "ToAnimatedZero",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        167,
+        176
+      ],
+      "summary": "Trait for producing the zero value of a CSS type, used in SMIL by-animation where interpolation starts from the zero value.",
+      "tags": [
+        "trait",
+        "animation",
+        "zero-value"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:MatrixDecomposed2D::animate",
+      "type": "function",
+      "name": "MatrixDecomposed2D::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        93,
+        133
+      ],
+      "summary": "Interpolates decomposed 2D matrix components (translate, scale, rotation, inner matrix) handling axis flips and shortest-path rotation.",
+      "tags": [
+        "animation",
+        "transform",
+        "matrix-decomposition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:MatrixDecomposed2D::compute_squared_distance",
+      "type": "function",
+      "name": "MatrixDecomposed2D::compute_squared_distance",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        138,
+        147
+      ],
+      "summary": "Computes squared distance between decomposed 2D matrix states as sum of component squared distances.",
+      "tags": [
+        "animation",
+        "transform",
+        "distance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:MatrixDecomposed2D::from_matrix3d",
+      "type": "function",
+      "name": "MatrixDecomposed2D::from_matrix3d",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        153,
+        215
+      ],
+      "summary": "Decomposes a 2D matrix into translate, scale, rotation, and inner matrix components using the CSS Transforms unmatrix algorithm.",
+      "tags": [
+        "transform",
+        "matrix-decomposition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:MatrixDecomposed2D::recompose_to_matrix3d",
+      "type": "function",
+      "name": "MatrixDecomposed2D::recompose_to_matrix3d",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        221,
+        252
+      ],
+      "summary": "Recomposes a full transform matrix from decomposed translate, scale, and rotation components.",
+      "tags": [
+        "transform",
+        "matrix-recomposition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:Quaternion::from_direction_and_angle",
+      "type": "function",
+      "name": "Quaternion::from_direction_and_angle",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        346,
+        377
+      ],
+      "summary": "Creates a quaternion from a unit direction vector and rotation angle, clamping angle to within one full rotation.",
+      "tags": [
+        "quaternion",
+        "rotation",
+        "3d-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:Quaternion::animate",
+      "type": "function",
+      "name": "Quaternion::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        411,
+        487
+      ],
+      "summary": "Implements quaternion spherical linear interpolation (slerp) for 3D rotation animation with a specialized accumulation code path.",
+      "tags": [
+        "animation",
+        "quaternion",
+        "slerp",
+        "3d-transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:MatrixDecomposed3D::recompose_to_matrix3d",
+      "type": "function",
+      "name": "MatrixDecomposed3D::recompose_to_matrix3d",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        520,
+        577
+      ],
+      "summary": "Recomposes a 3D transform matrix from decomposed translate, scale, skew, perspective, and quaternion rotation components.",
+      "tags": [
+        "transform",
+        "matrix-recomposition",
+        "3d"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:decompose_3d_matrix",
+      "type": "function",
+      "name": "decompose_3d_matrix",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        583,
+        727
+      ],
+      "summary": "Decomposes a 3D matrix into translation, scale, skew, perspective, and quaternion components using the Graphics Gems unmatrix algorithm.",
+      "tags": [
+        "transform",
+        "matrix-decomposition",
+        "3d",
+        "unmatrix"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:decompose_2d_matrix",
+      "type": "function",
+      "name": "decompose_2d_matrix",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        851,
+        900
+      ],
+      "summary": "Gecko-specific 2D matrix decomposition into translate, scale, shear, perspective, and quaternion rotation components.",
+      "tags": [
+        "transform",
+        "matrix-decomposition",
+        "2d",
+        "gecko"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:Matrix3D::animate",
+      "type": "function",
+      "name": "Matrix3D::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        904,
+        935
+      ],
+      "summary": "Animates 4x4 matrices by decomposition to MatrixDecomposed3D or MatrixDecomposed2D depending on whether either operand is 3D.",
+      "tags": [
+        "animation",
+        "matrix",
+        "3d-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:is_matched_operation",
+      "type": "function",
+      "name": "is_matched_operation",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        968,
+        991
+      ],
+      "summary": "Determines whether two CSS transform operations have matching types for pairwise interpolation.",
+      "tags": [
+        "transform",
+        "matching",
+        "interpolation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:ComputedTransform::animate",
+      "type": "function",
+      "name": "ComputedTransform::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        996,
+        1084
+      ],
+      "summary": "Animates CSS transform lists by pairwise interpolation of matched operations with identity padding for remainder items.",
+      "tags": [
+        "animation",
+        "transform",
+        "list-interpolation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:ComputedTransformOperation::animate",
+      "type": "function",
+      "name": "ComputedTransformOperation::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1110,
+        1255
+      ],
+      "summary": "Dispatches animation between matching transform operation types (translate, scale, rotate, skew, matrix, perspective) with type coercion between related operations.",
+      "tags": [
+        "animation",
+        "transform",
+        "operation-dispatch"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_mismatched_transforms",
+      "type": "function",
+      "name": "animate_mismatched_transforms",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1273,
+        1299
+      ],
+      "summary": "Handles animation between mismatched transform lists by falling back to InterpolateMatrix or AccumulateMatrix wrappers.",
+      "tags": [
+        "animation",
+        "transform",
+        "mismatch-fallback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:ComputedRotate::animate",
+      "type": "function",
+      "name": "ComputedRotate::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1416,
+        1530
+      ],
+      "summary": "Animates the individual CSS rotate property using quaternion slerp for 3D rotations or angle interpolation for 2D rotations.",
+      "tags": [
+        "animation",
+        "rotate",
+        "individual-transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:ComputedTranslate::animate",
+      "type": "function",
+      "name": "ComputedTranslate::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1597,
+        1609
+      ],
+      "summary": "Animates the individual CSS translate property by interpolating x, y, and z components.",
+      "tags": [
+        "animation",
+        "translate",
+        "individual-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:ComputedScale::animate",
+      "type": "function",
+      "name": "ComputedScale::animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1638,
+        1658
+      ],
+      "summary": "Animates the individual CSS scale property using multiplicative factor animation.",
+      "tags": [
+        "animation",
+        "scale",
+        "individual-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "class",
+      "name": "InnerMatrix2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "Represents the inner 2x2 matrix of a decomposed 2D transform with scale-preserving animation of diagonal elements.",
+      "tags": [
+        "struct",
+        "matrix",
+        "2d-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "class",
+      "name": "MatrixDecomposed2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        80,
+        89
+      ],
+      "summary": "Decomposed representation of a 2D transform matrix with translate, scale, rotation, and inner matrix components.",
+      "tags": [
+        "struct",
+        "matrix-decomposition",
+        "2d-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "class",
+      "name": "Quaternion",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        341,
+        341
+      ],
+      "summary": "Quaternion representation for 3D rotation with slerp-based animation and utility methods for dot product, scaling, and addition.",
+      "tags": [
+        "struct",
+        "quaternion",
+        "3d-rotation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "class",
+      "name": "MatrixDecomposed3D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        504,
+        515
+      ],
+      "summary": "Decomposed representation of a 3D transform matrix with translate, scale, skew, perspective, and quaternion rotation components.",
+      "tags": [
+        "struct",
+        "matrix-decomposition",
+        "3d-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/align.rs:ComputedJustifyItems",
+      "type": "class",
+      "name": "ComputedJustifyItems",
+      "filePath": "style/values/computed/align.rs",
+      "lineRange": [
+        39,
+        48
+      ],
+      "summary": "Computed value for justify-items carrying both specified and computed forms to handle the legacy keyword without breaking style sharing.",
+      "tags": [
+        "struct",
+        "alignment",
+        "computed-value"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/align.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/align.rs",
+      "lineRange": [
+        66,
+        83
+      ],
+      "summary": "Computes justify-items value, resolving legacy keyword to inherited value while preserving the specified value for StyleAdjuster special-casing.",
+      "tags": [
+        "computation",
+        "alignment",
+        "legacy"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/animation.rs:AnimationIterationCount",
+      "type": "class",
+      "name": "AnimationIterationCount",
+      "filePath": "style/values/computed/animation.rs",
+      "lineRange": [
+        40,
+        40
+      ],
+      "summary": "Computed value for animation-iteration-count wrapping an f32 with special infinite value handling, CSS serialization, and typed-OM conversion.",
+      "tags": [
+        "struct",
+        "animation",
+        "iteration-count"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/border.rs:BorderSideWidth",
+      "type": "class",
+      "name": "BorderSideWidth",
+      "filePath": "style/values/computed/border.rs",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Computed value for border-side-width wrapping Au, with animation via CSSPixelLength and resolved value logic that zeros widths when border style is none or hidden.",
+      "tags": [
+        "struct",
+        "border",
+        "computed-value"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/box.rs:Zoom",
+      "type": "class",
+      "name": "Zoom",
+      "filePath": "style/values/computed/box.rs",
+      "lineRange": [
+        141,
+        141
+      ],
+      "summary": "Computed value for the CSS zoom property with effective zoom computation for nested elements, inversion, and animation via animated Number type.",
+      "tags": [
+        "struct",
+        "zoom",
+        "computed-value"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/calc.rs:ComputedLeaf",
+      "type": "class",
+      "name": "ComputedLeaf",
+      "filePath": "style/values/computed/calc.rs",
+      "lineRange": [
+        29,
+        36
+      ],
+      "summary": "Enum representing computed calc() expression leaf values (Length, Percentage, Number, Angle, Time, Resolution) implementing CalcNodeLeaf for unit-aware arithmetic operations.",
+      "tags": [
+        "enum",
+        "calc",
+        "expression-evaluation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/transform.rs:Matrix3D",
+      "type": "class",
+      "name": "Matrix3D",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        55,
+        55
+      ],
+      "summary": "Computed value for CSS matrix3d() providing full 4x4 matrix operations: determinant, transpose, inverse, multiply, perspective/translate/scale manipulation, and 2D conversion.",
+      "tags": [
+        "struct",
+        "matrix",
+        "3d-transform",
+        "computed-value"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/transform.rs:Matrix",
+      "type": "class",
+      "name": "Matrix",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        333,
+        333
+      ],
+      "summary": "Computed value for CSS matrix() with identity constructor and conversion to Matrix3D.",
+      "tags": [
+        "struct",
+        "matrix",
+        "2d-transform",
+        "computed-value"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:Matrix3D::into_2d",
+      "type": "function",
+      "name": "Matrix3D::into_2d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        69,
+        82
+      ],
+      "summary": "Converts a Matrix3D to a 2D Matrix if all 3D components are identity values.",
+      "tags": [
+        "matrix",
+        "conversion",
+        "2d"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:Matrix3D::determinant",
+      "type": "function",
+      "name": "Matrix3D::determinant",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        96,
+        121
+      ],
+      "summary": "Computes the determinant of a 4x4 matrix using Laplace expansion across the first row.",
+      "tags": [
+        "matrix",
+        "determinant",
+        "linear-algebra"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:Matrix3D::inverse",
+      "type": "function",
+      "name": "Matrix3D::inverse",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        135,
+        211
+      ],
+      "summary": "Computes the inverse of a 4x4 matrix using cofactor expansion with singular matrix detection.",
+      "tags": [
+        "matrix",
+        "inverse",
+        "linear-algebra"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:Matrix3D::multiply",
+      "type": "function",
+      "name": "Matrix3D::multiply",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        226,
+        261
+      ],
+      "summary": "Multiplies two 4x4 matrices producing a new Matrix3D.",
+      "tags": [
+        "matrix",
+        "multiplication",
+        "linear-algebra"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:TransformOperation::to_translate_3d",
+      "type": "function",
+      "name": "TransformOperation::to_translate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        375,
+        404
+      ],
+      "summary": "Normalizes any CSS translate function (TranslateX, TranslateY, TranslateZ, Translate) to a Translate3D representation.",
+      "tags": [
+        "transform",
+        "translate",
+        "normalization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:TransformOperation::to_rotate_3d",
+      "type": "function",
+      "name": "TransformOperation::to_rotate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        409,
+        424
+      ],
+      "summary": "Normalizes any CSS rotate function (Rotate, RotateX, RotateY, RotateZ) to a Rotate3D representation.",
+      "tags": [
+        "transform",
+        "rotate",
+        "normalization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:TransformOperation::to_scale_3d",
+      "type": "function",
+      "name": "TransformOperation::to_scale_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        429,
+        446
+      ],
+      "summary": "Normalizes any CSS scale function (Scale, ScaleX, ScaleY, ScaleZ) to a Scale3D representation.",
+      "tags": [
+        "transform",
+        "scale",
+        "normalization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:TransformOperation::to_animated_zero",
+      "type": "function",
+      "name": "TransformOperation::to_animated_zero",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        453,
+        537
+      ],
+      "summary": "Produces the identity value for each CSS transform operation type, used as the zero value for additive animation.",
+      "tags": [
+        "animation",
+        "transform",
+        "identity"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:AbsoluteColor::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:AbsoluteColor::compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:GenericColor::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:MatrixDecomposed2D::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:MatrixDecomposed2D::compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:MatrixDecomposed2D::from_matrix3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:MatrixDecomposed2D::recompose_to_matrix3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:Quaternion::from_direction_and_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:Quaternion::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:MatrixDecomposed3D::recompose_to_matrix3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:decompose_3d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:decompose_2d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:Matrix3D::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:is_matched_operation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:ComputedTransform::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:ComputedTransformOperation::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_mismatched_transforms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:ComputedRotate::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:ComputedTranslate::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:ComputedScale::animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/align.rs",
+      "target": "class:style/values/computed/align.rs:ComputedJustifyItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/align.rs",
+      "target": "class:style/values/computed/align.rs:ComputedJustifyItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/align.rs",
+      "target": "function:style/values/computed/align.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/animation.rs",
+      "target": "class:style/values/computed/animation.rs:AnimationIterationCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/animation.rs",
+      "target": "class:style/values/computed/animation.rs:AnimationIterationCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/border.rs",
+      "target": "class:style/values/computed/border.rs:BorderSideWidth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/border.rs",
+      "target": "class:style/values/computed/border.rs:BorderSideWidth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/box.rs",
+      "target": "class:style/values/computed/box.rs:Zoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/box.rs",
+      "target": "class:style/values/computed/box.rs:Zoom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/calc.rs",
+      "target": "class:style/values/computed/calc.rs:ComputedLeaf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/calc.rs",
+      "target": "class:style/values/computed/calc.rs:ComputedLeaf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "class:style/values/computed/transform.rs:Matrix3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "class:style/values/computed/transform.rs:Matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::into_2d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::into_2d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::determinant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::determinant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::inverse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::inverse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::multiply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:Matrix3D::multiply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_translate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_translate_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_rotate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_rotate_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_scale_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_scale_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_animated_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:TransformOperation::to_animated_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/color.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/effects.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/font.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/grid.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/lists.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/svg.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "file:style/values/animated/transform.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/align.rs",
+      "target": "file:style/values/specified/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "file:style/values/computed/transform.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/computed/box.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/computed/border.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

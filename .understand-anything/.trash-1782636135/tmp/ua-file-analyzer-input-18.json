@@ -1,0 +1,29 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/properties_and_values/mod.rs", "language": "rust", "sizeLines": 12, "fileCategory": "code"},
+    {"path": "style/properties_and_values/registry.rs", "language": "rust", "sizeLines": 66, "fileCategory": "code"},
+    {"path": "style/properties_and_values/rule.rs", "language": "rust", "sizeLines": 341, "fileCategory": "code"},
+    {"path": "style/properties_and_values/syntax/ascii.rs", "language": "rust", "sizeLines": 60, "fileCategory": "code"},
+    {"path": "style/properties_and_values/syntax/data_type.rs", "language": "rust", "sizeLines": 146, "fileCategory": "code"},
+    {"path": "style/properties_and_values/syntax/mod.rs", "language": "rust", "sizeLines": 445, "fileCategory": "code"},
+    {"path": "style/properties_and_values/value.rs", "language": "rust", "sizeLines": 750, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/properties_and_values/mod.rs": [
+      "style/properties_and_values/registry.rs",
+      "style/properties_and_values/rule.rs",
+      "style/properties_and_values/syntax/mod.rs",
+      "style/properties_and_values/value.rs"
+    ],
+    "style/properties_and_values/registry.rs": [],
+    "style/properties_and_values/rule.rs": [],
+    "style/properties_and_values/syntax/ascii.rs": [],
+    "style/properties_and_values/syntax/data_type.rs": [],
+    "style/properties_and_values/syntax/mod.rs": [
+      "style/properties_and_values/syntax/ascii.rs",
+      "style/properties_and_values/syntax/data_type.rs"
+    ],
+    "style/properties_and_values/value.rs": []
+  }
+}

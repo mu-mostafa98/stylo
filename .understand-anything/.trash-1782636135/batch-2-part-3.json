@@ -1,0 +1,2664 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/generics/font.rs",
+      "type": "file",
+      "name": "font.rs",
+      "filePath": "style/values/generics/font.rs",
+      "summary": "Generic types for CSS font properties including font-feature-settings, font-variation-settings with tag-value pairs, font-style (italic/oblique), font-size-adjust, and line-height.",
+      "tags": [
+        "generic",
+        "font",
+        "css-values",
+        "typography"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/image.rs",
+      "type": "file",
+      "name": "image.rs",
+      "filePath": "style/values/generics/image.rs",
+      "summary": "Generic types for CSS image values including gradient stops/shapes, image-set resolution-aware images, cross-fade blending, paint worklets, and line direction enumeration.",
+      "tags": [
+        "generic",
+        "image",
+        "css-values",
+        "gradient"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/generics/length.rs",
+      "type": "file",
+      "name": "length.rs",
+      "filePath": "style/values/generics/length.rs",
+      "summary": "Generic types for CSS length and size values including LengthPercentageOrAuto, min/max-size with clamp keywords, LengthOrNumber, anchor-size() function support, and margin shorthands.",
+      "tags": [
+        "generic",
+        "length",
+        "css-values",
+        "size"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements CompletionKeyword to represent CSS min-content/max-content/fit-content/auto keywords alongside numeric values."
+    },
+    {
+      "id": "file:style/values/generics/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/generics/mod.rs",
+      "summary": "Module root for generic CSS value types, re-exporting all submodules and defining foundational wrappers: NonNegative<T>, ZeroToOne<T>, ClipRect, ClipRectOrAuto, and a C++-compatible Optional<T> enum.",
+      "tags": [
+        "generic",
+        "module-root",
+        "css-values",
+        "re-export"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Contains C++-compatible FFI types like Optional<T> with repr(C) layout for Servo/Gecko bindings."
+    },
+    {
+      "id": "file:style/values/generics/motion.rs",
+      "type": "file",
+      "name": "motion.rs",
+      "filePath": "style/values/generics/motion.rs",
+      "summary": "Generic types for CSS motion path properties including offset-path with ray() angle/size functions, path SVG data references, and offset-position coordinate values.",
+      "tags": [
+        "generic",
+        "motion",
+        "css-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/font.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        57,
+        69
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/font.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        127,
+        129
+      ],
+      "summary": "Factory method returning the normal variant for a CSS generic type in font.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/font.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        135,
+        151
+      ],
+      "summary": "CSS value parsing implementation, converting CSS syntax tokens into this generic type.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/font.rs:fmt",
+      "type": "function",
+      "name": "fmt",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        176,
+        186
+      ],
+      "summary": "Debug formatting implementation for CSS generic types.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/font.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        313,
+        322
+      ],
+      "summary": "Houdini Typed OM serialization via the ToTyped trait for CSS numeric and keyword values.",
+      "tags": [
+        "function",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:TaggedFontValue",
+      "type": "class",
+      "name": "TaggedFontValue",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        21,
+        24
+      ],
+      "summary": "Generic CSS font value type defined in font with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "font"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:FeatureTagValue",
+      "type": "class",
+      "name": "FeatureTagValue",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "Generic CSS font value type defined in font with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:VariationValue",
+      "type": "class",
+      "name": "VariationValue",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        91,
+        97
+      ],
+      "summary": "Generic CSS font value type defined in font with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:FontSettings",
+      "type": "class",
+      "name": "FontSettings",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        122,
+        122
+      ],
+      "summary": "Generic CSS font value type defined in font with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "font"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:FontTag",
+      "type": "class",
+      "name": "FontTag",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        173,
+        173
+      ],
+      "summary": "Generic CSS font value type defined in font with 3 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "font"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:FontStyle",
+      "type": "class",
+      "name": "FontStyle",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        242,
+        248
+      ],
+      "summary": "Generic CSS font value type defined in font with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "font"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:GenericFontSizeAdjust",
+      "type": "class",
+      "name": "GenericFontSizeAdjust",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        278,
+        291
+      ],
+      "summary": "Generic type alias for FontSizeAdjust, a CSS font value type with 0 method(s) for font.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length",
+        "font"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/font.rs:GenericLineHeight",
+      "type": "class",
+      "name": "GenericLineHeight",
+      "filePath": "style/values/generics/font.rs",
+      "lineRange": [
+        343,
+        354
+      ],
+      "summary": "Generic type alias for LineHeight, a CSS font value type with 0 method(s) for font.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "font"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/image.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        149,
+        164
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/image.rs:into_item",
+      "type": "function",
+      "name": "into_item",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        362,
+        370
+      ],
+      "summary": "into_item() in image - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericImage",
+      "type": "class",
+      "name": "GenericImage",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        24,
+        67
+      ],
+      "summary": "Generic type alias for Image, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericCrossFade",
+      "type": "class",
+      "name": "GenericCrossFade",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        77,
+        82
+      ],
+      "summary": "Generic type alias for CrossFade, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericCrossFadeElement",
+      "type": "class",
+      "name": "GenericCrossFadeElement",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        89,
+        95
+      ],
+      "summary": "Generic type alias for CrossFadeElement, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericCrossFadeImage",
+      "type": "class",
+      "name": "GenericCrossFadeImage",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        103,
+        109
+      ],
+      "summary": "Generic type alias for CrossFadeImage, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericImageSet",
+      "type": "class",
+      "name": "GenericImageSet",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        119,
+        127
+      ],
+      "summary": "Generic type alias for ImageSet, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericImageSetItem",
+      "type": "class",
+      "name": "GenericImageSetItem",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        132,
+        146
+      ],
+      "summary": "Generic type alias for ImageSetItem, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GradientFlags",
+      "type": "class",
+      "name": "GradientFlags",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        175,
+        175
+      ],
+      "summary": "Generic CSS image value type defined in image with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericGradient",
+      "type": "class",
+      "name": "GenericGradient",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        189,
+        239
+      ],
+      "summary": "Generic type alias for Gradient, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GradientCompatMode",
+      "type": "class",
+      "name": "GradientCompatMode",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        248,
+        255
+      ],
+      "summary": "Generic CSS image value type defined in image with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericEndingShape",
+      "type": "class",
+      "name": "GenericEndingShape",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        262,
+        267
+      ],
+      "summary": "Generic type alias for EndingShape, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericCircle",
+      "type": "class",
+      "name": "GenericCircle",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        276,
+        281
+      ],
+      "summary": "Generic type alias for Circle, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericEllipse",
+      "type": "class",
+      "name": "GenericEllipse",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        290,
+        295
+      ],
+      "summary": "Generic type alias for Ellipse, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:ShapeExtent",
+      "type": "class",
+      "name": "ShapeExtent",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        316,
+        323
+      ],
+      "summary": "Generic CSS image value type defined in image with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:GenericGradientItem",
+      "type": "class",
+      "name": "GenericGradientItem",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        331,
+        343
+      ],
+      "summary": "Generic type alias for GradientItem, a CSS image value type with 0 method(s) for image.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:ColorStop",
+      "type": "class",
+      "name": "ColorStop",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        352,
+        357
+      ],
+      "summary": "Generic CSS image value type defined in image with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "color"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:PaintWorklet",
+      "type": "class",
+      "name": "PaintWorklet",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        377,
+        386
+      ],
+      "summary": "Generic CSS image value type defined in image with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/image.rs:LineDirection",
+      "type": "class",
+      "name": "LineDirection",
+      "filePath": "style/values/generics/image.rs",
+      "lineRange": [
+        624,
+        632
+      ],
+      "summary": "Generic CSS image value type defined in image with 2 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "Factory method returning the auto variant for a CSS generic type in length.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:is_auto",
+      "type": "function",
+      "name": "is_auto",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        61,
+        63
+      ],
+      "summary": "Predicate checking if the value matches the auto variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:parse_with",
+      "type": "function",
+      "name": "parse_with",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        66,
+        81
+      ],
+      "summary": "CSS value parsing implementation, converting CSS syntax tokens into this generic type.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:auto_is",
+      "type": "function",
+      "name": "auto_is",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        90,
+        95
+      ],
+      "summary": "auto_is() in length - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:non_auto",
+      "type": "function",
+      "name": "non_auto",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        99,
+        104
+      ],
+      "summary": "non_auto() in length - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:map",
+      "type": "function",
+      "name": "map",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        107,
+        114
+      ],
+      "summary": "Transforms the contained value using a closure, similar to Option::map.",
+      "tags": [
+        "function",
+        "option-like"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:collect_completion_keywords",
+      "type": "function",
+      "name": "collect_completion_keywords",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        189,
+        204
+      ],
+      "summary": "collect_completion_keywords() in length - Core logic function for CSS value computation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        291,
+        293
+      ],
+      "summary": "Factory method returning the none variant for a CSS generic type in length.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        372,
+        374
+      ],
+      "summary": "Factory method returning the normal variant for a CSS generic type in length.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        425,
+        449
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        456,
+        465
+      ],
+      "summary": "CSS value parsing implementation, converting CSS syntax tokens into this generic type.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:valid_for",
+      "type": "function",
+      "name": "valid_for",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        469,
+        471
+      ],
+      "summary": "valid_for() in length - Trivial accessor or factory method.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:new_anchor_invalid",
+      "type": "function",
+      "name": "new_anchor_invalid",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        486,
+        491
+      ],
+      "summary": "Creates a fallback/invalid anchor reference for CSS anchor positioning.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:parse_inner",
+      "type": "function",
+      "name": "parse_inner",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        496,
+        531
+      ],
+      "summary": "parse_inner() in length - Complex multi-step operation for CSS value processing.",
+      "tags": [
+        "function",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/length.rs:try_tactic_adjustment",
+      "type": "function",
+      "name": "try_tactic_adjustment",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        574,
+        587
+      ],
+      "summary": "Fallible operation for tactic adjustment on calc expressions.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericLengthPercentageOrAuto",
+      "type": "class",
+      "name": "GenericLengthPercentageOrAuto",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        45,
+        48
+      ],
+      "summary": "Generic type alias for LengthPercentageOrAuto, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericSize",
+      "type": "class",
+      "name": "GenericSize",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        162,
+        183
+      ],
+      "summary": "Generic type alias for Size, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericMaxSize",
+      "type": "class",
+      "name": "GenericMaxSize",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        241,
+        262
+      ],
+      "summary": "Generic type alias for MaxSize, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericLengthOrNumber",
+      "type": "class",
+      "name": "GenericLengthOrNumber",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        316,
+        324
+      ],
+      "summary": "Generic type alias for LengthOrNumber, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericLengthPercentageOrNormal",
+      "type": "class",
+      "name": "GenericLengthPercentageOrNormal",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        362,
+        365
+      ],
+      "summary": "Generic type alias for LengthPercentageOrNormal, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericAnchorSizeFunction",
+      "type": "class",
+      "name": "GenericAnchorSizeFunction",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        400,
+        410
+      ],
+      "summary": "Generic type alias for AnchorSizeFunction, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:AnchorResolutionResult",
+      "type": "class",
+      "name": "AnchorResolutionResult",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        475,
+        482
+      ],
+      "summary": "Generic CSS length value type defined in length with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:AnchorSizeKeyword",
+      "type": "class",
+      "name": "AnchorSizeKeyword",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        555,
+        571
+      ],
+      "summary": "Generic CSS length value type defined in length with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/length.rs:GenericMargin",
+      "type": "class",
+      "name": "GenericMargin",
+      "filePath": "style/values/generics/length.rs",
+      "lineRange": [
+        608,
+        620
+      ],
+      "summary": "Generic type alias for Margin, a CSS length value type with 0 method(s) for length.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        198,
+        200
+      ],
+      "summary": "Factory method returning the auto variant for a CSS generic type in mod.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:is_auto",
+      "type": "function",
+      "name": "is_auto",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        204,
+        206
+      ],
+      "summary": "Predicate checking if the value matches the auto variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:is_some",
+      "type": "function",
+      "name": "is_some",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        250,
+        252
+      ],
+      "summary": "Predicate checking if the value matches the some variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:is_none",
+      "type": "function",
+      "name": "is_none",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        255,
+        257
+      ],
+      "summary": "Predicate checking if the value matches the none variant for a CSS generic type.",
+      "tags": [
+        "function",
+        "predicate"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:into_rust",
+      "type": "function",
+      "name": "into_rust",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        260,
+        265
+      ],
+      "summary": "Converts the FFI-compatible Optional type to a standard Rust Option.",
+      "tags": [
+        "function",
+        "option-like"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:as_ref",
+      "type": "function",
+      "name": "as_ref",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        269,
+        274
+      ],
+      "summary": "Returns a reference to the contained value as a Rust Option.",
+      "tags": [
+        "function",
+        "option-like"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:as_mut",
+      "type": "function",
+      "name": "as_mut",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        278,
+        283
+      ],
+      "summary": "Returns a reference to the contained value as a Rust Option.",
+      "tags": [
+        "function",
+        "option-like"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/mod.rs:map",
+      "type": "function",
+      "name": "map",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        286,
+        291
+      ],
+      "summary": "Transforms the contained value using a closure, similar to Option::map.",
+      "tags": [
+        "function",
+        "option-like"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:NonNegative",
+      "type": "class",
+      "name": "NonNegative",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        63,
+        63
+      ],
+      "summary": "Range-restricted numeric wrapper ensuring values stay within valid CSS bounds (NonNegative) via repr(transparent).",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "numeric-wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:ClampToNonNegative",
+      "type": "class",
+      "name": "ClampToNonNegative",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        66,
+        69
+      ],
+      "summary": "Generic CSS value type defined in mod with 1 associated methods.",
+      "tags": [
+        "class",
+        "generic-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:GreaterThanOrEqualToOne",
+      "type": "class",
+      "name": "GreaterThanOrEqualToOne",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        114,
+        114
+      ],
+      "summary": "Range-restricted numeric wrapper ensuring values stay within valid CSS bounds (GreaterThanOrEqualToOne) via repr(transparent).",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "numeric-wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:ZeroToOne",
+      "type": "class",
+      "name": "ZeroToOne",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        136,
+        136
+      ],
+      "summary": "Range-restricted numeric wrapper ensuring values stay within valid CSS bounds (ZeroToOne) via repr(transparent).",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "numeric-wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:GenericClipRect",
+      "type": "class",
+      "name": "GenericClipRect",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        157,
+        162
+      ],
+      "summary": "Generic type alias for ClipRect, a CSS value type with 0 method(s) for mod.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:GenericClipRectOrAuto",
+      "type": "class",
+      "name": "GenericClipRectOrAuto",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        188,
+        191
+      ],
+      "summary": "Generic type alias for ClipRectOrAuto, a CSS value type with 0 method(s) for mod.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/mod.rs:Optional",
+      "type": "class",
+      "name": "Optional",
+      "filePath": "style/values/generics/mod.rs",
+      "lineRange": [
+        242,
+        246
+      ],
+      "summary": "C++-compatible Option-like enum with repr(C) layout, providing is_some, is_none, into_rust, as_ref, as_mut, and map methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "container"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/motion.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        87,
+        108
+      ],
+      "summary": "CSS serialization implementation via the ToCss trait, writing CSS text output for this generic type.",
+      "tags": [
+        "function",
+        "serialization",
+        "css-output"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/generics/motion.rs:deserialize_url",
+      "type": "function",
+      "name": "deserialize_url",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        118,
+        127
+      ],
+      "summary": "deserialize_url() in motion - Simple method for a CSS generic type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/motion.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        215,
+        217
+      ],
+      "summary": "Factory method returning the none variant for a CSS generic type in motion.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/generics/motion.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        271,
+        273
+      ],
+      "summary": "Factory method returning the normal variant for a CSS generic type in motion.",
+      "tags": [
+        "function",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/motion.rs:RaySize",
+      "type": "class",
+      "name": "RaySize",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        38,
+        44
+      ],
+      "summary": "Generic CSS motion value type defined in motion with 0 associated methods.",
+      "tags": [
+        "class",
+        "generic-type",
+        "simple-struct",
+        "length"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/motion.rs:GenericRayFunction",
+      "type": "class",
+      "name": "GenericRayFunction",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        65,
+        78
+      ],
+      "summary": "Generic type alias for RayFunction, a CSS motion value type with 0 method(s) for motion.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/motion.rs:GenericOffsetPathFunction",
+      "type": "class",
+      "name": "GenericOffsetPathFunction",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        151,
+        164
+      ],
+      "summary": "Generic type alias for OffsetPathFunction, a CSS motion value type with 0 method(s) for motion.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/motion.rs:GenericOffsetPath",
+      "type": "class",
+      "name": "GenericOffsetPath",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        191,
+        208
+      ],
+      "summary": "Generic type alias for OffsetPath, a CSS motion value type with 0 method(s) for motion.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/motion.rs:GenericOffsetPosition",
+      "type": "class",
+      "name": "GenericOffsetPosition",
+      "filePath": "style/values/generics/motion.rs",
+      "lineRange": [
+        252,
+        264
+      ],
+      "summary": "Generic type alias for OffsetPosition, a CSS motion value type with 0 method(s) for motion.",
+      "tags": [
+        "class",
+        "generic-type",
+        "generic",
+        "simple-struct"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:fmt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:TaggedFontValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FeatureTagValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:VariationValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontSettings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontTag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:GenericFontSizeAdjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:GenericLineHeight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "function:style/values/generics/image.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "function:style/values/generics/image.rs:into_item",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFadeElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFadeImage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImageSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImageSetItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GradientFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericGradient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GradientCompatMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericEndingShape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCircle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericEllipse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:ShapeExtent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericGradientItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:ColorStop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:PaintWorklet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:LineDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:is_auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:parse_with",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:auto_is",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:non_auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:collect_completion_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:valid_for",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:new_anchor_invalid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:parse_inner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:try_tactic_adjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthPercentageOrAuto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericMaxSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthOrNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthPercentageOrNormal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericAnchorSizeFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:AnchorResolutionResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:AnchorSizeKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_some",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:into_rust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:as_ref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:as_mut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:NonNegative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:ClampToNonNegative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GreaterThanOrEqualToOne",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:ZeroToOne",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GenericClipRect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GenericClipRectOrAuto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:Optional",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:deserialize_url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:RaySize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericRayFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPathFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:TaggedFontValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FeatureTagValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:VariationValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontSettings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "function:style/values/generics/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontTag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:FontStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:GenericFontSizeAdjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/font.rs",
+      "target": "class:style/values/generics/font.rs:GenericLineHeight",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFadeElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCrossFadeImage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImageSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericImageSetItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GradientFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericGradient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GradientCompatMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericEndingShape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericCircle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericEllipse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:ShapeExtent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:GenericGradientItem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:ColorStop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "function:style/values/generics/image.rs:into_item",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:PaintWorklet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/image.rs",
+      "target": "class:style/values/generics/image.rs:LineDirection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthPercentageOrAuto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:is_auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:parse_with",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:auto_is",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:non_auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:map",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericMaxSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthOrNumber",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericLengthPercentageOrNormal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericAnchorSizeFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:valid_for",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:AnchorResolutionResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:new_anchor_invalid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "function:style/values/generics/length.rs:parse_inner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:AnchorSizeKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/length.rs",
+      "target": "class:style/values/generics/length.rs:GenericMargin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:NonNegative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:ClampToNonNegative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GreaterThanOrEqualToOne",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:ZeroToOne",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GenericClipRect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:GenericClipRectOrAuto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "class:style/values/generics/mod.rs:Optional",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_some",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:into_rust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:as_ref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:as_mut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "function:style/values/generics/mod.rs:map",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:RaySize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericRayFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPathFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "class:style/values/generics/motion.rs:GenericOffsetPosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/motion.rs",
+      "target": "function:style/values/generics/motion.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/animation.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/background.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/basic_shape.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/border.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/calc.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/color.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/column.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/counters.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/easing.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/effects.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/flex.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/font.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/grid.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/image.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/length.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/motion.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/page.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/position.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/ratio.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/rect.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/size.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/svg.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/text.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/transform.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/ui.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/generics/mod.rs",
+      "target": "file:style/values/generics/url.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,4496 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [
+    "style/invalidation/element/restyle_flags.rs",
+    "style/invalidation/element/state_constants.rs",
+    "style/invalidation/view.rs",
+    "style/invalidation/element/animation.rs",
+    "style/invalidation/element/background_only.rs",
+    "style/invalidation/element/namespaced.rs"
+  ],
+  "results": [
+    {
+      "path": "style/invalidation/element/document_state.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 137,
+      "functions": [
+        {
+          "name": "default",
+          "startLine": 32,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 52,
+          "endLine": 77,
+          "params": [
+            "rules",
+            "document_states_changed",
+            "selector_caches",
+            "quirks_mode"
+          ]
+        },
+        {
+          "name": "check_outer_dependency",
+          "startLine": 86,
+          "endLine": 92,
+          "params": [
+            "_",
+            "_",
+            "_"
+          ]
+        },
+        {
+          "name": "collect_invalidations",
+          "startLine": 94,
+          "endLine": 124,
+          "params": [
+            "_element",
+            "self_invalidations",
+            "_descendant_invalidations",
+            "_sibling_invalidations"
+          ]
+        },
+        {
+          "name": "matching_context",
+          "startLine": 126,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "sibling_traversal_map",
+          "startLine": 130,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "recursion_limit_exceeded",
+          "startLine": 134,
+          "endLine": 136,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "should_process_descendants",
+          "startLine": 138,
+          "endLine": 143,
+          "params": [
+            "element"
+          ]
+        },
+        {
+          "name": "invalidated_descendants",
+          "startLine": 145,
+          "endLine": 147,
+          "params": [
+            "element",
+            "child"
+          ]
+        },
+        {
+          "name": "invalidated_self",
+          "startLine": 149,
+          "endLine": 151,
+          "params": [
+            "element"
+          ]
+        },
+        {
+          "name": "invalidated_sibling",
+          "startLine": 153,
+          "endLine": 155,
+          "params": [
+            "sibling",
+            "of"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "InvalidationMatchingData",
+          "startLine": 25,
+          "endLine": 28,
+          "methods": [
+            "default"
+          ],
+          "properties": [
+            "document_state"
+          ]
+        },
+        {
+          "name": "DocumentStateInvalidationProcessor",
+          "startLine": 41,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "rules",
+            "matching_context",
+            "traversal_map",
+            "document_states_changed",
+            "_marker"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InvalidationMatchingData",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentStateInvalidationProcessor",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 52,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "default",
+          "callee": "DocumentState::empty",
+          "lineNumber": 34
+        },
+        {
+          "caller": "new",
+          "callee": "MatchingContext::<'a, E::Impl>::new_for_visited",
+          "lineNumber": 58
+        },
+        {
+          "caller": "new",
+          "callee": "SiblingTraversalMap::default",
+          "lineNumber": 74
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "cascade_data.invalidation_map",
+          "lineNumber": 102
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "dependency.state.intersects",
+          "lineNumber": 104
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "self_invalidations.push",
+          "lineNumber": 115
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "Invalidation::new",
+          "lineNumber": 115
+        },
+        {
+          "caller": "should_process_descendants",
+          "callee": "element.borrow_data",
+          "lineNumber": 139
+        },
+        {
+          "caller": "should_process_descendants",
+          "callee": "state_and_attributes::should_process_descendants",
+          "lineNumber": 140
+        },
+        {
+          "caller": "invalidated_descendants",
+          "callee": "state_and_attributes::invalidated_descendants",
+          "lineNumber": 146
+        },
+        {
+          "caller": "invalidated_self",
+          "callee": "state_and_attributes::invalidated_self",
+          "lineNumber": 150
+        },
+        {
+          "caller": "invalidated_sibling",
+          "callee": "state_and_attributes::invalidated_sibling",
+          "lineNumber": 154
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 11,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/invalidation/element/element_wrapper.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 432,
+      "nonEmptyLines": 370,
+      "functions": [
+        {
+          "name": "new",
+          "startLine": 108,
+          "endLine": 114,
+          "params": [
+            "el",
+            "snapshot_map"
+          ]
+        },
+        {
+          "name": "snapshot",
+          "startLine": 117,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "state_changes",
+          "startLine": 135,
+          "endLine": 145,
+          "params": []
+        },
+        {
+          "name": "get_lang",
+          "startLine": 150,
+          "endLine": 162,
+          "params": []
+        },
+        {
+          "name": "fmt",
+          "startLine": 169,
+          "endLine": 172,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "match_non_ts_pseudo_class",
+          "startLine": 181,
+          "endLine": 268,
+          "params": [
+            "pseudo_class",
+            "context"
+          ]
+        },
+        {
+          "name": "apply_selector_flags",
+          "startLine": 270,
+          "endLine": 272,
+          "params": [
+            "_flags"
+          ]
+        },
+        {
+          "name": "match_pseudo_element",
+          "startLine": 274,
+          "endLine": 280,
+          "params": [
+            "pseudo_element",
+            "context"
+          ]
+        },
+        {
+          "name": "is_link",
+          "startLine": 282,
+          "endLine": 287,
+          "params": []
+        },
+        {
+          "name": "opaque",
+          "startLine": 289,
+          "endLine": 291,
+          "params": []
+        },
+        {
+          "name": "parent_element",
+          "startLine": 293,
+          "endLine": 296,
+          "params": []
+        },
+        {
+          "name": "parent_node_is_shadow_root",
+          "startLine": 298,
+          "endLine": 300,
+          "params": []
+        },
+        {
+          "name": "containing_shadow_host",
+          "startLine": 302,
+          "endLine": 305,
+          "params": []
+        },
+        {
+          "name": "prev_sibling_element",
+          "startLine": 307,
+          "endLine": 310,
+          "params": []
+        },
+        {
+          "name": "next_sibling_element",
+          "startLine": 312,
+          "endLine": 315,
+          "params": []
+        },
+        {
+          "name": "first_element_child",
+          "startLine": 317,
+          "endLine": 320,
+          "params": []
+        },
+        {
+          "name": "is_html_element_in_html_document",
+          "startLine": 323,
+          "endLine": 325,
+          "params": []
+        },
+        {
+          "name": "is_html_slot_element",
+          "startLine": 328,
+          "endLine": 330,
+          "params": []
+        },
+        {
+          "name": "has_local_name",
+          "startLine": 333,
+          "endLine": 338,
+          "params": [
+            "local_name"
+          ]
+        },
+        {
+          "name": "has_namespace",
+          "startLine": 341,
+          "endLine": 346,
+          "params": [
+            "ns"
+          ]
+        },
+        {
+          "name": "is_same_type",
+          "startLine": 349,
+          "endLine": 351,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "attr_matches",
+          "startLine": 353,
+          "endLine": 365,
+          "params": [
+            "ns",
+            "local_name",
+            "operation"
+          ]
+        },
+        {
+          "name": "has_id",
+          "startLine": 367,
+          "endLine": 374,
+          "params": [
+            "id",
+            "case_sensitivity"
+          ]
+        },
+        {
+          "name": "is_part",
+          "startLine": 376,
+          "endLine": 381,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "imported_part",
+          "startLine": 383,
+          "endLine": 388,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "has_class",
+          "startLine": 390,
+          "endLine": 395,
+          "params": [
+            "name",
+            "case_sensitivity"
+          ]
+        },
+        {
+          "name": "has_custom_state",
+          "startLine": 397,
+          "endLine": 402,
+          "params": [
+            "state"
+          ]
+        },
+        {
+          "name": "is_empty",
+          "startLine": 404,
+          "endLine": 406,
+          "params": []
+        },
+        {
+          "name": "is_root",
+          "startLine": 408,
+          "endLine": 410,
+          "params": []
+        },
+        {
+          "name": "is_pseudo_element",
+          "startLine": 412,
+          "endLine": 414,
+          "params": []
+        },
+        {
+          "name": "pseudo_element_originating_element",
+          "startLine": 416,
+          "endLine": 420,
+          "params": []
+        },
+        {
+          "name": "assigned_slot",
+          "startLine": 422,
+          "endLine": 426,
+          "params": []
+        },
+        {
+          "name": "add_element_unique_hashes",
+          "startLine": 428,
+          "endLine": 431,
+          "params": [
+            "_filter"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ElementSnapshot",
+          "startLine": 41,
+          "endLine": 89,
+          "methods": [
+            "state",
+            "has_attrs",
+            "id_attr",
+            "has_class",
+            "is_part",
+            "imported_part",
+            "each_class",
+            "has_custom_states",
+            "has_custom_state",
+            "each_custom_state",
+            "lang_attr",
+            "debug_list_attributes"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ElementWrapper",
+          "startLine": 94,
+          "endLine": 101,
+          "methods": [],
+          "properties": [
+            "element",
+            "cached_snapshot",
+            "snapshot_map"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ElementSnapshot",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "ElementWrapper",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "snapshot",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "state_changes",
+          "line": 135,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "debug_list_attributes",
+          "callee": "String::new",
+          "lineNumber": 52
+        },
+        {
+          "caller": "new",
+          "callee": "Cell::new",
+          "lineNumber": 111
+        },
+        {
+          "caller": "snapshot",
+          "callee": "self.element.has_snapshot",
+          "lineNumber": 118
+        },
+        {
+          "caller": "snapshot",
+          "callee": "self.cached_snapshot.get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "snapshot",
+          "callee": "Some",
+          "lineNumber": 123
+        },
+        {
+          "caller": "snapshot",
+          "callee": "self.snapshot_map.get",
+          "lineNumber": 126
+        },
+        {
+          "caller": "snapshot",
+          "callee": "self.cached_snapshot.set",
+          "lineNumber": 129
+        },
+        {
+          "caller": "state_changes",
+          "callee": "self.snapshot",
+          "lineNumber": 136
+        },
+        {
+          "caller": "state_changes",
+          "callee": "ElementState::empty",
+          "lineNumber": 138
+        },
+        {
+          "caller": "state_changes",
+          "callee": "snapshot.state",
+          "lineNumber": 141
+        },
+        {
+          "caller": "state_changes",
+          "callee": "self.element.state",
+          "lineNumber": 142
+        },
+        {
+          "caller": "state_changes",
+          "callee": "ElementState::empty",
+          "lineNumber": 143
+        },
+        {
+          "caller": "get_lang",
+          "callee": "self.clone",
+          "lineNumber": 151
+        },
+        {
+          "caller": "get_lang",
+          "callee": "self.snapshot",
+          "lineNumber": 153
+        },
+        {
+          "caller": "get_lang",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 154
+        },
+        {
+          "caller": "get_lang",
+          "callee": "snapshot.lang_attr",
+          "lineNumber": 154
+        },
+        {
+          "caller": "get_lang",
+          "callee": "current.element.lang_attr",
+          "lineNumber": 155
+        },
+        {
+          "caller": "get_lang",
+          "callee": "lang.is_some",
+          "lineNumber": 157
+        },
+        {
+          "caller": "get_lang",
+          "callee": "current.parent_element",
+          "lineNumber": 160
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.element.fmt",
+          "lineNumber": 171
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.is_link",
+          "lineNumber": 195
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "context.visited_handling().matches_unvisited",
+          "lineNumber": 195
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "context.visited_handling",
+          "lineNumber": 195
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.is_link",
+          "lineNumber": 198
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "context.visited_handling().matches_visited",
+          "lineNumber": 198
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "context.visited_handling",
+          "lineNumber": 198
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot",
+          "lineNumber": 203
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "snapshot.has_other_pseudo_class_state",
+          "lineNumber": 204
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "snapshot.mIsTableBorderNonzero",
+          "lineNumber": 205
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot",
+          "lineNumber": 212
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "snapshot.has_other_pseudo_class_state",
+          "lineNumber": 213
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "snapshot.mIsSelectListBox",
+          "lineNumber": 214
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self\r\n                    .element.match_element_lang",
+          "lineNumber": 222
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "Some",
+          "lineNumber": 224
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.get_lang",
+          "lineNumber": 224
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "levels.matches_state",
+          "lineNumber": 230
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot()\r\n                        .and_then(|s| s.state()).unwrap_or_else",
+          "lineNumber": 231
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot().and_then",
+          "lineNumber": 231
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot",
+          "lineNumber": 231
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "s.state",
+          "lineNumber": 232
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.element.state",
+          "lineNumber": 233
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.has_custom_state",
+          "lineNumber": 238
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self\r\n                    .snapshot()\r\n                    .and_then(|s| s.state()).unwrap_or_else",
+          "lineNumber": 244
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self\r\n                    .snapshot().and_then",
+          "lineNumber": 244
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot",
+          "lineNumber": 244
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "s.state",
+          "lineNumber": 246
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.element.state",
+          "lineNumber": 247
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.element.is_html_media_element",
+          "lineNumber": 248
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "state.intersects",
+          "lineNumber": 250
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "pseudo_class.state_flag",
+          "lineNumber": 256
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "flag.is_empty",
+          "lineNumber": 257
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self\r\n                .element.match_non_ts_pseudo_class",
+          "lineNumber": 258
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot().and_then",
+          "lineNumber": 262
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self.snapshot",
+          "lineNumber": 262
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "s.state",
+          "lineNumber": 262
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "snapshot_state.intersects",
+          "lineNumber": 263
+        },
+        {
+          "caller": "match_non_ts_pseudo_class",
+          "callee": "self\r\n                .element.match_non_ts_pseudo_class",
+          "lineNumber": 264
+        },
+        {
+          "caller": "match_pseudo_element",
+          "callee": "self.element.match_pseudo_element",
+          "lineNumber": 279
+        },
+        {
+          "caller": "is_link",
+          "callee": "self.snapshot().and_then",
+          "lineNumber": 283
+        },
+        {
+          "caller": "is_link",
+          "callee": "self.snapshot",
+          "lineNumber": 283
+        },
+        {
+          "caller": "is_link",
+          "callee": "s.state",
+          "lineNumber": 283
+        },
+        {
+          "caller": "is_link",
+          "callee": "state.intersects",
+          "lineNumber": 284
+        },
+        {
+          "caller": "is_link",
+          "callee": "self.element.is_link",
+          "lineNumber": 285
+        },
+        {
+          "caller": "opaque",
+          "callee": "self.element.opaque",
+          "lineNumber": 290
+        },
+        {
+          "caller": "parent_element",
+          "callee": "self.element.parent_element",
+          "lineNumber": 294
+        },
+        {
+          "caller": "parent_element",
+          "callee": "Some",
+          "lineNumber": 295
+        },
+        {
+          "caller": "parent_element",
+          "callee": "Self::new",
+          "lineNumber": 295
+        },
+        {
+          "caller": "parent_node_is_shadow_root",
+          "callee": "self.element.parent_node_is_shadow_root",
+          "lineNumber": 299
+        },
+        {
+          "caller": "containing_shadow_host",
+          "callee": "self.element.containing_shadow_host",
+          "lineNumber": 303
+        },
+        {
+          "caller": "containing_shadow_host",
+          "callee": "Some",
+          "lineNumber": 304
+        },
+        {
+          "caller": "containing_shadow_host",
+          "callee": "Self::new",
+          "lineNumber": 304
+        },
+        {
+          "caller": "prev_sibling_element",
+          "callee": "self.element.prev_sibling_element",
+          "lineNumber": 308
+        },
+        {
+          "caller": "prev_sibling_element",
+          "callee": "Some",
+          "lineNumber": 309
+        },
+        {
+          "caller": "prev_sibling_element",
+          "callee": "Self::new",
+          "lineNumber": 309
+        },
+        {
+          "caller": "next_sibling_element",
+          "callee": "self.element.next_sibling_element",
+          "lineNumber": 313
+        },
+        {
+          "caller": "next_sibling_element",
+          "callee": "Some",
+          "lineNumber": 314
+        },
+        {
+          "caller": "next_sibling_element",
+          "callee": "Self::new",
+          "lineNumber": 314
+        },
+        {
+          "caller": "first_element_child",
+          "callee": "self.element.first_element_child",
+          "lineNumber": 318
+        },
+        {
+          "caller": "first_element_child",
+          "callee": "Some",
+          "lineNumber": 319
+        },
+        {
+          "caller": "first_element_child",
+          "callee": "Self::new",
+          "lineNumber": 319
+        },
+        {
+          "caller": "is_html_element_in_html_document",
+          "callee": "self.element.is_html_element_in_html_document",
+          "lineNumber": 324
+        },
+        {
+          "caller": "is_html_slot_element",
+          "callee": "self.element.is_html_slot_element",
+          "lineNumber": 329
+        },
+        {
+          "caller": "has_local_name",
+          "callee": "self.element.has_local_name",
+          "lineNumber": 337
+        },
+        {
+          "caller": "has_namespace",
+          "callee": "self.element.has_namespace",
+          "lineNumber": 345
+        },
+        {
+          "caller": "is_same_type",
+          "callee": "self.element.is_same_type",
+          "lineNumber": 350
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "self.snapshot",
+          "lineNumber": 359
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 360
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "snapshot.attr_matches",
+          "lineNumber": 361
+        },
+        {
+          "caller": "attr_matches",
+          "callee": "self.element.attr_matches",
+          "lineNumber": 363
+        },
+        {
+          "caller": "has_id",
+          "callee": "self.snapshot",
+          "lineNumber": 368
+        },
+        {
+          "caller": "has_id",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 369
+        },
+        {
+          "caller": "has_id",
+          "callee": "snapshot\r\n                .id_attr().map_or",
+          "lineNumber": 369
+        },
+        {
+          "caller": "has_id",
+          "callee": "snapshot.id_attr",
+          "lineNumber": 369
+        },
+        {
+          "caller": "has_id",
+          "callee": "case_sensitivity.eq_atom",
+          "lineNumber": 371
+        },
+        {
+          "caller": "has_id",
+          "callee": "self.element.has_id",
+          "lineNumber": 372
+        },
+        {
+          "caller": "is_part",
+          "callee": "self.snapshot",
+          "lineNumber": 377
+        },
+        {
+          "caller": "is_part",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 378
+        },
+        {
+          "caller": "is_part",
+          "callee": "snapshot.is_part",
+          "lineNumber": 378
+        },
+        {
+          "caller": "is_part",
+          "callee": "self.element.is_part",
+          "lineNumber": 379
+        },
+        {
+          "caller": "imported_part",
+          "callee": "self.snapshot",
+          "lineNumber": 384
+        },
+        {
+          "caller": "imported_part",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 385
+        },
+        {
+          "caller": "imported_part",
+          "callee": "snapshot.imported_part",
+          "lineNumber": 385
+        },
+        {
+          "caller": "imported_part",
+          "callee": "self.element.imported_part",
+          "lineNumber": 386
+        },
+        {
+          "caller": "has_class",
+          "callee": "self.snapshot",
+          "lineNumber": 391
+        },
+        {
+          "caller": "has_class",
+          "callee": "snapshot.has_attrs",
+          "lineNumber": 392
+        },
+        {
+          "caller": "has_class",
+          "callee": "snapshot.has_class",
+          "lineNumber": 392
+        },
+        {
+          "caller": "has_class",
+          "callee": "self.element.has_class",
+          "lineNumber": 393
+        },
+        {
+          "caller": "has_custom_state",
+          "callee": "self.snapshot",
+          "lineNumber": 398
+        },
+        {
+          "caller": "has_custom_state",
+          "callee": "snapshot.has_custom_states",
+          "lineNumber": 399
+        },
+        {
+          "caller": "has_custom_state",
+          "callee": "snapshot.has_custom_state",
+          "lineNumber": 399
+        },
+        {
+          "caller": "has_custom_state",
+          "callee": "self.element.has_custom_state",
+          "lineNumber": 400
+        },
+        {
+          "caller": "is_empty",
+          "callee": "self.element.is_empty",
+          "lineNumber": 405
+        },
+        {
+          "caller": "is_root",
+          "callee": "self.element.is_root",
+          "lineNumber": 409
+        },
+        {
+          "caller": "is_pseudo_element",
+          "callee": "self.element.is_pseudo_element",
+          "lineNumber": 413
+        },
+        {
+          "caller": "pseudo_element_originating_element",
+          "callee": "self.element\r\n            .pseudo_element_originating_element().map",
+          "lineNumber": 417
+        },
+        {
+          "caller": "pseudo_element_originating_element",
+          "callee": "self.element.pseudo_element_originating_element",
+          "lineNumber": 417
+        },
+        {
+          "caller": "pseudo_element_originating_element",
+          "callee": "ElementWrapper::new",
+          "lineNumber": 419
+        },
+        {
+          "caller": "assigned_slot",
+          "callee": "self.element\r\n            .assigned_slot().map",
+          "lineNumber": 423
+        },
+        {
+          "caller": "assigned_slot",
+          "callee": "self.element.assigned_slot",
+          "lineNumber": 423
+        },
+        {
+          "caller": "assigned_slot",
+          "callee": "ElementWrapper::new",
+          "lineNumber": 425
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 33,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/invalidation/element/invalidation_map.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1626,
+      "nonEmptyLines": 1458,
+      "functions": [
+        {
+          "name": "selector",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "get_non_relative_invalidation_kind",
+          "startLine": 161,
+          "endLine": 182,
+          "params": [
+            "selector",
+            "selector_offset",
+            "scope_kind"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 186,
+          "endLine": 198,
+          "params": [
+            "selector",
+            "selector_offset",
+            "next",
+            "kind"
+          ]
+        },
+        {
+          "name": "for_full_selector_invalidation",
+          "startLine": 207,
+          "endLine": 214,
+          "params": [
+            "selector"
+          ]
+        },
+        {
+          "name": "normal_invalidation_kind",
+          "startLine": 218,
+          "endLine": 223,
+          "params": []
+        },
+        {
+          "name": "relative_invalidation_kind",
+          "startLine": 228,
+          "endLine": 233,
+          "params": []
+        },
+        {
+          "name": "invalidation_kind",
+          "startLine": 236,
+          "endLine": 238,
+          "params": []
+        },
+        {
+          "name": "right_combinator_is_next_sibling",
+          "startLine": 244,
+          "endLine": 253,
+          "params": []
+        },
+        {
+          "name": "dependency_is_relative_with_single_next_sibling",
+          "startLine": 259,
+          "endLine": 266,
+          "params": []
+        },
+        {
+          "name": "selector",
+          "startLine": 280,
+          "endLine": 282,
+          "params": []
+        },
+        {
+          "name": "may_be_optimized",
+          "startLine": 362,
+          "endLine": 364,
+          "params": []
+        },
+        {
+          "name": "selector",
+          "startLine": 377,
+          "endLine": 379,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 406,
+          "endLine": 414,
+          "params": []
+        },
+        {
+          "name": "clear",
+          "startLine": 417,
+          "endLine": 421,
+          "params": []
+        },
+        {
+          "name": "shrink_if_needed",
+          "startLine": 424,
+          "endLine": 427,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 432,
+          "endLine": 441,
+          "params": []
+        },
+        {
+          "name": "len",
+          "startLine": 444,
+          "endLine": 463,
+          "params": []
+        },
+        {
+          "name": "clear",
+          "startLine": 466,
+          "endLine": 473,
+          "params": []
+        },
+        {
+          "name": "shrink_if_needed",
+          "startLine": 476,
+          "endLine": 482,
+          "params": []
+        },
+        {
+          "name": "note_selector_for_invalidation",
+          "startLine": 486,
+          "endLine": 537,
+          "params": [
+            "selector",
+            "quirks_mode",
+            "map",
+            "relative_selector_invalidation_map",
+            "additional_relative_selector_invalidation_map",
+            "inner_scope_dependencies",
+            "scope_kind"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 548,
+          "endLine": 553,
+          "params": [
+            "offset"
+          ]
+        },
+        {
+          "name": "on_attribute",
+          "startLine": 609,
+          "endLine": 619,
+          "params": [
+            "local_name",
+            "local_name_lower",
+            "collector"
+          ]
+        },
+        {
+          "name": "on_id_or_class",
+          "startLine": 621,
+          "endLine": 638,
+          "params": [
+            "s",
+            "quirks_mode",
+            "collector"
+          ]
+        },
+        {
+          "name": "on_scope",
+          "startLine": 640,
+          "endLine": 649,
+          "params": [
+            "collector"
+          ]
+        },
+        {
+          "name": "add_attr_dependency",
+          "startLine": 651,
+          "endLine": 655,
+          "params": [
+            "name",
+            "collector"
+          ]
+        },
+        {
+          "name": "add_custom_state_dependency",
+          "startLine": 657,
+          "endLine": 668,
+          "params": [
+            "name",
+            "collector"
+          ]
+        },
+        {
+          "name": "add_local_name",
+          "startLine": 670,
+          "endLine": 680,
+          "params": [
+            "name",
+            "dependency",
+            "map"
+          ]
+        },
+        {
+          "name": "on_pseudo_class",
+          "startLine": 682,
+          "endLine": 702,
+          "params": [
+            "pc",
+            "collector"
+          ]
+        },
+        {
+          "name": "add_pseudo_class_dependency",
+          "startLine": 704,
+          "endLine": 720,
+          "params": [
+            "element_state",
+            "quirks_mode",
+            "collector"
+          ]
+        },
+        {
+          "name": "visit_all_in_iter_compound",
+          "startLine": 728,
+          "endLine": 740,
+          "params": [
+            "visitor",
+            "iter"
+          ]
+        },
+        {
+          "name": "next_dependency",
+          "startLine": 783,
+          "endLine": 844,
+          "params": [
+            "next_selector",
+            "next_outer_dependency",
+            "next_scope_dependencies",
+            "scope_kind"
+          ]
+        },
+        {
+          "name": "dependency",
+          "startLine": 847,
+          "endLine": 877,
+          "params": []
+        },
+        {
+          "name": "id_map",
+          "startLine": 879,
+          "endLine": 885,
+          "params": []
+        },
+        {
+          "name": "class_map",
+          "startLine": 887,
+          "endLine": 893,
+          "params": []
+        },
+        {
+          "name": "state_map",
+          "startLine": 895,
+          "endLine": 903,
+          "params": []
+        },
+        {
+          "name": "attribute_map",
+          "startLine": 905,
+          "endLine": 913,
+          "params": []
+        },
+        {
+          "name": "inner_scope_dependencies",
+          "startLine": 915,
+          "endLine": 917,
+          "params": []
+        },
+        {
+          "name": "this_scope_dependencies",
+          "startLine": 919,
+          "endLine": 921,
+          "params": []
+        },
+        {
+          "name": "update_states",
+          "startLine": 923,
+          "endLine": 926,
+          "params": [
+            "element_state",
+            "document_state"
+          ]
+        },
+        {
+          "name": "custom_state_map",
+          "startLine": 928,
+          "endLine": 936,
+          "params": []
+        },
+        {
+          "name": "type_map",
+          "startLine": 938,
+          "endLine": 946,
+          "params": []
+        },
+        {
+          "name": "ts_state_map",
+          "startLine": 948,
+          "endLine": 956,
+          "params": []
+        },
+        {
+          "name": "any_vec",
+          "startLine": 958,
+          "endLine": 966,
+          "params": []
+        },
+        {
+          "name": "visit_whole_selector",
+          "startLine": 970,
+          "endLine": 973,
+          "params": []
+        },
+        {
+          "name": "visit_whole_selector_from",
+          "startLine": 975,
+          "endLine": 1034,
+          "params": [
+            "iter",
+            "index"
+          ]
+        },
+        {
+          "name": "visit_selector_list",
+          "startLine": 1040,
+          "endLine": 1115,
+          "params": [
+            "_list_kind",
+            "list"
+          ]
+        },
+        {
+          "name": "visit_relative_selector_list",
+          "startLine": 1117,
+          "endLine": 1156,
+          "params": [
+            "list"
+          ]
+        },
+        {
+          "name": "visit_simple_selector",
+          "startLine": 1158,
+          "endLine": 1177,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "visit_attribute_selector",
+          "startLine": 1179,
+          "endLine": 1193,
+          "params": [
+            "_",
+            "local_name",
+            "local_name_lower"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 1203,
+          "endLine": 1208,
+          "params": []
+        },
+        {
+          "name": "add_non_unique_info",
+          "startLine": 1251,
+          "endLine": 1280,
+          "params": [
+            "selector",
+            "offset",
+            "collector"
+          ]
+        },
+        {
+          "name": "add_ts_pseudo_class_dependency",
+          "startLine": 1282,
+          "endLine": 1298,
+          "params": [
+            "state",
+            "quirks_mode",
+            "collector"
+          ]
+        },
+        {
+          "name": "visit_whole_selector",
+          "startLine": 1301,
+          "endLine": 1368,
+          "params": []
+        },
+        {
+          "name": "dependency",
+          "startLine": 1372,
+          "endLine": 1421,
+          "params": []
+        },
+        {
+          "name": "id_map",
+          "startLine": 1423,
+          "endLine": 1425,
+          "params": []
+        },
+        {
+          "name": "class_map",
+          "startLine": 1427,
+          "endLine": 1429,
+          "params": []
+        },
+        {
+          "name": "state_map",
+          "startLine": 1431,
+          "endLine": 1435,
+          "params": []
+        },
+        {
+          "name": "attribute_map",
+          "startLine": 1437,
+          "endLine": 1441,
+          "params": []
+        },
+        {
+          "name": "custom_state_map",
+          "startLine": 1443,
+          "endLine": 1447,
+          "params": []
+        },
+        {
+          "name": "inner_scope_dependencies",
+          "startLine": 1449,
+          "endLine": 1451,
+          "params": []
+        },
+        {
+          "name": "this_scope_dependencies",
+          "startLine": 1453,
+          "endLine": 1455,
+          "params": []
+        },
+        {
+          "name": "update_states",
+          "startLine": 1457,
+          "endLine": 1460,
+          "params": [
+            "element_state",
+            "document_state"
+          ]
+        },
+        {
+          "name": "type_map",
+          "startLine": 1462,
+          "endLine": 1466,
+          "params": []
+        },
+        {
+          "name": "ts_state_map",
+          "startLine": 1468,
+          "endLine": 1472,
+          "params": []
+        },
+        {
+          "name": "any_vec",
+          "startLine": 1474,
+          "endLine": 1478,
+          "params": []
+        },
+        {
+          "name": "on_simple_selector",
+          "startLine": 1490,
+          "endLine": 1530,
+          "params": [
+            "s",
+            "quirks_mode",
+            "collector"
+          ]
+        },
+        {
+          "name": "visit_selector_list",
+          "startLine": 1535,
+          "endLine": 1587,
+          "params": [
+            "_list_kind",
+            "list"
+          ]
+        },
+        {
+          "name": "visit_relative_selector_list",
+          "startLine": 1589,
+          "endLine": 1595,
+          "params": [
+            "_list"
+          ]
+        },
+        {
+          "name": "visit_simple_selector",
+          "startLine": 1597,
+          "endLine": 1611,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "visit_attribute_selector",
+          "startLine": 1613,
+          "endLine": 1625,
+          "params": [
+            "_",
+            "local_name",
+            "local_name_lower"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Dependency",
+          "startLine": 46,
+          "endLine": 77,
+          "methods": [
+            "selector",
+            "new",
+            "for_full_selector_invalidation",
+            "normal_invalidation_kind",
+            "relative_invalidation_kind",
+            "invalidation_kind",
+            "right_combinator_is_next_sibling",
+            "dependency_is_relative_with_single_next_sibling"
+          ],
+          "properties": [
+            "selector",
+            "selector_offset",
+            "next",
+            "kind"
+          ]
+        },
+        {
+          "name": "NormalDependencyInvalidationKind",
+          "startLine": 87,
+          "endLine": 104,
+          "methods": [],
+          "properties": [
+            "Element",
+            "ElementAndDescendants",
+            "Descendants",
+            "Siblings",
+            "SlottedElements",
+            "Parts"
+          ]
+        },
+        {
+          "name": "RelativeDependencyInvalidationKind",
+          "startLine": 110,
+          "endLine": 123,
+          "methods": [],
+          "properties": [
+            "Ancestors",
+            "Parent",
+            "PrevSibling",
+            "AncestorPrevSibling",
+            "EarlierSibling",
+            "AncestorEarlierSibling"
+          ]
+        },
+        {
+          "name": "ScopeDependencyInvalidationKind",
+          "startLine": 127,
+          "endLine": 134,
+          "methods": [],
+          "properties": [
+            "ExplicitScope",
+            "ImplicitScope",
+            "ScopeEnd"
+          ]
+        },
+        {
+          "name": "DependencyInvalidationKind",
+          "startLine": 138,
+          "endLine": 148,
+          "methods": [],
+          "properties": [
+            "FullSelector",
+            "Normal",
+            "Relative",
+            "Scope"
+          ]
+        },
+        {
+          "name": "GeneratedInvalidation",
+          "startLine": 152,
+          "endLine": 157,
+          "methods": [],
+          "properties": [
+            "Normal",
+            "Scope"
+          ]
+        },
+        {
+          "name": "StateDependency",
+          "startLine": 272,
+          "endLine": 277,
+          "methods": [
+            "selector"
+          ],
+          "properties": [
+            "dep",
+            "state"
+          ]
+        },
+        {
+          "name": "DocumentStateDependency",
+          "startLine": 287,
+          "endLine": 298,
+          "methods": [],
+          "properties": [
+            "dependency",
+            "state"
+          ]
+        },
+        {
+          "name": "InvalidationMap",
+          "startLine": 318,
+          "endLine": 333,
+          "methods": [
+            "new",
+            "len",
+            "clear",
+            "shrink_if_needed"
+          ],
+          "properties": [
+            "class_to_selector",
+            "id_to_selector",
+            "state_affecting_selectors",
+            "document_state_selectors",
+            "other_attribute_affecting_selectors",
+            "custom_state_affecting_selectors"
+          ]
+        },
+        {
+          "name": "TSStateForInvalidation",
+          "startLine": 341,
+          "endLine": 341,
+          "methods": [
+            "may_be_optimized"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TSStateDependency",
+          "startLine": 369,
+          "endLine": 374,
+          "methods": [
+            "selector"
+          ],
+          "properties": [
+            "dep",
+            "state"
+          ]
+        },
+        {
+          "name": "AdditionalRelativeSelectorInvalidationMap",
+          "startLine": 391,
+          "endLine": 402,
+          "methods": [
+            "new",
+            "clear",
+            "shrink_if_needed"
+          ],
+          "properties": [
+            "ts_state_to_selector",
+            "type_to_selector",
+            "any_to_selector",
+            "used",
+            "needs_ancestors_traversal"
+          ]
+        },
+        {
+          "name": "PerCompoundState",
+          "startLine": 539,
+          "endLine": 545,
+          "methods": [
+            "new"
+          ],
+          "properties": [
+            "offset",
+            "element_state"
+          ]
+        },
+        {
+          "name": "NextDependencyEntry",
+          "startLine": 556,
+          "endLine": 560,
+          "methods": [],
+          "properties": [
+            "selector",
+            "offset",
+            "cached_dependency"
+          ]
+        },
+        {
+          "name": "RelativeSelectorInnerCollectorState",
+          "startLine": 562,
+          "endLine": 565,
+          "methods": [],
+          "properties": [
+            "next_dependency",
+            "relative_compound_state"
+          ]
+        },
+        {
+          "name": "ScopeSelectorCollectorState",
+          "startLine": 566,
+          "endLine": 573,
+          "methods": [],
+          "properties": [
+            "inner_dependencies",
+            "this_dependencies",
+            "scope_kind"
+          ]
+        },
+        {
+          "name": "Collector",
+          "startLine": 575,
+          "endLine": 607,
+          "methods": [
+            "dependency",
+            "id_map",
+            "class_map",
+            "state_map",
+            "attribute_map",
+            "custom_state_map",
+            "inner_scope_dependencies",
+            "this_scope_dependencies",
+            "update_states",
+            "type_map",
+            "ts_state_map",
+            "any_vec"
+          ],
+          "properties": []
+        },
+        {
+          "name": "SelectorDependencyCollector",
+          "startLine": 745,
+          "endLine": 781,
+          "methods": [],
+          "properties": [
+            "map",
+            "relative_selector_invalidation_map",
+            "additional_relative_selector_invalidation_map",
+            "document_state",
+            "selector",
+            "next_selectors",
+            "quirks_mode",
+            "compound_state",
+            "relative_inner_collector",
+            "scope_dependencies",
+            "alloc_error"
+          ]
+        },
+        {
+          "name": "RelativeSelectorCompoundStateAttributes",
+          "startLine": 1197,
+          "endLine": 1200,
+          "methods": [
+            "new"
+          ],
+          "properties": [
+            "ts_state",
+            "added_entry"
+          ]
+        },
+        {
+          "name": "RelativeSelectorDependencyCollector",
+          "startLine": 1212,
+          "endLine": 1249,
+          "methods": [],
+          "properties": [
+            "map",
+            "relative_selector_invalidation_map",
+            "additional_relative_selector_invalidation_map",
+            "document_state",
+            "selector",
+            "combinator_count",
+            "next_selectors",
+            "quirks_mode",
+            "compound_state",
+            "compound_state_attributes",
+            "scope_dependencies",
+            "alloc_error"
+          ]
+        },
+        {
+          "name": "ComponentVisitResult",
+          "startLine": 1481,
+          "endLine": 1487,
+          "methods": [],
+          "properties": [
+            "IsIrrelevant",
+            "Handled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Dependency",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "NormalDependencyInvalidationKind",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "RelativeDependencyInvalidationKind",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "ScopeDependencyInvalidationKind",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "DependencyInvalidationKind",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "GeneratedInvalidation",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 186,
+          "isDefault": false
+        },
+        {
+          "name": "for_full_selector_invalidation",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "normal_invalidation_kind",
+          "line": 218,
+          "isDefault": false
+        },
+        {
+          "name": "relative_invalidation_kind",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "invalidation_kind",
+          "line": 236,
+          "isDefault": false
+        },
+        {
+          "name": "right_combinator_is_next_sibling",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "dependency_is_relative_with_single_next_sibling",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "StateDependency",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentStateDependency",
+          "line": 287,
+          "isDefault": false
+        },
+        {
+          "name": "InvalidationMap",
+          "line": 318,
+          "isDefault": false
+        },
+        {
+          "name": "TSStateForInvalidation",
+          "line": 341,
+          "isDefault": false
+        },
+        {
+          "name": "may_be_optimized",
+          "line": 362,
+          "isDefault": false
+        },
+        {
+          "name": "TSStateDependency",
+          "line": 369,
+          "isDefault": false
+        },
+        {
+          "name": "AdditionalRelativeSelectorInvalidationMap",
+          "line": 391,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 406,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 417,
+          "isDefault": false
+        },
+        {
+          "name": "shrink_if_needed",
+          "line": 424,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 432,
+          "isDefault": false
+        },
+        {
+          "name": "len",
+          "line": 444,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 466,
+          "isDefault": false
+        },
+        {
+          "name": "shrink_if_needed",
+          "line": 476,
+          "isDefault": false
+        },
+        {
+          "name": "note_selector_for_invalidation",
+          "line": 486,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "selector",
+          "callee": "self.selector.iter_from",
+          "lineNumber": 81
+        },
+        {
+          "caller": "get_non_relative_invalidation_kind",
+          "callee": "DependencyInvalidationKind::Scope",
+          "lineNumber": 167
+        },
+        {
+          "caller": "get_non_relative_invalidation_kind",
+          "callee": "DependencyInvalidationKind::Normal",
+          "lineNumber": 170
+        },
+        {
+          "caller": "get_non_relative_invalidation_kind",
+          "callee": "selector.combinator_at_match_order",
+          "lineNumber": 172
+        },
+        {
+          "caller": "get_non_relative_invalidation_kind",
+          "callee": "DependencyInvalidationKind::Normal",
+          "lineNumber": 173
+        },
+        {
+          "caller": "for_full_selector_invalidation",
+          "callee": "selector.len",
+          "lineNumber": 209
+        },
+        {
+          "caller": "dependency_is_relative_with_single_next_sibling",
+          "callee": "self.invalidation_kind",
+          "lineNumber": 260
+        },
+        {
+          "caller": "selector",
+          "callee": "self.dep.selector",
+          "lineNumber": 281
+        },
+        {
+          "caller": "may_be_optimized",
+          "callee": "(Self::EMPTY | Self::NTH_EDGE_FIRST | Self::NTH_EDGE_LAST).contains",
+          "lineNumber": 363
+        },
+        {
+          "caller": "selector",
+          "callee": "self.dep.selector",
+          "lineNumber": 378
+        },
+        {
+          "caller": "new",
+          "callee": "TSStateDependencyMap::default",
+          "lineNumber": 408
+        },
+        {
+          "caller": "new",
+          "callee": "LocalNameDependencyMap::default",
+          "lineNumber": 409
+        },
+        {
+          "caller": "new",
+          "callee": "SmallVec::default",
+          "lineNumber": 410
+        },
+        {
+          "caller": "clear",
+          "callee": "self.ts_state_to_selector.clear",
+          "lineNumber": 418
+        },
+        {
+          "caller": "clear",
+          "callee": "self.type_to_selector.clear",
+          "lineNumber": 419
+        },
+        {
+          "caller": "clear",
+          "callee": "self.any_to_selector.clear",
+          "lineNumber": 420
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.ts_state_to_selector.shrink_if_needed",
+          "lineNumber": 425
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.type_to_selector.shrink_if_needed",
+          "lineNumber": 426
+        },
+        {
+          "caller": "new",
+          "callee": "IdOrClassDependencyMap::new",
+          "lineNumber": 434
+        },
+        {
+          "caller": "new",
+          "callee": "IdOrClassDependencyMap::new",
+          "lineNumber": 435
+        },
+        {
+          "caller": "new",
+          "callee": "StateDependencyMap::new",
+          "lineNumber": 436
+        },
+        {
+          "caller": "new",
+          "callee": "Vec::new",
+          "lineNumber": 437
+        },
+        {
+          "caller": "new",
+          "callee": "LocalNameDependencyMap::default",
+          "lineNumber": 438
+        },
+        {
+          "caller": "new",
+          "callee": "CustomStateDependencyMap::default",
+          "lineNumber": 439
+        },
+        {
+          "caller": "len",
+          "callee": "self.state_affecting_selectors.len",
+          "lineNumber": 445
+        },
+        {
+          "caller": "len",
+          "callee": "self.document_state_selectors.len",
+          "lineNumber": 446
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .other_attribute_affecting_selectors\r\n                .iter().fold",
+          "lineNumber": 447
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .other_attribute_affecting_selectors.iter",
+          "lineNumber": 447
+        },
+        {
+          "caller": "len",
+          "callee": "v.len",
+          "lineNumber": 450
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .id_to_selector\r\n                .iter().fold",
+          "lineNumber": 451
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .id_to_selector.iter",
+          "lineNumber": 451
+        },
+        {
+          "caller": "len",
+          "callee": "v.len",
+          "lineNumber": 454
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .class_to_selector\r\n                .iter().fold",
+          "lineNumber": 455
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .class_to_selector.iter",
+          "lineNumber": 455
+        },
+        {
+          "caller": "len",
+          "callee": "v.len",
+          "lineNumber": 458
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .custom_state_affecting_selectors\r\n                .iter().fold",
+          "lineNumber": 459
+        },
+        {
+          "caller": "len",
+          "callee": "self\r\n                .custom_state_affecting_selectors.iter",
+          "lineNumber": 459
+        },
+        {
+          "caller": "len",
+          "callee": "v.len",
+          "lineNumber": 462
+        },
+        {
+          "caller": "clear",
+          "callee": "self.class_to_selector.clear",
+          "lineNumber": 467
+        },
+        {
+          "caller": "clear",
+          "callee": "self.id_to_selector.clear",
+          "lineNumber": 468
+        },
+        {
+          "caller": "clear",
+          "callee": "self.state_affecting_selectors.clear",
+          "lineNumber": 469
+        },
+        {
+          "caller": "clear",
+          "callee": "self.document_state_selectors.clear",
+          "lineNumber": 470
+        },
+        {
+          "caller": "clear",
+          "callee": "self.other_attribute_affecting_selectors.clear",
+          "lineNumber": 471
+        },
+        {
+          "caller": "clear",
+          "callee": "self.custom_state_affecting_selectors.clear",
+          "lineNumber": 472
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.class_to_selector.shrink_if_needed",
+          "lineNumber": 477
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.id_to_selector.shrink_if_needed",
+          "lineNumber": 478
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.state_affecting_selectors.shrink_if_needed",
+          "lineNumber": 479
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.other_attribute_affecting_selectors.shrink_if_needed",
+          "lineNumber": 480
+        },
+        {
+          "caller": "shrink_if_needed",
+          "callee": "self.custom_state_affecting_selectors.shrink_if_needed",
+          "lineNumber": 481
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "Dependency::for_full_selector_invalidation",
+          "lineNumber": 495
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "selector.clone",
+          "lineNumber": 495
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "DocumentState::empty",
+          "lineNumber": 496
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "inner_scope_dependencies.cloned",
+          "lineNumber": 498
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "NextSelectors::new",
+          "lineNumber": 504
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 514
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "collector.visit_whole_selector",
+          "lineNumber": 520
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "Err",
+          "lineNumber": 524
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "document_state.is_empty",
+          "lineNumber": 528
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "map.document_state_selectors.try_reserve",
+          "lineNumber": 533
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "map.document_state_selectors.push",
+          "lineNumber": 534
+        },
+        {
+          "caller": "note_selector_for_invalidation",
+          "callee": "Ok",
+          "lineNumber": 536
+        },
+        {
+          "caller": "new",
+          "callee": "ElementState::empty",
+          "lineNumber": 551
+        },
+        {
+          "caller": "on_attribute",
+          "callee": "add_attr_dependency",
+          "lineNumber": 614
+        },
+        {
+          "caller": "on_attribute",
+          "callee": "local_name.clone",
+          "lineNumber": 614
+        },
+        {
+          "caller": "on_attribute",
+          "callee": "add_attr_dependency",
+          "lineNumber": 616
+        },
+        {
+          "caller": "on_attribute",
+          "callee": "local_name_lower.clone",
+          "lineNumber": 616
+        },
+        {
+          "caller": "on_attribute",
+          "callee": "Ok",
+          "lineNumber": 618
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "collector.dependency",
+          "lineNumber": 626
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "collector.id_map",
+          "lineNumber": 629
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "collector.class_map",
+          "lineNumber": 630
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "map.try_entry",
+          "lineNumber": 633
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "atom.0.clone",
+          "lineNumber": 633
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "entry.or_insert_with",
+          "lineNumber": 634
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "vec.try_reserve",
+          "lineNumber": 635
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "vec.push",
+          "lineNumber": 636
+        },
+        {
+          "caller": "on_id_or_class",
+          "callee": "Ok",
+          "lineNumber": 637
+        },
+        {
+          "caller": "on_scope",
+          "callee": "collector.dependency",
+          "lineNumber": 641
+        },
+        {
+          "caller": "on_scope",
+          "callee": "collector.this_scope_dependencies",
+          "lineNumber": 642
+        },
+        {
+          "caller": "on_scope",
+          "callee": "this_scope_dependencies\r\n        .get_or_insert(Vec::new()).push",
+          "lineNumber": 644
+        },
+        {
+          "caller": "on_scope",
+          "callee": "this_scope_dependencies.get_or_insert",
+          "lineNumber": 644
+        },
+        {
+          "caller": "on_scope",
+          "callee": "Vec::new",
+          "lineNumber": 645
+        },
+        {
+          "caller": "on_scope",
+          "callee": "Ok",
+          "lineNumber": 648
+        },
+        {
+          "caller": "add_attr_dependency",
+          "callee": "collector.dependency",
+          "lineNumber": 652
+        },
+        {
+          "caller": "add_attr_dependency",
+          "callee": "collector.attribute_map",
+          "lineNumber": 653
+        },
+        {
+          "caller": "add_attr_dependency",
+          "callee": "add_local_name",
+          "lineNumber": 654
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "collector.dependency",
+          "lineNumber": 661
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "collector.custom_state_map",
+          "lineNumber": 662
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "map.try_reserve",
+          "lineNumber": 663
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "map.entry(name).or_default",
+          "lineNumber": 664
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "map.entry",
+          "lineNumber": 664
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "vec.try_reserve",
+          "lineNumber": 665
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "vec.push",
+          "lineNumber": 666
+        },
+        {
+          "caller": "add_custom_state_dependency",
+          "callee": "Ok",
+          "lineNumber": 667
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "map.try_reserve",
+          "lineNumber": 675
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "map.entry(name).or_default",
+          "lineNumber": 676
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "map.entry",
+          "lineNumber": 676
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "vec.try_reserve",
+          "lineNumber": 677
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "vec.push",
+          "lineNumber": 678
+        },
+        {
+          "caller": "add_local_name",
+          "callee": "Ok",
+          "lineNumber": 679
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "collector.update_states",
+          "lineNumber": 683
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "pc.state_flag",
+          "lineNumber": 683
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "pc.document_state_flag",
+          "lineNumber": 683
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "add_attr_dependency",
+          "lineNumber": 691
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "add_attr_dependency",
+          "lineNumber": 692
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "add_custom_state_dependency",
+          "lineNumber": 696
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "name.0.clone",
+          "lineNumber": 696
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "Ok",
+          "lineNumber": 698
+        },
+        {
+          "caller": "on_pseudo_class",
+          "callee": "add_attr_dependency",
+          "lineNumber": 701
+        },
+        {
+          "caller": "add_pseudo_class_dependency",
+          "callee": "element_state.is_empty",
+          "lineNumber": 709
+        },
+        {
+          "caller": "add_pseudo_class_dependency",
+          "callee": "Ok",
+          "lineNumber": 710
+        },
+        {
+          "caller": "add_pseudo_class_dependency",
+          "callee": "collector.dependency",
+          "lineNumber": 712
+        },
+        {
+          "caller": "add_pseudo_class_dependency",
+          "callee": "collector.state_map().insert",
+          "lineNumber": 713
+        },
+        {
+          "caller": "add_pseudo_class_dependency",
+          "callee": "collector.state_map",
+          "lineNumber": 713
+        },
+        {
+          "caller": "visit_all_in_iter_compound",
+          "callee": "ss.visit",
+          "lineNumber": 734
+        },
+        {
+          "caller": "next_dependency",
+          "callee": "next_selector.is_empty",
+          "lineNumber": 789
+        },
+        {
+          "caller": "next_dependency",
+          "callee": "next_outer_dependency.cloned",
+          "lineNumber": 791
+        },
+        {
+          "caller": "next_dependency",
+          "callee": "next_scope_dependencies.cloned",
+          "lineNumber": 792
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "entries.is_empty",
+          "lineNumber": 802
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "next_scope_dependencies.cloned",
+          "lineNumber": 803
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "entries.len",
+          "lineNumber": 806
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "entries.split_at_mut",
+          "lineNumber": 807
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "selector.clone",
+          "lineNumber": 813
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "dependencies_from",
+          "lineNumber": 815
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "get_non_relative_invalidation_kind",
+          "lineNumber": 821
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "next_scope_dependencies\r\n                    .is_some()\r\n                    .then(|| scope_kind).flatten",
+          "lineNumber": 824
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "next_scope_dependencies\r\n                    .is_some().then",
+          "lineNumber": 824
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "next_scope_dependencies.is_some",
+          "lineNumber": 824
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "Some",
+          "lineNumber": 831
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "last.cached_dependency\r\n                .get_or_insert_with(|| ThinArc::from_header_and_iter((), [dependency].into_iter())).clone",
+          "lineNumber": 832
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "last.cached_dependency.get_or_insert_with",
+          "lineNumber": 832
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "ThinArc::from_header_and_iter",
+          "lineNumber": 833
+        },
+        {
+          "caller": "dependencies_from",
+          "callee": "[dependency].into_iter",
+          "lineNumber": 833
+        },
+        {
+          "caller": "next_dependency",
+          "callee": "dependencies_from",
+          "lineNumber": 838
+        },
+        {
+          "caller": "dependency",
+          "callee": "self\r\n            .relative_inner_collector\r\n            .as_ref().map",
+          "lineNumber": 848
+        },
+        {
+          "caller": "dependency",
+          "callee": "self\r\n            .relative_inner_collector.as_ref",
+          "lineNumber": 848
+        },
+        {
+          "caller": "dependency",
+          "callee": "self.inner_scope_dependencies",
+          "lineNumber": 855
+        },
+        {
+          "caller": "dependency",
+          "callee": "next_dependency",
+          "lineNumber": 857
+        },
+        {
+          "caller": "dependency",
+          "callee": "scope_dependencies.as_ref",
+          "lineNumber": 860
+        },
+        {
+          "caller": "dependency",
+          "callee": "self.selector.clone",
+          "lineNumber": 865
+        },
+        {
+          "caller": "dependency",
+          "callee": "get_non_relative_invalidation_kind",
+          "lineNumber": 868
+        },
+        {
+          "caller": "dependency",
+          "callee": "scope_dependencies\r\n                    .is_some()\r\n                    .then(|| self.scope_dependencies.scope_kind).flatten",
+          "lineNumber": 871
+        },
+        {
+          "caller": "dependency",
+          "callee": "scope_dependencies\r\n                    .is_some().then",
+          "lineNumber": 871
+        },
+        {
+          "caller": "dependency",
+          "callee": "scope_dependencies.is_some",
+          "lineNumber": 871
+        },
+        {
+          "caller": "id_map",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 880
+        },
+        {
+          "caller": "class_map",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 888
+        },
+        {
+          "caller": "state_map",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 896
+        },
+        {
+          "caller": "attribute_map",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 906
+        },
+        {
+          "caller": "inner_scope_dependencies",
+          "callee": "self.scope_dependencies.inner_dependencies.clone",
+          "lineNumber": 916
+        },
+        {
+          "caller": "custom_state_map",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 929
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "self.selector.iter",
+          "lineNumber": 971
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "self.visit_whole_selector_from",
+          "lineNumber": 972
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 982
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "self.relative_inner_collector.as_mut",
+          "lineNumber": 983
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "RelativeSelectorCompoundStateAttributes::new",
+          "lineNumber": 984
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "visit_all_in_iter_compound",
+          "lineNumber": 988
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "add_pseudo_class_dependency",
+          "lineNumber": 996
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "Some",
+          "lineNumber": 1001
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "self\r\n                .relative_inner_collector\r\n                .as_ref().map",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "self\r\n                .relative_inner_collector.as_ref",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "add_ts_pseudo_class_dependency",
+          "lineNumber": 1011
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "Some",
+          "lineNumber": 1013
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "add_non_unique_info",
+          "lineNumber": 1020
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "Some",
+          "lineNumber": 1022
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "iter.next_sequence",
+          "lineNumber": 1028
+        },
+        {
+          "caller": "visit_whole_selector_from",
+          "callee": "combinator.is_none",
+          "lineNumber": 1029
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self\r\n            .relative_inner_collector\r\n            .is_some().then",
+          "lineNumber": 1045
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self\r\n            .relative_inner_collector.is_some",
+          "lineNumber": 1045
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "ThinArc::from_header_and_iter",
+          "lineNumber": 1048
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "std::iter::once",
+          "lineNumber": 1048
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.dependency",
+          "lineNumber": 1048
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "selector.iter",
+          "lineNumber": 1055
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self\r\n                .relative_inner_collector\r\n                .as_ref().map",
+          "lineNumber": 1056
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self\r\n                .relative_inner_collector.as_ref",
+          "lineNumber": 1056
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "visit_all_in_iter_compound",
+          "lineNumber": 1061
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.relative_inner_collector.as_mut",
+          "lineNumber": 1067
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "saved_added_entry.unwrap_or_default",
+          "lineNumber": 1068
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "iter.next_sequence",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "combinator.is_none",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.relative_inner_collector.is_none",
+          "lineNumber": 1079
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.next_selectors.push",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.selector.clone",
+          "lineNumber": 1081
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 1099
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "next_relative_dependency.as_ref().map",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "next_relative_dependency.as_ref",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "RelativeSelectorCompoundStateAttributes::new",
+          "lineNumber": 1103
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "nested.visit_whole_selector_from",
+          "lineNumber": 1109
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.next_selectors.pop",
+          "lineNumber": 1112
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "self.relative_inner_collector.is_some",
+          "lineNumber": 1122
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "self.next_selectors.push",
+          "lineNumber": 1130
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "self.selector.clone",
+          "lineNumber": 1131
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "RelativeSelectorCombinatorCount::new",
+          "lineNumber": 1142
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 1145
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "RelativeSelectorCompoundStateAttributes::new",
+          "lineNumber": 1146
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "nested.visit_whole_selector",
+          "lineNumber": 1150
+        },
+        {
+          "caller": "visit_relative_selector_list",
+          "callee": "self.next_selectors.pop",
+          "lineNumber": 1153
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "on_simple_selector",
+          "lineNumber": 1159
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "self.relative_inner_collector.as_mut",
+          "lineNumber": 1162
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "inner_collector_state\r\n                            .relative_compound_state\r\n                            .ts_state.insert",
+          "lineNumber": 1164
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "Some",
+          "lineNumber": 1173
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "err.into",
+          "lineNumber": 1173
+        },
+        {
+          "caller": "visit_attribute_selector",
+          "callee": "self.relative_inner_collector.as_mut",
+          "lineNumber": 1185
+        },
+        {
+          "caller": "visit_attribute_selector",
+          "callee": "on_attribute",
+          "lineNumber": 1188
+        },
+        {
+          "caller": "visit_attribute_selector",
+          "callee": "Some",
+          "lineNumber": 1189
+        },
+        {
+          "caller": "new",
+          "callee": "TSStateForInvalidation::empty",
+          "lineNumber": 1205
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "selector.iter_from",
+          "lineNumber": 1257
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.dependency",
+          "lineNumber": 1260
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "add_local_name",
+          "lineNumber": 1261
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "name.name.clone",
+          "lineNumber": 1261
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.type_map",
+          "lineNumber": 1261
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.dependency",
+          "lineNumber": 1263
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "add_local_name",
+          "lineNumber": 1264
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "name.lower_name.clone",
+          "lineNumber": 1265
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.type_map",
+          "lineNumber": 1267
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "Ok",
+          "lineNumber": 1270
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.any_vec().try_reserve",
+          "lineNumber": 1276
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.any_vec",
+          "lineNumber": 1276
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.dependency",
+          "lineNumber": 1277
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.any_vec().push",
+          "lineNumber": 1278
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "collector.any_vec",
+          "lineNumber": 1278
+        },
+        {
+          "caller": "add_non_unique_info",
+          "callee": "Ok",
+          "lineNumber": 1279
+        },
+        {
+          "caller": "add_ts_pseudo_class_dependency",
+          "callee": "state.is_empty",
+          "lineNumber": 1287
+        },
+        {
+          "caller": "add_ts_pseudo_class_dependency",
+          "callee": "Ok",
+          "lineNumber": 1288
+        },
+        {
+          "caller": "add_ts_pseudo_class_dependency",
+          "callee": "collector.dependency",
+          "lineNumber": 1290
+        },
+        {
+          "caller": "add_ts_pseudo_class_dependency",
+          "callee": "collector.ts_state_map().insert",
+          "lineNumber": 1291
+        },
+        {
+          "caller": "add_ts_pseudo_class_dependency",
+          "callee": "collector.ts_state_map",
+          "lineNumber": 1291
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "self.selector.selector.iter_skip_relative_selector_anchor",
+          "lineNumber": 1302
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 1314
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "visit_all_in_iter_compound",
+          "lineNumber": 1316
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "add_pseudo_class_dependency",
+          "lineNumber": 1324
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "Some",
+          "lineNumber": 1329
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "add_ts_pseudo_class_dependency",
+          "lineNumber": 1333
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "Some",
+          "lineNumber": 1338
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "add_non_unique_info",
+          "lineNumber": 1345
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "Some",
+          "lineNumber": 1347
+        },
+        {
+          "caller": "visit_whole_selector",
+          "callee": "iter.next_sequence",
+          "lineNumber": 1352
+        },
+        {
+          "caller": "dependency",
+          "callee": "self.inner_scope_dependencies",
+          "lineNumber": 1373
+        },
+        {
+          "caller": "dependency",
+          "callee": "next_dependency",
+          "lineNumber": 1376
+        },
+        {
+          "caller": "dependency",
+          "callee": "scope_dependencies.as_ref",
+          "lineNumber": 1379
+        },
+        {
+          "caller": "dependency",
+          "callee": "self.selector.selector.clone",
+          "lineNumber": 1395
+        },
+        {
+          "caller": "dependency",
+          "callee": "DependencyInvalidationKind::Relative",
+          "lineNumber": 1397
+        },
+        {
+          "caller": "dependency",
+          "callee": "self.combinator_count.get_match_hint",
+          "lineNumber": 1398
+        },
+        {
+          "caller": "inner_scope_dependencies",
+          "callee": "self.scope_dependencies.inner_dependencies.clone",
+          "lineNumber": 1450
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "on_id_or_class",
+          "lineNumber": 1497
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1498
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "ComponentVisitResult::Handled",
+          "lineNumber": 1498
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "TSStateForInvalidation::empty",
+          "lineNumber": 1499
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "on_scope",
+          "lineNumber": 1503
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1504
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "ComponentVisitResult::Handled",
+          "lineNumber": 1504
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "TSStateForInvalidation::empty",
+          "lineNumber": 1505
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "on_pseudo_class",
+          "lineNumber": 1509
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1510
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "ComponentVisitResult::Handled",
+          "lineNumber": 1510
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "TSStateForInvalidation::empty",
+          "lineNumber": 1511
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1514
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "ComponentVisitResult::Handled",
+          "lineNumber": 1514
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "data.is_simple_edge",
+          "lineNumber": 1516
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "data.ty.is_from_end",
+          "lineNumber": 1517
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1525
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "ComponentVisitResult::Handled",
+          "lineNumber": 1525
+        },
+        {
+          "caller": "on_simple_selector",
+          "callee": "Ok",
+          "lineNumber": 1528
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "NextSelectors::new",
+          "lineNumber": 1540
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "ThinArc::from_header_and_iter",
+          "lineNumber": 1541
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "[self.dependency()].into_iter",
+          "lineNumber": 1541
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "self.dependency",
+          "lineNumber": 1541
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "selector.iter",
+          "lineNumber": 1543
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "visit_all_in_iter_compound",
+          "lineNumber": 1546
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "iter.next_sequence",
+          "lineNumber": 1552
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "combinator.is_none",
+          "lineNumber": 1559
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "PerCompoundState::new",
+          "lineNumber": 1574
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "Some",
+          "lineNumber": 1575
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "RelativeSelectorCompoundStateAttributes::new",
+          "lineNumber": 1577
+        },
+        {
+          "caller": "visit_selector_list",
+          "callee": "nested.visit_whole_selector_from",
+          "lineNumber": 1582
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "on_simple_selector",
+          "lineNumber": 1598
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "self.compound_state_attributes.ts_state.insert",
+          "lineNumber": 1602
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "Some",
+          "lineNumber": 1607
+        },
+        {
+          "caller": "visit_simple_selector",
+          "callee": "err.into",
+          "lineNumber": 1607
+        },
+        {
+          "caller": "visit_attribute_selector",
+          "callee": "on_attribute",
+          "lineNumber": 1620
+        },
+        {
+          "caller": "visit_attribute_selector",
+          "callee": "Some",
+          "lineNumber": 1621
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 28,
+        "functionCount": 70,
+        "classCount": 21
+      }
+    },
+    {
+      "path": "style/invalidation/element/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 11,
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/invalidation/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/invalidation/stylesheets.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 745,
+      "nonEmptyLines": 677,
+      "functions": [
+        {
+          "name": "is_id",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "is_id_or_class",
+          "startLine": 71,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "bitor_assign",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "is_scope",
+          "startLine": 94,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "add",
+          "startLine": 99,
+          "endLine": 103,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 121,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "invalidate_fully",
+          "startLine": 126,
+          "endLine": 130,
+          "params": []
+        },
+        {
+          "name": "collect_invalidations_for",
+          "startLine": 134,
+          "endLine": 185,
+          "params": [
+            "device",
+            "custom_media",
+            "stylesheet",
+            "guard"
+          ]
+        },
+        {
+          "name": "is_empty",
+          "startLine": 188,
+          "endLine": 192,
+          "params": []
+        },
+        {
+          "name": "invalidation_kind_for",
+          "startLine": 194,
+          "endLine": 248,
+          "params": [
+            "element",
+            "snapshot",
+            "quirks_mode"
+          ]
+        },
+        {
+          "name": "process_style",
+          "startLine": 252,
+          "endLine": 281,
+          "params": [
+            "root",
+            "snapshots"
+          ]
+        },
+        {
+          "name": "process_invalidations_in_subtree",
+          "startLine": 289,
+          "endLine": 359,
+          "params": [
+            "element",
+            "snapshots",
+            "quirks_mode"
+          ]
+        },
+        {
+          "name": "scan_component",
+          "startLine": 362,
+          "endLine": 392,
+          "params": [
+            "component",
+            "invalidation"
+          ]
+        },
+        {
+          "name": "collect_invalidations",
+          "startLine": 408,
+          "endLine": 461,
+          "params": [
+            "selector",
+            "quirks_mode"
+          ]
+        },
+        {
+          "name": "insert_invalidation",
+          "startLine": 463,
+          "endLine": 502,
+          "params": [
+            "invalidation",
+            "kind",
+            "quirks_mode"
+          ]
+        },
+        {
+          "name": "rule_changed",
+          "startLine": 505,
+          "endLine": 595,
+          "params": [
+            "stylesheet",
+            "rule",
+            "guard",
+            "device",
+            "quirks_mode",
+            "custom_media",
+            "change_kind",
+            "ancestors"
+          ]
+        },
+        {
+          "name": "collect_invalidations_for_rule",
+          "startLine": 598,
+          "endLine": 695,
+          "params": [
+            "rule",
+            "guard",
+            "device",
+            "quirks_mode",
+            "is_generic_change",
+            "ancestors"
+          ]
+        },
+        {
+          "name": "invalidate_position_try",
+          "startLine": 699,
+          "endLine": 745,
+          "params": [
+            "element",
+            "changed_names",
+            "invalidate_self",
+            "invalidated_descendants"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuleChangeKind",
+          "startLine": 35,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "Generic",
+            "Insertion",
+            "Removal",
+            "StyleRuleDeclarations",
+            "PositionTryDeclarations"
+          ]
+        },
+        {
+          "name": "Invalidation",
+          "startLine": 54,
+          "endLine": 64,
+          "methods": [
+            "is_id",
+            "is_id_or_class"
+          ],
+          "properties": [
+            "ID",
+            "Class",
+            "LocalName"
+          ]
+        },
+        {
+          "name": "InvalidationKind",
+          "startLine": 79,
+          "endLine": 83,
+          "methods": [
+            "bitor_assign",
+            "is_scope",
+            "add"
+          ],
+          "properties": [
+            "None",
+            "Element",
+            "Scope"
+          ]
+        },
+        {
+          "name": "StylesheetInvalidationSet",
+          "startLine": 111,
+          "endLine": 117,
+          "methods": [
+            "new",
+            "invalidate_fully",
+            "collect_invalidations_for",
+            "is_empty",
+            "invalidation_kind_for",
+            "process_style",
+            "process_invalidations_in_subtree",
+            "scan_component",
+            "collect_invalidations",
+            "insert_invalidation",
+            "rule_changed",
+            "collect_invalidations_for_rule"
+          ],
+          "properties": [
+            "buckets",
+            "style_fully_invalid",
+            "cascade_data_difference"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RuleChangeKind",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "StylesheetInvalidationSet",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate_fully",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "collect_invalidations_for",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "is_empty",
+          "line": 188,
+          "isDefault": false
+        },
+        {
+          "name": "process_style",
+          "line": 252,
+          "isDefault": false
+        },
+        {
+          "name": "rule_changed",
+          "line": 505,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate_position_try",
+          "line": 699,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "bitor_assign",
+          "callee": "std::cmp::max",
+          "lineNumber": 88
+        },
+        {
+          "caller": "new",
+          "callee": "Default::default",
+          "lineNumber": 122
+        },
+        {
+          "caller": "invalidate_fully",
+          "callee": "self.buckets.clear",
+          "lineNumber": 128
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "stylesheet.enabled",
+          "lineNumber": 149
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "stylesheet.is_effective_for_device",
+          "lineNumber": 149
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "device.quirks_mode",
+          "lineNumber": 155
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "stylesheet\r\n            .contents(guard).effective_rules",
+          "lineNumber": 156
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "stylesheet.contents",
+          "lineNumber": 156
+        },
+        {
+          "caller": "collect_invalidations_for",
+          "callee": "self.collect_invalidations_for_rule",
+          "lineNumber": 160
+        },
+        {
+          "caller": "is_empty",
+          "callee": "self.buckets.is_empty",
+          "lineNumber": 190
+        },
+        {
+          "caller": "is_empty",
+          "callee": "self.cascade_data_difference.is_empty",
+          "lineNumber": 191
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.classes.is_empty",
+          "lineNumber": 207
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "element.each_class",
+          "lineNumber": 208
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.add",
+          "lineNumber": 209
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.classes.get",
+          "lineNumber": 209
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.is_scope",
+          "lineNumber": 212
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "snapshot.each_class",
+          "lineNumber": 217
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.add",
+          "lineNumber": 218
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.classes.get",
+          "lineNumber": 218
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.is_scope",
+          "lineNumber": 221
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.ids.is_empty",
+          "lineNumber": 227
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "element.id",
+          "lineNumber": 228
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.add",
+          "lineNumber": 229
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.ids.get",
+          "lineNumber": 229
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.is_scope",
+          "lineNumber": 230
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "snapshot.and_then",
+          "lineNumber": 235
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "s.id_attr",
+          "lineNumber": 235
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.add",
+          "lineNumber": 236
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.ids.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.is_scope",
+          "lineNumber": 237
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.local_names.is_empty",
+          "lineNumber": 243
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "kind.add",
+          "lineNumber": 244
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "self.buckets.local_names.get",
+          "lineNumber": 244
+        },
+        {
+          "caller": "invalidation_kind_for",
+          "callee": "element.local_name",
+          "lineNumber": 244
+        },
+        {
+          "caller": "process_style",
+          "callee": "root.mutate_data",
+          "lineNumber": 262
+        },
+        {
+          "caller": "process_style",
+          "callee": "data.hint.insert",
+          "lineNumber": 269
+        },
+        {
+          "caller": "process_style",
+          "callee": "RestyleHint::restyle_subtree",
+          "lineNumber": 269
+        },
+        {
+          "caller": "process_style",
+          "callee": "self.buckets.is_empty",
+          "lineNumber": 274
+        },
+        {
+          "caller": "process_style",
+          "callee": "root.as_node().owner_doc().quirks_mode",
+          "lineNumber": 279
+        },
+        {
+          "caller": "process_style",
+          "callee": "root.as_node().owner_doc",
+          "lineNumber": 279
+        },
+        {
+          "caller": "process_style",
+          "callee": "root.as_node",
+          "lineNumber": 279
+        },
+        {
+          "caller": "process_style",
+          "callee": "self.process_invalidations_in_subtree",
+          "lineNumber": 280
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "element.mutate_data",
+          "lineNumber": 299
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "data.has_styles",
+          "lineNumber": 304
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "data.hint.contains_subtree",
+          "lineNumber": 308
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "snapshots.map",
+          "lineNumber": 316
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "ElementWrapper::new",
+          "lineNumber": 316
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "element_wrapper.as_ref().and_then",
+          "lineNumber": 317
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "element_wrapper.as_ref",
+          "lineNumber": 317
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "e.snapshot",
+          "lineNumber": 317
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "self.invalidation_kind_for",
+          "lineNumber": 319
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "data.hint.insert",
+          "lineNumber": 326
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "data.hint.insert",
+          "lineNumber": 333
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "RestyleHint::restyle_subtree",
+          "lineNumber": 333
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "element.traversal_children",
+          "lineNumber": 340
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "child.as_element",
+          "lineNumber": 341
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "self.process_invalidations_in_subtree",
+          "lineNumber": 347
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "element.set_dirty_descendants",
+          "lineNumber": 355
+        },
+        {
+          "caller": "process_invalidations_in_subtree",
+          "callee": "data.hint.contains",
+          "lineNumber": 358
+        },
+        {
+          "caller": "scan_component",
+          "callee": "invalidation.is_none",
+          "lineNumber": 371
+        },
+        {
+          "caller": "scan_component",
+          "callee": "Some",
+          "lineNumber": 372
+        },
+        {
+          "caller": "scan_component",
+          "callee": "name.clone",
+          "lineNumber": 373
+        },
+        {
+          "caller": "scan_component",
+          "callee": "lower_name.clone",
+          "lineNumber": 374
+        },
+        {
+          "caller": "scan_component",
+          "callee": "invalidation.as_ref().map_or",
+          "lineNumber": 379
+        },
+        {
+          "caller": "scan_component",
+          "callee": "invalidation.as_ref",
+          "lineNumber": 379
+        },
+        {
+          "caller": "scan_component",
+          "callee": "s.is_id_or_class",
+          "lineNumber": 379
+        },
+        {
+          "caller": "scan_component",
+          "callee": "Some",
+          "lineNumber": 380
+        },
+        {
+          "caller": "scan_component",
+          "callee": "Invalidation::Class",
+          "lineNumber": 380
+        },
+        {
+          "caller": "scan_component",
+          "callee": "class.clone",
+          "lineNumber": 380
+        },
+        {
+          "caller": "scan_component",
+          "callee": "invalidation.as_ref().map_or",
+          "lineNumber": 384
+        },
+        {
+          "caller": "scan_component",
+          "callee": "invalidation.as_ref",
+          "lineNumber": 384
+        },
+        {
+          "caller": "scan_component",
+          "callee": "s.is_id",
+          "lineNumber": 384
+        },
+        {
+          "caller": "scan_component",
+          "callee": "Some",
+          "lineNumber": 385
+        },
+        {
+          "caller": "scan_component",
+          "callee": "Invalidation::ID",
+          "lineNumber": 385
+        },
+        {
+          "caller": "scan_component",
+          "callee": "id.clone",
+          "lineNumber": 385
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "selector.iter",
+          "lineNumber": 424
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "Self::scan_component",
+          "lineNumber": 429
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "Self::scan_component",
+          "lineNumber": 431
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "iter.next_sequence",
+          "lineNumber": 434
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "combinator.is_ancestor",
+          "lineNumber": 437
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "self.insert_invalidation",
+          "lineNumber": 445
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "self.insert_invalidation",
+          "lineNumber": 452
+        },
+        {
+          "caller": "collect_invalidations",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 460
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.classes.try_entry",
+          "lineNumber": 471
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "entry.or_insert",
+          "lineNumber": 475
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.ids.try_entry",
+          "lineNumber": 478
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "entry.or_insert",
+          "lineNumber": 482
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.try_reserve(1).is_err",
+          "lineNumber": 486
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.try_reserve",
+          "lineNumber": 486
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.entry",
+          "lineNumber": 489
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "entry.or_insert",
+          "lineNumber": 490
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.try_reserve(1).is_err",
+          "lineNumber": 492
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.try_reserve",
+          "lineNumber": 492
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "self.buckets.local_names.entry",
+          "lineNumber": 495
+        },
+        {
+          "caller": "insert_invalidation",
+          "callee": "entry.or_insert",
+          "lineNumber": 496
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "stylesheet.enabled",
+          "lineNumber": 519
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "stylesheet.is_effective_for_device",
+          "lineNumber": 519
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "ancestors\r\n            .iter().any",
+          "lineNumber": 525
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "ancestors.iter",
+          "lineNumber": 525
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "EffectiveRules::is_effective",
+          "lineNumber": 527
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "self.cascade_data_difference\r\n                        .changed_position_try_names.insert",
+          "lineNumber": 538
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "pt.read_with(guard).name.0.clone",
+          "lineNumber": 540
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "pt.read_with",
+          "lineNumber": 540
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "self.collect_invalidations_for_rule",
+          "lineNumber": 556
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "EffectiveRules::is_effective",
+          "lineNumber": 569
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "rule.into",
+          "lineNumber": 569
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "EffectiveRulesIterator::effective_children",
+          "lineNumber": 574
+        },
+        {
+          "caller": "rule_changed",
+          "callee": "self.collect_invalidations_for_rule",
+          "lineNumber": 582
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 619
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "lock.read_with",
+          "lineNumber": 622
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "style_rule.selectors.slice",
+          "lineNumber": 623
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.collect_invalidations",
+          "lineNumber": 624
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "ancestors.iter().any",
+          "lineNumber": 631
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "ancestors.iter",
+          "lineNumber": 631
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 632
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 642
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 658
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "lock.read_with",
+          "lineNumber": 660
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "device.animation_name_may_be_referenced",
+          "lineNumber": 661
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 666
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 673
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 678
+        },
+        {
+          "caller": "collect_invalidations_for_rule",
+          "callee": "self.invalidate_fully",
+          "lineNumber": 692
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "element.mutate_data",
+          "lineNumber": 712
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "data.styles.primary",
+          "lineNumber": 718
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "style.clone_position().is_absolutely_positioned",
+          "lineNumber": 719
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "style.clone_position",
+          "lineNumber": 719
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "style.clone_position_try_fallbacks",
+          "lineNumber": 720
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "fallbacks.value.0.iter().any",
+          "lineNumber": 721
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "fallbacks.value.0.iter",
+          "lineNumber": 721
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "changed_names.contains",
+          "lineNumber": 723
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "invalidate_self",
+          "lineNumber": 730
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "element.traversal_children",
+          "lineNumber": 734
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "child.as_element",
+          "lineNumber": 735
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "invalidate_position_try",
+          "lineNumber": 739
+        },
+        {
+          "caller": "invalidate_position_try",
+          "callee": "invalidated_descendants",
+          "lineNumber": 742
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 18,
+        "classCount": 4
+      }
+    }
+  ]
+}

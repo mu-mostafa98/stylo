@@ -1,0 +1,445 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "to_shmem_derive/lib.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "derive_to_shmem",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "stream"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive_to_shmem",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive_to_shmem",
+          "callee": "syn::parse(stream).unwrap",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive_to_shmem",
+          "callee": "syn::parse",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive_to_shmem",
+          "callee": "to_shmem::derive(input).into",
+          "lineNumber": 15
+        },
+        {
+          "caller": "derive_to_shmem",
+          "callee": "to_shmem::derive",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "to_shmem_derive/to_shmem.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "derive",
+          "startLine": 12,
+          "endLine": 68,
+          "params": [
+            "input"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ShmemInputAttrs",
+          "startLine": 72,
+          "endLine": 74,
+          "methods": [],
+          "properties": [
+            "no_bounds"
+          ]
+        },
+        {
+          "name": "ShmemFieldAttrs",
+          "startLine": 78,
+          "endLine": 80,
+          "methods": [],
+          "properties": [
+            "field_bound"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "derive",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ShmemInputAttrs",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "ShmemFieldAttrs",
+          "line": 78,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "derive",
+          "callee": "input.generics.where_clause.take",
+          "lineNumber": 13
+        },
+        {
+          "caller": "derive",
+          "callee": "parse_input_attrs::<ShmemInputAttrs>",
+          "lineNumber": 14
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.type_params",
+          "lineNumber": 16
+        },
+        {
+          "caller": "derive",
+          "callee": "add_predicate",
+          "lineNumber": 17
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new(&input).variants",
+          "lineNumber": 20
+        },
+        {
+          "caller": "derive",
+          "callee": "Structure::new",
+          "lineNumber": 20
+        },
+        {
+          "caller": "derive",
+          "callee": "variant.bindings",
+          "lineNumber": 21
+        },
+        {
+          "caller": "derive",
+          "callee": "parse_field_attrs::<ShmemFieldAttrs>",
+          "lineNumber": 22
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 22
+        },
+        {
+          "caller": "derive",
+          "callee": "binding.ast",
+          "lineNumber": 24
+        },
+        {
+          "caller": "derive",
+          "callee": "add_predicate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "derive",
+          "callee": "fmap2_match",
+          "lineNumber": 35
+        },
+        {
+          "caller": "derive",
+          "callee": "Some",
+          "lineNumber": 44
+        },
+        {
+          "caller": "derive",
+          "callee": "input.generics.split_for_impl",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "to_shmem_derive/util.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 74,
+      "functions": [
+        {
+          "name": "parse_input_attrs",
+          "startLine": 11,
+          "endLine": 19,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "parse_field_attrs",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "field"
+          ]
+        },
+        {
+          "name": "add_predicate",
+          "startLine": 31,
+          "endLine": 36,
+          "params": [
+            "where_clause",
+            "pred"
+          ]
+        },
+        {
+          "name": "fmap2_match",
+          "startLine": 38,
+          "endLine": 71,
+          "params": [
+            "input",
+            "bind_style",
+            "f",
+            "g"
+          ]
+        },
+        {
+          "name": "value",
+          "startLine": 73,
+          "endLine": 80,
+          "params": [
+            "variant",
+            "prefix"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "parse_input_attrs",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "parse_field_attrs",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "add_predicate",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "fmap2_match",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_input_attrs",
+          "callee": "A::from_derive_input",
+          "lineNumber": 15
+        },
+        {
+          "caller": "parse_field_attrs",
+          "callee": "A::from_field",
+          "lineNumber": 25
+        },
+        {
+          "caller": "add_predicate",
+          "callee": "where_clause\r\n        .get_or_insert(parse_quote!(where))\r\n        .predicates.push",
+          "lineNumber": 32
+        },
+        {
+          "caller": "add_predicate",
+          "callee": "where_clause.get_or_insert",
+          "lineNumber": 32
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "synstructure::Structure::new",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut().iter_mut().for_each",
+          "lineNumber": 49
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut().iter_mut",
+          "lineNumber": 49
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.variants_mut",
+          "lineNumber": 49
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "v.bind_with",
+          "lineNumber": 50
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "s.each_variant",
+          "lineNumber": 52
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "value",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings().iter().zip",
+          "lineNumber": 54
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings().iter",
+          "lineNumber": 54
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "variant.bindings",
+          "lineNumber": 54
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields.iter",
+          "lineNumber": 54
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 56
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "fields_pairs.map",
+          "lineNumber": 56
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "f",
+          "lineNumber": 57
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 60
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields\r\n                .iter().map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "mapped_fields.iter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "g",
+          "lineNumber": 63
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "computations.append_all",
+          "lineNumber": 68
+        },
+        {
+          "caller": "fmap2_match",
+          "callee": "Some",
+          "lineNumber": 69
+        },
+        {
+          "caller": "value",
+          "callee": "variant.clone",
+          "lineNumber": 74
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut().iter_mut().for_each",
+          "lineNumber": 75
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut().iter_mut",
+          "lineNumber": 75
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings_mut",
+          "lineNumber": 75
+        },
+        {
+          "caller": "value",
+          "callee": "Ident::new",
+          "lineNumber": 76
+        },
+        {
+          "caller": "value",
+          "callee": "Span::call_site",
+          "lineNumber": 76
+        },
+        {
+          "caller": "value",
+          "callee": "v.bind_with",
+          "lineNumber": 78
+        },
+        {
+          "caller": "value",
+          "callee": "v.pat",
+          "lineNumber": 79
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings().to_vec",
+          "lineNumber": 79
+        },
+        {
+          "caller": "value",
+          "callee": "v.bindings",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    }
+  ]
+}

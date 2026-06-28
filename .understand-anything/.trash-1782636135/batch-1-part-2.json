@@ -1,0 +1,1817 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/stylesheets/keyframes_rule.rs",
+      "type": "file",
+      "name": "keyframes_rule.rs",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "summary": "Implements CSS @keyframes at-rule with keyframe parsing, selector matching, step resolution, and animation data extraction.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "animations",
+        "keyframes"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:KeyframesRule",
+      "type": "class",
+      "name": "KeyframesRule",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        39,
+        48
+      ],
+      "summary": "CSS @keyframes rule with name, vendor prefix, and keyframe list for animation definitions.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "animations",
+        "keyframes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:KeyframePercentage",
+      "type": "class",
+      "name": "KeyframePercentage",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        103,
+        103
+      ],
+      "summary": "Represents a keyframe percentage value with parsing from percentage or keyword (from/to).",
+      "tags": [
+        "rust",
+        "class",
+        "animation",
+        "percentage",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelector",
+      "type": "class",
+      "name": "KeyframeSelector",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        154,
+        162
+      ],
+      "summary": "Keyframe selector with optional range name and percentage for scroll-driven animations.",
+      "tags": [
+        "rust",
+        "class",
+        "animation",
+        "selector"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelectors",
+      "type": "class",
+      "name": "KeyframeSelectors",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        199,
+        199
+      ],
+      "summary": "Core type in the stylesheet subsystem providing KeyframeSelectors functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:Keyframe",
+      "type": "class",
+      "name": "Keyframe",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        222,
+        234
+      ],
+      "summary": "Individual keyframe rule with selector percentages and declaration block for animation key points.",
+      "tags": [
+        "rust",
+        "class",
+        "animation",
+        "keyframe",
+        "rule"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/keyframes_rule.rs:KeyframesStep",
+      "type": "class",
+      "name": "KeyframesStep",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        312,
+        328
+      ],
+      "summary": "A single keyframe step with start offset, value, and declared timing function/composition.",
+      "tags": [
+        "rust",
+        "class",
+        "animation",
+        "keyframe-step"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/keyframes_rule.rs:parse_keyframe_list",
+      "type": "function",
+      "name": "parse_keyframe_list",
+      "filePath": "style/stylesheets/keyframes_rule.rs",
+      "lineRange": [
+        596,
+        608
+      ],
+      "summary": "Parses a list of keyframe rules from CSS input using RuleBodyParser.",
+      "tags": [
+        "rust",
+        "function",
+        "parsing",
+        "keyframes"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/loader.rs",
+      "type": "file",
+      "name": "loader.rs",
+      "filePath": "style/stylesheets/loader.rs",
+      "summary": "Defines the StylesheetLoader trait for async stylesheet loading used during CSS import rule resolution.",
+      "tags": [
+        "rust",
+        "trait",
+        "stylesheet-loading"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/media_rule.rs",
+      "type": "file",
+      "name": "media_rule.rs",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "summary": "Implements CSS @media and @custom-media at-rules with media query evaluation and custom media query matching.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "media-queries",
+        "responsive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "class",
+      "name": "MediaRule",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [
+        30,
+        37
+      ],
+      "summary": "CSS @media rule with media query list and nested rule body for conditional styling.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "media-queries"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "class",
+      "name": "CustomMediaCondition",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [
+        75,
+        82
+      ],
+      "summary": "Core type in the stylesheet subsystem providing CustomMediaCondition functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "class",
+      "name": "CustomMediaRule",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [
+        109,
+        116
+      ],
+      "summary": "CSS @custom-media rule for defining custom media query aliases.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "custom-media"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/stylesheets/media_rule.rs",
+      "lineRange": [
+        173,
+        192
+      ],
+      "summary": "Exported function for matches operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/stylesheets/mod.rs",
+      "summary": "Module root for the stylesheets subsystem defining core types CssRule, CssRuleType, UrlExtraData, and top-level rule parsing logic.",
+      "tags": [
+        "rust",
+        "module-root",
+        "core-types",
+        "rule-parsing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/mod.rs:UrlExtraData",
+      "type": "class",
+      "name": "UrlExtraData",
+      "filePath": "style/stylesheets/mod.rs",
+      "lineRange": [
+        120,
+        120
+      ],
+      "summary": "Reference-counted URL metadata for stylesheet resolution, packing Gecko URLExtraData or Servo Url.",
+      "tags": [
+        "rust",
+        "class",
+        "url-data",
+        "stylesheet",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/mod.rs:CssRule",
+      "type": "class",
+      "name": "CssRule",
+      "filePath": "style/stylesheets/mod.rs",
+      "lineRange": [
+        334,
+        361
+      ],
+      "summary": "Enum representing all CSS at-rule types with parse, to_css, and deep_clone operations.",
+      "tags": [
+        "rust",
+        "class",
+        "enum",
+        "css-rule",
+        "rule-tree"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/mod.rs:CssRuleRef",
+      "type": "class",
+      "name": "CssRuleRef",
+      "filePath": "style/stylesheets/mod.rs",
+      "lineRange": [
+        512,
+        537
+      ],
+      "summary": "Core type in the stylesheet subsystem providing CssRuleRef functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/mod.rs:CssRuleType",
+      "type": "class",
+      "name": "CssRuleType",
+      "filePath": "style/stylesheets/mod.rs",
+      "lineRange": [
+        574,
+        616
+      ],
+      "summary": "Enum of CSS rule type identifiers for parsing state machine and rule insertion validation.",
+      "tags": [
+        "rust",
+        "class",
+        "enum",
+        "rule-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/mod.rs:CssRuleTypes",
+      "type": "class",
+      "name": "CssRuleTypes",
+      "filePath": "style/stylesheets/mod.rs",
+      "lineRange": [
+        628,
+        628
+      ],
+      "summary": "Bitflags set representing a collection of CssRuleType values for efficient membership checks.",
+      "tags": [
+        "rust",
+        "class",
+        "bitflags",
+        "rule-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/namespace_rule.rs",
+      "type": "file",
+      "name": "namespace_rule.rs",
+      "filePath": "style/stylesheets/namespace_rule.rs",
+      "summary": "Defines the NamespaceRule struct for CSS @namespace at-rule with XML namespace prefix declarations.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "namespace"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "class",
+      "name": "NamespaceRule",
+      "filePath": "style/stylesheets/namespace_rule.rs",
+      "lineRange": [
+        17,
+        24
+      ],
+      "summary": "CSS @namespace rule for XML namespace prefix-to-URI mapping.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "namespace"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/origin.rs",
+      "type": "file",
+      "name": "origin.rs",
+      "filePath": "style/stylesheets/origin.rs",
+      "summary": "Defines CSS origin types (UserAgent, User, Author) with OriginSet and PerOrigin containers for organizing rules by cascade origin.",
+      "tags": [
+        "rust",
+        "cascade",
+        "origin",
+        "stylesheet-origin"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:Origin",
+      "type": "class",
+      "name": "Origin",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [
+        16,
+        25
+      ],
+      "summary": "Enum of CSS cascade origins (UserAgent, User, Author) with ordering and bitflag support.",
+      "tags": [
+        "rust",
+        "class",
+        "enum",
+        "cascade",
+        "origin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "class",
+      "name": "OriginSet",
+      "filePath": "style/stylesheets/origin.rs",
+      "lineRange": [
+        62,
+        62
+      ],
+      "summary": "Bitflags set representing a combination of cascade origins.",
+      "tags": [
+        "rust",
+        "class",
+        "bitflags",
+        "origin",
+        "cascade"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/page_rule.rs",
+      "type": "file",
+      "name": "page_rule.rs",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "summary": "Implements CSS @page at-rule with page selector matching and pseudo-class flags for print styling.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "paged-media",
+        "print"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "class",
+      "name": "PageSelector",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [
+        128,
+        137
+      ],
+      "summary": "Page selector with name, pseudo-class flags, and specificity for @page rule matching.",
+      "tags": [
+        "rust",
+        "class",
+        "page-selector",
+        "paged-media"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "class",
+      "name": "PageSelectors",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [
+        254,
+        254
+      ],
+      "summary": "Core type in the stylesheet subsystem providing PageSelectors functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "class",
+      "name": "PageRule",
+      "filePath": "style/stylesheets/page_rule.rs",
+      "lineRange": [
+        293,
+        302
+      ],
+      "summary": "CSS @page rule with page selector matching for print/paged media styling.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "paged-media"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/rule_list.rs",
+      "type": "file",
+      "name": "rule_list.rs",
+      "filePath": "style/stylesheets/rule_list.rs",
+      "summary": "Defines CssRules, the thread-safe container for a list of CSS rules with cloning, serialization, and rule insertion/removal operations.",
+      "tags": [
+        "rust",
+        "rule-list",
+        "serialization",
+        "rule-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylesheets/rule_list.rs:CssRules",
+      "type": "class",
+      "name": "CssRules",
+      "filePath": "style/stylesheets/rule_list.rs",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Thread-safe container of CssRule instances supporting insertion, removal, serialization, and deep cloning.",
+      "tags": [
+        "rust",
+        "class",
+        "rule-list",
+        "container",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/supports_rule.rs",
+      "type": "file",
+      "name": "supports_rule.rs",
+      "filePath": "style/stylesheets/supports_rule.rs",
+      "summary": "Implements CSS @supports at-rule with feature query parsing, conditional evaluation, and nested condition handling.",
+      "tags": [
+        "rust",
+        "css-rule",
+        "feature-detection",
+        "conditional"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/supports_rule.rs:SupportsRule",
+      "type": "class",
+      "name": "SupportsRule",
+      "filePath": "style/stylesheets/supports_rule.rs",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "CSS @supports rule with feature condition evaluation for capability-based styling.",
+      "tags": [
+        "rust",
+        "class",
+        "css-rule",
+        "feature-detection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/supports_rule.rs:SupportsCondition",
+      "type": "class",
+      "name": "SupportsCondition",
+      "filePath": "style/stylesheets/supports_rule.rs",
+      "lineRange": [
+        75,
+        94
+      ],
+      "summary": "Recursive feature condition tree for @supports query evaluation.",
+      "tags": [
+        "rust",
+        "class",
+        "feature-detection",
+        "condition-tree"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/supports_rule.rs:RawSelector",
+      "type": "class",
+      "name": "RawSelector",
+      "filePath": "style/stylesheets/supports_rule.rs",
+      "lineRange": [
+        316,
+        316
+      ],
+      "summary": "Core type in the stylesheet subsystem providing RawSelector functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/supports_rule.rs:Declaration",
+      "type": "class",
+      "name": "Declaration",
+      "filePath": "style/stylesheets/supports_rule.rs",
+      "lineRange": [
+        352,
+        352
+      ],
+      "summary": "Core type in the stylesheet subsystem providing Declaration functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheets/stylesheet.rs",
+      "type": "file",
+      "name": "stylesheet.rs",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "summary": "Defines StylesheetContents, Stylesheet, and DocumentStyleSheet types with parsing, rule iteration, and media-query-based effective rule filtering.",
+      "tags": [
+        "rust",
+        "stylesheet",
+        "parsing",
+        "rule-iteration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:StylesheetContents",
+      "type": "class",
+      "name": "StylesheetContents",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        46,
+        68
+      ],
+      "summary": "Parsed contents of a stylesheet holding rules, origin, url data, and namespaces with thread-safe sharing.",
+      "tags": [
+        "rust",
+        "class",
+        "stylesheet",
+        "contents"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:Stylesheet",
+      "type": "class",
+      "name": "Stylesheet",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        223,
+        232
+      ],
+      "summary": "Top-level stylesheet wrapper with enable/disable state and media query attachment for effective rule filtering.",
+      "tags": [
+        "rust",
+        "class",
+        "stylesheet",
+        "wrapper"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:StylesheetInDocument",
+      "type": "class",
+      "name": "StylesheetInDocument",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        235,
+        265
+      ],
+      "summary": "Core type in the stylesheet subsystem providing StylesheetInDocument functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:DocumentStyleSheet",
+      "type": "class",
+      "name": "DocumentStyleSheet",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        290,
+        292
+      ],
+      "summary": "Core type in the stylesheet subsystem providing DocumentStyleSheet functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:SanitizationKind",
+      "type": "class",
+      "name": "SanitizationKind",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        322,
+        329
+      ],
+      "summary": "Core type in the stylesheet subsystem providing SanitizationKind functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheets/stylesheet.rs:SanitizationData",
+      "type": "class",
+      "name": "SanitizationData",
+      "filePath": "style/stylesheets/stylesheet.rs",
+      "lineRange": [
+        397,
+        400
+      ],
+      "summary": "Core type in the stylesheet subsystem providing SanitizationData functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylist.rs",
+      "type": "file",
+      "name": "stylist.rs",
+      "filePath": "style/stylist.rs",
+      "summary": "Core style resolution engine orchestrating cascade data management, selector matching, animation resolution, scope handling, and custom property registration.",
+      "tags": [
+        "rust",
+        "stylist",
+        "cascade",
+        "selector-matching",
+        "engine"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "class",
+      "name": "CascadeDataDifference",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        132,
+        135
+      ],
+      "summary": "Core type in the stylesheet subsystem providing CascadeDataDifference functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "class",
+      "name": "DocumentCascadeData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        432,
+        438
+      ],
+      "summary": "Document-level cascade data managing per-origin stylesheet data with rebuild tracking.",
+      "tags": [
+        "rust",
+        "class",
+        "cascade",
+        "document"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:Stylist",
+      "type": "class",
+      "name": "Stylist",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        599,
+        649
+      ],
+      "summary": "Central style orchestration engine managing cascade data, selector matching, animations, and custom properties.",
+      "tags": [
+        "rust",
+        "class",
+        "stylist",
+        "cascade",
+        "selector-matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylist.rs:PageRuleMap",
+      "type": "class",
+      "name": "PageRuleMap",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2261,
+        2264
+      ],
+      "summary": "Maps page names to page rules with name-based matching for @page rule resolution.",
+      "tags": [
+        "rust",
+        "class",
+        "page-rules",
+        "map"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ExtraStyleData",
+      "type": "class",
+      "name": "ExtraStyleData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2353,
+        2374
+      ],
+      "summary": "Container for extra style data including font-face rules, counter-styles, and page rules.",
+      "tags": [
+        "rust",
+        "class",
+        "extra-data",
+        "font-face",
+        "page-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeConditionId",
+      "type": "class",
+      "name": "ScopeConditionId",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2905,
+        2905
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ScopeConditionId functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeConditionReference",
+      "type": "class",
+      "name": "ScopeConditionReference",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2921,
+        2932
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ScopeConditionReference functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeRootCandidates",
+      "type": "class",
+      "name": "ScopeRootCandidates",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2962,
+        2967
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ScopeRootCandidates functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeBoundWithHashes",
+      "type": "class",
+      "name": "ScopeBoundWithHashes",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        2989,
+        2994
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ScopeBoundWithHashes functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "class",
+      "name": "ScopeBoundsWithHashes",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        3019,
+        3024
+      ],
+      "summary": "Core type in the stylesheet subsystem providing ScopeBoundsWithHashes functionality.",
+      "tags": [
+        "rust",
+        "class",
+        "type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:CascadeData",
+      "type": "class",
+      "name": "CascadeData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        3256,
+        3383
+      ],
+      "summary": "Manages per-origin cascade data including rule collections, invalidation maps, layer order, and container conditions.",
+      "tags": [
+        "rust",
+        "class",
+        "cascade",
+        "invalidation",
+        "layer-order"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylist.rs:Rule",
+      "type": "class",
+      "name": "Rule",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        4864,
+        4895
+      ],
+      "summary": "Individual style rule with selector, specificity, hash, layer, scope, and source order metadata.",
+      "tags": [
+        "rust",
+        "class",
+        "style-rule",
+        "selector",
+        "metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:scope_root_candidates",
+      "type": "function",
+      "name": "scope_root_candidates",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        3080,
+        3225
+      ],
+      "summary": "Exported function for scope root candidates operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylist.rs:needs_revalidation_for_testing",
+      "type": "function",
+      "name": "needs_revalidation_for_testing",
+      "filePath": "style/stylist.rs",
+      "lineRange": [
+        4959,
+        4986
+      ],
+      "summary": "Exported function for needs revalidation for testing operations.",
+      "tags": [
+        "rust",
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframesRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframesRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframePercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframePercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframeSelectors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:Keyframe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:Keyframe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframesStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "class:style/stylesheets/keyframes_rule.rs:KeyframesStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "function:style/stylesheets/keyframes_rule.rs:parse_keyframe_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/keyframes_rule.rs",
+      "target": "function:style/stylesheets/keyframes_rule.rs:parse_keyframe_list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:MediaRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "class:style/stylesheets/media_rule.rs:CustomMediaRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/media_rule.rs",
+      "target": "function:style/stylesheets/media_rule.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:UrlExtraData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:UrlExtraData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleRef",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleRef",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleTypes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "class:style/stylesheets/mod.rs:CssRuleTypes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/namespace_rule.rs",
+      "target": "class:style/stylesheets/namespace_rule.rs:NamespaceRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:Origin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:Origin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/origin.rs",
+      "target": "class:style/stylesheets/origin.rs:OriginSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageSelectors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/page_rule.rs",
+      "target": "class:style/stylesheets/page_rule.rs:PageRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/rule_list.rs",
+      "target": "class:style/stylesheets/rule_list.rs:CssRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/rule_list.rs",
+      "target": "class:style/stylesheets/rule_list.rs:CssRules",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:SupportsRule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:SupportsRule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:SupportsCondition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:SupportsCondition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:RawSelector",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:RawSelector",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:Declaration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "class:style/stylesheets/supports_rule.rs:Declaration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:StylesheetContents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:StylesheetContents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:Stylesheet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:Stylesheet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:StylesheetInDocument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:StylesheetInDocument",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:DocumentStyleSheet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:DocumentStyleSheet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:SanitizationKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:SanitizationKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:SanitizationData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "class:style/stylesheets/stylesheet.rs:SanitizationData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Stylist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Stylist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:PageRuleMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:PageRuleMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ExtraStyleData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ExtraStyleData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeConditionId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeConditionId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeConditionReference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeConditionReference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeRootCandidates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeRootCandidates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundWithHashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundWithHashes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Rule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:scope_root_candidates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:scope_root_candidates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:needs_revalidation_for_testing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:needs_revalidation_for_testing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/appearance_base_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/container_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/counter_style_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/document_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/font_face_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/font_feature_values_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/import_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/keyframes_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/loader.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/media_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/namespace_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/origin.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/page_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/rule_list.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/supports_rule.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheets/mod.rs",
+      "target": "file:style/stylesheets/stylesheet.rs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "file:style/stylesheets/mod.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "file:style/context.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "file:style/dom.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "file:style/stylesheets/loader.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylesheets/stylesheet.rs",
+      "target": "file:style/stylesheets/mod.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylesheets/supports_rule.rs",
+      "target": "file:style/stylesheets/mod.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "file:style/data.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

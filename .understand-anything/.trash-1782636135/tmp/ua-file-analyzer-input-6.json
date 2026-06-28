@@ -1,0 +1,20 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/values/specified/list.rs", "language": "rust", "sizeLines": 192, "fileCategory": "code"},
+    {"path": "style/values/specified/mod.rs", "language": "rust", "sizeLines": 652, "fileCategory": "code"},
+    {"path": "style/values/specified/motion.rs", "language": "rust", "sizeLines": 330, "fileCategory": "code"},
+    {"path": "style/values/specified/position.rs", "language": "rust", "sizeLines": 2244, "fileCategory": "code"},
+    {"path": "style/values/specified/rect.rs", "language": "rust", "sizeLines": 12, "fileCategory": "code"},
+    {"path": "style/values/specified/svg.rs", "language": "rust", "sizeLines": 449, "fileCategory": "code"},
+    {"path": "style/values/specified/text.rs", "language": "rust", "sizeLines": 1592, "fileCategory": "code"},
+    {"path": "style/values/specified/time.rs", "language": "rust", "sizeLines": 301, "fileCategory": "code"},
+    {"path": "style/values/specified/transform.rs", "language": "rust", "sizeLines": 619, "fileCategory": "code"},
+    {"path": "style/values/specified/ui.rs", "language": "rust", "sizeLines": 354, "fileCategory": "code"},
+    {"path": "style/values/specified/url.rs", "language": "rust", "sizeLines": 12, "fileCategory": "code"},
+    {"path": "style/values/specified/corner_shape.rs", "language": "rust", "sizeLines": 159, "fileCategory": "code"},
+    {"path": "style/values/specified/grid.rs", "language": "rust", "sizeLines": 454, "fileCategory": "code"},
+    {"path": "style/values/specified/intersection_observer.rs", "language": "rust", "sizeLines": 84, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

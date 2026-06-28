@@ -1,0 +1,3098 @@
+{
+  "name": "stylo",
+  "description": "The Stylo CSS engine. A high-performance, browser-grade CSS style engine written in Rust that powers Servo and Firefox. Note: this project has over 100 source files; consider scoping analysis to a subdirectory for faster results.",
+  "languages": [
+    "json",
+    "mako",
+    "markdown",
+    "nix",
+    "python",
+    "rust",
+    "shell",
+    "toml",
+    "txt",
+    "yaml"
+  ],
+  "frameworks": [
+    "GitHub Actions",
+    "serde"
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/main.yml",
+      "language": "yaml",
+      "sizeLines": 77,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/mirror-to-release-branch.yml",
+      "language": "yaml",
+      "sizeLines": 26,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/sync-upstream.yml",
+      "language": "yaml",
+      "sizeLines": 23,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-input.json",
+      "language": "json",
+      "sizeLines": 1934,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-output.json",
+      "language": "json",
+      "sizeLines": 750,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-scan-files.json",
+      "language": "json",
+      "sizeLines": 2348,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Cargo.toml",
+      "language": "toml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "commit-from-merge.sh",
+      "language": "shell",
+      "sizeLines": 15,
+      "fileCategory": "script"
+    },
+    {
+      "path": "commit-from-squashed.sh",
+      "language": "shell",
+      "sizeLines": 14,
+      "fileCategory": "script"
+    },
+    {
+      "path": "malloc_size_of/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "malloc_size_of/lib.rs",
+      "language": "rust",
+      "sizeLines": 848,
+      "fileCategory": "code"
+    },
+    {
+      "path": "malloc_size_of/LICENSE-APACHE",
+      "language": "unknown",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "malloc_size_of/LICENSE-MIT",
+      "language": "unknown",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "rustfmt.toml",
+      "language": "toml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "selectors/attr.rs",
+      "language": "rust",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/bloom.rs",
+      "language": "rust",
+      "sizeLines": 422,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/build.rs",
+      "language": "rust",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/builder.rs",
+      "language": "rust",
+      "sizeLines": 455,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "selectors/CHANGES.md",
+      "language": "markdown",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "selectors/context.rs",
+      "language": "rust",
+      "sizeLines": 525,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/kleene_value.rs",
+      "language": "rust",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/lib.rs",
+      "language": "rust",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/matching.rs",
+      "language": "rust",
+      "sizeLines": 1609,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/nth_index_cache.rs",
+      "language": "rust",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/parser.rs",
+      "language": "rust",
+      "sizeLines": 4923,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/README.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "selectors/relative_selector/cache.rs",
+      "language": "rust",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/relative_selector/filter.rs",
+      "language": "rust",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/relative_selector/mod.rs",
+      "language": "rust",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/sink.rs",
+      "language": "rust",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/tree.rs",
+      "language": "rust",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/visitor.rs",
+      "language": "rust",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "servo_arc/lib.rs",
+      "language": "rust",
+      "sizeLines": 1202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/LICENSE-APACHE",
+      "language": "unknown",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/LICENSE-MIT",
+      "language": "unknown",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "shell.nix",
+      "language": "nix",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "start-rebase.sh",
+      "language": "shell",
+      "sizeLines": 10,
+      "fileCategory": "script"
+    },
+    {
+      "path": "style_derive/animate.rs",
+      "language": "rust",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style_derive/cg.rs",
+      "language": "rust",
+      "sizeLines": 409,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/compute_squared_distance.rs",
+      "language": "rust",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/lib.rs",
+      "language": "rust",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/parse.rs",
+      "language": "rust",
+      "sizeLines": 332,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/specified_value_info.rs",
+      "language": "rust",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_animated_value.rs",
+      "language": "rust",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_animated_zero.rs",
+      "language": "rust",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_computed_value.rs",
+      "language": "rust",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_css.rs",
+      "language": "rust",
+      "sizeLines": 383,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_resolved_value.rs",
+      "language": "rust",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_typed.rs",
+      "language": "rust",
+      "sizeLines": 720,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/arc_slice.rs",
+      "language": "rust",
+      "sizeLines": 164,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style_traits/dom.rs",
+      "language": "rust",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/lib.rs",
+      "language": "rust",
+      "sizeLines": 294,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/owned_slice.rs",
+      "language": "rust",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/owned_str.rs",
+      "language": "rust",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/specified_value_info.rs",
+      "language": "rust",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/values.rs",
+      "language": "rust",
+      "sizeLines": 598,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style.paths",
+      "language": "paths",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/applicable_declarations.rs",
+      "language": "rust",
+      "sizeLines": 328,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/author_styles.rs",
+      "language": "rust",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/bezier.rs",
+      "language": "rust",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/bloom.rs",
+      "language": "rust",
+      "sizeLines": 399,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/build_gecko.rs",
+      "language": "rust",
+      "sizeLines": 396,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/build.rs",
+      "language": "rust",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 110,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/color/color_function.rs",
+      "language": "rust",
+      "sizeLines": 569,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/component.rs",
+      "language": "rust",
+      "sizeLines": 189,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/convert.rs",
+      "language": "rust",
+      "sizeLines": 936,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/gamut.rs",
+      "language": "rust",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/gamut/raytrace.rs",
+      "language": "rust",
+      "sizeLines": 261,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/mix.rs",
+      "language": "rust",
+      "sizeLines": 645,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/mod.rs",
+      "language": "rust",
+      "sizeLines": 754,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/parsing.rs",
+      "language": "rust",
+      "sizeLines": 633,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/to_css.rs",
+      "language": "rust",
+      "sizeLines": 297,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/context.rs",
+      "language": "rust",
+      "sizeLines": 665,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/mod.rs",
+      "language": "rust",
+      "sizeLines": 787,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/predefined.rs",
+      "language": "rust",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/update_predefined.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/custom_properties_map.rs",
+      "language": "rust",
+      "sizeLines": 277,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/custom_properties.rs",
+      "language": "rust",
+      "sizeLines": 2919,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/data.rs",
+      "language": "rust",
+      "sizeLines": 666,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/gecko.rs",
+      "language": "rust",
+      "sizeLines": 493,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/mod.rs",
+      "language": "rust",
+      "sizeLines": 294,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/servo.rs",
+      "language": "rust",
+      "sizeLines": 452,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/dom_apis.rs",
+      "language": "rust",
+      "sizeLines": 916,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/dom.rs",
+      "language": "rust",
+      "sizeLines": 1092,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/driver.rs",
+      "language": "rust",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/error_reporting.rs",
+      "language": "rust",
+      "sizeLines": 528,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/font_face.rs",
+      "language": "rust",
+      "sizeLines": 582,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/font_metrics.rs",
+      "language": "rust",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/mod.rs",
+      "language": "rust",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/mod.rs",
+      "language": "rust",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "language": "rust",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_compatibility.rs",
+      "language": "rust",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_style_auto_array.rs",
+      "language": "rust",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/origin_flags.rs",
+      "language": "rust",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ownership.rs",
+      "language": "rust",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/refptr.rs",
+      "language": "rust",
+      "sizeLines": 289,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_string_cache/mod.rs",
+      "language": "rust",
+      "sizeLines": 533,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_string_cache/namespace.rs",
+      "language": "rust",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/anon_boxes.toml",
+      "language": "toml",
+      "sizeLines": 113,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/gecko/arc_types.rs",
+      "language": "rust",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/conversions.rs",
+      "language": "rust",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/data.rs",
+      "language": "rust",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/media_features.rs",
+      "language": "rust",
+      "sizeLines": 971,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/mod.rs",
+      "language": "rust",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/non_ts_pseudo_class_list.rs",
+      "language": "rust",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_element_definition.mako.rs",
+      "language": "rust",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_element.rs",
+      "language": "rust",
+      "sizeLines": 625,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_elements.py",
+      "language": "python",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_elements.toml",
+      "language": "toml",
+      "sizeLines": 206,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/gecko/regen_atoms.py",
+      "language": "python",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/restyle_damage.rs",
+      "language": "rust",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/selector_parser.rs",
+      "language": "rust",
+      "sizeLines": 664,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot_helpers.rs",
+      "language": "rust",
+      "sizeLines": 316,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot.rs",
+      "language": "rust",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/traversal.rs",
+      "language": "rust",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/wrapper.rs",
+      "language": "rust",
+      "sizeLines": 2267,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/global_style_data.rs",
+      "language": "rust",
+      "sizeLines": 224,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/document_state.rs",
+      "language": "rust",
+      "sizeLines": 156,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/element_wrapper.rs",
+      "language": "rust",
+      "sizeLines": 432,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/invalidation_map.rs",
+      "language": "rust",
+      "sizeLines": 1626,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/invalidator.rs",
+      "language": "rust",
+      "sizeLines": 1472,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/mod.rs",
+      "language": "rust",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/relative_selector.rs",
+      "language": "rust",
+      "sizeLines": 1407,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/restyle_hints.rs",
+      "language": "rust",
+      "sizeLines": 217,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/state_and_attributes.rs",
+      "language": "rust",
+      "sizeLines": 756,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/media_queries.rs",
+      "language": "rust",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/mod.rs",
+      "language": "rust",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/stylesheets.rs",
+      "language": "rust",
+      "sizeLines": 745,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/viewport_units.rs",
+      "language": "rust",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/lib.rs",
+      "language": "rust",
+      "sizeLines": 332,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/logical_geometry.rs",
+      "language": "rust",
+      "sizeLines": 1701,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/macros.rs",
+      "language": "rust",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/matching.rs",
+      "language": "rust",
+      "sizeLines": 1200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/media_list.rs",
+      "language": "rust",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/media_query.rs",
+      "language": "rust",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/mod.rs",
+      "language": "rust",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/parallel.rs",
+      "language": "rust",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/parser.rs",
+      "language": "rust",
+      "sizeLines": 261,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/piecewise_linear.rs",
+      "language": "rust",
+      "sizeLines": 282,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/mod.rs",
+      "language": "rust",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/registry.rs",
+      "language": "rust",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/rule.rs",
+      "language": "rust",
+      "sizeLines": 341,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/ascii.rs",
+      "language": "rust",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/data_type.rs",
+      "language": "rust",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/mod.rs",
+      "language": "rust",
+      "sizeLines": 445,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/value.rs",
+      "language": "rust",
+      "sizeLines": 750,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/build.py",
+      "language": "python",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/cascade.rs",
+      "language": "rust",
+      "sizeLines": 1500,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/computed_value_flags.rs",
+      "language": "rust",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/counted_unknown_properties.py",
+      "language": "python",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/counter_style_descriptors.toml",
+      "language": "toml",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/data.py",
+      "language": "python",
+      "sizeLines": 1296,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/declaration_block.rs",
+      "language": "rust",
+      "sizeLines": 1770,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/font_face_descriptors.toml",
+      "language": "toml",
+      "sizeLines": 50,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/gecko.mako.rs",
+      "language": "rust",
+      "sizeLines": 1540,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers.mako.rs",
+      "language": "rust",
+      "sizeLines": 766,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers/animated_properties.mako.rs",
+      "language": "rust",
+      "sizeLines": 762,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/longhands.toml",
+      "language": "toml",
+      "sizeLines": 4208,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/mod.rs",
+      "language": "rust",
+      "sizeLines": 1741,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.html.mako",
+      "language": "mako",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.mako.rs",
+      "language": "rust",
+      "sizeLines": 3091,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/property_descriptors.toml",
+      "language": "toml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/shorthands.rs",
+      "language": "rust",
+      "sizeLines": 4360,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/shorthands.toml",
+      "language": "toml",
+      "sizeLines": 557,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "language": "whl",
+      "sizeLines": 311,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/__init__.py",
+      "language": "python",
+      "sizeLines": 384,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/LICENSE.txt",
+      "language": "txt",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl",
+      "language": "whl",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/view_transition_descriptors.toml",
+      "language": "toml",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/queries/condition.rs",
+      "language": "rust",
+      "sizeLines": 993,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/feature_expression.rs",
+      "language": "rust",
+      "sizeLines": 1152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/feature.rs",
+      "language": "rust",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/mod.rs",
+      "language": "rust",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/values.rs",
+      "language": "rust",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/README.md",
+      "language": "markdown",
+      "sizeLines": 6,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/rule_cache.rs",
+      "language": "rust",
+      "sizeLines": 261,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_collector.rs",
+      "language": "rust",
+      "sizeLines": 543,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/core.rs",
+      "language": "rust",
+      "sizeLines": 777,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/level.rs",
+      "language": "rust",
+      "sizeLines": 389,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/map.rs",
+      "language": "rust",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/mod.rs",
+      "language": "rust",
+      "sizeLines": 430,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/source.rs",
+      "language": "rust",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/unsafe_box.rs",
+      "language": "rust",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/scoped_tls.rs",
+      "language": "rust",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/selector_map.rs",
+      "language": "rust",
+      "sizeLines": 886,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/selector_parser.rs",
+      "language": "rust",
+      "sizeLines": 306,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/animation.rs",
+      "language": "rust",
+      "sizeLines": 1876,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/attr.rs",
+      "language": "rust",
+      "sizeLines": 717,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/encoding_support.rs",
+      "language": "rust",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/media_features.rs",
+      "language": "rust",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/mod.rs",
+      "language": "rust",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/restyle_damage.rs",
+      "language": "rust",
+      "sizeLines": 215,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/selector_parser.rs",
+      "language": "rust",
+      "sizeLines": 1039,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/shadow_parts.rs",
+      "language": "rust",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/shared_lock.rs",
+      "language": "rust",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/sharing/checks.rs",
+      "language": "rust",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/sharing/mod.rs",
+      "language": "rust",
+      "sizeLines": 986,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/simple_buckets_map.rs",
+      "language": "rust",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/str.rs",
+      "language": "rust",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/style_adjuster.rs",
+      "language": "rust",
+      "sizeLines": 1088,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/style_resolver.rs",
+      "language": "rust",
+      "sizeLines": 622,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheet_set.rs",
+      "language": "rust",
+      "sizeLines": 645,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/appearance_base_rule.rs",
+      "language": "rust",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/container_rule.rs",
+      "language": "rust",
+      "sizeLines": 690,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/counter_style_rule.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/document_rule.rs",
+      "language": "rust",
+      "sizeLines": 292,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_face_rule.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_feature_values_rule.rs",
+      "language": "rust",
+      "sizeLines": 487,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_palette_values_rule.rs",
+      "language": "rust",
+      "sizeLines": 305,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/import_rule.rs",
+      "language": "rust",
+      "sizeLines": 259,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/keyframes_rule.rs",
+      "language": "rust",
+      "sizeLines": 668,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/layer_rule.rs",
+      "language": "rust",
+      "sizeLines": 224,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/loader.rs",
+      "language": "rust",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/margin_rule.rs",
+      "language": "rust",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/media_rule.rs",
+      "language": "rust",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/mod.rs",
+      "language": "rust",
+      "sizeLines": 911,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/namespace_rule.rs",
+      "language": "rust",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/nested_declarations_rule.rs",
+      "language": "rust",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/origin.rs",
+      "language": "rust",
+      "sizeLines": 249,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/page_rule.rs",
+      "language": "rust",
+      "sizeLines": 361,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/position_try_rule.rs",
+      "language": "rust",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/property_rule.rs",
+      "language": "rust",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rule_list.rs",
+      "language": "rust",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rule_parser.rs",
+      "language": "rust",
+      "sizeLines": 1112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rules_iterator.rs",
+      "language": "rust",
+      "sizeLines": 397,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/scope_rule.rs",
+      "language": "rust",
+      "sizeLines": 513,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/starting_style_rule.rs",
+      "language": "rust",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/style_rule.rs",
+      "language": "rust",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/stylesheet.rs",
+      "language": "rust",
+      "sizeLines": 575,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/supports_rule.rs",
+      "language": "rust",
+      "sizeLines": 404,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/view_transition_rule.rs",
+      "language": "rust",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylist.rs",
+      "language": "rust",
+      "sizeLines": 4986,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/thread_state.rs",
+      "language": "rust",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/traversal_flags.rs",
+      "language": "rust",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/traversal.rs",
+      "language": "rust",
+      "sizeLines": 790,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/mod.rs",
+      "language": "rust",
+      "sizeLines": 680,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_declaration.rs",
+      "language": "rust",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_values.rs",
+      "language": "rust",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/sum_value.rs",
+      "language": "rust",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/gecko.rs",
+      "language": "rust",
+      "sizeLines": 367,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/mod.rs",
+      "language": "rust",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/servo.rs",
+      "language": "rust",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/use_counters/mod.rs",
+      "language": "rust",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/color.rs",
+      "language": "rust",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/effects.rs",
+      "language": "rust",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/font.rs",
+      "language": "rust",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/grid.rs",
+      "language": "rust",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/lists.rs",
+      "language": "rust",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/mod.rs",
+      "language": "rust",
+      "sizeLines": 548,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/svg.rs",
+      "language": "rust",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/transform.rs",
+      "language": "rust",
+      "sizeLines": 1669,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/align.rs",
+      "language": "rust",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/angle.rs",
+      "language": "rust",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/animation.rs",
+      "language": "rust",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/background.rs",
+      "language": "rust",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/basic_shape.rs",
+      "language": "rust",
+      "sizeLines": 277,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/border.rs",
+      "language": "rust",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/box.rs",
+      "language": "rust",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/calc.rs",
+      "language": "rust",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/color.rs",
+      "language": "rust",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/column.rs",
+      "language": "rust",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/corner_shape.rs",
+      "language": "rust",
+      "sizeLines": 155,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/counters.rs",
+      "language": "rust",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/easing.rs",
+      "language": "rust",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/effects.rs",
+      "language": "rust",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/flex.rs",
+      "language": "rust",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/font.rs",
+      "language": "rust",
+      "sizeLines": 1457,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/image.rs",
+      "language": "rust",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/length_percentage.rs",
+      "language": "rust",
+      "sizeLines": 1008,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/length.rs",
+      "language": "rust",
+      "sizeLines": 575,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/list.rs",
+      "language": "rust",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/mod.rs",
+      "language": "rust",
+      "sizeLines": 1079,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/motion.rs",
+      "language": "rust",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/outline.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/page.rs",
+      "language": "rust",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/percentage.rs",
+      "language": "rust",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/position.rs",
+      "language": "rust",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ratio.rs",
+      "language": "rust",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/rect.rs",
+      "language": "rust",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/resolution.rs",
+      "language": "rust",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/svg.rs",
+      "language": "rust",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/table.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/text.rs",
+      "language": "rust",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/time.rs",
+      "language": "rust",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/transform.rs",
+      "language": "rust",
+      "sizeLines": 559,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ui.rs",
+      "language": "rust",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/url.rs",
+      "language": "rust",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/distance.rs",
+      "language": "rust",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/animation.rs",
+      "language": "rust",
+      "sizeLines": 363,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/background.rs",
+      "language": "rust",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/basic_shape.rs",
+      "language": "rust",
+      "sizeLines": 1392,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/border.rs",
+      "language": "rust",
+      "sizeLines": 304,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/box.rs",
+      "language": "rust",
+      "sizeLines": 340,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/calc.rs",
+      "language": "rust",
+      "sizeLines": 2546,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/color.rs",
+      "language": "rust",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/column.rs",
+      "language": "rust",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/counters.rs",
+      "language": "rust",
+      "sizeLines": 323,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/easing.rs",
+      "language": "rust",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/effects.rs",
+      "language": "rust",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/flex.rs",
+      "language": "rust",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/font.rs",
+      "language": "rust",
+      "sizeLines": 371,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/grid.rs",
+      "language": "rust",
+      "sizeLines": 947,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/image.rs",
+      "language": "rust",
+      "sizeLines": 653,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/length.rs",
+      "language": "rust",
+      "sizeLines": 660,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/mod.rs",
+      "language": "rust",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/motion.rs",
+      "language": "rust",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/page.rs",
+      "language": "rust",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/position.rs",
+      "language": "rust",
+      "sizeLines": 672,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/ratio.rs",
+      "language": "rust",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/rect.rs",
+      "language": "rust",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/size.rs",
+      "language": "rust",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/svg.rs",
+      "language": "rust",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/text.rs",
+      "language": "rust",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/transform.rs",
+      "language": "rust",
+      "sizeLines": 1158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/ui.rs",
+      "language": "rust",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/url.rs",
+      "language": "rust",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/mod.rs",
+      "language": "rust",
+      "sizeLines": 808,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/animation.rs",
+      "language": "rust",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/color.rs",
+      "language": "rust",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/counters.rs",
+      "language": "rust",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/mod.rs",
+      "language": "rust",
+      "sizeLines": 316,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/align.rs",
+      "language": "rust",
+      "sizeLines": 715,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/angle.rs",
+      "language": "rust",
+      "sizeLines": 409,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/animation.rs",
+      "language": "rust",
+      "sizeLines": 958,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/background.rs",
+      "language": "rust",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/basic_shape.rs",
+      "language": "rust",
+      "sizeLines": 1019,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/border.rs",
+      "language": "rust",
+      "sizeLines": 413,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/box.rs",
+      "language": "rust",
+      "sizeLines": 2092,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/calc.rs",
+      "language": "rust",
+      "sizeLines": 1404,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/color.rs",
+      "language": "rust",
+      "sizeLines": 1261,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/column.rs",
+      "language": "rust",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/corner_shape.rs",
+      "language": "rust",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/counters.rs",
+      "language": "rust",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/easing.rs",
+      "language": "rust",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/effects.rs",
+      "language": "rust",
+      "sizeLines": 445,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/flex.rs",
+      "language": "rust",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/font.rs",
+      "language": "rust",
+      "sizeLines": 2046,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/grid.rs",
+      "language": "rust",
+      "sizeLines": 454,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/image.rs",
+      "language": "rust",
+      "sizeLines": 1397,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/intersection_observer.rs",
+      "language": "rust",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/length.rs",
+      "language": "rust",
+      "sizeLines": 2014,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/list.rs",
+      "language": "rust",
+      "sizeLines": 191,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/mod.rs",
+      "language": "rust",
+      "sizeLines": 651,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/motion.rs",
+      "language": "rust",
+      "sizeLines": 329,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/number.rs",
+      "language": "rust",
+      "sizeLines": 551,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/outline.rs",
+      "language": "rust",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/page.rs",
+      "language": "rust",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/percentage.rs",
+      "language": "rust",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/position.rs",
+      "language": "rust",
+      "sizeLines": 2243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/ratio.rs",
+      "language": "rust",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/rect.rs",
+      "language": "rust",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/resolution.rs",
+      "language": "rust",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/source_size_list.rs",
+      "language": "rust",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/svg_path.rs",
+      "language": "rust",
+      "sizeLines": 1123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/svg.rs",
+      "language": "rust",
+      "sizeLines": 448,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/table.rs",
+      "language": "rust",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/text.rs",
+      "language": "rust",
+      "sizeLines": 1591,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/time.rs",
+      "language": "rust",
+      "sizeLines": 300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/transform.rs",
+      "language": "rust",
+      "sizeLines": 619,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/ui.rs",
+      "language": "rust",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/url.rs",
+      "language": "rust",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/tagged_numeric.rs",
+      "language": "rust",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/build.rs",
+      "language": "rust",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_atoms/lib.rs",
+      "language": "rust",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/predefined_counter_styles.rs",
+      "language": "rust",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/static_atoms.txt",
+      "language": "txt",
+      "sizeLines": 193,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "stylo_dom/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_dom/lib.rs",
+      "language": "rust",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/build.rs",
+      "language": "rust",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/preferences.toml",
+      "language": "toml",
+      "sizeLines": 44,
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/src/lib.rs",
+      "language": "rust",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "sync.sh",
+      "language": "shell",
+      "sizeLines": 43,
+      "fileCategory": "script"
+    },
+    {
+      "path": "SYNCING.md",
+      "language": "markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "to_shmem_derive/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "to_shmem_derive/lib.rs",
+      "language": "rust",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem_derive/to_shmem.rs",
+      "language": "rust",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem_derive/util.rs",
+      "language": "rust",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem/Cargo.toml",
+      "language": "toml",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "to_shmem/lib.rs",
+      "language": "rust",
+      "sizeLines": 618,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 388,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "importMap": {
+    ".github/workflows/main.yml": [],
+    ".github/workflows/mirror-to-release-branch.yml": [],
+    ".github/workflows/sync-upstream.yml": [],
+    ".understand-anything/.understandignore": [],
+    ".understand-anything/tmp/ua-import-map-input.json": [],
+    ".understand-anything/tmp/ua-import-map-output.json": [],
+    ".understand-anything/tmp/ua-scan-files.json": [],
+    "Cargo.toml": [],
+    "commit-from-merge.sh": [],
+    "commit-from-squashed.sh": [],
+    "malloc_size_of/Cargo.toml": [],
+    "malloc_size_of/lib.rs": [],
+    "malloc_size_of/LICENSE-APACHE": [],
+    "malloc_size_of/LICENSE-MIT": [],
+    "README.md": [],
+    "rustfmt.toml": [],
+    "selectors/attr.rs": [],
+    "selectors/bloom.rs": [],
+    "selectors/build.rs": [],
+    "selectors/builder.rs": [],
+    "selectors/Cargo.toml": [],
+    "selectors/CHANGES.md": [],
+    "selectors/context.rs": [],
+    "selectors/kleene_value.rs": [],
+    "selectors/lib.rs": [
+      "selectors/attr.rs",
+      "selectors/bloom.rs",
+      "selectors/builder.rs",
+      "selectors/context.rs",
+      "selectors/kleene_value.rs",
+      "selectors/matching.rs",
+      "selectors/nth_index_cache.rs",
+      "selectors/parser.rs",
+      "selectors/relative_selector/mod.rs",
+      "selectors/sink.rs",
+      "selectors/tree.rs",
+      "selectors/visitor.rs"
+    ],
+    "selectors/matching.rs": [],
+    "selectors/nth_index_cache.rs": [],
+    "selectors/parser.rs": [],
+    "selectors/README.md": [],
+    "selectors/relative_selector/cache.rs": [],
+    "selectors/relative_selector/filter.rs": [],
+    "selectors/relative_selector/mod.rs": [
+      "selectors/relative_selector/cache.rs",
+      "selectors/relative_selector/filter.rs"
+    ],
+    "selectors/sink.rs": [],
+    "selectors/tree.rs": [],
+    "selectors/visitor.rs": [],
+    "servo_arc/Cargo.toml": [],
+    "servo_arc/lib.rs": [],
+    "servo_arc/LICENSE-APACHE": [],
+    "servo_arc/LICENSE-MIT": [],
+    "shell.nix": [],
+    "start-rebase.sh": [],
+    "style_derive/animate.rs": [],
+    "style_derive/Cargo.toml": [],
+    "style_derive/cg.rs": [],
+    "style_derive/compute_squared_distance.rs": [],
+    "style_derive/lib.rs": [
+      "style_derive/animate.rs",
+      "style_derive/cg.rs",
+      "style_derive/compute_squared_distance.rs",
+      "style_derive/parse.rs",
+      "style_derive/specified_value_info.rs",
+      "style_derive/to_animated_value.rs",
+      "style_derive/to_animated_zero.rs",
+      "style_derive/to_computed_value.rs",
+      "style_derive/to_css.rs",
+      "style_derive/to_resolved_value.rs",
+      "style_derive/to_typed.rs"
+    ],
+    "style_derive/parse.rs": [],
+    "style_derive/specified_value_info.rs": [],
+    "style_derive/to_animated_value.rs": [],
+    "style_derive/to_animated_zero.rs": [],
+    "style_derive/to_computed_value.rs": [],
+    "style_derive/to_css.rs": [],
+    "style_derive/to_resolved_value.rs": [],
+    "style_derive/to_typed.rs": [],
+    "style_traits/arc_slice.rs": [],
+    "style_traits/Cargo.toml": [],
+    "style_traits/dom.rs": [],
+    "style_traits/lib.rs": [
+      "style_traits/arc_slice.rs",
+      "style_traits/dom.rs",
+      "style_traits/owned_slice.rs",
+      "style_traits/owned_str.rs",
+      "style_traits/specified_value_info.rs",
+      "style_traits/values.rs"
+    ],
+    "style_traits/owned_slice.rs": [],
+    "style_traits/owned_str.rs": [],
+    "style_traits/specified_value_info.rs": [],
+    "style_traits/values.rs": [],
+    "style.paths": [],
+    "style/applicable_declarations.rs": [],
+    "style/author_styles.rs": [],
+    "style/bezier.rs": [],
+    "style/bloom.rs": [],
+    "style/build_gecko.rs": [],
+    "style/build.rs": [
+      "style/build_gecko.rs"
+    ],
+    "style/Cargo.toml": [],
+    "style/color/color_function.rs": [],
+    "style/color/component.rs": [],
+    "style/color/convert.rs": [],
+    "style/color/gamut.rs": [],
+    "style/color/gamut/raytrace.rs": [],
+    "style/color/mix.rs": [],
+    "style/color/mod.rs": [
+      "style/color/color_function.rs",
+      "style/color/component.rs",
+      "style/color/convert.rs",
+      "style/color/gamut.rs",
+      "style/color/mix.rs",
+      "style/color/parsing.rs",
+      "style/color/to_css.rs"
+    ],
+    "style/color/parsing.rs": [],
+    "style/color/to_css.rs": [],
+    "style/context.rs": [],
+    "style/counter_style/mod.rs": [],
+    "style/counter_style/predefined.rs": [],
+    "style/counter_style/update_predefined.py": [],
+    "style/custom_properties_map.rs": [],
+    "style/custom_properties.rs": [],
+    "style/data.rs": [],
+    "style/device/gecko.rs": [],
+    "style/device/mod.rs": [
+      "style/device/gecko.rs",
+      "style/device/servo.rs"
+    ],
+    "style/device/servo.rs": [],
+    "style/dom_apis.rs": [],
+    "style/dom.rs": [],
+    "style/driver.rs": [],
+    "style/error_reporting.rs": [],
+    "style/font_face.rs": [],
+    "style/font_metrics.rs": [],
+    "style/gecko_bindings/mod.rs": [
+      "style/gecko_bindings/sugar/mod.rs"
+    ],
+    "style/gecko_bindings/sugar/mod.rs": [
+      "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "style/gecko_bindings/sugar/ns_compatibility.rs",
+      "style/gecko_bindings/sugar/ns_style_auto_array.rs",
+      "style/gecko_bindings/sugar/origin_flags.rs",
+      "style/gecko_bindings/sugar/ownership.rs",
+      "style/gecko_bindings/sugar/refptr.rs"
+    ],
+    "style/gecko_bindings/sugar/ns_com_ptr.rs": [],
+    "style/gecko_bindings/sugar/ns_compatibility.rs": [],
+    "style/gecko_bindings/sugar/ns_style_auto_array.rs": [],
+    "style/gecko_bindings/sugar/origin_flags.rs": [],
+    "style/gecko_bindings/sugar/ownership.rs": [],
+    "style/gecko_bindings/sugar/refptr.rs": [],
+    "style/gecko_string_cache/mod.rs": [
+      "style/gecko_string_cache/namespace.rs"
+    ],
+    "style/gecko_string_cache/namespace.rs": [],
+    "style/gecko/anon_boxes.toml": [],
+    "style/gecko/arc_types.rs": [],
+    "style/gecko/conversions.rs": [],
+    "style/gecko/data.rs": [],
+    "style/gecko/media_features.rs": [],
+    "style/gecko/mod.rs": [
+      "style/gecko/arc_types.rs",
+      "style/gecko/conversions.rs",
+      "style/gecko/data.rs",
+      "style/gecko/media_features.rs",
+      "style/gecko/non_ts_pseudo_class_list.rs",
+      "style/gecko/pseudo_element.rs",
+      "style/gecko/restyle_damage.rs",
+      "style/gecko/selector_parser.rs",
+      "style/gecko/snapshot_helpers.rs",
+      "style/gecko/snapshot.rs",
+      "style/gecko/traversal.rs",
+      "style/gecko/wrapper.rs"
+    ],
+    "style/gecko/non_ts_pseudo_class_list.rs": [],
+    "style/gecko/pseudo_element_definition.mako.rs": [],
+    "style/gecko/pseudo_element.rs": [],
+    "style/gecko/pseudo_elements.py": [],
+    "style/gecko/pseudo_elements.toml": [],
+    "style/gecko/regen_atoms.py": [
+      "style/gecko/pseudo_elements.py"
+    ],
+    "style/gecko/restyle_damage.rs": [],
+    "style/gecko/selector_parser.rs": [],
+    "style/gecko/snapshot_helpers.rs": [],
+    "style/gecko/snapshot.rs": [],
+    "style/gecko/traversal.rs": [],
+    "style/gecko/wrapper.rs": [],
+    "style/global_style_data.rs": [],
+    "style/invalidation/element/document_state.rs": [],
+    "style/invalidation/element/element_wrapper.rs": [],
+    "style/invalidation/element/invalidation_map.rs": [],
+    "style/invalidation/element/invalidator.rs": [],
+    "style/invalidation/element/mod.rs": [
+      "style/invalidation/element/document_state.rs",
+      "style/invalidation/element/element_wrapper.rs",
+      "style/invalidation/element/invalidation_map.rs",
+      "style/invalidation/element/invalidator.rs",
+      "style/invalidation/element/relative_selector.rs",
+      "style/invalidation/element/restyle_hints.rs",
+      "style/invalidation/element/state_and_attributes.rs"
+    ],
+    "style/invalidation/element/relative_selector.rs": [],
+    "style/invalidation/element/restyle_hints.rs": [],
+    "style/invalidation/element/state_and_attributes.rs": [],
+    "style/invalidation/media_queries.rs": [],
+    "style/invalidation/mod.rs": [
+      "style/invalidation/element/mod.rs",
+      "style/invalidation/media_queries.rs",
+      "style/invalidation/stylesheets.rs",
+      "style/invalidation/viewport_units.rs"
+    ],
+    "style/invalidation/stylesheets.rs": [],
+    "style/invalidation/viewport_units.rs": [],
+    "style/lib.rs": [
+      "style/applicable_declarations.rs",
+      "style/author_styles.rs",
+      "style/bezier.rs",
+      "style/bloom.rs",
+      "style/color/mod.rs",
+      "style/context.rs",
+      "style/counter_style/mod.rs",
+      "style/custom_properties_map.rs",
+      "style/custom_properties.rs",
+      "style/data.rs",
+      "style/device/mod.rs",
+      "style/dom_apis.rs",
+      "style/dom.rs",
+      "style/driver.rs",
+      "style/error_reporting.rs",
+      "style/font_face.rs",
+      "style/font_metrics.rs",
+      "style/gecko_bindings/mod.rs",
+      "style/gecko_string_cache/mod.rs",
+      "style/gecko/mod.rs",
+      "style/global_style_data.rs",
+      "style/invalidation/mod.rs",
+      "style/logical_geometry.rs",
+      "style/macros.rs",
+      "style/matching.rs",
+      "style/media_queries/mod.rs",
+      "style/parallel.rs",
+      "style/parser.rs",
+      "style/piecewise_linear.rs",
+      "style/properties_and_values/mod.rs",
+      "style/properties/mod.rs",
+      "style/queries/mod.rs",
+      "style/rule_cache.rs",
+      "style/rule_collector.rs",
+      "style/rule_tree/mod.rs",
+      "style/scoped_tls.rs",
+      "style/selector_map.rs",
+      "style/selector_parser.rs",
+      "style/servo/mod.rs",
+      "style/shared_lock.rs",
+      "style/sharing/mod.rs",
+      "style/simple_buckets_map.rs",
+      "style/str.rs",
+      "style/style_adjuster.rs",
+      "style/style_resolver.rs",
+      "style/stylesheet_set.rs",
+      "style/stylesheets/mod.rs",
+      "style/stylist.rs",
+      "style/thread_state.rs",
+      "style/traversal_flags.rs",
+      "style/traversal.rs",
+      "style/typed_om/mod.rs",
+      "style/url/mod.rs",
+      "style/use_counters/mod.rs",
+      "style/values/mod.rs"
+    ],
+    "style/logical_geometry.rs": [],
+    "style/macros.rs": [],
+    "style/matching.rs": [],
+    "style/media_queries/media_list.rs": [],
+    "style/media_queries/media_query.rs": [],
+    "style/media_queries/mod.rs": [
+      "style/media_queries/media_list.rs",
+      "style/media_queries/media_query.rs"
+    ],
+    "style/parallel.rs": [],
+    "style/parser.rs": [],
+    "style/piecewise_linear.rs": [],
+    "style/properties_and_values/mod.rs": [
+      "style/properties_and_values/registry.rs",
+      "style/properties_and_values/rule.rs",
+      "style/properties_and_values/syntax/mod.rs",
+      "style/properties_and_values/value.rs"
+    ],
+    "style/properties_and_values/registry.rs": [],
+    "style/properties_and_values/rule.rs": [],
+    "style/properties_and_values/syntax/ascii.rs": [],
+    "style/properties_and_values/syntax/data_type.rs": [],
+    "style/properties_and_values/syntax/mod.rs": [
+      "style/properties_and_values/syntax/ascii.rs",
+      "style/properties_and_values/syntax/data_type.rs"
+    ],
+    "style/properties_and_values/value.rs": [],
+    "style/properties/build.py": [
+      "style/properties/data.py"
+    ],
+    "style/properties/cascade.rs": [],
+    "style/properties/computed_value_flags.rs": [],
+    "style/properties/counted_unknown_properties.py": [],
+    "style/properties/counter_style_descriptors.toml": [],
+    "style/properties/data.py": [
+      "style/properties/counted_unknown_properties.py"
+    ],
+    "style/properties/declaration_block.rs": [],
+    "style/properties/font_face_descriptors.toml": [],
+    "style/properties/gecko.mako.rs": [],
+    "style/properties/helpers.mako.rs": [],
+    "style/properties/helpers/animated_properties.mako.rs": [],
+    "style/properties/longhands.toml": [],
+    "style/properties/mod.rs": [
+      "style/properties/cascade.rs",
+      "style/properties/declaration_block.rs",
+      "style/properties/shorthands.rs"
+    ],
+    "style/properties/properties.html.mako": [],
+    "style/properties/properties.mako.rs": [],
+    "style/properties/property_descriptors.toml": [],
+    "style/properties/shorthands.rs": [],
+    "style/properties/shorthands.toml": [],
+    "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl": [],
+    "style/properties/vendored_python/markupsafe/__init__.py": [],
+    "style/properties/vendored_python/markupsafe/LICENSE.txt": [],
+    "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl": [],
+    "style/properties/view_transition_descriptors.toml": [],
+    "style/queries/condition.rs": [],
+    "style/queries/feature_expression.rs": [],
+    "style/queries/feature.rs": [],
+    "style/queries/mod.rs": [
+      "style/queries/condition.rs",
+      "style/queries/feature_expression.rs",
+      "style/queries/feature.rs",
+      "style/queries/values.rs"
+    ],
+    "style/queries/values.rs": [],
+    "style/README.md": [],
+    "style/rule_cache.rs": [],
+    "style/rule_collector.rs": [],
+    "style/rule_tree/core.rs": [],
+    "style/rule_tree/level.rs": [],
+    "style/rule_tree/map.rs": [],
+    "style/rule_tree/mod.rs": [
+      "style/rule_tree/core.rs",
+      "style/rule_tree/level.rs",
+      "style/rule_tree/map.rs",
+      "style/rule_tree/source.rs",
+      "style/rule_tree/unsafe_box.rs"
+    ],
+    "style/rule_tree/source.rs": [],
+    "style/rule_tree/unsafe_box.rs": [],
+    "style/scoped_tls.rs": [],
+    "style/selector_map.rs": [],
+    "style/selector_parser.rs": [],
+    "style/servo/animation.rs": [],
+    "style/servo/attr.rs": [],
+    "style/servo/encoding_support.rs": [],
+    "style/servo/media_features.rs": [],
+    "style/servo/mod.rs": [
+      "style/servo/animation.rs",
+      "style/servo/attr.rs",
+      "style/servo/encoding_support.rs",
+      "style/servo/media_features.rs",
+      "style/servo/restyle_damage.rs",
+      "style/servo/selector_parser.rs",
+      "style/servo/shadow_parts.rs"
+    ],
+    "style/servo/restyle_damage.rs": [],
+    "style/servo/selector_parser.rs": [],
+    "style/servo/shadow_parts.rs": [],
+    "style/shared_lock.rs": [],
+    "style/sharing/checks.rs": [],
+    "style/sharing/mod.rs": [
+      "style/sharing/checks.rs"
+    ],
+    "style/simple_buckets_map.rs": [],
+    "style/str.rs": [],
+    "style/style_adjuster.rs": [],
+    "style/style_resolver.rs": [],
+    "style/stylesheet_set.rs": [],
+    "style/stylesheets/appearance_base_rule.rs": [],
+    "style/stylesheets/container_rule.rs": [],
+    "style/stylesheets/counter_style_rule.rs": [],
+    "style/stylesheets/document_rule.rs": [],
+    "style/stylesheets/font_face_rule.rs": [],
+    "style/stylesheets/font_feature_values_rule.rs": [],
+    "style/stylesheets/font_palette_values_rule.rs": [],
+    "style/stylesheets/import_rule.rs": [],
+    "style/stylesheets/keyframes_rule.rs": [],
+    "style/stylesheets/layer_rule.rs": [],
+    "style/stylesheets/loader.rs": [],
+    "style/stylesheets/margin_rule.rs": [],
+    "style/stylesheets/media_rule.rs": [],
+    "style/stylesheets/mod.rs": [
+      "style/stylesheets/appearance_base_rule.rs",
+      "style/stylesheets/container_rule.rs",
+      "style/stylesheets/counter_style_rule.rs",
+      "style/stylesheets/document_rule.rs",
+      "style/stylesheets/font_face_rule.rs",
+      "style/stylesheets/font_feature_values_rule.rs",
+      "style/stylesheets/font_palette_values_rule.rs",
+      "style/stylesheets/import_rule.rs",
+      "style/stylesheets/keyframes_rule.rs",
+      "style/stylesheets/layer_rule.rs",
+      "style/stylesheets/loader.rs",
+      "style/stylesheets/margin_rule.rs",
+      "style/stylesheets/media_rule.rs",
+      "style/stylesheets/namespace_rule.rs",
+      "style/stylesheets/nested_declarations_rule.rs",
+      "style/stylesheets/origin.rs",
+      "style/stylesheets/page_rule.rs",
+      "style/stylesheets/position_try_rule.rs",
+      "style/stylesheets/property_rule.rs",
+      "style/stylesheets/rule_list.rs",
+      "style/stylesheets/rule_parser.rs",
+      "style/stylesheets/rules_iterator.rs",
+      "style/stylesheets/scope_rule.rs",
+      "style/stylesheets/starting_style_rule.rs",
+      "style/stylesheets/style_rule.rs",
+      "style/stylesheets/stylesheet.rs",
+      "style/stylesheets/supports_rule.rs",
+      "style/stylesheets/view_transition_rule.rs"
+    ],
+    "style/stylesheets/namespace_rule.rs": [],
+    "style/stylesheets/nested_declarations_rule.rs": [],
+    "style/stylesheets/origin.rs": [],
+    "style/stylesheets/page_rule.rs": [],
+    "style/stylesheets/position_try_rule.rs": [],
+    "style/stylesheets/property_rule.rs": [],
+    "style/stylesheets/rule_list.rs": [],
+    "style/stylesheets/rule_parser.rs": [],
+    "style/stylesheets/rules_iterator.rs": [],
+    "style/stylesheets/scope_rule.rs": [],
+    "style/stylesheets/starting_style_rule.rs": [],
+    "style/stylesheets/style_rule.rs": [],
+    "style/stylesheets/stylesheet.rs": [],
+    "style/stylesheets/supports_rule.rs": [],
+    "style/stylesheets/view_transition_rule.rs": [],
+    "style/stylist.rs": [],
+    "style/thread_state.rs": [],
+    "style/traversal_flags.rs": [],
+    "style/traversal.rs": [],
+    "style/typed_om/mod.rs": [
+      "style/typed_om/numeric_declaration.rs",
+      "style/typed_om/numeric_values.rs",
+      "style/typed_om/sum_value.rs"
+    ],
+    "style/typed_om/numeric_declaration.rs": [],
+    "style/typed_om/numeric_values.rs": [],
+    "style/typed_om/sum_value.rs": [],
+    "style/url/gecko.rs": [],
+    "style/url/mod.rs": [
+      "style/url/gecko.rs",
+      "style/url/servo.rs"
+    ],
+    "style/url/servo.rs": [],
+    "style/use_counters/mod.rs": [],
+    "style/values/animated/color.rs": [],
+    "style/values/animated/effects.rs": [],
+    "style/values/animated/font.rs": [],
+    "style/values/animated/grid.rs": [],
+    "style/values/animated/lists.rs": [],
+    "style/values/animated/mod.rs": [
+      "style/values/animated/color.rs",
+      "style/values/animated/effects.rs",
+      "style/values/animated/font.rs",
+      "style/values/animated/grid.rs",
+      "style/values/animated/lists.rs",
+      "style/values/animated/svg.rs",
+      "style/values/animated/transform.rs"
+    ],
+    "style/values/animated/svg.rs": [],
+    "style/values/animated/transform.rs": [],
+    "style/values/computed/align.rs": [
+      "style/values/specified/mod.rs"
+    ],
+    "style/values/computed/angle.rs": [],
+    "style/values/computed/animation.rs": [],
+    "style/values/computed/background.rs": [],
+    "style/values/computed/basic_shape.rs": [],
+    "style/values/computed/border.rs": [],
+    "style/values/computed/box.rs": [],
+    "style/values/computed/calc.rs": [],
+    "style/values/computed/color.rs": [],
+    "style/values/computed/column.rs": [],
+    "style/values/computed/corner_shape.rs": [],
+    "style/values/computed/counters.rs": [],
+    "style/values/computed/easing.rs": [],
+    "style/values/computed/effects.rs": [],
+    "style/values/computed/flex.rs": [],
+    "style/values/computed/font.rs": [],
+    "style/values/computed/image.rs": [],
+    "style/values/computed/length_percentage.rs": [],
+    "style/values/computed/length.rs": [],
+    "style/values/computed/list.rs": [],
+    "style/values/computed/mod.rs": [
+      "style/values/animated/mod.rs",
+      "style/values/computed/align.rs",
+      "style/values/computed/angle.rs",
+      "style/values/computed/animation.rs",
+      "style/values/computed/background.rs",
+      "style/values/computed/basic_shape.rs",
+      "style/values/computed/border.rs",
+      "style/values/computed/calc.rs",
+      "style/values/computed/color.rs",
+      "style/values/computed/column.rs",
+      "style/values/computed/corner_shape.rs",
+      "style/values/computed/counters.rs",
+      "style/values/computed/easing.rs",
+      "style/values/computed/effects.rs",
+      "style/values/computed/flex.rs",
+      "style/values/computed/font.rs",
+      "style/values/computed/image.rs",
+      "style/values/computed/length_percentage.rs",
+      "style/values/computed/length.rs",
+      "style/values/computed/list.rs",
+      "style/values/computed/motion.rs",
+      "style/values/computed/outline.rs",
+      "style/values/computed/page.rs",
+      "style/values/computed/percentage.rs",
+      "style/values/computed/position.rs",
+      "style/values/computed/ratio.rs",
+      "style/values/computed/rect.rs",
+      "style/values/computed/resolution.rs",
+      "style/values/computed/svg.rs",
+      "style/values/computed/table.rs",
+      "style/values/computed/text.rs",
+      "style/values/computed/time.rs",
+      "style/values/computed/transform.rs",
+      "style/values/computed/ui.rs",
+      "style/values/computed/url.rs",
+      "style/values/generics/grid.rs",
+      "style/values/generics/mod.rs",
+      "style/values/generics/transform.rs",
+      "style/values/specified/mod.rs"
+    ],
+    "style/values/computed/motion.rs": [],
+    "style/values/computed/outline.rs": [],
+    "style/values/computed/page.rs": [],
+    "style/values/computed/percentage.rs": [],
+    "style/values/computed/position.rs": [],
+    "style/values/computed/ratio.rs": [],
+    "style/values/computed/rect.rs": [],
+    "style/values/computed/resolution.rs": [],
+    "style/values/computed/svg.rs": [],
+    "style/values/computed/table.rs": [
+      "style/values/specified/table.rs"
+    ],
+    "style/values/computed/text.rs": [],
+    "style/values/computed/time.rs": [],
+    "style/values/computed/transform.rs": [],
+    "style/values/computed/ui.rs": [],
+    "style/values/computed/url.rs": [],
+    "style/values/distance.rs": [],
+    "style/values/generics/animation.rs": [],
+    "style/values/generics/background.rs": [],
+    "style/values/generics/basic_shape.rs": [],
+    "style/values/generics/border.rs": [],
+    "style/values/generics/box.rs": [],
+    "style/values/generics/calc.rs": [],
+    "style/values/generics/color.rs": [],
+    "style/values/generics/column.rs": [],
+    "style/values/generics/counters.rs": [],
+    "style/values/generics/easing.rs": [],
+    "style/values/generics/effects.rs": [],
+    "style/values/generics/flex.rs": [],
+    "style/values/generics/font.rs": [],
+    "style/values/generics/grid.rs": [],
+    "style/values/generics/image.rs": [],
+    "style/values/generics/length.rs": [],
+    "style/values/generics/mod.rs": [
+      "style/values/generics/animation.rs",
+      "style/values/generics/background.rs",
+      "style/values/generics/basic_shape.rs",
+      "style/values/generics/border.rs",
+      "style/values/generics/calc.rs",
+      "style/values/generics/color.rs",
+      "style/values/generics/column.rs",
+      "style/values/generics/counters.rs",
+      "style/values/generics/easing.rs",
+      "style/values/generics/effects.rs",
+      "style/values/generics/flex.rs",
+      "style/values/generics/font.rs",
+      "style/values/generics/grid.rs",
+      "style/values/generics/image.rs",
+      "style/values/generics/length.rs",
+      "style/values/generics/motion.rs",
+      "style/values/generics/page.rs",
+      "style/values/generics/position.rs",
+      "style/values/generics/ratio.rs",
+      "style/values/generics/rect.rs",
+      "style/values/generics/size.rs",
+      "style/values/generics/svg.rs",
+      "style/values/generics/text.rs",
+      "style/values/generics/transform.rs",
+      "style/values/generics/ui.rs",
+      "style/values/generics/url.rs"
+    ],
+    "style/values/generics/motion.rs": [],
+    "style/values/generics/page.rs": [],
+    "style/values/generics/position.rs": [],
+    "style/values/generics/ratio.rs": [],
+    "style/values/generics/rect.rs": [],
+    "style/values/generics/size.rs": [],
+    "style/values/generics/svg.rs": [],
+    "style/values/generics/text.rs": [],
+    "style/values/generics/transform.rs": [],
+    "style/values/generics/ui.rs": [],
+    "style/values/generics/url.rs": [],
+    "style/values/mod.rs": [
+      "style/values/animated/mod.rs",
+      "style/values/computed/mod.rs",
+      "style/values/distance.rs",
+      "style/values/generics/mod.rs",
+      "style/values/resolved/mod.rs",
+      "style/values/specified/mod.rs",
+      "style/values/tagged_numeric.rs"
+    ],
+    "style/values/resolved/animation.rs": [],
+    "style/values/resolved/color.rs": [],
+    "style/values/resolved/counters.rs": [],
+    "style/values/resolved/mod.rs": [
+      "style/values/resolved/animation.rs",
+      "style/values/resolved/color.rs",
+      "style/values/resolved/counters.rs"
+    ],
+    "style/values/specified/align.rs": [],
+    "style/values/specified/angle.rs": [],
+    "style/values/specified/animation.rs": [],
+    "style/values/specified/background.rs": [],
+    "style/values/specified/basic_shape.rs": [],
+    "style/values/specified/border.rs": [],
+    "style/values/specified/box.rs": [],
+    "style/values/specified/calc.rs": [],
+    "style/values/specified/color.rs": [],
+    "style/values/specified/column.rs": [],
+    "style/values/specified/corner_shape.rs": [],
+    "style/values/specified/counters.rs": [],
+    "style/values/specified/easing.rs": [],
+    "style/values/specified/effects.rs": [],
+    "style/values/specified/flex.rs": [],
+    "style/values/specified/font.rs": [],
+    "style/values/specified/grid.rs": [],
+    "style/values/specified/image.rs": [],
+    "style/values/specified/intersection_observer.rs": [],
+    "style/values/specified/length.rs": [],
+    "style/values/specified/list.rs": [],
+    "style/values/specified/mod.rs": [
+      "style/values/computed/mod.rs",
+      "style/values/generics/grid.rs",
+      "style/values/generics/mod.rs",
+      "style/values/specified/align.rs",
+      "style/values/specified/angle.rs",
+      "style/values/specified/animation.rs",
+      "style/values/specified/background.rs",
+      "style/values/specified/basic_shape.rs",
+      "style/values/specified/border.rs",
+      "style/values/specified/calc.rs",
+      "style/values/specified/color.rs",
+      "style/values/specified/column.rs",
+      "style/values/specified/corner_shape.rs",
+      "style/values/specified/counters.rs",
+      "style/values/specified/easing.rs",
+      "style/values/specified/effects.rs",
+      "style/values/specified/flex.rs",
+      "style/values/specified/font.rs",
+      "style/values/specified/grid.rs",
+      "style/values/specified/image.rs",
+      "style/values/specified/intersection_observer.rs",
+      "style/values/specified/length.rs",
+      "style/values/specified/list.rs",
+      "style/values/specified/motion.rs",
+      "style/values/specified/number.rs",
+      "style/values/specified/outline.rs",
+      "style/values/specified/page.rs",
+      "style/values/specified/percentage.rs",
+      "style/values/specified/position.rs",
+      "style/values/specified/ratio.rs",
+      "style/values/specified/rect.rs",
+      "style/values/specified/resolution.rs",
+      "style/values/specified/source_size_list.rs",
+      "style/values/specified/svg_path.rs",
+      "style/values/specified/svg.rs",
+      "style/values/specified/table.rs",
+      "style/values/specified/text.rs",
+      "style/values/specified/time.rs",
+      "style/values/specified/transform.rs",
+      "style/values/specified/ui.rs",
+      "style/values/specified/url.rs"
+    ],
+    "style/values/specified/motion.rs": [],
+    "style/values/specified/number.rs": [],
+    "style/values/specified/outline.rs": [],
+    "style/values/specified/page.rs": [],
+    "style/values/specified/percentage.rs": [],
+    "style/values/specified/position.rs": [],
+    "style/values/specified/ratio.rs": [],
+    "style/values/specified/rect.rs": [],
+    "style/values/specified/resolution.rs": [],
+    "style/values/specified/source_size_list.rs": [],
+    "style/values/specified/svg_path.rs": [],
+    "style/values/specified/svg.rs": [],
+    "style/values/specified/table.rs": [],
+    "style/values/specified/text.rs": [],
+    "style/values/specified/time.rs": [],
+    "style/values/specified/transform.rs": [],
+    "style/values/specified/ui.rs": [],
+    "style/values/specified/url.rs": [],
+    "style/values/tagged_numeric.rs": [],
+    "stylo_atoms/build.rs": [],
+    "stylo_atoms/Cargo.toml": [],
+    "stylo_atoms/lib.rs": [],
+    "stylo_atoms/predefined_counter_styles.rs": [],
+    "stylo_atoms/static_atoms.txt": [],
+    "stylo_dom/Cargo.toml": [],
+    "stylo_dom/lib.rs": [],
+    "stylo_static_prefs/build.rs": [],
+    "stylo_static_prefs/Cargo.toml": [],
+    "stylo_static_prefs/preferences.toml": [],
+    "stylo_static_prefs/src/lib.rs": [],
+    "sync.sh": [],
+    "SYNCING.md": [],
+    "to_shmem_derive/Cargo.toml": [],
+    "to_shmem_derive/lib.rs": [
+      "to_shmem_derive/to_shmem.rs",
+      "to_shmem_derive/util.rs"
+    ],
+    "to_shmem_derive/to_shmem.rs": [],
+    "to_shmem_derive/util.rs": [],
+    "to_shmem/Cargo.toml": [],
+    "to_shmem/lib.rs": []
+  }
+}

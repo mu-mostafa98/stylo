@@ -1,0 +1,1089 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/color/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/color/mod.rs",
+      "summary": "Module root for CSS color support, defining core types (ColorComponents, ColorSpace, AbsoluteColor, ColorFlags) and the to_color_space conversion dispatch.",
+      "tags": ["color", "module-root", "core-types", "color-space"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/color/parsing.rs",
+      "type": "file",
+      "name": "parsing.rs",
+      "filePath": "style/color/parsing.rs",
+      "summary": "CSS color parsing logic for all color functions (rgb, hsl, hwb, lab, lch, oklab, oklch, color), including legacy syntax, modern syntax, and relative color syntax.",
+      "tags": ["color", "parsing", "css-parser", "color-function"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/specified/color.rs",
+      "type": "file",
+      "name": "color.rs",
+      "filePath": "style/values/specified/color.rs",
+      "summary": "Specified color value type encompassing all CSS color representations: absolute colors, color functions, system colors, color-mix, light-dark, and contrast-color.",
+      "tags": ["color", "specified-value", "css-property", "parsing"],
+      "complexity": "complex",
+      "languageNotes": "Contains two feature-gated SystemColor enums for Gecko (desktop Firefox) and Servo (research engine) with separate compute methods."
+    },
+    {
+      "id": "class:style/color/mod.rs:ColorComponents",
+      "type": "class",
+      "name": "ColorComponents",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [33, 33],
+      "summary": "A 3-component tuple struct (f32, f32, f32) representing the non-alpha components of a color, with arithmetic operator overloads.",
+      "tags": ["color", "core-type", "tuple-struct"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/mod.rs:ColorSpace",
+      "type": "class",
+      "name": "ColorSpace",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [100, 157],
+      "summary": "Enum of all supported CSS color spaces including Srgb, Hsl, Hwb, Lab, Lch, Oklab, Oklch, SrgbLinear, DisplayP3, A98Rgb, ProphotoRgb, Rec2020, XyzD50, and XyzD65.",
+      "tags": ["color", "color-space", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/mod.rs:ColorFlags",
+      "type": "class",
+      "name": "ColorFlags",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [227, 227],
+      "summary": "Bitflags tracking 'none' per component (C0, C1, C2, Alpha) and the IS_LEGACY_SRGB flag for legacy color syntax.",
+      "tags": ["color", "bitflags", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/mod.rs:AbsoluteColor",
+      "type": "class",
+      "name": "AbsoluteColor",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [250, 259],
+      "summary": "An absolutely specified CSS color with three components, alpha, color space, and flags, supporting equality comparison across color spaces via Oklab conversion.",
+      "tags": ["color", "core-type", "absolute-color"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/color/mod.rs:ComponentDetails",
+      "type": "class",
+      "name": "ComponentDetails",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [317, 320],
+      "summary": "Helper struct for constructing AbsoluteColor components with 'none' tracking, with From impls for f32, u8, Option<f32>, and ColorComponent<f32>.",
+      "tags": ["color", "helper", "construction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/mod.rs:is_rgb_or_xyz_like",
+      "type": "function",
+      "name": "is_rgb_or_xyz_like",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [174, 187],
+      "summary": "Returns true if the color space has RGB or XYZ components (sRGB, Display P3, A98, ProPhoto, Rec2020, XYZ variants).",
+      "tags": ["color", "color-space", "query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/mod.rs:hue_index",
+      "type": "function",
+      "name": "hue_index",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [192, 202],
+      "summary": "Returns the component index (0 or 2) where the hue is stored in polar color spaces, or None for non-polar spaces.",
+      "tags": ["color", "color-space", "hue"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/mod.rs:get_linear_color_space",
+      "type": "function",
+      "name": "get_linear_color_space",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [209, 220],
+      "summary": "Returns the linear-light equivalent of a color space, or None if no linear variant exists.",
+      "tags": ["color", "color-space", "linear"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/mod.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [399, 450],
+      "summary": "Constructs an AbsoluteColor from color space and components, applying range clamping for Lab/Lch/Oklab/Oklch lightness and chroma.",
+      "tags": ["color", "constructor", "validation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/mod.rs:into_srgb_legacy",
+      "type": "function",
+      "name": "into_srgb_legacy",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [456, 468],
+      "summary": "Converts an AbsoluteColor to sRGB legacy syntax, clearing any 'none' flags and setting IS_LEGACY_SRGB.",
+      "tags": ["color", "conversion", "legacy-syntax"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/mod.rs:get_component_by_channel_keyword",
+      "type": "function",
+      "name": "get_component_by_channel_keyword",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [541, 609],
+      "summary": "Maps a channel keyword (r, g, b, h, s, l, etc.) to the corresponding component value based on the color space, handling legacy vs modern sRGB scaling.",
+      "tags": ["color", "channel-keyword", "resolution"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/mod.rs:to_color_space",
+      "type": "function",
+      "name": "to_color_space",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [612, 713],
+      "summary": "Converts AbsoluteColor to a target color space, using direct conversions (HSL/RGB, Lab/Lch) or the generic XYZ pipeline via ColorSpaceConversion trait.",
+      "tags": ["color", "conversion", "color-space", "core-logic"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/color/mod.rs:eq",
+      "type": "function",
+      "name": "eq",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [263, 289],
+      "summary": "PartialEq implementation for AbsoluteColor comparing components directly in the same color space, or converting to Oklab with epsilon tolerance for cross-space comparison.",
+      "tags": ["color", "equality", "comparison"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/mod.rs:to_nscolor",
+      "type": "function",
+      "name": "to_nscolor",
+      "filePath": "style/color/mod.rs",
+      "lineRange": [716, 724],
+      "summary": "Converts an AbsoluteColor to an nscolor u32 by converting to sRGB and rounding each 8-bit channel.",
+      "tags": ["color", "conversion", "gecko-integration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/parsing.rs:ChannelKeyword",
+      "type": "class",
+      "name": "ChannelKeyword",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [37, 64],
+      "summary": "Enum of channel keywords (Alpha, A, B, C, G, H, L, R, S, W, X, Y, Z) used for relative color syntax channel references.",
+      "tags": ["color", "relative-color", "channel-keyword"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/parsing.rs:NumberOrPercentageComponent",
+      "type": "class",
+      "name": "NumberOrPercentageComponent",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [374, 380],
+      "summary": "A color component value that can be either a number or a percentage, with to_number conversion and ColorComponentType trait implementation.",
+      "tags": ["color", "component-type", "number-percentage"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/parsing.rs:NumberOrAngleComponent",
+      "type": "class",
+      "name": "NumberOrAngleComponent",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [424, 430],
+      "summary": "A color component value that can be either a number or an angle (for hue), with degrees() conversion and ColorComponentType trait implementation.",
+      "tags": ["color", "component-type", "number-angle"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_color_keyword",
+      "type": "function",
+      "name": "parse_color_keyword",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [72, 83],
+      "summary": "Parses a named CSS color keyword (transparent, currentcolor, or any named color) into a SpecifiedColor.",
+      "tags": ["color", "parsing", "keyword"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_color_with",
+      "type": "function",
+      "name": "parse_color_with",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [87, 118],
+      "summary": "Parses any CSS color value from a token: hex colors, named colors, or color functions via dispatch to parse_color_function.",
+      "tags": ["color", "parsing", "css-parser", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_color_function",
+      "type": "function",
+      "name": "parse_color_function",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [122, 157],
+      "summary": "Routes parsing of color functions by name to the appropriate parser (rgb, hsl, hwb, lab, lch, oklab, oklch, color), validating relative color syntax.",
+      "tags": ["color", "parsing", "color-function", "dispatch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_origin_color",
+      "type": "function",
+      "name": "parse_origin_color",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [160, 178],
+      "summary": "Parses the optional 'from <color>' origin color clause in relative color syntax.",
+      "tags": ["color", "relative-color", "parsing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_rgb",
+      "type": "function",
+      "name": "parse_rgb",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [181, 220],
+      "summary": "Parses rgb() / rgba() syntax, detecting legacy (comma-separated) vs modern (space-separated) format and dispatching to appropriate alpha parsing.",
+      "tags": ["color", "parsing", "rgb"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_hsl",
+      "type": "function",
+      "name": "parse_hsl",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [226, 262],
+      "summary": "Parses hsl() / hsla() syntax with legacy comma-separated and modern space-separated formats, including relative color support.",
+      "tags": ["color", "parsing", "hsl"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_hwb",
+      "type": "function",
+      "name": "parse_hwb",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [268, 287],
+      "summary": "Parses hwb() syntax with modern space-separated format and relative color support.",
+      "tags": ["color", "parsing", "hwb"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_lab_like",
+      "type": "function",
+      "name": "parse_lab_like",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [298, 312],
+      "summary": "Parses lab() or oklab() syntax using a generic constructor function, handling lightness, a, b components, and alpha.",
+      "tags": ["color", "parsing", "lab", "oklab"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_lch_like",
+      "type": "function",
+      "name": "parse_lch_like",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [323, 343],
+      "summary": "Parses lch() or oklch() syntax using a generic constructor function, handling lightness, chroma, hue, and alpha.",
+      "tags": ["color", "parsing", "lch", "oklch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:parse_color_with_color_space",
+      "type": "function",
+      "name": "parse_color_with_color_space",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [347, 369],
+      "summary": "Parses the color() function with a predefined color space identifier and three components.",
+      "tags": ["color", "parsing", "color-function"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:could_be_number",
+      "type": "function",
+      "name": "could_be_number",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [596, 612],
+      "summary": "Checks whether a NumberOrPercentageComponent can resolve to a number, used to validate legacy vs modern syntax parsing.",
+      "tags": ["color", "validation", "number-check"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/parsing.rs:could_be_percentage",
+      "type": "function",
+      "name": "could_be_percentage",
+      "filePath": "style/color/parsing.rs",
+      "lineRange": [616, 632],
+      "summary": "Checks whether a NumberOrPercentageComponent can resolve to a percentage, used to validate legacy vs modern syntax parsing.",
+      "tags": ["color", "validation", "percentage-check"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:Color",
+      "type": "class",
+      "name": "Color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [176, 194],
+      "summary": "The specified color value type with variants for CurrentColor, Absolute, ColorFunction, System, ColorMix, LightDark, ContrastColor, and quirks mode inheritance.",
+      "tags": ["color", "specified-value", "enum", "core-type"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:Absolute",
+      "type": "class",
+      "name": "Absolute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [153, 158],
+      "summary": "Container for an AbsoluteColor with optional authored text for round-tripping CSS serialization.",
+      "tags": ["color", "absolute-color", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:SystemColor.gecko",
+      "type": "class",
+      "name": "SystemColor",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [215, 433],
+      "summary": "All CSS and Mozilla-specific system color keywords for Gecko (desktop Firefox), including accent, tooltip, selection, and scrollbar colors.",
+      "tags": ["color", "system-color", "gecko", "enum"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:SystemColor.servo",
+      "type": "class",
+      "name": "SystemColor",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [466, 511],
+      "summary": "CSS system color keywords for Servo, with a subset of the Gecko system colors sufficient for web platform testing.",
+      "tags": ["color", "system-color", "servo", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "class",
+      "name": "ColorPropertyValue",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1009, 1009],
+      "summary": "Specified value type for the 'color' CSS property that resolves currentcolor to the parent color instead of self.",
+      "tags": ["color", "property-value", "css-property"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "class",
+      "name": "ColorScheme",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1097, 1102],
+      "summary": "Specified value for the color-scheme CSS property, holding a list of scheme idents (light, dark) and optional 'only' flag.",
+      "tags": ["color", "color-scheme", "css-property"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "class",
+      "name": "ColorSchemeFlags",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1069, 1069],
+      "summary": "Bitflags for color-scheme values: LIGHT, DARK, and ONLY.",
+      "tags": ["color", "color-scheme", "bitflags"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "class",
+      "name": "PrintColorAdjust",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1212, 1217],
+      "summary": "Enum for the print-color-adjust CSS property with Economy (allow adjustment) and Exact (preserve colors) variants.",
+      "tags": ["color", "print", "css-property"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "class",
+      "name": "ForcedColorAdjust",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1235, 1240],
+      "summary": "Enum for the forced-color-adjust CSS property with Auto and None variants.",
+      "tags": ["color", "forced-colors", "accessibility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "class",
+      "name": "ForcedColors",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [1246, 1254],
+      "summary": "Enum for the forced-colors media query feature values: None, Requested, and Active.",
+      "tags": ["color", "forced-colors", "media-query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_internal",
+      "type": "function",
+      "name": "parse_internal",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [545, 617],
+      "summary": "Main internal color parsing entry point, dispatching to color function parsing, system colors, color-mix, light-dark, and contrast-color.",
+      "tags": ["color", "parsing", "entry-point", "dispatch"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "function",
+      "name": "parse_and_compute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [627, 667],
+      "summary": "Parses a color and computes it with a given Device, logging CSS parse errors for canvas and offscreen-canvas contexts.",
+      "tags": ["color", "parsing", "computation", "error-reporting"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "function",
+      "name": "honored_in_forced_colors_mode",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [694, 727],
+      "summary": "Determines whether a specified color should be honored in forced-colors mode, recursively checking all color variants.",
+      "tags": ["color", "forced-colors", "accessibility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [754, 775],
+      "summary": "Resolves any specified color to an AbsoluteColor if it does not use non-absolute forms like currentColor or system colors.",
+      "tags": ["color", "resolution", "absolute"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "function",
+      "name": "parse_quirky",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [780, 791],
+      "summary": "Parses a CSS color with quirks mode support for hashless hex colors per the Quirks Mode specification.",
+      "tags": ["color", "parsing", "quirks-mode"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "function",
+      "name": "to_computed_color",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [876, 940],
+      "summary": "Converts a specified Color to a ComputedColor, handling all variants including eager resolution of color functions and color-mix interpolation.",
+      "tags": ["color", "computation", "specified-to-computed"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/color.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/specified/color.rs",
+      "lineRange": [956, 973],
+      "summary": "Converts a ComputedColor back to a specified Color, preserving structure for color functions, color-mix, and contrast-color.",
+      "tags": ["color", "computation", "computed-to-specified"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorSpace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:AbsoluteColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ComponentDetails",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:is_rgb_or_xyz_like",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:hue_index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:get_linear_color_space",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:into_srgb_legacy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:get_component_by_channel_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:to_color_space",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:eq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:to_nscolor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorComponents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorSpace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ColorFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:AbsoluteColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "class:style/color/mod.rs:ComponentDetails",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:is_rgb_or_xyz_like",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:hue_index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:get_linear_color_space",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:into_srgb_legacy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:get_component_by_channel_keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:to_color_space",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "function:style/color/mod.rs:to_nscolor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:ChannelKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:NumberOrPercentageComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:NumberOrAngleComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_with",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_origin_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_rgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_hsl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_hwb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_lab_like",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_lch_like",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_with_color_space",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:could_be_number",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:could_be_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:ChannelKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:NumberOrPercentageComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "class:style/color/parsing.rs:NumberOrAngleComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/parsing.rs",
+      "target": "function:style/color/parsing.rs:parse_color_with",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor.gecko",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:SystemColor.servo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:Absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorPropertyValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorScheme",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ColorSchemeFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:PrintColorAdjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColorAdjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "class:style/values/specified/color.rs:ForcedColors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_internal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_and_compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:honored_in_forced_colors_mode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:resolve_to_absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/color.rs",
+      "target": "function:style/values/specified/color.rs:to_computed_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/color_function.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/component.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/convert.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/parsing.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/gamut.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/mix.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/color/mod.rs",
+      "target": "file:style/color/to_css.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,705 @@
+{
+  "nodes": [
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Configuration file defining file and directory exclusion patterns for the Understand Anything scanner, using .gitignore-style glob syntax.",
+      "tags": ["configuration", "ignore-patterns", "scanner-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:malloc_size_of/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "malloc_size_of/Cargo.toml",
+      "summary": "Cargo manifest for the malloc_size_of crate, declaring dependencies on app_units, cssparser, selectors, servo_arc, smallbitvec, euclid, and others for measuring heap usage of data structures.",
+      "tags": ["configuration", "cargo", "dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:malloc_size_of/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "malloc_size_of/lib.rs",
+      "summary": "Core crate for measuring heap memory usage of Rust data structures in a way that integrates with Firefox's memory reporting infrastructure. Provides shallow and deep measurement traits, support for interior pointers, and special handling for Arc and Rc types.",
+      "tags": ["memory-measurement", "heap-profiling", "trait-definitions", "utility"],
+      "complexity": "complex",
+      "languageNotes": "Uses macros extensively to generate trait implementations for standard library and third-party types, following a pattern common in Firefox's Rust codebase."
+    },
+    {
+      "id": "document:malloc_size_of/LICENSE-APACHE",
+      "type": "document",
+      "name": "LICENSE-APACHE",
+      "filePath": "malloc_size_of/LICENSE-APACHE",
+      "summary": "Apache License 2.0 governing the use, reproduction, and distribution of the malloc_size_of crate.",
+      "tags": ["license", "legal", "apache"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:malloc_size_of/LICENSE-MIT",
+      "type": "document",
+      "name": "LICENSE-MIT",
+      "filePath": "malloc_size_of/LICENSE-MIT",
+      "summary": "MIT license for the malloc_size_of crate, providing permissive open-source licensing terms.",
+      "tags": ["license", "legal", "mit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:servo_arc/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "servo_arc/Cargo.toml",
+      "summary": "Cargo manifest for the servo_arc crate, a custom Arc implementation for Servo with optional serde, servo, and refcount logging features.",
+      "tags": ["configuration", "cargo", "dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:servo_arc/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "servo_arc/lib.rs",
+      "summary": "Custom fork of Arc for Servo without weak reference counting, supporting dynamically-sized types via HeaderSlice, thin arcs, static data references, and ArcUnion for type-erased discriminated unions.",
+      "tags": ["reference-counting", "memory-management", "smart-pointer", "utility"],
+      "complexity": "complex",
+      "languageNotes": "Extensively uses unsafe Rust for manual memory management, custom allocator integration, and FFI for Gecko refcount logging."
+    },
+    {
+      "id": "document:servo_arc/LICENSE-APACHE",
+      "type": "document",
+      "name": "LICENSE-APACHE",
+      "filePath": "servo_arc/LICENSE-APACHE",
+      "summary": "Apache License 2.0 for the servo_arc crate.",
+      "tags": ["license", "legal", "apache"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:servo_arc/LICENSE-MIT",
+      "type": "document",
+      "name": "LICENSE-MIT",
+      "filePath": "servo_arc/LICENSE-MIT",
+      "summary": "MIT license for the servo_arc crate.",
+      "tags": ["license", "legal", "mit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:stylo_atoms/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_atoms/Cargo.toml",
+      "summary": "Cargo manifest for the stylo_atoms crate, which generates atom types from a static_atoms.txt file using string_cache_codegen.",
+      "tags": ["configuration", "cargo", "build-dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_atoms/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_atoms/lib.rs",
+      "summary": "Crate root that includes the generated atom.rs file from the build script, providing the Atom type for Servo's CSS style system.",
+      "tags": ["entry-point", "code-generation", "atom"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_atoms/build.rs",
+      "type": "file",
+      "name": "build.rs",
+      "filePath": "stylo_atoms/build.rs",
+      "summary": "Build script that reads static_atoms.txt and predefined counter style names to generate the Atom type using string_cache_codegen.",
+      "tags": ["build-script", "code-generation", "atom"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:stylo_atoms/predefined_counter_styles.rs",
+      "type": "file",
+      "name": "predefined_counter_styles.rs",
+      "filePath": "stylo_atoms/predefined_counter_styles.rs",
+      "summary": "Data file containing predefined CSS counter style names used by stylo_atoms build script, duplicated from style/counter_style/predefined.rs.",
+      "tags": ["data", "counter-styles", "css"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:stylo_dom/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_dom/Cargo.toml",
+      "summary": "Cargo manifest for the stylo_dom crate, providing DOM types shared between Rust and C++, with dependencies on bitflags and malloc_size_of.",
+      "tags": ["configuration", "cargo", "dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_dom/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_dom/lib.rs",
+      "summary": "Defines DOM element and document state bitflags (ElementState and DocumentState) used for CSS selector matching, shared between Rust and C++ via FFI.",
+      "tags": ["dom", "state-masks", "bitflags", "css-selectors"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:stylo_static_prefs/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_static_prefs/Cargo.toml",
+      "summary": "Cargo manifest for the stylo_static_prefs crate, which generates compile-time boolean and integer preferences.",
+      "tags": ["configuration", "cargo", "build-dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_static_prefs/src/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_static_prefs/src/lib.rs",
+      "summary": "Generated preferences library that includes compiled static preference accessors and provides a basic test for preference get/set operations.",
+      "tags": ["preferences", "configuration", "generated-code"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:style_traits/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "style_traits/Cargo.toml",
+      "summary": "Cargo manifest for the style_traits crate, providing shared type traits and utilities across the Servo style system.",
+      "tags": ["configuration", "cargo", "dependencies"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:to_shmem/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "to_shmem/Cargo.toml",
+      "summary": "Cargo manifest for the to_shmem crate, enabling serialization of data into shared memory buffers for cross-process stylesheet sharing.",
+      "tags": ["configuration", "cargo", "shared-memory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:to_shmem/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "to_shmem/lib.rs",
+      "summary": "Provides the SharedMemoryBuilder and ToShmem trait for cloning Rust data structures into fixed-size shared memory buffers, enabling cross-process sharing of CSS stylesheet data.",
+      "tags": ["shared-memory", "serialization", "trait-definition", "inter-process"],
+      "complexity": "complex",
+      "languageNotes": "Uses unsafe pointer manipulation extensively to copy values into pre-allocated shared memory regions with manual alignment and padding handling."
+    },
+    {
+      "id": "config:to_shmem_derive/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "to_shmem_derive/Cargo.toml",
+      "summary": "Cargo manifest for the to_shmem_derive proc-macro crate, which provides a derive macro for the ToShmem trait.",
+      "tags": ["configuration", "cargo", "proc-macro"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:style/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "style/Cargo.toml",
+      "summary": "Cargo manifest for the main style crate of Servo, declaring extensive dependencies across the Servo ecosystem for CSS property computation and styling.",
+      "tags": ["configuration", "cargo", "dependencies", "styling"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:selectors/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "selectors/Cargo.toml",
+      "summary": "Cargo manifest for the selectors crate, providing CSS selector parsing, matching, and serialization with optional servo and gecko feature support.",
+      "tags": ["configuration", "cargo", "css-selectors"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:selectors/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "selectors/README.md",
+      "summary": "Project README for the rust-selectors crate, describing it as a CSS Selectors library for Rust with parsing, serialization, and tree matching capabilities.",
+      "tags": ["documentation", "readme", "css-selectors"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:selectors/CHANGES.md",
+      "type": "document",
+      "name": "CHANGES.md",
+      "filePath": "selectors/CHANGES.md",
+      "summary": "Changelog entry noting that parser.rs no longer wraps values in quotes but expects to_css implementations to handle quoting.",
+      "tags": ["documentation", "changelog", "css-selectors"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocSizeOfOps",
+      "type": "class",
+      "name": "MallocSizeOfOps",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [63, 77],
+      "summary": "Core struct holding function pointers for heap size measurement operations, including size_of_op, enclosing_size_of_op, and have_seen_ptr_op for interior pointer support and cycle detection.",
+      "tags": ["memory-measurement", "heap-profiling", "struct"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocSizeOf",
+      "type": "class",
+      "name": "MallocSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [139, 143],
+      "summary": "Primary trait for deep heap usage measurement of data structures, measuring all descendant heap-allocated values.",
+      "tags": ["memory-measurement", "trait", "heap-profiling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocShallowSizeOf",
+      "type": "class",
+      "name": "MallocShallowSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [146, 152],
+      "summary": "Trait for shallow heap measurement of immediate heap-allocated descendants, useful when deep measurement is not possible and iteration is needed.",
+      "tags": ["memory-measurement", "trait", "heap-profiling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocUnconditionalSizeOf",
+      "type": "class",
+      "name": "MallocUnconditionalSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [157, 161],
+      "summary": "Trait like MallocSizeOf for measuring types such as Arc and Rc that are known to be primary references and should always be measured.",
+      "tags": ["memory-measurement", "trait", "arc"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocUnconditionalShallowSizeOf",
+      "type": "class",
+      "name": "MallocUnconditionalShallowSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [164, 167],
+      "summary": "Combined trait for unconditional shallow size measurement of types like Arc that are primary references.",
+      "tags": ["memory-measurement", "trait", "arc"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocConditionalSizeOf",
+      "type": "class",
+      "name": "MallocConditionalSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [172, 177],
+      "summary": "Trait for measuring types like Arc only when they have not been previously measured, to avoid double-counting shared references.",
+      "tags": ["memory-measurement", "trait", "arc"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:malloc_size_of/lib.rs:MallocConditionalShallowSizeOf",
+      "type": "class",
+      "name": "MallocConditionalShallowSizeOf",
+      "filePath": "malloc_size_of/lib.rs",
+      "lineRange": [180, 183],
+      "summary": "Combined trait for conditional shallow measurement of types like Arc, measuring only if not previously seen.",
+      "tags": ["memory-measurement", "trait", "arc"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:Arc",
+      "type": "class",
+      "name": "Arc",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [69, 72],
+      "summary": "Custom atomically reference-counted smart pointer that does not support weak references, reducing storage overhead and atomic operations compared to std::sync::Arc.",
+      "tags": ["smart-pointer", "reference-counting", "memory-management"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:UniqueArc",
+      "type": "class",
+      "name": "UniqueArc",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [100, 100],
+      "summary": "Wrapper around Arc that guarantees unique ownership during construction, enabling safe mutable access before converting to a shared Arc.",
+      "tags": ["smart-pointer", "mutable-access", "construction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:HeaderSlice",
+      "type": "class",
+      "name": "HeaderSlice",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [686, 695],
+      "summary": "Dynamically-sized type combining a typed header with a variable-length slice of data, allocated as a single contiguous block within an Arc.",
+      "tags": ["dynamically-sized", "memory-layout", "ffi"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:ArcBorrow",
+      "type": "class",
+      "name": "ArcBorrow",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [939, 939],
+      "summary": "Borrowed reference to an Arc that avoids incrementing the reference count, used for zero-overhead temporary access.",
+      "tags": ["smart-pointer", "borrow", "zero-overhead"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:ArcUnion",
+      "type": "class",
+      "name": "ArcUnion",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [1016, 1020],
+      "summary": "Type-erased discriminated union of two Arc types, storing either an Arc<A> or Arc<B> with a discriminator bit in the pointer alignment area.",
+      "tags": ["smart-pointer", "discriminated-union", "type-erasure"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:servo_arc/lib.rs:ArcUnionBorrow",
+      "type": "class",
+      "name": "ArcUnionBorrow",
+      "filePath": "servo_arc/lib.rs",
+      "lineRange": [1040, 1043],
+      "summary": "Borrowed view into an ArcUnion, providing typed access to either variant without refcounting.",
+      "tags": ["smart-pointer", "borrow", "discriminated-union"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "class",
+      "name": "SharedMemoryBuilder",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [39, 53],
+      "summary": "Builder that manages writing values into a pre-allocated fixed-size shared memory buffer, handling alignment, padding, and duplicate tracking in debug builds.",
+      "tags": ["shared-memory", "memory-management", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:to_shmem/lib.rs:ToShmem",
+      "type": "class",
+      "name": "ToShmem",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [157, 171],
+      "summary": "Trait for cloning a value into a form suitable for shared memory by redirecting heap allocations into a SharedMemoryBuilder buffer.",
+      "tags": ["shared-memory", "trait", "serialization", "inter-process"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "function",
+      "name": "to_shmem_slice",
+      "filePath": "to_shmem/lib.rs",
+      "lineRange": [281, 291],
+      "summary": "Writes all items from an iterator into a contiguous slice in the shared memory buffer and returns a pointer to the slice.",
+      "tags": ["shared-memory", "utility", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:stylo_atoms/build.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "stylo_atoms/build.rs",
+      "lineRange": [10, 31],
+      "summary": "Build script entry point that reads static_atoms.txt and predefined counter style names, generates the Atom type via string_cache_codegen, and writes it to atom.rs in the output directory.",
+      "tags": ["build-script", "code-generation", "atom"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocSizeOfOps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocShallowSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocUnconditionalSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocUnconditionalShallowSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocConditionalSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocConditionalShallowSizeOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:Arc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:UniqueArc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:HeaderSlice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcBorrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcUnion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcUnionBorrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:ToShmem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:stylo_atoms/build.rs",
+      "target": "function:stylo_atoms/build.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocSizeOfOps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocShallowSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocUnconditionalSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocUnconditionalShallowSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocConditionalSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:malloc_size_of/lib.rs",
+      "target": "class:malloc_size_of/lib.rs:MallocConditionalShallowSizeOf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:Arc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:UniqueArc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:HeaderSlice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcBorrow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcUnion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:servo_arc/lib.rs",
+      "target": "class:servo_arc/lib.rs:ArcUnionBorrow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:SharedMemoryBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "class:to_shmem/lib.rs:ToShmem",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:to_shmem/lib.rs",
+      "target": "function:to_shmem/lib.rs:to_shmem_slice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:malloc_size_of/Cargo.toml",
+      "target": "file:malloc_size_of/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:servo_arc/Cargo.toml",
+      "target": "file:servo_arc/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_atoms/Cargo.toml",
+      "target": "file:stylo_atoms/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_dom/Cargo.toml",
+      "target": "file:stylo_dom/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_static_prefs/Cargo.toml",
+      "target": "file:stylo_static_prefs/src/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:to_shmem/Cargo.toml",
+      "target": "file:to_shmem/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:malloc_size_of/LICENSE-APACHE",
+      "target": "file:malloc_size_of/lib.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:malloc_size_of/LICENSE-MIT",
+      "target": "file:malloc_size_of/lib.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:servo_arc/LICENSE-APACHE",
+      "target": "file:servo_arc/lib.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:servo_arc/LICENSE-MIT",
+      "target": "file:servo_arc/lib.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

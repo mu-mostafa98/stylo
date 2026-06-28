@@ -1,0 +1,28 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style_traits/arc_slice.rs", "language": "rust", "sizeLines": 164, "fileCategory": "code"},
+    {"path": "style_traits/dom.rs", "language": "rust", "sizeLines": 26, "fileCategory": "code"},
+    {"path": "style_traits/lib.rs", "language": "rust", "sizeLines": 294, "fileCategory": "code"},
+    {"path": "style_traits/owned_slice.rs", "language": "rust", "sizeLines": 208, "fileCategory": "code"},
+    {"path": "style_traits/owned_str.rs", "language": "rust", "sizeLines": 81, "fileCategory": "code"},
+    {"path": "style_traits/specified_value_info.rs", "language": "rust", "sizeLines": 142, "fileCategory": "code"},
+    {"path": "style_traits/values.rs", "language": "rust", "sizeLines": 598, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style_traits/arc_slice.rs": [],
+    "style_traits/dom.rs": [],
+    "style_traits/lib.rs": [
+      "style_traits/arc_slice.rs",
+      "style_traits/dom.rs",
+      "style_traits/owned_slice.rs",
+      "style_traits/owned_str.rs",
+      "style_traits/specified_value_info.rs",
+      "style_traits/values.rs"
+    ],
+    "style_traits/owned_slice.rs": [],
+    "style_traits/owned_str.rs": [],
+    "style_traits/specified_value_info.rs": [],
+    "style_traits/values.rs": []
+  }
+}

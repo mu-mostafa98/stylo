@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/main.yml",
+      "type": "pipeline",
+      "name": "main.yml",
+      "filePath": ".github/workflows/main.yml",
+      "summary": "CI pipeline that builds and tests the Stylo project on Linux, macOS, and Windows using the `servo` feature, with an aggregated build-result job that reports success only when all platform builds pass.",
+      "tags": ["ci-cd", "build-system", "testing", "cross-platform", "rust"],
+      "complexity": "moderate",
+      "languageNotes": "GitHub Actions workflow with 5 jobs including a status-aggregation result job using `needs.*.result` expressions."
+    },
+    {
+      "id": "pipeline:.github/workflows/mirror-to-release-branch.yml",
+      "type": "pipeline",
+      "name": "mirror-to-release-branch.yml",
+      "filePath": ".github/workflows/mirror-to-release-branch.yml",
+      "summary": "Automatically mirrors the main branch to a date-based release branch on every push, using the first Servo downstream commit hash to derive the branch name.",
+      "tags": ["ci-cd", "mirroring", "release-branch", "automation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "pipeline:.github/workflows/sync-upstream.yml",
+      "type": "pipeline",
+      "name": "sync-upstream.yml",
+      "filePath": ".github/workflows/sync-upstream.yml",
+      "summary": "Scheduled daily workflow that synchronizes the repository with mozilla-central upstream by running the sync.sh script and pushing changes to an upstream tracking branch.",
+      "tags": ["ci-cd", "synchronization", "upstream", "mozilla-central", "scheduled"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

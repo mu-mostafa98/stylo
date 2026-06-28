@@ -1,0 +1,1945 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "files": [
+    {
+      "path": ".github/workflows/main.yml",
+      "language": "yaml",
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/mirror-to-release-branch.yml",
+      "language": "yaml",
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/sync-upstream.yml",
+      "language": "yaml",
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-input.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-output.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-scan-files.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "commit-from-merge.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "commit-from-squashed.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "malloc_size_of/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "malloc_size_of/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "malloc_size_of/LICENSE-APACHE",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "malloc_size_of/LICENSE-MIT",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "rustfmt.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "selectors/attr.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/bloom.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/build.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/builder.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "selectors/CHANGES.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "selectors/context.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/kleene_value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/matching.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/nth_index_cache.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "selectors/relative_selector/cache.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/relative_selector/filter.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/relative_selector/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/sink.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/tree.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "selectors/visitor.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "servo_arc/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/LICENSE-APACHE",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "servo_arc/LICENSE-MIT",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "shell.nix",
+      "language": "nix",
+      "fileCategory": "code"
+    },
+    {
+      "path": "start-rebase.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "style_derive/animate.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style_derive/cg.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/compute_squared_distance.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/parse.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/specified_value_info.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_animated_value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_animated_zero.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_computed_value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_css.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_resolved_value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_derive/to_typed.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/arc_slice.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style_traits/dom.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/owned_slice.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/owned_str.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/specified_value_info.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style_traits/values.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style.paths",
+      "language": "paths",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/applicable_declarations.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/author_styles.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/bezier.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/bloom.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/build_gecko.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/build.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/color/color_function.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/component.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/convert.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/gamut.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/gamut/raytrace.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/mix.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/parsing.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/color/to_css.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/context.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/predefined.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/counter_style/update_predefined.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/custom_properties_map.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/custom_properties.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/data.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/gecko.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/device/servo.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/dom_apis.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/dom.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/driver.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/error_reporting.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/font_face.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/font_metrics.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_compatibility.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ns_style_auto_array.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/origin_flags.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/ownership.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_bindings/sugar/refptr.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_string_cache/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko_string_cache/namespace.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/anon_boxes.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/gecko/arc_types.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/conversions.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/data.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/media_features.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/non_ts_pseudo_class_list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_element_definition.mako.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_element.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_elements.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_elements.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/gecko/regen_atoms.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/restyle_damage.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/selector_parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot_helpers.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/traversal.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/wrapper.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/global_style_data.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/document_state.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/element_wrapper.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/invalidation_map.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/invalidator.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/relative_selector.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/restyle_hints.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/element/state_and_attributes.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/media_queries.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/stylesheets.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/invalidation/viewport_units.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/logical_geometry.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/macros.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/matching.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/media_list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/media_query.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/media_queries/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/parallel.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/piecewise_linear.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/registry.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/ascii.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/data_type.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/syntax/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties_and_values/value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/build.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/cascade.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/computed_value_flags.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/counted_unknown_properties.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/counter_style_descriptors.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/data.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/declaration_block.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/font_face_descriptors.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/gecko.mako.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers.mako.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/helpers/animated_properties.mako.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/longhands.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.html.mako",
+      "language": "mako",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/properties.mako.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/property_descriptors.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/shorthands.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/shorthands.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "language": "whl",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/vendored_python/markupsafe/LICENSE.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl",
+      "language": "whl",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/view_transition_descriptors.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "style/queries/condition.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/feature_expression.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/feature.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/queries/values.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "style/rule_cache.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_collector.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/core.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/level.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/map.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/source.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/rule_tree/unsafe_box.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/scoped_tls.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/selector_map.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/selector_parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/animation.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/attr.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/encoding_support.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/media_features.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/restyle_damage.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/selector_parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/servo/shadow_parts.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/shared_lock.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/sharing/checks.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/sharing/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/simple_buckets_map.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/str.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/style_adjuster.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/style_resolver.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheet_set.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/appearance_base_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/container_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/counter_style_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/document_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_face_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_feature_values_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/font_palette_values_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/import_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/keyframes_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/layer_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/loader.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/margin_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/media_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/namespace_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/nested_declarations_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/origin.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/page_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/position_try_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/property_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rule_list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rule_parser.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/rules_iterator.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/scope_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/starting_style_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/style_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/stylesheet.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/supports_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylesheets/view_transition_rule.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/stylist.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/thread_state.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/traversal_flags.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/traversal.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_declaration.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/numeric_values.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/typed_om/sum_value.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/gecko.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/url/servo.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/use_counters/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/color.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/effects.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/font.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/grid.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/lists.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/svg.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/animated/transform.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/align.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/angle.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/animation.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/background.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/basic_shape.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/border.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/box.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/calc.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/color.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/column.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/corner_shape.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/counters.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/easing.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/effects.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/flex.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/font.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/image.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/length_percentage.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/length.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/motion.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/outline.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/page.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/percentage.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/position.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ratio.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/rect.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/resolution.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/svg.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/table.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/text.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/time.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/transform.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/ui.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/computed/url.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/distance.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/animation.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/background.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/basic_shape.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/border.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/box.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/calc.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/color.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/column.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/counters.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/easing.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/effects.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/flex.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/font.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/grid.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/image.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/length.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/motion.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/page.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/position.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/ratio.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/rect.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/size.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/svg.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/text.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/transform.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/ui.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/url.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/animation.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/color.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/counters.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/resolved/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/align.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/angle.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/animation.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/background.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/basic_shape.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/border.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/box.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/calc.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/color.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/column.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/corner_shape.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/counters.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/easing.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/effects.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/flex.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/font.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/grid.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/image.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/intersection_observer.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/length.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/mod.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/motion.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/number.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/outline.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/page.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/percentage.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/position.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/ratio.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/rect.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/resolution.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/source_size_list.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/svg_path.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/svg.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/table.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/text.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/time.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/transform.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/ui.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/specified/url.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/tagged_numeric.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/build.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_atoms/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/predefined_counter_styles.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_atoms/static_atoms.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "stylo_dom/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_dom/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/build.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "stylo_static_prefs/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/preferences.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "stylo_static_prefs/src/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "sync.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "SYNCING.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "to_shmem_derive/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "to_shmem_derive/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem_derive/to_shmem.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem_derive/util.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    },
+    {
+      "path": "to_shmem/Cargo.toml",
+      "language": "toml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "to_shmem/lib.rs",
+      "language": "rust",
+      "fileCategory": "code"
+    }
+  ]
+}

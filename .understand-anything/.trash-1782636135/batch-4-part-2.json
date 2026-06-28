@@ -1,0 +1,2610 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/style_resolver.rs",
+      "type": "file",
+      "name": "style_resolver.rs",
+      "filePath": "style/style_resolver.rs",
+      "summary": "Style resolution for elements and pseudo-elements, handling matching, cascading, style sharing cache lookups, and starting-style/after-change-style resolution.",
+      "tags": [
+        "style-resolution",
+        "cascade",
+        "pseudo-elements",
+        "matching"
+      ],
+      "complexity": "complex",
+      "languageNotes": "StyleResolverForElement uses PhantomData for lifetime safety with conditional compilation for Gecko/Servo backends."
+    },
+    {
+      "id": "function:style/style_resolver.rs:style",
+      "type": "function",
+      "name": "style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        60,
+        62
+      ],
+      "summary": "Function style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_resolver.rs:primary_style",
+      "type": "function",
+      "name": "primary_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "Function primary_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_resolver.rs:primary_style_mut",
+      "type": "function",
+      "name": "primary_style_mut",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        89,
+        91
+      ],
+      "summary": "Function primary_style_mut in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_resolver.rs:style_L96",
+      "type": "function",
+      "name": "style_L96",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        96,
+        98
+      ],
+      "summary": "Function style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_resolver.rs:with_default_parent_styles",
+      "type": "function",
+      "name": "with_default_parent_styles",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        110,
+        132
+      ],
+      "summary": "Function with_default_parent_styles in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:layout_parent_style_for_pseudo",
+      "type": "function",
+      "name": "layout_parent_style_for_pseudo",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        134,
+        143
+      ],
+      "summary": "Function layout_parent_style_for_pseudo in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:eager_pseudo_is_definitely_not_generated",
+      "type": "function",
+      "name": "eager_pseudo_is_definitely_not_generated",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        145,
+        161
+      ],
+      "summary": "Function eager_pseudo_is_definitely_not_generated in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        170,
+        183
+      ],
+      "summary": "Function new in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:resolve_primary_style",
+      "type": "function",
+      "name": "resolve_primary_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        186,
+        215
+      ],
+      "summary": "Function resolve_primary_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:cascade_primary_style",
+      "type": "function",
+      "name": "cascade_primary_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        217,
+        255
+      ],
+      "summary": "Function cascade_primary_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:resolve_style",
+      "type": "function",
+      "name": "resolve_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        258,
+        296
+      ],
+      "summary": "Function resolve_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:resolve_style_with_default_parents",
+      "type": "function",
+      "name": "resolve_style_with_default_parents",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        300,
+        304
+      ],
+      "summary": "Function resolve_style_with_default_parents in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_resolver.rs:cascade_style_and_visited_with_default_parents",
+      "type": "function",
+      "name": "cascade_style_and_visited_with_default_parents",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        307,
+        319
+      ],
+      "summary": "Function cascade_style_and_visited_with_default_parents in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:cascade_style_and_visited_for_pseudo_with_default_parents",
+      "type": "function",
+      "name": "cascade_style_and_visited_for_pseudo_with_default_parents",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        322,
+        339
+      ],
+      "summary": "Function cascade_style_and_visited_for_pseudo_with_default_parents in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:cascade_style_and_visited",
+      "type": "function",
+      "name": "cascade_style_and_visited",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        341,
+        373
+      ],
+      "summary": "Function cascade_style_and_visited in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:cascade_styles_with_default_parents",
+      "type": "function",
+      "name": "cascade_styles_with_default_parents",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        376,
+        420
+      ],
+      "summary": "Function cascade_styles_with_default_parents in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:resolve_pseudo_style",
+      "type": "function",
+      "name": "resolve_pseudo_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        422,
+        462
+      ],
+      "summary": "Function resolve_pseudo_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:match_primary",
+      "type": "function",
+      "name": "match_primary",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        464,
+        514
+      ],
+      "summary": "Function match_primary in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/style_resolver.rs:match_pseudo",
+      "type": "function",
+      "name": "match_pseudo",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        516,
+        578
+      ],
+      "summary": "Function match_pseudo in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/style_resolver.rs:resolve_starting_style",
+      "type": "function",
+      "name": "resolve_starting_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        582,
+        596
+      ],
+      "summary": "Function resolve_starting_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_resolver.rs:after_change_style",
+      "type": "function",
+      "name": "after_change_style",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        599,
+        621
+      ],
+      "summary": "Function after_change_style in style_resolver.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/style_resolver.rs:PseudoElementResolution",
+      "type": "class",
+      "name": "PseudoElementResolution",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Enum controlling whether pseudo-elements are resolved if applicable or forced.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/style_resolver.rs:StyleResolverForElement",
+      "type": "class",
+      "name": "StyleResolverForElement",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        36,
+        47
+      ],
+      "summary": "Resolves styles for elements and pseudo-elements through matching and cascading.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/style_resolver.rs:ResolvedStyle",
+      "type": "class",
+      "name": "ResolvedStyle",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        55,
+        55
+      ],
+      "summary": "A style result wrapping an Arc of ComputedValues.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/style_resolver.rs:PrimaryStyle",
+      "type": "class",
+      "name": "PrimaryStyle",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        66,
+        72
+      ],
+      "summary": "Primary style result with reuse-via-rule-node tracking.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/style_resolver.rs:ResolvedElementStyles",
+      "type": "class",
+      "name": "ResolvedElementStyles",
+      "filePath": "style/style_resolver.rs",
+      "lineRange": [
+        75,
+        80
+      ],
+      "summary": "Complete element style including primary and eager pseudo styles.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/stylesheet_set.rs",
+      "type": "file",
+      "name": "stylesheet_set.rs",
+      "filePath": "style/stylesheet_set.rs",
+      "summary": "Centralized stylesheet collection management for documents and shadow roots, supporting append, insert, remove operations per CSS origin with dirty tracking and invalidation.",
+      "tags": [
+        "stylesheet-management",
+        "cssom",
+        "invalidation",
+        "origin-tracking"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        33,
+        38
+      ],
+      "summary": "Function new in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:should_rebuild_invalidation",
+      "type": "function",
+      "name": "should_rebuild_invalidation",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        81,
+        83
+      ],
+      "summary": "Function should_rebuild_invalidation in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:flush_origin",
+      "type": "function",
+      "name": "flush_origin",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        91,
+        93
+      ],
+      "summary": "Function flush_origin in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:origin_sheets",
+      "type": "function",
+      "name": "origin_sheets",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        98,
+        100
+      ],
+      "summary": "Function origin_sheets in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:dirty",
+      "type": "function",
+      "name": "dirty",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        122,
+        124
+      ],
+      "summary": "Function dirty in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:data_validity",
+      "type": "function",
+      "name": "data_validity",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        128,
+        130
+      ],
+      "summary": "Function data_validity in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:sheets",
+      "type": "function",
+      "name": "sheets",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        133,
+        135
+      ],
+      "summary": "Function sheets in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:each",
+      "type": "function",
+      "name": "each",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        149,
+        168
+      ],
+      "summary": "Function each in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:len",
+      "type": "function",
+      "name": "len",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        214,
+        216
+      ],
+      "summary": "Function len in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        219,
+        221
+      ],
+      "summary": "Function get in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:remove",
+      "type": "function",
+      "name": "remove",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        232,
+        251
+      ],
+      "summary": "Function remove in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:append",
+      "type": "function",
+      "name": "append",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        258,
+        267
+      ],
+      "summary": "Function append in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:insert_before",
+      "type": "function",
+      "name": "insert_before",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        269,
+        280
+      ],
+      "summary": "Function insert_before in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter",
+      "type": "function",
+      "name": "iter",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        292,
+        294
+      ],
+      "summary": "Function iter in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter_mut",
+      "type": "function",
+      "name": "iter_mut",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        297,
+        299
+      ],
+      "summary": "Function iter_mut in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:flush",
+      "type": "function",
+      "name": "flush",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        301,
+        310
+      ],
+      "summary": "Function flush in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:new_L457",
+      "type": "function",
+      "name": "new_L457",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        457,
+        462
+      ],
+      "summary": "Function new in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:len_L476",
+      "type": "function",
+      "name": "len_L476",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        476,
+        480
+      ],
+      "summary": "Function len in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:sheet_count",
+      "type": "function",
+      "name": "sheet_count",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        484,
+        486
+      ],
+      "summary": "Function sheet_count in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:get_L490",
+      "type": "function",
+      "name": "get_L490",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        490,
+        492
+      ],
+      "summary": "Function get in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:has_changed",
+      "type": "function",
+      "name": "has_changed",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        495,
+        501
+      ],
+      "summary": "Function has_changed in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:flush_L505",
+      "type": "function",
+      "name": "flush_L505",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        505,
+        513
+      ],
+      "summary": "Function flush in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:flush_without_invalidation",
+      "type": "function",
+      "name": "flush_without_invalidation",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        517,
+        530
+      ],
+      "summary": "Function flush_without_invalidation in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter_L533",
+      "type": "function",
+      "name": "iter_L533",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        533,
+        537
+      ],
+      "summary": "Function iter in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter_mut_L540",
+      "type": "function",
+      "name": "iter_mut_L540",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        540,
+        544
+      ],
+      "summary": "Function iter_mut in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:force_dirty",
+      "type": "function",
+      "name": "force_dirty",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        548,
+        556
+      ],
+      "summary": "Function force_dirty in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:new_L586",
+      "type": "function",
+      "name": "new_L586",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        586,
+        591
+      ],
+      "summary": "Function new in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:dirty_L594",
+      "type": "function",
+      "name": "dirty_L594",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        594,
+        596
+      ],
+      "summary": "Function dirty in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:is_empty",
+      "type": "function",
+      "name": "is_empty",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        599,
+        601
+      ],
+      "summary": "Function is_empty in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:get_L604",
+      "type": "function",
+      "name": "get_L604",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        604,
+        606
+      ],
+      "summary": "Function get in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:len_L609",
+      "type": "function",
+      "name": "len_L609",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        609,
+        611
+      ],
+      "summary": "Function len in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter_L620",
+      "type": "function",
+      "name": "iter_L620",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        620,
+        622
+      ],
+      "summary": "Function iter in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:iter_mut_L625",
+      "type": "function",
+      "name": "iter_mut_L625",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        625,
+        627
+      ],
+      "summary": "Function iter_mut in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:force_dirty_L630",
+      "type": "function",
+      "name": "force_dirty_L630",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        630,
+        634
+      ],
+      "summary": "Function force_dirty in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylesheet_set.rs:flush_L637",
+      "type": "function",
+      "name": "flush_L637",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        637,
+        644
+      ],
+      "summary": "Function flush in stylesheet_set.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:DataValidity",
+      "type": "class",
+      "name": "DataValidity",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        43,
+        54
+      ],
+      "summary": "Enum tracking cascade and invalidation data validity per origin.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:DocumentStylesheetFlusher",
+      "type": "class",
+      "name": "DocumentStylesheetFlusher",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        63,
+        68
+      ],
+      "summary": "Flusher for iterating dirty stylesheets per origin during rebuild.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:SheetRebuildKind",
+      "type": "class",
+      "name": "SheetRebuildKind",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        72,
+        77
+      ],
+      "summary": "Enum indicating full or cascade-only stylesheet rebuild.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:SheetCollectionFlusher",
+      "type": "class",
+      "name": "SheetCollectionFlusher",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        105,
+        114
+      ],
+      "summary": "Flusher for iterating over a single origin's sheet entries.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:SheetCollection",
+      "type": "class",
+      "name": "SheetCollection",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        172,
+        194
+      ],
+      "summary": "Internal collection of stylesheets per origin with dirty tracking.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:DocumentStylesheetSet",
+      "type": "class",
+      "name": "DocumentStylesheetSet",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        315,
+        324
+      ],
+      "summary": "Top-level stylesheet set for a document, organized by CSS origin.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:AuthorStylesheetSet",
+      "type": "class",
+      "name": "AuthorStylesheetSet",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        561,
+        569
+      ],
+      "summary": "Stylesheet set for a Shadow Root, owning a single collection.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylesheet_set.rs:AuthorStylesheetFlusher",
+      "type": "class",
+      "name": "AuthorStylesheetFlusher",
+      "filePath": "style/stylesheet_set.rs",
+      "lineRange": [
+        572,
+        578
+      ],
+      "summary": "Flusher for author stylesheet collection.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/thread_state.rs",
+      "type": "file",
+      "name": "thread_state.rs",
+      "filePath": "style/thread_state.rs",
+      "summary": "Thread-local state tracking for distinguishing script, layout, and worker threads with assertion helpers.",
+      "tags": [
+        "thread-safety",
+        "assertions",
+        "state-tracking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/thread_state.rs:is_worker",
+      "type": "function",
+      "name": "is_worker",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Checks if current thread is a worker thread.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:is_script",
+      "type": "function",
+      "name": "is_script",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "Checks if current thread is a script thread.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:is_layout",
+      "type": "function",
+      "name": "is_layout",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "Checks if current thread is a layout thread.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:initialize",
+      "type": "function",
+      "name": "initialize",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        50,
+        59
+      ],
+      "summary": "Initializes the current thread state with a given state flag.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/thread_state.rs:initialize_layout_worker_thread",
+      "type": "function",
+      "name": "initialize_layout_worker_thread",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        62,
+        64
+      ],
+      "summary": "Initializes current thread as a layout worker.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "Gets the current thread state, defaulting to empty.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:enter",
+      "type": "function",
+      "name": "enter",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        72,
+        78
+      ],
+      "summary": "Enters a temporary thread state, panicking if re-entering.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/thread_state.rs:exit",
+      "type": "function",
+      "name": "exit",
+      "filePath": "style/thread_state.rs",
+      "lineRange": [
+        81,
+        87
+      ],
+      "summary": "Exits a temporary thread state flag.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/traversal.rs",
+      "type": "file",
+      "name": "traversal.rs",
+      "filePath": "style/traversal.rs",
+      "summary": "DOM tree traversal infrastructure for style computation including PerLevelTraversalData, PreTraverseToken, DomTraversal trait, resolve_style for undisplayed elements, and recalc_style_at for per-node restyling.",
+      "tags": [
+        "dom-traversal",
+        "style-computation",
+        "invalidation",
+        "bloom-filter"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Generic over TElement with parallel traversal support via SendNode wrapper."
+    },
+    {
+      "id": "function:style/traversal.rs:should_traverse",
+      "type": "function",
+      "name": "should_traverse",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "Function should_traverse in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/traversal.rs:traversal_root",
+      "type": "function",
+      "name": "traversal_root",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        50,
+        52
+      ],
+      "summary": "Function traversal_root in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/traversal.rs:resolve_style",
+      "type": "function",
+      "name": "resolve_style",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        250,
+        355
+      ],
+      "summary": "Function resolve_style in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/traversal.rs:recalc_style_at",
+      "type": "function",
+      "name": "recalc_style_at",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        360,
+        489
+      ],
+      "summary": "Function recalc_style_at in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/traversal.rs:clear_state_after_traversing",
+      "type": "function",
+      "name": "clear_state_after_traversing",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        491,
+        502
+      ],
+      "summary": "Function clear_state_after_traversing in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/traversal.rs:compute_style",
+      "type": "function",
+      "name": "compute_style",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        504,
+        639
+      ],
+      "summary": "Function compute_style in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/traversal.rs:notify_paint_worklet",
+      "type": "function",
+      "name": "notify_paint_worklet",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        642,
+        677
+      ],
+      "summary": "Function notify_paint_worklet in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/traversal.rs:note_children",
+      "type": "function",
+      "name": "note_children",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        687,
+        760
+      ],
+      "summary": "Function note_children in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/traversal.rs:clear_descendant_data",
+      "type": "function",
+      "name": "clear_descendant_data",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        766,
+        790
+      ],
+      "summary": "Function clear_descendant_data in traversal.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/traversal.rs:PerLevelTraversalData",
+      "type": "class",
+      "name": "PerLevelTraversalData",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        32,
+        38
+      ],
+      "summary": "Per-traversal-level data carrying current DOM depth for bloom filter.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/traversal.rs:PreTraverseToken",
+      "type": "class",
+      "name": "PreTraverseToken",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        42,
+        42
+      ],
+      "summary": "Token indicating whether traversal should proceed, carrying optional traversal root.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/traversal.rs:DomTraversal",
+      "type": "class",
+      "name": "DomTraversal",
+      "filePath": "style/traversal.rs",
+      "lineRange": [
+        57,
+        244
+      ],
+      "summary": "Trait defining preorder/postorder DOM traversal methods for style computation.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/traversal_flags.rs",
+      "type": "file",
+      "name": "traversal_flags.rs",
+      "filePath": "style/traversal_flags.rs",
+      "summary": "Bitflag definitions controlling traversal behavior including animation-only mode, CSS rule change handling, and parallel traversal enablement.",
+      "tags": [
+        "traversal",
+        "flags",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/traversal_flags.rs:assert_traversal_flags_match",
+      "type": "function",
+      "name": "assert_traversal_flags_match",
+      "filePath": "style/traversal_flags.rs",
+      "lineRange": [
+        37,
+        60
+      ],
+      "summary": "Asserts all TraversalFlags match ServoTraversalFlags equivalents in Gecko.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/traversal_flags.rs:for_animation_only",
+      "type": "function",
+      "name": "for_animation_only",
+      "filePath": "style/traversal_flags.rs",
+      "lineRange": [
+        65,
+        67
+      ],
+      "summary": "Returns true if the traversal is for animation-only restyles.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:primary_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:primary_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:primary_style_mut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:primary_style_mut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:style_L96",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:style_L96",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:with_default_parent_styles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:with_default_parent_styles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:layout_parent_style_for_pseudo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:eager_pseudo_is_definitely_not_generated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_primary_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_primary_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_primary_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_style_with_default_parents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_style_with_default_parents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_style_and_visited_with_default_parents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_style_and_visited_with_default_parents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_style_and_visited_for_pseudo_with_default_parents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_style_and_visited_for_pseudo_with_default_parents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_style_and_visited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_styles_with_default_parents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:cascade_styles_with_default_parents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_pseudo_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:match_primary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:match_pseudo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_starting_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:resolve_starting_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:after_change_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "function:style/style_resolver.rs:after_change_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:PseudoElementResolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:PseudoElementResolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:StyleResolverForElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:StyleResolverForElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:ResolvedStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:ResolvedStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:PrimaryStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:PrimaryStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:ResolvedElementStyles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_resolver.rs",
+      "target": "class:style/style_resolver.rs:ResolvedElementStyles",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:should_rebuild_invalidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:should_rebuild_invalidation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_origin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_origin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:origin_sheets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:origin_sheets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:dirty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:dirty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:data_validity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:data_validity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:sheets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:sheets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:each",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:each",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:append",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:insert_before",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new_L457",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new_L457",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len_L476",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len_L476",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:sheet_count",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:sheet_count",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get_L490",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get_L490",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:has_changed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:has_changed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_L505",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_L505",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_without_invalidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_without_invalidation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_L533",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_L533",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut_L540",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut_L540",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:force_dirty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:force_dirty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new_L586",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:new_L586",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:dirty_L594",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:dirty_L594",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:is_empty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:is_empty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get_L604",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:get_L604",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len_L609",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:len_L609",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_L620",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_L620",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut_L625",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:iter_mut_L625",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:force_dirty_L630",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:force_dirty_L630",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_L637",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "function:style/stylesheet_set.rs:flush_L637",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DataValidity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DataValidity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DocumentStylesheetFlusher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DocumentStylesheetFlusher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:SheetRebuildKind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:SheetRebuildKind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:SheetCollectionFlusher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:SheetCollectionFlusher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:SheetCollection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DocumentStylesheetSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:DocumentStylesheetSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:AuthorStylesheetSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:AuthorStylesheetSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:AuthorStylesheetFlusher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/stylesheet_set.rs",
+      "target": "class:style/stylesheet_set.rs:AuthorStylesheetFlusher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_worker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_worker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_script",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_script",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_layout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:is_layout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:initialize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:initialize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:initialize_layout_worker_thread",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:initialize_layout_worker_thread",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:enter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:enter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:exit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/thread_state.rs",
+      "target": "function:style/thread_state.rs:exit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:should_traverse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:should_traverse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:traversal_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:traversal_root",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:resolve_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:resolve_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:recalc_style_at",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:recalc_style_at",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:clear_state_after_traversing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:compute_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:notify_paint_worklet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:note_children",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:clear_descendant_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "function:style/traversal.rs:clear_descendant_data",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:PerLevelTraversalData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:PerLevelTraversalData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:PreTraverseToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:PreTraverseToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:DomTraversal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal.rs",
+      "target": "class:style/traversal.rs:DomTraversal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal_flags.rs",
+      "target": "function:style/traversal_flags.rs:assert_traversal_flags_match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal_flags.rs",
+      "target": "function:style/traversal_flags.rs:assert_traversal_flags_match",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/traversal_flags.rs",
+      "target": "function:style/traversal_flags.rs:for_animation_only",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/traversal_flags.rs",
+      "target": "function:style/traversal_flags.rs:for_animation_only",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

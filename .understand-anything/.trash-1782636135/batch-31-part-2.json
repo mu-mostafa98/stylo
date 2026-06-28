@@ -1,0 +1,926 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/box.rs",
+      "type": "file",
+      "name": "box.rs",
+      "filePath": "style/values/specified/box.rs",
+      "summary": "Defines specified value types for all box-related CSS properties including Display, Overflow, Position, Contain, ContainerQueries, ScrollSnap, and appearance-related types with parsing and serialization logic.",
+      "tags": [
+        "specified-values",
+        "box-properties",
+        "css-parsing",
+        "types"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Heavily uses derive macros and the Servo styling system's type infrastructure for automatic ToCss, Parse, and ToComputedValue implementations."
+    },
+    {
+      "id": "file:stylo_atoms/build.rs",
+      "type": "file",
+      "name": "build.rs",
+      "filePath": "stylo_atoms/build.rs",
+      "summary": "Build script for the stylo_atoms crate that generates Rust atom type definitions from static_atoms.txt and predefined counter style names using string_cache_codegen.",
+      "tags": [
+        "build-script",
+        "code-generation",
+        "atoms"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:stylo_atoms/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_atoms/Cargo.toml",
+      "summary": "Cargo package configuration for stylo_atoms crate defining dependencies on string_cache and string_cache_codegen for generating interned string types.",
+      "tags": [
+        "configuration",
+        "cargo",
+        "crate-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_atoms/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_atoms/lib.rs",
+      "summary": "Library entry point for stylo_atoms that includes the generated atom.rs file produced by the build script at compile time.",
+      "tags": [
+        "entry-point",
+        "atoms",
+        "code-generation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_atoms/predefined_counter_styles.rs",
+      "type": "file",
+      "name": "predefined_counter_styles.rs",
+      "filePath": "stylo_atoms/predefined_counter_styles.rs",
+      "summary": "Provides the list of predefined CSS counter style names (decimal, roman, georgian, etc.) used by the atom generation build script, duplicated from style/counter_style/predefined.rs.",
+      "tags": [
+        "counter-styles",
+        "atoms",
+        "css-lists"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:stylo_atoms/static_atoms.txt",
+      "type": "document",
+      "name": "static_atoms.txt",
+      "filePath": "stylo_atoms/static_atoms.txt",
+      "summary": "List of static atom string constants used by the atom generation build script to produce the interned string type for Servo's style system.",
+      "tags": [
+        "atoms",
+        "data-file",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:stylo_dom/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_dom/Cargo.toml",
+      "summary": "Cargo package configuration for stylo_dom crate defining dependencies on bitflags and malloc_size_of for DOM state type definitions shared between Rust and C++.",
+      "tags": [
+        "configuration",
+        "cargo",
+        "crate-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_dom/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_dom/lib.rs",
+      "summary": "Defines ElementState and DocumentState bitflags types shared between Rust and C++ for tracking interactive element states (focus, hover, active, disabled, etc.) and document-level activation states.",
+      "tags": [
+        "dom-types",
+        "bitflags",
+        "element-states",
+        "ffi"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:stylo_static_prefs/build.rs",
+      "type": "file",
+      "name": "build.rs",
+      "filePath": "stylo_static_prefs/build.rs",
+      "summary": "Build script for stylo_static_prefs that reads preferences.toml and generates Rust code with static AtomicBool and AtomicI32 arrays, plus pref! and set_pref! macros for runtime preference access.",
+      "tags": [
+        "build-script",
+        "code-generation",
+        "preferences",
+        "macros"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:stylo_static_prefs/Cargo.toml",
+      "type": "config",
+      "name": "Cargo.toml",
+      "filePath": "stylo_static_prefs/Cargo.toml",
+      "summary": "Cargo package configuration for stylo_static_prefs crate with a build dependency on the TOML parser for reading preference definitions.",
+      "tags": [
+        "configuration",
+        "cargo",
+        "crate-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:stylo_static_prefs/preferences.toml",
+      "type": "config",
+      "name": "preferences.toml",
+      "filePath": "stylo_static_prefs/preferences.toml",
+      "summary": "Static preferences configuration file defining boolean and integer preference defaults for layout features, CSS properties, and rendering options in the Servo style system.",
+      "tags": [
+        "configuration",
+        "preferences",
+        "feature-flags"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:stylo_static_prefs/src/lib.rs",
+      "type": "file",
+      "name": "lib.rs",
+      "filePath": "stylo_static_prefs/src/lib.rs",
+      "summary": "Runtime library for stylo_static_prefs that includes generated preference code and provides a test verifying basic get/set preference functionality.",
+      "tags": [
+        "preferences",
+        "runtime",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:DisplayOutside",
+      "type": "class",
+      "name": "DisplayOutside",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        88,
+        96
+      ],
+      "summary": "Enum representing the outer display type (none, inline, block, table-caption, internal-table, internal-ruby) for the CSS display property.",
+      "tags": [
+        "enum",
+        "display",
+        "css-box-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:DisplayInside",
+      "type": "class",
+      "name": "DisplayInside",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        101,
+        149
+      ],
+      "summary": "Enum representing the inner display type (flow, flow-root, table, flex, grid, ruby, etc.) with validation for list-item compatibility.",
+      "tags": [
+        "enum",
+        "display",
+        "css-box-model",
+        "parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Display",
+      "type": "class",
+      "name": "Display",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        167,
+        649
+      ],
+      "summary": "Core specified value type for the CSS display property, combining outside and inside display types with list-item flag, providing parsing, serialization, and layout query methods.",
+      "tags": [
+        "specified-value",
+        "display",
+        "css-core",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:DominantBaseline",
+      "type": "class",
+      "name": "DominantBaseline",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        696,
+        721
+      ],
+      "summary": "Enum for the CSS dominant-baseline property (auto, use-script, no-change, reset-size, ideographic, alphabetic, hanging, mathematical, central, middle, text-after-edge, text-before-edge).",
+      "tags": [
+        "enum",
+        "baseline",
+        "css-inline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:AlignmentBaseline",
+      "type": "class",
+      "name": "AlignmentBaseline",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        743,
+        772
+      ],
+      "summary": "Enum for the CSS alignment-baseline property (baseline, text-bottom, alphabetic, ideographic, middle, central, mathematical, text-top, bottom, center, top).",
+      "tags": [
+        "enum",
+        "alignment",
+        "css-inline"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:ScrollSnapType",
+      "type": "class",
+      "name": "ScrollSnapType",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        881,
+        932
+      ],
+      "summary": "Specified value for the CSS scroll-snap-type property, combining a snap axis and strictness for scroll container snap behavior.",
+      "tags": [
+        "specified-value",
+        "scroll-snap",
+        "css-scroll"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:ScrollSnapAlign",
+      "type": "class",
+      "name": "ScrollSnapAlign",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        978,
+        1019
+      ],
+      "summary": "Specified value for the CSS scroll-snap-align property, defining block and inline alignment of snap positions.",
+      "tags": [
+        "specified-value",
+        "scroll-snap",
+        "alignment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Contain",
+      "type": "class",
+      "name": "Contain",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1340,
+        1401
+      ],
+      "summary": "Bitflags type for the CSS contain property, controlling size, layout, style, paint containment and content visibility optimizations.",
+      "tags": [
+        "bitflags",
+        "contain",
+        "css-performance"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:ContainerType",
+      "type": "class",
+      "name": "ContainerType",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1462,
+        1498
+      ],
+      "summary": "Bitflags type for the CSS container-type property, defining size and inline-size containment for container queries.",
+      "tags": [
+        "bitflags",
+        "container-queries",
+        "css-contain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:ContainerName",
+      "type": "class",
+      "name": "ContainerName",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1515,
+        1571
+      ],
+      "summary": "Specified value for the CSS container-name property, supporting none or a list of custom container query names.",
+      "tags": [
+        "specified-value",
+        "container-queries",
+        "css-contain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Float",
+      "type": "class",
+      "name": "Float",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1598,
+        1611
+      ],
+      "summary": "Enum for the CSS float property (none, left, right) with a helper to check if the element is floating.",
+      "tags": [
+        "enum",
+        "float",
+        "css-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Clear",
+      "type": "class",
+      "name": "Clear",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1635,
+        1643
+      ],
+      "summary": "Enum for the CSS clear property (none, left, right, both, inline-start, inline-end) controlling element clearance after floats.",
+      "tags": [
+        "enum",
+        "clear",
+        "css-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Resize",
+      "type": "class",
+      "name": "Resize",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1662,
+        1670
+      ],
+      "summary": "Enum for the CSS resize property (none, both, horizontal, vertical, block, inline) controlling element resizability.",
+      "tags": [
+        "enum",
+        "resize",
+        "css-ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Appearance",
+      "type": "class",
+      "name": "Appearance",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1693,
+        1828
+      ],
+      "summary": "Enum for the CSS appearance property with extensive Gecko-specific keyword support for native widget styling (button, textfield, menulist, scrollbar, etc.).",
+      "tags": [
+        "enum",
+        "appearance",
+        "native-widgets",
+        "gecko"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Overflow",
+      "type": "class",
+      "name": "Overflow",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        1980,
+        2024
+      ],
+      "summary": "Enum for the CSS overflow property keyword values (visible, hidden, clip, scroll, auto) with scrollability detection.",
+      "tags": [
+        "enum",
+        "overflow",
+        "css-scroll"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/box.rs:Zoom",
+      "type": "class",
+      "name": "Zoom",
+      "filePath": "style/values/specified/box.rs",
+      "lineRange": [
+        2075,
+        2089
+      ],
+      "summary": "Specified value type for the CSS zoom property, wrapping a number or the normal keyword.",
+      "tags": [
+        "specified-value",
+        "zoom",
+        "css-property"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:stylo_atoms/build.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "stylo_atoms/build.rs",
+      "lineRange": [
+        10,
+        31
+      ],
+      "summary": "Entry point for the stylo_atoms build script: reads static_atoms.txt and predefined counter style names, generates an AtomType with string_cache_codegen, and writes the atom.rs output file.",
+      "tags": [
+        "build-script",
+        "entry-point",
+        "code-generation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:stylo_dom/lib.rs:ElementState",
+      "type": "class",
+      "name": "ElementState",
+      "filePath": "stylo_dom/lib.rs",
+      "lineRange": [
+        16,
+        177
+      ],
+      "summary": "Bitflags type defining 50+ interactive element states (focus, hover, active, disabled, checked, visited, etc.) for CSS selector matching, shared between Rust and C++ via repr(C).",
+      "tags": [
+        "bitflags",
+        "element-states",
+        "selectors",
+        "ffi"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:stylo_dom/lib.rs:DocumentState",
+      "type": "class",
+      "name": "DocumentState",
+      "filePath": "stylo_dom/lib.rs",
+      "lineRange": [
+        184,
+        193
+      ],
+      "summary": "Bitflags type for document-level states such as window activation and locale direction (RTL/LTR), shared between Rust and C++.",
+      "tags": [
+        "bitflags",
+        "document-state",
+        "ffi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:stylo_static_prefs/build.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "stylo_static_prefs/build.rs",
+      "lineRange": [
+        19,
+        22
+      ],
+      "summary": "Entry point for the stylo_static_prefs build script that triggers recompilation when preferences.toml changes and generates preference access code.",
+      "tags": [
+        "build-script",
+        "entry-point",
+        "code-generation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:stylo_static_prefs/build.rs:parse_preferences",
+      "type": "function",
+      "name": "parse_preferences",
+      "filePath": "stylo_static_prefs/build.rs",
+      "lineRange": [
+        24,
+        45
+      ],
+      "summary": "Reads and parses preferences.toml into separate lists of boolean and integer preferences with their default values.",
+      "tags": [
+        "toml-parsing",
+        "preferences",
+        "build"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:stylo_static_prefs/build.rs:generate_code",
+      "type": "function",
+      "name": "generate_code",
+      "filePath": "stylo_static_prefs/build.rs",
+      "lineRange": [
+        47,
+        131
+      ],
+      "summary": "Generates Rust source code with static AtomicBool/AtomicI32 arrays and pref!/set_pref! macros from parsed preference definitions, writing the output to a generated.rs file.",
+      "tags": [
+        "code-generation",
+        "macros",
+        "preferences",
+        "build"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:stylo_static_prefs/src/lib.rs:test_basic_preferences",
+      "type": "function",
+      "name": "test_basic_preferences",
+      "filePath": "stylo_static_prefs/src/lib.rs",
+      "lineRange": [
+        10,
+        18
+      ],
+      "summary": "Test function that verifies basic preference get/set functionality using the pref! and set_pref! macros.",
+      "tags": [
+        "test",
+        "preferences",
+        "integration"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DisplayOutside",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DisplayOutside",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DisplayInside",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DisplayInside",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Display",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Display",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DominantBaseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:DominantBaseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:AlignmentBaseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:AlignmentBaseline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ScrollSnapType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ScrollSnapType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ScrollSnapAlign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ScrollSnapAlign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Contain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Contain",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ContainerType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ContainerType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ContainerName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:ContainerName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Float",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Float",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Clear",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Resize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Resize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Appearance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Appearance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Overflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Overflow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Zoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "class:style/values/specified/box.rs:Zoom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:stylo_atoms/build.rs",
+      "target": "function:stylo_atoms/build.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_dom/lib.rs",
+      "target": "class:stylo_dom/lib.rs:ElementState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_dom/lib.rs",
+      "target": "class:stylo_dom/lib.rs:ElementState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:stylo_dom/lib.rs",
+      "target": "class:stylo_dom/lib.rs:DocumentState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_dom/lib.rs",
+      "target": "class:stylo_dom/lib.rs:DocumentState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:stylo_static_prefs/build.rs",
+      "target": "function:stylo_static_prefs/build.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_static_prefs/build.rs",
+      "target": "function:stylo_static_prefs/build.rs:parse_preferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_static_prefs/build.rs",
+      "target": "function:stylo_static_prefs/build.rs:generate_code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:stylo_static_prefs/src/lib.rs",
+      "target": "function:stylo_static_prefs/src/lib.rs:test_basic_preferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "config:stylo_static_prefs/preferences.toml",
+      "target": "file:stylo_static_prefs/build.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:stylo_static_prefs/build.rs",
+      "target": "config:stylo_static_prefs/preferences.toml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:stylo_atoms/build.rs",
+      "target": "document:stylo_atoms/static_atoms.txt",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:stylo_atoms/build.rs",
+      "target": "file:stylo_atoms/predefined_counter_styles.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:stylo_atoms/lib.rs",
+      "target": "file:stylo_atoms/build.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:stylo_static_prefs/src/lib.rs",
+      "target": "file:stylo_static_prefs/build.rs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_atoms/Cargo.toml",
+      "target": "file:stylo_atoms/build.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_dom/Cargo.toml",
+      "target": "file:stylo_dom/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_static_prefs/Cargo.toml",
+      "target": "file:stylo_static_prefs/build.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:stylo_static_prefs/Cargo.toml",
+      "target": "file:stylo_static_prefs/src/lib.rs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:style/values/specified/box.rs",
+      "target": "file:style/values/generics/box.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

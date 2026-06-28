@@ -1,0 +1,241 @@
+{
+  "nodes": [
+    {
+      "id": "class:selectors/sink.rs:Push",
+      "type": "class",
+      "name": "Push",
+      "filePath": "selectors/sink.rs",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "Trait abstracting push-based collection of selector components.",
+      "tags": [
+        "selector",
+        "trait"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/tree.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/tree.rs",
+      "lineRange": [
+        26,
+        32
+      ],
+      "summary": "OpaqueElement constructor or accessor for pointer-based element identity.",
+      "tags": [
+        "selector",
+        "element-identity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/tree.rs:from_non_null_ptr",
+      "type": "function",
+      "name": "from_non_null_ptr",
+      "filePath": "selectors/tree.rs",
+      "lineRange": [
+        35,
+        37
+      ],
+      "summary": "OpaqueElement constructor or accessor for pointer-based element identity.",
+      "tags": [
+        "selector",
+        "element-identity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/tree.rs:as_const_ptr",
+      "type": "function",
+      "name": "as_const_ptr",
+      "filePath": "selectors/tree.rs",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "OpaqueElement constructor or accessor for pointer-based element identity.",
+      "tags": [
+        "selector",
+        "element-identity"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/tree.rs:OpaqueElement",
+      "type": "class",
+      "name": "OpaqueElement",
+      "filePath": "selectors/tree.rs",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "Opaque pointer-based element identity wrapper.",
+      "tags": [
+        "selector",
+        "dom-abstraction",
+        "trait"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/tree.rs:Element",
+      "type": "class",
+      "name": "Element",
+      "filePath": "selectors/tree.rs",
+      "lineRange": [
+        46,
+        184
+      ],
+      "summary": "Core DOM element trait providing all operations needed for CSS selector matching (attributes, tree traversal, pseudo-classes).",
+      "tags": [
+        "selector",
+        "dom-abstraction",
+        "trait"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selectors/relative_selector/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "selectors/relative_selector/mod.rs",
+      "summary": "Module root for relative selector sub-crate, re-exporting the cache and filter modules.",
+      "tags": [
+        "entry-point",
+        "relative-selector",
+        "module-root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/sink.rs",
+      "type": "file",
+      "name": "sink.rs",
+      "filePath": "selectors/sink.rs",
+      "summary": "Defines the Push trait abstraction for collecting CSS selector components, with implementations for Vec and SmallVec.",
+      "tags": [
+        "selector",
+        "trait",
+        "collection"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/tree.rs",
+      "type": "file",
+      "name": "tree.rs",
+      "filePath": "selectors/tree.rs",
+      "summary": "Defines the Element trait for CSS selector matching, providing the DOM abstraction layer that selector matching operates against, along with OpaqueElement for identity comparison.",
+      "tags": [
+        "selector",
+        "dom-abstraction",
+        "trait"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selectors/sink.rs",
+      "target": "class:selectors/sink.rs:Push",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/sink.rs",
+      "target": "class:selectors/sink.rs:Push",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:from_non_null_ptr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:from_non_null_ptr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:as_const_ptr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "function:selectors/tree.rs:as_const_ptr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "class:selectors/tree.rs:OpaqueElement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "class:selectors/tree.rs:OpaqueElement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "class:selectors/tree.rs:Element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/tree.rs",
+      "target": "class:selectors/tree.rs:Element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/relative_selector/mod.rs",
+      "target": "file:selectors/relative_selector/cache.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:selectors/relative_selector/mod.rs",
+      "target": "file:selectors/relative_selector/filter.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,2902 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/align.rs",
+      "type": "file",
+      "name": "align.rs",
+      "filePath": "style/values/specified/align.rs",
+      "summary": "Defines specified types for CSS Box Alignment properties (align-content, justify-content, align-self, align-items, justify-items), including AlignFlags bitflags, ContentDistribution, SelfAlignment, ItemPlacement, and JustifyItems types.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "box-alignment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:value",
+      "type": "function",
+      "name": "value",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "Handles value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:with_value",
+      "type": "function",
+      "name": "with_value",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        84,
+        87
+      ],
+      "summary": "Handles with value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:flags",
+      "type": "function",
+      "name": "flags",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        91,
+        93
+      ],
+      "summary": "Handles flags for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        97,
+        139
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        181,
+        183
+      ],
+      "summary": "Returns the normal/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:start",
+      "type": "function",
+      "name": "start",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        187,
+        189
+      ],
+      "summary": "Handles start for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        193,
+        195
+      ],
+      "summary": "Creates a new instance of the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:is_baseline_position",
+      "type": "function",
+      "name": "is_baseline_position",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        198,
+        203
+      ],
+      "summary": "Handles is baseline position for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:primary",
+      "type": "function",
+      "name": "primary",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        207,
+        209
+      ],
+      "summary": "Handles primary for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_block",
+      "type": "function",
+      "name": "parse_block",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        212,
+        217
+      ],
+      "summary": "Parses a block-axis variant of the value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_inline",
+      "type": "function",
+      "name": "parse_inline",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        220,
+        225
+      ],
+      "summary": "Parses an inline-axis variant of the value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        227,
+        272
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        312,
+        314
+      ],
+      "summary": "Returns the auto value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:is_valid_on_both_axes",
+      "type": "function",
+      "name": "is_valid_on_both_axes",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        317,
+        324
+      ],
+      "summary": "Handles is valid on both axes for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:flip_position",
+      "type": "function",
+      "name": "flip_position",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        380,
+        407
+      ],
+      "summary": "Returns the flipped/opposite alignment position.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:legacy",
+      "type": "function",
+      "name": "legacy",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        527,
+        529
+      ],
+      "summary": "Handles legacy for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_auto_normal_stretch",
+      "type": "function",
+      "name": "parse_auto_normal_stretch",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        555,
+        565
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_baseline",
+      "type": "function",
+      "name": "parse_baseline",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        586,
+        600
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_content_distribution",
+      "type": "function",
+      "name": "parse_content_distribution",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        607,
+        618
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_overflow_position",
+      "type": "function",
+      "name": "parse_overflow_position",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        625,
+        634
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_self_position",
+      "type": "function",
+      "name": "parse_self_position",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        641,
+        659
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:list_self_position_keywords",
+      "type": "function",
+      "name": "list_self_position_keywords",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        661,
+        679
+      ],
+      "summary": "Handles list self position keywords for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_left_right_center",
+      "type": "function",
+      "name": "parse_left_right_center",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        681,
+        691
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/align.rs:parse_legacy",
+      "type": "function",
+      "name": "parse_legacy",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        694,
+        711
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:AlignFlags",
+      "type": "class",
+      "name": "AlignFlags",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "Bitflags representing CSS keyword values for the property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:AxisDirection",
+      "type": "class",
+      "name": "AxisDirection",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        145,
+        150
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:ContentDistribution",
+      "type": "class",
+      "name": "ContentDistribution",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        172,
+        176
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:SelfAlignment",
+      "type": "class",
+      "name": "SelfAlignment",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        307,
+        307
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:ItemPlacement",
+      "type": "class",
+      "name": "ItemPlacement",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        445,
+        445
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/align.rs:JustifyItems",
+      "type": "class",
+      "name": "JustifyItems",
+      "filePath": "style/values/specified/align.rs",
+      "lineRange": [
+        522,
+        522
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/angle.rs",
+      "type": "file",
+      "name": "angle.rs",
+      "filePath": "style/values/specified/angle.rs",
+      "summary": "Defines specified angle types for CSS, including AngleUnit, NoCalcAngle, and Angle with support for deg, grad, rad, turn units as well as calc() expressions.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "angle-units"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:from_str",
+      "type": "function",
+      "name": "from_str",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        47,
+        55
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:as_str",
+      "type": "function",
+      "name": "as_str",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        59,
+        66
+      ],
+      "summary": "Handles as str for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "Returns the zero value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        88,
+        98
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        118,
+        120
+      ],
+      "summary": "Creates a new instance of the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:from_degrees",
+      "type": "function",
+      "name": "from_degrees",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        124,
+        126
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:from_radians",
+      "type": "function",
+      "name": "from_radians",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        130,
+        132
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:degrees",
+      "type": "function",
+      "name": "degrees",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        141,
+        148
+      ],
+      "summary": "Returns the value in degrees.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:radians",
+      "type": "function",
+      "name": "radians",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        152,
+        155
+      ],
+      "summary": "Handles radians for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:angle_unit",
+      "type": "function",
+      "name": "angle_unit",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        159,
+        161
+      ],
+      "summary": "Handles angle unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:unitless_value",
+      "type": "function",
+      "name": "unitless_value",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        165,
+        167
+      ],
+      "summary": "Handles unitless value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:unit",
+      "type": "function",
+      "name": "unit",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        171,
+        173
+      ],
+      "summary": "Handles unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:canonical_unit",
+      "type": "function",
+      "name": "canonical_unit",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        176,
+        178
+      ],
+      "summary": "Handles canonical unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:to",
+      "type": "function",
+      "name": "to",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        181,
+        191
+      ],
+      "summary": "Handles to for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:parse_dimension",
+      "type": "function",
+      "name": "parse_dimension",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        194,
+        197
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        278,
+        292
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:new_calc",
+      "type": "function",
+      "name": "new_calc",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        309,
+        311
+      ],
+      "summary": "Handles new calc for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:is_calc",
+      "type": "function",
+      "name": "is_calc",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        326,
+        328
+      ],
+      "summary": "Returns true if this is a calc() expression.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:as_no_calc",
+      "type": "function",
+      "name": "as_no_calc",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        332,
+        337
+      ],
+      "summary": "Handles as no calc for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:parse_with_unitless",
+      "type": "function",
+      "name": "parse_with_unitless",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        356,
+        361
+      ],
+      "summary": "Parses CSS input allowing unitless zero values.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/angle.rs:parse_internal",
+      "type": "function",
+      "name": "parse_internal",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        363,
+        393
+      ],
+      "summary": "Internal parsing method for the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/angle.rs:AngleUnit",
+      "type": "class",
+      "name": "AngleUnit",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        33,
+        42
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/angle.rs:NoCalcAngle",
+      "type": "class",
+      "name": "NoCalcAngle",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        72,
+        75
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/angle.rs:Angle",
+      "type": "class",
+      "name": "Angle",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        213,
+        213
+      ],
+      "summary": "Specified CSS angle value supporting calc() expressions.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/angle.rs:AllowUnitlessZeroAngle",
+      "type": "class",
+      "name": "AllowUnitlessZeroAngle",
+      "filePath": "style/values/specified/angle.rs",
+      "lineRange": [
+        246,
+        249
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/animation.rs",
+      "type": "file",
+      "name": "animation.rs",
+      "filePath": "style/values/specified/animation.rs",
+      "summary": "Defines specified types for CSS animation and transition properties, including TransitionProperty, animation duration/composition/etc., scroll()/view() timeline notations, and view-transition properties.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "animation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        39,
+        51
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        57,
+        80
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        95,
+        97
+      ],
+      "summary": "Returns the none/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:is_none",
+      "type": "function",
+      "name": "is_none",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        101,
+        103
+      ],
+      "summary": "Returns true if this is the none value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:all",
+      "type": "function",
+      "name": "all",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        107,
+        109
+      ],
+      "summary": "Handles all for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:is_all",
+      "type": "function",
+      "name": "is_all",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        113,
+        117
+      ],
+      "summary": "Handles is all for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        148,
+        150
+      ],
+      "summary": "Returns the normal/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:is_normal",
+      "type": "function",
+      "name": "is_normal",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        154,
+        156
+      ],
+      "summary": "Handles is normal for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:one",
+      "type": "function",
+      "name": "one",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        191,
+        193
+      ],
+      "summary": "Handles one for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:is_one",
+      "type": "function",
+      "name": "is_one",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        197,
+        199
+      ],
+      "summary": "Handles is one for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:as_atom",
+      "type": "function",
+      "name": "as_atom",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        223,
+        228
+      ],
+      "summary": "Handles as atom for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "function",
+      "name": "match_keywords",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        282,
+        290
+      ],
+      "summary": "Handles match keywords for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:is_default",
+      "type": "function",
+      "name": "is_default",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        423,
+        425
+      ],
+      "summary": "Returns true if this is the default value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:parse_arguments",
+      "type": "function",
+      "name": "parse_arguments",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        508,
+        531
+      ],
+      "summary": "Parses the inner arguments of a CSS function notation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:iter",
+      "type": "function",
+      "name": "iter",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        815,
+        817
+      ],
+      "summary": "Handles iter for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/animation.rs:parse_animation_range",
+      "type": "function",
+      "name": "parse_animation_range",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        913,
+        934
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:TransitionProperty",
+      "type": "class",
+      "name": "TransitionProperty",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        28,
+        36
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:TransitionBehavior",
+      "type": "class",
+      "name": "TransitionBehavior",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        138,
+        143
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationIterationCount",
+      "type": "class",
+      "name": "AnimationIterationCount",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        181,
+        186
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationName",
+      "type": "class",
+      "name": "AnimationName",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        219,
+        219
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationDirection",
+      "type": "class",
+      "name": "AnimationDirection",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        272,
+        277
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationPlayState",
+      "type": "class",
+      "name": "AnimationPlayState",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        310,
+        313
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationFillMode",
+      "type": "class",
+      "name": "AnimationFillMode",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        346,
+        351
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:AnimationComposition",
+      "type": "class",
+      "name": "AnimationComposition",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        385,
+        389
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:Scroller",
+      "type": "class",
+      "name": "Scroller",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        410,
+        418
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:ScrollAxis",
+      "type": "class",
+      "name": "ScrollAxis",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        456,
+        465
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:ScrollFunction",
+      "type": "class",
+      "name": "ScrollFunction",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        497,
+        504
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:TimelineIdent",
+      "type": "class",
+      "name": "TimelineIdent",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        594,
+        594
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:ViewTransitionNameKeyword",
+      "type": "class",
+      "name": "ViewTransitionNameKeyword",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        723,
+        723
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:ViewTransitionClassList",
+      "type": "class",
+      "name": "ViewTransitionClassList",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        791,
+        795
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/animation.rs:TimelineRangeName",
+      "type": "class",
+      "name": "TimelineRangeName",
+      "filePath": "style/values/specified/animation.rs",
+      "lineRange": [
+        869,
+        894
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:with_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:with_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:is_baseline_position",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:is_baseline_position",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:primary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:primary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:is_valid_on_both_axes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:is_valid_on_both_axes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:flip_position",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:flip_position",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:with_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:with_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_block",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_inline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:legacy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:legacy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_auto_normal_stretch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_baseline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_content_distribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_overflow_position",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_self_position",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:list_self_position_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_left_right_center",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "function:style/values/specified/align.rs:parse_legacy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:AlignFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:AlignFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:AxisDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:AxisDirection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:ContentDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:ContentDistribution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:SelfAlignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:SelfAlignment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:ItemPlacement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:ItemPlacement",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:JustifyItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/align.rs",
+      "target": "class:style/values/specified/align.rs:JustifyItems",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:as_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:as_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_radians",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_radians",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:radians",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:radians",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:angle_unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:angle_unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:unitless_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:unitless_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:canonical_unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:canonical_unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:to",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:to",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_dimension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_dimension",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:new_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:from_degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:is_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:is_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:as_no_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:as_no_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_with_unitless",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_with_unitless",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "function:style/values/specified/angle.rs:parse_internal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:AngleUnit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:AngleUnit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:NoCalcAngle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:NoCalcAngle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:Angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:Angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:AllowUnitlessZeroAngle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/angle.rs",
+      "target": "class:style/values/specified/angle.rs:AllowUnitlessZeroAngle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:all",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_all",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:one",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_one",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:as_atom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:as_atom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:match_keywords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse_arguments",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:iter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:iter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:is_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "function:style/values/specified/animation.rs:parse_animation_range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TransitionProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TransitionProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TransitionBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TransitionBehavior",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationIterationCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationIterationCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationDirection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationPlayState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationPlayState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationFillMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationFillMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationComposition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:AnimationComposition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:Scroller",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:Scroller",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ScrollAxis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ScrollAxis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ScrollFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ScrollFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TimelineIdent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TimelineIdent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ViewTransitionNameKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ViewTransitionNameKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ViewTransitionClassList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:ViewTransitionClassList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TimelineRangeName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/animation.rs",
+      "target": "class:style/values/specified/animation.rs:TimelineRangeName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

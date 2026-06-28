@@ -1,0 +1,110 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".understand-anything/tmp/ua-import-map-input.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1945,
+      "nonEmptyLines": 1945,
+      "sections": [
+        {
+          "heading": "projectRoot",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 3
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-output.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 753,
+      "nonEmptyLines": 753,
+      "sections": [
+        {
+          "heading": "scriptCompleted",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "stats",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "importMap",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": ".understand-anything/tmp/ua-scan-files.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 2361,
+      "nonEmptyLines": 2361,
+      "sections": [
+        {
+          "heading": "scriptCompleted",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "totalFiles",
+          "level": 1,
+          "line": 2333
+        },
+        {
+          "heading": "filteredByIgnore",
+          "level": 1,
+          "line": 2334
+        },
+        {
+          "heading": "estimatedComplexity",
+          "level": 1,
+          "line": 2335
+        },
+        {
+          "heading": "stats",
+          "level": 1,
+          "line": 2336
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

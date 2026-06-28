@@ -1,0 +1,1128 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/computed/resolution.rs",
+      "type": "file",
+      "name": "resolution.rs",
+      "filePath": "style/values/computed/resolution.rs",
+      "summary": "Defines the computed Resolution type for CSS resolution values (dppx) with CSS serialization and Typed OM support.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/resolution.rs:Resolution",
+      "type": "class",
+      "name": "Resolution",
+      "filePath": "style/values/computed/resolution.rs",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "A CSS computed value struct in the resolution module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/resolution.rs:dppx",
+      "type": "function",
+      "name": "dppx",
+      "filePath": "style/values/computed/resolution.rs",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "Handles dppx in the resolution module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/resolution.rs:from_dppx",
+      "type": "function",
+      "name": "from_dppx",
+      "filePath": "style/values/computed/resolution.rs",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "Handles from_dppx in the resolution module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/svg.rs",
+      "type": "file",
+      "name": "svg.rs",
+      "filePath": "style/values/computed/svg.rs",
+      "summary": "Defines computed types for SVG properties including SVGPaint, SVGLength, SVGWidth, SVGStrokeDashArray, and SVGOpacity with default values.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/svg.rs:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "style/values/computed/svg.rs",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Handles zero in the svg module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-graphics",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/svg.rs:one",
+      "type": "function",
+      "name": "one",
+      "filePath": "style/values/computed/svg.rs",
+      "lineRange": [
+        44,
+        47
+      ],
+      "summary": "Handles one in the svg module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-graphics",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/table.rs",
+      "type": "file",
+      "name": "table.rs",
+      "filePath": "style/values/computed/table.rs",
+      "summary": "Re-exports the computed CaptionSide type from the specified table module.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/text.rs",
+      "type": "file",
+      "name": "text.rs",
+      "filePath": "style/values/computed/text.rs",
+      "summary": "Defines computed types for CSS text properties including InitialLetter, TextIndent, LetterSpacing, WordSpacing, and TextEmphasisStyle.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/text.rs:GenericLetterSpacing",
+      "type": "class",
+      "name": "GenericLetterSpacing",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [
+        74,
+        74
+      ],
+      "summary": "A CSS computed value struct in the text module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/text.rs:TextEmphasisStyle",
+      "type": "class",
+      "name": "TextEmphasisStyle",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [
+        132,
+        143
+      ],
+      "summary": "A CSS computed value struct in the text module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/text.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [
+        51,
+        57
+      ],
+      "summary": "Handles auto in the text module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-typography",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/text.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [
+        81,
+        83
+      ],
+      "summary": "Handles normal in the text module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-typography",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/text.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [
+        87,
+        99
+      ],
+      "summary": "Handles to_css in the text module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-typography"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/time.rs",
+      "type": "file",
+      "name": "time.rs",
+      "filePath": "style/values/computed/time.rs",
+      "summary": "Defines the computed Time type with seconds representation, CSS serialization, Typed OM support, and arithmetic operations.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/time.rs:Time",
+      "type": "class",
+      "name": "Time",
+      "filePath": "style/values/computed/time.rs",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "A CSS computed value struct in the time module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/time.rs:from_seconds",
+      "type": "function",
+      "name": "from_seconds",
+      "filePath": "style/values/computed/time.rs",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "Handles from_seconds in the time module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/time.rs:seconds",
+      "type": "function",
+      "name": "seconds",
+      "filePath": "style/values/computed/time.rs",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Handles seconds in the time module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/computed/transform.rs",
+      "summary": "Defines computed types for CSS transform properties including TransformOperation, Matrix3D, Matrix, Rotate, Scale, and Translate with matrix arithmetic and interpolation support.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values",
+        "css-transforms"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:initial_value",
+      "type": "function",
+      "name": "initial_value",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        37,
+        43
+      ],
+      "summary": "Returns the initial computed value for transform-origin (50% 50% 0px).",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:identity",
+      "type": "function",
+      "name": "identity",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        58,
+        65
+      ],
+      "summary": "Returns the identity 4x4 transformation matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "matrix-math"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:into_2d",
+      "type": "function",
+      "name": "into_2d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        69,
+        82
+      ],
+      "summary": "Converts a 3D matrix to a 2D matrix if the 3D components are identity.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:is_3d",
+      "type": "function",
+      "name": "is_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        86,
+        92
+      ],
+      "summary": "Returns true if the matrix has non-identity 3D components.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:determinant",
+      "type": "function",
+      "name": "determinant",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        96,
+        121
+      ],
+      "summary": "Computes the determinant of a 4x4 transformation matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "matrix-math"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:transpose",
+      "type": "function",
+      "name": "transpose",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        125,
+        132
+      ],
+      "summary": "Returns the transpose of a 4x4 transformation matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "matrix-math"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:inverse",
+      "type": "function",
+      "name": "inverse",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        135,
+        211
+      ],
+      "summary": "Computes the inverse of a 4x4 transformation matrix, returning Err if singular.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "matrix-math"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:pre_mul_point4",
+      "type": "function",
+      "name": "pre_mul_point4",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        215,
+        222
+      ],
+      "summary": "Multiplies a 4D point by this matrix (point * matrix).",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:multiply",
+      "type": "function",
+      "name": "multiply",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        226,
+        261
+      ],
+      "summary": "Multiplies two 4x4 transformation matrices.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "matrix-math"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:scale_by_factor",
+      "type": "function",
+      "name": "scale_by_factor",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        265,
+        282
+      ],
+      "summary": "Scales all matrix components by a given factor.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:get_matrix_3x3_part",
+      "type": "function",
+      "name": "get_matrix_3x3_part",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        288,
+        294
+      ],
+      "summary": "Returns the top-left 3x3 portion of the matrix for scale/shear decomposition.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:set_perspective",
+      "type": "function",
+      "name": "set_perspective",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        298,
+        303
+      ],
+      "summary": "Sets the perspective column of a 4x4 matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:apply_translate",
+      "type": "function",
+      "name": "apply_translate",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        307,
+        312
+      ],
+      "summary": "Applies a 3D translation to the matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:apply_scale",
+      "type": "function",
+      "name": "apply_scale",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        316,
+        329
+      ],
+      "summary": "Applies a 3D scale to the matrix.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_translate_3d",
+      "type": "function",
+      "name": "to_translate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        375,
+        404
+      ],
+      "summary": "Converts any translate transform operation to a Translate3D representation.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_rotate_3d",
+      "type": "function",
+      "name": "to_rotate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        409,
+        424
+      ],
+      "summary": "Converts any rotate transform operation to a Rotate3D representation.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_scale_3d",
+      "type": "function",
+      "name": "to_scale_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        429,
+        446
+      ],
+      "summary": "Converts any scale transform operation to a Scale3D representation.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_animated_zero",
+      "type": "function",
+      "name": "to_animated_zero",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [
+        453,
+        537
+      ],
+      "summary": "Returns the identity-equivalent zero value for a transform operation for animation.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "animation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/computed/ui.rs",
+      "type": "file",
+      "name": "ui.rs",
+      "filePath": "style/values/computed/ui.rs",
+      "summary": "Defines computed types for CSS UI properties including Cursor, CursorImage, and ScrollbarColor with color and image type aliases.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/url.rs",
+      "type": "file",
+      "name": "url.rs",
+      "filePath": "style/values/computed/url.rs",
+      "summary": "Defines the computed UrlOrNone type alias for CSS url() values, wrapping the ComputedUrl type.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/table.rs",
+      "type": "file",
+      "name": "table.rs",
+      "filePath": "style/values/specified/table.rs",
+      "summary": "Defines the specified CaptionSide enum for CSS table caption-side property with Top and Bottom variants.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "specified-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/table.rs:CaptionSide",
+      "type": "class",
+      "name": "CaptionSide",
+      "filePath": "style/values/specified/table.rs",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "A CSS computed value struct in the table module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "class:style/values/computed/resolution.rs:Resolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "class:style/values/computed/resolution.rs:Resolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "function:style/values/computed/resolution.rs:dppx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "function:style/values/computed/resolution.rs:dppx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "function:style/values/computed/resolution.rs:from_dppx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/resolution.rs",
+      "target": "function:style/values/computed/resolution.rs:from_dppx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/svg.rs",
+      "target": "function:style/values/computed/svg.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/svg.rs",
+      "target": "function:style/values/computed/svg.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/svg.rs",
+      "target": "function:style/values/computed/svg.rs:one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/svg.rs",
+      "target": "function:style/values/computed/svg.rs:one",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/table.rs",
+      "target": "file:style/values/specified/table.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:GenericLetterSpacing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:GenericLetterSpacing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:TextEmphasisStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:TextEmphasisStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "function:style/values/computed/text.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "function:style/values/computed/text.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "function:style/values/computed/text.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "function:style/values/computed/text.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "function:style/values/computed/text.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "class:style/values/computed/time.rs:Time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "class:style/values/computed/time.rs:Time",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "function:style/values/computed/time.rs:from_seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "function:style/values/computed/time.rs:from_seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "function:style/values/computed/time.rs:seconds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "function:style/values/computed/time.rs:seconds",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:identity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:identity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:into_2d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:into_2d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:is_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:is_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:determinant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:determinant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:transpose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:transpose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:inverse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:inverse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:pre_mul_point4",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:pre_mul_point4",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:multiply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:multiply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:scale_by_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:scale_by_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:get_matrix_3x3_part",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:get_matrix_3x3_part",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:set_perspective",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:set_perspective",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:apply_translate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:apply_translate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:apply_scale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:apply_scale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_translate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_translate_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_rotate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_rotate_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_scale_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_scale_3d",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_animated_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/table.rs",
+      "target": "class:style/values/specified/table.rs:CaptionSide",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/table.rs",
+      "target": "class:style/values/specified/table.rs:CaptionSide",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

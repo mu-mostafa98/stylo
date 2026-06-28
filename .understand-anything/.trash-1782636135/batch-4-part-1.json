@@ -1,0 +1,1666 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/media_queries/media_query.rs",
+      "type": "file",
+      "name": "media_query.rs",
+      "filePath": "style/media_queries/media_query.rs",
+      "summary": "Core media query representation, parsing, and serialization implementing the CSS Media Queries specification with Qualifier, MediaType, MediaQuery, and MediaQueryType types.",
+      "tags": [
+        "media-queries",
+        "css-parsing",
+        "serialization",
+        "responsive-design"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Rust enums with derive macros for parsing, ToCss, and memory accounting."
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:screen",
+      "type": "function",
+      "name": "screen",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Creates a MediaType representing the screen media type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:print",
+      "type": "function",
+      "name": "print",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "Creates a MediaType representing the print media type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        45,
+        56
+      ],
+      "summary": "Parses a media type identifier or media query from CSS input.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        74,
+        107
+      ],
+      "summary": "Serializes a MediaQuery to CSS text with qualifier, media type, and condition.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:never_matching",
+      "type": "function",
+      "name": "never_matching",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        113,
+        119
+      ],
+      "summary": "Returns a media query that never matches, used as fallback on parse failure.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:is_viewport_dependent",
+      "type": "function",
+      "name": "is_viewport_dependent",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        122,
+        128
+      ],
+      "summary": "Checks whether this media query depends on viewport dimensions.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:parse_L133",
+      "type": "function",
+      "name": "parse_L133",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        133,
+        164
+      ],
+      "summary": "Parses a media type identifier or media query from CSS input.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:parse_L177",
+      "type": "function",
+      "name": "parse_L177",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        177,
+        185
+      ],
+      "summary": "Parses a media type identifier or media query from CSS input.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/media_queries/media_query.rs:matches",
+      "type": "function",
+      "name": "matches",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        188,
+        193
+      ],
+      "summary": "Checks if a MediaQueryType matches a given MediaType.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/media_queries/media_query.rs:Qualifier",
+      "type": "class",
+      "name": "Qualifier",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "Enum representing the only and not media query qualifiers.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/media_queries/media_query.rs:MediaType",
+      "type": "class",
+      "name": "MediaType",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        32,
+        32
+      ],
+      "summary": "A media type wrapper around CustomIdent representing device categories like screen or print.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/media_queries/media_query.rs:MediaQuery",
+      "type": "class",
+      "name": "MediaQuery",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        63,
+        71
+      ],
+      "summary": "A parsed media query with optional qualifier, media type, and condition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/media_queries/media_query.rs:MediaQueryType",
+      "type": "class",
+      "name": "MediaQueryType",
+      "filePath": "style/media_queries/media_query.rs",
+      "lineRange": [
+        169,
+        174
+      ],
+      "summary": "Enum representing a known (concrete) or all media query type.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/media_queries/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/media_queries/mod.rs",
+      "summary": "Module declaration re-exporting MediaList, MediaQuery, MediaQueryType, MediaType, and Qualifier from submodules.",
+      "tags": [
+        "module",
+        "re-export",
+        "barrel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/parallel.rs",
+      "type": "file",
+      "name": "parallel.rs",
+      "filePath": "style/parallel.rs",
+      "summary": "Parallel DOM tree traversal infrastructure using Rayon thread pool, distributing style computation work across worker threads.",
+      "tags": [
+        "parallelism",
+        "dom-traversal",
+        "rayon",
+        "thread-pool"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Unsafe SendNode wrappers enable thread-safe DOM node sharing across rayon scoped tasks."
+    },
+    {
+      "id": "function:style/parallel.rs:create_thread_local_context",
+      "type": "function",
+      "name": "create_thread_local_context",
+      "filePath": "style/parallel.rs",
+      "lineRange": [
+        75,
+        80
+      ],
+      "summary": "Creates a ThreadLocalStyleContext for a worker thread slot.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/parallel.rs:distribute_one_chunk",
+      "type": "function",
+      "name": "distribute_one_chunk",
+      "filePath": "style/parallel.rs",
+      "lineRange": [
+        83,
+        114
+      ],
+      "summary": "Spawns one chunk of work items to the thread pool via rayon ScopeFifo.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/parallel.rs:distribute_work",
+      "type": "function",
+      "name": "distribute_work",
+      "filePath": "style/parallel.rs",
+      "lineRange": [
+        117,
+        145
+      ],
+      "summary": "Iterates work items and distributes them in chunks to worker threads.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/parallel.rs:style_trees",
+      "type": "function",
+      "name": "style_trees",
+      "filePath": "style/parallel.rs",
+      "lineRange": [
+        149,
+        208
+      ],
+      "summary": "Processes discovered DOM nodes, spawning work to other threads when queue is large.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/str.rs",
+      "type": "file",
+      "name": "str.rs",
+      "filePath": "style/str.rs",
+      "summary": "String utility functions for whitespace handling, number parsing, string joining, and ASCII case-insensitive operations used across the style system.",
+      "tags": [
+        "utility",
+        "string-processing",
+        "whitespace",
+        "parsing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/str.rs:char_is_whitespace",
+      "type": "function",
+      "name": "char_is_whitespace",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        28,
+        30
+      ],
+      "summary": "Checks if a character is an HTML space character.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:is_whitespace",
+      "type": "function",
+      "name": "is_whitespace",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Checks if a string consists entirely of HTML whitespace.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:split_html_space_chars",
+      "type": "function",
+      "name": "split_html_space_chars",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "Splits a string on HTML whitespace, filtering empty segments.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:split_commas",
+      "type": "function",
+      "name": "split_commas",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        54,
+        56
+      ],
+      "summary": "Splits a string on commas, filtering empty segments.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:is_ascii_digit",
+      "type": "function",
+      "name": "is_ascii_digit",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        59,
+        64
+      ],
+      "summary": "Checks if a character is an ASCII digit 0-9.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:read_numbers",
+      "type": "function",
+      "name": "read_numbers",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        78,
+        93
+      ],
+      "summary": "Reads ASCII digits into an integer with overflow-safe arithmetic.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/str.rs:read_fraction",
+      "type": "function",
+      "name": "read_fraction",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        96,
+        113
+      ],
+      "summary": "Reads a decimal fraction after a decimal point from an iterator.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/str.rs:read_exponent",
+      "type": "function",
+      "name": "read_exponent",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        116,
+        135
+      ],
+      "summary": "Reads an exponent notation e[+-]digits from a character iterator.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/str.rs:str_join",
+      "type": "function",
+      "name": "str_join",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        138,
+        152
+      ],
+      "summary": "Joins string-like values with a delimiter into a single String.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/str.rs:starts_with_ignore_ascii_case",
+      "type": "function",
+      "name": "starts_with_ignore_ascii_case",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        155,
+        158
+      ],
+      "summary": "Case-insensitive prefix check for ASCII strings.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/str.rs:string_as_ascii_lowercase",
+      "type": "function",
+      "name": "string_as_ascii_lowercase",
+      "filePath": "style/str.rs",
+      "lineRange": [
+        161,
+        168
+      ],
+      "summary": "ASCII-lowercase conversion, only allocating when needed.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/style_adjuster.rs",
+      "type": "file",
+      "name": "style_adjuster.rs",
+      "filePath": "style/style_adjuster.rs",
+      "summary": "Style fixup pass implementing CSS 2.1 section 9.7 blockification rules, display type adjustments, overflow fixup, Ruby annotation adjustments, visited link handling, and position-try fallback tactics.",
+      "tags": [
+        "style-adjustment",
+        "css-fixup",
+        "spec-compliance"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Heavy use of conditional compilation (cfg(feature = \"gecko\") vs \"servo\") for platform-specific adjustments."
+    },
+    {
+      "id": "function:style/style_adjuster.rs:is_topmost_svg_svg_element",
+      "type": "function",
+      "name": "is_topmost_svg_svg_element",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        45,
+        64
+      ],
+      "summary": "Function is_topmost_svg_svg_element in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:is_effective_display_none_for_display_contents",
+      "type": "function",
+      "name": "is_effective_display_none_for_display_contents",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        68,
+        132
+      ],
+      "summary": "Function is_effective_display_none_for_display_contents in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        137,
+        139
+      ],
+      "summary": "Function new in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_top_layer",
+      "type": "function",
+      "name": "adjust_for_top_layer",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        146,
+        156
+      ],
+      "summary": "Function adjust_for_top_layer in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_webkit_line_clamp",
+      "type": "function",
+      "name": "adjust_for_webkit_line_clamp",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        165,
+        188
+      ],
+      "summary": "Function adjust_for_webkit_line_clamp in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:skip_item_display_fixup",
+      "type": "function",
+      "name": "skip_item_display_fixup",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        203,
+        212
+      ],
+      "summary": "Function skip_item_display_fixup in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:blockify_if_necessary",
+      "type": "function",
+      "name": "blockify_if_necessary",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        220,
+        255
+      ],
+      "summary": "Function blockify_if_necessary in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:set_bits",
+      "type": "function",
+      "name": "set_bits",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        258,
+        314
+      ],
+      "summary": "Function set_bits in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_text",
+      "type": "function",
+      "name": "adjust_for_text",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        323,
+        328
+      ],
+      "summary": "Function adjust_for_text in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_text_combine_upright",
+      "type": "function",
+      "name": "adjust_for_text_combine_upright",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        341,
+        361
+      ],
+      "summary": "Function adjust_for_text_combine_upright in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_text_in_ruby",
+      "type": "function",
+      "name": "adjust_for_text_in_ruby",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        370,
+        381
+      ],
+      "summary": "Function adjust_for_text_in_ruby in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_writing_mode",
+      "type": "function",
+      "name": "adjust_for_writing_mode",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        396,
+        413
+      ],
+      "summary": "Function adjust_for_writing_mode in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_overflow",
+      "type": "function",
+      "name": "adjust_for_overflow",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        420,
+        432
+      ],
+      "summary": "Function adjust_for_overflow in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_contain",
+      "type": "function",
+      "name": "adjust_for_contain",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        435,
+        482
+      ],
+      "summary": "Function adjust_for_contain in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_contain_intrinsic_size",
+      "type": "function",
+      "name": "adjust_for_contain_intrinsic_size",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        489,
+        509
+      ],
+      "summary": "Function adjust_for_contain_intrinsic_size in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_prohibited_display_contents",
+      "type": "function",
+      "name": "adjust_for_prohibited_display_contents",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        517,
+        539
+      ],
+      "summary": "Function adjust_for_prohibited_display_contents in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_text_control_editing_root",
+      "type": "function",
+      "name": "adjust_for_text_control_editing_root",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        544,
+        564
+      ],
+      "summary": "Function adjust_for_text_control_editing_root in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_fieldset_content",
+      "type": "function",
+      "name": "adjust_for_fieldset_content",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        569,
+        587
+      ],
+      "summary": "Function adjust_for_fieldset_content in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_table_text_align",
+      "type": "function",
+      "name": "adjust_for_table_text_align",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        595,
+        609
+      ],
+      "summary": "Function adjust_for_table_text_align in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:should_suppress_linebreak",
+      "type": "function",
+      "name": "should_suppress_linebreak",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        612,
+        653
+      ],
+      "summary": "Function should_suppress_linebreak in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_ruby",
+      "type": "function",
+      "name": "adjust_for_ruby",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        661,
+        703
+      ],
+      "summary": "Function adjust_for_ruby in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_visited",
+      "type": "function",
+      "name": "adjust_for_visited",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        714,
+        736
+      ],
+      "summary": "Function adjust_for_visited in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_justify_items",
+      "type": "function",
+      "name": "adjust_for_justify_items",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        743,
+        763
+      ],
+      "summary": "Function adjust_for_justify_items in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_appearance",
+      "type": "function",
+      "name": "adjust_for_appearance",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        770,
+        800
+      ],
+      "summary": "Function adjust_for_appearance in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_marker_pseudo",
+      "type": "function",
+      "name": "adjust_for_marker_pseudo",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        813,
+        853
+      ],
+      "summary": "Function adjust_for_marker_pseudo in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust_for_try_tactic",
+      "type": "function",
+      "name": "adjust_for_try_tactic",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        862,
+        892
+      ],
+      "summary": "Function adjust_for_try_tactic in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:apply_position_area_tactic",
+      "type": "function",
+      "name": "apply_position_area_tactic",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        894,
+        904
+      ],
+      "summary": "Function apply_position_area_tactic in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:swap_insets",
+      "type": "function",
+      "name": "swap_insets",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        907,
+        916
+      ],
+      "summary": "Function swap_insets in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:swap_margins",
+      "type": "function",
+      "name": "swap_margins",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        918,
+        928
+      ],
+      "summary": "Function swap_margins in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:swap_sizes",
+      "type": "function",
+      "name": "swap_sizes",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        930,
+        953
+      ],
+      "summary": "Function swap_sizes in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:flip_start",
+      "type": "function",
+      "name": "flip_start",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        955,
+        967
+      ],
+      "summary": "Function flip_start in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:flip_alignment_start",
+      "type": "function",
+      "name": "flip_alignment_start",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        979,
+        1002
+      ],
+      "summary": "Function flip_alignment_start in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:flip_self_alignment",
+      "type": "function",
+      "name": "flip_self_alignment",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        1004,
+        1021
+      ],
+      "summary": "Function flip_self_alignment in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/style_adjuster.rs:adjust",
+      "type": "function",
+      "name": "adjust",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        1025,
+        1087
+      ],
+      "summary": "Function adjust in style_adjuster.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/style_adjuster.rs:StyleAdjuster",
+      "type": "class",
+      "name": "StyleAdjuster",
+      "filePath": "style/style_adjuster.rs",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "Implements all computed-value-time style fixups per CSS specifications.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:screen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:screen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:print",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:print",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:never_matching",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:never_matching",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:is_viewport_dependent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:is_viewport_dependent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse_L133",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse_L133",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse_L177",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:parse_L177",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:matches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "function:style/media_queries/media_query.rs:matches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:Qualifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:Qualifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaQuery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaQueryType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/media_queries/media_query.rs",
+      "target": "class:style/media_queries/media_query.rs:MediaQueryType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:create_thread_local_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:create_thread_local_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:distribute_one_chunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:distribute_work",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:style_trees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/parallel.rs",
+      "target": "function:style/parallel.rs:style_trees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:char_is_whitespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:char_is_whitespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:is_whitespace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:is_whitespace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:split_html_space_chars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:split_html_space_chars",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:split_commas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:split_commas",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:is_ascii_digit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:is_ascii_digit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_numbers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_numbers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_fraction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_fraction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_exponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:read_exponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:str_join",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:str_join",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:starts_with_ignore_ascii_case",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:starts_with_ignore_ascii_case",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:string_as_ascii_lowercase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/str.rs",
+      "target": "function:style/str.rs:string_as_ascii_lowercase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:is_topmost_svg_svg_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:is_effective_display_none_for_display_contents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_top_layer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_webkit_line_clamp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:skip_item_display_fixup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:blockify_if_necessary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:set_bits",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_text_combine_upright",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_text_in_ruby",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_writing_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_overflow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_contain",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_contain_intrinsic_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_prohibited_display_contents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_text_control_editing_root",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_fieldset_content",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_table_text_align",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:should_suppress_linebreak",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_ruby",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_visited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_justify_items",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_appearance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_marker_pseudo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust_for_try_tactic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:apply_position_area_tactic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:swap_insets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:swap_margins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:swap_sizes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:flip_start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:flip_alignment_start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:flip_self_alignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "function:style/style_adjuster.rs:adjust",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "class:style/style_adjuster.rs:StyleAdjuster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/style_adjuster.rs",
+      "target": "class:style/style_adjuster.rs:StyleAdjuster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

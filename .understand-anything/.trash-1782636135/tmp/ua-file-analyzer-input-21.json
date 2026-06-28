@@ -1,0 +1,104 @@
+{
+  "projectRoot": "D:Projectsstylo",
+  "batchFiles": [
+    {
+      "path": "style/properties/cascade.rs",
+      "language": "rust",
+      "sizeLines": 1500,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/declaration_block.rs",
+      "language": "rust",
+      "sizeLines": 1770,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/properties/mod.rs",
+      "language": "rust",
+      "sizeLines": 1741,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/properties/cascade.rs": [],
+    "style/properties/declaration_block.rs": [],
+    "style/properties/mod.rs": [
+      "style/properties/cascade.rs",
+      "style/properties/declaration_block.rs",
+      "style/properties/shorthands.rs"
+    ]
+  },
+  "neighborMap": {
+    "style/properties/mod.rs": [
+      {
+        "path": "style/lib.rs",
+        "batchIndex": 22,
+        "symbols": [
+          "CSSWideKeyword",
+          "ComputedValues",
+          "LonghandId",
+          "LonghandIdSet",
+          "NonCustomPropertyId",
+          "PropertyDeclaration",
+          "PropertyDeclarationId",
+          "PropertyFlags",
+          "ShorthandId",
+          "SourcePropertyDeclaration",
+          "NonCustomPropertyIdSet",
+          "SubpropertiesVec",
+          "WideKeywordDeclaration",
+          "VariableDeclaration",
+          "CustomDeclaration",
+          "CustomDeclarationValue",
+          "AllShorthand",
+          "AllShorthandDeclarationIterator",
+          "NonCustomPropertyIterator",
+          "SourcePropertyDeclarationDrain",
+          "TransitionPropertyIterator",
+          "TransitionPropertyIteration",
+          "AppendableValue",
+          "OwnedPropertyDeclarationId",
+          "UnparsedValue",
+          "ShorthandsWithPropertyReferencesCache",
+          "PropertyId",
+          "enabled_arbitrary_substitution_functions",
+          "parse_style_attribute",
+          "parse_one_declaration_into",
+          "parse_property_declaration_list",
+          "append_declaration_value",
+          "append_serialization",
+          "report_one_css_error",
+          "DeclarationImportanceIterator",
+          "AnimationValueIterator",
+          "cascade",
+          "apply_declarations",
+          "CascadeMode",
+          "FirstLineReparenting",
+          "Importance",
+          "PropertyDeclarationBlock",
+          "PropertyDeclarationIdSet",
+          "PropertyDeclarationIdSetIterator",
+          "SourcePropertyDeclarationUpdate",
+          "DeclarationUpdate",
+          "AnimationDeclarations",
+          "DeclarationParserState"
+        ]
+      }
+    ],
+    "style/properties/cascade.rs": [
+      {
+        "path": "style/lib.rs",
+        "batchIndex": 22,
+        "symbols": []
+      }
+    ],
+    "style/properties/declaration_block.rs": [
+      {
+        "path": "style/lib.rs",
+        "batchIndex": 22,
+        "symbols": []
+      }
+    ]
+  }
+}

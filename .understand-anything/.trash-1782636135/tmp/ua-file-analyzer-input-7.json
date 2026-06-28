@@ -1,0 +1,24 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/values/computed/length.rs", "language": "rust", "sizeLines": 575, "fileCategory": "code"},
+    {"path": "style/values/computed/list.rs", "language": "rust", "sizeLines": 16, "fileCategory": "code"},
+    {"path": "style/values/computed/mod.rs", "language": "rust", "sizeLines": 1079, "fileCategory": "code"},
+    {"path": "style/values/computed/motion.rs", "language": "rust", "sizeLines": 73, "fileCategory": "code"},
+    {"path": "style/values/computed/position.rs", "language": "rust", "sizeLines": 273, "fileCategory": "code"},
+    {"path": "style/values/computed/rect.rs", "language": "rust", "sizeLines": 11, "fileCategory": "code"},
+    {"path": "style/values/computed/settings.rs", "language": "rust", "sizeLines": 0, "fileCategory": "code"},
+    {"path": "style/values/computed/source.rs", "language": "rust", "sizeLines": 0, "fileCategory": "code"},
+    {"path": "style/values/computed/svg.rs", "language": "rust", "sizeLines": 66, "fileCategory": "code"},
+    {"path": "style/values/computed/text.rs", "language": "rust", "sizeLines": 143, "fileCategory": "code"},
+    {"path": "style/values/computed/time.rs", "language": "rust", "sizeLines": 82, "fileCategory": "code"},
+    {"path": "style/values/computed/transform.rs", "language": "rust", "sizeLines": 559, "fileCategory": "code"},
+    {"path": "style/values/computed/transition.rs", "language": "rust", "sizeLines": 0, "fileCategory": "code"},
+    {"path": "style/values/computed/ui.rs", "language": "rust", "sizeLines": 23, "fileCategory": "code"},
+    {"path": "style/values/computed/url.rs", "language": "rust", "sizeLines": 12, "fileCategory": "code"},
+    {"path": "style/values/computed/wayland.rs", "language": "rust", "sizeLines": 0, "fileCategory": "code"},
+    {"path": "style/values/computed/corner_shape.rs", "language": "rust", "sizeLines": 155, "fileCategory": "code"},
+    {"path": "style/values/computed/image.rs", "language": "rust", "sizeLines": 273, "fileCategory": "code"}
+  ],
+  "batchImportData": {}
+}

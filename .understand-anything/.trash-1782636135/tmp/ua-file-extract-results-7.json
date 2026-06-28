@@ -1,0 +1,5168 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 14,
+  "filesSkipped": [
+    "style/values/computed/settings.rs",
+    "style/values/computed/source.rs",
+    "style/values/computed/transition.rs",
+    "style/values/computed/wayland.rs"
+  ],
+  "results": [
+    {
+      "path": "style/values/computed/length.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 575,
+      "nonEmptyLines": 492,
+      "functions": [
+        {
+          "name": "clamp_to_non_negative",
+          "startLine": 57,
+          "endLine": 63,
+          "params": []
+        },
+        {
+          "name": "as_ref",
+          "startLine": 66,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "percentage_relative_to",
+          "startLine": 80,
+          "endLine": 88,
+          "params": [
+            "basis"
+          ]
+        },
+        {
+          "name": "maybe_percentage_relative_to",
+          "startLine": 92,
+          "endLine": 100,
+          "params": [
+            "basis"
+          ]
+        },
+        {
+          "name": "to_resolved_value",
+          "startLine": 132,
+          "endLine": 134,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_resolved_value",
+          "startLine": 137,
+          "endLine": 139,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 145,
+          "endLine": 147,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 150,
+          "endLine": 152,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "fmt",
+          "startLine": 156,
+          "endLine": 159,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 165,
+          "endLine": 167,
+          "params": [
+            "px"
+          ]
+        },
+        {
+          "name": "normalized",
+          "startLine": 171,
+          "endLine": 173,
+          "params": []
+        },
+        {
+          "name": "finite",
+          "startLine": 177,
+          "endLine": 179,
+          "params": []
+        },
+        {
+          "name": "scale_by",
+          "startLine": 183,
+          "endLine": 185,
+          "params": [
+            "scale"
+          ]
+        },
+        {
+          "name": "px",
+          "startLine": 189,
+          "endLine": 191,
+          "params": []
+        },
+        {
+          "name": "zoom",
+          "startLine": 195,
+          "endLine": 197,
+          "params": [
+            "zoom"
+          ]
+        },
+        {
+          "name": "to_i32_au",
+          "startLine": 201,
+          "endLine": 203,
+          "params": []
+        },
+        {
+          "name": "abs",
+          "startLine": 207,
+          "endLine": 209,
+          "params": []
+        },
+        {
+          "name": "clamp_to_non_negative",
+          "startLine": 213,
+          "endLine": 215,
+          "params": []
+        },
+        {
+          "name": "min",
+          "startLine": 219,
+          "endLine": 221,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "max",
+          "startLine": 225,
+          "endLine": 227,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "max_assign",
+          "startLine": 231,
+          "endLine": 233,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "clamp_between_extremums",
+          "startLine": 239,
+          "endLine": 241,
+          "params": [
+            "min_size",
+            "max_size"
+          ]
+        },
+        {
+          "name": "clamp_below_max",
+          "startLine": 247,
+          "endLine": 252,
+          "params": [
+            "max_size"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 256,
+          "endLine": 258,
+          "params": []
+        },
+        {
+          "name": "is_zero",
+          "startLine": 260,
+          "endLine": 262,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 267,
+          "endLine": 273,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 277,
+          "endLine": 283,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "sum",
+          "startLine": 287,
+          "endLine": 289,
+          "params": [
+            "iter"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 296,
+          "endLine": 298,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "add_assign",
+          "startLine": 303,
+          "endLine": 305,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "div",
+          "startLine": 312,
+          "endLine": 314,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "div",
+          "startLine": 321,
+          "endLine": 323,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "mul_assign",
+          "startLine": 328,
+          "endLine": 330,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "mul",
+          "startLine": 337,
+          "endLine": 339,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "neg",
+          "startLine": 346,
+          "endLine": 348,
+          "params": []
+        },
+        {
+          "name": "sub",
+          "startLine": 355,
+          "endLine": 357,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "sub_assign",
+          "startLine": 362,
+          "endLine": 364,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 369,
+          "endLine": 371,
+          "params": [
+            "len"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 376,
+          "endLine": 378,
+          "params": [
+            "len"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 383,
+          "endLine": 385,
+          "params": [
+            "length"
+          ]
+        },
+        {
+          "name": "clamp_to_non_negative",
+          "startLine": 404,
+          "endLine": 406,
+          "params": []
+        },
+        {
+          "name": "new",
+          "startLine": 412,
+          "endLine": 414,
+          "params": [
+            "px"
+          ]
+        },
+        {
+          "name": "px",
+          "startLine": 418,
+          "endLine": 420,
+          "params": []
+        },
+        {
+          "name": "clamp",
+          "startLine": 424,
+          "endLine": 430,
+          "params": []
+        },
+        {
+          "name": "from",
+          "startLine": 435,
+          "endLine": 437,
+          "params": [
+            "len"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 442,
+          "endLine": 444,
+          "params": [
+            "au"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 449,
+          "endLine": 451,
+          "params": [
+            "non_negative_len"
+          ]
+        },
+        {
+          "name": "resolve_anchor_size",
+          "startLine": 477,
+          "endLine": 502,
+          "params": [
+            "anchor_name",
+            "prop_axis",
+            "anchor_size_keyword",
+            "params"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 508,
+          "endLine": 529,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 533,
+          "endLine": 554,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 558,
+          "endLine": 562,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 566,
+          "endLine": 574,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CSSPixelLength",
+          "startLine": 127,
+          "endLine": 127,
+          "methods": [
+            "to_resolved_value",
+            "from_resolved_value",
+            "to_animated_value",
+            "from_animated_value",
+            "fmt",
+            "new",
+            "normalized",
+            "finite",
+            "scale_by",
+            "px",
+            "zoom",
+            "to_i32_au",
+            "abs",
+            "clamp_to_non_negative",
+            "min",
+            "max",
+            "max_assign",
+            "clamp_between_extremums",
+            "clamp_below_max",
+            "zero",
+            "is_zero",
+            "to_css",
+            "to_typed",
+            "sum",
+            "add",
+            "add_assign",
+            "div",
+            "div",
+            "mul_assign",
+            "mul",
+            "neg",
+            "sub",
+            "sub_assign",
+            "from"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "clamp_to_non_negative",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "as_ref",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "percentage_relative_to",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "maybe_percentage_relative_to",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "CSSPixelLength",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "normalized",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "finite",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "scale_by",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "px",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "zoom",
+          "line": 195,
+          "isDefault": false
+        },
+        {
+          "name": "to_i32_au",
+          "line": 201,
+          "isDefault": false
+        },
+        {
+          "name": "abs",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "clamp_to_non_negative",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "min",
+          "line": 219,
+          "isDefault": false
+        },
+        {
+          "name": "max",
+          "line": 225,
+          "isDefault": false
+        },
+        {
+          "name": "max_assign",
+          "line": 231,
+          "isDefault": false
+        },
+        {
+          "name": "clamp_between_extremums",
+          "line": 239,
+          "isDefault": false
+        },
+        {
+          "name": "clamp_below_max",
+          "line": 247,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 412,
+          "isDefault": false
+        },
+        {
+          "name": "px",
+          "line": 418,
+          "isDefault": false
+        },
+        {
+          "name": "clamp",
+          "line": 424,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_anchor_size",
+          "line": 477,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "LengthPercentage",
+          "lineNumber": 60
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "l.clamp_to_non_negative",
+          "lineNumber": 60
+        },
+        {
+          "caller": "as_ref",
+          "callee": "LengthPercentage",
+          "lineNumber": 69
+        },
+        {
+          "caller": "percentage_relative_to",
+          "callee": "LengthPercentage",
+          "lineNumber": 84
+        },
+        {
+          "caller": "percentage_relative_to",
+          "callee": "length_percentage.percentage_relative_to",
+          "lineNumber": 84
+        },
+        {
+          "caller": "maybe_percentage_relative_to",
+          "callee": "length_percentage\r\n                .maybe_percentage_relative_to(basis).map_or",
+          "lineNumber": 95
+        },
+        {
+          "caller": "maybe_percentage_relative_to",
+          "callee": "length_percentage.maybe_percentage_relative_to",
+          "lineNumber": 95
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "Self",
+          "lineNumber": 133
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.style.effective_zoom.unzoom",
+          "lineNumber": 133
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "Self",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "context.style.effective_zoom.unzoom",
+          "lineNumber": 146
+        },
+        {
+          "caller": "fmt",
+          "callee": "self.0.fmt",
+          "lineNumber": 157
+        },
+        {
+          "caller": "fmt",
+          "callee": "f.write_str",
+          "lineNumber": 158
+        },
+        {
+          "caller": "new",
+          "callee": "CSSPixelLength",
+          "lineNumber": 166
+        },
+        {
+          "caller": "normalized",
+          "callee": "Self::new",
+          "lineNumber": 172
+        },
+        {
+          "caller": "normalized",
+          "callee": "crate::values::normalize",
+          "lineNumber": 172
+        },
+        {
+          "caller": "finite",
+          "callee": "Self::new",
+          "lineNumber": 178
+        },
+        {
+          "caller": "finite",
+          "callee": "crate::values::normalize(self.0).min(f32::MAX).max",
+          "lineNumber": 178
+        },
+        {
+          "caller": "finite",
+          "callee": "crate::values::normalize(self.0).min",
+          "lineNumber": 178
+        },
+        {
+          "caller": "finite",
+          "callee": "crate::values::normalize",
+          "lineNumber": 178
+        },
+        {
+          "caller": "scale_by",
+          "callee": "CSSPixelLength",
+          "lineNumber": 184
+        },
+        {
+          "caller": "zoom",
+          "callee": "Self::new",
+          "lineNumber": 196
+        },
+        {
+          "caller": "zoom",
+          "callee": "zoom.zoom",
+          "lineNumber": 196
+        },
+        {
+          "caller": "zoom",
+          "callee": "self.px",
+          "lineNumber": 196
+        },
+        {
+          "caller": "to_i32_au",
+          "callee": "Au::from",
+          "lineNumber": 202
+        },
+        {
+          "caller": "abs",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 208
+        },
+        {
+          "caller": "abs",
+          "callee": "self.0.abs",
+          "lineNumber": 208
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 214
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "self.0.max",
+          "lineNumber": 214
+        },
+        {
+          "caller": "min",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 220
+        },
+        {
+          "caller": "min",
+          "callee": "self.0.min",
+          "lineNumber": 220
+        },
+        {
+          "caller": "max",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 226
+        },
+        {
+          "caller": "max",
+          "callee": "self.0.max",
+          "lineNumber": 226
+        },
+        {
+          "caller": "max_assign",
+          "callee": "self.max",
+          "lineNumber": 232
+        },
+        {
+          "caller": "clamp_between_extremums",
+          "callee": "self.clamp_below_max(max_size).max",
+          "lineNumber": 240
+        },
+        {
+          "caller": "clamp_between_extremums",
+          "callee": "self.clamp_below_max",
+          "lineNumber": 240
+        },
+        {
+          "caller": "clamp_below_max",
+          "callee": "self.min",
+          "lineNumber": 250
+        },
+        {
+          "caller": "zero",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 257
+        },
+        {
+          "caller": "is_zero",
+          "callee": "self.px",
+          "lineNumber": 261
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.0.to_css",
+          "lineNumber": 271
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 272
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 278
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Numeric",
+          "lineNumber": 278
+        },
+        {
+          "caller": "to_typed",
+          "callee": "NumericValue::Unit",
+          "lineNumber": 278
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 280
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 282
+        },
+        {
+          "caller": "sum",
+          "callee": "iter.fold",
+          "lineNumber": 288
+        },
+        {
+          "caller": "sum",
+          "callee": "Length::zero",
+          "lineNumber": 288
+        },
+        {
+          "caller": "add",
+          "callee": "Self::new",
+          "lineNumber": 297
+        },
+        {
+          "caller": "add",
+          "callee": "self.px",
+          "lineNumber": 297
+        },
+        {
+          "caller": "add",
+          "callee": "other.px",
+          "lineNumber": 297
+        },
+        {
+          "caller": "div",
+          "callee": "self.px",
+          "lineNumber": 313
+        },
+        {
+          "caller": "div",
+          "callee": "other.px",
+          "lineNumber": 313
+        },
+        {
+          "caller": "div",
+          "callee": "Self::new",
+          "lineNumber": 322
+        },
+        {
+          "caller": "div",
+          "callee": "self.px",
+          "lineNumber": 322
+        },
+        {
+          "caller": "mul",
+          "callee": "Self::new",
+          "lineNumber": 338
+        },
+        {
+          "caller": "mul",
+          "callee": "self.px",
+          "lineNumber": 338
+        },
+        {
+          "caller": "neg",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 347
+        },
+        {
+          "caller": "sub",
+          "callee": "Self::new",
+          "lineNumber": 356
+        },
+        {
+          "caller": "sub",
+          "callee": "self.px",
+          "lineNumber": 356
+        },
+        {
+          "caller": "sub",
+          "callee": "other.px",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from",
+          "callee": "Au::from_f32_px",
+          "lineNumber": 370
+        },
+        {
+          "caller": "from",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 377
+        },
+        {
+          "caller": "from",
+          "callee": "len.to_f32_px",
+          "lineNumber": 377
+        },
+        {
+          "caller": "from",
+          "callee": "Self::new",
+          "lineNumber": 384
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "Self::new",
+          "lineNumber": 405
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "self.px().max",
+          "lineNumber": 405
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "self.px",
+          "lineNumber": 405
+        },
+        {
+          "caller": "new",
+          "callee": "NonNegative",
+          "lineNumber": 413
+        },
+        {
+          "caller": "new",
+          "callee": "Length::new",
+          "lineNumber": 413
+        },
+        {
+          "caller": "new",
+          "callee": "px.max",
+          "lineNumber": 413
+        },
+        {
+          "caller": "px",
+          "callee": "self.0.px",
+          "lineNumber": 419
+        },
+        {
+          "caller": "clamp",
+          "callee": "Self::zero",
+          "lineNumber": 426
+        },
+        {
+          "caller": "from",
+          "callee": "NonNegative",
+          "lineNumber": 436
+        },
+        {
+          "caller": "from",
+          "callee": "NonNegative",
+          "lineNumber": 443
+        },
+        {
+          "caller": "from",
+          "callee": "au.into",
+          "lineNumber": 443
+        },
+        {
+          "caller": "from",
+          "callee": "Au::from",
+          "lineNumber": 450
+        },
+        {
+          "caller": "resolve_anchor_size",
+          "callee": "Length::zero",
+          "lineNumber": 485
+        },
+        {
+          "caller": "resolve_anchor_size",
+          "callee": "Gecko_GetAnchorPosSize",
+          "lineNumber": 487
+        },
+        {
+          "caller": "resolve_anchor_size",
+          "callee": "anchor_name.value.0.as_ptr",
+          "lineNumber": 489
+        },
+        {
+          "caller": "resolve_anchor_size",
+          "callee": "Err",
+          "lineNumber": 498
+        },
+        {
+          "caller": "resolve_anchor_size",
+          "callee": "Ok",
+          "lineNumber": 501
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "lp.try_tactic_adjustment",
+          "lineNumber": 517
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "s.try_tactic_adjustment",
+          "lineNumber": 519
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "lp.try_tactic_adjustment",
+          "lineNumber": 542
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "s.try_tactic_adjustment",
+          "lineNumber": 544
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "old_side.parallel_to",
+          "lineNumber": 559
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "lp.try_tactic_adjustment",
+          "lineNumber": 570
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "anchor.try_tactic_adjustment",
+          "lineNumber": 572
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 23,
+        "functionCount": 52,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/list.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "get_initial_value",
+          "startLine": 13,
+          "endLine": 15,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_initial_value",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1079,
+      "nonEmptyLines": 955,
+      "functions": [
+        {
+          "name": "get_container_size_query",
+          "startLine": 235,
+          "endLine": 238,
+          "params": []
+        },
+        {
+          "name": "for_media_query_evaluation",
+          "startLine": 243,
+          "endLine": 263,
+          "params": [
+            "device",
+            "quirks_mode",
+            "f"
+          ]
+        },
+        {
+          "name": "for_container_query_evaluation",
+          "startLine": 267,
+          "endLine": 302,
+          "params": [
+            "device",
+            "stylist",
+            "container_info_and_style",
+            "container_size_query",
+            "f"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 305,
+          "endLine": 332,
+          "params": [
+            "builder",
+            "quirks_mode",
+            "rule_cache_conditions",
+            "container_size_query",
+            "included_cascade_flags"
+          ]
+        },
+        {
+          "name": "new_for_animation",
+          "startLine": 335,
+          "endLine": 355,
+          "params": [
+            "builder",
+            "quirks_mode",
+            "rule_cache_conditions",
+            "container_size_query"
+          ]
+        },
+        {
+          "name": "new_for_initial_at_property_value",
+          "startLine": 358,
+          "endLine": 379,
+          "params": [
+            "stylist",
+            "rule_cache_conditions"
+          ]
+        },
+        {
+          "name": "device",
+          "startLine": 382,
+          "endLine": 384,
+          "params": []
+        },
+        {
+          "name": "inherited_custom_properties",
+          "startLine": 387,
+          "endLine": 389,
+          "params": []
+        },
+        {
+          "name": "is_root_element",
+          "startLine": 392,
+          "endLine": 394,
+          "params": []
+        },
+        {
+          "name": "query_font_metrics",
+          "startLine": 397,
+          "endLine": 433,
+          "params": [
+            "base_size",
+            "orientation",
+            "flags"
+          ]
+        },
+        {
+          "name": "viewport_size_for_viewport_unit_resolution",
+          "startLine": 436,
+          "endLine": 445,
+          "params": [
+            "variant"
+          ]
+        },
+        {
+          "name": "in_media_or_container_query",
+          "startLine": 448,
+          "endLine": 450,
+          "params": []
+        },
+        {
+          "name": "default_style",
+          "startLine": 453,
+          "endLine": 455,
+          "params": []
+        },
+        {
+          "name": "style",
+          "startLine": 458,
+          "endLine": 460,
+          "params": []
+        },
+        {
+          "name": "current_scope",
+          "startLine": 463,
+          "endLine": 465,
+          "params": []
+        },
+        {
+          "name": "maybe_zoom_text",
+          "startLine": 469,
+          "endLine": 480,
+          "params": [
+            "size"
+          ]
+        },
+        {
+          "name": "maybe_zoom_text",
+          "startLine": 484,
+          "endLine": 486,
+          "params": [
+            "size"
+          ]
+        },
+        {
+          "name": "new",
+          "startLine": 498,
+          "endLine": 500,
+          "params": [
+            "cx",
+            "values"
+          ]
+        },
+        {
+          "name": "len",
+          "startLine": 506,
+          "endLine": 508,
+          "params": []
+        },
+        {
+          "name": "next",
+          "startLine": 513,
+          "endLine": 521,
+          "params": []
+        },
+        {
+          "name": "size_hint",
+          "startLine": 523,
+          "endLine": 525,
+          "params": []
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 562,
+          "endLine": 567,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 570,
+          "endLine": 575,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 585,
+          "endLine": 587,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 590,
+          "endLine": 592,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 602,
+          "endLine": 607,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 610,
+          "endLine": 615,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 625,
+          "endLine": 629,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 632,
+          "endLine": 634,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 644,
+          "endLine": 646,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 649,
+          "endLine": 651,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 661,
+          "endLine": 665,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 668,
+          "endLine": 670,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 680,
+          "endLine": 684,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 687,
+          "endLine": 689,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 699,
+          "endLine": 703,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 706,
+          "endLine": 708,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 723,
+          "endLine": 725,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 728,
+          "endLine": 730,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 741,
+          "endLine": 743,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 746,
+          "endLine": 748,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 796,
+          "endLine": 805,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 807,
+          "endLine": 816,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "is_parallel_to",
+          "startLine": 823,
+          "endLine": 832,
+          "params": [
+            "vector"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 840,
+          "endLine": 842,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 847,
+          "endLine": 849,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "one",
+          "startLine": 854,
+          "endLine": 856,
+          "params": []
+        },
+        {
+          "name": "is_one",
+          "startLine": 859,
+          "endLine": 861,
+          "params": []
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 871,
+          "endLine": 873,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 876,
+          "endLine": 878,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 883,
+          "endLine": 885,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 895,
+          "endLine": 897,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 900,
+          "endLine": 902,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 907,
+          "endLine": 909,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 914,
+          "endLine": 916,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "value",
+          "startLine": 941,
+          "endLine": 946,
+          "params": []
+        },
+        {
+          "name": "clamp_to_non_negative",
+          "startLine": 950,
+          "endLine": 957,
+          "params": []
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 964,
+          "endLine": 973,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 975,
+          "endLine": 986,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "hundred_percent",
+          "startLine": 995,
+          "endLine": 997,
+          "params": []
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 1013,
+          "endLine": 1015,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 1018,
+          "endLine": 1020,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 1025,
+          "endLine": 1027,
+          "params": [
+            "int"
+          ]
+        },
+        {
+          "name": "for_border_rect",
+          "startLine": 1058,
+          "endLine": 1078,
+          "params": [
+            "border_box"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Context",
+          "startLine": 174,
+          "endLine": 231,
+          "methods": [],
+          "properties": [
+            "builder",
+            "cached_system_font",
+            "cached_system_font",
+            "in_media_query",
+            "in_container_query",
+            "quirks_mode",
+            "for_animation",
+            "container_info",
+            "for_non_inherited_property",
+            "rule_cache_conditions",
+            "scope",
+            "included_cascade_flags",
+            "container_size_query"
+          ]
+        },
+        {
+          "name": "ComputedVecIter",
+          "startLine": 491,
+          "endLine": 494,
+          "methods": [],
+          "properties": [
+            "cx",
+            "values"
+          ]
+        },
+        {
+          "name": "ToComputedValue",
+          "startLine": 536,
+          "endLine": 549,
+          "methods": [
+            "to_computed_value",
+            "from_computed_value"
+          ],
+          "properties": []
+        },
+        {
+          "name": "AngleOrPercentage",
+          "startLine": 787,
+          "endLine": 790,
+          "methods": [],
+          "properties": [
+            "Percentage",
+            "Angle"
+          ]
+        },
+        {
+          "name": "NumberOrPercentage",
+          "startLine": 934,
+          "endLine": 937,
+          "methods": [
+            "value",
+            "clamp_to_non_negative"
+          ],
+          "properties": [
+            "Percentage",
+            "Number"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Context",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "get_container_size_query",
+          "line": 235,
+          "isDefault": false
+        },
+        {
+          "name": "for_media_query_evaluation",
+          "line": 243,
+          "isDefault": false
+        },
+        {
+          "name": "for_container_query_evaluation",
+          "line": 267,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 305,
+          "isDefault": false
+        },
+        {
+          "name": "new_for_animation",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "new_for_initial_at_property_value",
+          "line": 358,
+          "isDefault": false
+        },
+        {
+          "name": "device",
+          "line": 382,
+          "isDefault": false
+        },
+        {
+          "name": "inherited_custom_properties",
+          "line": 387,
+          "isDefault": false
+        },
+        {
+          "name": "is_root_element",
+          "line": 392,
+          "isDefault": false
+        },
+        {
+          "name": "query_font_metrics",
+          "line": 397,
+          "isDefault": false
+        },
+        {
+          "name": "viewport_size_for_viewport_unit_resolution",
+          "line": 436,
+          "isDefault": false
+        },
+        {
+          "name": "in_media_or_container_query",
+          "line": 448,
+          "isDefault": false
+        },
+        {
+          "name": "default_style",
+          "line": 453,
+          "isDefault": false
+        },
+        {
+          "name": "style",
+          "line": 458,
+          "isDefault": false
+        },
+        {
+          "name": "current_scope",
+          "line": 463,
+          "isDefault": false
+        },
+        {
+          "name": "maybe_zoom_text",
+          "line": 469,
+          "isDefault": false
+        },
+        {
+          "name": "maybe_zoom_text",
+          "line": 484,
+          "isDefault": false
+        },
+        {
+          "name": "ComputedVecIter",
+          "line": 491,
+          "isDefault": false
+        },
+        {
+          "name": "new",
+          "line": 498,
+          "isDefault": false
+        },
+        {
+          "name": "ToComputedValue",
+          "line": 536,
+          "isDefault": false
+        },
+        {
+          "name": "AngleOrPercentage",
+          "line": 787,
+          "isDefault": false
+        },
+        {
+          "name": "NumberOrPercentage",
+          "line": 934,
+          "isDefault": false
+        },
+        {
+          "name": "value",
+          "line": 941,
+          "isDefault": false
+        },
+        {
+          "name": "hundred_percent",
+          "line": 995,
+          "isDefault": false
+        },
+        {
+          "name": "for_border_rect",
+          "line": 1058,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_container_size_query",
+          "callee": "self.container_size_query.borrow_mut",
+          "lineNumber": 236
+        },
+        {
+          "caller": "get_container_size_query",
+          "callee": "resolved.get().clone",
+          "lineNumber": 237
+        },
+        {
+          "caller": "get_container_size_query",
+          "callee": "resolved.get",
+          "lineNumber": 237
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "RuleCacheConditions::default",
+          "lineNumber": 247
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "StyleBuilder::for_inheritance",
+          "lineNumber": 249
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "RefCell::new",
+          "lineNumber": 257
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "CascadeLevel::same_tree_author_normal",
+          "lineNumber": 258
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 259
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "RefCell::new",
+          "lineNumber": 260
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "ContainerSizeQuery::none",
+          "lineNumber": 260
+        },
+        {
+          "caller": "for_media_query_evaluation",
+          "callee": "f",
+          "lineNumber": 262
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "RuleCacheConditions::default",
+          "lineNumber": 277
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "Some",
+          "lineNumber": 280
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "Some",
+          "lineNumber": 280
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "style.as_ref().map",
+          "lineNumber": 284
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "style.as_ref",
+          "lineNumber": 284
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "device.quirks_mode",
+          "lineNumber": 285
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "StyleBuilder::for_inheritance",
+          "lineNumber": 287
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "RefCell::new",
+          "lineNumber": 295
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "CascadeLevel::same_tree_author_normal",
+          "lineNumber": 296
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 297
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "RefCell::new",
+          "lineNumber": 298
+        },
+        {
+          "caller": "for_container_query_evaluation",
+          "callee": "f",
+          "lineNumber": 301
+        },
+        {
+          "caller": "new",
+          "callee": "builder\r\n            .flags().intersects",
+          "lineNumber": 312
+        },
+        {
+          "caller": "new",
+          "callee": "builder.flags",
+          "lineNumber": 312
+        },
+        {
+          "caller": "new",
+          "callee": "included_cascade_flags.insert",
+          "lineNumber": 316
+        },
+        {
+          "caller": "new",
+          "callee": "RefCell::new",
+          "lineNumber": 327
+        },
+        {
+          "caller": "new",
+          "callee": "CascadeLevel::same_tree_author_normal",
+          "lineNumber": 328
+        },
+        {
+          "caller": "new",
+          "callee": "RefCell::new",
+          "lineNumber": 330
+        },
+        {
+          "caller": "new_for_animation",
+          "callee": "RefCell::new",
+          "lineNumber": 350
+        },
+        {
+          "caller": "new_for_animation",
+          "callee": "CascadeLevel::same_tree_author_normal",
+          "lineNumber": 351
+        },
+        {
+          "caller": "new_for_animation",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 352
+        },
+        {
+          "caller": "new_for_animation",
+          "callee": "RefCell::new",
+          "lineNumber": 353
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "StyleBuilder::new",
+          "lineNumber": 363
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "stylist.device",
+          "lineNumber": 363
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "Some",
+          "lineNumber": 363
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "stylist.quirks_mode",
+          "lineNumber": 370
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "RefCell::new",
+          "lineNumber": 374
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "CascadeLevel::same_tree_author_normal",
+          "lineNumber": 375
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "RuleCascadeFlags::empty",
+          "lineNumber": 376
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "RefCell::new",
+          "lineNumber": 377
+        },
+        {
+          "caller": "new_for_initial_at_property_value",
+          "callee": "ContainerSizeQuery::none",
+          "lineNumber": 377
+        },
+        {
+          "caller": "inherited_custom_properties",
+          "callee": "self.builder.inherited_custom_properties",
+          "lineNumber": 388
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.rule_cache_conditions.borrow_mut().set_uncacheable",
+          "lineNumber": 404
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.rule_cache_conditions.borrow_mut",
+          "lineNumber": 404
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.builder.add_flags",
+          "lineNumber": 406
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "base_size.resolve(self).used_size",
+          "lineNumber": 410
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "base_size.resolve",
+          "lineNumber": 410
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.style",
+          "lineNumber": 411
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "style.get_font",
+          "lineNumber": 414
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "style.inherited_writing_mode",
+          "lineNumber": 417
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "style.get_parent_font",
+          "lineNumber": 417
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "wm.is_vertical",
+          "lineNumber": 423
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "wm.is_upright",
+          "lineNumber": 423
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "wm.is_text_vertical",
+          "lineNumber": 425
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.device().query_font_metrics",
+          "lineNumber": 431
+        },
+        {
+          "caller": "query_font_metrics",
+          "callee": "self.device",
+          "lineNumber": 431
+        },
+        {
+          "caller": "viewport_size_for_viewport_unit_resolution",
+          "callee": "self.builder.add_flags",
+          "lineNumber": 440
+        },
+        {
+          "caller": "viewport_size_for_viewport_unit_resolution",
+          "callee": "self.builder\r\n            .device.au_viewport_size_for_viewport_unit_resolution",
+          "lineNumber": 442
+        },
+        {
+          "caller": "default_style",
+          "callee": "self.builder.default_style",
+          "lineNumber": 454
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self\r\n            .style()\r\n            .get_font()\r\n            .clone__x_text_scale().text_zoom_enabled",
+          "lineNumber": 470
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self\r\n            .style()\r\n            .get_font().clone__x_text_scale",
+          "lineNumber": 470
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self\r\n            .style().get_font",
+          "lineNumber": 470
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self.style",
+          "lineNumber": 470
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self.device().zoom_text",
+          "lineNumber": 476
+        },
+        {
+          "caller": "maybe_zoom_text",
+          "callee": "self.device",
+          "lineNumber": 476
+        },
+        {
+          "caller": "len",
+          "callee": "self.values.len",
+          "lineNumber": 507
+        },
+        {
+          "caller": "next",
+          "callee": "self.values.split_first",
+          "lineNumber": 514
+        },
+        {
+          "caller": "next",
+          "callee": "next.to_computed_value",
+          "lineNumber": 515
+        },
+        {
+          "caller": "next",
+          "callee": "Some",
+          "lineNumber": 517
+        },
+        {
+          "caller": "size_hint",
+          "callee": "self.values.len",
+          "lineNumber": 524
+        },
+        {
+          "caller": "size_hint",
+          "callee": "Some",
+          "lineNumber": 524
+        },
+        {
+          "caller": "size_hint",
+          "callee": "self.values.len",
+          "lineNumber": 524
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.0.to_computed_value",
+          "lineNumber": 564
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.1.to_computed_value",
+          "lineNumber": 565
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "A::from_computed_value",
+          "lineNumber": 572
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "B::from_computed_value",
+          "lineNumber": 573
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.as_ref().map",
+          "lineNumber": 586
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.as_ref",
+          "lineNumber": 586
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.to_computed_value",
+          "lineNumber": 586
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.as_ref().map",
+          "lineNumber": 591
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.as_ref",
+          "lineNumber": 591
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Size2D::new",
+          "lineNumber": 603
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.width.to_computed_value",
+          "lineNumber": 604
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.height.to_computed_value",
+          "lineNumber": 605
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Size2D::new",
+          "lineNumber": 611
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "T::from_computed_value",
+          "lineNumber": 612
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "T::from_computed_value",
+          "lineNumber": 613
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter()\r\n            .map(|item| item.to_computed_value(context)).collect",
+          "lineNumber": 626
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter().map",
+          "lineNumber": 626
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter",
+          "lineNumber": 626
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.to_computed_value",
+          "lineNumber": 627
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map(T::from_computed_value).collect",
+          "lineNumber": 633
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map",
+          "lineNumber": 633
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter",
+          "lineNumber": 633
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Box::new",
+          "lineNumber": 645
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "T::to_computed_value",
+          "lineNumber": 645
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Box::new",
+          "lineNumber": 650
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "T::from_computed_value",
+          "lineNumber": 650
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter()\r\n            .map(|item| item.to_computed_value(context)).collect",
+          "lineNumber": 662
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter().map",
+          "lineNumber": 662
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter",
+          "lineNumber": 662
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.to_computed_value",
+          "lineNumber": 663
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map(T::from_computed_value).collect",
+          "lineNumber": 669
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map",
+          "lineNumber": 669
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter",
+          "lineNumber": 669
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter()\r\n            .map(|item| item.to_computed_value(context)).collect",
+          "lineNumber": 681
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter().map",
+          "lineNumber": 681
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter",
+          "lineNumber": 681
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.to_computed_value",
+          "lineNumber": 682
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map(T::from_computed_value).collect",
+          "lineNumber": 688
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map",
+          "lineNumber": 688
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter",
+          "lineNumber": 688
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter()\r\n            .map(|item| item.to_computed_value(context)).collect",
+          "lineNumber": 700
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter().map",
+          "lineNumber": 700
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.iter",
+          "lineNumber": 700
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.to_computed_value",
+          "lineNumber": 701
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map(T::from_computed_value).collect",
+          "lineNumber": 707
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter().map",
+          "lineNumber": 707
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.iter",
+          "lineNumber": 707
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.clone",
+          "lineNumber": 724
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.clone",
+          "lineNumber": 729
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.clone",
+          "lineNumber": 742
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.clone",
+          "lineNumber": 747
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "AngleOrPercentage::Percentage",
+          "lineNumber": 799
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "percentage.to_computed_value",
+          "lineNumber": 799
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "AngleOrPercentage::Angle",
+          "lineNumber": 802
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "angle.to_computed_value",
+          "lineNumber": 802
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::AngleOrPercentage::Percentage",
+          "lineNumber": 809
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 810
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::AngleOrPercentage::Angle",
+          "lineNumber": 813
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 813
+        },
+        {
+          "caller": "is_parallel_to",
+          "callee": "DirectionVector::new",
+          "lineNumber": 827
+        },
+        {
+          "caller": "is_parallel_to",
+          "callee": "self_vector\r\n            .cross(*vector)\r\n            .square_length().approx_eq",
+          "lineNumber": 828
+        },
+        {
+          "caller": "is_parallel_to",
+          "callee": "self_vector\r\n            .cross(*vector).square_length",
+          "lineNumber": 828
+        },
+        {
+          "caller": "is_parallel_to",
+          "callee": "self_vector.cross",
+          "lineNumber": 828
+        },
+        {
+          "caller": "from",
+          "callee": "NonNegative::<CSSFloat>",
+          "lineNumber": 841
+        },
+        {
+          "caller": "one",
+          "callee": "NonNegative",
+          "lineNumber": 855
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Self",
+          "lineNumber": 877
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.0.max(0.).min",
+          "lineNumber": 877
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.0.max",
+          "lineNumber": 877
+        },
+        {
+          "caller": "from",
+          "callee": "Self",
+          "lineNumber": 884
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.max(1.).into",
+          "lineNumber": 901
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.max",
+          "lineNumber": 901
+        },
+        {
+          "caller": "from",
+          "callee": "GreaterThanOrEqualToOne::<CSSFloat>",
+          "lineNumber": 908
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "NumberOrPercentage::Percentage",
+          "lineNumber": 953
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "p.clamp_to_non_negative",
+          "lineNumber": 953
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "NumberOrPercentage::Number",
+          "lineNumber": 955
+        },
+        {
+          "caller": "clamp_to_non_negative",
+          "callee": "n.clamp_to_non_negative",
+          "lineNumber": 955
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "NumberOrPercentage::Percentage",
+          "lineNumber": 967
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "percentage.to_computed_value",
+          "lineNumber": 967
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "NumberOrPercentage::Number",
+          "lineNumber": 970
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "number.to_computed_value",
+          "lineNumber": 970
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::NumberOrPercentage::Percentage",
+          "lineNumber": 978
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 978
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::NumberOrPercentage::Number",
+          "lineNumber": 983
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 983
+        },
+        {
+          "caller": "hundred_percent",
+          "callee": "NonNegative",
+          "lineNumber": 996
+        },
+        {
+          "caller": "hundred_percent",
+          "callee": "NumberOrPercentage::Percentage",
+          "lineNumber": 996
+        },
+        {
+          "caller": "hundred_percent",
+          "callee": "Percentage::hundred",
+          "lineNumber": 996
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "cmp::max(animated, 1).into",
+          "lineNumber": 1019
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "cmp::max",
+          "lineNumber": 1019
+        },
+        {
+          "caller": "from",
+          "callee": "GreaterThanOrEqualToOne::<CSSInteger>",
+          "lineNumber": 1026
+        },
+        {
+          "caller": "extract_clip_component",
+          "callee": "T::from",
+          "lineNumber": 1065
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Point2D::new",
+          "lineNumber": 1069
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "From::from",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "self.left.auto_is",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Length::new",
+          "lineNumber": 1070
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "From::from",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "self.top.auto_is",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Length::new",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "extract_clip_component",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "extract_clip_component",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Size2D::new",
+          "lineNumber": 1075
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Rect::new(clip_origin, clip_size).translate",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "Rect::new",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "for_border_rect",
+          "callee": "border_box.origin.to_vector",
+          "lineNumber": 1077
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 26,
+        "functionCount": 64,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "style/values/computed/motion.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "is_auto_zero_angle",
+          "startLine": 29,
+          "endLine": 31,
+          "params": [
+            "auto",
+            "angle"
+          ]
+        },
+        {
+          "name": "auto",
+          "startLine": 67,
+          "endLine": 72,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OffsetRotate",
+          "startLine": 51,
+          "endLine": 62,
+          "methods": [
+            "auto"
+          ],
+          "properties": [
+            "auto",
+            "angle"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OffsetRotate",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "auto",
+          "line": 67,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "is_auto_zero_angle",
+          "callee": "angle.is_zero",
+          "lineNumber": 30
+        },
+        {
+          "caller": "auto",
+          "callee": "Zero::zero",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/position.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 240,
+      "functions": [
+        {
+          "name": "keyword_and_percentage",
+          "startLine": 49,
+          "endLine": 60,
+          "params": []
+        },
+        {
+          "name": "resolve",
+          "startLine": 75,
+          "endLine": 102,
+          "params": [
+            "anchor_name",
+            "anchor_side",
+            "prop_side",
+            "params"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 114,
+          "endLine": 116,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 120,
+          "endLine": 122,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 126,
+          "endLine": 131,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 137,
+          "endLine": 142,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "try_tactic_adjustment",
+          "startLine": 155,
+          "endLine": 164,
+          "params": [
+            "old_side",
+            "new_side"
+          ]
+        },
+        {
+          "name": "center",
+          "startLine": 170,
+          "endLine": 175,
+          "params": []
+        },
+        {
+          "name": "zero",
+          "startLine": 179,
+          "endLine": 181,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 185,
+          "endLine": 192,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "is_center",
+          "startLine": 196,
+          "endLine": 201,
+          "params": []
+        },
+        {
+          "name": "block_or_inline_to_inferred",
+          "startLine": 205,
+          "endLine": 214,
+          "params": [
+            "keyword"
+          ]
+        },
+        {
+          "name": "inferred_to_block",
+          "startLine": 217,
+          "endLine": 219,
+          "params": [
+            "keyword"
+          ]
+        },
+        {
+          "name": "inferred_to_inline",
+          "startLine": 222,
+          "endLine": 224,
+          "params": [
+            "keyword"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 235,
+          "endLine": 262,
+          "params": [
+            "_context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 264,
+          "endLine": 266,
+          "params": [
+            "computed"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TryTacticAdjustment",
+          "startLine": 107,
+          "endLine": 111,
+          "methods": [
+            "try_tactic_adjustment"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "keyword_and_percentage",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "resolve",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "TryTacticAdjustment",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "center",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 179,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "keyword_and_percentage",
+          "callee": "Percentage",
+          "lineNumber": 54
+        },
+        {
+          "caller": "keyword_and_percentage",
+          "callee": "Percentage::zero",
+          "lineNumber": 56
+        },
+        {
+          "caller": "resolve",
+          "callee": "anchor_side.keyword_and_percentage",
+          "lineNumber": 83
+        },
+        {
+          "caller": "resolve",
+          "callee": "Length::zero",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolve",
+          "callee": "Gecko_GetAnchorPosOffset",
+          "lineNumber": 86
+        },
+        {
+          "caller": "resolve",
+          "callee": "anchor_name.value.0.as_ptr",
+          "lineNumber": 88
+        },
+        {
+          "caller": "resolve",
+          "callee": "Err",
+          "lineNumber": 98
+        },
+        {
+          "caller": "resolve",
+          "callee": "Ok",
+          "lineNumber": 101
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "(**self).try_tactic_adjustment",
+          "lineNumber": 115
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "self.0.try_tactic_adjustment",
+          "lineNumber": 121
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "p.try_tactic_adjustment",
+          "lineNumber": 128
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "side.try_tactic_adjustment",
+          "lineNumber": 129
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "self.side.try_tactic_adjustment",
+          "lineNumber": 138
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "self.fallback.as_mut",
+          "lineNumber": 139
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "fallback.try_tactic_adjustment",
+          "lineNumber": 140
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "lp.try_tactic_adjustment",
+          "lineNumber": 159
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "anchor.try_tactic_adjustment",
+          "lineNumber": 161
+        },
+        {
+          "caller": "try_tactic_adjustment",
+          "callee": "anchor.try_tactic_adjustment",
+          "lineNumber": 162
+        },
+        {
+          "caller": "center",
+          "callee": "Self::new",
+          "lineNumber": 171
+        },
+        {
+          "caller": "center",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 172
+        },
+        {
+          "caller": "center",
+          "callee": "Percentage",
+          "lineNumber": 172
+        },
+        {
+          "caller": "center",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 173
+        },
+        {
+          "caller": "center",
+          "callee": "Percentage",
+          "lineNumber": 173
+        },
+        {
+          "caller": "zero",
+          "callee": "Self::new",
+          "lineNumber": 180
+        },
+        {
+          "caller": "zero",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 180
+        },
+        {
+          "caller": "zero",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 180
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.horizontal.to_css",
+          "lineNumber": 189
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 190
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.vertical.to_css",
+          "lineNumber": 191
+        },
+        {
+          "caller": "is_center",
+          "callee": "self.to_percentage",
+          "lineNumber": 197
+        },
+        {
+          "caller": "block_or_inline_to_inferred",
+          "callee": "keyword.with_axis",
+          "lineNumber": 210
+        },
+        {
+          "caller": "inferred_to_block",
+          "callee": "keyword.with_inferred_axis",
+          "lineNumber": 218
+        },
+        {
+          "caller": "inferred_to_inline",
+          "callee": "keyword.with_inferred_axis",
+          "lineNumber": 223
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.clone",
+          "lineNumber": 236
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.get_type",
+          "lineNumber": 237
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "block_or_inline_to_inferred",
+          "lineNumber": 240
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "block_or_inline_to_inferred",
+          "lineNumber": 241
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "inferred_to_block",
+          "lineNumber": 249
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "inferred_to_inline",
+          "lineNumber": 253
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.clone",
+          "lineNumber": 265
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 16,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/rect.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/svg.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "zero",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        },
+        {
+          "name": "one",
+          "startLine": 44,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "default",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "default",
+          "startLine": 63,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "zero",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "one",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "zero",
+          "callee": "generic::SVGLength::LengthPercentage",
+          "lineNumber": 35
+        },
+        {
+          "caller": "zero",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 35
+        },
+        {
+          "caller": "one",
+          "callee": "generic::SVGLength::LengthPercentage",
+          "lineNumber": 46
+        },
+        {
+          "caller": "one",
+          "callee": "NonNegative",
+          "lineNumber": 46
+        },
+        {
+          "caller": "one",
+          "callee": "LengthPercentage::one",
+          "lineNumber": 46
+        },
+        {
+          "caller": "default",
+          "callee": "generic::SVGStrokeDashArray::Values",
+          "lineNumber": 55
+        },
+        {
+          "caller": "default",
+          "callee": "Default::default",
+          "lineNumber": 55
+        },
+        {
+          "caller": "default",
+          "callee": "generic::SVGOpacity::Opacity",
+          "lineNumber": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/text.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 143,
+      "nonEmptyLines": 126,
+      "functions": [
+        {
+          "name": "auto",
+          "startLine": 51,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "normal",
+          "startLine": 81,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 87,
+          "endLine": 99,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 107,
+          "endLine": 113,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "normal",
+          "startLine": 122,
+          "endLine": 124,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GenericLetterSpacing",
+          "startLine": 74,
+          "endLine": 74,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "TextEmphasisStyle",
+          "startLine": 132,
+          "endLine": 143,
+          "methods": [],
+          "properties": [
+            "Keyword",
+            "None",
+            "String"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "auto",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "GenericLetterSpacing",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "normal",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "normal",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "TextEmphasisStyle",
+          "line": 132,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normal",
+          "callee": "Self",
+          "lineNumber": 82
+        },
+        {
+          "caller": "normal",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 82
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.0.is_zero",
+          "lineNumber": 95
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 96
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.0.to_css",
+          "lineNumber": 98
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.0.has_percentage",
+          "lineNumber": 108
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.0.is_zero",
+          "lineNumber": 108
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 109
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Keyword",
+          "lineNumber": 109
+        },
+        {
+          "caller": "to_typed",
+          "callee": "KeywordValue",
+          "lineNumber": 109
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 109
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 110
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.0.to_typed",
+          "lineNumber": 112
+        },
+        {
+          "caller": "normal",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 123
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/values/computed/time.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "from_seconds",
+          "startLine": 37,
+          "endLine": 39,
+          "params": [
+            "seconds"
+          ]
+        },
+        {
+          "name": "seconds",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 49,
+          "endLine": 55,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 59,
+          "endLine": 65,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "zero",
+          "startLine": 69,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "is_zero",
+          "startLine": 73,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "add_assign",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "rhs"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Time",
+          "startLine": 31,
+          "endLine": 33,
+          "methods": [
+            "from_seconds",
+            "seconds",
+            "to_css",
+            "to_typed",
+            "zero",
+            "is_zero",
+            "add_assign"
+          ],
+          "properties": [
+            "seconds"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Time",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "from_seconds",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "seconds",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_css",
+          "callee": "self.seconds().to_css",
+          "lineNumber": 53
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.seconds",
+          "lineNumber": 53
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 54
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 60
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Numeric",
+          "lineNumber": 60
+        },
+        {
+          "caller": "to_typed",
+          "callee": "NumericValue::Unit",
+          "lineNumber": 60
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.seconds",
+          "lineNumber": 61
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 62
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 64
+        },
+        {
+          "caller": "zero",
+          "callee": "Self::from_seconds",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/transform.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 559,
+      "nonEmptyLines": 522,
+      "functions": [
+        {
+          "name": "initial_value",
+          "startLine": 37,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "identity",
+          "startLine": 58,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "into_2d",
+          "startLine": 69,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "is_3d",
+          "startLine": 86,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "determinant",
+          "startLine": 96,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "transpose",
+          "startLine": 125,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "inverse",
+          "startLine": 135,
+          "endLine": 211,
+          "params": []
+        },
+        {
+          "name": "pre_mul_point4",
+          "startLine": 215,
+          "endLine": 222,
+          "params": [
+            "pin"
+          ]
+        },
+        {
+          "name": "multiply",
+          "startLine": 226,
+          "endLine": 261,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "scale_by_factor",
+          "startLine": 265,
+          "endLine": 282,
+          "params": [
+            "scaling_factor"
+          ]
+        },
+        {
+          "name": "get_matrix_3x3_part",
+          "startLine": 288,
+          "endLine": 294,
+          "params": []
+        },
+        {
+          "name": "set_perspective",
+          "startLine": 298,
+          "endLine": 303,
+          "params": [
+            "perspective"
+          ]
+        },
+        {
+          "name": "apply_translate",
+          "startLine": 307,
+          "endLine": 312,
+          "params": [
+            "translate"
+          ]
+        },
+        {
+          "name": "apply_scale",
+          "startLine": 316,
+          "endLine": 329,
+          "params": [
+            "scale"
+          ]
+        },
+        {
+          "name": "identity",
+          "startLine": 336,
+          "endLine": 343,
+          "params": []
+        },
+        {
+          "name": "from",
+          "startLine": 348,
+          "endLine": 355,
+          "params": [
+            "m"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 361,
+          "endLine": 368,
+          "params": [
+            "m"
+          ]
+        },
+        {
+          "name": "to_translate_3d",
+          "startLine": 375,
+          "endLine": 404,
+          "params": []
+        },
+        {
+          "name": "to_rotate_3d",
+          "startLine": 409,
+          "endLine": 424,
+          "params": []
+        },
+        {
+          "name": "to_scale_3d",
+          "startLine": 429,
+          "endLine": 446,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 453,
+          "endLine": 537,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 542,
+          "endLine": 549,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "initial_value",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "identity",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "into_2d",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "is_3d",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "determinant",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "transpose",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "inverse",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "pre_mul_point4",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "multiply",
+          "line": 226,
+          "isDefault": false
+        },
+        {
+          "name": "scale_by_factor",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "get_matrix_3x3_part",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "set_perspective",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "apply_translate",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "apply_scale",
+          "line": 316,
+          "isDefault": false
+        },
+        {
+          "name": "identity",
+          "line": 336,
+          "isDefault": false
+        },
+        {
+          "name": "to_translate_3d",
+          "line": 375,
+          "isDefault": false
+        },
+        {
+          "name": "to_rotate_3d",
+          "line": 409,
+          "isDefault": false
+        },
+        {
+          "name": "to_scale_3d",
+          "line": 429,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "initial_value",
+          "callee": "Self::new",
+          "lineNumber": 38
+        },
+        {
+          "caller": "initial_value",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 39
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Percentage",
+          "lineNumber": 39
+        },
+        {
+          "caller": "initial_value",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 40
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Percentage",
+          "lineNumber": 40
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Length::new",
+          "lineNumber": 41
+        },
+        {
+          "caller": "into_2d",
+          "callee": "Ok",
+          "lineNumber": 75
+        },
+        {
+          "caller": "into_2d",
+          "callee": "Err",
+          "lineNumber": 80
+        },
+        {
+          "caller": "inverse",
+          "callee": "self.determinant",
+          "lineNumber": 136
+        },
+        {
+          "caller": "inverse",
+          "callee": "Err",
+          "lineNumber": 139
+        },
+        {
+          "caller": "inverse",
+          "callee": "Ok",
+          "lineNumber": 210
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "self.clone",
+          "lineNumber": 377
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 379
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "x.clone",
+          "lineNumber": 380
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 381
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 382
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "x.clone",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "y.clone",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 389
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 390
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "y.clone",
+          "lineNumber": 391
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 392
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 396
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 397
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 398
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "z.clone",
+          "lineNumber": 399
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "self.clone",
+          "lineNumber": 411
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 414
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 414
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 417
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 417
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "self.clone",
+          "lineNumber": 431
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 433
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 436
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 439
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 442
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix3D",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix::identity",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 461
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Skew",
+          "lineNumber": 461
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "sx.to_animated_zero",
+          "lineNumber": 462
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "sy.to_animated_zero",
+          "lineNumber": 463
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::SkewX",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "s.to_animated_zero",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::SkewY",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "s.to_animated_zero",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 472
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 472
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tx.to_animated_zero",
+          "lineNumber": 473
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "ty.to_animated_zero",
+          "lineNumber": 474
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tz.to_animated_zero",
+          "lineNumber": 475
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Translate",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tx.to_animated_zero",
+          "lineNumber": 480
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "ty.to_animated_zero",
+          "lineNumber": 481
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 484
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateX",
+          "lineNumber": 485
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 485
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 487
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateY",
+          "lineNumber": 488
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 488
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 490
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateZ",
+          "lineNumber": 491
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 491
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 494
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 494
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 497
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Scale",
+          "lineNumber": 497
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 499
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleX",
+          "lineNumber": 499
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 500
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleY",
+          "lineNumber": 500
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 501
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleZ",
+          "lineNumber": 501
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::get_normalized_vector_and_angle",
+          "lineNumber": 503
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 504
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 504
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 508
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateX",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateY",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateZ",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Rotate",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 523
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Perspective",
+          "lineNumber": 524
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix3D",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::Transform",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0\r\n                .iter()\r\n                .map(|op| op.to_animated_zero())\r\n                .collect::<Result<crate::OwnedSlice<_>, _>>",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0\r\n                .iter().map",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0.iter",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "op.to_animated_zero",
+          "lineNumber": 546
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 22,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/ui.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 17,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/url.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/corner_shape.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 142,
+      "functions": [
+        {
+          "name": "round",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "bevel",
+          "startLine": 37,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "square",
+          "startLine": 42,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "notch",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "scoop",
+          "startLine": 54,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "squircle",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "is_round",
+          "startLine": 65,
+          "endLine": 67,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 71,
+          "endLine": 81,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "s_to_interpolation_value",
+          "startLine": 87,
+          "endLine": 101,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "interpolation_value_to_s",
+          "startLine": 104,
+          "endLine": 119,
+          "params": [
+            "v"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 122,
+          "endLine": 129,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 133,
+          "endLine": 137,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 141,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "round_all",
+          "startLine": 152,
+          "endLine": 154,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CornerShape",
+          "startLine": 24,
+          "endLine": 27,
+          "methods": [
+            "round",
+            "bevel",
+            "square",
+            "notch",
+            "scoop",
+            "squircle",
+            "is_round",
+            "to_css",
+            "animate",
+            "compute_squared_distance",
+            "to_animated_zero"
+          ],
+          "properties": [
+            "k"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CornerShape",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "round",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "bevel",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "square",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "notch",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "scoop",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "squircle",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "is_round",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "round_all",
+          "line": 152,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 72
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 74
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 76
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.k.to_css",
+          "lineNumber": 78
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 80
+        },
+        {
+          "caller": "s_to_interpolation_value",
+          "callee": "0.5f32.powf",
+          "lineNumber": 94
+        },
+        {
+          "caller": "s_to_interpolation_value",
+          "callee": "s.abs",
+          "lineNumber": 94
+        },
+        {
+          "caller": "s_to_interpolation_value",
+          "callee": "0.5f32.powf",
+          "lineNumber": 95
+        },
+        {
+          "caller": "interpolation_value_to_s",
+          "callee": "0.5f32.ln",
+          "lineNumber": 112
+        },
+        {
+          "caller": "interpolation_value_to_s",
+          "callee": "convex_half_corner.ln",
+          "lineNumber": 112
+        },
+        {
+          "caller": "interpolation_value_to_s",
+          "callee": "k.log2",
+          "lineNumber": 113
+        },
+        {
+          "caller": "animate",
+          "callee": "s_to_interpolation_value",
+          "lineNumber": 123
+        },
+        {
+          "caller": "animate",
+          "callee": "s_to_interpolation_value",
+          "lineNumber": 124
+        },
+        {
+          "caller": "animate",
+          "callee": "a.animate",
+          "lineNumber": 125
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 126
+        },
+        {
+          "caller": "animate",
+          "callee": "interpolation_value_to_s",
+          "lineNumber": 127
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "s_to_interpolation_value",
+          "lineNumber": 134
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "s_to_interpolation_value",
+          "lineNumber": 135
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "a.compute_squared_distance",
+          "lineNumber": 136
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 142
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "CornerShape::round",
+          "lineNumber": 142
+        },
+        {
+          "caller": "round_all",
+          "callee": "Self::all",
+          "lineNumber": 153
+        },
+        {
+          "caller": "round_all",
+          "callee": "CornerShape::round",
+          "lineNumber": 153
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/image.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 245,
+      "functions": [
+        {
+          "name": "to_typed",
+          "startLine": 35,
+          "endLine": 47,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 95,
+          "endLine": 148,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 150,
+          "endLine": 155,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "points_downwards",
+          "startLine": 159,
+          "endLine": 170,
+          "params": [
+            "compat_mode"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 172,
+          "endLine": 199,
+          "params": [
+            "dest",
+            "compat_mode"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 205,
+          "endLine": 214,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 216,
+          "endLine": 225,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 231,
+          "endLine": 252,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 254,
+          "endLine": 272,
+          "params": [
+            "computed"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LineDirection",
+          "startLine": 78,
+          "endLine": 87,
+          "methods": [
+            "points_downwards",
+            "to_css"
+          ],
+          "properties": [
+            "Angle",
+            "Horizontal",
+            "Vertical",
+            "Corner"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LineDirection",
+          "line": 78,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 38
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Keyword",
+          "lineNumber": 38
+        },
+        {
+          "caller": "to_typed",
+          "callee": "KeywordValue",
+          "lineNumber": 38
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 38
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 42
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Image",
+          "lineNumber": 42
+        },
+        {
+          "caller": "to_typed",
+          "callee": "ImageValue::Computed",
+          "lineNumber": 42
+        },
+        {
+          "caller": "to_typed",
+          "callee": "url.clone",
+          "lineNumber": 42
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 43
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Err",
+          "lineNumber": 45
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "self.items.to_computed_value",
+          "lineNumber": 96
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.device().device_pixel_ratio().get",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.device().device_pixel_ratio",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.device",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "items.iter().enumerate",
+          "lineNumber": 103
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "items.iter",
+          "lineNumber": 103
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.device().is_supported_mime_type",
+          "lineNumber": 104
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.device",
+          "lineNumber": 104
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "item.resolution.dppx",
+          "lineNumber": 109
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "better_candidate",
+          "lineNumber": 137
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 153
+        },
+        {
+          "caller": "points_downwards",
+          "callee": "angle.radians",
+          "lineNumber": 161
+        },
+        {
+          "caller": "to_css",
+          "callee": "angle.to_css",
+          "lineNumber": 177
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 180
+        },
+        {
+          "caller": "to_css",
+          "callee": "x.to_css",
+          "lineNumber": 182
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 186
+        },
+        {
+          "caller": "to_css",
+          "callee": "y.to_css",
+          "lineNumber": 188
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 192
+        },
+        {
+          "caller": "to_css",
+          "callee": "x.to_css",
+          "lineNumber": 194
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_char",
+          "lineNumber": 195
+        },
+        {
+          "caller": "to_css",
+          "callee": "y.to_css",
+          "lineNumber": 196
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "LineDirection::Angle",
+          "lineNumber": 208
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "angle.to_computed_value",
+          "lineNumber": 208
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "LineDirection::Horizontal",
+          "lineNumber": 210
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "LineDirection::Vertical",
+          "lineNumber": 211
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "LineDirection::Corner",
+          "lineNumber": 212
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::LineDirection::Angle",
+          "lineNumber": 219
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 219
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::LineDirection::Horizontal",
+          "lineNumber": 221
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::LineDirection::Vertical",
+          "lineNumber": 222
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::LineDirection::Corner",
+          "lineNumber": 223
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::Url",
+          "lineNumber": 234
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "u.to_computed_value",
+          "lineNumber": 234
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::Gradient",
+          "lineNumber": 235
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "g.to_computed_value",
+          "lineNumber": 235
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::Element",
+          "lineNumber": 237
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "e.to_computed_value",
+          "lineNumber": 237
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::MozSymbolicIcon",
+          "lineNumber": 239
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "e.to_computed_value",
+          "lineNumber": 239
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::PaintWorklet",
+          "lineNumber": 241
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "w.to_computed_value",
+          "lineNumber": 241
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::CrossFade",
+          "lineNumber": 242
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "f.to_computed_value",
+          "lineNumber": 242
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::ImageSet",
+          "lineNumber": 243
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "s.to_computed_value",
+          "lineNumber": 243
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::Image",
+          "lineNumber": 244
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "color.to_computed_value",
+          "lineNumber": 244
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "ld.compute",
+          "lineNumber": 245
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Image::Image",
+          "lineNumber": 248
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Color::TRANSPARENT_BLACK.into",
+          "lineNumber": 248
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::Url",
+          "lineNumber": 257
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 257
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::Gradient",
+          "lineNumber": 258
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 258
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::Element",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::MozSymbolicIcon",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::PaintWorklet",
+          "lineNumber": 266
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 266
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::CrossFade",
+          "lineNumber": 267
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 267
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::ImageSet",
+          "lineNumber": 268
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 268
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::Image",
+          "lineNumber": 269
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "ToComputedValue::from_computed_value",
+          "lineNumber": 269
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    }
+  ]
+}

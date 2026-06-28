@@ -1,0 +1,25 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style/rule_tree/core.rs", "language": "rust", "sizeLines": 777, "fileCategory": "code"},
+    {"path": "style/rule_tree/level.rs", "language": "rust", "sizeLines": 389, "fileCategory": "code"},
+    {"path": "style/rule_tree/map.rs", "language": "rust", "sizeLines": 201, "fileCategory": "code"},
+    {"path": "style/rule_tree/mod.rs", "language": "rust", "sizeLines": 430, "fileCategory": "code"},
+    {"path": "style/rule_tree/source.rs", "language": "rust", "sizeLines": 77, "fileCategory": "code"},
+    {"path": "style/rule_tree/unsafe_box.rs", "language": "rust", "sizeLines": 74, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/rule_tree/core.rs": [],
+    "style/rule_tree/level.rs": [],
+    "style/rule_tree/map.rs": [],
+    "style/rule_tree/mod.rs": [
+      "style/rule_tree/core.rs",
+      "style/rule_tree/level.rs",
+      "style/rule_tree/map.rs",
+      "style/rule_tree/source.rs",
+      "style/rule_tree/unsafe_box.rs"
+    ],
+    "style/rule_tree/source.rs": [],
+    "style/rule_tree/unsafe_box.rs": []
+  }
+}

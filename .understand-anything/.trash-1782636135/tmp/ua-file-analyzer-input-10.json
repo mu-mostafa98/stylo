@@ -1,0 +1,31 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "style/values/animated/color.rs", "language": "rust", "sizeLines": 102, "fileCategory": "code"},
+    {"path": "style/values/animated/effects.rs", "language": "rust", "sizeLines": 26, "fileCategory": "code"},
+    {"path": "style/values/animated/font.rs", "language": "rust", "sizeLines": 37, "fileCategory": "code"},
+    {"path": "style/values/animated/mod.rs", "language": "rust", "sizeLines": 548, "fileCategory": "code"},
+    {"path": "style/values/animated/transform.rs", "language": "rust", "sizeLines": 1669, "fileCategory": "code"},
+    {"path": "style/values/computed/align.rs", "language": "rust", "sizeLines": 89, "fileCategory": "code"},
+    {"path": "style/values/computed/animation.rs", "language": "rust", "sizeLines": 124, "fileCategory": "code"},
+    {"path": "style/values/computed/border.rs", "language": "rust", "sizeLines": 149, "fileCategory": "code"},
+    {"path": "style/values/computed/box.rs", "language": "rust", "sizeLines": 264, "fileCategory": "code"},
+    {"path": "style/values/computed/calc.rs", "language": "rust", "sizeLines": 287, "fileCategory": "code"},
+    {"path": "style/values/computed/counters.rs", "language": "rust", "sizeLines": 26, "fileCategory": "code"},
+    {"path": "style/values/computed/transform.rs", "language": "rust", "sizeLines": 559, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/values/animated/color.rs": [],
+    "style/values/animated/effects.rs": [],
+    "style/values/animated/font.rs": [],
+    "style/values/animated/mod.rs": ["style/values/animated/color.rs", "style/values/animated/effects.rs", "style/values/animated/font.rs", "style/values/animated/grid.rs", "style/values/animated/lists.rs", "style/values/animated/svg.rs", "style/values/animated/transform.rs"],
+    "style/values/animated/transform.rs": [],
+    "style/values/computed/align.rs": ["style/values/specified/mod.rs"],
+    "style/values/computed/animation.rs": [],
+    "style/values/computed/border.rs": [],
+    "style/values/computed/box.rs": [],
+    "style/values/computed/calc.rs": [],
+    "style/values/computed/counters.rs": [],
+    "style/values/computed/transform.rs": []
+  }
+}

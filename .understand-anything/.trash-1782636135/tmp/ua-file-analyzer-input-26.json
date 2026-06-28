@@ -1,0 +1,13 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": ".understand-anything/tmp/ua-import-map-input.json", "language": "json", "sizeLines": 1934, "fileCategory": "config"},
+    {"path": ".understand-anything/tmp/ua-import-map-output.json", "language": "json", "sizeLines": 750, "fileCategory": "config"},
+    {"path": ".understand-anything/tmp/ua-scan-files.json", "language": "json", "sizeLines": 2348, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    ".understand-anything/tmp/ua-import-map-input.json": [],
+    ".understand-anything/tmp/ua-import-map-output.json": [],
+    ".understand-anything/tmp/ua-scan-files.json": []
+  }
+}

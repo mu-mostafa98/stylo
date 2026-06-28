@@ -1,0 +1,688 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/stylist.rs",
+      "type": "file",
+      "name": "stylist.rs",
+      "filePath": "style/stylist.rs",
+      "summary": "Core CSS selector matching and style computation engine for Servo/Gecko. Manages stylesheets across origins (user-agent, user, author), maintains cascade data structures with invalidation maps and rule trees, and provides the primary API for pushing applicable declarations and resolving computed styles for elements and pseudo-elements.",
+      "tags": ["rust", "style-engine", "selector-matching", "cascade", "data-model"],
+      "complexity": "complex",
+      "languageNotes": "Rust implementation using Servo's selectors crate for CSS selector matching. Employs generics with TElement trait for cross-engine (Servo/Gecko) compatibility. Uses reference-counted Arcs and shared locks for thread-safe stylesheet management."
+    },
+    {
+      "id": "class:style/stylist.rs:Stylist",
+      "type": "class",
+      "name": "Stylist",
+      "filePath": "style/stylist.rs",
+      "lineRange": [599, 649],
+      "summary": "Central struct holding all selectors and device characteristics for a document. Owns stylesheets, rule tree, cascade data per origin, custom property registrations, and the computation device. Created once per pipeline and rebuilt when stylesheets or device constraints change.",
+      "tags": ["data-model", "singleton", "engine"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylist.rs:CascadeData",
+      "type": "class",
+      "name": "CascadeData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [3256, 3383],
+      "summary": "Per-origin cascade data containing selector maps, invalidation maps, animations, custom property registrations, container/scope conditions, and extra style data (@font-face, @counter-style, etc.). Built during stylesheet processing and used for efficient selector matching and cache invalidation.",
+      "tags": ["data-model", "cache", "selector-map", "invalidation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "class",
+      "name": "DocumentCascadeData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [432, 438],
+      "summary": "Aggregates CascadeData for all three origins (user-agent, user, author) into a single document-level structure. Provides origin-iterators and rebuild orchestration during stylesheet flushing.",
+      "tags": ["data-model", "aggregator", "cascade"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylist.rs:ExtraStyleData",
+      "type": "class",
+      "name": "ExtraStyleData",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2353, 2374],
+      "summary": "Holds effective at-rule style data extracted from stylesheets: @font-face, @font-feature-values, @font-palette-values, @counter-style, @position-try, @page, and @view-transition rules. All entries are layer-ordered for correct cascade resolution.",
+      "tags": ["data-model", "at-rules", "font-face", "page-rules"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylist.rs:PageRuleMap",
+      "type": "class",
+      "name": "PageRuleMap",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2261, 2264],
+      "summary": "Stores and matches @page rules indexed by page name. Provides matching logic that considers page-name selectors and pseudo-class flags to find applicable page rules in layer order.",
+      "tags": ["data-model", "page-rules", "selector-matching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylist.rs:Rule",
+      "type": "class",
+      "name": "Rule",
+      "filePath": "style/stylist.rs",
+      "lineRange": [4864, 4895],
+      "summary": "Individual CSS style rule with selector, hashes, style source, source order, layer/container/scope condition IDs, and cascade flags. Wraps a selector with its precomputed ancestor hashes and references to its declaration block.",
+      "tags": ["data-model", "css-rule", "selector"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "class",
+      "name": "CascadeDataDifference",
+      "filePath": "style/stylist.rs",
+      "lineRange": [132, 135],
+      "summary": "Tracks what changed between cascade data rebuilds, currently focused on changed @position-try rule names. Used to minimize invalidation work after stylesheet updates.",
+      "tags": ["data-model", "diff", "invalidation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:LayerOrderedVec",
+      "type": "class",
+      "name": "LayerOrderedVec",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2169, 2169],
+      "summary": "Generic vector wrapper for items that must be sorted in @layer cascade order. Each entry pairs a value with its LayerId for deferred sorting after layer resolution.",
+      "tags": ["data-model", "layer", "sorting"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:LayerOrderedMap",
+      "type": "class",
+      "name": "LayerOrderedMap",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2178, 2178],
+      "summary": "Generic hash map wrapper storing layer-ordered values per key. Maps Atom keys to small vectors of (value, LayerId) pairs, sorted by layer order during cascade data finalization.",
+      "tags": ["data-model", "layer", "hash-map"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "class",
+      "name": "ScopeBoundsWithHashes",
+      "filePath": "style/stylist.rs",
+      "lineRange": [3019, 3024],
+      "summary": "Holds the start and end selector bounds for @scope rules with precomputed ancestor hashes. Used to efficiently determine if an element falls within a given scope during selector matching.",
+      "tags": ["data-model", "scope", "selector"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:AuthorStylesEnabled",
+      "type": "class",
+      "name": "AuthorStylesEnabled",
+      "filePath": "style/stylist.rs",
+      "lineRange": [572, 575],
+      "summary": "Simple boolean enum controlling whether author stylesheets are applied. Supports Gecko's ability to disable author styles for certain contexts.",
+      "tags": ["enum", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:RuleInclusion",
+      "type": "class",
+      "name": "RuleInclusion",
+      "filePath": "style/stylist.rs",
+      "lineRange": [653, 660],
+      "summary": "Enum controlling which cascade levels to include when styling elements: All levels or only UA/User (used for getDefaultComputedStyle).",
+      "tags": ["enum", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/stylist.rs:RegisterCustomPropertyResult",
+      "type": "class",
+      "name": "RegisterCustomPropertyResult",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2078, 2086],
+      "summary": "Result enum for CSS.registerProperty() calls, indicating success or detailed failure reasons (invalid name, syntax, initial value, etc.).",
+      "tags": ["enum", "css-houdini", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylist.rs:flush",
+      "type": "function",
+      "name": "flush",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1053, 1076],
+      "summary": "Flushes stylesheet changes and rebuilds cascade data if stylesheets have been modified. Increments rebuild counter and recalculates initial values for registered custom properties.",
+      "tags": ["entry-point", "rebuild", "invalidation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:push_applicable_declarations",
+      "type": "function",
+      "name": "push_applicable_declarations",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1705, 1743],
+      "summary": "Main entry point for collecting applicable CSS declarations for an element. Iterates through implemented pseudo-elements and delegates to RuleCollector for selector matching across all origins.",
+      "tags": ["entry-point", "selector-matching", "core"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:cascade_style_and_visited",
+      "type": "function",
+      "name": "cascade_style_and_visited",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1476, 1533],
+      "summary": "Computes the final style (and visited-link style) for an element or pseudo-element given cascade inputs. Handles parent style inheritance, :visited rules, and delegates to properties::cascade for property resolution.",
+      "tags": ["style-computation", "cascade", "visited"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:register_custom_property",
+      "type": "function",
+      "name": "register_custom_property",
+      "filePath": "style/stylist.rs",
+      "lineRange": [2090, 2164],
+      "summary": "Implements CSS.registerProperty() per the CSS Properties and Values API specification. Validates property name, syntax descriptor, inherits flag, and initial value before registering the property in the script registry.",
+      "tags": ["api", "css-houdini", "validation", "registration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:match_revalidation_selectors",
+      "type": "function",
+      "name": "match_revalidation_selectors",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1869, 1939],
+      "summary": "Matches an element against cache revalidation selectors across all applicable cascade data (including shadow DOM). Returns a RevalidationResult with matched selectors and relevant attributes for style cache comparison.",
+      "tags": ["cache", "revalidation", "selector-matching"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylist.rs:rebuild_initial_values_for_custom_properties",
+      "type": "function",
+      "name": "rebuild_initial_values_for_custom_properties",
+      "filePath": "style/stylist.rs",
+      "lineRange": [926, 969],
+      "summary": "Recomputes the initial values for all registered custom properties (both script-registered and stylesheet-registered). Uses a computed context to evaluate each property's initial value, tracking seen names to handle priority.",
+      "tags": ["rebuild", "custom-properties", "initial-values"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:rebuild_author_data",
+      "type": "function",
+      "name": "rebuild_author_data",
+      "filePath": "style/stylist.rs",
+      "lineRange": [972, 990],
+      "summary": "Rebuilds CascadeData for an author stylesheet collection (e.g., shadow DOM). Delegates to the CascadeDataCache for potential cache hits across documents with identical sheets.",
+      "tags": ["rebuild", "author-styles", "shadow-dom"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylist.rs:any_applicable_rule_data",
+      "type": "function",
+      "name": "any_applicable_rule_data",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1163, 1184],
+      "summary": "Tests whether a predicate is true for any applicable cascade data, including shadow DOM style data. Used for efficient early-exit checks like ID and state dependencies.",
+      "tags": ["utility", "query", "predicate"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylist.rs:precomputed_values_for_pseudo",
+      "type": "function",
+      "name": "precomputed_values_for_pseudo",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1202, 1216],
+      "summary": "Computes style for precomputed pseudo-elements (like ::before, ::after) by retrieving the rule node from UA stylesheets and delegating to the rule-node variant.",
+      "tags": ["pseudo-element", "style-computation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylist.rs:lazily_compute_pseudo_element_style",
+      "type": "function",
+      "name": "lazily_compute_pseudo_element_style",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1307, 1337],
+      "summary": "Lazily computes style for pseudo-elements like :selection during layout. Runs full selector matching via lazy_pseudo_rules and computes the style with parent inheritance.",
+      "tags": ["pseudo-element", "lazy-computation", "layout"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:resolve_position_try",
+      "type": "function",
+      "name": "resolve_position_try",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1382, 1462],
+      "summary": "Resolves a @position-try fallback style for anchored positioning. Looks up the named position-try rule across shadow DOM scopes and cascade origins, then updates cascade inputs with fallback declarations.",
+      "tags": ["position-try", "fallback", "anchored-positioning"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/stylist.rs:media_features_change_changed_style",
+      "type": "function",
+      "name": "media_features_change_changed_style",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1657, 1688],
+      "summary": "Checks whether a media feature change affects stylesheet applicability across origins. Returns a set of origins whose styles may have changed due to the new device constraints.",
+      "tags": ["media-queries", "device", "invalidation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:lookup_keyframes",
+      "type": "function",
+      "name": "lookup_keyframes",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1810, 1819],
+      "summary": "Looks up a registered @keyframes animation by name across all applicable cascade data, including shadow DOM scopes.",
+      "tags": ["keyframes", "animation", "lookup"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/stylist.rs:revalidate_scopes",
+      "type": "function",
+      "name": "revalidate_scopes",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1942, 1974],
+      "summary": "Recomputes currently active @scope rules for an element for style cache revalidation purposes. Checks both shadow DOM and document-level cascade data.",
+      "tags": ["scope", "revalidation", "cache"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/stylist.rs:compute_for_declarations",
+      "type": "function",
+      "name": "compute_for_declarations",
+      "filePath": "style/stylist.rs",
+      "lineRange": [1983, 2028],
+      "summary": "Computes a style for a given set of property declarations with a parent style, without going through the rule tree. Used for canvas font computation and other ad-hoc style resolution needs.",
+      "tags": ["style-computation", "declarations", "ad-hoc"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Stylist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ExtraStyleData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:PageRuleMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:LayerOrderedVec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:LayerOrderedMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:AuthorStylesEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:RuleInclusion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:RegisterCustomPropertyResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:flush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:push_applicable_declarations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:cascade_style_and_visited",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:register_custom_property",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:match_revalidation_selectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:rebuild_initial_values_for_custom_properties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:rebuild_author_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:any_applicable_rule_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:precomputed_values_for_pseudo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:lazily_compute_pseudo_element_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:resolve_position_try",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:media_features_change_changed_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:lookup_keyframes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:revalidate_scopes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:compute_for_declarations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Stylist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:DocumentCascadeData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ExtraStyleData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:PageRuleMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:Rule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:CascadeDataDifference",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:LayerOrderedVec",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:LayerOrderedMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:ScopeBoundsWithHashes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:AuthorStylesEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:RuleInclusion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "class:style/stylist.rs:RegisterCustomPropertyResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:flush",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:push_applicable_declarations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:cascade_style_and_visited",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:register_custom_property",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:match_revalidation_selectors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:rebuild_initial_values_for_custom_properties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:rebuild_author_data",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:any_applicable_rule_data",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:precomputed_values_for_pseudo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:lazily_compute_pseudo_element_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:resolve_position_try",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:media_features_change_changed_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:lookup_keyframes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:revalidate_scopes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/stylist.rs",
+      "target": "function:style/stylist.rs:compute_for_declarations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

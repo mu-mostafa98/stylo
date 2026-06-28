@@ -1,0 +1,1886 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/computed/easing.rs",
+      "type": "file",
+      "name": "easing.rs",
+      "filePath": "style/values/computed/easing.rs",
+      "summary": "Computed CSS easing function types supporting cubic-bezier, steps(), linear(), and keyword timing functions with per-progress output calculation.",
+      "tags": [
+        "computed-values",
+        "easing",
+        "animation",
+        "timing-functions"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/easing.rs:calculate_step_output",
+      "type": "function",
+      "name": "calculate_step_output",
+      "filePath": "style/values/computed/easing.rs",
+      "lineRange": [
+        21,
+        68
+      ],
+      "summary": "Calculates step timing function output for steps() easing.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/easing.rs:calculate_output",
+      "type": "function",
+      "name": "calculate_output",
+      "filePath": "style/values/computed/easing.rs",
+      "lineRange": [
+        71,
+        108
+      ],
+      "summary": "Evaluates timing function output given progress, handling all easing types.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/effects.rs",
+      "type": "file",
+      "name": "effects.rs",
+      "filePath": "style/values/computed/effects.rs",
+      "summary": "Type aliases for computed box-shadow, filter, and drop-shadow values bridging generic effect types with computed color, length, and angle parameters.",
+      "tags": [
+        "computed-values",
+        "effects",
+        "type-aliases"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/flex.rs",
+      "type": "file",
+      "name": "flex.rs",
+      "filePath": "style/values/computed/flex.rs",
+      "summary": "Type alias for computed flex-basis values with an auto() constructor.",
+      "tags": [
+        "computed-values",
+        "flex",
+        "type-aliases"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/flex.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/computed/flex.rs",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "Returns the auto flex-basis value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/font.rs",
+      "type": "file",
+      "name": "font.rs",
+      "filePath": "style/values/computed/font.rs",
+      "summary": "Computed font property types including FontWeight (fixed-point), FontSize, FontFamily, FontStyle (fixed-point oblique angle), FontStretch, LineHeight resolution, and font-feature/variation-settings deduplication.",
+      "tags": [
+        "computed-values",
+        "font",
+        "fixed-point",
+        "css-fonts"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses fixed-point arithmetic (u16 with configurable fractional bits) for FontWeight, FontStyle, and FontStretch to reduce memory footprint."
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_float",
+      "type": "function",
+      "name": "from_float",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        91,
+        95
+      ],
+      "summary": "Creates a fixed-point value from a float.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_float",
+      "type": "function",
+      "name": "to_float",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        98,
+        100
+      ],
+      "summary": "Converts fixed-point value back to float.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        206,
+        208
+      ],
+      "summary": "Returns the normal (400) font weight.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:is_bold",
+      "type": "function",
+      "name": "is_bold",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        211,
+        213
+      ],
+      "summary": "Returns true if weight is 600 or above.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:value",
+      "type": "function",
+      "name": "value",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        216,
+        218
+      ],
+      "summary": "Returns font weight as a float.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_float_L221",
+      "type": "function",
+      "name": "from_float_L221",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        221,
+        225
+      ],
+      "summary": "Creates a fixed-point value from a float.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:bolder",
+      "type": "function",
+      "name": "bolder",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        231,
+        240
+      ],
+      "summary": "Returns the bolder relative weight per CSS fonts spec.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:lighter",
+      "type": "function",
+      "name": "lighter",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        246,
+        255
+      ],
+      "summary": "Returns the lighter relative weight per CSS fonts spec.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:computed_size",
+      "type": "function",
+      "name": "computed_size",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        288,
+        290
+      ],
+      "summary": "Returns the computed font size.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:used_size",
+      "type": "function",
+      "name": "used_size",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        294,
+        296
+      ],
+      "summary": "Returns the used font size after constraints.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:zoom",
+      "type": "function",
+      "name": "zoom",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        300,
+        306
+      ],
+      "summary": "Applies zoom factor to font size.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:medium",
+      "type": "function",
+      "name": "medium",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        310,
+        316
+      ],
+      "summary": "Returns the default medium font size.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:serif",
+      "type": "function",
+      "name": "serif",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        386,
+        388
+      ],
+      "summary": "Returns the serif generic font family.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:moz_bullet",
+      "type": "function",
+      "name": "moz_bullet",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        392,
+        402
+      ],
+      "summary": "Function moz_bullet in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:for_system_font",
+      "type": "function",
+      "name": "for_system_font",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        406,
+        419
+      ],
+      "summary": "Function for_system_font in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:generic",
+      "type": "function",
+      "name": "generic",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        422,
+        464
+      ],
+      "summary": "Returns a static generic font family reference.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:size_of",
+      "type": "function",
+      "name": "size_of",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        468,
+        479
+      ],
+      "summary": "Function size_of in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        483,
+        497
+      ],
+      "summary": "Serializes font family list to CSS.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_css_L529",
+      "type": "function",
+      "name": "to_css_L529",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        529,
+        558
+      ],
+      "summary": "Serializes font family list to CSS.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:valid_for_user_font_prioritization",
+      "type": "function",
+      "name": "valid_for_user_font_prioritization",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        654,
+        661
+      ],
+      "summary": "Function valid_for_user_font_prioritization in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        666,
+        723
+      ],
+      "summary": "Function parse in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:iter",
+      "type": "function",
+      "name": "iter",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        737,
+        739
+      ],
+      "summary": "Function iter in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:prioritize_first_generic_or_prepend",
+      "type": "function",
+      "name": "prioritize_first_generic_or_prepend",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        748,
+        793
+      ],
+      "summary": "Function prioritize_first_generic_or_prepend in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:needs_user_font_prioritization",
+      "type": "function",
+      "name": "needs_user_font_prioritization",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        797,
+        802
+      ],
+      "summary": "Function needs_user_font_prioritization in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:single_generic",
+      "type": "function",
+      "name": "single_generic",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        805,
+        813
+      ],
+      "summary": "Returns the generic font family if only one generic is listed.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        822,
+        824
+      ],
+      "summary": "Returns the none font-size-adjust value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        830,
+        925
+      ],
+      "summary": "Converts specified font values to computed values.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        927,
+        943
+      ],
+      "summary": "Function from_computed_value in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:dedup_font_settings",
+      "type": "function",
+      "name": "dedup_font_settings",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        954,
+        971
+      ],
+      "summary": "Deduplicates font settings keeping only the last occurrence per tag.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:normal_L1021",
+      "type": "function",
+      "name": "normal_L1021",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1021,
+        1023
+      ],
+      "summary": "Returns the normal (400) font weight.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_str",
+      "type": "function",
+      "name": "to_str",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1027,
+        1036
+      ],
+      "summary": "Converts font language override to string representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_u32",
+      "type": "function",
+      "name": "from_u32",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1041,
+        1043
+      ],
+      "summary": "Function from_u32 in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_computed_value_L1082",
+      "type": "function",
+      "name": "to_computed_value_L1082",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1082,
+        1103
+      ],
+      "summary": "Converts specified font values to computed values.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:normal_L1186",
+      "type": "function",
+      "name": "normal_L1186",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1186,
+        1188
+      ],
+      "summary": "Returns the normal (400) font weight.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:oblique",
+      "type": "function",
+      "name": "oblique",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1191,
+        1197
+      ],
+      "summary": "Creates an oblique font style with given degrees.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:oblique_degrees",
+      "type": "function",
+      "name": "oblique_degrees",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1200,
+        1203
+      ],
+      "summary": "Returns the oblique angle in degrees.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_css_L1207",
+      "type": "function",
+      "name": "to_css_L1207",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1207,
+        1224
+      ],
+      "summary": "Serializes font family list to CSS.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:hundred",
+      "type": "function",
+      "name": "hundred",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1318,
+        1320
+      ],
+      "summary": "Returns 100% font stretch (normal).",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_percentage",
+      "type": "function",
+      "name": "to_percentage",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1324,
+        1326
+      ],
+      "summary": "Converts font stretch to a percentage.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_percentage",
+      "type": "function",
+      "name": "from_percentage",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1329,
+        1331
+      ],
+      "summary": "Creates font stretch from a percentage.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:from_keyword",
+      "type": "function",
+      "name": "from_keyword",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1335,
+        1348
+      ],
+      "summary": "Returns font stretch value from a keyword.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:as_keyword",
+      "type": "function",
+      "name": "as_keyword",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1351,
+        1382
+      ],
+      "summary": "Returns the keyword if stretch matches a keyword value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/font.rs:to_resolved_value",
+      "type": "function",
+      "name": "to_resolved_value",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1423,
+        1451
+      ],
+      "summary": "Function to_resolved_value in font.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FixedPoint",
+      "type": "class",
+      "name": "FixedPoint",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        76,
+        79
+      ],
+      "summary": "Generic fixed-point numeric type with configurable fractional bits for compact font property storage.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontWeight",
+      "type": "class",
+      "name": "FontWeight",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        153,
+        153
+      ],
+      "summary": "Computed font-weight using unsigned 10.6 fixed-point representation.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontSize",
+      "type": "class",
+      "name": "FontSize",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        272,
+        283
+      ],
+      "summary": "Computed font-size with both computed and used size tracking.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontFamily",
+      "type": "class",
+      "name": "FontFamily",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        361,
+        369
+      ],
+      "summary": "Computed font-family with prioritized font family list and system font tracking.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FamilyName",
+      "type": "class",
+      "name": "FamilyName",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        506,
+        511
+      ],
+      "summary": "Named font family with syntax (quoted or identifier) tracking.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontFamilyNameSyntax",
+      "type": "class",
+      "name": "FontFamilyNameSyntax",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        568,
+        576
+      ],
+      "summary": "Enum distinguishing quoted string vs identifier syntax for font family names.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:SingleFontFamily",
+      "type": "class",
+      "name": "SingleFontFamily",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        585,
+        590
+      ],
+      "summary": "Enum of either a named family or a generic family reference.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:GenericFontFamily",
+      "type": "class",
+      "name": "GenericFontFamily",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        627,
+        648
+      ],
+      "summary": "Standard CSS generic font families (serif, sans-serif, monospace, etc.).",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontFamilyList",
+      "type": "class",
+      "name": "FontFamilyList",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        730,
+        733
+      ],
+      "summary": "Ordered list of font families with prioritization for user font settings.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontLanguageOverride",
+      "type": "class",
+      "name": "FontLanguageOverride",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1016,
+        1016
+      ],
+      "summary": "Computed font language override stored as a packed u32.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontStyle",
+      "type": "class",
+      "name": "FontStyle",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1162,
+        1162
+      ],
+      "summary": "Computed font-style using signed 8.8 fixed-point for oblique angle.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/font.rs:FontStretch",
+      "type": "class",
+      "name": "FontStretch",
+      "filePath": "style/values/computed/font.rs",
+      "lineRange": [
+        1272,
+        1272
+      ],
+      "summary": "Computed font-stretch using unsigned 10.6 fixed-point percentage.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/image.rs",
+      "type": "file",
+      "name": "image.rs",
+      "filePath": "style/values/computed/image.rs",
+      "summary": "Computed image type supporting gradient directions, image-set() resolution selection, cross-fade, and conversion from specified to computed values.",
+      "tags": [
+        "computed-values",
+        "images",
+        "gradients",
+        "image-set",
+        "css-images"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        35,
+        47
+      ],
+      "summary": "Converts Image to TypedValue for typed OM.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        95,
+        148
+      ],
+      "summary": "Converts specified Image to computed value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:points_downwards",
+      "type": "function",
+      "name": "points_downwards",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        159,
+        170
+      ],
+      "summary": "Checks if gradient line direction points downward.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        172,
+        199
+      ],
+      "summary": "Serializes gradient line direction to CSS.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:to_computed_value_L205",
+      "type": "function",
+      "name": "to_computed_value_L205",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        205,
+        214
+      ],
+      "summary": "Converts specified Image to computed value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        216,
+        225
+      ],
+      "summary": "Function from_computed_value in image.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:to_computed_value_L231",
+      "type": "function",
+      "name": "to_computed_value_L231",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        231,
+        252
+      ],
+      "summary": "Converts specified Image to computed value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/image.rs:from_computed_value_L254",
+      "type": "function",
+      "name": "from_computed_value_L254",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        254,
+        272
+      ],
+      "summary": "Function from_computed_value in image.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/image.rs:LineDirection",
+      "type": "class",
+      "name": "LineDirection",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [
+        78,
+        87
+      ],
+      "summary": "Enum for gradient line direction: angle, horizontal, vertical, or corner.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/computed/easing.rs",
+      "target": "function:style/values/computed/easing.rs:calculate_step_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/easing.rs",
+      "target": "function:style/values/computed/easing.rs:calculate_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/easing.rs",
+      "target": "function:style/values/computed/easing.rs:calculate_output",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/flex.rs",
+      "target": "function:style/values/computed/flex.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/flex.rs",
+      "target": "function:style/values/computed/flex.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_float",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_float",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_float",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_float",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:is_bold",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:is_bold",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_float_L221",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_float_L221",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:bolder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:bolder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:lighter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:lighter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:computed_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:computed_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:used_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:used_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:zoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:zoom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:medium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:medium",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:serif",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:serif",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:moz_bullet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:moz_bullet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:for_system_font",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:for_system_font",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:generic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:generic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:size_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_css_L529",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:valid_for_user_font_prioritization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:valid_for_user_font_prioritization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:iter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:iter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:prioritize_first_generic_or_prepend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:prioritize_first_generic_or_prepend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:needs_user_font_prioritization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:needs_user_font_prioritization",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:single_generic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:single_generic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:dedup_font_settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal_L1021",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal_L1021",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_u32",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_u32",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_computed_value_L1082",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal_L1186",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:normal_L1186",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:oblique",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:oblique",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:oblique_degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:oblique_degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_css_L1207",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:hundred",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:hundred",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:from_keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:as_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:as_keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "function:style/values/computed/font.rs:to_resolved_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FixedPoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FixedPoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontWeight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontWeight",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FamilyName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FamilyName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamilyNameSyntax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamilyNameSyntax",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:SingleFontFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:SingleFontFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:GenericFontFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:GenericFontFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamilyList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontFamilyList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontLanguageOverride",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontLanguageOverride",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontStretch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/font.rs",
+      "target": "class:style/values/computed/font.rs:FontStretch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:points_downwards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:to_computed_value_L205",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:to_computed_value_L231",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "function:style/values/computed/image.rs:from_computed_value_L254",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "class:style/values/computed/image.rs:LineDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "class:style/values/computed/image.rs:LineDirection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

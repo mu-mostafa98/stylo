@@ -1,0 +1,996 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/grid.rs",
+      "type": "file",
+      "name": "grid.rs",
+      "filePath": "style/values/specified/grid.rs",
+      "summary": "Defines specified types for CSS Grid layout properties, parsing track sizes, line names, repeat() notation, grid-template, and grid-line values.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "grid"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse_keyword",
+      "type": "function",
+      "name": "parse_keyword",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        33,
+        46
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        50,
+        67
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "function",
+      "name": "parse_line_names",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        122,
+        134
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse_with_repeat_type",
+      "type": "function",
+      "name": "parse_with_repeat_type",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        151,
+        213
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:parse_without_none",
+      "type": "function",
+      "name": "parse_without_none",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        329,
+        348
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/grid.rs:line_names_length",
+      "type": "function",
+      "name": "line_names_length",
+      "filePath": "style/values/specified/grid.rs",
+      "lineRange": [
+        404,
+        418
+      ],
+      "summary": "Handles line names length for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/image.rs",
+      "type": "file",
+      "name": "image.rs",
+      "filePath": "style/values/specified/image.rs",
+      "summary": "Defines specified image/gradient types, including Image, Gradient, LineDirection, ImageRendering and the cross-fade() and paint() image notations.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "image-gradient"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:to_typed",
+      "type": "function",
+      "name": "to_typed",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        49,
+        61
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:has_modern_syntax",
+      "type": "function",
+      "name": "has_modern_syntax",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        97,
+        112
+      ],
+      "summary": "Handles has modern syntax for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:default_color_interpolation_method",
+      "type": "function",
+      "name": "default_color_interpolation_method",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        115,
+        129
+      ],
+      "summary": "Handles default color interpolation method for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:collect_completion_keywords",
+      "type": "function",
+      "name": "collect_completion_keywords",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        148,
+        167
+      ],
+      "summary": "Handles collect completion keywords for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_with_cors_mode",
+      "type": "function",
+      "name": "parse_with_cors_mode",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        227,
+        277
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:for_cascade",
+      "type": "function",
+      "name": "for_cascade",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        284,
+        287
+      ],
+      "summary": "Handles for cascade for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_with_cors_anonymous",
+      "type": "function",
+      "name": "parse_with_cors_anonymous",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        301,
+        311
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_forbid_none",
+      "type": "function",
+      "name": "parse_forbid_none",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        314,
+        319
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_only_url",
+      "type": "function",
+      "name": "parse_only_url",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        322,
+        332
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_args",
+      "type": "function",
+      "name": "parse_args",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        337,
+        347
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_percentage",
+      "type": "function",
+      "name": "parse_percentage",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        351,
+        364
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        367,
+        385
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_webkit_gradient_argument",
+      "type": "function",
+      "name": "parse_webkit_gradient_argument",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        576,
+        746
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_webkit_gradient_stops",
+      "type": "function",
+      "name": "parse_webkit_gradient_stops",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        748,
+        836
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_stops",
+      "type": "function",
+      "name": "parse_stops",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        839,
+        849
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:try_parse_color_interpolation_method",
+      "type": "function",
+      "name": "try_parse_color_interpolation_method",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        852,
+        863
+      ],
+      "summary": "Handles try parse color interpolation method for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_linear",
+      "type": "function",
+      "name": "parse_linear",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        867,
+        913
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_radial",
+      "type": "function",
+      "name": "parse_radial",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        916,
+        981
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_conic",
+      "type": "function",
+      "name": "parse_conic",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        984,
+        1043
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:points_downwards",
+      "type": "function",
+      "name": "points_downwards",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        1047,
+        1060
+      ],
+      "summary": "Handles points downwards for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        1062,
+        1089
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_with_compat_mode",
+      "type": "function",
+      "name": "parse_with_compat_mode",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        1246,
+        1260
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/image.rs:parse_comma_separated",
+      "type": "function",
+      "name": "parse_comma_separated",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        1264,
+        1314
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/specified/image.rs:LineDirection",
+      "type": "class",
+      "name": "LineDirection",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        194,
+        203
+      ],
+      "summary": "Enum representing CSS keyword value variants.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/image.rs:ImageRendering",
+      "type": "class",
+      "name": "ImageRendering",
+      "filePath": "style/values/specified/image.rs",
+      "lineRange": [
+        1378,
+        1397
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/intersection_observer.rs",
+      "type": "file",
+      "name": "intersection_observer.rs",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "summary": "Defines the IntersectionObserverMargin type used for IntersectionObserver rootMargin parsing and serialization.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/intersection_observer.rs:parse_pixel_or_percent",
+      "type": "function",
+      "name": "parse_pixel_or_percent",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "lineRange": [
+        17,
+        38
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/intersection_observer.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "lineRange": [
+        50,
+        63
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/intersection_observer.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "lineRange": [
+        71,
+        83
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/intersection_observer.rs:IntersectionObserverMargin",
+      "type": "class",
+      "name": "IntersectionObserverMargin",
+      "filePath": "style/values/specified/intersection_observer.rs",
+      "lineRange": [
+        47,
+        47
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_line_names",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_with_repeat_type",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_without_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse_without_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:line_names_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:line_names_length",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/grid.rs",
+      "target": "function:style/values/specified/grid.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:to_typed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:has_modern_syntax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:default_color_interpolation_method",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:collect_completion_keywords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_with_cors_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:for_cascade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:for_cascade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_with_cors_anonymous",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_with_cors_anonymous",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_forbid_none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_forbid_none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_only_url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_only_url",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_webkit_gradient_argument",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_webkit_gradient_stops",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_stops",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:try_parse_color_interpolation_method",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_linear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_radial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_conic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:points_downwards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_with_compat_mode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_comma_separated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "function:style/values/specified/image.rs:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "class:style/values/specified/image.rs:LineDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "class:style/values/specified/image.rs:LineDirection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "class:style/values/specified/image.rs:ImageRendering",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/image.rs",
+      "target": "class:style/values/specified/image.rs:ImageRendering",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/intersection_observer.rs",
+      "target": "function:style/values/specified/intersection_observer.rs:parse_pixel_or_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/intersection_observer.rs",
+      "target": "function:style/values/specified/intersection_observer.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/intersection_observer.rs",
+      "target": "function:style/values/specified/intersection_observer.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/intersection_observer.rs",
+      "target": "class:style/values/specified/intersection_observer.rs:IntersectionObserverMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/intersection_observer.rs",
+      "target": "class:style/values/specified/intersection_observer.rs:IntersectionObserverMargin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

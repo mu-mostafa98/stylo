@@ -1,0 +1,1274 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/animated/color.rs",
+      "type": "file",
+      "name": "color.rs",
+      "filePath": "style/values/animated/color.rs",
+      "summary": "Animated color interpolation implementing Animate, ComputeSquaredDistance, and ToAnimatedZero for AbsoluteColor and GenericColor types.",
+      "tags": [
+        "animation",
+        "color",
+        "interpolation",
+        "css-animations"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/color.rs:animate",
+      "type": "function",
+      "name": "animate",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        20,
+        33
+      ],
+      "summary": "Interpolates between two color values using color mixing.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/color.rs:compute_squared_distance",
+      "type": "function",
+      "name": "compute_squared_distance",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        38,
+        56
+      ],
+      "summary": "Computes squared RGBA distance between colors for animation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/color.rs:animate_L67",
+      "type": "function",
+      "name": "animate_L67",
+      "filePath": "style/values/animated/color.rs",
+      "lineRange": [
+        67,
+        85
+      ],
+      "summary": "Interpolates between two color values using color mixing.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/animated/effects.rs",
+      "type": "file",
+      "name": "effects.rs",
+      "filePath": "style/values/animated/effects.rs",
+      "summary": "Type aliases for animated filter and shadow values bridging computed types with animated representations.",
+      "tags": [
+        "animation",
+        "effects",
+        "type-aliases",
+        "css-animations"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/font.rs",
+      "type": "file",
+      "name": "font.rs",
+      "filePath": "style/values/animated/font.rs",
+      "summary": "Animation implementations for FontVariationSettings including interpolation, squared distance computation, and animated zero.",
+      "tags": [
+        "animation",
+        "font",
+        "variation-settings",
+        "css-animations"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/animated/mod.rs",
+      "summary": "Core animated value infrastructure defining the Animate, ToAnimatedValue, and ToAnimatedZero traits with implementations for numeric types, Option, Vec, Box, and other containers.",
+      "tags": [
+        "animation",
+        "traits",
+        "interpolation",
+        "type-conversion"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements the Web Animations specification procedures for interpolation, addition, and accumulation."
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:of",
+      "type": "function",
+      "name": "of",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        42,
+        56
+      ],
+      "summary": "Function of in mod.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "function",
+      "name": "compare_property_priority",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        69,
+        90
+      ],
+      "summary": "Sorts PropertyIds by category (physical, logical, shorthand) and shorthand complexity.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "function",
+      "name": "animate_multiplicative_factor",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        93,
+        99
+      ],
+      "summary": "Animates multiplicative factors by treating 1 as identity.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/animated/mod.rs:weights",
+      "type": "function",
+      "name": "weights",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        184,
+        190
+      ],
+      "summary": "Returns interpolation weights from a Procedure enum value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:Animate",
+      "type": "class",
+      "name": "Animate",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        115,
+        118
+      ],
+      "summary": "Trait for animating from one value to another with a given procedure.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:Procedure",
+      "type": "class",
+      "name": "Procedure",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        125,
+        132
+      ],
+      "summary": "Enum representing Interpolate, Add, or Accumulate animation procedures.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:Context",
+      "type": "class",
+      "name": "Context",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        135,
+        138
+      ],
+      "summary": "Context providing the computed style for animated value conversion.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "class",
+      "name": "ToAnimatedValue",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        145,
+        154
+      ],
+      "summary": "Trait for converting between computed values and intermediate animation values.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "class",
+      "name": "ToAnimatedZero",
+      "filePath": "style/values/animated/mod.rs",
+      "lineRange": [
+        167,
+        176
+      ],
+      "summary": "Trait for producing a zero value for additive animation.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/animated/transform.rs",
+      "summary": "CSS transform animation and interpolation implementing matrix decomposition/recomposition, quaternion slerp, and per-function interpolation for 2D and 3D transforms.",
+      "tags": [
+        "animation",
+        "transforms",
+        "matrix",
+        "quaternion",
+        "css-transforms"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Implements both Gecko and Servo decomposition algorithms with conditional compilation for platform differences."
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate",
+      "type": "function",
+      "name": "animate",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        93,
+        133
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:compute_squared_distance",
+      "type": "function",
+      "name": "compute_squared_distance",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        138,
+        147
+      ],
+      "summary": "Function compute_squared_distance in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:from",
+      "type": "function",
+      "name": "from",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        153,
+        215
+      ],
+      "summary": "Function from in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:from_L221",
+      "type": "function",
+      "name": "from_L221",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        221,
+        252
+      ],
+      "summary": "Function from in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:from_direction_and_angle",
+      "type": "function",
+      "name": "from_direction_and_angle",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        346,
+        377
+      ],
+      "summary": "Function from_direction_and_angle in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L411",
+      "type": "function",
+      "name": "animate_L411",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        411,
+        487
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:from_L520",
+      "type": "function",
+      "name": "from_L520",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        520,
+        577
+      ],
+      "summary": "Function from in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:decompose_3d_matrix",
+      "type": "function",
+      "name": "decompose_3d_matrix",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        583,
+        727
+      ],
+      "summary": "Function decompose_3d_matrix in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:decompose_2d_matrix",
+      "type": "function",
+      "name": "decompose_2d_matrix",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        851,
+        900
+      ],
+      "summary": "Function decompose_2d_matrix in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L904",
+      "type": "function",
+      "name": "animate_L904",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        904,
+        920
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L925",
+      "type": "function",
+      "name": "animate_L925",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        925,
+        935
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:compute_squared_distance_L941",
+      "type": "function",
+      "name": "compute_squared_distance_L941",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        941,
+        951
+      ],
+      "summary": "Function compute_squared_distance in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:is_matched_operation",
+      "type": "function",
+      "name": "is_matched_operation",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        968,
+        991
+      ],
+      "summary": "Function is_matched_operation in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L996",
+      "type": "function",
+      "name": "animate_L996",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        996,
+        1084
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:compute_squared_distance_L1089",
+      "type": "function",
+      "name": "compute_squared_distance_L1089",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1089,
+        1105
+      ],
+      "summary": "Function compute_squared_distance in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L1110",
+      "type": "function",
+      "name": "animate_L1110",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1110,
+        1255
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:try_animate_mismatched_transforms_in_place",
+      "type": "function",
+      "name": "try_animate_mismatched_transforms_in_place",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1261,
+        1271
+      ],
+      "summary": "Function try_animate_mismatched_transforms_in_place in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_mismatched_transforms",
+      "type": "function",
+      "name": "animate_mismatched_transforms",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1273,
+        1299
+      ],
+      "summary": "Function animate_mismatched_transforms in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:compute_squared_distance_L1307",
+      "type": "function",
+      "name": "compute_squared_distance_L1307",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1307,
+        1393
+      ],
+      "summary": "Function compute_squared_distance in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1401,
+        1411
+      ],
+      "summary": "Function resolve in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L1416",
+      "type": "function",
+      "name": "animate_L1416",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1416,
+        1530
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:compute_squared_distance_L1535",
+      "type": "function",
+      "name": "compute_squared_distance_L1535",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1535,
+        1574
+      ],
+      "summary": "Function compute_squared_distance in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:resolve_L1579",
+      "type": "function",
+      "name": "resolve_L1579",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1579,
+        1592
+      ],
+      "summary": "Function resolve in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L1597",
+      "type": "function",
+      "name": "animate_L1597",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1597,
+        1609
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:resolve_L1624",
+      "type": "function",
+      "name": "resolve_L1624",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1624,
+        1633
+      ],
+      "summary": "Function resolve in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/animated/transform.rs:animate_L1638",
+      "type": "function",
+      "name": "animate_L1638",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        1638,
+        1658
+      ],
+      "summary": "Function animate in transform.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "class",
+      "name": "InnerMatrix2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "2x2 matrix component for 2D transform decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Translate2D",
+      "type": "class",
+      "name": "Translate2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        61,
+        61
+      ],
+      "summary": "2D translation component in decomposed matrix.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Scale2D",
+      "type": "class",
+      "name": "Scale2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        66,
+        66
+      ],
+      "summary": "2D scale component in decomposed matrix.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "class",
+      "name": "MatrixDecomposed2D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        80,
+        89
+      ],
+      "summary": "Decomposed 2D transform matrix with translate, scale, rotation, and inner matrix.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Translate3D",
+      "type": "class",
+      "name": "Translate3D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        280,
+        280
+      ],
+      "summary": "3D translation component for 3D matrix decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Scale3D",
+      "type": "class",
+      "name": "Scale3D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        285,
+        285
+      ],
+      "summary": "3D scale component for 3D matrix decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Skew",
+      "type": "class",
+      "name": "Skew",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        309,
+        309
+      ],
+      "summary": "Skew component for 3D matrix decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Perspective",
+      "type": "class",
+      "name": "Perspective",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        325,
+        325
+      ],
+      "summary": "Perspective component for 3D matrix decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "class",
+      "name": "Quaternion",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        341,
+        341
+      ],
+      "summary": "Quaternion representing rotation in 3D matrix decomposition.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "class",
+      "name": "MatrixDecomposed3D",
+      "filePath": "style/values/animated/transform.rs",
+      "lineRange": [
+        504,
+        515
+      ],
+      "summary": "Complete decomposed 3D matrix with translate, scale, skew, perspective, and quaternion.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/animated/text.rs",
+      "type": "file",
+      "name": "text.rs",
+      "filePath": "style/values/animated/text.rs",
+      "summary": "File listed in the batch but not found on disk. No content available for analysis.",
+      "tags": [
+        "missing-file",
+        "placeholder",
+        "orphaned"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/color.rs",
+      "target": "function:style/values/animated/color.rs:animate_L67",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:compare_property_priority",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:animate_multiplicative_factor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:weights",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "function:style/values/animated/mod.rs:weights",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Animate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Procedure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:Context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/mod.rs",
+      "target": "class:style/values/animated/mod.rs:ToAnimatedZero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:from",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:from_L221",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:from_direction_and_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L411",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:from_L520",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:decompose_3d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:decompose_2d_matrix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L904",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L925",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:compute_squared_distance_L941",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:is_matched_operation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L996",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:compute_squared_distance_L1089",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L1110",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:try_animate_mismatched_transforms_in_place",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_mismatched_transforms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:compute_squared_distance_L1307",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L1416",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:compute_squared_distance_L1535",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:resolve_L1579",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L1597",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:resolve_L1624",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "function:style/values/animated/transform.rs:animate_L1638",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:InnerMatrix2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Translate2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Translate2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Scale2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Scale2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed2D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Translate3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Translate3D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Scale3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Scale3D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Skew",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Skew",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Perspective",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Perspective",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:Quaternion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/animated/transform.rs",
+      "target": "class:style/values/animated/transform.rs:MatrixDecomposed3D",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

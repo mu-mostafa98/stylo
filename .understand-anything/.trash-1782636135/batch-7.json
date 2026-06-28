@@ -1,0 +1,716 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/computed/length.rs",
+      "type": "file",
+      "name": "length.rs",
+      "filePath": "style/values/computed/length.rs",
+      "summary": "Defines computed length types including CSSPixelLength, length-percentage combinations, margin, and size types, with operator overloads and anchor-position resolution for Gecko.",
+      "tags": ["computed-values", "length", "css-property", "type-definition"],
+      "complexity": "complex",
+      "languageNotes": "Uses extensive derive macros and trait implementations for CSS value types with operator overloading."
+    },
+    {
+      "id": "file:style/values/computed/list.rs",
+      "type": "file",
+      "name": "list.rs",
+      "filePath": "style/values/computed/list.rs",
+      "summary": "Re-exports list-related specified types and provides a get_initial_value method for the Quotes type.",
+      "tags": ["computed-values", "list", "barrel", "re-exports"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/computed/mod.rs",
+      "summary": "Central module for all computed style values, defining the Context struct, ToComputedValue trait, and re-exporting all computed value types from submodules.",
+      "tags": ["computed-values", "entry-point", "module", "trait-definition", "type-definition"],
+      "complexity": "complex",
+      "languageNotes": "Uses Rust's re-export pattern to provide a unified namespace and derives ToComputedValue for standard library types."
+    },
+    {
+      "id": "file:style/values/computed/motion.rs",
+      "type": "file",
+      "name": "motion.rs",
+      "filePath": "style/values/computed/motion.rs",
+      "summary": "Defines computed types for CSS motion path properties including offset-path, offset-position, and offset-rotate.",
+      "tags": ["computed-values", "motion", "animation", "type-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/position.rs",
+      "type": "file",
+      "name": "position.rs",
+      "filePath": "style/values/computed/position.rs",
+      "summary": "Defines computed types for CSS position, anchor positioning, inset, z-index, aspect-ratio, and position-area with try-tactic adjustments for anchor positioning.",
+      "tags": ["computed-values", "position", "css-property", "anchor-positioning"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/values/computed/rect.rs",
+      "type": "file",
+      "name": "rect.rs",
+      "filePath": "style/values/computed/rect.rs",
+      "summary": "Defines a type alias for rectangles made of four non-negative length-or-number values.",
+      "tags": ["computed-values", "rectangle", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/settings.rs",
+      "type": "file",
+      "name": "settings.rs",
+      "filePath": "style/values/computed/settings.rs",
+      "summary": "File does not exist on disk — listed in batch but not present in the repository.",
+      "tags": ["missing-file"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/source.rs",
+      "type": "file",
+      "name": "source.rs",
+      "filePath": "style/values/computed/source.rs",
+      "summary": "File does not exist on disk — listed in batch but not present in the repository.",
+      "tags": ["missing-file"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/svg.rs",
+      "type": "file",
+      "name": "svg.rs",
+      "filePath": "style/values/computed/svg.rs",
+      "summary": "Defines computed SVG property types including paint, length, width, stroke dash array, and opacity.",
+      "tags": ["computed-values", "svg", "type-definition", "css-property"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/text.rs",
+      "type": "file",
+      "name": "text.rs",
+      "filePath": "style/values/computed/text.rs",
+      "summary": "Defines computed types for CSS text properties including letter-spacing, word-spacing, text-indent, text-emphasis, initial-letter, and hyphenation.",
+      "tags": ["computed-values", "text", "css-property", "type-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/time.rs",
+      "type": "file",
+      "name": "time.rs",
+      "filePath": "style/values/computed/time.rs",
+      "summary": "Defines the computed Time type with CSS serialization and Typed OM conversion support.",
+      "tags": ["computed-values", "time", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/transform.rs",
+      "type": "file",
+      "name": "transform.rs",
+      "filePath": "style/values/computed/transform.rs",
+      "summary": "Defines computed CSS transform types including Matrix3D, Matrix, transform operations, and transform-origin with matrix manipulation methods.",
+      "tags": ["computed-values", "transform", "matrix", "animation"],
+      "complexity": "complex",
+      "languageNotes": "Uses extensive const generics and matrix math for 2D/3D transform decomposition and interpolation."
+    },
+    {
+      "id": "file:style/values/computed/transition.rs",
+      "type": "file",
+      "name": "transition.rs",
+      "filePath": "style/values/computed/transition.rs",
+      "summary": "File does not exist on disk — listed in batch but not present in the repository.",
+      "tags": ["missing-file"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/ui.rs",
+      "type": "file",
+      "name": "ui.rs",
+      "filePath": "style/values/computed/ui.rs",
+      "summary": "Defines computed UI property types including cursor, cursor image, and scrollbar color.",
+      "tags": ["computed-values", "ui", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/url.rs",
+      "type": "file",
+      "name": "url.rs",
+      "filePath": "style/values/computed/url.rs",
+      "summary": "Defines the computed UrlOrNone type using the framework's computed URL representation.",
+      "tags": ["computed-values", "url", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/wayland.rs",
+      "type": "file",
+      "name": "wayland.rs",
+      "filePath": "style/values/computed/wayland.rs",
+      "summary": "File does not exist on disk — listed in batch but not present in the repository.",
+      "tags": ["missing-file"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/corner_shape.rs",
+      "type": "file",
+      "name": "corner_shape.rs",
+      "filePath": "style/values/computed/corner_shape.rs",
+      "summary": "Defines the computed CornerShape type representing superellipse parameters for CSS corner-shape, with animation and distance computation support.",
+      "tags": ["computed-values", "border", "corner-shape", "animation"],
+      "complexity": "moderate",
+      "languageNotes": "Implements a non-linear mapping between superellipse K parameter and interpolation value for smooth shape transitions."
+    },
+    {
+      "id": "file:style/values/computed/image.rs",
+      "type": "file",
+      "name": "image.rs",
+      "filePath": "style/values/computed/image.rs",
+      "summary": "Defines computed types for CSS image values including gradients, cross-fade, image-set, and line direction with Typed OM and ToComputedValue implementations.",
+      "tags": ["computed-values", "image", "gradient", "css-property"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/length.rs:CSSPixelLength",
+      "type": "class",
+      "name": "CSSPixelLength",
+      "filePath": "style/values/computed/length.rs",
+      "lineRange": [127, 127],
+      "summary": "Core computed length type wrapping CSSFloat, with arithmetic operations, zoom/unzoom, and conversions to/from app units and euclid lengths.",
+      "tags": ["computed-values", "length", "pixel"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:Context",
+      "type": "class",
+      "name": "Context",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [174, 231],
+      "summary": "Central computation context providing access to StyleBuilder, device, font metrics, viewport size, container queries, and rule cache conditions.",
+      "tags": ["computed-values", "context", "core"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:ComputedVecIter",
+      "type": "class",
+      "name": "ComputedVecIter",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [491, 494],
+      "summary": "Iterator over a slice of specified values that computes each value using a shared Context.",
+      "tags": ["computed-values", "iterator", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:ToComputedValue",
+      "type": "class",
+      "name": "ToComputedValue",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [536, 549],
+      "summary": "Trait defining conversion from specified to computed values and back, with blanket implementations for standard library types.",
+      "tags": ["computed-values", "trait", "conversion", "core"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:AngleOrPercentage",
+      "type": "class",
+      "name": "AngleOrPercentage",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [787, 790],
+      "summary": "Enum representing either a computed angle or percentage value.",
+      "tags": ["computed-values", "angle", "percentage", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:NumberOrPercentage",
+      "type": "class",
+      "name": "NumberOrPercentage",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [934, 937],
+      "summary": "Enum representing either a computed number or percentage value with clamp-to-non-negative support.",
+      "tags": ["computed-values", "number", "percentage", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/motion.rs:OffsetRotate",
+      "type": "class",
+      "name": "OffsetRotate",
+      "filePath": "style/values/computed/motion.rs",
+      "lineRange": [51, 62],
+      "summary": "Computed offset-rotate value combining an auto flag and angle for motion path rotation.",
+      "tags": ["computed-values", "motion", "offset"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/position.rs:TryTacticAdjustment",
+      "type": "class",
+      "name": "TryTacticAdjustment",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [107, 111],
+      "summary": "Trait for adjusting CSS values when a try-tactic swaps physical sides in anchor positioning.",
+      "tags": ["computed-values", "position", "anchor", "trait"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/text.rs:GenericLetterSpacing",
+      "type": "class",
+      "name": "GenericLetterSpacing",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [74, 74],
+      "summary": "Newtype wrapper for computed letter-spacing values with CSS serialization and Typed OM support.",
+      "tags": ["computed-values", "text", "spacing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/text.rs:TextEmphasisStyle",
+      "type": "class",
+      "name": "TextEmphasisStyle",
+      "filePath": "style/values/computed/text.rs",
+      "lineRange": [132, 143],
+      "summary": "Enum representing computed text-emphasis-style with keyword (fill + shape), none, and string variants.",
+      "tags": ["computed-values", "text", "emphasis", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/time.rs:Time",
+      "type": "class",
+      "name": "Time",
+      "filePath": "style/values/computed/time.rs",
+      "lineRange": [31, 33],
+      "summary": "Computed CSS time value wrapping seconds with CSS serialization and Typed OM conversion.",
+      "tags": ["computed-values", "time"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/corner_shape.rs:CornerShape",
+      "type": "class",
+      "name": "CornerShape",
+      "filePath": "style/values/computed/corner_shape.rs",
+      "lineRange": [24, 27],
+      "summary": "Computed superellipse K parameter for CSS corner-shape, with named constructors and animation via non-linear interpolation mapping.",
+      "tags": ["computed-values", "corner-shape", "border", "animation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/image.rs:LineDirection",
+      "type": "class",
+      "name": "LineDirection",
+      "filePath": "style/values/computed/image.rs",
+      "lineRange": [78, 87],
+      "summary": "Enum representing computed gradient line direction as angle, horizontal, vertical, or corner, with CSS serialization in modern and legacy modes.",
+      "tags": ["computed-values", "gradient", "direction", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/length.rs:resolve_anchor_size",
+      "type": "function",
+      "name": "resolve_anchor_size",
+      "filePath": "style/values/computed/length.rs",
+      "lineRange": [477, 502],
+      "summary": "Resolves anchor size by calling into Gecko's anchor positioning system to get computed offset.",
+      "tags": ["computed-values", "anchor", "gecko", "ffi"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/length.rs:try_tactic_adjustment (MaxSize)",
+      "type": "function",
+      "name": "try_tactic_adjustment (MaxSize)",
+      "filePath": "style/values/computed/length.rs",
+      "lineRange": [508, 529],
+      "summary": "Adjusts MaxSize values for anchor position try-tactics when physical sides change.",
+      "tags": ["computed-values", "anchor", "tactic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/length.rs:try_tactic_adjustment (Size)",
+      "type": "function",
+      "name": "try_tactic_adjustment (Size)",
+      "filePath": "style/values/computed/length.rs",
+      "lineRange": [533, 554],
+      "summary": "Adjusts Size values for anchor position try-tactics when physical sides change.",
+      "tags": ["computed-values", "anchor", "tactic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_media_query_evaluation",
+      "type": "function",
+      "name": "for_media_query_evaluation",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [243, 263],
+      "summary": "Creates a Context suitable for media query evaluation where font-relative units use system font values and executes the provided closure.",
+      "tags": ["computed-values", "media-query", "context"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_container_query_evaluation",
+      "type": "function",
+      "name": "for_container_query_evaluation",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [267, 302],
+      "summary": "Creates a Context suitable for container query evaluation with the specified container info and executes the provided closure.",
+      "tags": ["computed-values", "container-query", "context"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:query_font_metrics",
+      "type": "function",
+      "name": "query_font_metrics",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [397, 433],
+      "summary": "Queries font metrics for a given font base size and orientation, handling inherited vs current style and self/inherited font metric dependencies.",
+      "tags": ["computed-values", "font", "metrics", "resolution"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_border_rect",
+      "type": "function",
+      "name": "for_border_rect",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [1058, 1078],
+      "summary": "Resolves a clip rect against a border box, converting auto values to the box boundaries.",
+      "tags": ["computed-values", "clip", "border", "rect"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:keyword_and_percentage",
+      "type": "function",
+      "name": "keyword_and_percentage",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [49, 60],
+      "summary": "Breaks down an anchor side into its equivalent keyword and percentage components.",
+      "tags": ["computed-values", "anchor", "keyword"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [75, 102],
+      "summary": "Resolves an anchor function by calling into Gecko to get the computed offset position.",
+      "tags": ["computed-values", "anchor", "gecko", "ffi"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:center",
+      "type": "function",
+      "name": "center",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [170, 175],
+      "summary": "Returns the computed 50% 50% center position.",
+      "tags": ["computed-values", "position", "center"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:into_2d",
+      "type": "function",
+      "name": "into_2d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [69, 82],
+      "summary": "Converts a 4x4 Matrix3D to a 2D Matrix if it has no 3D components.",
+      "tags": ["computed-values", "transform", "matrix"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:determinant",
+      "type": "function",
+      "name": "determinant",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [96, 121],
+      "summary": "Computes the determinant of a 4x4 transformation matrix.",
+      "tags": ["computed-values", "transform", "matrix", "math"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:inverse",
+      "type": "function",
+      "name": "inverse",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [135, 211],
+      "summary": "Computes the inverse of a 4x4 transformation matrix using cofactor expansion.",
+      "tags": ["computed-values", "transform", "matrix", "math"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:multiply",
+      "type": "function",
+      "name": "multiply",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [226, 261],
+      "summary": "Multiplies two 4x4 transformation matrices together.",
+      "tags": ["computed-values", "transform", "matrix", "math"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:scale_by_factor",
+      "type": "function",
+      "name": "scale_by_factor",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [265, 282],
+      "summary": "Scales all elements of a 4x4 matrix by a constant factor.",
+      "tags": ["computed-values", "transform", "matrix"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:apply_scale",
+      "type": "function",
+      "name": "apply_scale",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [316, 329],
+      "summary": "Applies a 3D scale to a transformation matrix, scaling each axis independently.",
+      "tags": ["computed-values", "transform", "matrix", "scale"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_translate_3d",
+      "type": "function",
+      "name": "to_translate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [375, 404],
+      "summary": "Normalizes any translate transform operation to a Translate3D representation.",
+      "tags": ["computed-values", "transform", "translate"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_rotate_3d",
+      "type": "function",
+      "name": "to_rotate_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [409, 424],
+      "summary": "Normalizes any rotate transform operation to a Rotate3D representation.",
+      "tags": ["computed-values", "transform", "rotate"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/transform.rs:to_scale_3d",
+      "type": "function",
+      "name": "to_scale_3d",
+      "filePath": "style/values/computed/transform.rs",
+      "lineRange": [429, 446],
+      "summary": "Normalizes any scale transform operation to a Scale3D representation.",
+      "tags": ["computed-values", "transform", "scale"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/computed/length.rs",
+      "target": "class:style/values/computed/length.rs:CSSPixelLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/length.rs",
+      "target": "function:style/values/computed/length.rs:resolve_anchor_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/length.rs",
+      "target": "function:style/values/computed/length.rs:try_tactic_adjustment (MaxSize)",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/length.rs",
+      "target": "function:style/values/computed/length.rs:try_tactic_adjustment (Size)",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:Context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ComputedVecIter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ToComputedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:AngleOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:NumberOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_media_query_evaluation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_container_query_evaluation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:query_font_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_border_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/motion.rs",
+      "target": "class:style/values/computed/motion.rs:OffsetRotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "class:style/values/computed/position.rs:TryTacticAdjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:keyword_and_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:center",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:GenericLetterSpacing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/text.rs",
+      "target": "class:style/values/computed/text.rs:TextEmphasisStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/time.rs",
+      "target": "class:style/values/computed/time.rs:Time",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:into_2d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:determinant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:inverse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:multiply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:scale_by_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:apply_scale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_translate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_rotate_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/transform.rs",
+      "target": "function:style/values/computed/transform.rs:to_scale_3d",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/corner_shape.rs",
+      "target": "class:style/values/computed/corner_shape.rs:CornerShape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/values/computed/image.rs",
+      "target": "class:style/values/computed/image.rs:LineDirection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

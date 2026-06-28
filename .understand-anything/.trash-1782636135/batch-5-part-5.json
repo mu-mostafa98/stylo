@@ -1,0 +1,2264 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/effects.rs",
+      "type": "file",
+      "name": "effects.rs",
+      "filePath": "style/values/specified/effects.rs",
+      "summary": "Defines specified types for CSS visual effects, including Filter, BoxShadow and SimpleShadow types with filter function and shadow value parsing.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "filters"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/effects.rs:to_computed_value_without_context",
+      "type": "function",
+      "name": "to_computed_value_without_context",
+      "filePath": "style/values/specified/effects.rs",
+      "lineRange": [
+        56,
+        58
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/effects.rs:clamp_to_one",
+      "type": "function",
+      "name": "clamp_to_one",
+      "filePath": "style/values/specified/effects.rs",
+      "lineRange": [
+        73,
+        84
+      ],
+      "summary": "Handles clamp to one for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/effects.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/effects.rs",
+      "lineRange": [
+        127,
+        185
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/effects.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/effects.rs",
+      "lineRange": [
+        192,
+        202
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/effects.rs:FilterFactor",
+      "type": "class",
+      "name": "FilterFactor",
+      "filePath": "style/values/specified/effects.rs",
+      "lineRange": [
+        53,
+        53
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/flex.rs",
+      "type": "file",
+      "name": "flex.rs",
+      "filePath": "style/values/specified/flex.rs",
+      "summary": "Defines the FlexBasis type for CSS flex-basis property, parsing length, percentage, auto and content values.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "flexbox"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/flex.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/specified/flex.rs",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Returns the auto value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/flex.rs:zero_percent",
+      "type": "function",
+      "name": "zero_percent",
+      "filePath": "style/values/specified/flex.rs",
+      "lineRange": [
+        25,
+        27
+      ],
+      "summary": "Handles zero percent for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/flex.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/flex.rs",
+      "lineRange": [
+        31,
+        44
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/specified/font.rs",
+      "type": "file",
+      "name": "font.rs",
+      "filePath": "style/values/specified/font.rs",
+      "summary": "Defines specified types for CSS font properties, including FontWeight, FontStyle, FontStretch, FontSize, FontFamily, FontPalette and related types for comprehensive font configuration.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "typography"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        118,
+        120
+      ],
+      "summary": "Parses CSS input into the specified value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:normal",
+      "type": "function",
+      "name": "normal",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        159,
+        161
+      ],
+      "summary": "Returns the normal/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:from_gecko_keyword",
+      "type": "function",
+      "name": "from_gecko_keyword",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        164,
+        168
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        175,
+        190
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:compute",
+      "type": "function",
+      "name": "compute",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        216,
+        224
+      ],
+      "summary": "Handles compute for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        272,
+        293
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:compute_angle_degrees",
+      "type": "function",
+      "name": "compute_angle_degrees",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        348,
+        355
+      ],
+      "summary": "Handles compute angle degrees for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:parse_angle",
+      "type": "function",
+      "name": "parse_angle",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        358,
+        375
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:default_angle",
+      "type": "function",
+      "name": "default_angle",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        378,
+        380
+      ],
+      "summary": "Handles default angle for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:from_percentage",
+      "type": "function",
+      "name": "from_percentage",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        459,
+        461
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:html_size",
+      "type": "function",
+      "name": "html_size",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        540,
+        542
+      ],
+      "summary": "Handles html size for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:is_math",
+      "type": "function",
+      "name": "is_math",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        546,
+        548
+      ],
+      "summary": "Handles is math for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:medium",
+      "type": "function",
+      "name": "medium",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        595,
+        597
+      ],
+      "summary": "Returns the medium value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:none",
+      "type": "function",
+      "name": "none",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        600,
+        602
+      ],
+      "summary": "Returns the none/initial value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:compose",
+      "type": "function",
+      "name": "compose",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        626,
+        635
+      ],
+      "summary": "Handles compose for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:size_of",
+      "type": "function",
+      "name": "size_of",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        707,
+        716
+      ],
+      "summary": "Handles size of for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:to_length",
+      "type": "function",
+      "name": "to_length",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        825,
+        847
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:to_length_without_context",
+      "type": "function",
+      "name": "to_length_without_context",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        851,
+        913
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:from_html_size",
+      "type": "function",
+      "name": "from_html_size",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        918,
+        930
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:to_computed_value_against",
+      "type": "function",
+      "name": "to_computed_value_against",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        933,
+        1027
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:parse_quirky",
+      "type": "function",
+      "name": "parse_quirky",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1060,
+        1079
+      ],
+      "summary": "Parses CSS input with quirks mode support.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:len",
+      "type": "function",
+      "name": "len",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1173,
+        1183
+      ],
+      "summary": "Handles len for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:validate_mixed_flags",
+      "type": "function",
+      "name": "validate_mixed_flags",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1363,
+        1373
+      ],
+      "summary": "Handles validate mixed flags for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:parse_for_font_face_rule",
+      "type": "function",
+      "name": "parse_for_font_face_rule",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1519,
+        1532
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:light",
+      "type": "function",
+      "name": "light",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1643,
+        1645
+      ],
+      "summary": "Handles light for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:dark",
+      "type": "function",
+      "name": "dark",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1646,
+        1648
+      ],
+      "summary": "Handles dark for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:parse_one_feature_value",
+      "type": "function",
+      "name": "parse_one_feature_value",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1685,
+        1697
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:text_zoom_enabled",
+      "type": "function",
+      "name": "text_zoom_enabled",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1806,
+        1808
+      ],
+      "summary": "Handles text zoom enabled for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "function",
+      "name": "get_initial_value",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1830,
+        1832
+      ],
+      "summary": "Handles get initial value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/font.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        2016,
+        2028
+      ],
+      "summary": "Converts a computed value back to a specified value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:SystemFont",
+      "type": "class",
+      "name": "SystemFont",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        74,
+        101
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontWeight",
+      "type": "class",
+      "name": "FontWeight",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        142,
+        152
+      ],
+      "summary": "Specified CSS font-weight value supporting numeric and keyword values.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:AbsoluteFontWeight",
+      "type": "class",
+      "name": "AbsoluteFontWeight",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        202,
+        211
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontStyle",
+      "type": "class",
+      "name": "FontStyle",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        389,
+        393
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontStretch",
+      "type": "class",
+      "name": "FontStretch",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        427,
+        432
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontStretchKeyword",
+      "type": "class",
+      "name": "FontStretchKeyword",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        439,
+        449
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontSizeKeyword",
+      "type": "class",
+      "name": "FontSizeKeyword",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        517,
+        535
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:KeywordInfo",
+      "type": "class",
+      "name": "KeywordInfo",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        581,
+        591
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontSize",
+      "type": "class",
+      "name": "FontSize",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        646,
+        667
+      ],
+      "summary": "Specified CSS font-size value supporting keywords, lengths and percentages.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontFamily",
+      "type": "class",
+      "name": "FontFamily",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        673,
+        680
+      ],
+      "summary": "Specified CSS font-family value with fallback list and generic family handling.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontSizeAdjustFactor",
+      "type": "class",
+      "name": "FontSizeAdjustFactor",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        759,
+        764
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:VariantAlternates",
+      "type": "class",
+      "name": "VariantAlternates",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1128,
+        1149
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontVariantAlternates",
+      "type": "class",
+      "name": "FontVariantAlternates",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1167,
+        1169
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontVariantEastAsian",
+      "type": "class",
+      "name": "FontVariantEastAsian",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1329,
+        1329
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontVariantLigatures",
+      "type": "class",
+      "name": "FontVariantLigatures",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1399,
+        1399
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontVariantNumeric",
+      "type": "class",
+      "name": "FontVariantNumeric",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1465,
+        1465
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontSynthesis",
+      "type": "class",
+      "name": "FontSynthesis",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1587,
+        1592
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontSynthesisStyle",
+      "type": "class",
+      "name": "FontSynthesisStyle",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1611,
+        1618
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:FontPalette",
+      "type": "class",
+      "name": "FontPalette",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1636,
+        1636
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:MetricsOverride",
+      "type": "class",
+      "name": "MetricsOverride",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1750,
+        1755
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:XTextScale",
+      "type": "class",
+      "name": "XTextScale",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1794,
+        1801
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:XLang",
+      "type": "class",
+      "name": "XLang",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1825,
+        1825
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:MozScriptMinSize",
+      "type": "class",
+      "name": "MozScriptMinSize",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1852,
+        1852
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:MathDepth",
+      "type": "class",
+      "name": "MathDepth",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1879,
+        1889
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:MozScriptSizeMultiplier",
+      "type": "class",
+      "name": "MozScriptSizeMultiplier",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        1928,
+        1928
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/font.rs:QueryFontMetricsFlags",
+      "type": "class",
+      "name": "QueryFontMetricsFlags",
+      "filePath": "style/values/specified/font.rs",
+      "lineRange": [
+        2033,
+        2033
+      ],
+      "summary": "Bitflags representing CSS keyword values for the property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:clamp_to_one",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "function:style/values/specified/effects.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "class:style/values/specified/effects.rs:FilterFactor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/effects.rs",
+      "target": "class:style/values/specified/effects.rs:FilterFactor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/flex.rs",
+      "target": "function:style/values/specified/flex.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/flex.rs",
+      "target": "function:style/values/specified/flex.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/flex.rs",
+      "target": "function:style/values/specified/flex.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/flex.rs",
+      "target": "function:style/values/specified/flex.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/flex.rs",
+      "target": "function:style/values/specified/flex.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_gecko_keyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_gecko_keyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute_angle_degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute_angle_degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:default_angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:default_angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:html_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:html_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:is_math",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:is_math",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:is_math",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:is_math",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:medium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:medium",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:none",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:none",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:size_of",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_length_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_length_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_html_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_html_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value_against",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value_against",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:medium",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:medium",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:validate_mixed_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:validate_mixed_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_for_font_face_rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_for_font_face_rule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:light",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:light",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:dark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:dark",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_one_feature_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_for_font_face_rule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse_for_font_face_rule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:normal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:compute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:text_zoom_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:text_zoom_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:get_initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "function:style/values/specified/font.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:SystemFont",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:SystemFont",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:SystemFont",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:SystemFont",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontWeight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontWeight",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:AbsoluteFontWeight",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:AbsoluteFontWeight",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStretch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStretch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStretchKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontStretchKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSizeKeyword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSizeKeyword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:KeywordInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:KeywordInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontFamily",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontFamily",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSizeAdjustFactor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSizeAdjustFactor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:VariantAlternates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:VariantAlternates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantAlternates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantAlternates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantEastAsian",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantEastAsian",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantLigatures",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantLigatures",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantNumeric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontVariantNumeric",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSynthesis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSynthesis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSynthesisStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontSynthesisStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontPalette",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:FontPalette",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MetricsOverride",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MetricsOverride",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:XTextScale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:XTextScale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:XLang",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:XLang",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MozScriptMinSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MozScriptMinSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MathDepth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MathDepth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MozScriptSizeMultiplier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:MozScriptSizeMultiplier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:QueryFontMetricsFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/font.rs",
+      "target": "class:style/values/specified/font.rs:QueryFontMetricsFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

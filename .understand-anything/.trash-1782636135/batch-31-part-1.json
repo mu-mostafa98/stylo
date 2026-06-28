@@ -1,0 +1,1028 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/properties/computed_value_flags.rs",
+      "type": "file",
+      "name": "computed_value_flags.rs",
+      "filePath": "style/properties/computed_value_flags.rs",
+      "summary": "Defines the ComputedValueFlags bitflags struct used to track misc information about a given computed style, including flags for text decoration, line breaks, viewport units, container queries, and font metrics dependencies.",
+      "tags": [
+        "style-system",
+        "bitflags",
+        "computed-style"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/properties/gecko.mako.rs",
+      "type": "file",
+      "name": "gecko.mako.rs",
+      "filePath": "style/properties/gecko.mako.rs",
+      "summary": "Mako template generating Gecko-specific ComputedValues implementations, including FFI bindings for constructing, copying, and destroying style structs between Rust and C++.",
+      "tags": [
+        "template",
+        "ffi-bindings",
+        "gecko",
+        "computed-style"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Mako template that generates Rust code with Gecko FFI bindings for Servo's style system integration with Firefox."
+    },
+    {
+      "id": "file:style/properties/helpers.mako.rs",
+      "type": "file",
+      "name": "helpers.mako.rs",
+      "filePath": "style/properties/helpers.mako.rs",
+      "summary": "Mako template providing helper macros and functions used across property definitions, including property longhand code generation templates and shared parsing/serialization logic.",
+      "tags": [
+        "template",
+        "code-generation",
+        "property-helpers"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Mako template with <%def> blocks that generate repetitive Rust property code."
+    },
+    {
+      "id": "file:style/properties/helpers/animated_properties.mako.rs",
+      "type": "file",
+      "name": "animated_properties.mako.rs",
+      "filePath": "style/properties/helpers/animated_properties.mako.rs",
+      "summary": "Mako template generating the AnimationValue enum and related animation logic for CSS property interpolation, including support for squaring distance computation and zero-value generation.",
+      "tags": [
+        "template",
+        "animation",
+        "css-transitions",
+        "interpolation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Generates AnimationValue enum variants for all animatable CSS longhands using Mako iteration."
+    },
+    {
+      "id": "file:style/properties/properties.html.mako",
+      "type": "file",
+      "name": "properties.html.mako",
+      "filePath": "style/properties/properties.html.mako",
+      "summary": "Mako template that generates an HTML page listing all supported CSS properties in Servo, organized by longhands and shorthands with their feature preferences.",
+      "tags": [
+        "template",
+        "documentation",
+        "css-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/properties.mako.rs",
+      "type": "file",
+      "name": "properties.mako.rs",
+      "filePath": "style/properties/properties.mako.rs",
+      "summary": "Main Mako template that generates the core CSS property system code, including style struct definitions, property declaration handling, cascade logic, and FFI types for both Servo and Gecko engines.",
+      "tags": [
+        "template",
+        "core",
+        "css-properties",
+        "code-generation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "The central Mako template that drives the entire property code generation pipeline, importing helpers and iterating over all property definitions from data.py."
+    },
+    {
+      "id": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "type": "file",
+      "name": "mako-1.3.10-py3-none-any.whl",
+      "filePath": "style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "summary": "Vendored Mako template engine Python wheel used by the build system to render .mako.rs templates into Rust source files during compilation.",
+      "tags": [
+        "vendored",
+        "template-engine",
+        "build-dependency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "style/properties/vendored_python/markupsafe/__init__.py",
+      "summary": "Vendored MarkupSafe library providing HTML escaping utilities, including the Markup string class and escape/escape_silent functions used by the Mako template engine.",
+      "tags": [
+        "vendored",
+        "html-escaping",
+        "template-utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:style/properties/vendored_python/markupsafe/LICENSE.txt",
+      "type": "document",
+      "name": "LICENSE.txt",
+      "filePath": "style/properties/vendored_python/markupsafe/LICENSE.txt",
+      "summary": "BSD 3-Clause license for the vendored MarkupSafe library from the Pallets project.",
+      "tags": [
+        "license",
+        "vendored",
+        "bsd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl",
+      "type": "file",
+      "name": "toml-0.10.2-py2.py3-none-any.whl",
+      "filePath": "style/properties/vendored_python/toml-0.10.2-py2.py3-none-any.whl",
+      "summary": "Vendored TOML parser Python wheel used by the build system to read configuration files like longhands.toml.",
+      "tags": [
+        "vendored",
+        "toml-parser",
+        "build-dependency"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:style/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "style/README.md",
+      "summary": "Overview documentation for the Servo style system crate, with a link to the architecture documentation.",
+      "tags": [
+        "documentation",
+        "overview",
+        "style-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/box.rs",
+      "type": "file",
+      "name": "box.rs",
+      "filePath": "style/values/computed/box.rs",
+      "summary": "Defines computed value types for CSS box properties including BaselineShift, OverflowClipMargin, ContainIntrinsicSize, LineClamp, Perspective, Resize, and Zoom, with animation and serialization support.",
+      "tags": [
+        "computed-values",
+        "box-properties",
+        "css-types"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/generics/box.rs",
+      "type": "file",
+      "name": "box.rs",
+      "filePath": "style/values/generics/box.rs",
+      "summary": "Defines generic type parameters for box-related CSS properties including BaselineShift, ContainIntrinsicSize, LineClamp, Perspective, OverflowClipMargin, and PositionProperty, enabling code reuse across specified and computed value layers.",
+      "tags": [
+        "generic-types",
+        "box-properties",
+        "css-types",
+        "type-parameters"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/computed_value_flags.rs:ComputedValueFlags",
+      "type": "class",
+      "name": "ComputedValueFlags",
+      "filePath": "style/properties/computed_value_flags.rs",
+      "lineRange": [
+        16,
+        193
+      ],
+      "summary": "Bitflags struct tracking misc computed style metadata including text decoration lines, viewport units, container queries, font metrics dependencies, and author-specified property flags.",
+      "tags": [
+        "bitflags",
+        "computed-style",
+        "style-metadata"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/properties/gecko.mako.rs:ComputedValues",
+      "type": "class",
+      "name": "ComputedValues",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        52,
+        363
+      ],
+      "summary": "Core computed style storage structure with Gecko FFI bindings, providing construction, cloning, pseudo-element handling, style struct management, and integration with Firefox's style system.",
+      "tags": [
+        "computed-style",
+        "ffi",
+        "gecko",
+        "style-storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/properties/gecko.mako.rs:clone_with_flags",
+      "type": "function",
+      "name": "clone_with_flags",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        225,
+        243
+      ],
+      "summary": "Creates a new ComputedValues clone with modified flags and optional pseudo-element override, preserving style structs and custom properties.",
+      "tags": [
+        "cloning",
+        "flags",
+        "pseudo-elements"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/gecko.mako.rs:ineffective_content_property",
+      "type": "function",
+      "name": "ineffective_content_property",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        279,
+        281
+      ],
+      "summary": "Indicates whether the content property on this style has no effect, used by Gecko layout optimizations.",
+      "tags": [
+        "content-property",
+        "layout-optimization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/gecko.mako.rs:visited_style",
+      "type": "function",
+      "name": "visited_style",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        289,
+        295
+      ],
+      "summary": "Returns the visited style for this computed values, used by Gecko to handle :visited pseudo-class styling.",
+      "tags": [
+        "visited",
+        "pseudo-class",
+        "style-lookup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/gecko.mako.rs:set_",
+      "type": "function",
+      "name": "set_",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        309,
+        311
+      ],
+      "summary": "Sets a style struct value in the ComputedValues inner storage by index.",
+      "tags": [
+        "style-structs",
+        "ffi",
+        "setter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/gecko.mako.rs:reset_",
+      "type": "function",
+      "name": "reset_",
+      "filePath": "style/properties/gecko.mako.rs",
+      "lineRange": [
+        362,
+        363
+      ],
+      "summary": "Resets a style struct by copying from another ComputedValuesInner instance, used for style struct inheritance.",
+      "tags": [
+        "style-structs",
+        "ffi",
+        "reset"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/helpers.mako.rs:from_iter",
+      "type": "function",
+      "name": "from_iter",
+      "filePath": "style/properties/helpers.mako.rs",
+      "lineRange": [
+        581,
+        598
+      ],
+      "summary": "Generates FromIterator implementation for vector-valued CSS properties, collecting parsed items into the appropriate container type.",
+      "tags": [
+        "template",
+        "code-generation",
+        "vector-properties"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/helpers/animated_properties.mako.rs:AnimationValue",
+      "type": "class",
+      "name": "AnimationValue",
+      "filePath": "style/properties/helpers/animated_properties.mako.rs",
+      "lineRange": [
+        63,
+        716
+      ],
+      "summary": "Enum representing a single computed value from an animated CSS property, supporting interpolation, squared distance computation, and zero-value generation for transitions and animations.",
+      "tags": [
+        "animation",
+        "css-transitions",
+        "interpolation",
+        "enum"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/properties/properties.mako.rs:MaybeBoxed",
+      "type": "class",
+      "name": "MaybeBoxed",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        48,
+        60
+      ],
+      "summary": "Trait for converting between boxed and unboxed representations of property values, with implementations for both T and Box<T>.",
+      "tags": [
+        "trait",
+        "boxing",
+        "property-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/properties.mako.rs:PrioritaryPropertyId",
+      "type": "class",
+      "name": "PrioritaryPropertyId",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        631,
+        637
+      ],
+      "summary": "Enum of CSS property IDs that require special cascade priority handling during style computation.",
+      "tags": [
+        "enum",
+        "property-ids",
+        "cascade"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/properties.mako.rs:AliasId",
+      "type": "class",
+      "name": "AliasId",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        2750,
+        2761
+      ],
+      "summary": "Enum of CSS property alias IDs mapping vendor-prefixed and legacy property names to their canonical property identifiers.",
+      "tags": [
+        "enum",
+        "aliases",
+        "property-ids"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/properties.mako.rs:new_607",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        607,
+        611
+      ],
+      "summary": "Creates a new empty LonghandIdSet for tracking which CSS longhand properties have been set.",
+      "tags": [
+        "constructor",
+        "property-set"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/properties.mako.rs:contains",
+      "type": "function",
+      "name": "contains",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        615,
+        618
+      ],
+      "summary": "Checks whether a given property group ID is contained in a PrioritaryPropertyId set.",
+      "tags": [
+        "query",
+        "property-set"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/properties.mako.rs:insert",
+      "type": "function",
+      "name": "insert",
+      "filePath": "style/properties/properties.mako.rs",
+      "lineRange": [
+        622,
+        625
+      ],
+      "summary": "Inserts a property group into a PrioritaryPropertyId set for cascade priority tracking.",
+      "tags": [
+        "mutation",
+        "property-set"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/properties/vendored_python/markupsafe/__init__.py:Markup",
+      "type": "class",
+      "name": "Markup",
+      "filePath": "style/properties/vendored_python/markupsafe/__init__.py",
+      "lineRange": [
+        89,
+        334
+      ],
+      "summary": "String subclass representing HTML-safe text, with methods for string manipulation that preserve the safe markup status and an escape class method for creating safe strings from raw text.",
+      "tags": [
+        "html-escaping",
+        "string-class",
+        "safe-markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/properties/vendored_python/markupsafe/__init__.py:escape",
+      "type": "function",
+      "name": "escape",
+      "filePath": "style/properties/vendored_python/markupsafe/__init__.py",
+      "lineRange": [
+        29,
+        50
+      ],
+      "summary": "Replaces HTML special characters (&, <, >, ', \") with their escape sequences, returning a Markup object. Respects __html__ protocol for objects that self-represent as safe HTML.",
+      "tags": [
+        "html-escaping",
+        "utility",
+        "sanitization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/vendored_python/markupsafe/__init__.py:escape_silent",
+      "type": "function",
+      "name": "escape_silent",
+      "filePath": "style/properties/vendored_python/markupsafe/__init__.py",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "Like escape but returns an empty Markup string when the input is None, useful for optional values.",
+      "tags": [
+        "html-escaping",
+        "utility",
+        "null-safe"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/properties/vendored_python/markupsafe/__init__.py:soft_str",
+      "type": "function",
+      "name": "soft_str",
+      "filePath": "style/properties/vendored_python/markupsafe/__init__.py",
+      "lineRange": [
+        69,
+        86
+      ],
+      "summary": "Converts an object to string while preserving Markup type, preventing double-escaping of already-safe strings.",
+      "tags": [
+        "utility",
+        "string-conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/box.rs:Zoom",
+      "type": "class",
+      "name": "Zoom",
+      "filePath": "style/values/computed/box.rs",
+      "lineRange": [
+        141,
+        263
+      ],
+      "summary": "Computed value type for the CSS zoom property, supporting zoom factor storage, CSS serialization, animation, and effective zoom computation relative to a parent or document zoom level.",
+      "tags": [
+        "computed-value",
+        "zoom",
+        "css-property"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:GenericBaselineShift",
+      "type": "class",
+      "name": "GenericBaselineShift",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        69,
+        89
+      ],
+      "summary": "Generic enum for the CSS baseline-shift property, supporting keyword values (sub, super, top, center, bottom) or a length/percentage offset.",
+      "tags": [
+        "generic-type",
+        "baseline",
+        "css-property"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:GenericContainIntrinsicSize",
+      "type": "class",
+      "name": "GenericContainIntrinsicSize",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        110,
+        139
+      ],
+      "summary": "Generic enum for the CSS contain-intrinsic-size property, supporting none, auto-none, a length, or auto-length variants.",
+      "tags": [
+        "generic-type",
+        "contain",
+        "intrinsic-size"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:GenericLineClamp",
+      "type": "class",
+      "name": "GenericLineClamp",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        162,
+        187
+      ],
+      "summary": "Generic enum for the CSS -webkit-line-clamp property, supporting none or an integer count of lines to clamp.",
+      "tags": [
+        "generic-type",
+        "line-clamp",
+        "css-overflow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:GenericPerspective",
+      "type": "class",
+      "name": "GenericPerspective",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        210,
+        224
+      ],
+      "summary": "Generic enum for the CSS perspective property, supporting none or a non-negative length value for 3D transform perspective.",
+      "tags": [
+        "generic-type",
+        "perspective",
+        "3d-transforms"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:PositionProperty",
+      "type": "class",
+      "name": "PositionProperty",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        243,
+        255
+      ],
+      "summary": "Generic enum for the CSS position property with static, relative, absolute, sticky, and fixed variants, including a helper to check if the value yields absolutely positioned elements.",
+      "tags": [
+        "generic-type",
+        "position",
+        "css-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/generics/box.rs:GenericOverflowClipMargin",
+      "type": "class",
+      "name": "GenericOverflowClipMargin",
+      "filePath": "style/values/generics/box.rs",
+      "lineRange": [
+        305,
+        339
+      ],
+      "summary": "Generic struct for the CSS overflow-clip-margin property, combining a visual box reference box and a length offset.",
+      "tags": [
+        "generic-type",
+        "overflow",
+        "clip-margin"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/properties/computed_value_flags.rs",
+      "target": "class:style/properties/computed_value_flags.rs:ComputedValueFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/computed_value_flags.rs",
+      "target": "class:style/properties/computed_value_flags.rs:ComputedValueFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "class:style/properties/gecko.mako.rs:ComputedValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "class:style/properties/gecko.mako.rs:ComputedValues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:clone_with_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:clone_with_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:ineffective_content_property",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:ineffective_content_property",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:visited_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:visited_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:set_",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:set_",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:reset_",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/gecko.mako.rs",
+      "target": "function:style/properties/gecko.mako.rs:reset_",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/helpers.mako.rs",
+      "target": "function:style/properties/helpers.mako.rs:from_iter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/helpers.mako.rs",
+      "target": "function:style/properties/helpers.mako.rs:from_iter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/helpers/animated_properties.mako.rs",
+      "target": "class:style/properties/helpers/animated_properties.mako.rs:AnimationValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/helpers/animated_properties.mako.rs",
+      "target": "class:style/properties/helpers/animated_properties.mako.rs:AnimationValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:MaybeBoxed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:MaybeBoxed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:PrioritaryPropertyId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:PrioritaryPropertyId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:AliasId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "class:style/properties/properties.mako.rs:AliasId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:new_607",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:new_607",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:contains",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:contains",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:insert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/properties.mako.rs",
+      "target": "function:style/properties/properties.mako.rs:insert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "class:style/properties/vendored_python/markupsafe/__init__.py:Markup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "class:style/properties/vendored_python/markupsafe/__init__.py:Markup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:escape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:escape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:escape_silent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:escape_silent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:soft_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "function:style/properties/vendored_python/markupsafe/__init__.py:soft_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/box.rs",
+      "target": "class:style/values/computed/box.rs:Zoom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/box.rs",
+      "target": "class:style/values/computed/box.rs:Zoom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericBaselineShift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericBaselineShift",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericContainIntrinsicSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericContainIntrinsicSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericLineClamp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericLineClamp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericPerspective",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericPerspective",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:PositionProperty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:PositionProperty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericOverflowClipMargin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/generics/box.rs",
+      "target": "class:style/values/generics/box.rs:GenericOverflowClipMargin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:style/README.md",
+      "target": "file:style/properties/properties.mako.rs",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "target": "file:style/properties/helpers.mako.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "target": "file:style/properties/properties.mako.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "target": "file:style/properties/gecko.mako.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "target": "file:style/properties/helpers/animated_properties.mako.rs",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:style/properties/vendored_python/markupsafe/__init__.py",
+      "target": "file:style/properties/vendored_python/mako-1.3.10-py3-none-any.whl",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

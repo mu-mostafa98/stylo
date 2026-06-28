@@ -1,0 +1,1387 @@
+{
+  "nodes": [
+    {
+      "id": "function:selectors/build.rs:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "selectors/build.rs",
+      "lineRange": [
+        12,
+        27
+      ],
+      "summary": "Generates a PHF set of ASCII case-insensitive HTML attributes for compile-time lookup.",
+      "tags": [
+        "build-script",
+        "code-generation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matches_visited:55",
+      "type": "function",
+      "name": "matches_visited",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        55,
+        61
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matches_unvisited:64",
+      "type": "function",
+      "name": "matches_unvisited",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        64,
+        70
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:is_for_invalidation:91",
+      "type": "function",
+      "name": "is_for_invalidation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        91,
+        93
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:classes_and_ids_case_sensitivity:111",
+      "type": "function",
+      "name": "classes_and_ids_case_sensitivity",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        111,
+        116
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:new:200",
+      "type": "function",
+      "name": "new",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        200,
+        218
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:new_for_revalidation:221",
+      "type": "function",
+      "name": "new_for_revalidation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        221,
+        239
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:new_for_visited:242",
+      "type": "function",
+      "name": "new_for_visited",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        242,
+        261
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:new_internal:263",
+      "type": "function",
+      "name": "new_internal",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        263,
+        293
+      ],
+      "summary": "Internal context helper.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:nth_index_cache:297",
+      "type": "function",
+      "name": "nth_index_cache",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        297,
+        306
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:is_nested:310",
+      "type": "function",
+      "name": "is_nested",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        310,
+        312
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:in_negation:316",
+      "type": "function",
+      "name": "in_negation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        316,
+        318
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:quirks_mode:322",
+      "type": "function",
+      "name": "quirks_mode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        322,
+        324
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matching_mode:328",
+      "type": "function",
+      "name": "matching_mode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        328,
+        330
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:needs_selector_flags:334",
+      "type": "function",
+      "name": "needs_selector_flags",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        334,
+        336
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matching_for_invalidation:340",
+      "type": "function",
+      "name": "matching_for_invalidation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        340,
+        342
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matching_for_revalidation:346",
+      "type": "function",
+      "name": "matching_for_revalidation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        346,
+        348
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:matching_for_invalidation_comparison:352",
+      "type": "function",
+      "name": "matching_for_invalidation_comparison",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        352,
+        358
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:for_invalidation_comparison:362",
+      "type": "function",
+      "name": "for_invalidation_comparison",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        362,
+        375
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:classes_and_ids_case_sensitivity:379",
+      "type": "function",
+      "name": "classes_and_ids_case_sensitivity",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        379,
+        381
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:nest:385",
+      "type": "function",
+      "name": "nest",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        385,
+        393
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:nest_for_negation:398",
+      "type": "function",
+      "name": "nest_for_negation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        398,
+        407
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:visited_handling:410",
+      "type": "function",
+      "name": "visited_handling",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        410,
+        412
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:with_featureless:416",
+      "type": "function",
+      "name": "with_featureless",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        416,
+        425
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:featureless:431",
+      "type": "function",
+      "name": "featureless",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        431,
+        433
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:with_visited_handling_mode:437",
+      "type": "function",
+      "name": "with_visited_handling_mode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        437,
+        450
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:with_shadow_host:455",
+      "type": "function",
+      "name": "with_shadow_host",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        455,
+        465
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:shadow_host:470",
+      "type": "function",
+      "name": "shadow_host",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        470,
+        472
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/context.rs:nest_for_relative_selector:477",
+      "type": "function",
+      "name": "nest_for_relative_selector",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        477,
+        489
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:nest_for_scope:493",
+      "type": "function",
+      "name": "nest_for_scope",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        493,
+        502
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:nest_for_scope_condition:507",
+      "type": "function",
+      "name": "nest_for_scope_condition",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        507,
+        518
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/context.rs:relative_selector_anchor:522",
+      "type": "function",
+      "name": "relative_selector_anchor",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        522,
+        524
+      ],
+      "summary": "Exported MatchingContext method for CSS selector matching state.",
+      "tags": [
+        "selector",
+        "context",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:MatchingMode",
+      "type": "class",
+      "name": "MatchingMode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        18,
+        34
+      ],
+      "summary": "Enum for selector matching modes.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:selectors/context.rs:VisitedHandlingMode",
+      "type": "class",
+      "name": "VisitedHandlingMode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        38,
+        51
+      ],
+      "summary": "Enum for visited link handling.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:NeedsSelectorFlags",
+      "type": "class",
+      "name": "NeedsSelectorFlags",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        76,
+        79
+      ],
+      "summary": "Supporting type for matching context configuration.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:MatchingForInvalidation",
+      "type": "class",
+      "name": "MatchingForInvalidation",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        83,
+        87
+      ],
+      "summary": "Supporting type for matching context configuration.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:QuirksMode",
+      "type": "class",
+      "name": "QuirksMode",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        100,
+        107
+      ],
+      "summary": "Supporting type for matching context configuration.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:SelectorCaches",
+      "type": "class",
+      "name": "SelectorCaches",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        121,
+        128
+      ],
+      "summary": "Supporting type for matching context configuration.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/context.rs:MatchingContext",
+      "type": "class",
+      "name": "MatchingContext",
+      "filePath": "selectors/context.rs",
+      "lineRange": [
+        133,
+        193
+      ],
+      "summary": "Core matching context carrying bloom filter, caches, and mode flags.",
+      "tags": [
+        "selector",
+        "context",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:selectors/kleene_value.rs:to_bool",
+      "type": "function",
+      "name": "to_bool",
+      "filePath": "selectors/kleene_value.rs",
+      "lineRange": [
+        31,
+        37
+      ],
+      "summary": "Exported Kleene value operation.",
+      "tags": [
+        "selector",
+        "logic",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/kleene_value.rs:any",
+      "type": "function",
+      "name": "any",
+      "filePath": "selectors/kleene_value.rs",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Exported Kleene value operation.",
+      "tags": [
+        "selector",
+        "logic",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/kleene_value.rs:any_false",
+      "type": "function",
+      "name": "any_false",
+      "filePath": "selectors/kleene_value.rs",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "Exported Kleene value operation.",
+      "tags": [
+        "selector",
+        "logic",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:selectors/kleene_value.rs:any_value",
+      "type": "function",
+      "name": "any_value",
+      "filePath": "selectors/kleene_value.rs",
+      "lineRange": [
+        56,
+        76
+      ],
+      "summary": "Internal iterator combinator for Kleene logic.",
+      "tags": [
+        "selector",
+        "logic",
+        "matching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:selectors/kleene_value.rs:KleeneValue",
+      "type": "class",
+      "name": "KleeneValue",
+      "filePath": "selectors/kleene_value.rs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Three-valued logic enum (true/false/unknown) for CSS selector matching with invalidation support.",
+      "tags": [
+        "selector",
+        "logic",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/build.rs",
+      "type": "file",
+      "name": "build.rs",
+      "filePath": "selectors/build.rs",
+      "summary": "Build script that generates a PHF (perfect hash function) set of ASCII case-insensitive HTML attribute names for compile-time lookup.",
+      "tags": [
+        "build-script",
+        "code-generation",
+        "phf"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:selectors/context.rs",
+      "type": "file",
+      "name": "context.rs",
+      "filePath": "selectors/context.rs",
+      "summary": "Defines MatchingContext and related types for CSS selector matching state, including visited handling, nesting, negation, relative selectors, and scope tracking.",
+      "tags": [
+        "selector",
+        "context",
+        "matching-state"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:selectors/kleene_value.rs",
+      "type": "file",
+      "name": "kleene_value.rs",
+      "filePath": "selectors/kleene_value.rs",
+      "summary": "Defines KleeneValue three-valued logic (true/false/unknown) used for CSS selector matching with invalidation-aware boolean operations.",
+      "tags": [
+        "selector",
+        "three-valued-logic",
+        "matching"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:selectors/build.rs",
+      "target": "function:selectors/build.rs:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matches_visited:55",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matches_visited:55",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matches_unvisited:64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matches_unvisited:64",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:is_for_invalidation:91",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:is_for_invalidation:91",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:classes_and_ids_case_sensitivity:111",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:classes_and_ids_case_sensitivity:111",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new:200",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new:200",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new_for_revalidation:221",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new_for_revalidation:221",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new_for_visited:242",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new_for_visited:242",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:new_internal:263",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nth_index_cache:297",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nth_index_cache:297",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:is_nested:310",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:is_nested:310",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:in_negation:316",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:in_negation:316",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:quirks_mode:322",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:quirks_mode:322",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_mode:328",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_mode:328",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:needs_selector_flags:334",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:needs_selector_flags:334",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_invalidation:340",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_invalidation:340",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_revalidation:346",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_revalidation:346",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_invalidation_comparison:352",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:matching_for_invalidation_comparison:352",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:for_invalidation_comparison:362",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:for_invalidation_comparison:362",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:classes_and_ids_case_sensitivity:379",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:classes_and_ids_case_sensitivity:379",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest:385",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest:385",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_negation:398",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_negation:398",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:visited_handling:410",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:visited_handling:410",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_featureless:416",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_featureless:416",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:featureless:431",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:featureless:431",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_visited_handling_mode:437",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_visited_handling_mode:437",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_shadow_host:455",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:with_shadow_host:455",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:shadow_host:470",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:shadow_host:470",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_relative_selector:477",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_relative_selector:477",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_scope:493",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_scope:493",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_scope_condition:507",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:nest_for_scope_condition:507",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:relative_selector_anchor:522",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "function:selectors/context.rs:relative_selector_anchor:522",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:VisitedHandlingMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:VisitedHandlingMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:NeedsSelectorFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:NeedsSelectorFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingForInvalidation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingForInvalidation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:QuirksMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:QuirksMode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:SelectorCaches",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:SelectorCaches",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/context.rs",
+      "target": "class:selectors/context.rs:MatchingContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:to_bool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:to_bool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:any",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:any",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:any_false",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:any_false",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "function:selectors/kleene_value.rs:any_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "class:selectors/kleene_value.rs:KleeneValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:selectors/kleene_value.rs",
+      "target": "class:selectors/kleene_value.rs:KleeneValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

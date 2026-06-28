@@ -1,0 +1,2070 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/specified/length.rs",
+      "type": "file",
+      "name": "length.rs",
+      "filePath": "style/values/specified/length.rs",
+      "summary": "Defines specified length and length-percentage types, including NoCalcLength, Length, LengthPercentage, LengthUnit and all CSS length units (px/em/rem/vw/vh/etc.) with calc() support.",
+      "tags": [
+        "css-values",
+        "specified-values",
+        "rust",
+        "rust",
+        "length-percentage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:as_str",
+      "type": "function",
+      "name": "as_str",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        130,
+        183
+      ],
+      "summary": "Handles as str for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_absolute",
+      "type": "function",
+      "name": "is_absolute",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        187,
+        192
+      ],
+      "summary": "Handles is absolute for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_font_relative",
+      "type": "function",
+      "name": "is_font_relative",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        196,
+        212
+      ],
+      "summary": "Handles is font relative for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_viewport_percentage",
+      "type": "function",
+      "name": "is_viewport_percentage",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        216,
+        244
+      ],
+      "summary": "Handles is viewport percentage for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_container_relative",
+      "type": "function",
+      "name": "is_container_relative",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        248,
+        253
+      ],
+      "summary": "Handles is container relative for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:sort_key",
+      "type": "function",
+      "name": "sort_key",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        257,
+        307
+      ],
+      "summary": "Handles sort key for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        330,
+        341
+      ],
+      "summary": "Resolves a calc expression to a numeric value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        411,
+        413
+      ],
+      "summary": "Creates a new instance of the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:length_unit",
+      "type": "function",
+      "name": "length_unit",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        417,
+        419
+      ],
+      "summary": "Handles length unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:unitless_value",
+      "type": "function",
+      "name": "unitless_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        423,
+        425
+      ],
+      "summary": "Handles unitless value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:unit",
+      "type": "function",
+      "name": "unit",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        429,
+        431
+      ],
+      "summary": "Handles unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:canonical_unit",
+      "type": "function",
+      "name": "canonical_unit",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        434,
+        440
+      ],
+      "summary": "Handles canonical unit for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to",
+      "type": "function",
+      "name": "to",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        443,
+        456
+      ],
+      "summary": "Handles to for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_negative",
+      "type": "function",
+      "name": "is_negative",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        459,
+        461
+      ],
+      "summary": "Handles is negative for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_zero",
+      "type": "function",
+      "name": "is_zero",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        464,
+        466
+      ],
+      "summary": "Returns true if the value is zero.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_infinite",
+      "type": "function",
+      "name": "is_infinite",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        469,
+        471
+      ],
+      "summary": "Handles is infinite for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_nan",
+      "type": "function",
+      "name": "is_nan",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        474,
+        476
+      ],
+      "summary": "Handles is nan for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:should_zoom_text",
+      "type": "function",
+      "name": "should_zoom_text",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        482,
+        484
+      ],
+      "summary": "Handles should zoom text for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_dimension_with_flags",
+      "type": "function",
+      "name": "parse_dimension_with_flags",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        493,
+        558
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_dimension_with_context",
+      "type": "function",
+      "name": "parse_dimension_with_context",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        561,
+        567
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:try_op",
+      "type": "function",
+      "name": "try_op",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        569,
+        581
+      ],
+      "summary": "Handles try op for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:map",
+      "type": "function",
+      "name": "map",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        583,
+        589
+      ],
+      "summary": "Handles map for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_computed_pixel_length_without_context",
+      "type": "function",
+      "name": "to_computed_pixel_length_without_context",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        593,
+        595
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_computed_pixel_length_with_font_metrics",
+      "type": "function",
+      "name": "to_computed_pixel_length_with_font_metrics",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        601,
+        626
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:from_px",
+      "type": "function",
+      "name": "from_px",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        630,
+        632
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_px_if_absolute",
+      "type": "function",
+      "name": "to_px_if_absolute",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        636,
+        648
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:from_em",
+      "type": "function",
+      "name": "from_em",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        652,
+        654
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:from_servo_character_width",
+      "type": "function",
+      "name": "from_servo_character_width",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        658,
+        660
+      ],
+      "summary": "Constructs this value from another representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:font_relative_to_computed_value",
+      "type": "function",
+      "name": "font_relative_to_computed_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        664,
+        673
+      ],
+      "summary": "Handles font relative to computed value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:reference_font_size_and_length",
+      "type": "function",
+      "name": "reference_font_size_and_length",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        675,
+        876
+      ],
+      "summary": "Handles reference font size and length for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:viewport_percentage_to_computed_value",
+      "type": "function",
+      "name": "viewport_percentage_to_computed_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        880,
+        934
+      ],
+      "summary": "Handles viewport percentage to computed value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:container_relative_to_computed_value",
+      "type": "function",
+      "name": "container_relative_to_computed_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        938,
+        966
+      ],
+      "summary": "Handles container relative to computed value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:servo_character_width_to_computed_value",
+      "type": "function",
+      "name": "servo_character_width_to_computed_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        969,
+        980
+      ],
+      "summary": "Handles servo character width to computed value for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_computed_value_with_base_size",
+      "type": "function",
+      "name": "to_computed_value_with_base_size",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        983,
+        1008
+      ],
+      "summary": "Converts this value to a different representation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1030,
+        1040
+      ],
+      "summary": "Serializes the specified value to CSS text output.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:partial_cmp",
+      "type": "function",
+      "name": "partial_cmp",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1058,
+        1067
+      ],
+      "summary": "Handles partial cmp for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:new_calc",
+      "type": "function",
+      "name": "new_calc",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1128,
+        1130
+      ],
+      "summary": "Handles new calc for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:is_calc",
+      "type": "function",
+      "name": "is_calc",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1134,
+        1136
+      ],
+      "summary": "Returns true if this is a calc() expression.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_internal",
+      "type": "function",
+      "name": "parse_internal",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1139,
+        1171
+      ],
+      "summary": "Internal parsing method for the value type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_non_negative",
+      "type": "function",
+      "name": "parse_non_negative",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1175,
+        1180
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_non_negative_quirky",
+      "type": "function",
+      "name": "parse_non_negative_quirky",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1184,
+        1195
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1242,
+        1258
+      ],
+      "summary": "Converts the specified value to a computed value with context.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "function",
+      "name": "parse_quirky",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1283,
+        1289
+      ],
+      "summary": "Parses CSS input with quirks mode support.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:zero_percent",
+      "type": "function",
+      "name": "zero_percent",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1391,
+        1393
+      ],
+      "summary": "Handles zero percent for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:hundred_percent",
+      "type": "function",
+      "name": "hundred_percent",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1397,
+        1399
+      ],
+      "summary": "Returns the 100% value.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_quirky_with_anchor_size_function",
+      "type": "function",
+      "name": "parse_quirky_with_anchor_size_function",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1470,
+        1482
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_quirky_with_anchor_functions",
+      "type": "function",
+      "name": "parse_quirky_with_anchor_functions",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1487,
+        1499
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_non_negative_with_anchor_size",
+      "type": "function",
+      "name": "parse_non_negative_with_anchor_size",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1503,
+        1515
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:compute_without_context",
+      "type": "function",
+      "name": "compute_without_context",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1546,
+        1558
+      ],
+      "summary": "Handles compute without context for the type.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_size_for_flex_basis_width",
+      "type": "function",
+      "name": "parse_size_for_flex_basis_width",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1826,
+        1837
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_quirky_internal",
+      "type": "function",
+      "name": "parse_quirky_internal",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1843,
+        1875
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_size_for_width_or_height_quirky",
+      "type": "function",
+      "name": "parse_size_for_width_or_height_quirky",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1882,
+        1895
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/specified/length.rs:parse_size_for_width_or_height",
+      "type": "function",
+      "name": "parse_size_for_width_or_height",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1902,
+        1914
+      ],
+      "summary": "Parses a CSS value subset.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:LengthUnit",
+      "type": "class",
+      "name": "LengthUnit",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        69,
+        125
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:FontBaseSize",
+      "type": "class",
+      "name": "FontBaseSize",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        312,
+        317
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:LineHeightBase",
+      "type": "class",
+      "name": "LineHeightBase",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        321,
+        326
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:ViewportVariant",
+      "type": "class",
+      "name": "ViewportVariant",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        345,
+        354
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:NoCalcLength",
+      "type": "class",
+      "name": "NoCalcLength",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        378,
+        381
+      ],
+      "summary": "Specified CSS length that is not a calc() expression.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:Length",
+      "type": "class",
+      "name": "Length",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1087,
+        1087
+      ],
+      "summary": "Specified CSS length value.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:LengthPercentage",
+      "type": "class",
+      "name": "LengthPercentage",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1347,
+        1351
+      ],
+      "summary": "Specified CSS length or percentage value with calc() support.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/specified/length.rs:EqualsPercentage",
+      "type": "class",
+      "name": "EqualsPercentage",
+      "filePath": "style/values/specified/length.rs",
+      "lineRange": [
+        1585,
+        1589
+      ],
+      "summary": "Specified CSS value type for the relevant property.",
+      "tags": [
+        "css-value-type"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:as_str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:as_str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_font_relative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_font_relative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_viewport_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_viewport_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_container_relative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_container_relative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:sort_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:sort_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:length_unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:length_unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:unitless_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:unitless_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:canonical_unit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:canonical_unit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_negative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_negative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_infinite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_infinite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_nan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_nan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:should_zoom_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:should_zoom_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:sort_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:sort_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_dimension_with_flags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_dimension_with_flags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_dimension_with_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_dimension_with_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:try_op",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:try_op",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:map",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_with_font_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_with_font_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_px_if_absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_px_if_absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_em",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_em",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_servo_character_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_servo_character_width",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:font_relative_to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:reference_font_size_and_length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:viewport_percentage_to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:container_relative_to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:servo_character_width_to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_value_with_base_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_value_with_base_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:partial_cmp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:new_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_with_font_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_pixel_length_with_font_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:from_px",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:hundred_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:hundred_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky_with_anchor_size_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky_with_anchor_functions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky_with_anchor_functions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_with_anchor_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_with_anchor_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:compute_without_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:compute_without_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:is_zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_with_anchor_size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_non_negative_with_anchor_size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_flex_basis_width",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_flex_basis_width",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky_internal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_width_or_height_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_width_or_height_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_width_or_height",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_size_for_width_or_height",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:zero_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "function:style/values/specified/length.rs:parse_quirky",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LengthUnit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LengthUnit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:FontBaseSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:FontBaseSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LineHeightBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LineHeightBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:ViewportVariant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:ViewportVariant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:NoCalcLength",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:NoCalcLength",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:Length",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:Length",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LengthPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:LengthPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:EqualsPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/specified/length.rs",
+      "target": "class:style/values/specified/length.rs:EqualsPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

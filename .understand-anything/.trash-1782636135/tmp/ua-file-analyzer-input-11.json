@@ -1,0 +1,127 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/gecko/arc_types.rs",
+      "language": "rust",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/conversions.rs",
+      "language": "rust",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/data.rs",
+      "language": "rust",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/media_features.rs",
+      "language": "rust",
+      "sizeLines": 971,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/mod.rs",
+      "language": "rust",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/non_ts_pseudo_class_list.rs",
+      "language": "rust",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/pseudo_element.rs",
+      "language": "rust",
+      "sizeLines": 625,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/restyle_damage.rs",
+      "language": "rust",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/selector_parser.rs",
+      "language": "rust",
+      "sizeLines": 664,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot.rs",
+      "language": "rust",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/snapshot_helpers.rs",
+      "language": "rust",
+      "sizeLines": 316,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/traversal.rs",
+      "language": "rust",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/gecko/wrapper.rs",
+      "language": "rust",
+      "sizeLines": 2267,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/gecko/arc_types.rs": [],
+    "style/gecko/conversions.rs": [],
+    "style/gecko/data.rs": [],
+    "style/gecko/media_features.rs": [],
+    "style/gecko/mod.rs": [
+      "style/gecko/arc_types.rs",
+      "style/gecko/conversions.rs",
+      "style/gecko/data.rs",
+      "style/gecko/media_features.rs",
+      "style/gecko/non_ts_pseudo_class_list.rs",
+      "style/gecko/pseudo_element.rs",
+      "style/gecko/restyle_damage.rs",
+      "style/gecko/selector_parser.rs",
+      "style/gecko/snapshot_helpers.rs",
+      "style/gecko/snapshot.rs",
+      "style/gecko/traversal.rs",
+      "style/gecko/wrapper.rs"
+    ],
+    "style/gecko/non_ts_pseudo_class_list.rs": [],
+    "style/gecko/pseudo_element.rs": [],
+    "style/gecko/restyle_damage.rs": [],
+    "style/gecko/selector_parser.rs": [],
+    "style/gecko/snapshot.rs": [],
+    "style/gecko/snapshot_helpers.rs": [],
+    "style/gecko/traversal.rs": [],
+    "style/gecko/wrapper.rs": []
+  },
+  "neighborMap": {
+    "style/gecko/mod.rs": [
+      {
+        "path": "style/lib.rs",
+        "batchIndex": 3,
+        "symbols": [
+          "CaseSensitivityExt",
+          "Zero",
+          "ZeroNoPercent",
+          "One",
+          "AllocErr",
+          "ShrinkIfNeeded"
+        ]
+      }
+    ]
+  }
+}

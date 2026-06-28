@@ -1,0 +1,748 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/gecko_bindings/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/gecko_bindings/mod.rs",
+      "summary": "Top-level module for Gecko C++ bindings, including auto-generated bindgen structs and re-exporting them as bindings, plus the sugar submodule for Rust convenience helpers.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "module-barrel",
+        "ffi"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko_bindings/sugar/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/gecko_bindings/sugar/mod.rs",
+      "summary": "Module declaration file that organizes the Rust convenience layer for Gecko types, declaring submodules for refcounting, pointer wrappers, origin flags, and ownership utilities.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "module-barrel",
+        "convenience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "type": "file",
+      "name": "ns_com_ptr.rs",
+      "filePath": "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "summary": "Provides a raw() helper method on nsCOMPtr to access the underlying raw pointer from Gecko COM pointer wrapper.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "pointer",
+        "convenience"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko_bindings/sugar/origin_flags.rs",
+      "type": "file",
+      "name": "origin_flags.rs",
+      "filePath": "style/gecko_bindings/sugar/origin_flags.rs",
+      "summary": "Provides debug assertions and bidirectional From conversions between Gecko OriginFlags and Servo OriginSet to ensure bit-level compatibility.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "type-conversion",
+        "origin",
+        "debug"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/gecko_bindings/sugar/refptr.rs",
+      "type": "file",
+      "name": "refptr.rs",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "summary": "Comprehensive Rust-safe wrapper for Gecko FFI refcounted types, providing the RefPtr smart pointer, RefCounted/ThreadSafeRefCounted traits, and conversion utilities between Rust and C++ refcounted pointers.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "refcount",
+        "smart-pointer",
+        "memory-management"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses Rust unsafe trait design patterns and PhantomData for type-safe FFI pointer management. Implements helper macros for automatic RefCounted trait impl generation."
+    },
+    {
+      "id": "file:style/gecko_bindings/sugar/wrapper.rs",
+      "type": "file",
+      "name": "wrapper.rs",
+      "filePath": "style/gecko_bindings/sugar/wrapper.rs",
+      "summary": "File was not found on disk. Intended to provide Rust wrapper utilities for Gecko bindings.",
+      "tags": [
+        "ffi-bindings",
+        "gecko",
+        "not-found"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/l10n/atoms.rs",
+      "type": "file",
+      "name": "atoms.rs",
+      "filePath": "style/l10n/atoms.rs",
+      "summary": "File was not found on disk. Intended to define localization-related atoms for the style system.",
+      "tags": [
+        "localization",
+        "atoms",
+        "not-found"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/l10n/longhands.rs",
+      "type": "file",
+      "name": "longhands.rs",
+      "filePath": "style/l10n/longhands.rs",
+      "summary": "File was not found on disk. Intended to define longhand CSS property implementations for localization properties.",
+      "tags": [
+        "localization",
+        "css-properties",
+        "longhands",
+        "not-found"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/ns_com_ptr.rs:raw",
+      "type": "function",
+      "name": "raw",
+      "filePath": "style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "Returns the underlying raw mutable pointer from an nsCOMPtr.",
+      "tags": [
+        "ffi-bindings",
+        "pointer",
+        "accessor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/origin_flags.rs:assert_flags_match",
+      "type": "function",
+      "name": "assert_flags_match",
+      "filePath": "style/gecko_bindings/sugar/origin_flags.rs",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "Checks at debug build time that Gecko OriginFlags bit values match Servo OriginSet constants.",
+      "tags": [
+        "ffi-bindings",
+        "debug",
+        "validation",
+        "origin"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:from_addrefed",
+      "type": "function",
+      "name": "from_addrefed",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        46,
+        52
+      ],
+      "summary": "Creates a RefPtr from an already-addrefed FFI pointer, asserting non-null.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:is_null",
+      "type": "function",
+      "name": "is_null",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "Returns whether the RefPtr is currently null.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "query"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:null",
+      "type": "function",
+      "name": "null",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "Creates a new null RefPtr.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        70,
+        77
+      ],
+      "summary": "Creates a RefPtr from a raw pointer, calling addref automatically.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:forget",
+      "type": "function",
+      "name": "forget",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        82,
+        89
+      ],
+      "summary": "Consumes the RefPtr and returns an FFI-compatible structs::RefPtr without running the destructor.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:get",
+      "type": "function",
+      "name": "get",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        92,
+        94
+      ],
+      "summary": "Returns the raw inner pointer for FFI use.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "accessor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:addref",
+      "type": "function",
+      "name": "addref",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        97,
+        103
+      ],
+      "summary": "Increments the reference count of the inner data, safe on null pointers.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "memory-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:release",
+      "type": "function",
+      "name": "release",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        108,
+        112
+      ],
+      "summary": "Decrements the reference count of the inner data, releasing when it reaches zero.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "memory-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:to_safe",
+      "type": "function",
+      "name": "to_safe",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        127,
+        134
+      ],
+      "summary": "Converts an FFI structs::RefPtr to a safe Rust RefPtr, bumping the reference count.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:into_safe",
+      "type": "function",
+      "name": "into_safe",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        137,
+        143
+      ],
+      "summary": "Converts an FFI structs::RefPtr into a safe Rust RefPtr by consuming it without bumping the refcount.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:set",
+      "type": "function",
+      "name": "set",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        152,
+        157
+      ],
+      "summary": "Replaces an FFI structs::RefPtr with another, performing proper addref and release.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:clear",
+      "type": "function",
+      "name": "clear",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        163,
+        168
+      ],
+      "summary": "Clears an FFI structs::RefPtr by releasing its reference and setting the pointer to null.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:set_move",
+      "type": "function",
+      "name": "set_move",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        175,
+        182
+      ],
+      "summary": "Replaces an FFI structs::RefPtr with a Rust RefPtr, consuming the Rust smart pointer.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "conversion",
+        "mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:from_arc",
+      "type": "function",
+      "name": "from_arc",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        195,
+        200
+      ],
+      "summary": "Creates an FFI structs::RefPtr from a servo_arc::Arc, taking ownership of the arc allocation.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "arc",
+        "conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/gecko_bindings/sugar/refptr.rs:set_arc",
+      "type": "function",
+      "name": "set_arc",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        203,
+        210
+      ],
+      "summary": "Replaces an FFI structs::RefPtr with an Arc, releasing the old value and taking ownership of the new arc allocation.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "arc",
+        "conversion",
+        "mutation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/gecko_bindings/sugar/refptr.rs:RefCounted",
+      "type": "class",
+      "name": "RefCounted",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "Unsafe trait defining addref() and release() methods required for types managed by RefPtr.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "trait",
+        "memory-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/gecko_bindings/sugar/refptr.rs:ThreadSafeRefCounted",
+      "type": "class",
+      "name": "ThreadSafeRefCounted",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Marker trait extending RefCounted to indicate thread-safe reference counting, enabling Send and Sync impls.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "trait",
+        "thread-safety"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/gecko_bindings/sugar/refptr.rs:RefPtr",
+      "type": "class",
+      "name": "RefPtr",
+      "filePath": "style/gecko_bindings/sugar/refptr.rs",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "Generic smart pointer wrapping Gecko FFI refcounted pointers with safe Drop semantics, Clone, Deref, and conversion methods.",
+      "tags": [
+        "ffi-bindings",
+        "refcount",
+        "smart-pointer",
+        "generic"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses PhantomData for ownership semantics and implements Deref for ergonomic access to the inner type."
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "target": "function:style/gecko_bindings/sugar/ns_com_ptr.rs:raw",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/ns_com_ptr.rs",
+      "target": "function:style/gecko_bindings/sugar/ns_com_ptr.rs:raw",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/origin_flags.rs",
+      "target": "function:style/gecko_bindings/sugar/origin_flags.rs:assert_flags_match",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/origin_flags.rs",
+      "target": "function:style/gecko_bindings/sugar/origin_flags.rs:assert_flags_match",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:from_addrefed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:from_addrefed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:is_null",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:is_null",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:null",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:null",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:forget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:forget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:addref",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:addref",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:release",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:release",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:to_safe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:to_safe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:into_safe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:into_safe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:clear",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set_move",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set_move",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:from_arc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:from_arc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set_arc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "function:style/gecko_bindings/sugar/refptr.rs:set_arc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:RefCounted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:RefCounted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:ThreadSafeRefCounted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:ThreadSafeRefCounted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:RefPtr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/gecko_bindings/sugar/refptr.rs",
+      "target": "class:style/gecko_bindings/sugar/refptr.rs:RefPtr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

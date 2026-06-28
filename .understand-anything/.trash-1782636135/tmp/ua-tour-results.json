@@ -1,0 +1,528 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "file:style/lib.rs",
+      "name": "lib.rs",
+      "score": 6,
+      "summary": "Crate root that re-exports all public style subsystems (stylist, properties, values, selectors, etc.) and registers derive macros"
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "score": 5,
+      "summary": "Project overview documenting Stylo architecture, crates, branches, and build setup"
+    },
+    {
+      "id": "file:style_traits/lib.rs",
+      "name": "lib.rs",
+      "score": 5,
+      "summary": "Crate root re-exporting CSS pixel units, parsing errors, ParsingMode, and SpeculativePainter"
+    },
+    {
+      "id": "file:style_derive/lib.rs",
+      "name": "lib.rs",
+      "score": 5,
+      "summary": "Proc-macro crate entry point exporting 10+ derive macros for style types"
+    },
+    {
+      "id": "file:servo_arc/lib.rs",
+      "name": "lib.rs",
+      "score": 4,
+      "summary": "Custom Arc implementation with HeaderSlice thin arcs and ArcUnion for efficient FFI sharing"
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "file:style/dom.rs",
+      "name": "dom.rs",
+      "fanIn": 4
+    },
+    {
+      "id": "file:style/context.rs",
+      "name": "context.rs",
+      "fanIn": 3
+    },
+    {
+      "id": "file:style/properties/mod.rs",
+      "name": "properties",
+      "fanIn": 3
+    },
+    {
+      "id": "file:selectors/parser.rs",
+      "name": "parser.rs",
+      "fanIn": 3
+    },
+    {
+      "id": "file:style/style_adjuster.rs",
+      "name": "style_adjuster.rs",
+      "fanIn": 3
+    },
+    {
+      "id": "file:servo_arc/lib.rs",
+      "name": "lib.rs",
+      "fanIn": 3
+    },
+    {
+      "id": "file:style/color/mod.rs",
+      "name": "color",
+      "fanIn": 3
+    },
+    {
+      "id": "file:style/lib.rs",
+      "name": "lib.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/stylist.rs",
+      "name": "stylist.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/matching.rs",
+      "name": "matching.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/selector_parser.rs",
+      "name": "selector_parser.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/rule_tree/mod.rs",
+      "name": "rule_tree",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/values/mod.rs",
+      "name": "values",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/stylesheets/rules.rs",
+      "name": "rules.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style/gecko/wrapper.rs",
+      "name": "wrapper.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style_traits/lib.rs",
+      "name": "lib.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:style_derive/lib.rs",
+      "name": "lib.rs",
+      "fanIn": 2
+    },
+    {
+      "id": "file:selectors/matching.rs",
+      "name": "matching.rs",
+      "fanIn": 1
+    },
+    {
+      "id": "config:Cargo.toml",
+      "name": "Cargo.toml",
+      "fanIn": 1
+    },
+    {
+      "id": "file:style/servo/animation.rs",
+      "name": "animation.rs",
+      "fanIn": 1
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "file:style/lib.rs",
+      "name": "lib.rs",
+      "fanOut": 19
+    },
+    {
+      "id": "file:style/stylist.rs",
+      "name": "stylist.rs",
+      "fanOut": 8
+    },
+    {
+      "id": "config:Cargo.toml",
+      "name": "Cargo.toml",
+      "fanOut": 5
+    },
+    {
+      "id": "file:style/matching.rs",
+      "name": "matching.rs",
+      "fanOut": 3
+    },
+    {
+      "id": "file:style/properties/mod.rs",
+      "name": "properties",
+      "fanOut": 3
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "fanOut": 2
+    },
+    {
+      "id": "file:style/dom.rs",
+      "name": "dom.rs",
+      "fanOut": 1
+    },
+    {
+      "id": "file:style/selector_parser.rs",
+      "name": "selector_parser.rs",
+      "fanOut": 1
+    },
+    {
+      "id": "file:style/values/mod.rs",
+      "name": "values",
+      "fanOut": 1
+    },
+    {
+      "id": "file:selectors/parser.rs",
+      "name": "parser.rs",
+      "fanOut": 1
+    },
+    {
+      "id": "file:style/invalidation/element/invalidation_map.rs",
+      "name": "invalidation_map.rs",
+      "fanOut": 1
+    },
+    {
+      "id": "file:style_derive/lib.rs",
+      "name": "lib.rs",
+      "fanOut": 1
+    },
+    {
+      "id": "file:style/context.rs",
+      "name": "context.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:style/rule_tree/mod.rs",
+      "name": "rule_tree",
+      "fanOut": 0
+    },
+    {
+      "id": "file:selectors/matching.rs",
+      "name": "matching.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:style/stylesheets/rules.rs",
+      "name": "rules.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:style/gecko/wrapper.rs",
+      "name": "wrapper.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:style/servo/animation.rs",
+      "name": "animation.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:style/style_adjuster.rs",
+      "name": "style_adjuster.rs",
+      "fanOut": 0
+    },
+    {
+      "id": "file:servo_arc/lib.rs",
+      "name": "lib.rs",
+      "fanOut": 0
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:style/lib.rs",
+    "order": [
+      "file:style/lib.rs",
+      "file:style/stylist.rs",
+      "file:style/values/mod.rs",
+      "file:style/properties/mod.rs",
+      "file:selectors/parser.rs",
+      "file:style/context.rs",
+      "file:style/matching.rs",
+      "file:style/dom.rs",
+      "file:style/selector_parser.rs",
+      "file:style/rule_tree/mod.rs",
+      "file:style/stylesheets/rules.rs",
+      "file:style/style_adjuster.rs",
+      "file:style/gecko/wrapper.rs",
+      "file:style/servo/animation.rs",
+      "file:style/invalidation/element/invalidation_map.rs",
+      "file:style/color/mod.rs",
+      "file:style_traits/lib.rs",
+      "file:servo_arc/lib.rs",
+      "file:style_derive/lib.rs",
+      "file:selectors/matching.rs"
+    ],
+    "depthMap": {
+      "file:style/lib.rs": 0,
+      "file:style/stylist.rs": 1,
+      "file:style/values/mod.rs": 1,
+      "file:style/properties/mod.rs": 1,
+      "file:selectors/parser.rs": 1,
+      "file:style/context.rs": 1,
+      "file:style/matching.rs": 1,
+      "file:style/dom.rs": 1,
+      "file:style/selector_parser.rs": 1,
+      "file:style/rule_tree/mod.rs": 1,
+      "file:style/stylesheets/rules.rs": 1,
+      "file:style/style_adjuster.rs": 1,
+      "file:style/gecko/wrapper.rs": 1,
+      "file:style/servo/animation.rs": 1,
+      "file:style/invalidation/element/invalidation_map.rs": 1,
+      "file:style/color/mod.rs": 1,
+      "file:style_traits/lib.rs": 1,
+      "file:servo_arc/lib.rs": 1,
+      "file:style_derive/lib.rs": 1,
+      "file:selectors/matching.rs": 2
+    },
+    "byDepth": {
+      "0": [
+        "file:style/lib.rs"
+      ],
+      "1": [
+        "file:style/stylist.rs",
+        "file:style/values/mod.rs",
+        "file:style/properties/mod.rs",
+        "file:selectors/parser.rs",
+        "file:style/context.rs",
+        "file:style/matching.rs",
+        "file:style/dom.rs",
+        "file:style/selector_parser.rs",
+        "file:style/rule_tree/mod.rs",
+        "file:style/stylesheets/rules.rs",
+        "file:style/style_adjuster.rs",
+        "file:style/gecko/wrapper.rs",
+        "file:style/servo/animation.rs",
+        "file:style/invalidation/element/invalidation_map.rs",
+        "file:style/color/mod.rs",
+        "file:style_traits/lib.rs",
+        "file:servo_arc/lib.rs",
+        "file:style_derive/lib.rs"
+      ],
+      "2": [
+        "file:selectors/matching.rs"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:README.md",
+        "name": "README.md",
+        "summary": "Project overview documenting Stylo architecture, crates, branches, and build setup"
+      }
+    ],
+    "infrastructure": [],
+    "data": [],
+    "config": [
+      {
+        "id": "config:Cargo.toml",
+        "name": "Cargo.toml",
+        "summary": "Rust workspace manifest defining 11 member crates and in-repo dependency paths"
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "nodes": [
+        "file:style/lib.rs",
+        "config:Cargo.toml",
+        "file:selectors/parser.rs",
+        "file:servo_arc/lib.rs",
+        "file:style_traits/lib.rs",
+        "file:style_derive/lib.rs",
+        "file:style/stylist.rs",
+        "file:style/dom.rs",
+        "file:style/context.rs",
+        "file:style/matching.rs",
+        "file:style/selector_parser.rs",
+        "file:style/rule_tree/mod.rs",
+        "file:style/properties/mod.rs",
+        "file:style/stylesheets/rules.rs",
+        "document:README.md",
+        "file:style/gecko/wrapper.rs",
+        "file:style/style_adjuster.rs",
+        "file:style/invalidation/element/invalidation_map.rs",
+        "file:style/color/mod.rs",
+        "file:style/values/mod.rs"
+      ],
+      "edgeCount": 44
+    }
+  ],
+  "layers": {
+    "count": 10,
+    "list": [
+      {
+        "id": "layer:core",
+        "name": "Core Style Engine",
+        "description": "Core style resolution pipeline, DOM abstractions, rule tree, selector matching, invalidation, traversal"
+      },
+      {
+        "id": "layer:stylesheets",
+        "name": "Stylesheets Subsystem",
+        "description": "CSS @-rule implementations: @import, @media, @container, @keyframes, etc."
+      },
+      {
+        "id": "layer:values",
+        "name": "CSS Values System",
+        "description": "All CSS value types across specified, computed, animated, generics"
+      },
+      {
+        "id": "layer:properties",
+        "name": "CSS Properties System",
+        "description": "Property definitions, cascading, declaration blocks, Houdini properties"
+      },
+      {
+        "id": "layer:selectors",
+        "name": "CSS Selector Engine",
+        "description": "selectors/ crate with parser, matching, bloom filter"
+      },
+      {
+        "id": "layer:gecko",
+        "name": "Gecko FFI Integration",
+        "description": "Firefox browser integration: FFI bindings, wrappers, snapshot support"
+      },
+      {
+        "id": "layer:servo",
+        "name": "Servo Engine Support",
+        "description": "Servo browser integration: animation, attr handling, media features"
+      },
+      {
+        "id": "layer:macros",
+        "name": "Procedural Macros",
+        "description": "style_derive and to_shmem_derive proc-macro crates"
+      },
+      {
+        "id": "layer:libraries",
+        "name": "Support Libraries",
+        "description": "Utility crates: servo_arc, style_traits, malloc_size_of, to_shmem"
+      },
+      {
+        "id": "layer:infrastructure",
+        "name": "Infrastructure & Configuration",
+        "description": "CI/CD pipelines, workspace config, README, sync scripts"
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "file:style/lib.rs": {
+      "name": "lib.rs",
+      "type": "file",
+      "summary": "Crate root that re-exports all public style subsystems (stylist, properties, values, selectors, etc.) and registers derive macros"
+    },
+    "file:style/stylist.rs": {
+      "name": "stylist.rs",
+      "type": "file",
+      "summary": "Central style resolution engine orchestrating selector matching, cascade computation, and data lookup"
+    },
+    "file:style/dom.rs": {
+      "name": "dom.rs",
+      "type": "file",
+      "summary": "Core DOM abstractions: TElement, TNode, TDocument, TShadowRoot traits"
+    },
+    "file:style/context.rs": {
+      "name": "context.rs",
+      "type": "file",
+      "summary": "Shared and thread-local style traversal contexts including StyleSystemOptions"
+    },
+    "file:style/matching.rs": {
+      "name": "matching.rs",
+      "type": "file",
+      "summary": "Selector matching and style application per element"
+    },
+    "file:style/selector_parser.rs": {
+      "name": "selector_parser.rs",
+      "type": "file",
+      "summary": "Servo-specific selector parsing with pseudo-element support"
+    },
+    "file:style/rule_tree/mod.rs": {
+      "name": "rule_tree",
+      "type": "file",
+      "summary": "Cascade rule tree with GC, level management, and source tracking"
+    },
+    "file:style/values/mod.rs": {
+      "name": "values",
+      "type": "file",
+      "summary": "CSS value system module barrel re-exporting specified, computed, animated, and generic value types"
+    },
+    "file:style/properties/mod.rs": {
+      "name": "properties",
+      "type": "file",
+      "summary": "Property ID system, declaration blocks, and cascading logic"
+    },
+    "file:selectors/parser.rs": {
+      "name": "parser.rs",
+      "type": "file",
+      "summary": "Full CSS selector parser (4923 lines) parsing all selector types"
+    },
+    "file:selectors/matching.rs": {
+      "name": "matching.rs",
+      "type": "file",
+      "summary": "Core selector matching engine implementing CSS Selectors Level 4 matching"
+    },
+    "file:style/stylesheets/rules.rs": {
+      "name": "rules.rs",
+      "type": "file",
+      "summary": "Master CssRule enum dispatching to all @-rule types"
+    },
+    "config:Cargo.toml": {
+      "name": "Cargo.toml",
+      "type": "config",
+      "summary": "Rust workspace manifest defining 11 member crates and in-repo dependency paths"
+    },
+    "document:README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Project overview documenting Stylo architecture, crates, branches, and build setup"
+    },
+    "file:style/gecko/wrapper.rs": {
+      "name": "wrapper.rs",
+      "type": "file",
+      "summary": "Gecko element wrapper implementing the TElement trait for Firefox integration (2267 lines)"
+    },
+    "file:style/servo/animation.rs": {
+      "name": "animation.rs",
+      "type": "file",
+      "summary": "Servo-side CSS animation/transition handling with Servo-specific types"
+    },
+    "file:style/style_adjuster.rs": {
+      "name": "style_adjuster.rs",
+      "type": "file",
+      "summary": "StyleAdjuster applying writing-mode, display-type, and other style fixups after matching"
+    },
+    "file:style/invalidation/element/invalidation_map.rs": {
+      "name": "invalidation_map.rs",
+      "type": "file",
+      "summary": "Core invalidation map and dependency structures for efficient change tracking"
+    },
+    "file:servo_arc/lib.rs": {
+      "name": "lib.rs",
+      "type": "file",
+      "summary": "Custom Arc implementation with HeaderSlice thin arcs and ArcUnion for efficient FFI sharing"
+    },
+    "file:style/color/mod.rs": {
+      "name": "color",
+      "type": "file",
+      "summary": "Core color types (ColorComponents, ColorSpace, AbsoluteColor) with parsing"
+    },
+    "file:style_traits/lib.rs": {
+      "name": "lib.rs",
+      "type": "file",
+      "summary": "Crate root re-exporting CSS pixel units, parsing errors, ParsingMode, and SpeculativePainter"
+    },
+    "file:style_derive/lib.rs": {
+      "name": "lib.rs",
+      "type": "file",
+      "summary": "Proc-macro crate entry point exporting 10+ derive macros for style types"
+    }
+  },
+  "totalNodes": 22,
+  "totalEdges": 46
+}

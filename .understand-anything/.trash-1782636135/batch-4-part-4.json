@@ -1,0 +1,416 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/computed/angle.rs",
+      "type": "file",
+      "name": "angle.rs",
+      "filePath": "style/values/computed/angle.rs",
+      "summary": "Computed angle value type with radian/degree conversion, CSS serialization, squared distance computation for animation, and standard mathematical trait implementations.",
+      "tags": [
+        "computed-values",
+        "angle",
+        "css-units",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/angle.rs:from_radians",
+      "type": "function",
+      "name": "from_radians",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        61,
+        63
+      ],
+      "summary": "Creates an Angle from radians.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/angle.rs:from_degrees",
+      "type": "function",
+      "name": "from_degrees",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "Creates an Angle from degrees.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/angle.rs:radians",
+      "type": "function",
+      "name": "radians",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        73,
+        75
+      ],
+      "summary": "Returns the angle in radians as f32.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/angle.rs:radians64",
+      "type": "function",
+      "name": "radians64",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "Returns the angle in radians as f64.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/angle.rs:degrees",
+      "type": "function",
+      "name": "degrees",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        90,
+        92
+      ],
+      "summary": "Returns the angle in degrees.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/angle.rs:Angle",
+      "type": "class",
+      "name": "Angle",
+      "filePath": "style/values/computed/angle.rs",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Computed angle value stored in degrees with radian conversion utilities.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/background.rs",
+      "type": "file",
+      "name": "background.rs",
+      "filePath": "style/values/computed/background.rs",
+      "summary": "Type aliases for computed background-size and re-exported BackgroundRepeat from specified values.",
+      "tags": [
+        "computed-values",
+        "background",
+        "type-aliases"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/basic_shape.rs",
+      "type": "file",
+      "name": "basic_shape.rs",
+      "filePath": "style/values/computed/basic_shape.rs",
+      "summary": "Computed basic shape types for clip-path, shape-outside, and shape() CSS functions with animation between path() and shape() via command-level interpolation.",
+      "tags": [
+        "computed-values",
+        "basic-shape",
+        "css-shapes",
+        "animation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/basic_shape.rs:animate",
+      "type": "function",
+      "name": "animate",
+      "filePath": "style/values/computed/basic_shape.rs",
+      "lineRange": [
+        104,
+        143
+      ],
+      "summary": "Animates between PathOrShapeFunction variants with command-level interpolation.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/basic_shape.rs:from",
+      "type": "function",
+      "name": "from",
+      "filePath": "style/values/computed/basic_shape.rs",
+      "lineRange": [
+        148,
+        199
+      ],
+      "summary": "Function from in basic_shape.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/values/computed/basic_shape.rs:from_L236",
+      "type": "function",
+      "name": "from_L236",
+      "filePath": "style/values/computed/basic_shape.rs",
+      "lineRange": [
+        236,
+        250
+      ],
+      "summary": "Function from in basic_shape.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/color.rs",
+      "type": "file",
+      "name": "color.rs",
+      "filePath": "style/values/computed/color.rs",
+      "summary": "Computed color type with CSS serialization, color-mix simplification, currentColor resolution, contrast-color evaluation, and animated zero implementation.",
+      "tags": [
+        "computed-values",
+        "color",
+        "css-serialization",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/color.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/values/computed/color.rs",
+      "lineRange": [
+        28,
+        43
+      ],
+      "summary": "Serializes a Color value to CSS text.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/color.rs:from_color_mix",
+      "type": "function",
+      "name": "from_color_mix",
+      "filePath": "style/values/computed/color.rs",
+      "lineRange": [
+        58,
+        64
+      ],
+      "summary": "Creates a Color from a color-mix, simplifying to absolute if possible.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/color.rs:resolve_to_absolute",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/values/computed/color.rs",
+      "lineRange": [
+        68,
+        100
+      ],
+      "summary": "Resolves a color to absolute by replacing currentColor.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/color.rs:contrast_ratio",
+      "type": "function",
+      "name": "contrast_ratio",
+      "filePath": "style/values/computed/color.rs",
+      "lineRange": [
+        102,
+        126
+      ],
+      "summary": "Function contrast_ratio in color.rs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/column.rs",
+      "type": "file",
+      "name": "column.rs",
+      "filePath": "style/values/computed/column.rs",
+      "summary": "Type alias for computed column-count values wrapping positive integers.",
+      "tags": [
+        "computed-values",
+        "column",
+        "type-aliases"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:from_radians",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:from_radians",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:from_degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:from_degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:radians",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:radians",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:radians64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:radians64",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:degrees",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "function:style/values/computed/angle.rs:degrees",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "class:style/values/computed/angle.rs:Angle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/angle.rs",
+      "target": "class:style/values/computed/angle.rs:Angle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/basic_shape.rs",
+      "target": "function:style/values/computed/basic_shape.rs:animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/basic_shape.rs",
+      "target": "function:style/values/computed/basic_shape.rs:from",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/basic_shape.rs",
+      "target": "function:style/values/computed/basic_shape.rs:from_L236",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:from_color_mix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:from_color_mix",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:resolve_to_absolute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:resolve_to_absolute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/color.rs",
+      "target": "function:style/values/computed/color.rs:contrast_ratio",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

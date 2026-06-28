@@ -1,0 +1,31 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style_derive/animate.rs", "language": "rust", "sizeLines": 138, "fileCategory": "code"},
+    {"path": "style_derive/cg.rs", "language": "rust", "sizeLines": 409, "fileCategory": "code"},
+    {"path": "style_derive/compute_squared_distance.rs", "language": "rust", "sizeLines": 129, "fileCategory": "code"},
+    {"path": "style_derive/lib.rs", "language": "rust", "sizeLines": 89, "fileCategory": "code"},
+    {"path": "style_derive/parse.rs", "language": "rust", "sizeLines": 332, "fileCategory": "code"},
+    {"path": "style_derive/specified_value_info.rs", "language": "rust", "sizeLines": 196, "fileCategory": "code"},
+    {"path": "style_derive/to_animated_value.rs", "language": "rust", "sizeLines": 42, "fileCategory": "code"},
+    {"path": "style_derive/to_animated_zero.rs", "language": "rust", "sizeLines": 65, "fileCategory": "code"},
+    {"path": "style_derive/to_computed_value.rs", "language": "rust", "sizeLines": 205, "fileCategory": "code"},
+    {"path": "style_derive/to_css.rs", "language": "rust", "sizeLines": 383, "fileCategory": "code"},
+    {"path": "style_derive/to_resolved_value.rs", "language": "rust", "sizeLines": 52, "fileCategory": "code"},
+    {"path": "style_derive/to_typed.rs", "language": "rust", "sizeLines": 720, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style_derive/animate.rs": [],
+    "style_derive/cg.rs": [],
+    "style_derive/compute_squared_distance.rs": [],
+    "style_derive/lib.rs": ["style_derive/animate.rs", "style_derive/cg.rs", "style_derive/compute_squared_distance.rs", "style_derive/parse.rs", "style_derive/specified_value_info.rs", "style_derive/to_animated_value.rs", "style_derive/to_animated_zero.rs", "style_derive/to_computed_value.rs", "style_derive/to_css.rs", "style_derive/to_resolved_value.rs", "style_derive/to_typed.rs"],
+    "style_derive/parse.rs": [],
+    "style_derive/specified_value_info.rs": [],
+    "style_derive/to_animated_value.rs": [],
+    "style_derive/to_animated_zero.rs": [],
+    "style_derive/to_computed_value.rs": [],
+    "style_derive/to_css.rs": [],
+    "style_derive/to_resolved_value.rs": [],
+    "style_derive/to_typed.rs": []
+  }
+}

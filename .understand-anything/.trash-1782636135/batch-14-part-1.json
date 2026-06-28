@@ -1,0 +1,922 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/color/color_function.rs",
+      "type": "file",
+      "name": "color_function.rs",
+      "filePath": "style/color/color_function.rs",
+      "summary": "Defines the ColorFunction enum and its resolution logic for all CSS color functions (rgb, hsl, hwb, lab, lch, oklab, oklch, color) including relative color syntax.",
+      "tags": ["color", "parsing", "css-values", "enum"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:style/color/component.rs",
+      "type": "file",
+      "name": "component.rs",
+      "filePath": "style/color/component.rs",
+      "summary": "Defines the ColorComponent enum and ColorComponentType trait for parsing, resolving, and serializing individual color components (none, value, channel keyword, calc).",
+      "tags": ["color", "parsing", "component", "trait"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/color/convert.rs",
+      "type": "file",
+      "name": "convert.rs",
+      "filePath": "style/color/convert.rs",
+      "summary": "Implements color space conversion algorithms between sRGB, HSL, HWB, Lab, Lch, Oklab, Oklch, Display P3, A98 RGB, ProPhoto RGB, Rec.2020, and XYZ color spaces.",
+      "tags": ["color", "conversion", "color-space", "algorithm"],
+      "complexity": "complex",
+      "languageNotes": "Uses 3x4 matrix transformations via the euclid crate and implements the CSS Color-4 specification conversion code."
+    },
+    {
+      "id": "class:style/color/color_function.rs:ColorFunction",
+      "type": "class",
+      "name": "ColorFunction",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [25, 91],
+      "summary": "Represents a specified CSS color function with variants for Rgb, Hsl, Hwb, Lab, Lch, Oklab, Oklch, and Color, each parametrized by origin color type.",
+      "tags": ["color", "css-values", "enum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/color_function.rs:resolve_to_absolute.AbsoluteColor",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [95, 359],
+      "summary": "Resolves an AbsoluteColor-based ColorFunction into an AbsoluteColor by computing each color component, handling origin colors and legacy syntax.",
+      "tags": ["color", "resolution", "core-logic"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:style/color/color_function.rs:has_origin_color",
+      "type": "function",
+      "name": "has_origin_color",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [364, 375],
+      "summary": "Returns true if the color function has a relative color origin specified via the 'from' keyword.",
+      "tags": ["color", "relative-color", "query"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/color_function.rs:resolve_to_absolute.SpecifiedColor",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [379, 386],
+      "summary": "Resolves a SpecifiedColor-based ColorFunction to AbsoluteColor by first mapping the origin color to absolute.",
+      "tags": ["color", "resolution", "delegation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/color_function.rs:map_origin_color",
+      "type": "function",
+      "name": "map_origin_color",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [391, 431],
+      "summary": "Maps the origin color of any ColorFunction variant to a different type using a provided function closure.",
+      "tags": ["color", "transformation", "generic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/color_function.rs:resolve_to_absolute.ComputedColor",
+      "type": "function",
+      "name": "resolve_to_absolute",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [436, 452],
+      "summary": "Resolves a computed ColorFunction to an absolute color given a current color value, mapping origin through the computed pipeline.",
+      "tags": ["color", "resolution", "computed-value"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/color_function.rs:to_css",
+      "type": "function",
+      "name": "to_css",
+      "filePath": "style/color/color_function.rs",
+      "lineRange": [456, 568],
+      "summary": "Serializes a ColorFunction to CSS text, handling function names, origin colors, component values, and alpha channels for all color function variants.",
+      "tags": ["color", "serialization", "css-output"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/color/component.rs:ColorComponent",
+      "type": "class",
+      "name": "ColorComponent",
+      "filePath": "style/color/component.rs",
+      "lineRange": [30, 41],
+      "summary": "Represents a single color component value: None, a concrete Value, a ChannelKeyword reference, a Calc node, or AlphaOmitted.",
+      "tags": ["color", "component", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/component.rs:ColorComponentType",
+      "type": "class",
+      "name": "ColorComponentType",
+      "filePath": "style/color/component.rs",
+      "lineRange": [53, 69],
+      "summary": "Trait for types that can serve as ColorComponent value types, defining from_value, units, try_from_token, and try_from_leaf.",
+      "tags": ["color", "trait", "parsing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/component.rs:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "style/color/component.rs",
+      "lineRange": [73, 106],
+      "summary": "Parses a single color component from CSS input, handling 'none' keyword, channel keywords, calc() expressions, and literal values.",
+      "tags": ["color", "parsing", "css-parser"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/component.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/color/component.rs",
+      "lineRange": [109, 151],
+      "summary": "Resolves a ColorComponent to an optional float value, handling channel keywords via origin color, calc nodes with leaf resolution, and omitted alpha defaults.",
+      "tags": ["color", "resolution", "calc"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:normalize_hue",
+      "type": "function",
+      "name": "normalize_hue",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [23, 25],
+      "summary": "Normalizes a hue angle to the range [0, 360) by subtracting integer multiples of 360.",
+      "tags": ["color", "hue", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/convert.rs:hsl_to_rgb",
+      "type": "function",
+      "name": "hsl_to_rgb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [54, 86],
+      "summary": "Converts HSL color components to RGB using the CSS Color-4 algorithm with hue interpolation via hue_to_rgb helper.",
+      "tags": ["color", "conversion", "hsl"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:rgb_to_hsl",
+      "type": "function",
+      "name": "rgb_to_hsl",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [90, 109],
+      "summary": "Converts RGB color components to HSL using hue/saturation/lightness calculations based on min/max component values.",
+      "tags": ["color", "conversion", "hsl"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:hwb_to_rgb",
+      "type": "function",
+      "name": "hwb_to_rgb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [114, 128],
+      "summary": "Converts HWB color components to RGB, delegating to hsl_to_rgb for the hue computation and applying whiteness/blackness.",
+      "tags": ["color", "conversion", "hwb"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:rgb_to_hwb",
+      "type": "function",
+      "name": "rgb_to_hwb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [133, 142],
+      "summary": "Converts RGB color components to HWB notation using min/max component values as whiteness and blackness.",
+      "tags": ["color", "conversion", "hwb"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/convert.rs:epsilon_for_range",
+      "type": "function",
+      "name": "epsilon_for_range",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [146, 148],
+      "summary": "Calculates a numerical epsilon value for a given range, used as a tolerance threshold in polar coordinate conversions.",
+      "tags": ["color", "precision", "numeric"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/color/convert.rs:orthogonal_to_polar",
+      "type": "function",
+      "name": "orthogonal_to_polar",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [154, 173],
+      "summary": "Converts rectangular orthogonal color coordinates (Lab/Oklab) to cylindrical polar coordinates (Lch/Oklch) using chroma and hue angle calculation.",
+      "tags": ["color", "conversion", "polar"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:polar_to_orthogonal",
+      "type": "function",
+      "name": "polar_to_orthogonal",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [179, 192],
+      "summary": "Converts cylindrical polar coordinates (Lch/Oklch) to rectangular orthogonal coordinates (Lab/Oklab) using cosine and sine of hue.",
+      "tags": ["color", "conversion", "polar"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:to_xyz",
+      "type": "function",
+      "name": "to_xyz",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [286, 293],
+      "summary": "Converts color components from a specified color space to XYZ, first applying linear light conversion then XYZ matrix transformation.",
+      "tags": ["color", "conversion", "xyz"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/color/convert.rs:from_xyz",
+      "type": "function",
+      "name": "from_xyz",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [297, 312],
+      "summary": "Converts color components from XYZ to a target color space, handling white point conversion and gamma encoding.",
+      "tags": ["color", "conversion", "xyz"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:WhitePoint",
+      "type": "class",
+      "name": "WhitePoint",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [225, 230],
+      "summary": "Enum representing D50 (CIE standard illuminant) and D65 white points used in color space conversions.",
+      "tags": ["color", "color-space", "white-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:ColorSpaceConversion",
+      "type": "class",
+      "name": "ColorSpaceConversion",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [263, 282],
+      "summary": "Trait defining the four-step color space conversion pipeline: to_linear_light, to_xyz, from_xyz, and to_gamma_encoded.",
+      "tags": ["color", "trait", "color-space"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Srgb",
+      "type": "class",
+      "name": "Srgb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [316, 370],
+      "summary": "sRGB color space implementation with gamma 2.2 encoding/decoding and 3x4 TO_XYZ / FROM_XYZ matrices per CSS Color-4.",
+      "tags": ["color", "color-space", "srgb"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Hsl",
+      "type": "class",
+      "name": "Hsl",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [373, 395],
+      "summary": "HSL color space conversion via sRGB, converting to/from RGB before applying sRGB linear/gamma transforms.",
+      "tags": ["color", "color-space", "hsl"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:Hwb",
+      "type": "class",
+      "name": "Hwb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [398, 420],
+      "summary": "HWB color space conversion via sRGB, using hwb_to_rgb and rgb_to_hwb for the polar-to-RGB bridge.",
+      "tags": ["color", "color-space", "hwb"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:SrgbLinear",
+      "type": "class",
+      "name": "SrgbLinear",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [424, 446],
+      "summary": "Linear-light sRGB color space (no gamma encoding/decoding) with the same XYZ matrices as sRGB.",
+      "tags": ["color", "color-space", "linear"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:Lab",
+      "type": "class",
+      "name": "Lab",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [727, 804],
+      "summary": "CIE Lab color space conversion with D50 white point, implementing the full CIELAB to XYZ and XYZ to CIELAB formulas with KAPPA and EPSILON constants.",
+      "tags": ["color", "color-space", "lab"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Lch",
+      "type": "class",
+      "name": "Lch",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [808, 838],
+      "summary": "CIE Lch color space conversion via Lab, using polar_to_orthogonal and orthogonal_to_polar for the Lab-Lch round-trip.",
+      "tags": ["color", "color-space", "lch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Oklab",
+      "type": "class",
+      "name": "Oklab",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [842, 902],
+      "summary": "Oklab perceptual color space conversion using LMS intermediate space with 3x4 XYZ_TO_LMS, LMS_TO_OKLAB, and inverse matrices.",
+      "tags": ["color", "color-space", "oklab"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Oklch",
+      "type": "class",
+      "name": "Oklch",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [906, 936],
+      "summary": "Oklch cylindrical color space conversion via Oklab, using polar_to_orthogonal and orthogonal_to_polar.",
+      "tags": ["color", "color-space", "oklch"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:DisplayP3",
+      "type": "class",
+      "name": "DisplayP3",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [450, 488],
+      "summary": "Display P3 wide gamut color space with D65 white point and specific 3x4 TO_XYZ / FROM_XYZ matrices.",
+      "tags": ["color", "color-space", "display-p3"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:A98Rgb",
+      "type": "class",
+      "name": "A98Rgb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [514, 553],
+      "summary": "Adobe RGB (1998) color space with D65 white point, using power-law transfer function with gamma ~2.2.",
+      "tags": ["color", "color-space", "adobergb"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:ProphotoRgb",
+      "type": "class",
+      "name": "ProphotoRgb",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [557, 614],
+      "summary": "ProPhoto RGB wide gamut color space with D50 white point, using a 1.8 power law gamma encoding.",
+      "tags": ["color", "color-space", "prophoto"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:Rec2020",
+      "type": "class",
+      "name": "Rec2020",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [618, 675],
+      "summary": "ITU-R BT.2020 ultra-high definition color space with D65 white point and a unique hybrid gamma transfer function.",
+      "tags": ["color", "color-space", "rec2020"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/color/convert.rs:XyzD50",
+      "type": "class",
+      "name": "XyzD50",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [679, 699],
+      "summary": "XYZ color space with D50 white point, pass-through identity conversions for all pipeline stages.",
+      "tags": ["color", "color-space", "xyz"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/color/convert.rs:XyzD65",
+      "type": "class",
+      "name": "XyzD65",
+      "filePath": "style/color/convert.rs",
+      "lineRange": [703, 723],
+      "summary": "XYZ color space with D65 white point, pass-through identity conversions for all pipeline stages.",
+      "tags": ["color", "color-space", "xyz"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "class:style/color/color_function.rs:ColorFunction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.AbsoluteColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:has_origin_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.SpecifiedColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:map_origin_color",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.ComputedColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:to_css",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:style/color/color_function.rs:ColorFunction",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.AbsoluteColor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "class:style/color/color_function.rs:ColorFunction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.AbsoluteColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:has_origin_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.SpecifiedColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:map_origin_color",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/color_function.rs",
+      "target": "function:style/color/color_function.rs:resolve_to_absolute.ComputedColor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "class:style/color/component.rs:ColorComponent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "class:style/color/component.rs:ColorComponentType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "function:style/color/component.rs:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "function:style/color/component.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "class:style/color/component.rs:ColorComponent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "class:style/color/component.rs:ColorComponentType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "function:style/color/component.rs:parse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/component.rs",
+      "target": "function:style/color/component.rs:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:normalize_hue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:hsl_to_rgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:rgb_to_hsl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:hwb_to_rgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:rgb_to_hwb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:epsilon_for_range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:orthogonal_to_polar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:polar_to_orthogonal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:to_xyz",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:from_xyz",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:WhitePoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:ColorSpaceConversion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Srgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Hsl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Hwb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:SrgbLinear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Lab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Lch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Oklab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Oklch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:DisplayP3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:A98Rgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:ProphotoRgb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Rec2020",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:XyzD50",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:XyzD65",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:normalize_hue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:hsl_to_rgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:rgb_to_hsl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:hwb_to_rgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:rgb_to_hwb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:epsilon_for_range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:orthogonal_to_polar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:polar_to_orthogonal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:to_xyz",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "function:style/color/convert.rs:from_xyz",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:WhitePoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:ColorSpaceConversion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Srgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Hsl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Hwb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:SrgbLinear",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Lab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Lch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Oklab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Oklch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:DisplayP3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:A98Rgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:ProphotoRgb",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:Rec2020",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:XyzD50",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/color/convert.rs",
+      "target": "class:style/color/convert.rs:XyzD65",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

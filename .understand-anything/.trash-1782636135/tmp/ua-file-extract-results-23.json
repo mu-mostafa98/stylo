@@ -1,0 +1,2050 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/properties/build.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 27,
+          "endLine": 78,
+          "params": []
+        },
+        {
+          "name": "abort",
+          "startLine": 81,
+          "endLine": 83,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "render",
+          "startLine": 86,
+          "endLine": 104,
+          "params": [
+            "filename",
+            "**context"
+          ]
+        },
+        {
+          "name": "write",
+          "startLine": 107,
+          "endLine": 115,
+          "params": [
+            "directory",
+            "filename",
+            "content"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "abort",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "render",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "write",
+          "line": 107,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 32
+        },
+        {
+          "caller": "main",
+          "callee": "abort",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "abort",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "data.PropertiesData",
+          "lineNumber": 39
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "render",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "write",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "getattr",
+          "lineNumber": 55
+        },
+        {
+          "caller": "main",
+          "callee": "prop.enabled_in_content",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "render",
+          "lineNumber": 65
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 66
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 68
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 73
+        },
+        {
+          "caller": "main",
+          "callee": "write",
+          "lineNumber": 75
+        },
+        {
+          "caller": "main",
+          "callee": "write",
+          "lineNumber": 76
+        },
+        {
+          "caller": "main",
+          "callee": "write",
+          "lineNumber": 77
+        },
+        {
+          "caller": "main",
+          "callee": "write",
+          "lineNumber": 78
+        },
+        {
+          "caller": "abort",
+          "callee": "print",
+          "lineNumber": 82
+        },
+        {
+          "caller": "abort",
+          "callee": "sys.exit",
+          "lineNumber": 83
+        },
+        {
+          "caller": "render",
+          "callee": "TemplateLookup",
+          "lineNumber": 88
+        },
+        {
+          "caller": "render",
+          "callee": "Template",
+          "lineNumber": 91
+        },
+        {
+          "caller": "render",
+          "callee": "open(filename, \"rb\").read",
+          "lineNumber": 92
+        },
+        {
+          "caller": "render",
+          "callee": "open",
+          "lineNumber": 92
+        },
+        {
+          "caller": "render",
+          "callee": "template.render",
+          "lineNumber": 100
+        },
+        {
+          "caller": "render",
+          "callee": "abort",
+          "lineNumber": 104
+        },
+        {
+          "caller": "render",
+          "callee": "exceptions.text_error_template().render",
+          "lineNumber": 104
+        },
+        {
+          "caller": "render",
+          "callee": "exceptions.text_error_template",
+          "lineNumber": 104
+        },
+        {
+          "caller": "write",
+          "callee": "os.path.exists",
+          "lineNumber": 108
+        },
+        {
+          "caller": "write",
+          "callee": "os.makedirs",
+          "lineNumber": 109
+        },
+        {
+          "caller": "write",
+          "callee": "os.path.join",
+          "lineNumber": 110
+        },
+        {
+          "caller": "write",
+          "callee": "open(full_path, \"w\", encoding=\"utf-8\", newline=\"\").write",
+          "lineNumber": 111
+        },
+        {
+          "caller": "write",
+          "callee": "open",
+          "lineNumber": 111
+        },
+        {
+          "caller": "write",
+          "callee": "RE_PYTHON_ADDR.search",
+          "lineNumber": 113
+        },
+        {
+          "caller": "write",
+          "callee": "abort",
+          "lineNumber": 115
+        },
+        {
+          "caller": "write",
+          "callee": "'Found \"{}\" in {} ({})'.format",
+          "lineNumber": 115
+        },
+        {
+          "caller": "write",
+          "callee": "python_addr.group",
+          "lineNumber": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/properties/counted_unknown_properties.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 105,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/properties/data.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1296,
+      "nonEmptyLines": 1156,
+      "functions": [
+        {
+          "name": "rule_values_from_arg",
+          "startLine": 116,
+          "endLine": 122,
+          "params": [
+            "rule_types"
+          ]
+        },
+        {
+          "name": "to_rust_ident",
+          "startLine": 125,
+          "endLine": 129,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "idl_method",
+          "startLine": 132,
+          "endLine": 137,
+          "params": [
+            "name",
+            "camel_case"
+          ]
+        },
+        {
+          "name": "to_snake_case",
+          "startLine": 140,
+          "endLine": 141,
+          "params": [
+            "ident"
+          ]
+        },
+        {
+          "name": "to_camel_case",
+          "startLine": 144,
+          "endLine": 147,
+          "params": [
+            "ident"
+          ]
+        },
+        {
+          "name": "to_camel_case_lower",
+          "startLine": 150,
+          "endLine": 152,
+          "params": [
+            "ident"
+          ]
+        },
+        {
+          "name": "to_idl_name",
+          "startLine": 156,
+          "endLine": 157,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "parse_aliases",
+          "startLine": 160,
+          "endLine": 165,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "parse_property_aliases",
+          "startLine": 261,
+          "endLine": 267,
+          "params": [
+            "alias_list"
+          ]
+        },
+        {
+          "name": "to_phys",
+          "startLine": 270,
+          "endLine": 271,
+          "params": [
+            "name",
+            "logical",
+            "physical"
+          ]
+        },
+        {
+          "name": "_add_logical_props",
+          "startLine": 1054,
+          "endLine": 1065,
+          "params": [
+            "data",
+            "props"
+          ]
+        },
+        {
+          "name": "_remove_common_first_line_and_first_letter_properties",
+          "startLine": 1069,
+          "endLine": 1086,
+          "params": [
+            "props",
+            "engine"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Vector",
+          "startLine": 168,
+          "endLine": 181,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Keyword",
+          "startLine": 184,
+          "endLine": 258,
+          "methods": [
+            "__init__",
+            "values_for",
+            "aliases_for",
+            "gecko_constant",
+            "needs_cast",
+            "maybe_cast",
+            "casted_constant_name"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Property",
+          "startLine": 274,
+          "endLine": 339,
+          "methods": [
+            "__init__",
+            "rule_types_allowed_names",
+            "experimental",
+            "explicitly_enabled_in_ua_sheets",
+            "explicitly_enabled_in_chrome",
+            "enabled_in_content",
+            "is_visited_dependent",
+            "is_prioritary",
+            "noncustomcsspropertyid"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Longhand",
+          "startLine": 342,
+          "endLine": 660,
+          "methods": [
+            "__init__",
+            "affects_flags",
+            "type",
+            "logical_mapping_data",
+            "logical_mapping_kind",
+            "all_physical_mapped_properties",
+            "may_be_disabled_in",
+            "base_type",
+            "specified_type",
+            "is_zoom_dependent",
+            "is_inherited_zoom_dependent_property",
+            "specified_is_copy",
+            "animated_type"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Shorthand",
+          "startLine": 663,
+          "endLine": 709,
+          "methods": [
+            "__init__",
+            "get_animatable",
+            "type"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Alias",
+          "startLine": 712,
+          "endLine": 753,
+          "methods": [
+            "__init__",
+            "type",
+            "rule_types_allowed_names",
+            "experimental",
+            "explicitly_enabled_in_ua_sheets",
+            "explicitly_enabled_in_chrome",
+            "enabled_in_content",
+            "noncustomcsspropertyid"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Method",
+          "startLine": 756,
+          "endLine": 778,
+          "methods": [
+            "__init__",
+            "arg_list",
+            "signature",
+            "declare",
+            "stub"
+          ],
+          "properties": []
+        },
+        {
+          "name": "StyleStruct",
+          "startLine": 781,
+          "endLine": 791,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Descriptor",
+          "startLine": 794,
+          "endLine": 802,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "PropertiesData",
+          "startLine": 805,
+          "endLine": 1051,
+          "methods": [
+            "__init__",
+            "declare_all_shorthand",
+            "_load_descriptors",
+            "style_struct_by_name_lower",
+            "active_style_structs",
+            "add_prefixed_aliases",
+            "declare_longhand",
+            "declare_shorthand",
+            "shorthands_except_all",
+            "all_aliases",
+            "all_properties_and_aliases"
+          ],
+          "properties": []
+        },
+        {
+          "name": "PropertyRestrictions",
+          "startLine": 1089,
+          "endLine": 1289,
+          "methods": [
+            "logical_group",
+            "shorthand",
+            "spec",
+            "svg_text_properties",
+            "webkit_text_properties",
+            "first_letter",
+            "first_line",
+            "placeholder",
+            "marker",
+            "cue"
+          ],
+          "properties": []
+        },
+        {
+          "name": "CountedUnknownProperty",
+          "startLine": 1292,
+          "endLine": 1296,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "rule_values_from_arg",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "to_rust_ident",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "idl_method",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "to_snake_case",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "to_camel_case",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "to_camel_case_lower",
+          "line": 150,
+          "isDefault": false
+        },
+        {
+          "name": "to_idl_name",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "parse_aliases",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "Vector",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "Keyword",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "parse_property_aliases",
+          "line": 261,
+          "isDefault": false
+        },
+        {
+          "name": "to_phys",
+          "line": 270,
+          "isDefault": false
+        },
+        {
+          "name": "Property",
+          "line": 274,
+          "isDefault": false
+        },
+        {
+          "name": "Longhand",
+          "line": 342,
+          "isDefault": false
+        },
+        {
+          "name": "Shorthand",
+          "line": 663,
+          "isDefault": false
+        },
+        {
+          "name": "Alias",
+          "line": 712,
+          "isDefault": false
+        },
+        {
+          "name": "Method",
+          "line": 756,
+          "isDefault": false
+        },
+        {
+          "name": "StyleStruct",
+          "line": 781,
+          "isDefault": false
+        },
+        {
+          "name": "Descriptor",
+          "line": 794,
+          "isDefault": false
+        },
+        {
+          "name": "PropertiesData",
+          "line": 805,
+          "isDefault": false
+        },
+        {
+          "name": "_add_logical_props",
+          "line": 1054,
+          "isDefault": false
+        },
+        {
+          "name": "_remove_common_first_line_and_first_letter_properties",
+          "line": 1069,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyRestrictions",
+          "line": 1089,
+          "isDefault": false
+        },
+        {
+          "name": "CountedUnknownProperty",
+          "line": 1292,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "to_rust_ident",
+          "callee": "name.replace",
+          "lineNumber": 126
+        },
+        {
+          "caller": "idl_method",
+          "callee": "name.startswith",
+          "lineNumber": 135
+        },
+        {
+          "caller": "to_snake_case",
+          "callee": "re.sub(\"([A-Z]+)\", lambda m: \"_\" + m.group(1).lower(), ident).strip",
+          "lineNumber": 141
+        },
+        {
+          "caller": "to_snake_case",
+          "callee": "re.sub",
+          "lineNumber": 141
+        },
+        {
+          "caller": "to_snake_case",
+          "callee": "m.group(1).lower",
+          "lineNumber": 141
+        },
+        {
+          "caller": "to_snake_case",
+          "callee": "m.group",
+          "lineNumber": 141
+        },
+        {
+          "caller": "to_camel_case",
+          "callee": "re.sub",
+          "lineNumber": 145
+        },
+        {
+          "caller": "to_camel_case",
+          "callee": "m.group(2).upper",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_camel_case",
+          "callee": "m.group",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_camel_case",
+          "callee": "ident.strip(\"_\").strip",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_camel_case",
+          "callee": "ident.strip",
+          "lineNumber": 146
+        },
+        {
+          "caller": "to_camel_case_lower",
+          "callee": "to_camel_case",
+          "lineNumber": 151
+        },
+        {
+          "caller": "to_camel_case_lower",
+          "callee": "camel[0].lower",
+          "lineNumber": 152
+        },
+        {
+          "caller": "to_idl_name",
+          "callee": "re.sub",
+          "lineNumber": 157
+        },
+        {
+          "caller": "to_idl_name",
+          "callee": "m.group(1).upper",
+          "lineNumber": 157
+        },
+        {
+          "caller": "to_idl_name",
+          "callee": "m.group",
+          "lineNumber": 157
+        },
+        {
+          "caller": "parse_aliases",
+          "callee": "pair.split",
+          "lineNumber": 163
+        },
+        {
+          "caller": "__init__",
+          "callee": "isinstance",
+          "lineNumber": 199
+        },
+        {
+          "caller": "__init__",
+          "callee": "TypeError",
+          "lineNumber": 201
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_camel_case",
+          "lineNumber": 208
+        },
+        {
+          "caller": "__init__",
+          "callee": "name.replace(\"-moz-\", \"\").replace",
+          "lineNumber": 208
+        },
+        {
+          "caller": "__init__",
+          "callee": "name.replace",
+          "lineNumber": 208
+        },
+        {
+          "caller": "__init__",
+          "callee": "parse_aliases",
+          "lineNumber": 211
+        },
+        {
+          "caller": "__init__",
+          "callee": "parse_aliases",
+          "lineNumber": 212
+        },
+        {
+          "caller": "values_for",
+          "callee": "Exception",
+          "lineNumber": 221
+        },
+        {
+          "caller": "aliases_for",
+          "callee": "Exception",
+          "lineNumber": 229
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "value.replace",
+          "lineNumber": 232
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "moz_stripped.replace(\"-\", \"_\").split",
+          "lineNumber": 234
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "moz_stripped.replace",
+          "lineNumber": 234
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "p.title",
+          "lineNumber": 235
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "\"\".join",
+          "lineNumber": 236
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "moz_stripped.replace",
+          "lineNumber": 238
+        },
+        {
+          "caller": "gecko_constant",
+          "callee": "suffix.upper",
+          "lineNumber": 239
+        },
+        {
+          "caller": "maybe_cast",
+          "callee": "self.needs_cast",
+          "lineNumber": 245
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "TypeError",
+          "lineNumber": 249
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "cast_type.upper",
+          "lineNumber": 252
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "self.gecko_constant",
+          "lineNumber": 252
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "cast_type.upper",
+          "lineNumber": 255
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "self.gecko_constant(value).upper().replace",
+          "lineNumber": 257
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "self.gecko_constant(value).upper",
+          "lineNumber": 257
+        },
+        {
+          "caller": "casted_constant_name",
+          "callee": "self.gecko_constant",
+          "lineNumber": 257
+        },
+        {
+          "caller": "parse_property_aliases",
+          "callee": "alias.partition",
+          "lineNumber": 265
+        },
+        {
+          "caller": "parse_property_aliases",
+          "callee": "result.append",
+          "lineNumber": 266
+        },
+        {
+          "caller": "to_phys",
+          "callee": "name.replace(logical, physical).replace",
+          "lineNumber": 271
+        },
+        {
+          "caller": "to_phys",
+          "callee": "name.replace",
+          "lineNumber": 271
+        },
+        {
+          "caller": "__init__",
+          "callee": "TypeError",
+          "lineNumber": 289
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_rust_ident",
+          "lineNumber": 291
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_camel_case",
+          "lineNumber": 292
+        },
+        {
+          "caller": "__init__",
+          "callee": "idl_method",
+          "lineNumber": 295
+        },
+        {
+          "caller": "__init__",
+          "callee": "rule_values_from_arg",
+          "lineNumber": 296
+        },
+        {
+          "caller": "__init__",
+          "callee": "parse_property_aliases",
+          "lineNumber": 306
+        },
+        {
+          "caller": "__init__",
+          "callee": "parse_property_aliases",
+          "lineNumber": 307
+        },
+        {
+          "caller": "__init__",
+          "callee": "flags.split",
+          "lineNumber": 308
+        },
+        {
+          "caller": "experimental",
+          "callee": "bool",
+          "lineNumber": 317
+        },
+        {
+          "caller": "experimental",
+          "callee": "bool",
+          "lineNumber": 319
+        },
+        {
+          "caller": "experimental",
+          "callee": "Exception",
+          "lineNumber": 321
+        },
+        {
+          "caller": "__init__",
+          "callee": "Property.__init__",
+          "lineNumber": 373
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.affects_flags",
+          "lineNumber": 387
+        },
+        {
+          "caller": "__init__",
+          "callee": "Vector",
+          "lineNumber": 418
+        },
+        {
+          "caller": "logical_mapping_data",
+          "callee": "len",
+          "lineNumber": 470
+        },
+        {
+          "caller": "logical_mapping_kind",
+          "callee": "self.logical_mapping_data",
+          "lineNumber": 476
+        },
+        {
+          "caller": "logical_mapping_kind",
+          "callee": "\"LogicalMappingKind::{}(Logical{}::{})\".format",
+          "lineNumber": 477
+        },
+        {
+          "caller": "logical_mapping_kind",
+          "callee": "to_camel_case",
+          "lineNumber": 478
+        },
+        {
+          "caller": "logical_mapping_kind",
+          "callee": "item.replace",
+          "lineNumber": 478
+        },
+        {
+          "caller": "all_physical_mapped_properties",
+          "callee": "self.logical_mapping_data",
+          "lineNumber": 486
+        },
+        {
+          "caller": "all_physical_mapped_properties",
+          "callee": "to_phys",
+          "lineNumber": 488
+        },
+        {
+          "caller": "may_be_disabled_in",
+          "callee": "Exception",
+          "lineNumber": 498
+        },
+        {
+          "caller": "base_type",
+          "callee": "\"crate::values::specified::{}\".format",
+          "lineNumber": 502
+        },
+        {
+          "caller": "base_type",
+          "callee": "\"longhands::{}::SpecifiedValue\".format",
+          "lineNumber": 503
+        },
+        {
+          "caller": "specified_type",
+          "callee": "\"crate::values::specified::{}\".format",
+          "lineNumber": 507
+        },
+        {
+          "caller": "specified_type",
+          "callee": "\"longhands::{}::SpecifiedValue\".format",
+          "lineNumber": 509
+        },
+        {
+          "caller": "specified_type",
+          "callee": "\"Box<{}>\".format",
+          "lineNumber": 511
+        },
+        {
+          "caller": "is_inherited_zoom_dependent_property",
+          "callee": "self.is_zoom_dependent",
+          "lineNumber": 558
+        },
+        {
+          "caller": "specified_is_copy",
+          "callee": "bool",
+          "lineNumber": 653
+        },
+        {
+          "caller": "animated_type",
+          "callee": "\"<{} as ToComputedValue>::ComputedValue\".format",
+          "lineNumber": 657
+        },
+        {
+          "caller": "animated_type",
+          "callee": "self.base_type",
+          "lineNumber": 657
+        },
+        {
+          "caller": "animated_type",
+          "callee": "\"<{} as ToAnimatedValue>::AnimatedValue\".format",
+          "lineNumber": 660
+        },
+        {
+          "caller": "__init__",
+          "callee": "Property.__init__",
+          "lineNumber": 681
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_rust_ident",
+          "lineNumber": 715
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_camel_case",
+          "lineNumber": 716
+        },
+        {
+          "caller": "__init__",
+          "callee": "idl_method",
+          "lineNumber": 717
+        },
+        {
+          "caller": "experimental",
+          "callee": "bool",
+          "lineNumber": 737
+        },
+        {
+          "caller": "experimental",
+          "callee": "bool",
+          "lineNumber": 739
+        },
+        {
+          "caller": "experimental",
+          "callee": "Exception",
+          "lineNumber": 741
+        },
+        {
+          "caller": "arg_list",
+          "callee": "\", \".join",
+          "lineNumber": 766
+        },
+        {
+          "caller": "signature",
+          "callee": "self.arg_list",
+          "lineNumber": 769
+        },
+        {
+          "caller": "declare",
+          "callee": "self.signature",
+          "lineNumber": 775
+        },
+        {
+          "caller": "stub",
+          "callee": "self.signature",
+          "lineNumber": 778
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_snake_case",
+          "lineNumber": 785
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_rust_ident",
+          "lineNumber": 786
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_rust_ident",
+          "lineNumber": 801
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_camel_case",
+          "lineNumber": 802
+        },
+        {
+          "caller": "__init__",
+          "callee": "CountedUnknownProperty",
+          "lineNumber": 816
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 820
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 821
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 822
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 823
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 824
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 825
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 826
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 827
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 828
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 829
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 830
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 831
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 832
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 833
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 834
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 835
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 836
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 837
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 838
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 839
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 840
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 841
+        },
+        {
+          "caller": "__init__",
+          "callee": "StyleStruct",
+          "lineNumber": 842
+        },
+        {
+          "caller": "__init__",
+          "callee": "toml.loads",
+          "lineNumber": 845
+        },
+        {
+          "caller": "__init__",
+          "callee": "open(os.path.join(os.path.dirname(__file__), \"longhands.toml\")).read",
+          "lineNumber": 845
+        },
+        {
+          "caller": "__init__",
+          "callee": "open",
+          "lineNumber": 845
+        },
+        {
+          "caller": "__init__",
+          "callee": "os.path.join",
+          "lineNumber": 845
+        },
+        {
+          "caller": "__init__",
+          "callee": "os.path.dirname",
+          "lineNumber": 845
+        },
+        {
+          "caller": "__init__",
+          "callee": "longhands_toml.items",
+          "lineNumber": 846
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.style_struct_by_name_lower",
+          "lineNumber": 847
+        },
+        {
+          "caller": "__init__",
+          "callee": "args.pop",
+          "lineNumber": 852
+        },
+        {
+          "caller": "__init__",
+          "callee": "TypeError",
+          "lineNumber": 854
+        },
+        {
+          "caller": "__init__",
+          "callee": "keyword_dict.pop",
+          "lineNumber": 855
+        },
+        {
+          "caller": "__init__",
+          "callee": "Keyword",
+          "lineNumber": 856
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declare_longhand",
+          "lineNumber": 857
+        },
+        {
+          "caller": "__init__",
+          "callee": "TypeError",
+          "lineNumber": 861
+        },
+        {
+          "caller": "__init__",
+          "callee": "args.pop",
+          "lineNumber": 862
+        },
+        {
+          "caller": "__init__",
+          "callee": "args.get",
+          "lineNumber": 863
+        },
+        {
+          "caller": "__init__",
+          "callee": "TypeError",
+          "lineNumber": 864
+        },
+        {
+          "caller": "__init__",
+          "callee": "args.pop",
+          "lineNumber": 865
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declare_longhand",
+          "lineNumber": 866
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.logical_groups.items",
+          "lineNumber": 868
+        },
+        {
+          "caller": "__init__",
+          "callee": "sum",
+          "lineNumber": 869
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 870
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 871
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declaration_variants.append",
+          "lineNumber": 883
+        },
+        {
+          "caller": "__init__",
+          "callee": "property.specified_type",
+          "lineNumber": 885
+        },
+        {
+          "caller": "__init__",
+          "callee": "property.specified_is_copy",
+          "lineNumber": 887
+        },
+        {
+          "caller": "__init__",
+          "callee": "groupby",
+          "lineNumber": 896
+        },
+        {
+          "caller": "__init__",
+          "callee": "sorted",
+          "lineNumber": 896
+        },
+        {
+          "caller": "__init__",
+          "callee": "list",
+          "lineNumber": 897
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 900
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 903
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.longhands.sort",
+          "lineNumber": 907
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declaration_variants.sort",
+          "lineNumber": 908
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declaration_variants.append",
+          "lineNumber": 930
+        },
+        {
+          "caller": "__init__",
+          "callee": "toml.loads",
+          "lineNumber": 933
+        },
+        {
+          "caller": "__init__",
+          "callee": "open(os.path.join(os.path.dirname(__file__), \"shorthands.toml\")).read",
+          "lineNumber": 933
+        },
+        {
+          "caller": "__init__",
+          "callee": "open",
+          "lineNumber": 933
+        },
+        {
+          "caller": "__init__",
+          "callee": "os.path.join",
+          "lineNumber": 933
+        },
+        {
+          "caller": "__init__",
+          "callee": "os.path.dirname",
+          "lineNumber": 933
+        },
+        {
+          "caller": "__init__",
+          "callee": "shorthands_toml.items",
+          "lineNumber": 934
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declare_shorthand",
+          "lineNumber": 935
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.declare_all_shorthand",
+          "lineNumber": 936
+        },
+        {
+          "caller": "__init__",
+          "callee": "self._load_descriptors",
+          "lineNumber": 938
+        },
+        {
+          "caller": "__init__",
+          "callee": "self._load_descriptors",
+          "lineNumber": 939
+        },
+        {
+          "caller": "__init__",
+          "callee": "self._load_descriptors",
+          "lineNumber": 940
+        },
+        {
+          "caller": "__init__",
+          "callee": "self._load_descriptors",
+          "lineNumber": 941
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "p.enabled_in_content",
+          "lineNumber": 963
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "p.experimental",
+          "lineNumber": 963
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "p.rule_types_allowed_names",
+          "lineNumber": 965
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "logical_longhands.append",
+          "lineNumber": 968
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "other_longhands.append",
+          "lineNumber": 970
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "logical_longhands.sort",
+          "lineNumber": 977
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "other_longhands.sort",
+          "lineNumber": 978
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "list",
+          "lineNumber": 980
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "map",
+          "lineNumber": 980
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "len",
+          "lineNumber": 982
+        },
+        {
+          "caller": "declare_all_shorthand",
+          "callee": "self.declare_shorthand",
+          "lineNumber": 983
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "os.path.join",
+          "lineNumber": 991
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "os.path.dirname",
+          "lineNumber": 991
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "toml.loads",
+          "lineNumber": 992
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "open(path).read",
+          "lineNumber": 992
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "open",
+          "lineNumber": 992
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "Descriptor",
+          "lineNumber": 993
+        },
+        {
+          "caller": "_load_descriptors",
+          "callee": "data.items",
+          "lineNumber": 993
+        },
+        {
+          "caller": "style_struct_by_name_lower",
+          "callee": "TypeError",
+          "lineNumber": 999
+        },
+        {
+          "caller": "add_prefixed_aliases",
+          "callee": "property.aliases.append",
+          "lineNumber": 1006
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "kwargs.setdefault('aliases', []).extend",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "kwargs.setdefault",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "Longhand",
+          "lineNumber": 1013
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "self.add_prefixed_aliases",
+          "lineNumber": 1014
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "Alias",
+          "lineNumber": 1015
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "style_struct.longhands.append",
+          "lineNumber": 1017
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "self.longhands.append",
+          "lineNumber": 1018
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "self.logical_groups.setdefault(\r\n                longhand.logical_group, []\r\n            ).append",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "declare_longhand",
+          "callee": "self.logical_groups.setdefault",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "sub_properties.extend",
+          "lineNumber": 1032
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "kwargs.setdefault('aliases', []).extend",
+          "lineNumber": 1034
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "kwargs.setdefault",
+          "lineNumber": 1034
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "Shorthand",
+          "lineNumber": 1036
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "self.add_prefixed_aliases",
+          "lineNumber": 1037
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "Alias",
+          "lineNumber": 1038
+        },
+        {
+          "caller": "declare_shorthand",
+          "callee": "self.shorthands.append",
+          "lineNumber": 1040
+        },
+        {
+          "caller": "_add_logical_props",
+          "callee": "set",
+          "lineNumber": 1055
+        },
+        {
+          "caller": "_add_logical_props",
+          "callee": "groups.add",
+          "lineNumber": 1062
+        },
+        {
+          "caller": "_add_logical_props",
+          "callee": "props.add",
+          "lineNumber": 1065
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1071
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1072
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1074
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1075
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1076
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1077
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1078
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1080
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1081
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1082
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1083
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1084
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1085
+        },
+        {
+          "caller": "_remove_common_first_line_and_first_letter_properties",
+          "callee": "props.remove",
+          "lineNumber": 1086
+        },
+        {
+          "caller": "svg_text_properties",
+          "callee": "set",
+          "lineNumber": 1107
+        },
+        {
+          "caller": "webkit_text_properties",
+          "callee": "set",
+          "lineNumber": 1129
+        },
+        {
+          "caller": "first_letter",
+          "callee": "set",
+          "lineNumber": 1142
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1157
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1158
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1159
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1160
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1161
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1162
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1163
+        },
+        {
+          "caller": "first_letter",
+          "callee": "props.union",
+          "lineNumber": 1165
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.svg_text_properties",
+          "lineNumber": 1165
+        },
+        {
+          "caller": "first_letter",
+          "callee": "props.union",
+          "lineNumber": 1166
+        },
+        {
+          "caller": "first_letter",
+          "callee": "PropertyRestrictions.webkit_text_properties",
+          "lineNumber": 1166
+        },
+        {
+          "caller": "first_letter",
+          "callee": "_add_logical_props",
+          "lineNumber": 1168
+        },
+        {
+          "caller": "first_letter",
+          "callee": "_remove_common_first_line_and_first_letter_properties",
+          "lineNumber": 1170
+        },
+        {
+          "caller": "first_line",
+          "callee": "set",
+          "lineNumber": 1176
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1190
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1191
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1192
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1193
+        },
+        {
+          "caller": "first_line",
+          "callee": "props.union",
+          "lineNumber": 1195
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.svg_text_properties",
+          "lineNumber": 1195
+        },
+        {
+          "caller": "first_line",
+          "callee": "props.union",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.webkit_text_properties",
+          "lineNumber": 1196
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1199
+        },
+        {
+          "caller": "first_line",
+          "callee": "props.remove",
+          "lineNumber": 1200
+        },
+        {
+          "caller": "first_line",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1201
+        },
+        {
+          "caller": "first_line",
+          "callee": "props.remove",
+          "lineNumber": 1202
+        },
+        {
+          "caller": "first_line",
+          "callee": "props.remove",
+          "lineNumber": 1203
+        },
+        {
+          "caller": "first_line",
+          "callee": "_remove_common_first_line_and_first_letter_properties",
+          "lineNumber": 1205
+        },
+        {
+          "caller": "placeholder",
+          "callee": "PropertyRestrictions.first_line",
+          "lineNumber": 1215
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1216
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1217
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1218
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1219
+        },
+        {
+          "caller": "placeholder",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1220
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1221
+        },
+        {
+          "caller": "placeholder",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1222
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.add",
+          "lineNumber": 1223
+        },
+        {
+          "caller": "placeholder",
+          "callee": "PropertyRestrictions.svg_text_properties",
+          "lineNumber": 1225
+        },
+        {
+          "caller": "placeholder",
+          "callee": "props.remove",
+          "lineNumber": 1227
+        },
+        {
+          "caller": "marker",
+          "callee": "set",
+          "lineNumber": 1234
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1256
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1257
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1258
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1259
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1260
+        },
+        {
+          "caller": "marker",
+          "callee": "PropertyRestrictions.spec",
+          "lineNumber": 1261
+        },
+        {
+          "caller": "cue",
+          "callee": "set",
+          "lineNumber": 1267
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1283
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1284
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1285
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1286
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1287
+        },
+        {
+          "caller": "cue",
+          "callee": "PropertyRestrictions.shorthand",
+          "lineNumber": 1288
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_rust_ident",
+          "lineNumber": 1295
+        },
+        {
+          "caller": "__init__",
+          "callee": "to_camel_case",
+          "lineNumber": 1296
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 24,
+        "functionCount": 12,
+        "classCount": 12
+      }
+    }
+  ]
+}

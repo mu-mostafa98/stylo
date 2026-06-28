@@ -1,0 +1,13 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style/properties/build.py", "language": "python", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/counted_unknown_properties.py", "language": "python", "sizeLines": 7, "fileCategory": "code"},
+    {"path": "style/properties/data.py", "language": "python", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/properties/build.py": ["style/properties/data.py"],
+    "style/properties/counted_unknown_properties.py": [],
+    "style/properties/data.py": ["style/properties/counted_unknown_properties.py"]
+  }
+}

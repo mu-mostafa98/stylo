@@ -1,0 +1,7003 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "style/values/animated/color.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 102,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "animate",
+          "startLine": 20,
+          "endLine": 33,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 38,
+          "endLine": 56,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 67,
+          "endLine": 85,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 90,
+          "endLine": 94,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 99,
+          "endLine": 101,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "animate",
+          "callee": "procedure.weights",
+          "lineNumber": 23
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 25
+        },
+        {
+          "caller": "animate",
+          "callee": "mix::mix_many",
+          "lineNumber": 25
+        },
+        {
+          "caller": "animate",
+          "callee": "ColorInterpolationMethod::best_interpolation_between",
+          "lineNumber": 26
+        },
+        {
+          "caller": "animate",
+          "callee": "mix::ColorMixItem::new",
+          "lineNumber": 28
+        },
+        {
+          "caller": "animate",
+          "callee": "mix::ColorMixItem::new",
+          "lineNumber": 29
+        },
+        {
+          "caller": "animate",
+          "callee": "ColorMixFlags::empty",
+          "lineNumber": 31
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "start\r\n            .iter()\r\n            .zip(&end)\r\n            .map(|(this, other)| this.compute_squared_distance(other)).sum",
+          "lineNumber": 51
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "start\r\n            .iter()\r\n            .zip(&end).map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "start\r\n            .iter().zip",
+          "lineNumber": 51
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "start.iter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "this.compute_squared_distance",
+          "lineNumber": 54
+        },
+        {
+          "caller": "animate",
+          "callee": "procedure.weights",
+          "lineNumber": 68
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 70
+        },
+        {
+          "caller": "animate",
+          "callee": "Self::from_color_mix",
+          "lineNumber": 70
+        },
+        {
+          "caller": "animate",
+          "callee": "ColorInterpolationMethod::srgb",
+          "lineNumber": 71
+        },
+        {
+          "caller": "animate",
+          "callee": "OwnedSlice::from_slice",
+          "lineNumber": 72
+        },
+        {
+          "caller": "animate",
+          "callee": "self.clone",
+          "lineNumber": 74
+        },
+        {
+          "caller": "animate",
+          "callee": "Percentage",
+          "lineNumber": 75
+        },
+        {
+          "caller": "animate",
+          "callee": "other.clone",
+          "lineNumber": 78
+        },
+        {
+          "caller": "animate",
+          "callee": "Percentage",
+          "lineNumber": 79
+        },
+        {
+          "caller": "animate",
+          "callee": "ColorMixFlags::empty",
+          "lineNumber": 83
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve_to_absolute(&current_color).compute_squared_distance",
+          "lineNumber": 92
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve_to_absolute",
+          "lineNumber": 92
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.resolve_to_absolute",
+          "lineNumber": 93
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 100
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Color::Absolute",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/animated/effects.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/animated/font.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "animate",
+          "startLine": 18,
+          "endLine": 22,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 34,
+          "endLine": 36,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "animate",
+          "callee": "super::lists::by_computed_value::animate",
+          "lineNumber": 20
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 21
+        },
+        {
+          "caller": "animate",
+          "callee": "Self",
+          "lineNumber": 21
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "super::lists::by_computed_value::squared_distance",
+          "lineNumber": 28
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Err",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/animated/mod.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 548,
+      "nonEmptyLines": 482,
+      "functions": [
+        {
+          "name": "of",
+          "startLine": 42,
+          "endLine": 56,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "compare_property_priority",
+          "startLine": 69,
+          "endLine": 90,
+          "params": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "name": "animate_multiplicative_factor",
+          "startLine": 93,
+          "endLine": 99,
+          "params": [
+            "this",
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "weights",
+          "startLine": 184,
+          "endLine": 190,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 196,
+          "endLine": 198,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 204,
+          "endLine": 207,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 213,
+          "endLine": 218,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 226,
+          "endLine": 232,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 239,
+          "endLine": 241,
+          "params": [
+            "cx"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 244,
+          "endLine": 246,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 253,
+          "endLine": 255,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 258,
+          "endLine": 260,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 265,
+          "endLine": 267,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 277,
+          "endLine": 279,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 282,
+          "endLine": 284,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 294,
+          "endLine": 298,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 301,
+          "endLine": 303,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 313,
+          "endLine": 317,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 320,
+          "endLine": 322,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 332,
+          "endLine": 334,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 337,
+          "endLine": 339,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 349,
+          "endLine": 354,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 357,
+          "endLine": 363,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 373,
+          "endLine": 375,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 378,
+          "endLine": 380,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 390,
+          "endLine": 394,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 397,
+          "endLine": 399,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 447,
+          "endLine": 449,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 454,
+          "endLine": 456,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 461,
+          "endLine": 463,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 468,
+          "endLine": 470,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 478,
+          "endLine": 480,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 488,
+          "endLine": 493,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 501,
+          "endLine": 503,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 511,
+          "endLine": 513,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 521,
+          "endLine": 523,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 531,
+          "endLine": 533,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 541,
+          "endLine": 547,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PropertyCategory",
+          "startLine": 34,
+          "endLine": 39,
+          "methods": [
+            "of"
+          ],
+          "properties": [
+            "Custom",
+            "PhysicalLonghand",
+            "LogicalLonghand",
+            "Shorthand"
+          ]
+        },
+        {
+          "name": "Animate",
+          "startLine": 115,
+          "endLine": 118,
+          "methods": [
+            "animate"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Procedure",
+          "startLine": 125,
+          "endLine": 132,
+          "methods": [
+            "weights"
+          ],
+          "properties": [
+            "Interpolate",
+            "Add",
+            "Accumulate"
+          ]
+        },
+        {
+          "name": "Context",
+          "startLine": 135,
+          "endLine": 138,
+          "methods": [],
+          "properties": [
+            "style"
+          ]
+        },
+        {
+          "name": "ToAnimatedValue",
+          "startLine": 145,
+          "endLine": 154,
+          "methods": [
+            "to_animated_value",
+            "from_animated_value"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ToAnimatedZero",
+          "startLine": 167,
+          "endLine": 176,
+          "methods": [
+            "to_animated_zero"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "compare_property_priority",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "animate_multiplicative_factor",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "Animate",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "Procedure",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "Context",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "ToAnimatedValue",
+          "line": 145,
+          "isDefault": false
+        },
+        {
+          "name": "ToAnimatedZero",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "weights",
+          "line": 184,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "of",
+          "callee": "id.longhand_or_shorthand",
+          "lineNumber": 44
+        },
+        {
+          "caller": "of",
+          "callee": "id.is_logical",
+          "lineNumber": 46
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "PropertyCategory::of",
+          "lineNumber": 70
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "PropertyCategory::of",
+          "lineNumber": 71
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a_category.cmp",
+          "lineNumber": 74
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.as_shorthand().unwrap",
+          "lineNumber": 81
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.as_shorthand",
+          "lineNumber": 81
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "b.as_shorthand().unwrap",
+          "lineNumber": 82
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "b.as_shorthand",
+          "lineNumber": 82
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.longhands().count",
+          "lineNumber": 85
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.longhands",
+          "lineNumber": 85
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "b.longhands().count",
+          "lineNumber": 86
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "b.longhands",
+          "lineNumber": 86
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "subprop_count_a\r\n        .cmp(&subprop_count_b).then_with",
+          "lineNumber": 87
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "subprop_count_a.cmp",
+          "lineNumber": 87
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.idl_name_sort_order().cmp",
+          "lineNumber": 89
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "a.idl_name_sort_order",
+          "lineNumber": 89
+        },
+        {
+          "caller": "compare_property_priority",
+          "callee": "b.idl_name_sort_order",
+          "lineNumber": 89
+        },
+        {
+          "caller": "animate_multiplicative_factor",
+          "callee": "Ok",
+          "lineNumber": 98
+        },
+        {
+          "caller": "animate_multiplicative_factor",
+          "callee": "(this - 1.).animate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 197
+        },
+        {
+          "caller": "animate",
+          "callee": "((*self as f64).animate(&(*other as f64), procedure)? + 0.5).floor",
+          "lineNumber": 197
+        },
+        {
+          "caller": "animate",
+          "callee": "(*self as f64).animate",
+          "lineNumber": 197
+        },
+        {
+          "caller": "animate",
+          "callee": "(*self as f64).animate",
+          "lineNumber": 205
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 206
+        },
+        {
+          "caller": "animate",
+          "callee": "ret.min(f32::MAX as f64).max",
+          "lineNumber": 206
+        },
+        {
+          "caller": "animate",
+          "callee": "ret.min",
+          "lineNumber": 206
+        },
+        {
+          "caller": "animate",
+          "callee": "procedure.weights",
+          "lineNumber": 214
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 217
+        },
+        {
+          "caller": "animate",
+          "callee": "ret.min(f64::MAX).max",
+          "lineNumber": 217
+        },
+        {
+          "caller": "animate",
+          "callee": "ret.min",
+          "lineNumber": 217
+        },
+        {
+          "caller": "animate",
+          "callee": "self.as_ref",
+          "lineNumber": 227
+        },
+        {
+          "caller": "animate",
+          "callee": "other.as_ref",
+          "lineNumber": 227
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 228
+        },
+        {
+          "caller": "animate",
+          "callee": "Some",
+          "lineNumber": 228
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 228
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 229
+        },
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 230
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "NonNegative",
+          "lineNumber": 240
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.0.to_animated_value",
+          "lineNumber": 240
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Self",
+          "lineNumber": 245
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "<T as ToAnimatedValue>::from_animated_value(animated.0).clamp_to_non_negative",
+          "lineNumber": 245
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "<T as ToAnimatedValue>::from_animated_value",
+          "lineNumber": 245
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "Length::new(self.to_f32_px()).to_animated_value",
+          "lineNumber": 254
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "Length::new",
+          "lineNumber": 254
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.to_f32_px",
+          "lineNumber": 254
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Au::from_f32_px",
+          "lineNumber": 259
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Length::from_animated_value(animated).px",
+          "lineNumber": 259
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Length::from_animated_value",
+          "lineNumber": 259
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 266
+        },
+        {
+          "caller": "animate",
+          "callee": "Box::new",
+          "lineNumber": 266
+        },
+        {
+          "caller": "animate",
+          "callee": "(**self).animate",
+          "lineNumber": 266
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.map",
+          "lineNumber": 278
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "T::to_animated_value",
+          "lineNumber": 278
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.map",
+          "lineNumber": 283
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter()\r\n            .map(|v| v.to_animated_value(context)).collect",
+          "lineNumber": 295
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter().map",
+          "lineNumber": 295
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter",
+          "lineNumber": 295
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "v.to_animated_value",
+          "lineNumber": 296
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map(T::from_animated_value).collect",
+          "lineNumber": 302
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map",
+          "lineNumber": 302
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter",
+          "lineNumber": 302
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter()\r\n            .map(|v| v.to_animated_value(context)).collect",
+          "lineNumber": 314
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter().map",
+          "lineNumber": 314
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter",
+          "lineNumber": 314
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "v.to_animated_value",
+          "lineNumber": 315
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map(T::from_animated_value).collect",
+          "lineNumber": 321
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map",
+          "lineNumber": 321
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter",
+          "lineNumber": 321
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "Box::new",
+          "lineNumber": 333
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "(*self).to_animated_value",
+          "lineNumber": 333
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Box::new",
+          "lineNumber": 338
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "T::from_animated_value",
+          "lineNumber": 338
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_vec()\r\n            .into_iter()\r\n            .map(|v| v.to_animated_value(context)).collect",
+          "lineNumber": 350
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_vec()\r\n            .into_iter().map",
+          "lineNumber": 350
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_vec().into_iter",
+          "lineNumber": 350
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_vec",
+          "lineNumber": 350
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "v.to_animated_value",
+          "lineNumber": 352
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated\r\n            .into_vec()\r\n            .into_iter()\r\n            .map(T::from_animated_value).collect",
+          "lineNumber": 358
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated\r\n            .into_vec()\r\n            .into_iter().map",
+          "lineNumber": 358
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated\r\n            .into_vec().into_iter",
+          "lineNumber": 358
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_vec",
+          "lineNumber": 358
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_box().to_animated_value(context).into",
+          "lineNumber": 374
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_box().to_animated_value",
+          "lineNumber": 374
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_box",
+          "lineNumber": 374
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Self::from",
+          "lineNumber": 379
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Box::from_animated_value",
+          "lineNumber": 379
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_box",
+          "lineNumber": 379
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter()\r\n            .map(|v| v.to_animated_value(context)).collect",
+          "lineNumber": 391
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter().map",
+          "lineNumber": 391
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.into_iter",
+          "lineNumber": 391
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "v.to_animated_value",
+          "lineNumber": 392
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map(T::from_animated_value).collect",
+          "lineNumber": 398
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter().map",
+          "lineNumber": 398
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.into_iter",
+          "lineNumber": 398
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 448
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Au",
+          "lineNumber": 448
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 455
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 462
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Box::new",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "(**self).to_animated_zero",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 490
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Some",
+          "lineNumber": 490
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "value.to_animated_zero",
+          "lineNumber": 490
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 491
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map(|v| v.to_animated_zero()).collect",
+          "lineNumber": 502
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map",
+          "lineNumber": 502
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter",
+          "lineNumber": 502
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.to_animated_zero",
+          "lineNumber": 502
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map(|v| v.to_animated_zero()).collect",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.to_animated_zero",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map(|v| v.to_animated_zero()).collect",
+          "lineNumber": 522
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map",
+          "lineNumber": 522
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter",
+          "lineNumber": 522
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.to_animated_zero",
+          "lineNumber": 522
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map(|v| v.to_animated_zero()).collect",
+          "lineNumber": 532
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter().map",
+          "lineNumber": 532
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter",
+          "lineNumber": 532
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.to_animated_zero",
+          "lineNumber": 532
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self\r\n            .iter()\r\n            .map(|v| v.to_animated_zero())\r\n            .collect::<Result<Vec<_>, _>>",
+          "lineNumber": 542
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self\r\n            .iter().map",
+          "lineNumber": 542
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.iter",
+          "lineNumber": 542
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.to_animated_zero",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 546
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "crate::ArcSlice::from_iter",
+          "lineNumber": 546
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "v.into_iter",
+          "lineNumber": 546
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 8,
+        "functionCount": 38,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "style/values/animated/transform.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 1669,
+      "nonEmptyLines": 1531,
+      "functions": [
+        {
+          "name": "animate",
+          "startLine": 48,
+          "endLine": 55,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 69,
+          "endLine": 74,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 93,
+          "endLine": 133,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 138,
+          "endLine": 147,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 153,
+          "endLine": 215,
+          "params": [
+            "matrix"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 221,
+          "endLine": 252,
+          "params": [
+            "decomposed"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 257,
+          "endLine": 263,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 268,
+          "endLine": 274,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "negate",
+          "startLine": 289,
+          "endLine": 293,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 297,
+          "endLine": 303,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 315,
+          "endLine": 319,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 328,
+          "endLine": 335,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "from_direction_and_angle",
+          "startLine": 346,
+          "endLine": 377,
+          "params": [
+            "vector",
+            "angle"
+          ]
+        },
+        {
+          "name": "dot",
+          "startLine": 381,
+          "endLine": 383,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "scale",
+          "startLine": 387,
+          "endLine": 394,
+          "params": [
+            "factor"
+          ]
+        },
+        {
+          "name": "add",
+          "startLine": 400,
+          "endLine": 407,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 411,
+          "endLine": 487,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 492,
+          "endLine": 498,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 520,
+          "endLine": 577,
+          "params": [
+            "decomposed"
+          ]
+        },
+        {
+          "name": "decompose_3d_matrix",
+          "startLine": 583,
+          "endLine": 727,
+          "params": [
+            "matrix"
+          ]
+        },
+        {
+          "name": "decompose_2d_matrix",
+          "startLine": 851,
+          "endLine": 900,
+          "params": [
+            "matrix"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 904,
+          "endLine": 920,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 925,
+          "endLine": 935,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 941,
+          "endLine": 951,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 955,
+          "endLine": 962,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "is_matched_operation",
+          "startLine": 968,
+          "endLine": 991,
+          "params": [
+            "first",
+            "second"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 996,
+          "endLine": 1084,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 1089,
+          "endLine": 1105,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "animate",
+          "startLine": 1110,
+          "endLine": 1255,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "try_animate_mismatched_transforms_in_place",
+          "startLine": 1261,
+          "endLine": 1271,
+          "params": [
+            "left",
+            "right",
+            "procedure"
+          ]
+        },
+        {
+          "name": "animate_mismatched_transforms",
+          "startLine": 1273,
+          "endLine": 1299,
+          "params": [
+            "left",
+            "right",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 1307,
+          "endLine": 1393,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "resolve",
+          "startLine": 1401,
+          "endLine": 1411,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 1416,
+          "endLine": 1530,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 1535,
+          "endLine": 1574,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "resolve",
+          "startLine": 1579,
+          "endLine": 1592,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 1597,
+          "endLine": 1609,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 1614,
+          "endLine": 1619,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "resolve",
+          "startLine": 1624,
+          "endLine": 1633,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 1638,
+          "endLine": 1658,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "compute_squared_distance",
+          "startLine": 1663,
+          "endLine": 1668,
+          "params": [
+            "other"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "InnerMatrix2D",
+          "startLine": 40,
+          "endLine": 45,
+          "methods": [
+            "animate"
+          ],
+          "properties": [
+            "m11",
+            "m12",
+            "m21",
+            "m22"
+          ]
+        },
+        {
+          "name": "Translate2D",
+          "startLine": 61,
+          "endLine": 61,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "Scale2D",
+          "startLine": 66,
+          "endLine": 66,
+          "methods": [
+            "animate"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MatrixDecomposed2D",
+          "startLine": 80,
+          "endLine": 89,
+          "methods": [
+            "animate",
+            "compute_squared_distance",
+            "from"
+          ],
+          "properties": [
+            "translate",
+            "scale",
+            "angle",
+            "matrix"
+          ]
+        },
+        {
+          "name": "Translate3D",
+          "startLine": 280,
+          "endLine": 280,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "Scale3D",
+          "startLine": 285,
+          "endLine": 285,
+          "methods": [
+            "negate",
+            "animate"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Skew",
+          "startLine": 309,
+          "endLine": 309,
+          "methods": [
+            "compute_squared_distance"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Perspective",
+          "startLine": 325,
+          "endLine": 325,
+          "methods": [
+            "animate"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Quaternion",
+          "startLine": 341,
+          "endLine": 341,
+          "methods": [
+            "from_direction_and_angle",
+            "dot",
+            "scale",
+            "add",
+            "animate",
+            "compute_squared_distance"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MatrixDecomposed3D",
+          "startLine": 504,
+          "endLine": 515,
+          "methods": [],
+          "properties": [
+            "translate",
+            "scale",
+            "skew",
+            "perspective",
+            "quaternion"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "InnerMatrix2D",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "Translate2D",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "Scale2D",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "MatrixDecomposed2D",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "Translate3D",
+          "line": 280,
+          "isDefault": false
+        },
+        {
+          "name": "Scale3D",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "Skew",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "Perspective",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "Quaternion",
+          "line": 341,
+          "isDefault": false
+        },
+        {
+          "name": "MatrixDecomposed3D",
+          "line": 504,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 49
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 50
+        },
+        {
+          "caller": "animate",
+          "callee": "self.m12.animate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "animate",
+          "callee": "self.m21.animate",
+          "lineNumber": 52
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 53
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 70
+        },
+        {
+          "caller": "animate",
+          "callee": "Scale2D",
+          "lineNumber": 70
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 71
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 72
+        },
+        {
+          "caller": "animate",
+          "callee": "(angle - other_angle).abs",
+          "lineNumber": 113
+        },
+        {
+          "caller": "animate",
+          "callee": "self.translate.animate",
+          "lineNumber": 122
+        },
+        {
+          "caller": "animate",
+          "callee": "scale.animate",
+          "lineNumber": 123
+        },
+        {
+          "caller": "animate",
+          "callee": "angle.animate",
+          "lineNumber": 124
+        },
+        {
+          "caller": "animate",
+          "callee": "self.matrix.animate",
+          "lineNumber": 125
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 127
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 143
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.translate.compute_squared_distance",
+          "lineNumber": 143
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.scale.compute_squared_distance",
+          "lineNumber": 144
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle1.compute_squared_distance",
+          "lineNumber": 145
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.matrix.compute_squared_distance",
+          "lineNumber": 146
+        },
+        {
+          "caller": "from",
+          "callee": "Translate2D",
+          "lineNumber": 159
+        },
+        {
+          "caller": "from",
+          "callee": "Scale2D",
+          "lineNumber": 160
+        },
+        {
+          "caller": "from",
+          "callee": "(row0x * row0x + row0y * row0y).sqrt",
+          "lineNumber": 161
+        },
+        {
+          "caller": "from",
+          "callee": "(row1x * row1x + row1y * row1y).sqrt",
+          "lineNumber": 162
+        },
+        {
+          "caller": "from",
+          "callee": "row0y.atan2",
+          "lineNumber": 186
+        },
+        {
+          "caller": "from",
+          "callee": "angle.to_degrees",
+          "lineNumber": 208
+        },
+        {
+          "caller": "from",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 222
+        },
+        {
+          "caller": "from",
+          "callee": "decomposed.angle.to_radians",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from",
+          "callee": "angle.cos",
+          "lineNumber": 234
+        },
+        {
+          "caller": "from",
+          "callee": "angle.sin",
+          "lineNumber": 235
+        },
+        {
+          "caller": "from",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 237
+        },
+        {
+          "caller": "from",
+          "callee": "rotate_matrix.multiply",
+          "lineNumber": 244
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 258
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 259
+        },
+        {
+          "caller": "animate",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 260
+        },
+        {
+          "caller": "animate",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 261
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from(this.animate(&other, procedure)?).into_2d",
+          "lineNumber": 262
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 262
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 262
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 269
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 270
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 271
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 272
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from(from.animate(&to, procedure)?).into_2d",
+          "lineNumber": 273
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 273
+        },
+        {
+          "caller": "animate",
+          "callee": "from.animate",
+          "lineNumber": 273
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 298
+        },
+        {
+          "caller": "animate",
+          "callee": "Scale3D",
+          "lineNumber": 298
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 299
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 300
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 301
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 316
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.0.atan().compute_squared_distance",
+          "lineNumber": 316
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.0.atan",
+          "lineNumber": 316
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.0.atan",
+          "lineNumber": 316
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.1.atan().compute_squared_distance",
+          "lineNumber": 317
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.1.atan",
+          "lineNumber": 317
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.1.atan",
+          "lineNumber": 317
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.2.atan().compute_squared_distance",
+          "lineNumber": 318
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.2.atan",
+          "lineNumber": 318
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.2.atan",
+          "lineNumber": 318
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 329
+        },
+        {
+          "caller": "animate",
+          "callee": "Perspective",
+          "lineNumber": 329
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.animate",
+          "lineNumber": 330
+        },
+        {
+          "caller": "animate",
+          "callee": "self.1.animate",
+          "lineNumber": 331
+        },
+        {
+          "caller": "animate",
+          "callee": "self.2.animate",
+          "lineNumber": 332
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 333
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "angle\r\n            .abs()\r\n            .rem_euclid(std::f64::consts::TAU).copysign",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "angle\r\n            .abs().rem_euclid",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "angle.abs",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "Quaternion",
+          "lineNumber": 371
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "half_angle.sin",
+          "lineNumber": 372
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "half_angle.sin",
+          "lineNumber": 373
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "half_angle.sin",
+          "lineNumber": 374
+        },
+        {
+          "caller": "from_direction_and_angle",
+          "callee": "half_angle.cos",
+          "lineNumber": 375
+        },
+        {
+          "caller": "scale",
+          "callee": "Quaternion",
+          "lineNumber": 388
+        },
+        {
+          "caller": "add",
+          "callee": "Self",
+          "lineNumber": 401
+        },
+        {
+          "caller": "animate",
+          "callee": "procedure.weights",
+          "lineNumber": 412
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 427
+        },
+        {
+          "caller": "animate",
+          "callee": "self.3.min(1.0).max",
+          "lineNumber": 430
+        },
+        {
+          "caller": "animate",
+          "callee": "self.3.min",
+          "lineNumber": 430
+        },
+        {
+          "caller": "animate",
+          "callee": "clamped_w.acos",
+          "lineNumber": 433
+        },
+        {
+          "caller": "animate",
+          "callee": "theta.sin",
+          "lineNumber": 434
+        },
+        {
+          "caller": "animate",
+          "callee": "theta.sin",
+          "lineNumber": 436
+        },
+        {
+          "caller": "animate",
+          "callee": "theta.cos",
+          "lineNumber": 443
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 448
+        },
+        {
+          "caller": "animate",
+          "callee": "Quaternion",
+          "lineNumber": 448
+        },
+        {
+          "caller": "animate",
+          "callee": "(self.0 * other.0 + self.1 * other.1 + self.2 * other.2 + self.3 * other.3)\r\n                .min(1.0).max",
+          "lineNumber": 460
+        },
+        {
+          "caller": "animate",
+          "callee": "(self.0 * other.0 + self.1 * other.1 + self.2 * other.2 + self.3 * other.3).min",
+          "lineNumber": 460
+        },
+        {
+          "caller": "animate",
+          "callee": "cos_half_theta.abs",
+          "lineNumber": 464
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 465
+        },
+        {
+          "caller": "animate",
+          "callee": "cos_half_theta.acos",
+          "lineNumber": 468
+        },
+        {
+          "caller": "animate",
+          "callee": "(1.0 - cos_half_theta * cos_half_theta).sqrt",
+          "lineNumber": 469
+        },
+        {
+          "caller": "animate",
+          "callee": "(other_weight * half_theta).sin",
+          "lineNumber": 471
+        },
+        {
+          "caller": "animate",
+          "callee": "(this_weight * half_theta).sin",
+          "lineNumber": 484
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 486
+        },
+        {
+          "caller": "animate",
+          "callee": "self.scale",
+          "lineNumber": 486
+        },
+        {
+          "caller": "animate",
+          "callee": "other.scale",
+          "lineNumber": 486
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.dot(other).max(-1.0).min(1.0).acos",
+          "lineNumber": 496
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.dot(other).max(-1.0).min",
+          "lineNumber": 496
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.dot(other).max",
+          "lineNumber": 496
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.dot",
+          "lineNumber": 496
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 497
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "SquaredDistance::from_sqrt",
+          "lineNumber": 497
+        },
+        {
+          "caller": "from",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 521
+        },
+        {
+          "caller": "from",
+          "callee": "matrix.set_perspective",
+          "lineNumber": 524
+        },
+        {
+          "caller": "from",
+          "callee": "matrix.apply_translate",
+          "lineNumber": 527
+        },
+        {
+          "caller": "from",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 538
+        },
+        {
+          "caller": "from",
+          "callee": "rotation_matrix.multiply",
+          "lineNumber": 549
+        },
+        {
+          "caller": "from",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 554
+        },
+        {
+          "caller": "from",
+          "callee": "temp.multiply",
+          "lineNumber": 557
+        },
+        {
+          "caller": "from",
+          "callee": "temp.multiply",
+          "lineNumber": 563
+        },
+        {
+          "caller": "from",
+          "callee": "temp.multiply",
+          "lineNumber": 569
+        },
+        {
+          "caller": "from",
+          "callee": "matrix.apply_scale",
+          "lineNumber": 574
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Err",
+          "lineNumber": 604
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "matrix.scale_by_factor",
+          "lineNumber": 610
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "perspective_matrix.determinant",
+          "lineNumber": 621
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Err",
+          "lineNumber": 622
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "perspective_matrix.inverse().unwrap().transpose",
+          "lineNumber": 629
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "perspective_matrix.inverse().unwrap",
+          "lineNumber": 629
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "perspective_matrix.inverse",
+          "lineNumber": 629
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "perspective_matrix.pre_mul_point4",
+          "lineNumber": 630
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Perspective",
+          "lineNumber": 634
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Perspective",
+          "lineNumber": 641
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Translate3D",
+          "lineNumber": 645
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "matrix.get_matrix_3x3_part",
+          "lineNumber": 648
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(row[0][0] * row[0][0] + row[0][1] * row[0][1] + row[0][2] * row[0][2]).sqrt",
+          "lineNumber": 651
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Scale3D",
+          "lineNumber": 652
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Skew",
+          "lineNumber": 660
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "dot",
+          "lineNumber": 660
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "combine",
+          "lineNumber": 661
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(row[1][0] * row[1][0] + row[1][1] * row[1][1] + row[1][2] * row[1][2]).sqrt",
+          "lineNumber": 664
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "dot",
+          "lineNumber": 674
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "combine",
+          "lineNumber": 675
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "dot",
+          "lineNumber": 676
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "combine",
+          "lineNumber": 677
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(row[2][0] * row[2][0] + row[2][1] * row[2][1] + row[2][2] * row[2][2]).sqrt",
+          "lineNumber": 680
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "dot",
+          "lineNumber": 693
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "cross",
+          "lineNumber": 693
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "scale.negate",
+          "lineNumber": 694
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Quaternion",
+          "lineNumber": 703
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "((1.0 + row[0][0] - row[1][1] - row[2][2]).max(0.0) as f64).sqrt",
+          "lineNumber": 704
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(1.0 + row[0][0] - row[1][1] - row[2][2]).max",
+          "lineNumber": 704
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "((1.0 - row[0][0] + row[1][1] - row[2][2]).max(0.0) as f64).sqrt",
+          "lineNumber": 705
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(1.0 - row[0][0] + row[1][1] - row[2][2]).max",
+          "lineNumber": 705
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "((1.0 - row[0][0] - row[1][1] + row[2][2]).max(0.0) as f64).sqrt",
+          "lineNumber": 706
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(1.0 - row[0][0] - row[1][1] + row[2][2]).max",
+          "lineNumber": 706
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "((1.0 + row[0][0] + row[1][1] + row[2][2]).max(0.0) as f64).sqrt",
+          "lineNumber": 707
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "(1.0 + row[0][0] + row[1][1] + row[2][2]).max",
+          "lineNumber": 707
+        },
+        {
+          "caller": "decompose_3d_matrix",
+          "callee": "Ok",
+          "lineNumber": 720
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Err",
+          "lineNumber": 861
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "(m11 * m11 + m12 * m12).sqrt",
+          "lineNumber": 864
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "(m21 * m21 + m22 * m22).sqrt",
+          "lineNumber": 872
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "determinant.abs",
+          "lineNumber": 879
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "determinant.abs",
+          "lineNumber": 879
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Err",
+          "lineNumber": 880
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Ok",
+          "lineNumber": 890
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Translate3D",
+          "lineNumber": 891
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Scale3D",
+          "lineNumber": 892
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Skew",
+          "lineNumber": 893
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Perspective",
+          "lineNumber": 894
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "Quaternion::from_direction_and_angle",
+          "lineNumber": 895
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "DirectionVector::new",
+          "lineNumber": 896
+        },
+        {
+          "caller": "decompose_2d_matrix",
+          "callee": "m12.atan2",
+          "lineNumber": 897
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_3d",
+          "lineNumber": 905
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_3d",
+          "lineNumber": 905
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 906
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 907
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 909
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 909
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 909
+        },
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 913
+        },
+        {
+          "caller": "animate",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 916
+        },
+        {
+          "caller": "animate",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 917
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 918
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 918
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 918
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_3d",
+          "lineNumber": 926
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_3d",
+          "lineNumber": 926
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 927
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 927
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 929
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 929
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 934
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 934
+        },
+        {
+          "caller": "animate",
+          "callee": "from.animate",
+          "lineNumber": 934
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.is_3d",
+          "lineNumber": 942
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.is_3d",
+          "lineNumber": 942
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 943
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 944
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.compute_squared_distance",
+          "lineNumber": 945
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 947
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "MatrixDecomposed2D::from",
+          "lineNumber": 948
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.compute_squared_distance",
+          "lineNumber": 949
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.is_3d",
+          "lineNumber": 956
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.is_3d",
+          "lineNumber": 956
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 957
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 957
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 959
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "decompose_2d_matrix",
+          "lineNumber": 959
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.compute_squared_distance",
+          "lineNumber": 961
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "a.is_translate",
+          "lineNumber": 985
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "b.is_translate",
+          "lineNumber": 985
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "a.is_scale",
+          "lineNumber": 986
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "b.is_scale",
+          "lineNumber": 986
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "a.is_rotate",
+          "lineNumber": 987
+        },
+        {
+          "caller": "is_matched_operation",
+          "callee": "b.is_rotate",
+          "lineNumber": 987
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.iter().chain(&*other.0).cloned().collect",
+          "lineNumber": 1004
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.iter().chain(&*other.0).cloned",
+          "lineNumber": 1004
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.iter().chain",
+          "lineNumber": 1004
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.iter",
+          "lineNumber": 1004
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "animate",
+          "callee": "Transform",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "animate",
+          "callee": "Cow::Borrowed",
+          "lineNumber": 1008
+        },
+        {
+          "caller": "animate",
+          "callee": "Cow::Borrowed",
+          "lineNumber": 1009
+        },
+        {
+          "caller": "animate",
+          "callee": "this\r\n            .iter()\r\n            .zip(other.iter())\r\n            .take_while(|(this, other)| is_matched_operation(this, other))\r\n            .map(|(this, other)| this.animate(other, procedure))\r\n            .collect::<Result<Vec<_>, _>>",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "animate",
+          "callee": "this\r\n            .iter()\r\n            .zip(other.iter())\r\n            .take_while(|(this, other)| is_matched_operation(this, other)).map",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "animate",
+          "callee": "this\r\n            .iter()\r\n            .zip(other.iter()).take_while",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "animate",
+          "callee": "this\r\n            .iter().zip",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "animate",
+          "callee": "this.iter",
+          "lineNumber": 1012
+        },
+        {
+          "caller": "animate",
+          "callee": "other.iter",
+          "lineNumber": 1014
+        },
+        {
+          "caller": "animate",
+          "callee": "is_matched_operation",
+          "lineNumber": 1015
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 1016
+        },
+        {
+          "caller": "animate",
+          "callee": "this.len",
+          "lineNumber": 1020
+        },
+        {
+          "caller": "animate",
+          "callee": "result.len",
+          "lineNumber": 1020
+        },
+        {
+          "caller": "animate",
+          "callee": "Some",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "animate",
+          "callee": "result.len",
+          "lineNumber": 1021
+        },
+        {
+          "caller": "animate",
+          "callee": "other.len",
+          "lineNumber": 1025
+        },
+        {
+          "caller": "animate",
+          "callee": "result.len",
+          "lineNumber": 1025
+        },
+        {
+          "caller": "animate",
+          "callee": "Some",
+          "lineNumber": 1026
+        },
+        {
+          "caller": "animate",
+          "callee": "result.len",
+          "lineNumber": 1026
+        },
+        {
+          "caller": "animate",
+          "callee": "result.push",
+          "lineNumber": 1035
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::animate_mismatched_transforms",
+          "lineNumber": 1035
+        },
+        {
+          "caller": "animate",
+          "callee": "this_remainder.is_some",
+          "lineNumber": 1045
+        },
+        {
+          "caller": "animate",
+          "callee": "result.append",
+          "lineNumber": 1046
+        },
+        {
+          "caller": "animate",
+          "callee": "remainder\r\n                        .iter()\r\n                        .map(|transform| {\r\n                            let identity = transform.to_animated_zero().unwrap();\r\n\r\n                            match transform {\r\n                                TransformOperation::AccumulateMatrix { .. }\r\n                                | TransformOperation::InterpolateMatrix { .. } => {\r\n                                    let (from, to) = if fill_right {\r\n                                        (transform, &identity)\r\n                                    } else {\r\n                                        (&identity, transform)\r\n                                    };\r\n\r\n                                    TransformOperation::animate_mismatched_transforms(\r\n                                        &[from.clone()],\r\n                                        &[to.clone()],\r\n                                        procedure,\r\n                                    )\r\n                                },\r\n                                _ => {\r\n                                    let (lhs, rhs) = if fill_right {\r\n                                        (transform, &identity)\r\n                                    } else {\r\n                                        (&identity, transform)\r\n                                    };\r\n                                    lhs.animate(rhs, procedure)\r\n                                },\r\n                            }\r\n                        })\r\n                        .collect::<Result<Vec<_>, _>>",
+          "lineNumber": 1047
+        },
+        {
+          "caller": "animate",
+          "callee": "remainder\r\n                        .iter().map",
+          "lineNumber": 1047
+        },
+        {
+          "caller": "animate",
+          "callee": "remainder.iter",
+          "lineNumber": 1047
+        },
+        {
+          "caller": "animate",
+          "callee": "transform.to_animated_zero().unwrap",
+          "lineNumber": 1050
+        },
+        {
+          "caller": "animate",
+          "callee": "transform.to_animated_zero",
+          "lineNumber": 1050
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::animate_mismatched_transforms",
+          "lineNumber": 1061
+        },
+        {
+          "caller": "animate",
+          "callee": "from.clone",
+          "lineNumber": 1062
+        },
+        {
+          "caller": "animate",
+          "callee": "to.clone",
+          "lineNumber": 1063
+        },
+        {
+          "caller": "animate",
+          "callee": "lhs.animate",
+          "lineNumber": 1073
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1083
+        },
+        {
+          "caller": "animate",
+          "callee": "Transform",
+          "lineNumber": 1083
+        },
+        {
+          "caller": "animate",
+          "callee": "result.into",
+          "lineNumber": 1083
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "super::lists::with_zero::squared_distance",
+          "lineNumber": 1090
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "squared_dist.is_err",
+          "lineNumber": 1097
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "euclid::Rect::zero",
+          "lineNumber": 1098
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.to_transform_3d_matrix(Some(&rect))?.0.into",
+          "lineNumber": 1099
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.to_transform_3d_matrix",
+          "lineNumber": 1099
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Some",
+          "lineNumber": 1099
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.to_transform_3d_matrix(Some(&rect))?.0.into",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.to_transform_3d_matrix",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Some",
+          "lineNumber": 1100
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "matrix1.compute_squared_distance",
+          "lineNumber": 1101
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1113
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Matrix3D",
+          "lineNumber": 1113
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 1114
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Matrix",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "animate",
+          "callee": "this.animate",
+          "lineNumber": 1118
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1123
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Skew",
+          "lineNumber": 1123
+        },
+        {
+          "caller": "animate",
+          "callee": "fx.animate",
+          "lineNumber": 1124
+        },
+        {
+          "caller": "animate",
+          "callee": "fy.animate",
+          "lineNumber": 1125
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1128
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::SkewX",
+          "lineNumber": 1128
+        },
+        {
+          "caller": "animate",
+          "callee": "f.animate",
+          "lineNumber": 1128
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1131
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::SkewY",
+          "lineNumber": 1131
+        },
+        {
+          "caller": "animate",
+          "callee": "f.animate",
+          "lineNumber": 1131
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1136
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Translate3D",
+          "lineNumber": 1136
+        },
+        {
+          "caller": "animate",
+          "callee": "fx.animate",
+          "lineNumber": 1137
+        },
+        {
+          "caller": "animate",
+          "callee": "fy.animate",
+          "lineNumber": 1138
+        },
+        {
+          "caller": "animate",
+          "callee": "fz.animate",
+          "lineNumber": 1139
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Translate",
+          "lineNumber": 1144
+        },
+        {
+          "caller": "animate",
+          "callee": "fx.animate",
+          "lineNumber": 1145
+        },
+        {
+          "caller": "animate",
+          "callee": "fy.animate",
+          "lineNumber": 1146
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1149
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::TranslateX",
+          "lineNumber": 1149
+        },
+        {
+          "caller": "animate",
+          "callee": "f.animate",
+          "lineNumber": 1149
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1152
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::TranslateY",
+          "lineNumber": 1152
+        },
+        {
+          "caller": "animate",
+          "callee": "f.animate",
+          "lineNumber": 1152
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1155
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::TranslateZ",
+          "lineNumber": 1155
+        },
+        {
+          "caller": "animate",
+          "callee": "f.animate",
+          "lineNumber": 1155
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1160
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Scale3D",
+          "lineNumber": 1160
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1161
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1162
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1163
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1165
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::ScaleX",
+          "lineNumber": 1166
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1166
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1168
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::ScaleY",
+          "lineNumber": 1169
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1169
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1171
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::ScaleZ",
+          "lineNumber": 1172
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1172
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1177
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Scale",
+          "lineNumber": 1177
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1178
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1179
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D(fx, fy, fz, fa).animate",
+          "lineNumber": 1185
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1185
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1186
+        },
+        {
+          "caller": "animate",
+          "callee": "ComputedRotate::resolve",
+          "lineNumber": 1187
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1188
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Rotate3D",
+          "lineNumber": 1188
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1191
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::RotateX",
+          "lineNumber": 1191
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1191
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1194
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::RotateY",
+          "lineNumber": 1194
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1194
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1197
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::RotateZ",
+          "lineNumber": 1197
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1197
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1200
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Rotate",
+          "lineNumber": 1200
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1200
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1203
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Rotate",
+          "lineNumber": 1203
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1203
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1206
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Rotate",
+          "lineNumber": 1206
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1206
+        },
+        {
+          "caller": "animate",
+          "callee": "create_perspective_matrix",
+          "lineNumber": 1222
+        },
+        {
+          "caller": "animate",
+          "callee": "fd.infinity_or",
+          "lineNumber": 1222
+        },
+        {
+          "caller": "animate",
+          "callee": "l.px",
+          "lineNumber": 1222
+        },
+        {
+          "caller": "animate",
+          "callee": "create_perspective_matrix",
+          "lineNumber": 1223
+        },
+        {
+          "caller": "animate",
+          "callee": "td.infinity_or",
+          "lineNumber": 1223
+        },
+        {
+          "caller": "animate",
+          "callee": "l.px",
+          "lineNumber": 1223
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from(from).animate",
+          "lineNumber": 1225
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 1225
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 1225
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 1227
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::PerspectiveFunction::Length",
+          "lineNumber": 1234
+        },
+        {
+          "caller": "animate",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 1234
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1242
+        },
+        {
+          "caller": "animate",
+          "callee": "TransformOperation::Perspective",
+          "lineNumber": 1242
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_translate",
+          "lineNumber": 1244
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_translate",
+          "lineNumber": 1244
+        },
+        {
+          "caller": "animate",
+          "callee": "self\r\n                .to_translate_3d().animate",
+          "lineNumber": 1244
+        },
+        {
+          "caller": "animate",
+          "callee": "self.to_translate_3d",
+          "lineNumber": 1244
+        },
+        {
+          "caller": "animate",
+          "callee": "other.to_translate_3d",
+          "lineNumber": 1246
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_scale",
+          "lineNumber": 1247
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_scale",
+          "lineNumber": 1247
+        },
+        {
+          "caller": "animate",
+          "callee": "self.to_scale_3d().animate",
+          "lineNumber": 1248
+        },
+        {
+          "caller": "animate",
+          "callee": "self.to_scale_3d",
+          "lineNumber": 1248
+        },
+        {
+          "caller": "animate",
+          "callee": "other.to_scale_3d",
+          "lineNumber": 1248
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_rotate",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_rotate",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "animate",
+          "callee": "self\r\n                .to_rotate_3d().animate",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "animate",
+          "callee": "self.to_rotate_3d",
+          "lineNumber": 1250
+        },
+        {
+          "caller": "animate",
+          "callee": "other.to_rotate_3d",
+          "lineNumber": 1252
+        },
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 1253
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Transform::components_to_transform_3d_matrix",
+          "lineNumber": 1266
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Transform::components_to_transform_3d_matrix",
+          "lineNumber": 1267
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Ok",
+          "lineNumber": 1268
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Self::Matrix3D",
+          "lineNumber": 1268
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Matrix3D::from(left).animate",
+          "lineNumber": 1269
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Matrix3D::from",
+          "lineNumber": 1269
+        },
+        {
+          "caller": "try_animate_mismatched_transforms_in_place",
+          "callee": "Matrix3D::from",
+          "lineNumber": 1269
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Self::try_animate_mismatched_transforms_in_place",
+          "lineNumber": 1278
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Ok",
+          "lineNumber": 1279
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Transform",
+          "lineNumber": 1281
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "left.to_vec().into",
+          "lineNumber": 1281
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "left.to_vec",
+          "lineNumber": 1281
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Transform",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "right.to_vec().into",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "right.to_vec",
+          "lineNumber": 1282
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Ok",
+          "lineNumber": 1283
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Err",
+          "lineNumber": 1286
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "Percentage",
+          "lineNumber": 1291
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "cmp::min",
+          "lineNumber": 1296
+        },
+        {
+          "caller": "animate_mismatched_transforms",
+          "callee": "i32::max_value",
+          "lineNumber": 1296
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "this.compute_squared_distance",
+          "lineNumber": 1310
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "(*this).into",
+          "lineNumber": 1313
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "(*other).into",
+          "lineNumber": 1314
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "this.compute_squared_distance",
+          "lineNumber": 1315
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1320
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fx.compute_squared_distance",
+          "lineNumber": 1320
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fy.compute_squared_distance",
+          "lineNumber": 1320
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "f.compute_squared_distance",
+          "lineNumber": 1323
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Length::new",
+          "lineNumber": 1335
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fx.resolve(basis).px",
+          "lineNumber": 1336
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fx.resolve",
+          "lineNumber": 1336
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fy.resolve(basis).px",
+          "lineNumber": 1337
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fy.resolve",
+          "lineNumber": 1337
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "tx.resolve(basis).px",
+          "lineNumber": 1338
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "tx.resolve",
+          "lineNumber": 1338
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "ty.resolve(basis).px",
+          "lineNumber": 1339
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "ty.resolve",
+          "lineNumber": 1339
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1341
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fx.compute_squared_distance",
+          "lineNumber": 1341
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fy.compute_squared_distance",
+          "lineNumber": 1342
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fz.compute_squared_distance",
+          "lineNumber": 1343
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1348
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fx.compute_squared_distance",
+          "lineNumber": 1348
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fy.compute_squared_distance",
+          "lineNumber": 1349
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fz.compute_squared_distance",
+          "lineNumber": 1350
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Rotate::Rotate3D(fx, fy, fz, fa).compute_squared_distance",
+          "lineNumber": 1354
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1354
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1355
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fa.compute_squared_distance",
+          "lineNumber": 1360
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fd\r\n                .infinity_or(|l| l.px()).compute_squared_distance",
+          "lineNumber": 1365
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "fd.infinity_or",
+          "lineNumber": 1365
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "l.px",
+          "lineNumber": 1366
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "td.infinity_or",
+          "lineNumber": 1367
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "l.px",
+          "lineNumber": 1367
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 1372
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "p.infinity_or",
+          "lineNumber": 1373
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "p.px",
+          "lineNumber": 1373
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "p.max",
+          "lineNumber": 1375
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "p_matrix.compute_squared_distance",
+          "lineNumber": 1377
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.is_translate",
+          "lineNumber": 1382
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.is_translate",
+          "lineNumber": 1382
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self\r\n                .to_translate_3d().compute_squared_distance",
+          "lineNumber": 1382
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.to_translate_3d",
+          "lineNumber": 1382
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.to_translate_3d",
+          "lineNumber": 1384
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.is_scale",
+          "lineNumber": 1385
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.is_scale",
+          "lineNumber": 1385
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self\r\n                .to_scale_3d().compute_squared_distance",
+          "lineNumber": 1385
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.to_scale_3d",
+          "lineNumber": 1385
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.to_scale_3d",
+          "lineNumber": 1387
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.is_rotate",
+          "lineNumber": 1388
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.is_rotate",
+          "lineNumber": 1388
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self\r\n                .to_rotate_3d().compute_squared_distance",
+          "lineNumber": 1388
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.to_rotate_3d",
+          "lineNumber": 1388
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.to_rotate_3d",
+          "lineNumber": 1390
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Err",
+          "lineNumber": 1391
+        },
+        {
+          "caller": "resolve",
+          "callee": "Angle::zero",
+          "lineNumber": 1407
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1419
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1425
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1426
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1426
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1430
+        },
+        {
+          "caller": "animate",
+          "callee": "Angle::zero",
+          "lineNumber": 1430
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1435
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1436
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1436
+        },
+        {
+          "caller": "animate",
+          "callee": "Angle::zero().animate",
+          "lineNumber": 1440
+        },
+        {
+          "caller": "animate",
+          "callee": "Angle::zero",
+          "lineNumber": 1440
+        },
+        {
+          "caller": "animate",
+          "callee": "self.resolve",
+          "lineNumber": 1446
+        },
+        {
+          "caller": "animate",
+          "callee": "other.resolve",
+          "lineNumber": 1446
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1450
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1452
+        },
+        {
+          "caller": "animate",
+          "callee": "DirectionVector::new",
+          "lineNumber": 1460
+        },
+        {
+          "caller": "animate",
+          "callee": "DirectionVector::new",
+          "lineNumber": 1461
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.is_zero",
+          "lineNumber": 1462
+        },
+        {
+          "caller": "animate",
+          "callee": "ta.is_zero",
+          "lineNumber": 1462
+        },
+        {
+          "caller": "animate",
+          "callee": "fv.approx_eq",
+          "lineNumber": 1462
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.is_zero",
+          "lineNumber": 1463
+        },
+        {
+          "caller": "animate",
+          "callee": "ta.is_zero",
+          "lineNumber": 1463
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.is_zero",
+          "lineNumber": 1465
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1471
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1471
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.animate",
+          "lineNumber": 1471
+        },
+        {
+          "caller": "animate",
+          "callee": "ComputedTransformOperation::Rotate3D",
+          "lineNumber": 1488
+        },
+        {
+          "caller": "animate",
+          "callee": "ComputedTransformOperation::Rotate3D",
+          "lineNumber": 1489
+        },
+        {
+          "caller": "animate",
+          "callee": "Transform(vec![f].into()).animate",
+          "lineNumber": 1491
+        },
+        {
+          "caller": "animate",
+          "callee": "Transform",
+          "lineNumber": 1491
+        },
+        {
+          "caller": "animate",
+          "callee": "vec![f].into",
+          "lineNumber": 1491
+        },
+        {
+          "caller": "animate",
+          "callee": "Transform",
+          "lineNumber": 1491
+        },
+        {
+          "caller": "animate",
+          "callee": "vec![t].into",
+          "lineNumber": 1491
+        },
+        {
+          "caller": "animate",
+          "callee": "v.to_transform_3d_matrix",
+          "lineNumber": 1492
+        },
+        {
+          "caller": "animate",
+          "callee": "decompose_3d_matrix",
+          "lineNumber": 1494
+        },
+        {
+          "caller": "animate",
+          "callee": "Matrix3D::from",
+          "lineNumber": 1494
+        },
+        {
+          "caller": "animate",
+          "callee": "Quaternion::from_direction_and_angle",
+          "lineNumber": 1508
+        },
+        {
+          "caller": "animate",
+          "callee": "fa.radians64",
+          "lineNumber": 1508
+        },
+        {
+          "caller": "animate",
+          "callee": "Quaternion::from_direction_and_angle",
+          "lineNumber": 1509
+        },
+        {
+          "caller": "animate",
+          "callee": "ta.radians64",
+          "lineNumber": 1509
+        },
+        {
+          "caller": "animate",
+          "callee": "Quaternion::animate",
+          "lineNumber": 1510
+        },
+        {
+          "caller": "animate",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1513
+        },
+        {
+          "caller": "animate",
+          "callee": "rq.3.clamp(-1.0, 1.0).acos",
+          "lineNumber": 1519
+        },
+        {
+          "caller": "animate",
+          "callee": "rq.3.clamp",
+          "lineNumber": 1519
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1522
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate3D",
+          "lineNumber": 1522
+        },
+        {
+          "caller": "animate",
+          "callee": "Angle::from_radians",
+          "lineNumber": 1522
+        },
+        {
+          "caller": "animate",
+          "callee": "self.resolve",
+          "lineNumber": 1526
+        },
+        {
+          "caller": "animate",
+          "callee": "other.resolve",
+          "lineNumber": 1526
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1527
+        },
+        {
+          "caller": "animate",
+          "callee": "Rotate::Rotate",
+          "lineNumber": 1527
+        },
+        {
+          "caller": "animate",
+          "callee": "from.animate",
+          "lineNumber": 1527
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1538
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "SquaredDistance::from_sqrt",
+          "lineNumber": 1538
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "a.compute_squared_distance",
+          "lineNumber": 1541
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Angle::zero",
+          "lineNumber": 1541
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve",
+          "lineNumber": 1544
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.resolve",
+          "lineNumber": 1544
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1546
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "transform::get_normalized_vector_and_angle",
+          "lineNumber": 1548
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle1.is_zero",
+          "lineNumber": 1550
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle2.is_zero",
+          "lineNumber": 1550
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle1.is_zero",
+          "lineNumber": 1553
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle2.is_zero",
+          "lineNumber": 1555
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "DirectionVector::new",
+          "lineNumber": 1559
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "DirectionVector::new",
+          "lineNumber": 1560
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "v1.approx_eq",
+          "lineNumber": 1561
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle1.compute_squared_distance",
+          "lineNumber": 1562
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Quaternion::from_direction_and_angle",
+          "lineNumber": 1564
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle1.radians64",
+          "lineNumber": 1564
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Quaternion::from_direction_and_angle",
+          "lineNumber": 1565
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "angle2.radians64",
+          "lineNumber": 1565
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "q1.compute_squared_distance",
+          "lineNumber": 1566
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self\r\n                .resolve()\r\n                .3.compute_squared_distance",
+          "lineNumber": 1569
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve",
+          "lineNumber": 1569
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.resolve",
+          "lineNumber": 1572
+        },
+        {
+          "caller": "resolve",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 1586
+        },
+        {
+          "caller": "resolve",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 1587
+        },
+        {
+          "caller": "resolve",
+          "callee": "Length::zero",
+          "lineNumber": 1588
+        },
+        {
+          "caller": "resolve",
+          "callee": "tx.clone",
+          "lineNumber": 1590
+        },
+        {
+          "caller": "resolve",
+          "callee": "ty.clone",
+          "lineNumber": 1590
+        },
+        {
+          "caller": "resolve",
+          "callee": "tz.clone",
+          "lineNumber": 1590
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1599
+        },
+        {
+          "caller": "animate",
+          "callee": "self.resolve",
+          "lineNumber": 1601
+        },
+        {
+          "caller": "animate",
+          "callee": "other.resolve",
+          "lineNumber": 1601
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1602
+        },
+        {
+          "caller": "animate",
+          "callee": "Translate::Translate",
+          "lineNumber": 1602
+        },
+        {
+          "caller": "animate",
+          "callee": "from.0.animate",
+          "lineNumber": 1603
+        },
+        {
+          "caller": "animate",
+          "callee": "from.1.animate",
+          "lineNumber": 1604
+        },
+        {
+          "caller": "animate",
+          "callee": "from.2.animate",
+          "lineNumber": 1605
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve",
+          "lineNumber": 1615
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.resolve",
+          "lineNumber": 1615
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1616
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.0.compute_squared_distance",
+          "lineNumber": 1616
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.1.compute_squared_distance",
+          "lineNumber": 1617
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.2.compute_squared_distance",
+          "lineNumber": 1618
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1640
+        },
+        {
+          "caller": "animate",
+          "callee": "self.resolve",
+          "lineNumber": 1642
+        },
+        {
+          "caller": "animate",
+          "callee": "other.resolve",
+          "lineNumber": 1642
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1649
+        },
+        {
+          "caller": "animate",
+          "callee": "Scale::Scale",
+          "lineNumber": 1649
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 1651
+        },
+        {
+          "caller": "animate",
+          "callee": "Scale::Scale",
+          "lineNumber": 1651
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1652
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1653
+        },
+        {
+          "caller": "animate",
+          "callee": "animate_multiplicative_factor",
+          "lineNumber": 1654
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "self.resolve",
+          "lineNumber": 1664
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "other.resolve",
+          "lineNumber": 1664
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "Ok",
+          "lineNumber": 1665
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.0.compute_squared_distance",
+          "lineNumber": 1665
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.1.compute_squared_distance",
+          "lineNumber": 1666
+        },
+        {
+          "caller": "compute_squared_distance",
+          "callee": "from.2.compute_squared_distance",
+          "lineNumber": 1667
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 41,
+        "classCount": 10
+      }
+    },
+    {
+      "path": "style/values/computed/align.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "legacy",
+          "startLine": 54,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 66,
+          "endLine": 83,
+          "params": [
+            "_context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 86,
+          "endLine": 88,
+          "params": [
+            "computed"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ComputedJustifyItems",
+          "startLine": 39,
+          "endLine": 48,
+          "methods": [],
+          "properties": [
+            "specified",
+            "computed"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ComputedJustifyItems",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "legacy",
+          "line": 54,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "legacy",
+          "callee": "specified::JustifyItems::legacy",
+          "lineNumber": 56
+        },
+        {
+          "caller": "legacy",
+          "callee": "specified::JustifyItems::normal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Self::normal",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/animation.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "seconds",
+          "startLine": 29,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 46,
+          "endLine": 51,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 54,
+          "endLine": 61,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "one",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "to_css",
+          "startLine": 73,
+          "endLine": 82,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_typed",
+          "startLine": 86,
+          "endLine": 95,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "normal",
+          "startLine": 108,
+          "endLine": 112,
+          "params": []
+        },
+        {
+          "name": "normal",
+          "startLine": 119,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AnimationIterationCount",
+          "startLine": 40,
+          "endLine": 40,
+          "methods": [
+            "one",
+            "to_css",
+            "to_typed"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "seconds",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "AnimationIterationCount",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "one",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "normal",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "normal",
+          "line": 119,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "seconds",
+          "callee": "t.seconds",
+          "lineNumber": 32
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "AnimationIterationCount",
+          "lineNumber": 47
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "n.to_computed_value",
+          "lineNumber": 48
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.0.is_infinite",
+          "lineNumber": 56
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "specified::AnimationIterationCount::Number",
+          "lineNumber": 59
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "NonNegativeNumber::new",
+          "lineNumber": 59
+        },
+        {
+          "caller": "one",
+          "callee": "Self",
+          "lineNumber": 68
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.0.is_infinite",
+          "lineNumber": 77
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 78
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.0.to_css",
+          "lineNumber": 80
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.0.is_infinite",
+          "lineNumber": 87
+        },
+        {
+          "caller": "to_typed",
+          "callee": "dest.push",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_typed",
+          "callee": "TypedValue::Keyword",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_typed",
+          "callee": "KeywordValue",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_typed",
+          "callee": "CssString::from",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_typed",
+          "callee": "Ok",
+          "lineNumber": 91
+        },
+        {
+          "caller": "to_typed",
+          "callee": "self.0.to_typed",
+          "lineNumber": 93
+        },
+        {
+          "caller": "normal",
+          "callee": "Self",
+          "lineNumber": 109
+        },
+        {
+          "caller": "normal",
+          "callee": "generics::GenericAnimationRangeValue::normal",
+          "lineNumber": 109
+        },
+        {
+          "caller": "normal",
+          "callee": "LengthPercentage::zero_percent",
+          "lineNumber": 110
+        },
+        {
+          "caller": "normal",
+          "callee": "Self",
+          "lineNumber": 120
+        },
+        {
+          "caller": "normal",
+          "callee": "generics::GenericAnimationRangeValue::normal",
+          "lineNumber": 120
+        },
+        {
+          "caller": "normal",
+          "callee": "LengthPercentage::hundred_percent",
+          "lineNumber": 121
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/border.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 149,
+      "nonEmptyLines": 125,
+      "functions": [
+        {
+          "name": "medium",
+          "startLine": 37,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 46,
+          "endLine": 48,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 51,
+          "endLine": 53,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "to_resolved_value",
+          "startLine": 59,
+          "endLine": 82,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_resolved_value",
+          "startLine": 85,
+          "endLine": 87,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "one",
+          "startLine": 115,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "hundred_percent",
+          "startLine": 123,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "zero",
+          "startLine": 133,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "horizontal",
+          "startLine": 141,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "vertical",
+          "startLine": 146,
+          "endLine": 148,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "BorderSideWidth",
+          "startLine": 33,
+          "endLine": 33,
+          "methods": [
+            "medium",
+            "to_animated_value",
+            "from_animated_value",
+            "to_resolved_value",
+            "from_resolved_value"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BorderSideWidth",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "medium",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "one",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "hundred_percent",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "zero",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "horizontal",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "vertical",
+          "line": 146,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "medium",
+          "callee": "Self",
+          "lineNumber": 38
+        },
+        {
+          "caller": "medium",
+          "callee": "Au::from_px",
+          "lineNumber": 38
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.0.to_animated_value",
+          "lineNumber": 47
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Self",
+          "lineNumber": 52
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Au::from_animated_value",
+          "lineNumber": 52
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "CSSPixelLength::from(self.0).to_resolved_value",
+          "lineNumber": 60
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "CSSPixelLength::from",
+          "lineNumber": 60
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context\r\n            .current_longhand.is_some_and",
+          "lineNumber": 61
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "l.logical_group",
+          "lineNumber": 63
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "Some",
+          "lineNumber": 63
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.current_longhand.unwrap",
+          "lineNumber": 68
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.style.clone_border_top_style",
+          "lineNumber": 69
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.style.clone_border_right_style",
+          "lineNumber": 70
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.style.clone_border_bottom_style",
+          "lineNumber": 71
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "context.style.clone_border_left_style",
+          "lineNumber": 72
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "style.none_or_hidden",
+          "lineNumber": 78
+        },
+        {
+          "caller": "to_resolved_value",
+          "callee": "CSSPixelLength::new",
+          "lineNumber": 79
+        },
+        {
+          "caller": "from_resolved_value",
+          "callee": "Self",
+          "lineNumber": 86
+        },
+        {
+          "caller": "from_resolved_value",
+          "callee": "Au::from_f32_px",
+          "lineNumber": 86
+        },
+        {
+          "caller": "from_resolved_value",
+          "callee": "value.px",
+          "lineNumber": 86
+        },
+        {
+          "caller": "one",
+          "callee": "GenericBorderImageSideWidth::Number",
+          "lineNumber": 116
+        },
+        {
+          "caller": "one",
+          "callee": "NonNegative",
+          "lineNumber": 116
+        },
+        {
+          "caller": "hundred_percent",
+          "callee": "Rect::all",
+          "lineNumber": 125
+        },
+        {
+          "caller": "hundred_percent",
+          "callee": "NonNegativeNumberOrPercentage::hundred_percent",
+          "lineNumber": 125
+        },
+        {
+          "caller": "zero",
+          "callee": "GenericBorderSpacing",
+          "lineNumber": 134
+        },
+        {
+          "caller": "zero",
+          "callee": "Size2D::new",
+          "lineNumber": 134
+        },
+        {
+          "caller": "zero",
+          "callee": "NonNegativeLength::zero",
+          "lineNumber": 135
+        },
+        {
+          "caller": "zero",
+          "callee": "NonNegativeLength::zero",
+          "lineNumber": 136
+        },
+        {
+          "caller": "horizontal",
+          "callee": "Au::from",
+          "lineNumber": 142
+        },
+        {
+          "caller": "horizontal",
+          "callee": "self.0.width",
+          "lineNumber": 142
+        },
+        {
+          "caller": "vertical",
+          "callee": "Au::from",
+          "lineNumber": 147
+        },
+        {
+          "caller": "vertical",
+          "callee": "self.0.height",
+          "lineNumber": 147
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/box.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 264,
+      "nonEmptyLines": 233,
+      "functions": [
+        {
+          "name": "add_auto_if_needed",
+          "startLine": 38,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "animate",
+          "startLine": 52,
+          "endLine": 60,
+          "params": [
+            "other",
+            "procedure"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 84,
+          "endLine": 114,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 117,
+          "endLine": 124,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_computed_value",
+          "startLine": 147,
+          "endLine": 162,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "from_computed_value",
+          "startLine": 165,
+          "endLine": 167,
+          "params": [
+            "computed"
+          ]
+        },
+        {
+          "name": "to_css",
+          "startLine": 171,
+          "endLine": 180,
+          "params": [
+            "dest"
+          ]
+        },
+        {
+          "name": "to_animated_value",
+          "startLine": 187,
+          "endLine": 189,
+          "params": [
+            "_"
+          ]
+        },
+        {
+          "name": "from_animated_value",
+          "startLine": 192,
+          "endLine": 194,
+          "params": [
+            "animated"
+          ]
+        },
+        {
+          "name": "is_one",
+          "startLine": 207,
+          "endLine": 209,
+          "params": []
+        },
+        {
+          "name": "is_document",
+          "startLine": 213,
+          "endLine": 215,
+          "params": []
+        },
+        {
+          "name": "inverted",
+          "startLine": 219,
+          "endLine": 224,
+          "params": []
+        },
+        {
+          "name": "value",
+          "startLine": 228,
+          "endLine": 230,
+          "params": []
+        },
+        {
+          "name": "compute_effective",
+          "startLine": 233,
+          "endLine": 244,
+          "params": [
+            "specified"
+          ]
+        },
+        {
+          "name": "zoom",
+          "startLine": 248,
+          "endLine": 253,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "unzoom",
+          "startLine": 257,
+          "endLine": 263,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Resize",
+          "startLine": 73,
+          "endLine": 78,
+          "methods": [],
+          "properties": [
+            "None",
+            "Both",
+            "Horizontal",
+            "Vertical"
+          ]
+        },
+        {
+          "name": "Zoom",
+          "startLine": 141,
+          "endLine": 141,
+          "methods": [
+            "to_css",
+            "to_animated_value",
+            "from_animated_value",
+            "is_one",
+            "is_document",
+            "inverted",
+            "value",
+            "compute_effective",
+            "zoom",
+            "unzoom"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "add_auto_if_needed",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "Resize",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "Zoom",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "is_one",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "is_document",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "inverted",
+          "line": 219,
+          "isDefault": false
+        },
+        {
+          "name": "value",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "compute_effective",
+          "line": 233,
+          "isDefault": false
+        },
+        {
+          "name": "zoom",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "unzoom",
+          "line": 257,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "add_auto_if_needed",
+          "callee": "Some",
+          "lineNumber": 39
+        },
+        {
+          "caller": "add_auto_if_needed",
+          "callee": "Self::AutoLength",
+          "lineNumber": 41
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_none",
+          "lineNumber": 53
+        },
+        {
+          "caller": "animate",
+          "callee": "other.is_none",
+          "lineNumber": 53
+        },
+        {
+          "caller": "animate",
+          "callee": "Err",
+          "lineNumber": 54
+        },
+        {
+          "caller": "animate",
+          "callee": "self.is_none",
+          "lineNumber": 56
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 57
+        },
+        {
+          "caller": "animate",
+          "callee": "Self::none",
+          "lineNumber": 57
+        },
+        {
+          "caller": "animate",
+          "callee": "Ok",
+          "lineNumber": 59
+        },
+        {
+          "caller": "animate",
+          "callee": "Self",
+          "lineNumber": 59
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.animate(&other.0, procedure)?.max",
+          "lineNumber": 59
+        },
+        {
+          "caller": "animate",
+          "callee": "self.0.animate",
+          "lineNumber": 59
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.style().writing_mode.is_vertical",
+          "lineNumber": 85
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context.style",
+          "lineNumber": 85
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context\r\n                    .rule_cache_conditions\r\n                    .borrow_mut().set_writing_mode_dependency",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context\r\n                    .rule_cache_conditions.borrow_mut",
+          "lineNumber": 88
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context\r\n                    .rule_cache_conditions\r\n                    .borrow_mut().set_writing_mode_dependency",
+          "lineNumber": 99
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "context\r\n                    .rule_cache_conditions.borrow_mut",
+          "lineNumber": 99
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "n.0.to_computed_value",
+          "lineNumber": 151
+        },
+        {
+          "caller": "to_computed_value",
+          "callee": "Zoom",
+          "lineNumber": 161
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "Self::new_number",
+          "lineNumber": 166
+        },
+        {
+          "caller": "from_computed_value",
+          "callee": "computed.value",
+          "lineNumber": 166
+        },
+        {
+          "caller": "to_css",
+          "callee": "dest.write_str",
+          "lineNumber": 177
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.value().to_css",
+          "lineNumber": 179
+        },
+        {
+          "caller": "to_css",
+          "callee": "self.value",
+          "lineNumber": 179
+        },
+        {
+          "caller": "to_animated_value",
+          "callee": "self.value",
+          "lineNumber": 188
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "Zoom",
+          "lineNumber": 193
+        },
+        {
+          "caller": "from_animated_value",
+          "callee": "animated.max",
+          "lineNumber": 193
+        },
+        {
+          "caller": "inverted",
+          "callee": "Some",
+          "lineNumber": 223
+        },
+        {
+          "caller": "inverted",
+          "callee": "Self",
+          "lineNumber": 223
+        },
+        {
+          "caller": "compute_effective",
+          "callee": "Zoom",
+          "lineNumber": 243
+        },
+        {
+          "caller": "zoom",
+          "callee": "self.value",
+          "lineNumber": 252
+        },
+        {
+          "caller": "unzoom",
+          "callee": "self.value",
+          "lineNumber": 262
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 16,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "style/values/computed/calc.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 287,
+      "nonEmptyLines": 262,
+      "functions": [
+        {
+          "name": "is_zero_length",
+          "startLine": 39,
+          "endLine": 48,
+          "params": []
+        },
+        {
+          "name": "unit",
+          "startLine": 52,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "unitless_value",
+          "startLine": 63,
+          "endLine": 72,
+          "params": []
+        },
+        {
+          "name": "new_number",
+          "startLine": 74,
+          "endLine": 76,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "as_number",
+          "startLine": 78,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "as_angle_radians",
+          "startLine": 89,
+          "endLine": 94,
+          "params": []
+        },
+        {
+          "name": "new_angle_from_radians",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "radians"
+          ]
+        },
+        {
+          "name": "compare",
+          "startLine": 100,
+          "endLine": 139,
+          "params": [
+            "other",
+            "basis"
+          ]
+        },
+        {
+          "name": "try_sum_in_place",
+          "startLine": 141,
+          "endLine": 187,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "try_product_in_place",
+          "startLine": 189,
+          "endLine": 213,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "try_op",
+          "startLine": 215,
+          "endLine": 250,
+          "params": [
+            "other",
+            "op"
+          ]
+        },
+        {
+          "name": "map",
+          "startLine": 252,
+          "endLine": 273,
+          "params": [
+            "op"
+          ]
+        },
+        {
+          "name": "simplify",
+          "startLine": 275,
+          "endLine": 275,
+          "params": []
+        },
+        {
+          "name": "sort_key",
+          "startLine": 277,
+          "endLine": 286,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ComputedLeaf",
+          "startLine": 29,
+          "endLine": 36,
+          "methods": [
+            "is_zero_length",
+            "unit",
+            "unitless_value",
+            "new_number",
+            "as_number",
+            "as_angle_radians",
+            "new_angle_from_radians",
+            "compare",
+            "try_sum_in_place",
+            "try_product_in_place",
+            "try_op",
+            "map",
+            "simplify",
+            "sort_key"
+          ],
+          "properties": [
+            "Length",
+            "Percentage",
+            "Number",
+            "Angle",
+            "Time",
+            "Resolution"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ComputedLeaf",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "is_zero_length",
+          "line": 39,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "is_zero_length",
+          "callee": "l.is_zero",
+          "lineNumber": 41
+        },
+        {
+          "caller": "unit",
+          "callee": "CalcUnits::empty",
+          "lineNumber": 56
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "Some",
+          "lineNumber": 64
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "l.px",
+          "lineNumber": 65
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "a.degrees",
+          "lineNumber": 68
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "t.seconds",
+          "lineNumber": 69
+        },
+        {
+          "caller": "unitless_value",
+          "callee": "r.dppx",
+          "lineNumber": 70
+        },
+        {
+          "caller": "new_number",
+          "callee": "Self::Number",
+          "lineNumber": 75
+        },
+        {
+          "caller": "as_number",
+          "callee": "Some",
+          "lineNumber": 85
+        },
+        {
+          "caller": "as_angle_radians",
+          "callee": "Some",
+          "lineNumber": 91
+        },
+        {
+          "caller": "as_angle_radians",
+          "callee": "a.radians",
+          "lineNumber": 91
+        },
+        {
+          "caller": "new_angle_from_radians",
+          "callee": "Self::Angle",
+          "lineNumber": 97
+        },
+        {
+          "caller": "new_angle_from_radians",
+          "callee": "Angle::from_radians",
+          "lineNumber": 97
+        },
+        {
+          "caller": "compare",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 102
+        },
+        {
+          "caller": "compare",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 102
+        },
+        {
+          "caller": "compare",
+          "callee": "self.is_negative",
+          "lineNumber": 110
+        },
+        {
+          "caller": "compare",
+          "callee": "other.is_negative",
+          "lineNumber": 113
+        },
+        {
+          "caller": "compare",
+          "callee": "Some",
+          "lineNumber": 117
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 125
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 126
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 127
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 128
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 129
+        },
+        {
+          "caller": "compare",
+          "callee": "one.partial_cmp",
+          "lineNumber": 130
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "self.is_zero_length",
+          "lineNumber": 145
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "other.clone",
+          "lineNumber": 146
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "Ok",
+          "lineNumber": 147
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "other.is_zero_length",
+          "lineNumber": 150
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "Ok",
+          "lineNumber": 151
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 154
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 154
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "Err",
+          "lineNumber": 155
+        },
+        {
+          "caller": "try_sum_in_place",
+          "callee": "Ok",
+          "lineNumber": 186
+        },
+        {
+          "caller": "try_product_in_place",
+          "callee": "other.map(|v| v * *left).is_ok",
+          "lineNumber": 198
+        },
+        {
+          "caller": "try_product_in_place",
+          "callee": "other.map",
+          "lineNumber": 198
+        },
+        {
+          "caller": "try_product_in_place",
+          "callee": "std::mem::swap",
+          "lineNumber": 199
+        },
+        {
+          "caller": "try_product_in_place",
+          "callee": "self.map(|v| v * *right).is_ok",
+          "lineNumber": 208
+        },
+        {
+          "caller": "try_product_in_place",
+          "callee": "self.map",
+          "lineNumber": 208
+        },
+        {
+          "caller": "try_op",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 220
+        },
+        {
+          "caller": "try_op",
+          "callee": "std::mem::discriminant",
+          "lineNumber": 220
+        },
+        {
+          "caller": "try_op",
+          "callee": "Err",
+          "lineNumber": 221
+        },
+        {
+          "caller": "try_op",
+          "callee": "Ok",
+          "lineNumber": 223
+        },
+        {
+          "caller": "try_op",
+          "callee": "Length",
+          "lineNumber": 225
+        },
+        {
+          "caller": "try_op",
+          "callee": "super::Length::new",
+          "lineNumber": 225
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 225
+        },
+        {
+          "caller": "try_op",
+          "callee": "one.px",
+          "lineNumber": 225
+        },
+        {
+          "caller": "try_op",
+          "callee": "other.px",
+          "lineNumber": 225
+        },
+        {
+          "caller": "try_op",
+          "callee": "Self::Percentage",
+          "lineNumber": 228
+        },
+        {
+          "caller": "try_op",
+          "callee": "super::Percentage",
+          "lineNumber": 228
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 228
+        },
+        {
+          "caller": "try_op",
+          "callee": "Self::Number",
+          "lineNumber": 230
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 230
+        },
+        {
+          "caller": "try_op",
+          "callee": "Self::Angle",
+          "lineNumber": 231
+        },
+        {
+          "caller": "try_op",
+          "callee": "super::Angle::from_degrees",
+          "lineNumber": 231
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 231
+        },
+        {
+          "caller": "try_op",
+          "callee": "one.degrees",
+          "lineNumber": 232
+        },
+        {
+          "caller": "try_op",
+          "callee": "other.degrees",
+          "lineNumber": 233
+        },
+        {
+          "caller": "try_op",
+          "callee": "Self::Time",
+          "lineNumber": 235
+        },
+        {
+          "caller": "try_op",
+          "callee": "super::Time::from_seconds",
+          "lineNumber": 235
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 235
+        },
+        {
+          "caller": "try_op",
+          "callee": "one.seconds",
+          "lineNumber": 236
+        },
+        {
+          "caller": "try_op",
+          "callee": "other.seconds",
+          "lineNumber": 237
+        },
+        {
+          "caller": "try_op",
+          "callee": "Self::Resolution",
+          "lineNumber": 240
+        },
+        {
+          "caller": "try_op",
+          "callee": "super::Resolution::from_dppx",
+          "lineNumber": 240
+        },
+        {
+          "caller": "try_op",
+          "callee": "op",
+          "lineNumber": 240
+        },
+        {
+          "caller": "try_op",
+          "callee": "one.dppx",
+          "lineNumber": 240
+        },
+        {
+          "caller": "try_op",
+          "callee": "other.dppx",
+          "lineNumber": 240
+        },
+        {
+          "caller": "map",
+          "callee": "Ok",
+          "lineNumber": 253
+        },
+        {
+          "caller": "map",
+          "callee": "Length::new",
+          "lineNumber": 255
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 255
+        },
+        {
+          "caller": "map",
+          "callee": "value.px",
+          "lineNumber": 255
+        },
+        {
+          "caller": "map",
+          "callee": "Percentage",
+          "lineNumber": 258
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 258
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 261
+        },
+        {
+          "caller": "map",
+          "callee": "Angle::from_degrees",
+          "lineNumber": 264
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 264
+        },
+        {
+          "caller": "map",
+          "callee": "value.degrees",
+          "lineNumber": 264
+        },
+        {
+          "caller": "map",
+          "callee": "Time::from_seconds",
+          "lineNumber": 267
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 267
+        },
+        {
+          "caller": "map",
+          "callee": "value.seconds",
+          "lineNumber": 267
+        },
+        {
+          "caller": "map",
+          "callee": "Resolution::from_dppx",
+          "lineNumber": 270
+        },
+        {
+          "caller": "map",
+          "callee": "op",
+          "lineNumber": 270
+        },
+        {
+          "caller": "map",
+          "callee": "value.dppx",
+          "lineNumber": 270
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "style/values/computed/counters.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "style/values/computed/transform.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 559,
+      "nonEmptyLines": 522,
+      "functions": [
+        {
+          "name": "initial_value",
+          "startLine": 37,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "identity",
+          "startLine": 58,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "into_2d",
+          "startLine": 69,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "is_3d",
+          "startLine": 86,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "determinant",
+          "startLine": 96,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "transpose",
+          "startLine": 125,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "inverse",
+          "startLine": 135,
+          "endLine": 211,
+          "params": []
+        },
+        {
+          "name": "pre_mul_point4",
+          "startLine": 215,
+          "endLine": 222,
+          "params": [
+            "pin"
+          ]
+        },
+        {
+          "name": "multiply",
+          "startLine": 226,
+          "endLine": 261,
+          "params": [
+            "other"
+          ]
+        },
+        {
+          "name": "scale_by_factor",
+          "startLine": 265,
+          "endLine": 282,
+          "params": [
+            "scaling_factor"
+          ]
+        },
+        {
+          "name": "get_matrix_3x3_part",
+          "startLine": 288,
+          "endLine": 294,
+          "params": []
+        },
+        {
+          "name": "set_perspective",
+          "startLine": 298,
+          "endLine": 303,
+          "params": [
+            "perspective"
+          ]
+        },
+        {
+          "name": "apply_translate",
+          "startLine": 307,
+          "endLine": 312,
+          "params": [
+            "translate"
+          ]
+        },
+        {
+          "name": "apply_scale",
+          "startLine": 316,
+          "endLine": 329,
+          "params": [
+            "scale"
+          ]
+        },
+        {
+          "name": "identity",
+          "startLine": 336,
+          "endLine": 343,
+          "params": []
+        },
+        {
+          "name": "from",
+          "startLine": 348,
+          "endLine": 355,
+          "params": [
+            "m"
+          ]
+        },
+        {
+          "name": "from",
+          "startLine": 361,
+          "endLine": 368,
+          "params": [
+            "m"
+          ]
+        },
+        {
+          "name": "to_translate_3d",
+          "startLine": 375,
+          "endLine": 404,
+          "params": []
+        },
+        {
+          "name": "to_rotate_3d",
+          "startLine": 409,
+          "endLine": 424,
+          "params": []
+        },
+        {
+          "name": "to_scale_3d",
+          "startLine": 429,
+          "endLine": 446,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 453,
+          "endLine": 537,
+          "params": []
+        },
+        {
+          "name": "to_animated_zero",
+          "startLine": 542,
+          "endLine": 549,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "initial_value",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "identity",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "into_2d",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "is_3d",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "determinant",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "transpose",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "inverse",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "pre_mul_point4",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "multiply",
+          "line": 226,
+          "isDefault": false
+        },
+        {
+          "name": "scale_by_factor",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "get_matrix_3x3_part",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "set_perspective",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "apply_translate",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "apply_scale",
+          "line": 316,
+          "isDefault": false
+        },
+        {
+          "name": "identity",
+          "line": 336,
+          "isDefault": false
+        },
+        {
+          "name": "to_translate_3d",
+          "line": 375,
+          "isDefault": false
+        },
+        {
+          "name": "to_rotate_3d",
+          "line": 409,
+          "isDefault": false
+        },
+        {
+          "name": "to_scale_3d",
+          "line": 429,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "initial_value",
+          "callee": "Self::new",
+          "lineNumber": 38
+        },
+        {
+          "caller": "initial_value",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 39
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Percentage",
+          "lineNumber": 39
+        },
+        {
+          "caller": "initial_value",
+          "callee": "LengthPercentage::new_percent",
+          "lineNumber": 40
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Percentage",
+          "lineNumber": 40
+        },
+        {
+          "caller": "initial_value",
+          "callee": "Length::new",
+          "lineNumber": 41
+        },
+        {
+          "caller": "into_2d",
+          "callee": "Ok",
+          "lineNumber": 75
+        },
+        {
+          "caller": "into_2d",
+          "callee": "Err",
+          "lineNumber": 80
+        },
+        {
+          "caller": "inverse",
+          "callee": "self.determinant",
+          "lineNumber": 136
+        },
+        {
+          "caller": "inverse",
+          "callee": "Err",
+          "lineNumber": 139
+        },
+        {
+          "caller": "inverse",
+          "callee": "Ok",
+          "lineNumber": 210
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "self.clone",
+          "lineNumber": 377
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 379
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "x.clone",
+          "lineNumber": 380
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 381
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 382
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "x.clone",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "y.clone",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 386
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 389
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 390
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "y.clone",
+          "lineNumber": 391
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "Length::zero",
+          "lineNumber": 392
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 396
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 397
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "LengthPercentage::zero",
+          "lineNumber": 398
+        },
+        {
+          "caller": "to_translate_3d",
+          "callee": "z.clone",
+          "lineNumber": 399
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "self.clone",
+          "lineNumber": 411
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 414
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 414
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 417
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 417
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_rotate_3d",
+          "callee": "angle.clone",
+          "lineNumber": 420
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "self.clone",
+          "lineNumber": 431
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 433
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 436
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 439
+        },
+        {
+          "caller": "to_scale_3d",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 442
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix3D",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 456
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix::identity",
+          "lineNumber": 459
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 461
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Skew",
+          "lineNumber": 461
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "sx.to_animated_zero",
+          "lineNumber": 462
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "sy.to_animated_zero",
+          "lineNumber": 463
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::SkewX",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "s.to_animated_zero",
+          "lineNumber": 466
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::SkewY",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "s.to_animated_zero",
+          "lineNumber": 469
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 472
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Translate3D",
+          "lineNumber": 472
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tx.to_animated_zero",
+          "lineNumber": 473
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "ty.to_animated_zero",
+          "lineNumber": 474
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tz.to_animated_zero",
+          "lineNumber": 475
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Translate",
+          "lineNumber": 479
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "tx.to_animated_zero",
+          "lineNumber": 480
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "ty.to_animated_zero",
+          "lineNumber": 481
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 484
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateX",
+          "lineNumber": 485
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 485
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 487
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateY",
+          "lineNumber": 488
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 488
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 490
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::TranslateZ",
+          "lineNumber": 491
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "t.to_animated_zero",
+          "lineNumber": 491
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 494
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Scale3D",
+          "lineNumber": 494
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 497
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Scale",
+          "lineNumber": 497
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 499
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleX",
+          "lineNumber": 499
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 500
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleY",
+          "lineNumber": 500
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 501
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::ScaleZ",
+          "lineNumber": 501
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::get_normalized_vector_and_angle",
+          "lineNumber": 503
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 504
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Rotate3D",
+          "lineNumber": 504
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 508
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateX",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 512
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateY",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 515
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::RotateZ",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 518
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Rotate",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Angle::zero",
+          "lineNumber": 521
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 523
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Perspective",
+          "lineNumber": 524
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::TransformOperation::Matrix3D",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Matrix3D::identity",
+          "lineNumber": 534
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "Ok",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "generic::Transform",
+          "lineNumber": 543
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0\r\n                .iter()\r\n                .map(|op| op.to_animated_zero())\r\n                .collect::<Result<crate::OwnedSlice<_>, _>>",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0\r\n                .iter().map",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "self.0.iter",
+          "lineNumber": 544
+        },
+        {
+          "caller": "to_animated_zero",
+          "callee": "op.to_animated_zero",
+          "lineNumber": 546
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 22,
+        "classCount": 0
+      }
+    }
+  ]
+}

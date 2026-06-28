@@ -1,0 +1,18 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 19,
+  "crossBatchEdgesAdded": 3,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "22 edges restored total: 19 dangling import edges from batch-1 (crate:: path nodes mapped to correct class: nodes) plus 3 cross-batch import edges from stylist.rs per import map.",
+    "Dangling edges targeted file:crate::... paths that don't exist as file nodes. Mapped them to the corresponding class: nodes already in the graph (e.g., file:crate::stylist::CascadeData -> class:style/stylist.rs:CascadeData).",
+    "3 crate:: paths with no matching source-code nodes were skipped: CssRulesMutators, RuleContainerParser, check_for_bad_selector_usage. These don't exist in the source files and appear to be LLM extraction noise.",
+    "2 dangling edges for crate::values::computed::ColorScheme and crate::values::generics::ui::BoolInteger could not be restored because the existing class nodes are in different Rust modules (specified/ vs computed/ or generics/). The source files exist but weren't analyzed for the computed/generics variants.",
+    "Node type breakdown is appropriate for Rust: 1627 function (57%), 887 class (31%), 295 file, 15 config, 11 document, 3 pipeline. All types and complexity values are valid.",
+    "No nodes missing 'id' field, no unknown types or complexity values found, no dangling edges remain.",
+    "New edge totals: 2531 contains, 1940 exports, 192 imports (was 170), 37 depends_on, 54 calls, 14 related, 9 configures, 6 documents.",
+    "Function node proportion (57%) is higher than typical but expected for Rust codebases with many free functions and trait implementations."
+  ]
+}

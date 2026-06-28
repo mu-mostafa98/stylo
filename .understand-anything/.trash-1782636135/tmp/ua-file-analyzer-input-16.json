@@ -1,0 +1,23 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "style/servo/animation.rs", "language": "rust", "sizeLines": 1876, "fileCategory": "code"},
+    {"path": "style/servo/attr.rs", "language": "rust", "sizeLines": 717, "fileCategory": "code"},
+    {"path": "style/servo/encoding_support.rs", "language": "rust", "sizeLines": 81, "fileCategory": "code"},
+    {"path": "style/servo/media_features.rs", "language": "rust", "sizeLines": 206, "fileCategory": "code"},
+    {"path": "style/servo/mod.rs", "language": "rust", "sizeLines": 16, "fileCategory": "code"},
+    {"path": "style/servo/restyle_damage.rs", "language": "rust", "sizeLines": 215, "fileCategory": "code"},
+    {"path": "style/servo/selector_parser.rs", "language": "rust", "sizeLines": 1039, "fileCategory": "code"},
+    {"path": "style/servo/shadow_parts.rs", "language": "rust", "sizeLines": 207, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "style/servo/animation.rs": [],
+    "style/servo/attr.rs": [],
+    "style/servo/encoding_support.rs": [],
+    "style/servo/media_features.rs": [],
+    "style/servo/mod.rs": ["style/servo/animation.rs", "style/servo/attr.rs", "style/servo/encoding_support.rs", "style/servo/media_features.rs", "style/servo/restyle_damage.rs", "style/servo/selector_parser.rs", "style/servo/shadow_parts.rs"],
+    "style/servo/restyle_damage.rs": [],
+    "style/servo/selector_parser.rs": [],
+    "style/servo/shadow_parts.rs": []
+  }
+}

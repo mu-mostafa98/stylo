@@ -1,0 +1,231 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {
+      "path": "style/values/generics/animation.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/background.rs",
+      "language": "rust",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/basic_shape.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/calc.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/color.rs",
+      "language": "rust",
+      "sizeLines": 1068,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/column.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/content.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/counters.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/effects.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/flex.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/font.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/image.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/length.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/mod.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/motion.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/page.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/position.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/rect.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/settings.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/svg.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/text.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/transform.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/transition.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/ui.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/url.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/generics/wayland.rs",
+      "language": "rust",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style/values/mod.rs",
+      "language": "rust",
+      "sizeLines": 900,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "style/values/generics/animation.rs": [],
+    "style/values/generics/background.rs": [],
+    "style/values/generics/basic_shape.rs": [],
+    "style/values/generics/calc.rs": [],
+    "style/values/generics/color.rs": [],
+    "style/values/generics/column.rs": [],
+    "style/values/generics/content.rs": [],
+    "style/values/generics/counters.rs": [],
+    "style/values/generics/effects.rs": [],
+    "style/values/generics/flex.rs": [],
+    "style/values/generics/font.rs": [],
+    "style/values/generics/image.rs": [],
+    "style/values/generics/length.rs": [],
+    "style/values/generics/mod.rs": [
+      "style/values/generics/animation.rs",
+      "style/values/generics/background.rs",
+      "style/values/generics/basic_shape.rs",
+      "style/values/generics/border.rs",
+      "style/values/generics/calc.rs",
+      "style/values/generics/color.rs",
+      "style/values/generics/column.rs",
+      "style/values/generics/counters.rs",
+      "style/values/generics/easing.rs",
+      "style/values/generics/effects.rs",
+      "style/values/generics/flex.rs",
+      "style/values/generics/font.rs",
+      "style/values/generics/grid.rs",
+      "style/values/generics/image.rs",
+      "style/values/generics/length.rs",
+      "style/values/generics/motion.rs",
+      "style/values/generics/page.rs",
+      "style/values/generics/position.rs",
+      "style/values/generics/ratio.rs",
+      "style/values/generics/rect.rs",
+      "style/values/generics/size.rs",
+      "style/values/generics/svg.rs",
+      "style/values/generics/text.rs",
+      "style/values/generics/transform.rs",
+      "style/values/generics/ui.rs",
+      "style/values/generics/url.rs"
+    ],
+    "style/values/generics/motion.rs": [],
+    "style/values/generics/page.rs": [],
+    "style/values/generics/position.rs": [],
+    "style/values/generics/rect.rs": [],
+    "style/values/generics/settings.rs": [],
+    "style/values/generics/svg.rs": [],
+    "style/values/generics/text.rs": [],
+    "style/values/generics/transform.rs": [],
+    "style/values/generics/transition.rs": [],
+    "style/values/generics/ui.rs": [],
+    "style/values/generics/url.rs": [],
+    "style/values/generics/wayland.rs": [],
+    "style/values/mod.rs": [
+      "style/values/animated/mod.rs",
+      "style/values/computed/mod.rs",
+      "style/values/distance.rs",
+      "style/values/generics/mod.rs",
+      "style/values/resolved/mod.rs",
+      "style/values/specified/mod.rs",
+      "style/values/tagged_numeric.rs"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "projectRoot": "D:\\Projects\\stylo",
+  "batchFiles": [
+    {"path": "to_shmem_derive/Cargo.toml", "language": "toml", "sizeLines": 7, "fileCategory": "config"},
+    {"path": "to_shmem/Cargo.toml", "language": "toml", "sizeLines": 7, "fileCategory": "config"},
+    {"path": "to_shmem/lib.rs", "language": "rust", "sizeLines": 7, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "to_shmem_derive/Cargo.toml": [],
+    "to_shmem/Cargo.toml": [],
+    "to_shmem/lib.rs": []
+  }
+}

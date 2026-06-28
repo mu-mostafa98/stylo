@@ -1,0 +1,1844 @@
+{
+  "nodes": [
+    {
+      "id": "file:style/values/computed/list.rs",
+      "type": "file",
+      "name": "list.rs",
+      "filePath": "style/values/computed/list.rs",
+      "summary": "Provides computed value re-exports for list properties, including ListStyleType and Quotes, with an initial value accessor for Quotes.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/list.rs:get_initial_value",
+      "type": "function",
+      "name": "get_initial_value",
+      "filePath": "style/values/computed/list.rs",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "Handles get_initial_value in the list module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/mod.rs",
+      "type": "file",
+      "name": "mod.rs",
+      "filePath": "style/values/computed/mod.rs",
+      "summary": "Central computed values module defining the Context struct for resolving specified values to computed values, along with type aliases and re-exports for all CSS computed value types.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "barrel",
+        "module-root"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:Context",
+      "type": "class",
+      "name": "Context",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        174,
+        231
+      ],
+      "summary": "A CSS computed value struct in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:ComputedVecIter",
+      "type": "class",
+      "name": "ComputedVecIter",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        491,
+        494
+      ],
+      "summary": "A CSS computed value struct in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:ToComputedValue",
+      "type": "class",
+      "name": "ToComputedValue",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        536,
+        549
+      ],
+      "summary": "A CSS computed value struct in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:AngleOrPercentage",
+      "type": "class",
+      "name": "AngleOrPercentage",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        787,
+        790
+      ],
+      "summary": "A CSS computed value struct in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:style/values/computed/mod.rs:NumberOrPercentage",
+      "type": "class",
+      "name": "NumberOrPercentage",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        934,
+        937
+      ],
+      "summary": "A CSS computed value struct in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:get_container_size_query",
+      "type": "function",
+      "name": "get_container_size_query",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        235,
+        238
+      ],
+      "summary": "Handles get_container_size_query in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_media_query_evaluation",
+      "type": "function",
+      "name": "for_media_query_evaluation",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        243,
+        263
+      ],
+      "summary": "Creates a temporary Context for evaluating media queries against a given device.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_container_query_evaluation",
+      "type": "function",
+      "name": "for_container_query_evaluation",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        267,
+        302
+      ],
+      "summary": "Creates a temporary Context for evaluating container queries with container info and style.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        305,
+        332
+      ],
+      "summary": "Constructs a new styling Context with the given builder, quirks mode, and rule cache conditions.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "constructor"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:new_for_animation",
+      "type": "function",
+      "name": "new_for_animation",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        335,
+        355
+      ],
+      "summary": "Constructs a Context for animation value computation with the given builder and conditions.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:new_for_initial_at_property_value",
+      "type": "function",
+      "name": "new_for_initial_at_property_value",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        358,
+        379
+      ],
+      "summary": "Constructs a Context for computing initial @property values from a stylist.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:device",
+      "type": "function",
+      "name": "device",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        382,
+        384
+      ],
+      "summary": "Handles device in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:inherited_custom_properties",
+      "type": "function",
+      "name": "inherited_custom_properties",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        387,
+        389
+      ],
+      "summary": "Handles inherited_custom_properties in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:is_root_element",
+      "type": "function",
+      "name": "is_root_element",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        392,
+        394
+      ],
+      "summary": "Handles is_root_element in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:query_font_metrics",
+      "type": "function",
+      "name": "query_font_metrics",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        397,
+        433
+      ],
+      "summary": "Queries font metrics for the given font size base and orientation, handling MathML and ex/ch/etc. unit resolution.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:viewport_size_for_viewport_unit_resolution",
+      "type": "function",
+      "name": "viewport_size_for_viewport_unit_resolution",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        436,
+        445
+      ],
+      "summary": "Resolves the viewport size for a given viewport variant (default/small/large/dynamic).",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:in_media_or_container_query",
+      "type": "function",
+      "name": "in_media_or_container_query",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        448,
+        450
+      ],
+      "summary": "Handles in_media_or_container_query in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:default_style",
+      "type": "function",
+      "name": "default_style",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        453,
+        455
+      ],
+      "summary": "Handles default_style in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:style",
+      "type": "function",
+      "name": "style",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        458,
+        460
+      ],
+      "summary": "Handles style in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:current_scope",
+      "type": "function",
+      "name": "current_scope",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        463,
+        465
+      ],
+      "summary": "Handles current_scope in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:maybe_zoom_text",
+      "type": "function",
+      "name": "maybe_zoom_text",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        469,
+        480
+      ],
+      "summary": "Applies text zoom to a length value if text zoom is enabled in the current context.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        796,
+        805
+      ],
+      "summary": "Handles to_computed_value in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "value-conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:from_computed_value",
+      "type": "function",
+      "name": "from_computed_value",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        807,
+        816
+      ],
+      "summary": "Handles from_computed_value in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "value-conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:is_parallel_to",
+      "type": "function",
+      "name": "is_parallel_to",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        823,
+        832
+      ],
+      "summary": "Handles is_parallel_to in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:value",
+      "type": "function",
+      "name": "value",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        941,
+        946
+      ],
+      "summary": "Handles value in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:hundred_percent",
+      "type": "function",
+      "name": "hundred_percent",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        995,
+        997
+      ],
+      "summary": "Handles hundred_percent in the mod module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/mod.rs:for_border_rect",
+      "type": "function",
+      "name": "for_border_rect",
+      "filePath": "style/values/computed/mod.rs",
+      "lineRange": [
+        1058,
+        1078
+      ],
+      "summary": "Computes a border-rect value from four side values for a given writing mode.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/motion.rs",
+      "type": "file",
+      "name": "motion.rs",
+      "filePath": "style/values/computed/motion.rs",
+      "summary": "Defines computed types for CSS motion path properties, including OffsetPath, OffsetRotate, and related type aliases for ray() and offset-position.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values",
+        "css-transforms"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/motion.rs:OffsetRotate",
+      "type": "class",
+      "name": "OffsetRotate",
+      "filePath": "style/values/computed/motion.rs",
+      "lineRange": [
+        51,
+        62
+      ],
+      "summary": "A CSS computed value struct in the motion module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/motion.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/computed/motion.rs",
+      "lineRange": [
+        67,
+        72
+      ],
+      "summary": "Handles auto in the motion module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/outline.rs",
+      "type": "file",
+      "name": "outline.rs",
+      "filePath": "style/values/computed/outline.rs",
+      "summary": "Re-exports the computed OutlineStyle type from the specified values module.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/page.rs",
+      "type": "file",
+      "name": "page.rs",
+      "filePath": "style/values/computed/page.rs",
+      "summary": "Defines computed types for CSS @page at-rule properties, including PageSize enum with Size, Orientation, and Auto variants.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/page.rs:PageSize",
+      "type": "class",
+      "name": "PageSize",
+      "filePath": "style/values/computed/page.rs",
+      "lineRange": [
+        28,
+        35
+      ],
+      "summary": "A CSS computed value struct in the page module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/page.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/page.rs",
+      "lineRange": [
+        40,
+        54
+      ],
+      "summary": "Handles to_computed_value in the page module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-layout",
+        "value-conversion"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/page.rs:auto",
+      "type": "function",
+      "name": "auto",
+      "filePath": "style/values/computed/page.rs",
+      "lineRange": [
+        68,
+        70
+      ],
+      "summary": "Handles auto in the page module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-layout",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/page.rs:is_auto",
+      "type": "function",
+      "name": "is_auto",
+      "filePath": "style/values/computed/page.rs",
+      "lineRange": [
+        74,
+        76
+      ],
+      "summary": "Handles is_auto in the page module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/percentage.rs",
+      "type": "file",
+      "name": "percentage.rs",
+      "filePath": "style/values/computed/percentage.rs",
+      "summary": "Defines the computed Percentage type with arithmetic operations, CSS serialization, and NonNegativePercentage wrapper.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:style/values/computed/percentage.rs:Percentage",
+      "type": "class",
+      "name": "Percentage",
+      "filePath": "style/values/computed/percentage.rs",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "A CSS computed value struct in the percentage module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/percentage.rs:hundred",
+      "type": "function",
+      "name": "hundred",
+      "filePath": "style/values/computed/percentage.rs",
+      "lineRange": [
+        50,
+        52
+      ],
+      "summary": "Handles hundred in the percentage module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/percentage.rs:abs",
+      "type": "function",
+      "name": "abs",
+      "filePath": "style/values/computed/percentage.rs",
+      "lineRange": [
+        56,
+        58
+      ],
+      "summary": "Handles abs in the percentage module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/position.rs",
+      "type": "file",
+      "name": "position.rs",
+      "filePath": "style/values/computed/position.rs",
+      "summary": "Defines computed types for CSS position and anchor positioning properties, including Position, AnchorFunction, Inset, and ZIndex with try-tactic adjustment support.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values",
+        "css-transforms"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:style/values/computed/position.rs:TryTacticAdjustment",
+      "type": "class",
+      "name": "TryTacticAdjustment",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        107,
+        111
+      ],
+      "summary": "A CSS computed value struct in the position module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "style-value",
+        "rust"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:keyword_and_percentage",
+      "type": "function",
+      "name": "keyword_and_percentage",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "Decomposes an AnchorSide into its keyword and percentage components.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:resolve",
+      "type": "function",
+      "name": "resolve",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        75,
+        102
+      ],
+      "summary": "Resolves an anchor() function by calling into Gecko layout to get the anchor offset.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:try_tactic_adjustment",
+      "type": "function",
+      "name": "try_tactic_adjustment",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        155,
+        164
+      ],
+      "summary": "Handles try_tactic_adjustment in the position module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:center",
+      "type": "function",
+      "name": "center",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        170,
+        175
+      ],
+      "summary": "Handles center in the position module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:zero",
+      "type": "function",
+      "name": "zero",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        179,
+        181
+      ],
+      "summary": "Handles zero in the position module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:block_or_inline_to_inferred",
+      "type": "function",
+      "name": "block_or_inline_to_inferred",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        205,
+        214
+      ],
+      "summary": "Handles block_or_inline_to_inferred in the position module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/position.rs:to_computed_value",
+      "type": "function",
+      "name": "to_computed_value",
+      "filePath": "style/values/computed/position.rs",
+      "lineRange": [
+        235,
+        262
+      ],
+      "summary": "Simplifies a PositionArea at computed-value time by converting logical/inferred keywords.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-transform",
+        "value-conversion"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:style/values/computed/ratio.rs",
+      "type": "file",
+      "name": "ratio.rs",
+      "filePath": "style/values/computed/ratio.rs",
+      "summary": "Defines the computed Ratio type with partial ordering, animation interpolation via logarithmic scaling, and squared distance computation.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/ratio.rs:new",
+      "type": "function",
+      "name": "new",
+      "filePath": "style/values/computed/ratio.rs",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Handles new in the ratio module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values",
+        "constructor"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:style/values/computed/ratio.rs:animate",
+      "type": "function",
+      "name": "animate",
+      "filePath": "style/values/computed/ratio.rs",
+      "lineRange": [
+        43,
+        74
+      ],
+      "summary": "Interpolates two Ratio values using logarithmic scaling as specified in CSS Values Level 4.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:style/values/computed/ratio.rs:compute_squared_distance",
+      "type": "function",
+      "name": "compute_squared_distance",
+      "filePath": "style/values/computed/ratio.rs",
+      "lineRange": [
+        78,
+        87
+      ],
+      "summary": "Handles compute_squared_distance in the ratio module of the Servo style engine.",
+      "tags": [
+        "stylo",
+        "rust",
+        "css-values"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:style/values/computed/rect.rs",
+      "type": "file",
+      "name": "rect.rs",
+      "filePath": "style/values/computed/rect.rs",
+      "summary": "Defines the NonNegativeLengthOrNumberRect type alias for computed CSS rectangle values made of four length-or-number components.",
+      "tags": [
+        "stylo",
+        "rust",
+        "style-engine",
+        "computed-values"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:style/values/computed/list.rs",
+      "target": "function:style/values/computed/list.rs:get_initial_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/list.rs",
+      "target": "function:style/values/computed/list.rs:get_initial_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:Context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:Context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ComputedVecIter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ComputedVecIter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ToComputedValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:ToComputedValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:AngleOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:AngleOrPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:NumberOrPercentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "class:style/values/computed/mod.rs:NumberOrPercentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:get_container_size_query",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:get_container_size_query",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_media_query_evaluation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_media_query_evaluation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_container_query_evaluation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_container_query_evaluation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new_for_animation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new_for_animation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new_for_initial_at_property_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:new_for_initial_at_property_value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:device",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:device",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:inherited_custom_properties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:inherited_custom_properties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:is_root_element",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:is_root_element",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:query_font_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:query_font_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:viewport_size_for_viewport_unit_resolution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:viewport_size_for_viewport_unit_resolution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:in_media_or_container_query",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:in_media_or_container_query",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:default_style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:default_style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:style",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:style",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:current_scope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:current_scope",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:maybe_zoom_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:maybe_zoom_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:from_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:is_parallel_to",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:value",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:hundred_percent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:hundred_percent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_border_rect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "function:style/values/computed/mod.rs:for_border_rect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/animated/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/align.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/angle.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/animation.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/background.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/basic_shape.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/border.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/calc.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/color.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/column.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/corner_shape.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/counters.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/easing.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/effects.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/flex.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/font.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/image.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/length_percentage.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/length.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/list.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/motion.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/outline.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/page.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/percentage.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/position.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/ratio.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/rect.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/resolution.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/svg.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/table.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/text.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/time.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/transform.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/ui.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/computed/url.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/generics/grid.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/generics/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/generics/transform.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/mod.rs",
+      "target": "file:style/values/specified/mod.rs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:style/values/computed/motion.rs",
+      "target": "class:style/values/computed/motion.rs:OffsetRotate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/motion.rs",
+      "target": "class:style/values/computed/motion.rs:OffsetRotate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/motion.rs",
+      "target": "function:style/values/computed/motion.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/motion.rs",
+      "target": "function:style/values/computed/motion.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "class:style/values/computed/page.rs:PageSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "class:style/values/computed/page.rs:PageSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "function:style/values/computed/page.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "function:style/values/computed/page.rs:auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "function:style/values/computed/page.rs:auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "function:style/values/computed/page.rs:is_auto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/page.rs",
+      "target": "function:style/values/computed/page.rs:is_auto",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "class:style/values/computed/percentage.rs:Percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "class:style/values/computed/percentage.rs:Percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "function:style/values/computed/percentage.rs:hundred",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "function:style/values/computed/percentage.rs:hundred",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "function:style/values/computed/percentage.rs:abs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/percentage.rs",
+      "target": "function:style/values/computed/percentage.rs:abs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "class:style/values/computed/position.rs:TryTacticAdjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "class:style/values/computed/position.rs:TryTacticAdjustment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:keyword_and_percentage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:keyword_and_percentage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:try_tactic_adjustment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:center",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:center",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:zero",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:zero",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:block_or_inline_to_inferred",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/position.rs",
+      "target": "function:style/values/computed/position.rs:to_computed_value",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/ratio.rs",
+      "target": "function:style/values/computed/ratio.rs:new",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/ratio.rs",
+      "target": "function:style/values/computed/ratio.rs:new",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:style/values/computed/ratio.rs",
+      "target": "function:style/values/computed/ratio.rs:animate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:style/values/computed/ratio.rs",
+      "target": "function:style/values/computed/ratio.rs:compute_squared_distance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

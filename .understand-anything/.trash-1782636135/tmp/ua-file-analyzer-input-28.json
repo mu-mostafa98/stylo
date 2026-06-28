@@ -1,0 +1,13 @@
+{
+  "projectRoot": "D:/Projects/stylo",
+  "batchFiles": [
+    {"path": "selectors/CHANGES.md", "language": "markdown", "sizeLines": 1, "fileCategory": "docs"},
+    {"path": "selectors/Cargo.toml", "language": "toml", "sizeLines": 37, "fileCategory": "config"},
+    {"path": "selectors/README.md", "language": "markdown", "sizeLines": 24, "fileCategory": "docs"}
+  ],
+  "batchImportData": {
+    "selectors/CHANGES.md": [],
+    "selectors/Cargo.toml": [],
+    "selectors/README.md": []
+  }
+}
