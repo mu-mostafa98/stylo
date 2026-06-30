@@ -747,7 +747,6 @@ affects = "paint"
 type = "DProperty"
 initial = "specified::DProperty::none()"
 struct = "svg"
-engine = "gecko"
 spec = "https://svgwg.org/svg2-draft/paths.html#TheDProperty"
 affects = "layout"
 
