@@ -3856,7 +3856,6 @@ keyword = { values = ["linearrgb", "auto", "srgb"], gecko_enum_prefix = "StyleCo
 
 [shape-rendering]
 struct = "inherited_svg"
-engine = "gecko"
 spec = "https://svgwg.org/svg2-draft/painting.html#ShapeRenderingProperty"
 animation_type = "discrete"
 affects = "paint"
