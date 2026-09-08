@@ -2343,7 +2343,6 @@ enabled_in = "ua"
 type = "VectorEffect"
 initial = "computed::VectorEffect::none()"
 struct = "svg"
-engine = "gecko"
 animation_type = "discrete"
 spec = "https://svgwg.org/svg2-draft/coords.html#VectorEffects"
 affects = "layout"
@@ -3871,7 +3870,6 @@ keyword = { values = ["from-image", "none"] }
 
 [text-anchor]
 struct = "inherited_svg"
-engine = "gecko"
 spec = "https://svgwg.org/svg2-draft/text.html#TextAnchorProperty"
 animation_type = "discrete"
 affects = "layout"
@@ -3895,7 +3893,6 @@ keyword = { values = ["linearrgb", "auto", "srgb"], gecko_enum_prefix = "StyleCo
 
 [shape-rendering]
 struct = "inherited_svg"
-engine = "gecko"
 spec = "https://svgwg.org/svg2-draft/painting.html#ShapeRenderingProperty"
 animation_type = "discrete"
 affects = "paint"
@@ -4212,7 +4209,6 @@ keyword = { values = ["normal", "multiply", "screen", "overlay", "darken", "ligh
 type = "DominantBaseline"
 initial = "computed::DominantBaseline::Auto"
 struct = "inherited_box"
-engine = "gecko"
 animation_type = "discrete"
 spec = "https://drafts.csswg.org/css-inline-3/#dominant-baseline-property"
 affects = "layout"
